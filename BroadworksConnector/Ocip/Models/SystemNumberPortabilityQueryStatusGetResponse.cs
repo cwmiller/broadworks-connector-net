@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemNumberPortabilityQueryStatusGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _treatmentFileName;
+        protected string _treatmentFileName;
 
         [XmlElement(ElementName = "treatmentFileName", IsNullable = false, Namespace = "")]
         [Optional]

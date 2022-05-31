@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class AlternateUserIdEntry
     {
 
-        private string _alternateUserId;
+        protected string _alternateUserId;
 
         [XmlElement(ElementName = "alternateUserId", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:589")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlternateUserIdSpecified { get; set; }
 
-        private string _description;
+        protected string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class AutoAttendantAddMenu20
     {
 
-        private BroadWorksConnector.Ocip.Models.AnnouncementSelection _announcementSelection;
+        protected BroadWorksConnector.Ocip.Models.AnnouncementSelection _announcementSelection;
 
         [XmlElement(ElementName = "announcementSelection", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:674")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AnnouncementSelectionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _audioFile;
+        protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _audioFile;
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
         [Optional]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioFileSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _videoFile;
+        protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _videoFile;
 
         [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
         [Optional]
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VideoFileSpecified { get; set; }
 
-        private bool _enableFirstMenuLevelExtensionDialing;
+        protected bool _enableFirstMenuLevelExtensionDialing;
 
         [XmlElement(ElementName = "enableFirstMenuLevelExtensionDialing", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:674")]
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableFirstMenuLevelExtensionDialingSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.AutoAttendantKeyConfiguration20> _keyConfiguration = new List<BroadWorksConnector.Ocip.Models.AutoAttendantKeyConfiguration20>();
+        protected List<BroadWorksConnector.Ocip.Models.AutoAttendantKeyConfiguration20> _keyConfiguration = new List<BroadWorksConnector.Ocip.Models.AutoAttendantKeyConfiguration20>();
 
         [XmlElement(ElementName = "keyConfiguration", IsNullable = false, Namespace = "")]
         [Optional]

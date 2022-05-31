@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemThirdPartyVoiceMailSupportGetResponse17sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _overrideAltCallerIdForVMRetrieval;
+        protected bool _overrideAltCallerIdForVMRetrieval;
 
         [XmlElement(ElementName = "overrideAltCallerIdForVMRetrieval", IsNullable = false, Namespace = "")]
         [Group(@"3c311aa5c89c0cf5b46e1cdefd5bc387:187")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OverrideAltCallerIdForVMRetrievalSpecified { get; set; }
 
-        private bool _stripDiversionOnVMDestinationRetrieval;
+        protected bool _stripDiversionOnVMDestinationRetrieval;
 
         [XmlElement(ElementName = "stripDiversionOnVMDestinationRetrieval", IsNullable = false, Namespace = "")]
         [Group(@"3c311aa5c89c0cf5b46e1cdefd5bc387:187")]

@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserSelectiveCallAcceptanceGetCriteriaRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserSelectiveCallAcceptanceGetCriteriaResponse21>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"e8517420bc6d5462dc1b2d9f82295894:138")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private string _criteriaName;
+        protected string _criteriaName;
 
         [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
         [Group(@"e8517420bc6d5462dc1b2d9f82295894:138")]

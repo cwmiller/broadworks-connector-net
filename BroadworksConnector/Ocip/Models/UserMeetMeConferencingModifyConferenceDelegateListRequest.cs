@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserMeetMeConferencingModifyConferenceDelegateListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"0fd24121d16995c994d40bc408dbcfa5:869")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceKey _conferenceKey;
+        protected BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceKey _conferenceKey;
 
         [XmlElement(ElementName = "conferenceKey", IsNullable = false, Namespace = "")]
         [Group(@"0fd24121d16995c994d40bc408dbcfa5:869")]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConferenceKeySpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _conferenceDelegateUserList;
+        protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _conferenceDelegateUserList;
 
         [XmlElement(ElementName = "conferenceDelegateUserList", IsNullable = true, Namespace = "")]
         [Optional]

@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserMeetMeConferencingModifyConferenceGreetingRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"0fd24121d16995c994d40bc408dbcfa5:887")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceKey _conferenceKey;
+        protected BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceKey _conferenceKey;
 
         [XmlElement(ElementName = "conferenceKey", IsNullable = false, Namespace = "")]
         [Group(@"0fd24121d16995c994d40bc408dbcfa5:887")]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConferenceKeySpecified { get; set; }
 
-        private bool _playEntranceGreeting;
+        protected bool _playEntranceGreeting;
 
         [XmlElement(ElementName = "playEntranceGreeting", IsNullable = false, Namespace = "")]
         [Optional]
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PlayEntranceGreetingSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AnnouncementFileKey _entranceGreetingFile;
+        protected BroadWorksConnector.Ocip.Models.AnnouncementFileKey _entranceGreetingFile;
 
         [XmlElement(ElementName = "entranceGreetingFile", IsNullable = true, Namespace = "")]
         [Optional]

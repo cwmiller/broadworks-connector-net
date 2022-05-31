@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallCenterAnnouncementDescriptionList
     {
 
-        private string _fileDescription1;
+        protected string _fileDescription1;
 
         [XmlElement(ElementName = "fileDescription1", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FileDescription1Specified { get; set; }
 
-        private string _fileDescription2;
+        protected string _fileDescription2;
 
         [XmlElement(ElementName = "fileDescription2", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FileDescription2Specified { get; set; }
 
-        private string _fileDescription3;
+        protected string _fileDescription3;
 
         [XmlElement(ElementName = "fileDescription3", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FileDescription3Specified { get; set; }
 
-        private string _fileDescription4;
+        protected string _fileDescription4;
 
         [XmlElement(ElementName = "fileDescription4", IsNullable = false, Namespace = "")]
         [Optional]

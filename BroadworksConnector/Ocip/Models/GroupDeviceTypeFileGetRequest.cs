@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupDeviceTypeFileGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupDeviceTypeFileGetResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9234")]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9234")]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private string _deviceType;
+        protected string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9234")]
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceTypeSpecified { get; set; }
 
-        private string _fileType;
+        protected string _fileType;
 
         [XmlElement(ElementName = "fileType", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9234")]

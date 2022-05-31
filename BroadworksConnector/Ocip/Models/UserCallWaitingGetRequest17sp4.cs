@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCallWaitingGetRequest17sp4 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserCallWaitingGetResponse17sp4>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"e12337fe0480db757507a0699bc195d9:90")]

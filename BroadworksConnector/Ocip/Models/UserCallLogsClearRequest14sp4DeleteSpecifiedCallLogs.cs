@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCallLogsClearRequest14sp4DeleteSpecifiedCallLogs
     {
 
-        private List<string> _placedCallLogId = new List<string>();
+        protected List<string> _placedCallLogId = new List<string>();
 
         [XmlElement(ElementName = "placedCallLogId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PlacedCallLogIdSpecified { get; set; }
 
-        private List<string> _receivedCallLogId = new List<string>();
+        protected List<string> _receivedCallLogId = new List<string>();
 
         [XmlElement(ElementName = "receivedCallLogId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReceivedCallLogIdSpecified { get; set; }
 
-        private List<string> _missedCallLogId = new List<string>();
+        protected List<string> _missedCallLogId = new List<string>();
 
         [XmlElement(ElementName = "missedCallLogId", IsNullable = false, Namespace = "")]
         [Optional]

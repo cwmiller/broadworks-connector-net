@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemGetRegistrationContactListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _registrationTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _registrationTable;
 
         [XmlElement(ElementName = "registrationTable", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27080")]

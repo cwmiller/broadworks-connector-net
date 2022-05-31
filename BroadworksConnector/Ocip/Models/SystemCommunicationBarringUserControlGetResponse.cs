@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCommunicationBarringUserControlGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _enableLockout;
+        protected bool _enableLockout;
 
         [XmlElement(ElementName = "enableLockout", IsNullable = false, Namespace = "")]
         [Group(@"4277c572e54919d6e29f4c0fa69aaad1:59")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableLockoutSpecified { get; set; }
 
-        private int _maxNumberOfFailedAttempts;
+        protected int _maxNumberOfFailedAttempts;
 
         [XmlElement(ElementName = "maxNumberOfFailedAttempts", IsNullable = false, Namespace = "")]
         [Group(@"4277c572e54919d6e29f4c0fa69aaad1:59")]
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxNumberOfFailedAttemptsSpecified { get; set; }
 
-        private int _lockoutMinutes;
+        protected int _lockoutMinutes;
 
         [XmlElement(ElementName = "lockoutMinutes", IsNullable = false, Namespace = "")]
         [Group(@"4277c572e54919d6e29f4c0fa69aaad1:59")]

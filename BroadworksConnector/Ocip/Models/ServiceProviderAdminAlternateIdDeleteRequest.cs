@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderAdminAlternateIdDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:1286")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private string _alternateUserId;
+        protected string _alternateUserId;
 
         [XmlElement(ElementName = "alternateUserId", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:1286")]

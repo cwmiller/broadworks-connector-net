@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallCenterOverflowGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupCallCenterOverflowGetResponse>
     {
 
-        private string _serviceUserId;
+        protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:7005")]

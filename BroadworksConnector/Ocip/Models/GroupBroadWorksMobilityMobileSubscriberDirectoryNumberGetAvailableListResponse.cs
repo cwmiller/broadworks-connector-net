@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupBroadWorksMobilityMobileSubscriberDirectoryNumberGetAvailableListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _mobileSubscriberDirectoryNumber = new List<string>();
+        protected List<string> _mobileSubscriberDirectoryNumber = new List<string>();
 
         [XmlElement(ElementName = "mobileSubscriberDirectoryNumber", IsNullable = false, Namespace = "")]
         [Optional]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSecurityClassificationGetClassificationResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _audioAnnouncementFileDescription;
+        protected string _audioAnnouncementFileDescription;
 
         [XmlElement(ElementName = "audioAnnouncementFileDescription", IsNullable = false, Namespace = "")]
         [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:150")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioAnnouncementFileDescriptionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MediaFileType _audioAnnouncementFileType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType _audioAnnouncementFileType;
 
         [XmlElement(ElementName = "audioAnnouncementFileType", IsNullable = false, Namespace = "")]
         [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:150")]

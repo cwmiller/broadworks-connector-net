@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupServiceGetAuthorizedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _servicePackName = new List<string>();
+        protected List<string> _servicePackName = new List<string>();
 
         [XmlElement(ElementName = "servicePackName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServicePackNameSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.GroupService> _groupServiceName = new List<BroadWorksConnector.Ocip.Models.GroupService>();
+        protected List<BroadWorksConnector.Ocip.Models.GroupService> _groupServiceName = new List<BroadWorksConnector.Ocip.Models.GroupService>();
 
         [XmlElement(ElementName = "groupServiceName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupServiceNameSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.UserService> _userServiceName = new List<BroadWorksConnector.Ocip.Models.UserService>();
+        protected List<BroadWorksConnector.Ocip.Models.UserService> _userServiceName = new List<BroadWorksConnector.Ocip.Models.UserService>();
 
         [XmlElement(ElementName = "userServiceName", IsNullable = false, Namespace = "")]
         [Optional]

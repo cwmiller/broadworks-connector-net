@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderVoiceMessagingGroupModifyVoicePortalRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:520")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ServiceProviderVoicePortalScope _voicePortalScope;
+        protected BroadWorksConnector.Ocip.Models.ServiceProviderVoicePortalScope _voicePortalScope;
 
         [XmlElement(ElementName = "voicePortalScope", IsNullable = false, Namespace = "")]
         [Optional]

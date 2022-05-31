@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemFileRepositoryDeviceUserDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _fileRepositoryName;
+        protected string _fileRepositoryName;
 
         [XmlElement(ElementName = "fileRepositoryName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10401")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FileRepositoryNameSpecified { get; set; }
 
-        private string _userName;
+        protected string _userName;
 
         [XmlElement(ElementName = "userName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10401")]

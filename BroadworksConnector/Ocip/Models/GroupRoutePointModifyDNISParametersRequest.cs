@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupRoutePointModifyDNISParametersRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceUserId;
+        protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
         [Group(@"a27224a048c30ff69eab9209dec841cc:787")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        private bool _displayDNISNumber;
+        protected bool _displayDNISNumber;
 
         [XmlElement(ElementName = "displayDNISNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisplayDNISNumberSpecified { get; set; }
 
-        private bool _displayDNISName;
+        protected bool _displayDNISName;
 
         [XmlElement(ElementName = "displayDNISName", IsNullable = false, Namespace = "")]
         [Optional]

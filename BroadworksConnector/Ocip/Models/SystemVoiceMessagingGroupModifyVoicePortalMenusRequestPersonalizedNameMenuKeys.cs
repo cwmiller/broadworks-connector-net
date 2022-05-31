@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemVoiceMessagingGroupModifyVoicePortalMenusRequestPersonalizedNameMenuKeys
     {
 
-        private string _recordNewPersonalizedName;
+        protected string _recordNewPersonalizedName;
 
         [XmlElement(ElementName = "recordNewPersonalizedName", IsNullable = true, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecordNewPersonalizedNameSpecified { get; set; }
 
-        private string _listenToCurrentPersonalizedName;
+        protected string _listenToCurrentPersonalizedName;
 
         [XmlElement(ElementName = "listenToCurrentPersonalizedName", IsNullable = true, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ListenToCurrentPersonalizedNameSpecified { get; set; }
 
-        private string _deletePersonalizedName;
+        protected string _deletePersonalizedName;
 
         [XmlElement(ElementName = "deletePersonalizedName", IsNullable = true, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeletePersonalizedNameSpecified { get; set; }
 
-        private string _returnToPreviousMenu;
+        protected string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Optional]
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReturnToPreviousMenuSpecified { get; set; }
 
-        private string _repeatMenu;
+        protected string _repeatMenu;
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]

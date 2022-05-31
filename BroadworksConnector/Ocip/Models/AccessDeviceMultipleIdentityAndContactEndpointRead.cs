@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class AccessDeviceMultipleIdentityAndContactEndpointRead
     {
 
-        private BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
+        protected BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
 
         [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:399")]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessDeviceSpecified { get; set; }
 
-        private string _linePort;
+        protected string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:399")]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LinePortSpecified { get; set; }
 
-        private string _privateIdentity;
+        protected string _privateIdentity;
 
         [XmlElement(ElementName = "privateIdentity", IsNullable = false, Namespace = "")]
         [Optional]
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PrivateIdentitySpecified { get; set; }
 
-        private List<string> _contact = new List<string>();
+        protected List<string> _contact = new List<string>();
 
         [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
         [Optional]
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ContactSpecified { get; set; }
 
-        private bool _staticRegistrationCapable;
+        protected bool _staticRegistrationCapable;
 
         [XmlElement(ElementName = "staticRegistrationCapable", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:399")]
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StaticRegistrationCapableSpecified { get; set; }
 
-        private bool _useDomain;
+        protected bool _useDomain;
 
         [XmlElement(ElementName = "useDomain", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:399")]
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseDomainSpecified { get; set; }
 
-        private int _portNumber;
+        protected int _portNumber;
 
         [XmlElement(ElementName = "portNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PortNumberSpecified { get; set; }
 
-        private bool _supportVisualDeviceManagement;
+        protected bool _supportVisualDeviceManagement;
 
         [XmlElement(ElementName = "supportVisualDeviceManagement", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:399")]

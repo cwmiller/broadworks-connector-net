@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemInCallServiceActivationGetResponse17 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _defaultFlashActivationDigits;
+        protected string _defaultFlashActivationDigits;
 
         [XmlElement(ElementName = "defaultFlashActivationDigits", IsNullable = false, Namespace = "")]
         [Group(@"ece0b65e69189d3e8b8deee895f0a7ff:107")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultFlashActivationDigitsSpecified { get; set; }
 
-        private string _defaultCallTransferActivationDigits;
+        protected string _defaultCallTransferActivationDigits;
 
         [XmlElement(ElementName = "defaultCallTransferActivationDigits", IsNullable = false, Namespace = "")]
         [Group(@"ece0b65e69189d3e8b8deee895f0a7ff:107")]

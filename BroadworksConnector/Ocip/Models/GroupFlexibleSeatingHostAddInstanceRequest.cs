@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupFlexibleSeatingHostAddInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9868")]
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9868")]
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private string _serviceUserId;
+        protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9868")]
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfileFlexibleSeatingHost _serviceInstanceProfile;
+        protected BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfileFlexibleSeatingHost _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9868")]
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceInstanceProfileSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointAdd _accessDeviceEndpoint;
+        protected BroadWorksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointAdd _accessDeviceEndpoint;
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
         [Optional]
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessDeviceEndpointSpecified { get; set; }
 
-        private string _networkClassOfService;
+        protected string _networkClassOfService;
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]

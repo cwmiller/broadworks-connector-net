@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ResellerEmergencyZonesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _resellerId;
+        protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Group(@"e71c2205fb31894f87810b330a85ede2:244")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResellerIdSpecified { get; set; }
 
-        private string _defaultFromAddress;
+        protected string _defaultFromAddress;
 
         [XmlElement(ElementName = "defaultFromAddress", IsNullable = true, Namespace = "")]
         [Optional]

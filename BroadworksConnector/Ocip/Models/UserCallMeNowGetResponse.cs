@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCallMeNowGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"1f0f230fee2817fe00157925859dc28e:183")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallMeNowAnswerConfirmation _answerConfirmation;
+        protected BroadWorksConnector.Ocip.Models.CallMeNowAnswerConfirmation _answerConfirmation;
 
         [XmlElement(ElementName = "answerConfirmation", IsNullable = false, Namespace = "")]
         [Group(@"1f0f230fee2817fe00157925859dc28e:183")]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AnswerConfirmationSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
         [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
         [Group(@"1f0f230fee2817fe00157925859dc28e:183")]

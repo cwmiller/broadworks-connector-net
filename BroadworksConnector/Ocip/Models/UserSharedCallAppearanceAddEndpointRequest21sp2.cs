@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserSharedCallAppearanceAddEndpointRequest21sp2 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:14317")]
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AccessDeviceMultipleIdentityEndpointAdd _accessDeviceEndpoint;
+        protected BroadWorksConnector.Ocip.Models.AccessDeviceMultipleIdentityEndpointAdd _accessDeviceEndpoint;
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:14317")]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessDeviceEndpointSpecified { get; set; }
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:14317")]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private bool _allowOrigination;
+        protected bool _allowOrigination;
 
         [XmlElement(ElementName = "allowOrigination", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:14317")]
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowOriginationSpecified { get; set; }
 
-        private bool _allowTermination;
+        protected bool _allowTermination;
 
         [XmlElement(ElementName = "allowTermination", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:14317")]
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowTerminationSpecified { get; set; }
 
-        private bool _allowVideo;
+        protected bool _allowVideo;
 
         [XmlElement(ElementName = "allowVideo", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:14317")]

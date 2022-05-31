@@ -26,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserAnnouncementFileModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:769")]
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AnnouncementFileKey _announcementFileKey;
+        protected BroadWorksConnector.Ocip.Models.AnnouncementFileKey _announcementFileKey;
 
         [XmlElement(ElementName = "announcementFileKey", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:769")]
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AnnouncementFileKeySpecified { get; set; }
 
-        private string _announcementFileExternalId;
+        protected string _announcementFileExternalId;
 
         [XmlElement(ElementName = "announcementFileExternalId", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:768")]
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AnnouncementFileExternalIdSpecified { get; set; }
 
-        private string _newAnnouncementFileName;
+        protected string _newAnnouncementFileName;
 
         [XmlElement(ElementName = "newAnnouncementFileName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewAnnouncementFileNameSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _announcementFile;
+        protected BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _announcementFile;
 
         [XmlElement(ElementName = "announcementFile", IsNullable = false, Namespace = "")]
         [Optional]

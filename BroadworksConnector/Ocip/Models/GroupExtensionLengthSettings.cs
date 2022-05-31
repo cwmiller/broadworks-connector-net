@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupExtensionLengthSettings
     {
 
-        private int _minExtensionLength;
+        protected int _minExtensionLength;
 
         [XmlElement(ElementName = "minExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MinExtensionLengthSpecified { get; set; }
 
-        private int _maxExtensionLength;
+        protected int _maxExtensionLength;
 
         [XmlElement(ElementName = "maxExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxExtensionLengthSpecified { get; set; }
 
-        private int _defaultExtensionLength;
+        protected int _defaultExtensionLength;
 
         [XmlElement(ElementName = "defaultExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultExtensionLengthSpecified { get; set; }
 
-        private bool _useEnterpriseExtensionLengthSetting;
+        protected bool _useEnterpriseExtensionLengthSetting;
 
         [XmlElement(ElementName = "useEnterpriseExtensionLengthSetting", IsNullable = false, Namespace = "")]
         [Optional]

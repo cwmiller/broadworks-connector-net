@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAutomaticCallbackModifyRequest15 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private int _monitorMinutes;
+        protected int _monitorMinutes;
 
         [XmlElement(ElementName = "monitorMinutes", IsNullable = false, Namespace = "")]
         [Optional]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MonitorMinutesSpecified { get; set; }
 
-        private int _maxMonitorsPerOriginator;
+        protected int _maxMonitorsPerOriginator;
 
         [XmlElement(ElementName = "maxMonitorsPerOriginator", IsNullable = false, Namespace = "")]
         [Optional]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxMonitorsPerOriginatorSpecified { get; set; }
 
-        private int _maxCallbackRings;
+        protected int _maxCallbackRings;
 
         [XmlElement(ElementName = "maxCallbackRings", IsNullable = false, Namespace = "")]
         [Optional]
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxCallbackRingsSpecified { get; set; }
 
-        private int _maxMonitorsPerTerminator;
+        protected int _maxMonitorsPerTerminator;
 
         [XmlElement(ElementName = "maxMonitorsPerTerminator", IsNullable = false, Namespace = "")]
         [Optional]
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxMonitorsPerTerminatorSpecified { get; set; }
 
-        private int _terminatorIdleGuardSeconds;
+        protected int _terminatorIdleGuardSeconds;
 
         [XmlElement(ElementName = "terminatorIdleGuardSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TerminatorIdleGuardSecondsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AutomaticCallbackMethod _callbackMethod;
+        protected BroadWorksConnector.Ocip.Models.AutomaticCallbackMethod _callbackMethod;
 
         [XmlElement(ElementName = "callbackMethod", IsNullable = false, Namespace = "")]
         [Optional]
@@ -137,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallbackMethodSpecified { get; set; }
 
-        private int _pollingIntervalSeconds;
+        protected int _pollingIntervalSeconds;
 
         [XmlElement(ElementName = "pollingIntervalSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -157,7 +157,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PollingIntervalSecondsSpecified { get; set; }
 
-        private int _activationDigit;
+        protected int _activationDigit;
 
         [XmlElement(ElementName = "activationDigit", IsNullable = false, Namespace = "")]
         [Optional]

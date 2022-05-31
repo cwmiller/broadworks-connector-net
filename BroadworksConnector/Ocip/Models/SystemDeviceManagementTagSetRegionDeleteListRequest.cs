@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDeviceManagementTagSetRegionDeleteListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _tagSetName;
+        protected string _tagSetName;
 
         [XmlElement(ElementName = "tagSetName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8350")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TagSetNameSpecified { get; set; }
 
-        private List<string> _regionName = new List<string>();
+        protected List<string> _regionName = new List<string>();
 
         [XmlElement(ElementName = "regionName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8350")]

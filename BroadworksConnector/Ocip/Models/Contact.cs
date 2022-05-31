@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class Contact
     {
 
-        private string _contactName;
+        protected string _contactName;
 
         [XmlElement(ElementName = "contactName", IsNullable = true, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ContactNameSpecified { get; set; }
 
-        private string _contactNumber;
+        protected string _contactNumber;
 
         [XmlElement(ElementName = "contactNumber", IsNullable = true, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ContactNumberSpecified { get; set; }
 
-        private string _contactEmail;
+        protected string _contactEmail;
 
         [XmlElement(ElementName = "contactEmail", IsNullable = true, Namespace = "")]
         [Optional]

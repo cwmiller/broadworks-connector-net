@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ResellerDeviceActivationPolicyGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _useResellerSettings;
+        protected bool _useResellerSettings;
 
         [XmlElement(ElementName = "useResellerSettings", IsNullable = false, Namespace = "")]
         [Group(@"b009175f2a2a9d38115e319a6ad64d7f:461")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseResellerSettingsSpecified { get; set; }
 
-        private bool _allowActivationCodeRequestByUser;
+        protected bool _allowActivationCodeRequestByUser;
 
         [XmlElement(ElementName = "allowActivationCodeRequestByUser", IsNullable = false, Namespace = "")]
         [Group(@"b009175f2a2a9d38115e319a6ad64d7f:461")]
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowActivationCodeRequestByUserSpecified { get; set; }
 
-        private bool _sendActivationCodeInEmail;
+        protected bool _sendActivationCodeInEmail;
 
         [XmlElement(ElementName = "sendActivationCodeInEmail", IsNullable = false, Namespace = "")]
         [Group(@"b009175f2a2a9d38115e319a6ad64d7f:461")]

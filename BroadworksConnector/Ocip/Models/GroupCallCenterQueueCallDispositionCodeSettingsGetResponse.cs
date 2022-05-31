@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallCenterQueueCallDispositionCodeSettingsGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _enableCallDispositionCodes;
+        protected bool _enableCallDispositionCodes;
 
         [XmlElement(ElementName = "enableCallDispositionCodes", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:5625")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableCallDispositionCodesSpecified { get; set; }
 
-        private bool _includeOrganizationCodes;
+        protected bool _includeOrganizationCodes;
 
         [XmlElement(ElementName = "includeOrganizationCodes", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:5625")]
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeOrganizationCodesSpecified { get; set; }
 
-        private bool _forceUseOfCallDispositionCodes;
+        protected bool _forceUseOfCallDispositionCodes;
 
         [XmlElement(ElementName = "forceUseOfCallDispositionCodes", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:5625")]
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ForceUseOfCallDispositionCodesSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallDispositionCodeWithLevel _defaultCallDispositionCode;
+        protected BroadWorksConnector.Ocip.Models.CallDispositionCodeWithLevel _defaultCallDispositionCode;
 
         [XmlElement(ElementName = "defaultCallDispositionCode", IsNullable = false, Namespace = "")]
         [Optional]

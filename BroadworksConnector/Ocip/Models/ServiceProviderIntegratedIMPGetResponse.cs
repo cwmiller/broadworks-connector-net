@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderIntegratedIMPGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _useSystemServiceDomain;
+        protected bool _useSystemServiceDomain;
 
         [XmlElement(ElementName = "useSystemServiceDomain", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:5999")]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseSystemServiceDomainSpecified { get; set; }
 
-        private string _serviceDomain;
+        protected string _serviceDomain;
 
         [XmlElement(ElementName = "serviceDomain", IsNullable = false, Namespace = "")]
         [Optional]

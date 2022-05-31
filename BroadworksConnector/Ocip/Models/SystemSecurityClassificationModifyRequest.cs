@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSecurityClassificationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private int _meetMeAnncThreshold;
+        protected int _meetMeAnncThreshold;
 
         [XmlElement(ElementName = "meetMeAnncThreshold", IsNullable = false, Namespace = "")]
         [Optional]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MeetMeAnncThresholdSpecified { get; set; }
 
-        private bool _playTrunkUserSecurityClassificationAnnouncement;
+        protected bool _playTrunkUserSecurityClassificationAnnouncement;
 
         [XmlElement(ElementName = "playTrunkUserSecurityClassificationAnnouncement", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PlayTrunkUserSecurityClassificationAnnouncementSpecified { get; set; }
 
-        private List<string> _securityClassificationName = new List<string>();
+        protected List<string> _securityClassificationName = new List<string>();
 
         [XmlElement(ElementName = "securityClassificationName", IsNullable = false, Namespace = "")]
         [Optional]

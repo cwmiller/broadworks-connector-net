@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserExecutiveAssistantModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"edd49e38c60ed5c00d394f2a35697c84:80")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private bool _enableDivert;
+        protected bool _enableDivert;
 
         [XmlElement(ElementName = "enableDivert", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableDivertSpecified { get; set; }
 
-        private string _divertToPhoneNumber;
+        protected string _divertToPhoneNumber;
 
         [XmlElement(ElementName = "divertToPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DivertToPhoneNumberSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.ExecutiveAssistantOptInStatus> _optInStatus = new List<BroadWorksConnector.Ocip.Models.ExecutiveAssistantOptInStatus>();
+        protected List<BroadWorksConnector.Ocip.Models.ExecutiveAssistantOptInStatus> _optInStatus = new List<BroadWorksConnector.Ocip.Models.ExecutiveAssistantOptInStatus>();
 
         [XmlElement(ElementName = "optInStatus", IsNullable = false, Namespace = "")]
         [Optional]

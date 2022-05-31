@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SpeedDial100Entry
     {
 
-        private int _speedCode;
+        protected int _speedCode;
 
         [XmlElement(ElementName = "speedCode", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4657")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SpeedCodeSpecified { get; set; }
 
-        private string _phoneNumber;
+        protected string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4657")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PhoneNumberSpecified { get; set; }
 
-        private string _description;
+        protected string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]

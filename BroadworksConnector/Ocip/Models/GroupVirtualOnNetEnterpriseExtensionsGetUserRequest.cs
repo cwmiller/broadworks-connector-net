@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupVirtualOnNetEnterpriseExtensionsGetUserRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupVirtualOnNetEnterpriseExtensionsGetUserResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"179b744b0183abe614e8c32c17c96b7e:180")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"179b744b0183abe614e8c32c17c96b7e:180")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private string _phoneNumber;
+        protected string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Group(@"179b744b0183abe614e8c32c17c96b7e:180")]

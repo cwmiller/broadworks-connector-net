@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemExpensiveCallNotificationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _enablePostAnnouncementDelayTimer;
+        protected bool _enablePostAnnouncementDelayTimer;
 
         [XmlElement(ElementName = "enablePostAnnouncementDelayTimer", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9811")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnablePostAnnouncementDelayTimerSpecified { get; set; }
 
-        private int _postAnnouncementDelaySeconds;
+        protected int _postAnnouncementDelaySeconds;
 
         [XmlElement(ElementName = "postAnnouncementDelaySeconds", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9811")]

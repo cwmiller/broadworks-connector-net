@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderServicePackGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _servicePackName = new List<string>();
+        protected List<string> _servicePackName = new List<string>();
 
         [XmlElement(ElementName = "servicePackName", IsNullable = false, Namespace = "")]
         [Optional]

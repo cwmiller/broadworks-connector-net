@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserMusicOnHoldUserGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _enableVideo;
+        protected bool _enableVideo;
 
         [XmlElement(ElementName = "enableVideo", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45552")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableVideoSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead _source;
+        protected BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead _source;
 
         [XmlElement(ElementName = "source", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45552")]
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SourceSpecified { get; set; }
 
-        private bool _useAlternateSourceForInternalCalls;
+        protected bool _useAlternateSourceForInternalCalls;
 
         [XmlElement(ElementName = "useAlternateSourceForInternalCalls", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45552")]
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseAlternateSourceForInternalCallsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead _internalSource;
+        protected BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead _internalSource;
 
         [XmlElement(ElementName = "internalSource", IsNullable = false, Namespace = "")]
         [Optional]

@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserInterceptUserGetResponse16sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:13812")]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AnnouncementSelection _announcementSelection;
+        protected BroadWorksConnector.Ocip.Models.AnnouncementSelection _announcementSelection;
 
         [XmlElement(ElementName = "announcementSelection", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:13812")]
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AnnouncementSelectionSpecified { get; set; }
 
-        private string _audioFileDescription;
+        protected string _audioFileDescription;
 
         [XmlElement(ElementName = "audioFileDescription", IsNullable = false, Namespace = "")]
         [Optional]
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioFileDescriptionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MediaFileType _audioMediaType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType _audioMediaType;
 
         [XmlElement(ElementName = "audioMediaType", IsNullable = false, Namespace = "")]
         [Optional]
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioMediaTypeSpecified { get; set; }
 
-        private string _videoFileDescription;
+        protected string _videoFileDescription;
 
         [XmlElement(ElementName = "videoFileDescription", IsNullable = false, Namespace = "")]
         [Optional]
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VideoFileDescriptionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MediaFileType _videoMediaType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType _videoMediaType;
 
         [XmlElement(ElementName = "videoMediaType", IsNullable = false, Namespace = "")]
         [Optional]
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VideoMediaTypeSpecified { get; set; }
 
-        private bool _playNewPhoneNumber;
+        protected bool _playNewPhoneNumber;
 
         [XmlElement(ElementName = "playNewPhoneNumber", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:13812")]
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PlayNewPhoneNumberSpecified { get; set; }
 
-        private string _newPhoneNumber;
+        protected string _newPhoneNumber;
 
         [XmlElement(ElementName = "newPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -167,7 +167,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewPhoneNumberSpecified { get; set; }
 
-        private bool _transferOnZeroToPhoneNumber;
+        protected bool _transferOnZeroToPhoneNumber;
 
         [XmlElement(ElementName = "transferOnZeroToPhoneNumber", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:13812")]
@@ -184,7 +184,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TransferOnZeroToPhoneNumberSpecified { get; set; }
 
-        private string _transferPhoneNumber;
+        protected string _transferPhoneNumber;
 
         [XmlElement(ElementName = "transferPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -204,7 +204,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TransferPhoneNumberSpecified { get; set; }
 
-        private bool _rerouteOutboundCalls;
+        protected bool _rerouteOutboundCalls;
 
         [XmlElement(ElementName = "rerouteOutboundCalls", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:13812")]
@@ -221,7 +221,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RerouteOutboundCallsSpecified { get; set; }
 
-        private string _outboundReroutePhoneNumber;
+        protected string _outboundReroutePhoneNumber;
 
         [XmlElement(ElementName = "outboundReroutePhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -241,7 +241,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OutboundReroutePhoneNumberSpecified { get; set; }
 
-        private bool _allowOutboundLocalCalls;
+        protected bool _allowOutboundLocalCalls;
 
         [XmlElement(ElementName = "allowOutboundLocalCalls", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:13812")]
@@ -258,7 +258,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowOutboundLocalCallsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.InterceptInboundCall _inboundCallMode;
+        protected BroadWorksConnector.Ocip.Models.InterceptInboundCall _inboundCallMode;
 
         [XmlElement(ElementName = "inboundCallMode", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:13812")]
@@ -275,7 +275,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool InboundCallModeSpecified { get; set; }
 
-        private bool _alternateBlockingAnnouncement;
+        protected bool _alternateBlockingAnnouncement;
 
         [XmlElement(ElementName = "alternateBlockingAnnouncement", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:13812")]
@@ -292,7 +292,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlternateBlockingAnnouncementSpecified { get; set; }
 
-        private bool _routeToVoiceMail;
+        protected bool _routeToVoiceMail;
 
         [XmlElement(ElementName = "routeToVoiceMail", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:13812")]

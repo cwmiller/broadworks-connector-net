@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupAnnouncementFileGetPagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _announcementTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _announcementTable;
 
         [XmlElement(ElementName = "announcementTable", IsNullable = false, Namespace = "")]
         [Optional]

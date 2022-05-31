@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemGETSResourcePriorityGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _resourcePriorityTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _resourcePriorityTable;
 
         [XmlElement(ElementName = "resourcePriorityTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11099")]

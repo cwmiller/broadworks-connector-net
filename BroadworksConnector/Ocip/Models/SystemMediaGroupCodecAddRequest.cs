@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemMediaGroupCodecAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _name;
+        protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11723")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NameSpecified { get; set; }
 
-        private string _codecName;
+        protected string _codecName;
 
         [XmlElement(ElementName = "codecName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11723")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CodecNameSpecified { get; set; }
 
-        private int _codecWeight;
+        protected int _codecWeight;
 
         [XmlElement(ElementName = "codecWeight", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11723")]

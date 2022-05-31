@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCallRecordingGetRequest23 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserCallRecordingGetResponse23>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:419")]

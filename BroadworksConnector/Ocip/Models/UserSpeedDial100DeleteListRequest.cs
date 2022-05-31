@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserSpeedDial100DeleteListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"066a3d16bce438447d23cbe6ff0885a6:160")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private List<int> _speedCode = new List<int>();
+        protected List<int> _speedCode = new List<int>();
 
         [XmlElement(ElementName = "speedCode", IsNullable = false, Namespace = "")]
         [Optional]

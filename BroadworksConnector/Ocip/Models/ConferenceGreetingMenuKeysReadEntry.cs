@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ConferenceGreetingMenuKeysReadEntry
     {
 
-        private string _activateConfGreeting;
+        protected string _activateConfGreeting;
 
         [XmlElement(ElementName = "activateConfGreeting", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ActivateConfGreetingSpecified { get; set; }
 
-        private string _deactivateConfGreeting;
+        protected string _deactivateConfGreeting;
 
         [XmlElement(ElementName = "deactivateConfGreeting", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeactivateConfGreetingSpecified { get; set; }
 
-        private string _recordNewConfGreeting;
+        protected string _recordNewConfGreeting;
 
         [XmlElement(ElementName = "recordNewConfGreeting", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecordNewConfGreetingSpecified { get; set; }
 
-        private string _listenToCurrentConfGreeting;
+        protected string _listenToCurrentConfGreeting;
 
         [XmlElement(ElementName = "listenToCurrentConfGreeting", IsNullable = false, Namespace = "")]
         [Optional]
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ListenToCurrentConfGreetingSpecified { get; set; }
 
-        private string _returnToPreviousMenu;
+        protected string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2484")]
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReturnToPreviousMenuSpecified { get; set; }
 
-        private string _repeatMenu;
+        protected string _repeatMenu;
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
         [Optional]

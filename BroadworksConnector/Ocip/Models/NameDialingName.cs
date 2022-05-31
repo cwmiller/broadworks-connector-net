@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class NameDialingName
     {
 
-        private string _nameDialingLastName;
+        protected string _nameDialingLastName;
 
         [XmlElement(ElementName = "nameDialingLastName", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3458")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NameDialingLastNameSpecified { get; set; }
 
-        private string _nameDialingFirstName;
+        protected string _nameDialingFirstName;
 
         [XmlElement(ElementName = "nameDialingFirstName", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3458")]

@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupOutgoingCallingPlanTransferNumbersGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupOutgoingCallingPlanTransferNumbersGetListResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:824")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:824")]

@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemInterceptUserModifyDnRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _phoneNumber;
+        protected string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Group(@"88893c72abbbb9aaf5aecca970191d94:235")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PhoneNumberSpecified { get; set; }
 
-        private string _description;
+        protected string _description;
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]

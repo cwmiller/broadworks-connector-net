@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCallCenterMonitoringGetResponse23 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _playToneToAgentForSilentMonitoring;
+        protected bool _playToneToAgentForSilentMonitoring;
 
         [XmlElement(ElementName = "playToneToAgentForSilentMonitoring", IsNullable = false, Namespace = "")]
         [Group(@"41b968f87257b8dd553215179161ccb4:165")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PlayToneToAgentForSilentMonitoringSpecified { get; set; }
 
-        private bool _playToneToAgentForSupervisorCoaching;
+        protected bool _playToneToAgentForSupervisorCoaching;
 
         [XmlElement(ElementName = "playToneToAgentForSupervisorCoaching", IsNullable = false, Namespace = "")]
         [Group(@"41b968f87257b8dd553215179161ccb4:165")]

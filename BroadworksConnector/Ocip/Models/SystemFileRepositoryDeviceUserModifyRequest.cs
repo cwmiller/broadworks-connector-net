@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemFileRepositoryDeviceUserModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _fileRepositoryName;
+        protected string _fileRepositoryName;
 
         [XmlElement(ElementName = "fileRepositoryName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10484")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FileRepositoryNameSpecified { get; set; }
 
-        private string _userName;
+        protected string _userName;
 
         [XmlElement(ElementName = "userName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10484")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserNameSpecified { get; set; }
 
-        private string _password;
+        protected string _password;
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
         [Optional]
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PasswordSpecified { get; set; }
 
-        private bool _allowPut;
+        protected bool _allowPut;
 
         [XmlElement(ElementName = "allowPut", IsNullable = false, Namespace = "")]
         [Optional]
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowPutSpecified { get; set; }
 
-        private bool _allowDelete;
+        protected bool _allowDelete;
 
         [XmlElement(ElementName = "allowDelete", IsNullable = false, Namespace = "")]
         [Optional]
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowDeleteSpecified { get; set; }
 
-        private bool _allowGet;
+        protected bool _allowGet;
 
         [XmlElement(ElementName = "allowGet", IsNullable = false, Namespace = "")]
         [Optional]

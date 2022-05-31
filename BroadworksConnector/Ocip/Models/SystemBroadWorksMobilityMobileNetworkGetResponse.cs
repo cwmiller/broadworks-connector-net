@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemBroadWorksMobilityMobileNetworkGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _scfSignalingNetAddress;
+        protected string _scfSignalingNetAddress;
 
         [XmlElement(ElementName = "scfSignalingNetAddress", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ScfSignalingNetAddressSpecified { get; set; }
 
-        private int _scfSignalingPort;
+        protected int _scfSignalingPort;
 
         [XmlElement(ElementName = "scfSignalingPort", IsNullable = false, Namespace = "")]
         [Optional]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ScfSignalingPortSpecified { get; set; }
 
-        private int _refreshPeriodSeconds;
+        protected int _refreshPeriodSeconds;
 
         [XmlElement(ElementName = "refreshPeriodSeconds", IsNullable = false, Namespace = "")]
         [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1155")]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RefreshPeriodSecondsSpecified { get; set; }
 
-        private int _maxConsecutiveFailures;
+        protected int _maxConsecutiveFailures;
 
         [XmlElement(ElementName = "maxConsecutiveFailures", IsNullable = false, Namespace = "")]
         [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1155")]
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxConsecutiveFailuresSpecified { get; set; }
 
-        private int _maxResponseWaitTimeMilliseconds;
+        protected int _maxResponseWaitTimeMilliseconds;
 
         [XmlElement(ElementName = "maxResponseWaitTimeMilliseconds", IsNullable = false, Namespace = "")]
         [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1155")]
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxResponseWaitTimeMillisecondsSpecified { get; set; }
 
-        private bool _enableAnnouncementSuppression;
+        protected bool _enableAnnouncementSuppression;
 
         [XmlElement(ElementName = "enableAnnouncementSuppression", IsNullable = false, Namespace = "")]
         [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1155")]
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableAnnouncementSuppressionSpecified { get; set; }
 
-        private string _serviceAccessCodeListName;
+        protected string _serviceAccessCodeListName;
 
         [XmlElement(ElementName = "serviceAccessCodeListName", IsNullable = false, Namespace = "")]
         [Optional]

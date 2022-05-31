@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupBroadWorksMobileManagerAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2235")]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2235")]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private string _informationFile;
+        protected string _informationFile;
 
         [XmlElement(ElementName = "informationFile", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2235")]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool InformationFileSpecified { get; set; }
 
-        private string _certificateFile;
+        protected string _certificateFile;
 
         [XmlElement(ElementName = "certificateFile", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2235")]
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CertificateFileSpecified { get; set; }
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2235")]
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private bool _localToCarrier;
+        protected bool _localToCarrier;
 
         [XmlElement(ElementName = "localToCarrier", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2235")]
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LocalToCarrierSpecified { get; set; }
 
-        private bool _maxTxPerSecondEnabled;
+        protected bool _maxTxPerSecondEnabled;
 
         [XmlElement(ElementName = "maxTxPerSecondEnabled", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2235")]
@@ -145,7 +145,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxTxPerSecondEnabledSpecified { get; set; }
 
-        private int _maxTxPerSecond;
+        protected int _maxTxPerSecond;
 
         [XmlElement(ElementName = "maxTxPerSecond", IsNullable = false, Namespace = "")]
         [Optional]
@@ -165,7 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxTxPerSecondSpecified { get; set; }
 
-        private bool _tldnEnabled;
+        protected bool _tldnEnabled;
 
         [XmlElement(ElementName = "tldnEnabled", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2235")]
@@ -182,7 +182,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TldnEnabledSpecified { get; set; }
 
-        private bool _genericNumberEnabled;
+        protected bool _genericNumberEnabled;
 
         [XmlElement(ElementName = "genericNumberEnabled", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2235")]
@@ -199,7 +199,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GenericNumberEnabledSpecified { get; set; }
 
-        private bool _mobileStateCheckEnabled;
+        protected bool _mobileStateCheckEnabled;
 
         [XmlElement(ElementName = "mobileStateCheckEnabled", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2235")]
@@ -216,7 +216,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MobileStateCheckEnabledSpecified { get; set; }
 
-        private bool _locationBasedServicesEnabled;
+        protected bool _locationBasedServicesEnabled;
 
         [XmlElement(ElementName = "locationBasedServicesEnabled", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2235")]

@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
     public abstract class SortCriteria
     {
 
-        private bool _isAscending;
+        protected bool _isAscending;
 
         [XmlElement(ElementName = "isAscending", IsNullable = false, Namespace = "")]
         [Group(@"58293b6da8bb02a6430b3eb1beb91194:737")]
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsAscendingSpecified { get; set; }
 
-        private bool _isCaseSensitive;
+        protected bool _isCaseSensitive;
 
         [XmlElement(ElementName = "isCaseSensitive", IsNullable = false, Namespace = "")]
         [Group(@"58293b6da8bb02a6430b3eb1beb91194:737")]

@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSIPAddContentTypeRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _contentType;
+        protected string _contentType;
 
         [XmlElement(ElementName = "contentType", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16516")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ContentTypeSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SystemSIPSupportedInterface _interface;
+        protected BroadWorksConnector.Ocip.Models.SystemSIPSupportedInterface _interface;
 
         [XmlElement(ElementName = "interface", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16516")]

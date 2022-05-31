@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDeviceManagementTagSetRegionGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _regionName = new List<string>();
+        protected List<string> _regionName = new List<string>();
 
         [XmlElement(ElementName = "regionName", IsNullable = false, Namespace = "")]
         [Optional]

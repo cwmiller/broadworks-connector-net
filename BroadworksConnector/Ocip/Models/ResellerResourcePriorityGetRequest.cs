@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ResellerResourcePriorityGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ResellerResourcePriorityGetResponse>
     {
 
-        private string _resellerId;
+        protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Group(@"0c61aa8506194ca714d0fe1c4a0b57ff:46")]

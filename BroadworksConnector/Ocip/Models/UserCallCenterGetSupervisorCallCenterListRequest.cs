@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCallCenterGetSupervisorCallCenterListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserCallCenterGetSupervisorCallCenterListResponse>
     {
 
-        private string _supervisorUserId;
+        protected string _supervisorUserId;
 
         [XmlElement(ElementName = "supervisorUserId", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:7191")]

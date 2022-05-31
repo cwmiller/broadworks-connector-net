@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupRoutePointHolidayServiceGetResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.CallCenterScheduledServiceAction _action;
+        protected BroadWorksConnector.Ocip.Models.CallCenterScheduledServiceAction _action;
 
         [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
         [Group(@"a27224a048c30ff69eab9209dec841cc:669")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ActionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
+        protected BroadWorksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
         [Optional]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HolidayScheduleSpecified { get; set; }
 
-        private string _transferPhoneNumber;
+        protected string _transferPhoneNumber;
 
         [XmlElement(ElementName = "transferPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TransferPhoneNumberSpecified { get; set; }
 
-        private bool _playAnnouncementBeforeAction;
+        protected bool _playAnnouncementBeforeAction;
 
         [XmlElement(ElementName = "playAnnouncementBeforeAction", IsNullable = false, Namespace = "")]
         [Group(@"a27224a048c30ff69eab9209dec841cc:669")]
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PlayAnnouncementBeforeActionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioMessageSelection;
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioMessageSelection;
 
         [XmlElement(ElementName = "audioMessageSelection", IsNullable = false, Namespace = "")]
         [Group(@"a27224a048c30ff69eab9209dec841cc:669")]
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioMessageSelectionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallCenterAnnouncementURLList _audioUrlList;
+        protected BroadWorksConnector.Ocip.Models.CallCenterAnnouncementURLList _audioUrlList;
 
         [XmlElement(ElementName = "audioUrlList", IsNullable = false, Namespace = "")]
         [Optional]
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioUrlListSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallCenterAnnouncementFileListRead20 _audioFileList;
+        protected BroadWorksConnector.Ocip.Models.CallCenterAnnouncementFileListRead20 _audioFileList;
 
         [XmlElement(ElementName = "audioFileList", IsNullable = false, Namespace = "")]
         [Optional]
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioFileListSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoMessageSelection;
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoMessageSelection;
 
         [XmlElement(ElementName = "videoMessageSelection", IsNullable = false, Namespace = "")]
         [Group(@"a27224a048c30ff69eab9209dec841cc:669")]
@@ -159,7 +159,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VideoMessageSelectionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallCenterAnnouncementURLList _videoUrlList;
+        protected BroadWorksConnector.Ocip.Models.CallCenterAnnouncementURLList _videoUrlList;
 
         [XmlElement(ElementName = "videoUrlList", IsNullable = false, Namespace = "")]
         [Optional]
@@ -177,7 +177,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VideoUrlListSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallCenterAnnouncementFileListRead20 _videoFileList;
+        protected BroadWorksConnector.Ocip.Models.CallCenterAnnouncementFileListRead20 _videoFileList;
 
         [XmlElement(ElementName = "videoFileList", IsNullable = false, Namespace = "")]
         [Optional]

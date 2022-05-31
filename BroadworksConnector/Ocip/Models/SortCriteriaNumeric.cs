@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public abstract class SortCriteriaNumeric
     {
 
-        private bool _isAscending;
+        protected bool _isAscending;
 
         [XmlElement(ElementName = "isAscending", IsNullable = false, Namespace = "")]
         [Group(@"58293b6da8bb02a6430b3eb1beb91194:751")]

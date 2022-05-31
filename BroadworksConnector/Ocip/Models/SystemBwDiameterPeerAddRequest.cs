@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemBwDiameterPeerAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private BroadWorksConnector.Ocip.Models.BwDiameterPeerInstance _instance;
+        protected BroadWorksConnector.Ocip.Models.BwDiameterPeerInstance _instance;
 
         [XmlElement(ElementName = "instance", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20674")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool InstanceSpecified { get; set; }
 
-        private string _identity;
+        protected string _identity;
 
         [XmlElement(ElementName = "identity", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20674")]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IdentitySpecified { get; set; }
 
-        private string _ipAddress;
+        protected string _ipAddress;
 
         [XmlElement(ElementName = "ipAddress", IsNullable = false, Namespace = "")]
         [Optional]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IpAddressSpecified { get; set; }
 
-        private int _port;
+        protected int _port;
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20674")]
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PortSpecified { get; set; }
 
-        private bool _enabled;
+        protected bool _enabled;
 
         [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20674")]

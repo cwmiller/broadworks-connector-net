@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserBroadWorksCommunicatorGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _configurationServerURL;
+        protected string _configurationServerURL;
 
         [XmlElement(ElementName = "configurationServerURL", IsNullable = false, Namespace = "")]
         [Optional]

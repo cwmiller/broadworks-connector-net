@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemBroadWorksMobilityMobileNetworkGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemBroadWorksMobilityMobileNetworkGetResponse>
     {
 
-        private string _name;
+        protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1140")]

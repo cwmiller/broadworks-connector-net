@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupGroupPagingGetAvailableTargetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
         [Group(@"0d36df8c109e3ea7324f79031368c661:243")]

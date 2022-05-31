@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupVirtualOnNetEnterpriseExtensionsGetUserResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _extension;
+        protected string _extension;
 
         [XmlElement(ElementName = "extension", IsNullable = false, Namespace = "")]
         [Group(@"179b744b0183abe614e8c32c17c96b7e:197")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExtensionSpecified { get; set; }
 
-        private string _firstName;
+        protected string _firstName;
 
         [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
         [Group(@"179b744b0183abe614e8c32c17c96b7e:197")]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FirstNameSpecified { get; set; }
 
-        private string _lastName;
+        protected string _lastName;
 
         [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
         [Group(@"179b744b0183abe614e8c32c17c96b7e:197")]
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LastNameSpecified { get; set; }
 
-        private string _callingLineIdFirstName;
+        protected string _callingLineIdFirstName;
 
         [XmlElement(ElementName = "callingLineIdFirstName", IsNullable = false, Namespace = "")]
         [Group(@"179b744b0183abe614e8c32c17c96b7e:197")]
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallingLineIdFirstNameSpecified { get; set; }
 
-        private string _callingLineIdLastName;
+        protected string _callingLineIdLastName;
 
         [XmlElement(ElementName = "callingLineIdLastName", IsNullable = false, Namespace = "")]
         [Group(@"179b744b0183abe614e8c32c17c96b7e:197")]
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallingLineIdLastNameSpecified { get; set; }
 
-        private string _virtualOnNetCallTypeName;
+        protected string _virtualOnNetCallTypeName;
 
         [XmlElement(ElementName = "virtualOnNetCallTypeName", IsNullable = false, Namespace = "")]
         [Group(@"179b744b0183abe614e8c32c17c96b7e:197")]

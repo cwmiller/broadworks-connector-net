@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupEmergencyZonesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"e71c2205fb31894f87810b330a85ede2:191")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"e71c2205fb31894f87810b330a85ede2:191")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.EmergencyZonesProhibition _emergencyZonesProhibition;
+        protected BroadWorksConnector.Ocip.Models.EmergencyZonesProhibition _emergencyZonesProhibition;
 
         [XmlElement(ElementName = "emergencyZonesProhibition", IsNullable = false, Namespace = "")]
         [Optional]
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EmergencyZonesProhibitionSpecified { get; set; }
 
-        private bool _sendEmergencyCallNotifyEmail;
+        protected bool _sendEmergencyCallNotifyEmail;
 
         [XmlElement(ElementName = "sendEmergencyCallNotifyEmail", IsNullable = false, Namespace = "")]
         [Optional]
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SendEmergencyCallNotifyEmailSpecified { get; set; }
 
-        private string _emergencyCallNotifyEmailAddress;
+        protected string _emergencyCallNotifyEmailAddress;
 
         [XmlElement(ElementName = "emergencyCallNotifyEmailAddress", IsNullable = true, Namespace = "")]
         [Optional]

@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseSessionAdmissionControlGroupDeleteListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"5395c7df0157d44aa22f3351d1a5f3da:984")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private List<string> _name = new List<string>();
+        protected List<string> _name = new List<string>();
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Group(@"5395c7df0157d44aa22f3351d1a5f3da:984")]

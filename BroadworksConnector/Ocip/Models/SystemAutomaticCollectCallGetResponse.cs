@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAutomaticCollectCallGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _enableAutomaticCollectCall;
+        protected bool _enableAutomaticCollectCall;
 
         [XmlElement(ElementName = "enableAutomaticCollectCall", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20019")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableAutomaticCollectCallSpecified { get; set; }
 
-        private bool _enableConnectTone;
+        protected bool _enableConnectTone;
 
         [XmlElement(ElementName = "enableConnectTone", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20019")]

@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallParkGetAvailableAlternateRecallUserPagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _availableHuntGroupTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _availableHuntGroupTable;
 
         [XmlElement(ElementName = "availableHuntGroupTable", IsNullable = false, Namespace = "")]
         [Group(@"7a925e891158dfa3cb1319e045608894:169")]

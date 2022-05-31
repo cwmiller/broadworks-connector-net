@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCommunicationBarringDigitPatternCriteriaGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _description;
+        protected string _description;
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DescriptionSpecified { get; set; }
 
-        private List<string> _digitPattern = new List<string>();
+        protected List<string> _digitPattern = new List<string>();
 
         [XmlElement(ElementName = "digitPattern", IsNullable = false, Namespace = "")]
         [Optional]

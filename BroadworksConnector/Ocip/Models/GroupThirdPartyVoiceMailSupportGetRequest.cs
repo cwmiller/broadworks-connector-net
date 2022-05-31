@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupThirdPartyVoiceMailSupportGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupThirdPartyVoiceMailSupportGetResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"3c311aa5c89c0cf5b46e1cdefd5bc387:53")]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"3c311aa5c89c0cf5b46e1cdefd5bc387:53")]

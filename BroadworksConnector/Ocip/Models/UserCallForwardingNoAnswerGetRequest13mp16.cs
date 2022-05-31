@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCallForwardingNoAnswerGetRequest13mp16 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserCallForwardingNoAnswerGetResponse13mp16>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"9bba36247a6338c8a1cff754a22a6c6b:44")]

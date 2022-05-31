@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupPreferredCarrierNameModify
     {
 
-        private bool _useServiceProviderPreferredCarrier;
+        protected bool _useServiceProviderPreferredCarrier;
 
         [XmlElement(ElementName = "useServiceProviderPreferredCarrier", IsNullable = false, Namespace = "")]
         [Group(@"74a46a9bfccb54713c1d19735843f1df:608")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseServiceProviderPreferredCarrierSpecified { get; set; }
 
-        private string _carrier;
+        protected string _carrier;
 
         [XmlElement(ElementName = "carrier", IsNullable = true, Namespace = "")]
         [Optional]

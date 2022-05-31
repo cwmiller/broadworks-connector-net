@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class BroadWorksMobilityUserMobileIdentityEntry
     {
 
-        private string _mobileNumber;
+        protected string _mobileNumber;
 
         [XmlElement(ElementName = "mobileNumber", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47610")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MobileNumberSpecified { get; set; }
 
-        private string _description;
+        protected string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DescriptionSpecified { get; set; }
 
-        private bool _isPrimary;
+        protected bool _isPrimary;
 
         [XmlElement(ElementName = "isPrimary", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47610")]
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsPrimarySpecified { get; set; }
 
-        private bool _enableAlerting;
+        protected bool _enableAlerting;
 
         [XmlElement(ElementName = "enableAlerting", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47610")]

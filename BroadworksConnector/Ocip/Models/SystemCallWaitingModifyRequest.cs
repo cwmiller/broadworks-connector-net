@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallWaitingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _playDistinctiveRingback;
+        protected bool _playDistinctiveRingback;
 
         [XmlElement(ElementName = "playDistinctiveRingback", IsNullable = false, Namespace = "")]
         [Optional]

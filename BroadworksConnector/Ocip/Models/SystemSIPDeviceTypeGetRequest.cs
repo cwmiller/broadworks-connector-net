@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSIPDeviceTypeGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemSIPDeviceTypeGetResponse>
     {
 
-        private string _deviceType;
+        protected string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:31825")]

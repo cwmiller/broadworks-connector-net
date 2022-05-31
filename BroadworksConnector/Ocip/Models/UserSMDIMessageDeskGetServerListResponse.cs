@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserSMDIMessageDeskGetServerListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _smdiServerTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _smdiServerTable;
 
         [XmlElement(ElementName = "smdiServerTable", IsNullable = false, Namespace = "")]
         [Group(@"ee7bb69368e23a56a82c5d9cf07b5433:308")]

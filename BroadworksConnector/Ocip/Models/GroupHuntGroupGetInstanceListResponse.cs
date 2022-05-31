@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupHuntGroupGetInstanceListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _huntGroupTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _huntGroupTable;
 
         [XmlElement(ElementName = "huntGroupTable", IsNullable = false, Namespace = "")]
         [Group(@"bc829065f9d696d3ca7084121d57f8c0:370")]

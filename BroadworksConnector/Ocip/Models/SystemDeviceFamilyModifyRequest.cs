@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDeviceFamilyModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _deviceFamilyName;
+        protected string _deviceFamilyName;
 
         [XmlElement(ElementName = "deviceFamilyName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7593")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceFamilyNameSpecified { get; set; }
 
-        private string _newDeviceFamilyName;
+        protected string _newDeviceFamilyName;
 
         [XmlElement(ElementName = "newDeviceFamilyName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewDeviceFamilyNameSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ReplacementDeviceTypeList _deviceTypeList;
+        protected BroadWorksConnector.Ocip.Models.ReplacementDeviceTypeList _deviceTypeList;
 
         [XmlElement(ElementName = "deviceTypeList", IsNullable = true, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceTypeListSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ReplacementTagSetList _tagSetList;
+        protected BroadWorksConnector.Ocip.Models.ReplacementTagSetList _tagSetList;
 
         [XmlElement(ElementName = "tagSetList", IsNullable = true, Namespace = "")]
         [Optional]

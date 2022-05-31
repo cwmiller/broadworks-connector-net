@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupTrunkGroupGetInstanceListResponse14sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _trunkGroupTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _trunkGroupTable;
 
         [XmlElement(ElementName = "trunkGroupTable", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1135")]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ReplacementCallProcessingPolicyProfileSubscriberTypeList
     {
 
-        private List<BroadWorksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType> _subscriberType = new List<BroadWorksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType>();
+        protected List<BroadWorksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType> _subscriberType = new List<BroadWorksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType>();
 
         [XmlElement(ElementName = "subscriberType", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49327")]

@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCallForwardingSelectiveGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _defaultForwardToPhoneNumber;
+        protected string _defaultForwardToPhoneNumber;
 
         [XmlElement(ElementName = "defaultForwardToPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultForwardToPhoneNumberSpecified { get; set; }
 
-        private bool _playRingReminder;
+        protected bool _playRingReminder;
 
         [XmlElement(ElementName = "playRingReminder", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40740")]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PlayRingReminderSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
         [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40740")]

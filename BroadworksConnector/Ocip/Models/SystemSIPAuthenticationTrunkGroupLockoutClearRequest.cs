@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSIPAuthenticationTrunkGroupLockoutClearRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private List<BroadWorksConnector.Ocip.Models.TrunkGroupKey> _trunkGroupkey = new List<BroadWorksConnector.Ocip.Models.TrunkGroupKey>();
+        protected List<BroadWorksConnector.Ocip.Models.TrunkGroupKey> _trunkGroupkey = new List<BroadWorksConnector.Ocip.Models.TrunkGroupKey>();
 
         [XmlElement(ElementName = "trunkGroupkey", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16696")]

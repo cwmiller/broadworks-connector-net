@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserPushNotificationRegistrationGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _registrationsTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _registrationsTable;
 
         [XmlElement(ElementName = "registrationsTable", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:14183")]

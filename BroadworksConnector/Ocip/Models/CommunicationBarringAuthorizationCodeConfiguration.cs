@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CommunicationBarringAuthorizationCodeConfiguration
     {
 
-        private string _code;
+        protected string _code;
 
         [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1414")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CodeSpecified { get; set; }
 
-        private string _description;
+        protected string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DescriptionSpecified { get; set; }
 
-        private string _networkClassOfService;
+        protected string _networkClassOfService;
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]

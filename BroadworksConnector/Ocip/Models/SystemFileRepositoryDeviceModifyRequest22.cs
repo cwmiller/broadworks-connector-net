@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemFileRepositoryDeviceModifyRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _name;
+        protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10357")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NameSpecified { get; set; }
 
-        private string _rootDirectory;
+        protected string _rootDirectory;
 
         [XmlElement(ElementName = "rootDirectory", IsNullable = true, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RootDirectorySpecified { get; set; }
 
-        private bool _secure;
+        protected bool _secure;
 
         [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SecureSpecified { get; set; }
 
-        private string _netAddress;
+        protected string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
         [Optional]
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetAddressSpecified { get; set; }
 
-        private bool _ftpPassive;
+        protected bool _ftpPassive;
 
         [XmlElement(ElementName = "ftpPassive", IsNullable = false, Namespace = "")]
         [Optional]
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FtpPassiveSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.FileRepositoryProtocol22 _protocol;
+        protected BroadWorksConnector.Ocip.Models.FileRepositoryProtocol22 _protocol;
 
         [XmlElement(ElementName = "protocol", IsNullable = false, Namespace = "")]
         [Optional]
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProtocolSpecified { get; set; }
 
-        private int? _port;
+        protected int? _port;
 
         [XmlElement(ElementName = "port", IsNullable = true, Namespace = "")]
         [Optional]
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PortSpecified { get; set; }
 
-        private bool _ftpRemoteVerification;
+        protected bool _ftpRemoteVerification;
 
         [XmlElement(ElementName = "ftpRemoteVerification", IsNullable = false, Namespace = "")]
         [Optional]

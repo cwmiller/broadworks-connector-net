@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupSessionAdmissionControlGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _restrictAggregateSessions;
+        protected bool _restrictAggregateSessions;
 
         [XmlElement(ElementName = "restrictAggregateSessions", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8026")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RestrictAggregateSessionsSpecified { get; set; }
 
-        private int _maxSessions;
+        protected int _maxSessions;
 
         [XmlElement(ElementName = "maxSessions", IsNullable = false, Namespace = "")]
         [Optional]
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxSessionsSpecified { get; set; }
 
-        private int _maxUserOriginatingSessions;
+        protected int _maxUserOriginatingSessions;
 
         [XmlElement(ElementName = "maxUserOriginatingSessions", IsNullable = false, Namespace = "")]
         [Optional]
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxUserOriginatingSessionsSpecified { get; set; }
 
-        private int _maxUserTerminatingSessions;
+        protected int _maxUserTerminatingSessions;
 
         [XmlElement(ElementName = "maxUserTerminatingSessions", IsNullable = false, Namespace = "")]
         [Optional]
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxUserTerminatingSessionsSpecified { get; set; }
 
-        private bool _countIntraGroupSessions;
+        protected bool _countIntraGroupSessions;
 
         [XmlElement(ElementName = "countIntraGroupSessions", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8026")]

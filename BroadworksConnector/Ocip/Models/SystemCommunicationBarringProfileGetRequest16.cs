@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCommunicationBarringProfileGetRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemCommunicationBarringProfileGetResponse16>
     {
 
-        private string _name;
+        protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25184")]

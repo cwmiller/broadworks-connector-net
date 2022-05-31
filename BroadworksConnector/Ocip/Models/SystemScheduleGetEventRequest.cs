@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemScheduleGetEventRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemScheduleGetEventResponse>
     {
 
-        private BroadWorksConnector.Ocip.Models.ScheduleKey _scheduleKey;
+        protected BroadWorksConnector.Ocip.Models.ScheduleKey _scheduleKey;
 
         [XmlElement(ElementName = "scheduleKey", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15738")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ScheduleKeySpecified { get; set; }
 
-        private string _eventName;
+        protected string _eventName;
 
         [XmlElement(ElementName = "eventName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15738")]

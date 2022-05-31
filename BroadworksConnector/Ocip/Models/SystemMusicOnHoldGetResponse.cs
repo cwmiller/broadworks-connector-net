@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemMusicOnHoldGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private int _delayMilliseconds;
+        protected int _delayMilliseconds;
 
         [XmlElement(ElementName = "delayMilliseconds", IsNullable = false, Namespace = "")]
         [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:213")]

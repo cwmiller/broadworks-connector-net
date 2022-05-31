@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19SendToPersonMenuKeys
     {
 
-        private string _confirmSendingMessage;
+        protected string _confirmSendingMessage;
 
         [XmlElement(ElementName = "confirmSendingMessage", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConfirmSendingMessageSpecified { get; set; }
 
-        private string _cancelSendingMessage;
+        protected string _cancelSendingMessage;
 
         [XmlElement(ElementName = "cancelSendingMessage", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CancelSendingMessageSpecified { get; set; }
 
-        private string _finishEnteringNumberWhereToSendMessageTo;
+        protected string _finishEnteringNumberWhereToSendMessageTo;
 
         [XmlElement(ElementName = "finishEnteringNumberWhereToSendMessageTo", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FinishEnteringNumberWhereToSendMessageToSpecified { get; set; }
 
-        private string _finishForwardingOrSendingMessage;
+        protected string _finishForwardingOrSendingMessage;
 
         [XmlElement(ElementName = "finishForwardingOrSendingMessage", IsNullable = false, Namespace = "")]
         [Optional]

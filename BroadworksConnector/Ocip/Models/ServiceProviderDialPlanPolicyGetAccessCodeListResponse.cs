@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderDialPlanPolicyGetAccessCodeListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _accessCodeTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _accessCodeTable;
 
         [XmlElement(ElementName = "accessCodeTable", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3595")]

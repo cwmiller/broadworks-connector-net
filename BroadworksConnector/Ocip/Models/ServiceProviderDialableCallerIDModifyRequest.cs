@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderDialableCallerIDModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3521")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private bool _useServiceProviderCriteria;
+        protected bool _useServiceProviderCriteria;
 
         [XmlElement(ElementName = "useServiceProviderCriteria", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseServiceProviderCriteriaSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.NsScreeningFailurePolicy _nsScreeningFailurePolicy;
+        protected BroadWorksConnector.Ocip.Models.NsScreeningFailurePolicy _nsScreeningFailurePolicy;
 
         [XmlElement(ElementName = "nsScreeningFailurePolicy", IsNullable = false, Namespace = "")]
         [Optional]
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NsScreeningFailurePolicySpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.DialableCallerIDCriteriaPriorityOrder> _criteriaPriorityOrder = new List<BroadWorksConnector.Ocip.Models.DialableCallerIDCriteriaPriorityOrder>();
+        protected List<BroadWorksConnector.Ocip.Models.DialableCallerIDCriteriaPriorityOrder> _criteriaPriorityOrder = new List<BroadWorksConnector.Ocip.Models.DialableCallerIDCriteriaPriorityOrder>();
 
         [XmlElement(ElementName = "criteriaPriorityOrder", IsNullable = false, Namespace = "")]
         [Optional]

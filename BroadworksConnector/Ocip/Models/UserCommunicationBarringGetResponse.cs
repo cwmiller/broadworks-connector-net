@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCommunicationBarringGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _useGroupSetting;
+        protected bool _useGroupSetting;
 
         [XmlElement(ElementName = "useGroupSetting", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:1236")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseGroupSettingSpecified { get; set; }
 
-        private string _profileName;
+        protected string _profileName;
 
         [XmlElement(ElementName = "profileName", IsNullable = false, Namespace = "")]
         [Optional]

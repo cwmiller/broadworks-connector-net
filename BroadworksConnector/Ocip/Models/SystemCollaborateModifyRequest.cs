@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCollaborateModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private int _collaborateRoomIdLength;
+        protected int _collaborateRoomIdLength;
 
         [XmlElement(ElementName = "collaborateRoomIdLength", IsNullable = false, Namespace = "")]
         [Optional]
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CollaborateRoomIdLengthSpecified { get; set; }
 
-        private int _instantRoomIdleTimeoutSeconds;
+        protected int _instantRoomIdleTimeoutSeconds;
 
         [XmlElement(ElementName = "instantRoomIdleTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool InstantRoomIdleTimeoutSecondsSpecified { get; set; }
 
-        private int _collaborateRoomMaximumDurationMinutes;
+        protected int _collaborateRoomMaximumDurationMinutes;
 
         [XmlElement(ElementName = "collaborateRoomMaximumDurationMinutes", IsNullable = false, Namespace = "")]
         [Optional]
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CollaborateRoomMaximumDurationMinutesSpecified { get; set; }
 
-        private bool _supportOutdial;
+        protected bool _supportOutdial;
 
         [XmlElement(ElementName = "supportOutdial", IsNullable = false, Namespace = "")]
         [Optional]
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SupportOutdialSpecified { get; set; }
 
-        private int _maxCollaborateRoomParticipants;
+        protected int _maxCollaborateRoomParticipants;
 
         [XmlElement(ElementName = "maxCollaborateRoomParticipants", IsNullable = false, Namespace = "")]
         [Optional]
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxCollaborateRoomParticipantsSpecified { get; set; }
 
-        private int _collaborateActiveTalkerRefreshIntervalSeconds;
+        protected int _collaborateActiveTalkerRefreshIntervalSeconds;
 
         [XmlElement(ElementName = "collaborateActiveTalkerRefreshIntervalSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CollaborateActiveTalkerRefreshIntervalSecondsSpecified { get; set; }
 
-        private bool _terminateCollaborateAfterGracePeriod;
+        protected bool _terminateCollaborateAfterGracePeriod;
 
         [XmlElement(ElementName = "terminateCollaborateAfterGracePeriod", IsNullable = false, Namespace = "")]
         [Optional]
@@ -158,7 +158,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TerminateCollaborateAfterGracePeriodSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CollaborateGracePeriodDuration _collaborateGracePeriod;
+        protected BroadWorksConnector.Ocip.Models.CollaborateGracePeriodDuration _collaborateGracePeriod;
 
         [XmlElement(ElementName = "collaborateGracePeriod", IsNullable = false, Namespace = "")]
         [Optional]
@@ -176,7 +176,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CollaborateGracePeriodSpecified { get; set; }
 
-        private bool _enableActiveCollaborateNotification;
+        protected bool _enableActiveCollaborateNotification;
 
         [XmlElement(ElementName = "enableActiveCollaborateNotification", IsNullable = false, Namespace = "")]
         [Optional]
@@ -194,7 +194,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableActiveCollaborateNotificationSpecified { get; set; }
 
-        private string _collaborateFromAddress;
+        protected string _collaborateFromAddress;
 
         [XmlElement(ElementName = "collaborateFromAddress", IsNullable = true, Namespace = "")]
         [Optional]

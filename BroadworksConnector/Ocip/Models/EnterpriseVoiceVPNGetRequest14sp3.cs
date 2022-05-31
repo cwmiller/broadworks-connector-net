@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseVoiceVPNGetRequest14sp3 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNGetResponse14sp3>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1501")]

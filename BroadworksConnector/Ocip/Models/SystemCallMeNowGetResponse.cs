@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallMeNowGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private int _passcodeLength;
+        protected int _passcodeLength;
 
         [XmlElement(ElementName = "passcodeLength", IsNullable = false, Namespace = "")]
         [Group(@"1f0f230fee2817fe00157925859dc28e:60")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PasscodeLengthSpecified { get; set; }
 
-        private int _passcodeTimeoutSeconds;
+        protected int _passcodeTimeoutSeconds;
 
         [XmlElement(ElementName = "passcodeTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Group(@"1f0f230fee2817fe00157925859dc28e:60")]

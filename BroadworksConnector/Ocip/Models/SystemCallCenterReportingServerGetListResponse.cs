@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallCenterReportingServerGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _reportingServerTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _reportingServerTable;
 
         [XmlElement(ElementName = "reportingServerTable", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20989")]

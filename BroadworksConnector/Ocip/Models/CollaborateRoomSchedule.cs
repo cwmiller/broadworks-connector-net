@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CollaborateRoomSchedule
     {
 
-        private BroadWorksConnector.Ocip.Models.CollaborateRoomScheduleScheduleReservationless _scheduleReservationless;
+        protected BroadWorksConnector.Ocip.Models.CollaborateRoomScheduleScheduleReservationless _scheduleReservationless;
 
         [XmlElement(ElementName = "scheduleReservationless", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1137")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ScheduleReservationlessSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CollaborateRoomScheduleScheduleOneTime _scheduleOneTime;
+        protected BroadWorksConnector.Ocip.Models.CollaborateRoomScheduleScheduleOneTime _scheduleOneTime;
 
         [XmlElement(ElementName = "scheduleOneTime", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1137")]
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ScheduleOneTimeSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CollaborateRoomScheduleScheduleRecurring _scheduleRecurring;
+        protected BroadWorksConnector.Ocip.Models.CollaborateRoomScheduleScheduleRecurring _scheduleRecurring;
 
         [XmlElement(ElementName = "scheduleRecurring", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1137")]

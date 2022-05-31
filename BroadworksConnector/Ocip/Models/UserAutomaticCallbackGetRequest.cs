@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserAutomaticCallbackGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserAutomaticCallbackGetResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"e8188f390ad4fcfad616cb409dd0e896:167")]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallCenterEnhancedGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _overrideAgentWrapUpTime;
+        protected bool _overrideAgentWrapUpTime;
 
         [XmlElement(ElementName = "overrideAgentWrapUpTime", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4836")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OverrideAgentWrapUpTimeSpecified { get; set; }
 
-        private int _wrapUpSeconds;
+        protected int _wrapUpSeconds;
 
         [XmlElement(ElementName = "wrapUpSeconds", IsNullable = false, Namespace = "")]
         [Optional]

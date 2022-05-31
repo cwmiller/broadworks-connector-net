@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderDomainGetAssignedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _serviceProviderDefaultDomain;
+        protected string _serviceProviderDefaultDomain;
 
         [XmlElement(ElementName = "serviceProviderDefaultDomain", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:5690")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderDefaultDomainSpecified { get; set; }
 
-        private List<string> _domain = new List<string>();
+        protected List<string> _domain = new List<string>();
 
         [XmlElement(ElementName = "domain", IsNullable = false, Namespace = "")]
         [Optional]

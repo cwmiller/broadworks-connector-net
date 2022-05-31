@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAuthenticationLockoutSettingsGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private int _counterResetIntervalDays;
+        protected int _counterResetIntervalDays;
 
         [XmlElement(ElementName = "counterResetIntervalDays", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2474")]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CounterResetIntervalDaysSpecified { get; set; }
 
-        private int _counterResetHour;
+        protected int _counterResetHour;
 
         [XmlElement(ElementName = "counterResetHour", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2474")]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CounterResetHourSpecified { get; set; }
 
-        private int _counterResetMinute;
+        protected int _counterResetMinute;
 
         [XmlElement(ElementName = "counterResetMinute", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2474")]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CounterResetMinuteSpecified { get; set; }
 
-        private bool _emergencySIPBypassAllowed;
+        protected bool _emergencySIPBypassAllowed;
 
         [XmlElement(ElementName = "emergencySIPBypassAllowed", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2474")]

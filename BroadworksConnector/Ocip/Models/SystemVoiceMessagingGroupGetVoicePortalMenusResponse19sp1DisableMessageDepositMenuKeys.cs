@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse19sp1DisableMessageDepositMenuKeys
     {
 
-        private string _disconnectAfterGreeting;
+        protected string _disconnectAfterGreeting;
 
         [XmlElement(ElementName = "disconnectAfterGreeting", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisconnectAfterGreetingSpecified { get; set; }
 
-        private string _forwardAfterGreeting;
+        protected string _forwardAfterGreeting;
 
         [XmlElement(ElementName = "forwardAfterGreeting", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ForwardAfterGreetingSpecified { get; set; }
 
-        private string _changeForwardingDestination;
+        protected string _changeForwardingDestination;
 
         [XmlElement(ElementName = "changeForwardingDestination", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ChangeForwardingDestinationSpecified { get; set; }
 
-        private string _returnToPreviousMenu;
+        protected string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38214")]
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReturnToPreviousMenuSpecified { get; set; }
 
-        private string _repeatMenu;
+        protected string _repeatMenu;
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
         [Optional]

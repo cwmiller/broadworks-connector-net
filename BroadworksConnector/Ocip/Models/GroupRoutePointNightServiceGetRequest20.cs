@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupRoutePointNightServiceGetRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupRoutePointNightServiceGetResponse20>
     {
 
-        private string _serviceUserId;
+        protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
         [Group(@"a27224a048c30ff69eab9209dec841cc:890")]

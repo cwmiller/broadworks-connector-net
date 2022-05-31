@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class RecurrenceRecurWeekly
     {
 
-        private int _recurInterval;
+        protected int _recurInterval;
 
         [XmlElement(ElementName = "recurInterval", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecurIntervalSpecified { get; set; }
 
-        private bool _sunday;
+        protected bool _sunday;
 
         [XmlElement(ElementName = "sunday", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3623")]
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SundaySpecified { get; set; }
 
-        private bool _monday;
+        protected bool _monday;
 
         [XmlElement(ElementName = "monday", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3623")]
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MondaySpecified { get; set; }
 
-        private bool _tuesday;
+        protected bool _tuesday;
 
         [XmlElement(ElementName = "tuesday", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3623")]
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TuesdaySpecified { get; set; }
 
-        private bool _wednesday;
+        protected bool _wednesday;
 
         [XmlElement(ElementName = "wednesday", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3623")]
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool WednesdaySpecified { get; set; }
 
-        private bool _thursday;
+        protected bool _thursday;
 
         [XmlElement(ElementName = "thursday", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3623")]
@@ -121,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThursdaySpecified { get; set; }
 
-        private bool _friday;
+        protected bool _friday;
 
         [XmlElement(ElementName = "friday", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3623")]
@@ -138,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FridaySpecified { get; set; }
 
-        private bool _saturday;
+        protected bool _saturday;
 
         [XmlElement(ElementName = "saturday", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3623")]

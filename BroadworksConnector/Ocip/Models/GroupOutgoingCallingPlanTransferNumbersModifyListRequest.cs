@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupOutgoingCallingPlanTransferNumbersModifyListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:857")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:857")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbersModify _groupNumbers;
+        protected BroadWorksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbersModify _groupNumbers;
 
         [XmlElement(ElementName = "groupNumbers", IsNullable = false, Namespace = "")]
         [Optional]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupNumbersSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDepartmentTransferNumbersModify> _departmentNumbers = new List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDepartmentTransferNumbersModify>();
+        protected List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDepartmentTransferNumbersModify> _departmentNumbers = new List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDepartmentTransferNumbersModify>();
 
         [XmlElement(ElementName = "departmentNumbers", IsNullable = false, Namespace = "")]
         [Optional]

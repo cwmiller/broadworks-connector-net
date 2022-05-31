@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemIntegratedIMPGetResponse19 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _serviceDomain;
+        protected string _serviceDomain;
 
         [XmlElement(ElementName = "serviceDomain", IsNullable = false, Namespace = "")]
         [Optional]
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceDomainSpecified { get; set; }
 
-        private int _servicePort;
+        protected int _servicePort;
 
         [XmlElement(ElementName = "servicePort", IsNullable = false, Namespace = "")]
         [Optional]
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServicePortSpecified { get; set; }
 
-        private bool _addServiceProviderInIMPUserId;
+        protected bool _addServiceProviderInIMPUserId;
 
         [XmlElement(ElementName = "addServiceProviderInIMPUserId", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:8386")]
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AddServiceProviderInIMPUserIdSpecified { get; set; }
 
-        private string _boshURL;
+        protected string _boshURL;
 
         [XmlElement(ElementName = "boshURL", IsNullable = false, Namespace = "")]
         [Optional]

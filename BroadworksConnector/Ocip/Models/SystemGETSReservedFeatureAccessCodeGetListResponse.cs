@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemGETSReservedFeatureAccessCodeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _reservedCodeTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _reservedCodeTable;
 
         [XmlElement(ElementName = "reservedCodeTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11019")]

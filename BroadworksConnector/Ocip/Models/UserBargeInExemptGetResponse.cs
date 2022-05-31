@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserBargeInExemptGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"83c7725aef84be5a5cfc21291c4b9b58:57")]

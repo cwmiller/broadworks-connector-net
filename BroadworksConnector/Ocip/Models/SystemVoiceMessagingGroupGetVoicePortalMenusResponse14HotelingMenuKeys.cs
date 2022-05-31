@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse14HotelingMenuKeys
     {
 
-        private string _checkHostStatus;
+        protected string _checkHostStatus;
 
         [XmlElement(ElementName = "checkHostStatus", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CheckHostStatusSpecified { get; set; }
 
-        private string _associateWithHost;
+        protected string _associateWithHost;
 
         [XmlElement(ElementName = "associateWithHost", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AssociateWithHostSpecified { get; set; }
 
-        private string _disassociateFromHost;
+        protected string _disassociateFromHost;
 
         [XmlElement(ElementName = "disassociateFromHost", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisassociateFromHostSpecified { get; set; }
 
-        private string _returnToPreviousMenu;
+        protected string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:36481")]
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReturnToPreviousMenuSpecified { get; set; }
 
-        private string _repeatMenu;
+        protected string _repeatMenu;
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
         [Optional]

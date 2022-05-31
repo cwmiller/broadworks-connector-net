@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnhancedCallLogsCallAuthorizationCodeFilter
     {
 
-        private bool _callsWithCodes;
+        protected bool _callsWithCodes;
 
         [XmlElement(ElementName = "callsWithCodes", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2528")]
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallsWithCodesSpecified { get; set; }
 
-        private string _authorizationCode;
+        protected string _authorizationCode;
 
         [XmlElement(ElementName = "authorizationCode", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2528")]

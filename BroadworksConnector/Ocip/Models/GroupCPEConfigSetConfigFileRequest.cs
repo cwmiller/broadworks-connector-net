@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCPEConfigSetConfigFileRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3481")]
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3481")]
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private string _deviceType;
+        protected string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3481")]
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceTypeSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.FileResource _configFile;
+        protected BroadWorksConnector.Ocip.Models.FileResource _configFile;
 
         [XmlElement(ElementName = "configFile", IsNullable = true, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3481")]

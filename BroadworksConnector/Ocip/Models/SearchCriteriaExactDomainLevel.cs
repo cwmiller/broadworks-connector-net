@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaExactDomainLevel : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        private BroadWorksConnector.Ocip.Models.DomainLevel _domainLevel;
+        protected BroadWorksConnector.Ocip.Models.DomainLevel _domainLevel;
 
         [XmlElement(ElementName = "domainLevel", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:999")]

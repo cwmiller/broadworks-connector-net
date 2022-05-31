@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallWaitingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _playDistinctiveRingback;
+        protected bool _playDistinctiveRingback;
 
         [XmlElement(ElementName = "playDistinctiveRingback", IsNullable = false, Namespace = "")]
         [Group(@"e12337fe0480db757507a0699bc195d9:57")]

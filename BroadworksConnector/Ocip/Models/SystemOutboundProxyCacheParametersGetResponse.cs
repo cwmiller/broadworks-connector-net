@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemOutboundProxyCacheParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private int _evictionTimeoutMinutes;
+        protected int _evictionTimeoutMinutes;
 
         [XmlElement(ElementName = "evictionTimeoutMinutes", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14065")]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EvictionTimeoutMinutesSpecified { get; set; }
 
-        private int _refreshTimeoutMinutes;
+        protected int _refreshTimeoutMinutes;
 
         [XmlElement(ElementName = "refreshTimeoutMinutes", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14065")]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RefreshTimeoutMinutesSpecified { get; set; }
 
-        private int _auditIntervalMinutes;
+        protected int _auditIntervalMinutes;
 
         [XmlElement(ElementName = "auditIntervalMinutes", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14065")]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AuditIntervalMinutesSpecified { get; set; }
 
-        private int _maximumCacheSize;
+        protected int _maximumCacheSize;
 
         [XmlElement(ElementName = "maximumCacheSize", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14065")]
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaximumCacheSizeSpecified { get; set; }
 
-        private string _dnsTypeDefaultValue;
+        protected string _dnsTypeDefaultValue;
 
         [XmlElement(ElementName = "dnsTypeDefaultValue", IsNullable = false, Namespace = "")]
         [Optional]
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DnsTypeDefaultValueSpecified { get; set; }
 
-        private string _useDnsSrvDefaultValue;
+        protected string _useDnsSrvDefaultValue;
 
         [XmlElement(ElementName = "useDnsSrvDefaultValue", IsNullable = false, Namespace = "")]
         [Optional]
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseDnsSrvDefaultValueSpecified { get; set; }
 
-        private string _srvPrefixDefaultValue;
+        protected string _srvPrefixDefaultValue;
 
         [XmlElement(ElementName = "srvPrefixDefaultValue", IsNullable = false, Namespace = "")]
         [Optional]
@@ -153,7 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SrvPrefixDefaultValueSpecified { get; set; }
 
-        private string _outboundProxyDefaultValue;
+        protected string _outboundProxyDefaultValue;
 
         [XmlElement(ElementName = "outboundProxyDefaultValue", IsNullable = false, Namespace = "")]
         [Optional]
@@ -173,7 +173,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OutboundProxyDefaultValueSpecified { get; set; }
 
-        private string _transportTypeDefaultValue;
+        protected string _transportTypeDefaultValue;
 
         [XmlElement(ElementName = "transportTypeDefaultValue", IsNullable = false, Namespace = "")]
         [Optional]
@@ -193,7 +193,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TransportTypeDefaultValueSpecified { get; set; }
 
-        private string _secureRtpDefaultValue;
+        protected string _secureRtpDefaultValue;
 
         [XmlElement(ElementName = "secureRtpDefaultValue", IsNullable = false, Namespace = "")]
         [Optional]

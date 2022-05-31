@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemMGCPDeviceTypeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isObsolete;
+        protected bool _isObsolete;
 
         [XmlElement(ElementName = "isObsolete", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12218")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsObsoleteSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SignalingAddressType _profile;
+        protected BroadWorksConnector.Ocip.Models.SignalingAddressType _profile;
 
         [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12218")]
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProfileSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _numberOfPorts;
+        protected BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _numberOfPorts;
 
         [XmlElement(ElementName = "numberOfPorts", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12218")]
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberOfPortsSpecified { get; set; }
 
-        private List<string> _protocolChoice = new List<string>();
+        protected List<string> _protocolChoice = new List<string>();
 
         [XmlElement(ElementName = "protocolChoice", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12218")]

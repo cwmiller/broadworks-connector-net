@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCollaborateBridgeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _bridgeId;
+        protected string _bridgeId;
 
         [XmlElement(ElementName = "bridgeId", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41887")]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BridgeIdSpecified { get; set; }
 
-        private string _bridgeName;
+        protected string _bridgeName;
 
         [XmlElement(ElementName = "bridgeName", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41887")]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BridgeNameSpecified { get; set; }
 
-        private string _phoneNumber;
+        protected string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PhoneNumberSpecified { get; set; }
 
-        private string _extension;
+        protected string _extension;
 
         [XmlElement(ElementName = "extension", IsNullable = false, Namespace = "")]
         [Optional]
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExtensionSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.AlternateNumberEntry21> _alternateNumberEntry = new List<BroadWorksConnector.Ocip.Models.AlternateNumberEntry21>();
+        protected List<BroadWorksConnector.Ocip.Models.AlternateNumberEntry21> _alternateNumberEntry = new List<BroadWorksConnector.Ocip.Models.AlternateNumberEntry21>();
 
         [XmlElement(ElementName = "alternateNumberEntry", IsNullable = false, Namespace = "")]
         [Optional]
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlternateNumberEntrySpecified { get; set; }
 
-        private bool _supportOutDial;
+        protected bool _supportOutDial;
 
         [XmlElement(ElementName = "supportOutDial", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41887")]
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SupportOutDialSpecified { get; set; }
 
-        private int _maxCollaborateRoomParticipants;
+        protected int _maxCollaborateRoomParticipants;
 
         [XmlElement(ElementName = "maxCollaborateRoomParticipants", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41887")]

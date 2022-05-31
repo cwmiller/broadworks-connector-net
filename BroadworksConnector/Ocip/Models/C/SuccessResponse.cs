@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models.C
     [Serializable]
     [XmlRoot(Namespace = "C")]
 
-
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""77f32f6c8e214eb5c1a80dedfce1cb56:188""}]")]
     public class SuccessResponse : BroadWorksConnector.Ocip.Models.C.OCIResponse
     {
 

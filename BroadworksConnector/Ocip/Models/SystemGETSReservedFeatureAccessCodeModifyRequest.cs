@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemGETSReservedFeatureAccessCodeModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _code;
+        protected string _code;
 
         [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11035")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CodeSpecified { get; set; }
 
-        private string _newCode;
+        protected string _newCode;
 
         [XmlElement(ElementName = "newCode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewCodeSpecified { get; set; }
 
-        private string _description;
+        protected string _description;
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]

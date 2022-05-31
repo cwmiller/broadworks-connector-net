@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SecurityClassificationCustomizationActivation
     {
 
-        private string _name;
+        protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4123")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NameSpecified { get; set; }
 
-        private bool _isCustomized;
+        protected bool _isCustomized;
 
         [XmlElement(ElementName = "isCustomized", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4123")]

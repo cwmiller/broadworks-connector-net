@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class DNValidationStatusMessage
     {
 
-        private string _dn;
+        protected string _dn;
 
         [XmlElement(ElementName = "dn", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2487")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DnSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.DNValidationStatus _status;
+        protected BroadWorksConnector.Ocip.Models.DNValidationStatus _status;
 
         [XmlElement(ElementName = "status", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2487")]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StatusSpecified { get; set; }
 
-        private int _messageCode;
+        protected int _messageCode;
 
         [XmlElement(ElementName = "messageCode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MessageCodeSpecified { get; set; }
 
-        private string _summary;
+        protected string _summary;
 
         [XmlElement(ElementName = "summary", IsNullable = false, Namespace = "")]
         [Optional]
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SummarySpecified { get; set; }
 
-        private string _summaryEnglish;
+        protected string _summaryEnglish;
 
         [XmlElement(ElementName = "summaryEnglish", IsNullable = false, Namespace = "")]
         [Optional]

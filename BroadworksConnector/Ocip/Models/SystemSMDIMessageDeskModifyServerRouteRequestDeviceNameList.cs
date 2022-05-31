@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSMDIMessageDeskModifyServerRouteRequestDeviceNameList
     {
 
-        private List<string> _deviceName = new List<string>();
+        protected List<string> _deviceName = new List<string>();
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
         [Group(@"ee7bb69368e23a56a82c5d9cf07b5433:205")]

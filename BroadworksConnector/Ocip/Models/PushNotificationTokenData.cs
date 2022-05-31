@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class PushNotificationTokenData
     {
 
-        private string _pushNotificationToken;
+        protected string _pushNotificationToken;
 
         [XmlElement(ElementName = "pushNotificationToken", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3570")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PushNotificationTokenSpecified { get; set; }
 
-        private string _pushNotificationType;
+        protected string _pushNotificationType;
 
         [XmlElement(ElementName = "pushNotificationType", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3570")]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PushNotificationTypeSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.PushNotificationEventData> _pushNotificationEventData = new List<BroadWorksConnector.Ocip.Models.PushNotificationEventData>();
+        protected List<BroadWorksConnector.Ocip.Models.PushNotificationEventData> _pushNotificationEventData = new List<BroadWorksConnector.Ocip.Models.PushNotificationEventData>();
 
         [XmlElement(ElementName = "pushNotificationEventData", IsNullable = false, Namespace = "")]
         [Optional]

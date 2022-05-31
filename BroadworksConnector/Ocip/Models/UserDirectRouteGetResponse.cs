@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserDirectRouteGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.DirectRouteOutgoingDTGPolicy _outgoingDTGPolicy;
+        protected BroadWorksConnector.Ocip.Models.DirectRouteOutgoingDTGPolicy _outgoingDTGPolicy;
 
         [XmlElement(ElementName = "outgoingDTGPolicy", IsNullable = false, Namespace = "")]
         [Group(@"4e1b40cd187e65e0dc647394b1e74e3c:57")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OutgoingDTGPolicySpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.DirectRouteOutgoingTrunkIdentityPolicy _outgoingTrunkIdentityPolicy;
+        protected BroadWorksConnector.Ocip.Models.DirectRouteOutgoingTrunkIdentityPolicy _outgoingTrunkIdentityPolicy;
 
         [XmlElement(ElementName = "outgoingTrunkIdentityPolicy", IsNullable = false, Namespace = "")]
         [Group(@"4e1b40cd187e65e0dc647394b1e74e3c:57")]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OutgoingTrunkIdentityPolicySpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.DirectRouteIdentifiers _directRouteIdentityList;
+        protected BroadWorksConnector.Ocip.Models.DirectRouteIdentifiers _directRouteIdentityList;
 
         [XmlElement(ElementName = "directRouteIdentityList", IsNullable = false, Namespace = "")]
         [Optional]

@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserEnhancedCallLogsGetListResponse23 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private int _totalNumberOfRows;
+        protected int _totalNumberOfRows;
 
         [XmlElement(ElementName = "totalNumberOfRows", IsNullable = false, Namespace = "")]
         [Group(@"f6b3702edb5f67fa12c2c426d98657db:360")]
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TotalNumberOfRowsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse23LegacyEntry _legacyEntry;
+        protected BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse23LegacyEntry _legacyEntry;
 
         [XmlElement(ElementName = "legacyEntry", IsNullable = false, Namespace = "")]
         [Group(@"f6b3702edb5f67fa12c2c426d98657db:362")]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LegacyEntrySpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse23ExtendedEntry _extendedEntry;
+        protected BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse23ExtendedEntry _extendedEntry;
 
         [XmlElement(ElementName = "extendedEntry", IsNullable = false, Namespace = "")]
         [Group(@"f6b3702edb5f67fa12c2c426d98657db:362")]

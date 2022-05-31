@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallCenterModifyInstanceStatisticsReportingRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceUserId;
+        protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6770")]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        private bool _clearTodayStatistics;
+        protected bool _clearTodayStatistics;
 
         [XmlElement(ElementName = "clearTodayStatistics", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ClearTodayStatisticsSpecified { get; set; }
 
-        private bool _generateDailyReport;
+        protected bool _generateDailyReport;
 
         [XmlElement(ElementName = "generateDailyReport", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GenerateDailyReportSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes _collectionPeriodMinutes;
+        protected BroadWorksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes _collectionPeriodMinutes;
 
         [XmlElement(ElementName = "collectionPeriodMinutes", IsNullable = false, Namespace = "")]
         [Optional]
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CollectionPeriodMinutesSpecified { get; set; }
 
-        private string _reportingEmailAddress1;
+        protected string _reportingEmailAddress1;
 
         [XmlElement(ElementName = "reportingEmailAddress1", IsNullable = true, Namespace = "")]
         [Optional]
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReportingEmailAddress1Specified { get; set; }
 
-        private string _reportingEmailAddress2;
+        protected string _reportingEmailAddress2;
 
         [XmlElement(ElementName = "reportingEmailAddress2", IsNullable = true, Namespace = "")]
         [Optional]

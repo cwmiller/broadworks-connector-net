@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserSilentAlertingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"f2b3ec892c5d27b9eb241f1d4d0f94f9:57")]

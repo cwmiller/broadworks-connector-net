@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallCenterAgentSettings
     {
 
-        private string _serviceUserId;
+        protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:268")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        private bool _available;
+        protected bool _available;
 
         [XmlElement(ElementName = "available", IsNullable = false, Namespace = "")]
         [Optional]
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AvailableSpecified { get; set; }
 
-        private int _skillLevel;
+        protected int _skillLevel;
 
         [XmlElement(ElementName = "skillLevel", IsNullable = false, Namespace = "")]
         [Optional]

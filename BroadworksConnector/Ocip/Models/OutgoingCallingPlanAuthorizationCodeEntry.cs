@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class OutgoingCallingPlanAuthorizationCodeEntry
     {
 
-        private string _code;
+        protected string _code;
 
         [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1737")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CodeSpecified { get; set; }
 
-        private string _description;
+        protected string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]

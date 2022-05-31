@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemInventoryReportGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _defaultFromAddress;
+        protected string _defaultFromAddress;
 
         [XmlElement(ElementName = "defaultFromAddress", IsNullable = false, Namespace = "")]
         [Group(@"5c0fc3a03773b4f430e938115770c82d:94")]

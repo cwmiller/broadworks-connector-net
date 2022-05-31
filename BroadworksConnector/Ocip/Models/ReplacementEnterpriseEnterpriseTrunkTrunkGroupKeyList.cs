@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ReplacementEnterpriseEnterpriseTrunkTrunkGroupKeyList
     {
 
-        private List<BroadWorksConnector.Ocip.Models.EnterpriseTrunkTrunkGroupKey> _trunkGroup = new List<BroadWorksConnector.Ocip.Models.EnterpriseTrunkTrunkGroupKey>();
+        protected List<BroadWorksConnector.Ocip.Models.EnterpriseTrunkTrunkGroupKey> _trunkGroup = new List<BroadWorksConnector.Ocip.Models.EnterpriseTrunkTrunkGroupKey>();
 
         [XmlElement(ElementName = "trunkGroup", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1975")]

@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupAdminAlternateIdGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _adminUserIdTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _adminUserIdTable;
 
         [XmlElement(ElementName = "adminUserIdTable", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1470")]

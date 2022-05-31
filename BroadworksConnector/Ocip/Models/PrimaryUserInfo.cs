@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class PrimaryUserInfo
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private string _userFirstName;
+        protected string _userFirstName;
 
         [XmlElement(ElementName = "userFirstName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserFirstNameSpecified { get; set; }
 
-        private string _userLastName;
+        protected string _userLastName;
 
         [XmlElement(ElementName = "userLastName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserLastNameSpecified { get; set; }
 
-        private string _userPhoneNumber;
+        protected string _userPhoneNumber;
 
         [XmlElement(ElementName = "userPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserPhoneNumberSpecified { get; set; }
 
-        private string _userExtension;
+        protected string _userExtension;
 
         [XmlElement(ElementName = "userExtension", IsNullable = false, Namespace = "")]
         [Optional]
@@ -156,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserExtensionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.EndpointType21sp1 _endPointType;
+        protected BroadWorksConnector.Ocip.Models.EndpointType21sp1 _endPointType;
 
         [XmlElement(ElementName = "endPointType", IsNullable = false, Namespace = "")]
         [Optional]

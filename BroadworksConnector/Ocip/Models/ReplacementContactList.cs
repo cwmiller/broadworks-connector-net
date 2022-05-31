@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ReplacementContactList
     {
 
-        private List<string> _contact = new List<string>();
+        protected List<string> _contact = new List<string>();
 
         [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3907")]

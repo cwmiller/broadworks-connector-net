@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupAnnouncementFileAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1826")]
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1826")]
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private string _announcementFileName;
+        protected string _announcementFileName;
 
         [XmlElement(ElementName = "announcementFileName", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1826")]
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AnnouncementFileNameSpecified { get; set; }
 
-        private string _groupExternalId;
+        protected string _groupExternalId;
 
         [XmlElement(ElementName = "groupExternalId", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1831")]
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupExternalIdSpecified { get; set; }
 
-        private string _announcementFileExternalId;
+        protected string _announcementFileExternalId;
 
         [XmlElement(ElementName = "announcementFileExternalId", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1831")]
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AnnouncementFileExternalIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _announcementFile;
+        protected BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _announcementFile;
 
         [XmlElement(ElementName = "announcementFile", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1824")]

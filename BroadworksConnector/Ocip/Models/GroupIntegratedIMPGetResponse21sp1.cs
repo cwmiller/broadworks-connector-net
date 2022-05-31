@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupIntegratedIMPGetResponse21sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _useServiceProviderSetting;
+        protected bool _useServiceProviderSetting;
 
         [XmlElement(ElementName = "useServiceProviderSetting", IsNullable = false, Namespace = "")]
         [Group(@"23389100b68cef3aa07ee12ac7a2bd16:68")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseServiceProviderSettingSpecified { get; set; }
 
-        private string _serviceDomain;
+        protected string _serviceDomain;
 
         [XmlElement(ElementName = "serviceDomain", IsNullable = false, Namespace = "")]
         [Optional]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceDomainSpecified { get; set; }
 
-        private string _effectiveServiceDomain;
+        protected string _effectiveServiceDomain;
 
         [XmlElement(ElementName = "effectiveServiceDomain", IsNullable = false, Namespace = "")]
         [Optional]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EffectiveServiceDomainSpecified { get; set; }
 
-        private bool _addServiceProviderInIMPUserId;
+        protected bool _addServiceProviderInIMPUserId;
 
         [XmlElement(ElementName = "addServiceProviderInIMPUserId", IsNullable = false, Namespace = "")]
         [Group(@"23389100b68cef3aa07ee12ac7a2bd16:68")]
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AddServiceProviderInIMPUserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.IntegratedIMPUserIDType _defaultImpIdType;
+        protected BroadWorksConnector.Ocip.Models.IntegratedIMPUserIDType _defaultImpIdType;
 
         [XmlElement(ElementName = "defaultImpIdType", IsNullable = false, Namespace = "")]
         [Group(@"23389100b68cef3aa07ee12ac7a2bd16:68")]

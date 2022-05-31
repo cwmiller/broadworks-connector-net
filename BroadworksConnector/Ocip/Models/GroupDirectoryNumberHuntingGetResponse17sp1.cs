@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupDirectoryNumberHuntingGetResponse17sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _agentUserTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _agentUserTable;
 
         [XmlElement(ElementName = "agentUserTable", IsNullable = false, Namespace = "")]
         [Group(@"7c509136e6ce6be616e313c3b28a0449:102")]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AgentUserTableSpecified { get; set; }
 
-        private bool _useTerminateCallToAgentFirst;
+        protected bool _useTerminateCallToAgentFirst;
 
         [XmlElement(ElementName = "useTerminateCallToAgentFirst", IsNullable = false, Namespace = "")]
         [Group(@"7c509136e6ce6be616e313c3b28a0449:102")]
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseTerminateCallToAgentFirstSpecified { get; set; }
 
-        private bool _useOriginalAgentServicesForBusyAndNoAnswerCalls;
+        protected bool _useOriginalAgentServicesForBusyAndNoAnswerCalls;
 
         [XmlElement(ElementName = "useOriginalAgentServicesForBusyAndNoAnswerCalls", IsNullable = false, Namespace = "")]
         [Group(@"7c509136e6ce6be616e313c3b28a0449:102")]

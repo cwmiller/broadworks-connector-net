@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class FileRepositoryProtocolWebDAV20
     {
 
-        private bool _secure;
+        protected bool _secure;
 
         [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19908")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SecureSpecified { get; set; }
 
-        private string _netAddress;
+        protected string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19908")]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetAddressSpecified { get; set; }
 
-        private bool _extendedFileCaptureSupport;
+        protected bool _extendedFileCaptureSupport;
 
         [XmlElement(ElementName = "extendedFileCaptureSupport", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19908")]

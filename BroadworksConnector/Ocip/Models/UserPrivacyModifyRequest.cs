@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserPrivacyModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:190")]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private bool _enableDirectoryPrivacy;
+        protected bool _enableDirectoryPrivacy;
 
         [XmlElement(ElementName = "enableDirectoryPrivacy", IsNullable = false, Namespace = "")]
         [Optional]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableDirectoryPrivacySpecified { get; set; }
 
-        private bool _enableAutoAttendantExtensionDialingPrivacy;
+        protected bool _enableAutoAttendantExtensionDialingPrivacy;
 
         [XmlElement(ElementName = "enableAutoAttendantExtensionDialingPrivacy", IsNullable = false, Namespace = "")]
         [Optional]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableAutoAttendantExtensionDialingPrivacySpecified { get; set; }
 
-        private bool _enableAutoAttendantNameDialingPrivacy;
+        protected bool _enableAutoAttendantNameDialingPrivacy;
 
         [XmlElement(ElementName = "enableAutoAttendantNameDialingPrivacy", IsNullable = false, Namespace = "")]
         [Optional]
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableAutoAttendantNameDialingPrivacySpecified { get; set; }
 
-        private bool _enablePhoneStatusPrivacy;
+        protected bool _enablePhoneStatusPrivacy;
 
         [XmlElement(ElementName = "enablePhoneStatusPrivacy", IsNullable = false, Namespace = "")]
         [Optional]
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnablePhoneStatusPrivacySpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _permittedMonitorUserIdList;
+        protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _permittedMonitorUserIdList;
 
         [XmlElement(ElementName = "permittedMonitorUserIdList", IsNullable = true, Namespace = "")]
         [Optional]

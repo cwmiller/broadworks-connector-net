@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserShInterfaceGetUserIdDataResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<BroadWorksConnector.Ocip.Models.ShInterfaceUserIdDataEntry> _entry = new List<BroadWorksConnector.Ocip.Models.ShInterfaceUserIdDataEntry>();
+        protected List<BroadWorksConnector.Ocip.Models.ShInterfaceUserIdDataEntry> _entry = new List<BroadWorksConnector.Ocip.Models.ShInterfaceUserIdDataEntry>();
 
         [XmlElement(ElementName = "entry", IsNullable = false, Namespace = "")]
         [Optional]

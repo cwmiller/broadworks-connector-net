@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserSecurityClassificationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:346")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private string _securityClassification;
+        protected string _securityClassification;
 
         [XmlElement(ElementName = "securityClassification", IsNullable = true, Namespace = "")]
         [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:346")]

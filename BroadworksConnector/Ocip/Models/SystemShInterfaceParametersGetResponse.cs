@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemShInterfaceParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _hssRealm;
+        protected string _hssRealm;
 
         [XmlElement(ElementName = "hssRealm", IsNullable = false, Namespace = "")]
         [Optional]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HssRealmSpecified { get; set; }
 
-        private int _requestTimeoutSeconds;
+        protected int _requestTimeoutSeconds;
 
         [XmlElement(ElementName = "requestTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29362")]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RequestTimeoutSecondsSpecified { get; set; }
 
-        private int _publicIdentityRefreshDelaySeconds;
+        protected int _publicIdentityRefreshDelaySeconds;
 
         [XmlElement(ElementName = "publicIdentityRefreshDelaySeconds", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29362")]

@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSIPDeviceTypeFileGetListResponse14sp8 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _deviceTypeFilesTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _deviceTypeFilesTable;
 
         [XmlElement(ElementName = "deviceTypeFilesTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16996")]

@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemInCallServiceActivationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _defaultActivationDigits;
+        protected string _defaultActivationDigits;
 
         [XmlElement(ElementName = "defaultActivationDigits", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27314")]

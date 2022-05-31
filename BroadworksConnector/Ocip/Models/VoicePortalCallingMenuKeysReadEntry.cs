@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class VoicePortalCallingMenuKeysReadEntry
     {
 
-        private string _endCurrentCallAndGoBackToPreviousMenu;
+        protected string _endCurrentCallAndGoBackToPreviousMenu;
 
         [XmlElement(ElementName = "endCurrentCallAndGoBackToPreviousMenu", IsNullable = false, Namespace = "")]
         [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3262")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EndCurrentCallAndGoBackToPreviousMenuSpecified { get; set; }
 
-        private string _returnToPreviousMenu;
+        protected string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3262")]

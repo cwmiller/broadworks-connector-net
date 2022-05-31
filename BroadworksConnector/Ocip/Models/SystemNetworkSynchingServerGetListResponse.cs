@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemNetworkSynchingServerGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _preferredNetworkServerNetAddress;
+        protected string _preferredNetworkServerNetAddress;
 
         [XmlElement(ElementName = "preferredNetworkServerNetAddress", IsNullable = false, Namespace = "")]
         [Optional]
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PreferredNetworkServerNetAddressSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _networkSynchingServerTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _networkSynchingServerTable;
 
         [XmlElement(ElementName = "networkSynchingServerTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12901")]

@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemPerformanceMeasurementReportingDeleteFileServerRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _repositoryUrl;
+        protected string _repositoryUrl;
 
         [XmlElement(ElementName = "repositoryUrl", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14315")]

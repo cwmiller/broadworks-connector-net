@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupDepartmentGetListResponse18 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _departmentTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _departmentTable;
 
         [XmlElement(ElementName = "departmentTable", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3963")]

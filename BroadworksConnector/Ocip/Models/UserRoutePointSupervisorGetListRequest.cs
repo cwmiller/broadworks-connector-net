@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserRoutePointSupervisorGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserRoutePointSupervisorGetListResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"a27224a048c30ff69eab9209dec841cc:1254")]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class RandomPort
     {
 
-        private string _random;
+        protected string _random;
 
         [XmlElement(ElementName = "random", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3583")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RandomSpecified { get; set; }
 
-        private int _port;
+        protected int _port;
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3583")]

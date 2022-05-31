@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class TrunkGroupDeviceMultipleContactEndpointModify
     {
 
-        private string _name;
+        protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NameSpecified { get; set; }
 
-        private string _linePort;
+        protected string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LinePortSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ReplacementContactList _contactList;
+        protected BroadWorksConnector.Ocip.Models.ReplacementContactList _contactList;
 
         [XmlElement(ElementName = "contactList", IsNullable = true, Namespace = "")]
         [Optional]

@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserBroadWorksMobilityModifyRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"a8b2edcd7d6936a8b76653949ae59623:268")]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing _phonesToRing;
+        protected BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing _phonesToRing;
 
         [XmlElement(ElementName = "phonesToRing", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PhonesToRingSpecified { get; set; }
 
-        private string _mobilePhoneNumber;
+        protected string _mobilePhoneNumber;
 
         [XmlElement(ElementName = "mobilePhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MobilePhoneNumberSpecified { get; set; }
 
-        private bool _alertClickToDialCalls;
+        protected bool _alertClickToDialCalls;
 
         [XmlElement(ElementName = "alertClickToDialCalls", IsNullable = false, Namespace = "")]
         [Optional]
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlertClickToDialCallsSpecified { get; set; }
 
-        private bool _alertGroupPagingCalls;
+        protected bool _alertGroupPagingCalls;
 
         [XmlElement(ElementName = "alertGroupPagingCalls", IsNullable = false, Namespace = "")]
         [Optional]
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlertGroupPagingCallsSpecified { get; set; }
 
-        private bool _enableDiversionInhibitor;
+        protected bool _enableDiversionInhibitor;
 
         [XmlElement(ElementName = "enableDiversionInhibitor", IsNullable = false, Namespace = "")]
         [Optional]
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableDiversionInhibitorSpecified { get; set; }
 
-        private bool _requireAnswerConfirmation;
+        protected bool _requireAnswerConfirmation;
 
         [XmlElement(ElementName = "requireAnswerConfirmation", IsNullable = false, Namespace = "")]
         [Optional]
@@ -168,7 +168,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RequireAnswerConfirmationSpecified { get; set; }
 
-        private bool _broadworksCallControl;
+        protected bool _broadworksCallControl;
 
         [XmlElement(ElementName = "broadworksCallControl", IsNullable = false, Namespace = "")]
         [Optional]
@@ -186,7 +186,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BroadworksCallControlSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.BroadWorksMobilityUserSettingLevel _useSettingLevel;
+        protected BroadWorksConnector.Ocip.Models.BroadWorksMobilityUserSettingLevel _useSettingLevel;
 
         [XmlElement(ElementName = "useSettingLevel", IsNullable = false, Namespace = "")]
         [Optional]
@@ -204,7 +204,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseSettingLevelSpecified { get; set; }
 
-        private bool _denyCallOriginations;
+        protected bool _denyCallOriginations;
 
         [XmlElement(ElementName = "denyCallOriginations", IsNullable = false, Namespace = "")]
         [Optional]
@@ -222,7 +222,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DenyCallOriginationsSpecified { get; set; }
 
-        private bool _denyCallTerminations;
+        protected bool _denyCallTerminations;
 
         [XmlElement(ElementName = "denyCallTerminations", IsNullable = false, Namespace = "")]
         [Optional]

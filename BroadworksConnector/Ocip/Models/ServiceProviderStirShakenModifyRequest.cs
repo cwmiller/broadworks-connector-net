@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderStirShakenModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6891")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private bool _useParentLevelSettings;
+        protected bool _useParentLevelSettings;
 
         [XmlElement(ElementName = "useParentLevelSettings", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseParentLevelSettingsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.StirShakenSigningPolicy _signingPolicy;
+        protected BroadWorksConnector.Ocip.Models.StirShakenSigningPolicy _signingPolicy;
 
         [XmlElement(ElementName = "signingPolicy", IsNullable = false, Namespace = "")]
         [Optional]
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SigningPolicySpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.StirShakenTaggingPolicy _taggingPolicy;
+        protected BroadWorksConnector.Ocip.Models.StirShakenTaggingPolicy _taggingPolicy;
 
         [XmlElement(ElementName = "taggingPolicy", IsNullable = false, Namespace = "")]
         [Optional]
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TaggingPolicySpecified { get; set; }
 
-        private string _signingServiceURL;
+        protected string _signingServiceURL;
 
         [XmlElement(ElementName = "signingServiceURL", IsNullable = true, Namespace = "")]
         [Optional]
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SigningServiceURLSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.StirShakenTagFromOrPAI _tagFromOrPAI;
+        protected BroadWorksConnector.Ocip.Models.StirShakenTagFromOrPAI _tagFromOrPAI;
 
         [XmlElement(ElementName = "tagFromOrPAI", IsNullable = false, Namespace = "")]
         [Optional]
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TagFromOrPAISpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.StirShakenVerstatTag _verstatTag;
+        protected BroadWorksConnector.Ocip.Models.StirShakenVerstatTag _verstatTag;
 
         [XmlElement(ElementName = "verstatTag", IsNullable = false, Namespace = "")]
         [Optional]
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VerstatTagSpecified { get; set; }
 
-        private bool _useOSValueForOrigId;
+        protected bool _useOSValueForOrigId;
 
         [XmlElement(ElementName = "useOSValueForOrigId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -166,7 +166,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseOSValueForOrigIdSpecified { get; set; }
 
-        private string _origUUID;
+        protected string _origUUID;
 
         [XmlElement(ElementName = "origUUID", IsNullable = true, Namespace = "")]
         [Optional]
@@ -185,7 +185,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OrigUUIDSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.StirShakenAttestationLevel _attestationLevel;
+        protected BroadWorksConnector.Ocip.Models.StirShakenAttestationLevel _attestationLevel;
 
         [XmlElement(ElementName = "attestationLevel", IsNullable = false, Namespace = "")]
         [Optional]
@@ -203,7 +203,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AttestationLevelSpecified { get; set; }
 
-        private bool _enableVerification;
+        protected bool _enableVerification;
 
         [XmlElement(ElementName = "enableVerification", IsNullable = false, Namespace = "")]
         [Optional]
@@ -221,7 +221,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableVerificationSpecified { get; set; }
 
-        private string _verificationServiceURL;
+        protected string _verificationServiceURL;
 
         [XmlElement(ElementName = "verificationServiceURL", IsNullable = true, Namespace = "")]
         [Optional]
@@ -241,7 +241,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VerificationServiceURLSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.StirShakenVerificationErrorHandling _verificationErrorHandling;
+        protected BroadWorksConnector.Ocip.Models.StirShakenVerificationErrorHandling _verificationErrorHandling;
 
         [XmlElement(ElementName = "verificationErrorHandling", IsNullable = false, Namespace = "")]
         [Optional]
@@ -259,7 +259,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VerificationErrorHandlingSpecified { get; set; }
 
-        private bool _proxyVerstatToCNAMSubscribe;
+        protected bool _proxyVerstatToCNAMSubscribe;
 
         [XmlElement(ElementName = "proxyVerstatToCNAMSubscribe", IsNullable = false, Namespace = "")]
         [Optional]
@@ -277,7 +277,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProxyVerstatToCNAMSubscribeSpecified { get; set; }
 
-        private bool _useUnknownHeadersFromCNAMNotify;
+        protected bool _useUnknownHeadersFromCNAMNotify;
 
         [XmlElement(ElementName = "useUnknownHeadersFromCNAMNotify", IsNullable = false, Namespace = "")]
         [Optional]
@@ -295,7 +295,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseUnknownHeadersFromCNAMNotifySpecified { get; set; }
 
-        private bool _enableSigningForUnscreenedTrunkGroupOriginations;
+        protected bool _enableSigningForUnscreenedTrunkGroupOriginations;
 
         [XmlElement(ElementName = "enableSigningForUnscreenedTrunkGroupOriginations", IsNullable = false, Namespace = "")]
         [Optional]
@@ -313,7 +313,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableSigningForUnscreenedTrunkGroupOriginationsSpecified { get; set; }
 
-        private bool _enableTaggingForUnscreenedTrunkGroupOriginations;
+        protected bool _enableTaggingForUnscreenedTrunkGroupOriginations;
 
         [XmlElement(ElementName = "enableTaggingForUnscreenedTrunkGroupOriginations", IsNullable = false, Namespace = "")]
         [Optional]
@@ -331,7 +331,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableTaggingForUnscreenedTrunkGroupOriginationsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.StirShakenUnscreenedTrunkGroupOriginationAttestationLevel _unscreenedTrunkGroupOriginationAttestationLevel;
+        protected BroadWorksConnector.Ocip.Models.StirShakenUnscreenedTrunkGroupOriginationAttestationLevel _unscreenedTrunkGroupOriginationAttestationLevel;
 
         [XmlElement(ElementName = "unscreenedTrunkGroupOriginationAttestationLevel", IsNullable = false, Namespace = "")]
         [Optional]

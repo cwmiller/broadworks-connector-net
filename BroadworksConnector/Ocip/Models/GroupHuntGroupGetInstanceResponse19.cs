@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupHuntGroupGetInstanceResponse19 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile17 _serviceInstanceProfile;
+        protected BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile17 _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:2766")]
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceInstanceProfileSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.HuntPolicy _policy;
+        protected BroadWorksConnector.Ocip.Models.HuntPolicy _policy;
 
         [XmlElement(ElementName = "policy", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:2766")]
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PolicySpecified { get; set; }
 
-        private bool _huntAfterNoAnswer;
+        protected bool _huntAfterNoAnswer;
 
         [XmlElement(ElementName = "huntAfterNoAnswer", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:2766")]
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HuntAfterNoAnswerSpecified { get; set; }
 
-        private int _noAnswerNumberOfRings;
+        protected int _noAnswerNumberOfRings;
 
         [XmlElement(ElementName = "noAnswerNumberOfRings", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:2766")]
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NoAnswerNumberOfRingsSpecified { get; set; }
 
-        private bool _forwardAfterTimeout;
+        protected bool _forwardAfterTimeout;
 
         [XmlElement(ElementName = "forwardAfterTimeout", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:2766")]
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ForwardAfterTimeoutSpecified { get; set; }
 
-        private int _forwardTimeoutSeconds;
+        protected int _forwardTimeoutSeconds;
 
         [XmlElement(ElementName = "forwardTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:2766")]
@@ -137,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ForwardTimeoutSecondsSpecified { get; set; }
 
-        private string _forwardToPhoneNumber;
+        protected string _forwardToPhoneNumber;
 
         [XmlElement(ElementName = "forwardToPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -157,7 +157,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ForwardToPhoneNumberSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _agentUserTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _agentUserTable;
 
         [XmlElement(ElementName = "agentUserTable", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:2766")]
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AgentUserTableSpecified { get; set; }
 
-        private bool _allowCallWaitingForAgents;
+        protected bool _allowCallWaitingForAgents;
 
         [XmlElement(ElementName = "allowCallWaitingForAgents", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:2766")]
@@ -191,7 +191,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowCallWaitingForAgentsSpecified { get; set; }
 
-        private bool _useSystemHuntGroupCLIDSetting;
+        protected bool _useSystemHuntGroupCLIDSetting;
 
         [XmlElement(ElementName = "useSystemHuntGroupCLIDSetting", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:2766")]
@@ -208,7 +208,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseSystemHuntGroupCLIDSettingSpecified { get; set; }
 
-        private bool _includeHuntGroupNameInCLID;
+        protected bool _includeHuntGroupNameInCLID;
 
         [XmlElement(ElementName = "includeHuntGroupNameInCLID", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:2766")]
@@ -225,7 +225,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeHuntGroupNameInCLIDSpecified { get; set; }
 
-        private bool _enableNotReachableForwarding;
+        protected bool _enableNotReachableForwarding;
 
         [XmlElement(ElementName = "enableNotReachableForwarding", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:2766")]
@@ -242,7 +242,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableNotReachableForwardingSpecified { get; set; }
 
-        private string _notReachableForwardToPhoneNumber;
+        protected string _notReachableForwardToPhoneNumber;
 
         [XmlElement(ElementName = "notReachableForwardToPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -262,7 +262,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NotReachableForwardToPhoneNumberSpecified { get; set; }
 
-        private bool _makeBusyWhenNotReachable;
+        protected bool _makeBusyWhenNotReachable;
 
         [XmlElement(ElementName = "makeBusyWhenNotReachable", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:2766")]
@@ -279,7 +279,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MakeBusyWhenNotReachableSpecified { get; set; }
 
-        private bool _allowMembersToControlGroupBusy;
+        protected bool _allowMembersToControlGroupBusy;
 
         [XmlElement(ElementName = "allowMembersToControlGroupBusy", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:2766")]
@@ -296,7 +296,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowMembersToControlGroupBusySpecified { get; set; }
 
-        private bool _enableGroupBusy;
+        protected bool _enableGroupBusy;
 
         [XmlElement(ElementName = "enableGroupBusy", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:2766")]

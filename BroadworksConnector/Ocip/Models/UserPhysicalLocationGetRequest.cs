@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserPhysicalLocationGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserPhysicalLocationGetResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"4a26e5fa0592a0fd3b4e60e9432f8588:89")]

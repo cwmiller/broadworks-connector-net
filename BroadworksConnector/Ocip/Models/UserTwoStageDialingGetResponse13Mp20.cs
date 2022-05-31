@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserTwoStageDialingGetResponse13Mp20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"2a1428f64736d8f970ea802e5a73c495:146")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private bool _allowActivationWithUserAddresses;
+        protected bool _allowActivationWithUserAddresses;
 
         [XmlElement(ElementName = "allowActivationWithUserAddresses", IsNullable = false, Namespace = "")]
         [Group(@"2a1428f64736d8f970ea802e5a73c495:146")]

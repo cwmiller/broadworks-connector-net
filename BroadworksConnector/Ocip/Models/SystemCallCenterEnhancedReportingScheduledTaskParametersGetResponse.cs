@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallCenterEnhancedReportingScheduledTaskParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private int _scheduledReportSearchIntervalMinutes;
+        protected int _scheduledReportSearchIntervalMinutes;
 
         [XmlElement(ElementName = "scheduledReportSearchIntervalMinutes", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20711")]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ScheduledReportSearchIntervalMinutesSpecified { get; set; }
 
-        private int _maximumScheduledReportsPerInterval;
+        protected int _maximumScheduledReportsPerInterval;
 
         [XmlElement(ElementName = "maximumScheduledReportsPerInterval", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20711")]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaximumScheduledReportsPerIntervalSpecified { get; set; }
 
-        private int _deleteScheduledReportDaysAfterCompletion;
+        protected int _deleteScheduledReportDaysAfterCompletion;
 
         [XmlElement(ElementName = "deleteScheduledReportDaysAfterCompletion", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20711")]

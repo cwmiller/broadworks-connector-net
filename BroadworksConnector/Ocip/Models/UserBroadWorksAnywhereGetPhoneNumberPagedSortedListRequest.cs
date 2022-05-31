@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserBroadWorksAnywhereGetPhoneNumberPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserBroadWorksAnywhereGetPhoneNumberPagedSortedListResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"72f634ecc58842ce9d362ca629a47ea9:382")]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
+        protected BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
         [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
         [Optional]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResponsePagingControlSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SortByLocation _sortByLocation;
+        protected BroadWorksConnector.Ocip.Models.SortByLocation _sortByLocation;
 
         [XmlElement(ElementName = "sortByLocation", IsNullable = false, Namespace = "")]
         [Group(@"72f634ecc58842ce9d362ca629a47ea9:385")]
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SortByLocationSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SortByEnabled _sortByEnabled;
+        protected BroadWorksConnector.Ocip.Models.SortByEnabled _sortByEnabled;
 
         [XmlElement(ElementName = "sortByEnabled", IsNullable = false, Namespace = "")]
         [Group(@"72f634ecc58842ce9d362ca629a47ea9:385")]
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SortByEnabledSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaLocation> _searchCriteriaLocation = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaLocation>();
+        protected List<BroadWorksConnector.Ocip.Models.SearchCriteriaLocation> _searchCriteriaLocation = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaLocation>();
 
         [XmlElement(ElementName = "searchCriteriaLocation", IsNullable = false, Namespace = "")]
         [Optional]
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaLocationSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SearchCriteriaExactLocationEnabled _searchCriteriaExactLocationEnabled;
+        protected BroadWorksConnector.Ocip.Models.SearchCriteriaExactLocationEnabled _searchCriteriaExactLocationEnabled;
 
         [XmlElement(ElementName = "searchCriteriaExactLocationEnabled", IsNullable = false, Namespace = "")]
         [Optional]

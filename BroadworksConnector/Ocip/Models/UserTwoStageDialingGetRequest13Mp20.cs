@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserTwoStageDialingGetRequest13Mp20 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserTwoStageDialingGetResponse13Mp20>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"2a1428f64736d8f970ea802e5a73c495:131")]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaExactCallCenterReportTemplateKey : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        private BroadWorksConnector.Ocip.Models.CallCenterReportTemplateKey _reportTemplate;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportTemplateKey _reportTemplate;
 
         [XmlElement(ElementName = "reportTemplate", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:726")]

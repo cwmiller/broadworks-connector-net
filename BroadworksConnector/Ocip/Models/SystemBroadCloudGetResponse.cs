@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemBroadCloudGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _provisioningUrl;
+        protected string _provisioningUrl;
 
         [XmlElement(ElementName = "provisioningUrl", IsNullable = false, Namespace = "")]
         [Optional]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProvisioningUrlSpecified { get; set; }
 
-        private string _provisioningUserId;
+        protected string _provisioningUserId;
 
         [XmlElement(ElementName = "provisioningUserId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProvisioningUserIdSpecified { get; set; }
 
-        private bool _enableSynchronization;
+        protected bool _enableSynchronization;
 
         [XmlElement(ElementName = "enableSynchronization", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2524")]

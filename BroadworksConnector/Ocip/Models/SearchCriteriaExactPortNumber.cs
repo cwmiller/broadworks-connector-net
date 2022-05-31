@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaExactPortNumber : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        private int _port;
+        protected int _port;
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:1149")]

@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserBroadWorksReceptionistEnterpriseGetAvailableUserListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
         [Group(@"fb12998f4f9e45cedde01f08569f4c7c:163")]

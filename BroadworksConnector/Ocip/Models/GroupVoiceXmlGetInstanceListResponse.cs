@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupVoiceXmlGetInstanceListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _voiceXmlTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _voiceXmlTable;
 
         [XmlElement(ElementName = "voiceXmlTable", IsNullable = false, Namespace = "")]
         [Group(@"0639a23b2e14be05c11ead49c23bd0bd:106")]

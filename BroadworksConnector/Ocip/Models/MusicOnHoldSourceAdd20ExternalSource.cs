@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class MusicOnHoldSourceAdd20ExternalSource
     {
 
-        private BroadWorksConnector.Ocip.Models.AccessDeviceEndpointAdd _accessDeviceEndpoint;
+        protected BroadWorksConnector.Ocip.Models.AccessDeviceEndpointAdd _accessDeviceEndpoint;
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:14888")]

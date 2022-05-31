@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseCallCenterEnhancedReportingGetResponse19 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice19 _reportingServer;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice19 _reportingServer;
 
         [XmlElement(ElementName = "reportingServer", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:1319")]

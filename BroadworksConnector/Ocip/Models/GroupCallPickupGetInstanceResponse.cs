@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallPickupGetInstanceResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
         [Group(@"045ce951b3e25dec090606af4ad50c63:339")]

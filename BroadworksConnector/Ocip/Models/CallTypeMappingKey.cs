@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallTypeMappingKey
     {
 
-        private string _countryCode;
+        protected string _countryCode;
 
         [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19884")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CountryCodeSpecified { get; set; }
 
-        private string _digitMap;
+        protected string _digitMap;
 
         [XmlElement(ElementName = "digitMap", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19884")]

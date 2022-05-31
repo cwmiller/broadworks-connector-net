@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaServiceStatus : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:2146")]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDTMFTransmissionGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.DTMFTransmissionMethod _transmissionMethod;
+        protected BroadWorksConnector.Ocip.Models.DTMFTransmissionMethod _transmissionMethod;
 
         [XmlElement(ElementName = "transmissionMethod", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9610")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TransmissionMethodSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.DtmfTransmissionSignalingContentType _signalingContentType;
+        protected BroadWorksConnector.Ocip.Models.DtmfTransmissionSignalingContentType _signalingContentType;
 
         [XmlElement(ElementName = "signalingContentType", IsNullable = false, Namespace = "")]
         [Optional]

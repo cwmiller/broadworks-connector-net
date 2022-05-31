@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseCallCenterCurrentAndPastAgentGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _agentUserTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _agentUserTable;
 
         [XmlElement(ElementName = "agentUserTable", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:1123")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AgentUserTableSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _deletedAgentUserTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _deletedAgentUserTable;
 
         [XmlElement(ElementName = "deletedAgentUserTable", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:1123")]

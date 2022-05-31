@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSessionAuditGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29281")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private int _intervalSeconds;
+        protected int _intervalSeconds;
 
         [XmlElement(ElementName = "intervalSeconds", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29281")]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IntervalSecondsSpecified { get; set; }
 
-        private int _timeoutPeriodSeconds;
+        protected int _timeoutPeriodSeconds;
 
         [XmlElement(ElementName = "timeoutPeriodSeconds", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:29281")]

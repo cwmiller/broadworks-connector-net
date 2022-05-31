@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemThirdPartyIMPModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceNetAddress;
+        protected string _serviceNetAddress;
 
         [XmlElement(ElementName = "serviceNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceNetAddressSpecified { get; set; }
 
-        private int? _servicePort;
+        protected int? _servicePort;
 
         [XmlElement(ElementName = "servicePort", IsNullable = true, Namespace = "")]
         [Optional]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServicePortSpecified { get; set; }
 
-        private string _boshURL;
+        protected string _boshURL;
 
         [XmlElement(ElementName = "boshURL", IsNullable = true, Namespace = "")]
         [Optional]

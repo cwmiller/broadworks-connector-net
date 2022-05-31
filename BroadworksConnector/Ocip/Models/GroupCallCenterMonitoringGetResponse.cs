@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallCenterMonitoringGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _enableSupervisorCoaching;
+        protected bool _enableSupervisorCoaching;
 
         [XmlElement(ElementName = "enableSupervisorCoaching", IsNullable = false, Namespace = "")]
         [Group(@"41b968f87257b8dd553215179161ccb4:116")]

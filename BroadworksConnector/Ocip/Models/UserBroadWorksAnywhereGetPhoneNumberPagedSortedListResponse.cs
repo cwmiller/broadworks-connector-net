@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserBroadWorksAnywhereGetPhoneNumberPagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _phoneNumberTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _phoneNumberTable;
 
         [XmlElement(ElementName = "phoneNumberTable", IsNullable = false, Namespace = "")]
         [Group(@"72f634ecc58842ce9d362ca629a47ea9:405")]

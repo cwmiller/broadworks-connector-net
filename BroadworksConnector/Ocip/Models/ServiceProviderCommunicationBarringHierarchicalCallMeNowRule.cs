@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderCommunicationBarringHierarchicalCallMeNowRule
     {
 
-        private string _criteria;
+        protected string _criteria;
 
         [XmlElement(ElementName = "criteria", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4450")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CriteriaSpecified { get; set; }
 
-        private string _digitPatternCriteria;
+        protected string _digitPatternCriteria;
 
         [XmlElement(ElementName = "digitPatternCriteria", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4450")]
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DigitPatternCriteriaSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowAction _action;
+        protected BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowAction _action;
 
         [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4449")]
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ActionSpecified { get; set; }
 
-        private int _callTimeoutSeconds;
+        protected int _callTimeoutSeconds;
 
         [XmlElement(ElementName = "callTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallTimeoutSecondsSpecified { get; set; }
 
-        private string _timeSchedule;
+        protected string _timeSchedule;
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
         [Optional]
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TimeScheduleSpecified { get; set; }
 
-        private string _holidaySchedule;
+        protected string _holidaySchedule;
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
         [Optional]
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HolidayScheduleSpecified { get; set; }
 
-        private decimal _priority;
+        protected decimal _priority;
 
         [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4449")]

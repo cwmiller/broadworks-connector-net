@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserModifyGroupIdRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserModifyGroupIdResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:2497")]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private string _newGroupId;
+        protected string _newGroupId;
 
         [XmlElement(ElementName = "newGroupId", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:2497")]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewGroupIdSpecified { get; set; }
 
-        private bool _evaluateOnly;
+        protected bool _evaluateOnly;
 
         [XmlElement(ElementName = "evaluateOnly", IsNullable = false, Namespace = "")]
         [Optional]

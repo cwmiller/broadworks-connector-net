@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CommPilotExpressBusy
     {
 
-        private BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionWithException _incomingCalls;
+        protected BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionWithException _incomingCalls;
 
         [XmlElement(ElementName = "incomingCalls", IsNullable = false, Namespace = "")]
         [Group(@"8c204d784d1904d9eeea996d46de69be:153")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncomingCallsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CommPilotExpressEmailNotify _voiceMailNotify;
+        protected BroadWorksConnector.Ocip.Models.CommPilotExpressEmailNotify _voiceMailNotify;
 
         [XmlElement(ElementName = "voiceMailNotify", IsNullable = false, Namespace = "")]
         [Group(@"8c204d784d1904d9eeea996d46de69be:153")]

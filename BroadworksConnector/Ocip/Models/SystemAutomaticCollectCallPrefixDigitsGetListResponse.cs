@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAutomaticCollectCallPrefixDigitsGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _prefixTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _prefixTable;
 
         [XmlElement(ElementName = "prefixTable", IsNullable = false, Namespace = "")]
         [Group(@"af1b47d7cab3335a81456e64e42371b0:145")]

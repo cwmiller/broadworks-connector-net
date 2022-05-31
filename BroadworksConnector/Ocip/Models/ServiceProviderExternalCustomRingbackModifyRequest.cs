@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderExternalCustomRingbackModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:80")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _prefixDigits;
+        protected string _prefixDigits;
 
         [XmlElement(ElementName = "prefixDigits", IsNullable = true, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PrefixDigitsSpecified { get; set; }
 
-        private string _serverNetAddress;
+        protected string _serverNetAddress;
 
         [XmlElement(ElementName = "serverNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServerNetAddressSpecified { get; set; }
 
-        private int? _serverPort;
+        protected int? _serverPort;
 
         [XmlElement(ElementName = "serverPort", IsNullable = true, Namespace = "")]
         [Optional]
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServerPortSpecified { get; set; }
 
-        private int _timeoutSeconds;
+        protected int _timeoutSeconds;
 
         [XmlElement(ElementName = "timeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]

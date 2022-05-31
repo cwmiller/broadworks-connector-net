@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallProcessingPolicyProfileCollaborateProfileGetRequest22V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemCallProcessingPolicyProfileCollaborateProfileGetResponse22V2>
     {
 
-        private string _callProcessingPolicyProfileName;
+        protected string _callProcessingPolicyProfileName;
 
         [XmlElement(ElementName = "callProcessingPolicyProfileName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:3545")]

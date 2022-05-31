@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseTrunkTrunkGroupKey
     {
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1937")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private string _trunkGroupName;
+        protected string _trunkGroupName;
 
         [XmlElement(ElementName = "trunkGroupName", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1937")]

@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallCenterOverflowModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceUserId;
+        protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:7048")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallCenterOverflowProcessingAction _action;
+        protected BroadWorksConnector.Ocip.Models.CallCenterOverflowProcessingAction _action;
 
         [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ActionSpecified { get; set; }
 
-        private string _transferPhoneNumber;
+        protected string _transferPhoneNumber;
 
         [XmlElement(ElementName = "transferPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TransferPhoneNumberSpecified { get; set; }
 
-        private bool _overflowAfterTimeout;
+        protected bool _overflowAfterTimeout;
 
         [XmlElement(ElementName = "overflowAfterTimeout", IsNullable = false, Namespace = "")]
         [Optional]
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OverflowAfterTimeoutSpecified { get; set; }
 
-        private int _timeoutSeconds;
+        protected int _timeoutSeconds;
 
         [XmlElement(ElementName = "timeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TimeoutSecondsSpecified { get; set; }
 
-        private bool _playAnnouncementBeforeOverflowProcessing;
+        protected bool _playAnnouncementBeforeOverflowProcessing;
 
         [XmlElement(ElementName = "playAnnouncementBeforeOverflowProcessing", IsNullable = false, Namespace = "")]
         [Optional]
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PlayAnnouncementBeforeOverflowProcessingSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioMessageSelection;
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioMessageSelection;
 
         [XmlElement(ElementName = "audioMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioMessageSelectionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource _audioFile;
+        protected BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource _audioFile;
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
         [Optional]
@@ -168,7 +168,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioFileSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoMessageSelection;
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoMessageSelection;
 
         [XmlElement(ElementName = "videoMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
@@ -186,7 +186,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VideoMessageSelectionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource _videoFile;
+        protected BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource _videoFile;
 
         [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
         [Optional]

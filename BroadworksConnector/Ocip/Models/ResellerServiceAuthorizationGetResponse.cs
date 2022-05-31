@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ResellerServiceAuthorizationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _serviceOffering;
+        protected string _serviceOffering;
 
         [XmlElement(ElementName = "serviceOffering", IsNullable = false, Namespace = "")]
         [Optional]

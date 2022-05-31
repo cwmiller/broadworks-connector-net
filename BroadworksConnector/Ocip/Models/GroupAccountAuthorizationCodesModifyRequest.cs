@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupAccountAuthorizationCodesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"65df37199ec43e5d21a187db39d63158:196")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"65df37199ec43e5d21a187db39d63158:196")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AccountAuthorizationCodeType _codeType;
+        protected BroadWorksConnector.Ocip.Models.AccountAuthorizationCodeType _codeType;
 
         [XmlElement(ElementName = "codeType", IsNullable = false, Namespace = "")]
         [Optional]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CodeTypeSpecified { get; set; }
 
-        private int _numberOfDigits;
+        protected int _numberOfDigits;
 
         [XmlElement(ElementName = "numberOfDigits", IsNullable = false, Namespace = "")]
         [Optional]
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberOfDigitsSpecified { get; set; }
 
-        private bool _allowLocalAndTollFreeCalls;
+        protected bool _allowLocalAndTollFreeCalls;
 
         [XmlElement(ElementName = "allowLocalAndTollFreeCalls", IsNullable = false, Namespace = "")]
         [Optional]
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowLocalAndTollFreeCallsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _mandatoryUsageUserIdList;
+        protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _mandatoryUsageUserIdList;
 
         [XmlElement(ElementName = "mandatoryUsageUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MandatoryUsageUserIdListSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _optionalUsageUserIdList;
+        protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _optionalUsageUserIdList;
 
         [XmlElement(ElementName = "optionalUsageUserIdList", IsNullable = true, Namespace = "")]
         [Optional]

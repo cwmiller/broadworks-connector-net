@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemOCICallControlApplicationAddRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _applicationId;
+        protected string _applicationId;
 
         [XmlElement(ElementName = "applicationId", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13370")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ApplicationIdSpecified { get; set; }
 
-        private bool _enableSystemWide;
+        protected bool _enableSystemWide;
 
         [XmlElement(ElementName = "enableSystemWide", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13370")]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableSystemWideSpecified { get; set; }
 
-        private int _notificationTimeoutSeconds;
+        protected int _notificationTimeoutSeconds;
 
         [XmlElement(ElementName = "notificationTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13370")]
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NotificationTimeoutSecondsSpecified { get; set; }
 
-        private string _description;
+        protected string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DescriptionSpecified { get; set; }
 
-        private int _maxEventChannelsPerSet;
+        protected int _maxEventChannelsPerSet;
 
         [XmlElement(ElementName = "maxEventChannelsPerSet", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13370")]
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxEventChannelsPerSetSpecified { get; set; }
 
-        private int _unresponsiveChannelSetGracePeriodSeconds;
+        protected int _unresponsiveChannelSetGracePeriodSeconds;
 
         [XmlElement(ElementName = "unresponsiveChannelSetGracePeriodSeconds", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13370")]

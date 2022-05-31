@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupRoutePointQueueCallDispositionCodeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _dispositionCodesTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _dispositionCodesTable;
 
         [XmlElement(ElementName = "dispositionCodesTable", IsNullable = false, Namespace = "")]
         [Group(@"a27224a048c30ff69eab9209dec841cc:1094")]

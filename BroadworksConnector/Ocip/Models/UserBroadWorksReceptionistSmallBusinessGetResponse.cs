@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserBroadWorksReceptionistSmallBusinessGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _monitoredUserTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _monitoredUserTable;
 
         [XmlElement(ElementName = "monitoredUserTable", IsNullable = false, Namespace = "")]
         [Group(@"d8ae66e5f02195a36162958f9d5115db:106")]

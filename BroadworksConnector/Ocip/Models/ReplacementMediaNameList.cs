@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ReplacementMediaNameList
     {
 
-        private List<string> _mediaName = new List<string>();
+        protected List<string> _mediaName = new List<string>();
 
         [XmlElement(ElementName = "mediaName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:20033")]

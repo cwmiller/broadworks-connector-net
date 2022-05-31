@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemConnectedLineIdentificationPresentationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _enforceUserServiceAssignment;
+        protected bool _enforceUserServiceAssignment;
 
         [XmlElement(ElementName = "enforceUserServiceAssignment", IsNullable = false, Namespace = "")]
         [Optional]

@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserBusyLampFieldGetRequest16sp2 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserBusyLampFieldGetResponse16sp2>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"4faeca417998d23ce2ff6b0b43212aa6:167")]

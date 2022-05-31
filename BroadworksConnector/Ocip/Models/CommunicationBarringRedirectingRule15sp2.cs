@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CommunicationBarringRedirectingRule15sp2
     {
 
-        private string _criteria;
+        protected string _criteria;
 
         [XmlElement(ElementName = "criteria", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47806")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CriteriaSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingAction15sp2 _action;
+        protected BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingAction15sp2 _action;
 
         [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47806")]

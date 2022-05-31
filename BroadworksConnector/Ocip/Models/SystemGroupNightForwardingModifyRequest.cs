@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemGroupNightForwardingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _nightForwardGroupCallsWithinEnterprise;
+        protected bool _nightForwardGroupCallsWithinEnterprise;
 
         [XmlElement(ElementName = "nightForwardGroupCallsWithinEnterprise", IsNullable = false, Namespace = "")]
         [Optional]

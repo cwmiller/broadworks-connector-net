@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDeviceFamilyGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _deviceTypeTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _deviceTypeTable;
 
         [XmlElement(ElementName = "deviceTypeTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7506")]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceTypeTableSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _tagSetTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _tagSetTable;
 
         [XmlElement(ElementName = "tagSetTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7506")]

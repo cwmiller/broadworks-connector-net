@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserHotelingHostGetResponse14 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44863")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private int _associationLimitHours;
+        protected int _associationLimitHours;
 
         [XmlElement(ElementName = "associationLimitHours", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44863")]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AssociationLimitHoursSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.HotelingHostAccessLevel _accessLevel;
+        protected BroadWorksConnector.Ocip.Models.HotelingHostAccessLevel _accessLevel;
 
         [XmlElement(ElementName = "accessLevel", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44863")]
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessLevelSpecified { get; set; }
 
-        private string _guestLastName;
+        protected string _guestLastName;
 
         [XmlElement(ElementName = "guestLastName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GuestLastNameSpecified { get; set; }
 
-        private string _guestFirstName;
+        protected string _guestFirstName;
 
         [XmlElement(ElementName = "guestFirstName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GuestFirstNameSpecified { get; set; }
 
-        private string _guestPhoneNumber;
+        protected string _guestPhoneNumber;
 
         [XmlElement(ElementName = "guestPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GuestPhoneNumberSpecified { get; set; }
 
-        private string _guestExtension;
+        protected string _guestExtension;
 
         [XmlElement(ElementName = "guestExtension", IsNullable = false, Namespace = "")]
         [Optional]
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GuestExtensionSpecified { get; set; }
 
-        private string _guestLocationDialingCode;
+        protected string _guestLocationDialingCode;
 
         [XmlElement(ElementName = "guestLocationDialingCode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GuestLocationDialingCodeSpecified { get; set; }
 
-        private string _guestAssociationDateTime;
+        protected string _guestAssociationDateTime;
 
         [XmlElement(ElementName = "guestAssociationDateTime", IsNullable = false, Namespace = "")]
         [Optional]

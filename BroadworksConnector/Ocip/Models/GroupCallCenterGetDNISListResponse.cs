@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallCenterGetDNISListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _displayDNISNumber;
+        protected bool _displayDNISNumber;
 
         [XmlElement(ElementName = "displayDNISNumber", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:4417")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisplayDNISNumberSpecified { get; set; }
 
-        private bool _displayDNISName;
+        protected bool _displayDNISName;
 
         [XmlElement(ElementName = "displayDNISName", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:4417")]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisplayDNISNameSpecified { get; set; }
 
-        private bool _promoteCallsFromPriority1to0;
+        protected bool _promoteCallsFromPriority1to0;
 
         [XmlElement(ElementName = "promoteCallsFromPriority1to0", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:4417")]
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PromoteCallsFromPriority1to0Specified { get; set; }
 
-        private bool _promoteCallsFromPriority2to1;
+        protected bool _promoteCallsFromPriority2to1;
 
         [XmlElement(ElementName = "promoteCallsFromPriority2to1", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:4417")]
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PromoteCallsFromPriority2to1Specified { get; set; }
 
-        private bool _promoteCallsFromPriority3to2;
+        protected bool _promoteCallsFromPriority3to2;
 
         [XmlElement(ElementName = "promoteCallsFromPriority3to2", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:4417")]
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PromoteCallsFromPriority3to2Specified { get; set; }
 
-        private int _promoteCallsFromPriority1to0Seconds;
+        protected int _promoteCallsFromPriority1to0Seconds;
 
         [XmlElement(ElementName = "promoteCallsFromPriority1to0Seconds", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:4417")]
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PromoteCallsFromPriority1to0SecondsSpecified { get; set; }
 
-        private int _promoteCallsFromPriority2to1Seconds;
+        protected int _promoteCallsFromPriority2to1Seconds;
 
         [XmlElement(ElementName = "promoteCallsFromPriority2to1Seconds", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:4417")]
@@ -141,7 +141,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PromoteCallsFromPriority2to1SecondsSpecified { get; set; }
 
-        private int _promoteCallsFromPriority3to2Seconds;
+        protected int _promoteCallsFromPriority3to2Seconds;
 
         [XmlElement(ElementName = "promoteCallsFromPriority3to2Seconds", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:4417")]
@@ -160,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PromoteCallsFromPriority3to2SecondsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _dnisTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _dnisTable;
 
         [XmlElement(ElementName = "dnisTable", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:4417")]

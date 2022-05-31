@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserSeriesCompletionGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserSeriesCompletionGetResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"b974dc59b4b32d9f5952a0442ecaefa8:216")]

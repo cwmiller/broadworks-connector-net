@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemNetworkRoutingServerGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _networkRoutingServerTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _networkRoutingServerTable;
 
         [XmlElement(ElementName = "networkRoutingServerTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12747")]

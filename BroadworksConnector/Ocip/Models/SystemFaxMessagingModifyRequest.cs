@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemFaxMessagingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private int _statusDurationHours;
+        protected int _statusDurationHours;
 
         [XmlElement(ElementName = "statusDurationHours", IsNullable = false, Namespace = "")]
         [Optional]
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StatusDurationHoursSpecified { get; set; }
 
-        private int _statusAuditIntervalHours;
+        protected int _statusAuditIntervalHours;
 
         [XmlElement(ElementName = "statusAuditIntervalHours", IsNullable = false, Namespace = "")]
         [Optional]
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StatusAuditIntervalHoursSpecified { get; set; }
 
-        private int _maximumConcurrentFaxesPerUser;
+        protected int _maximumConcurrentFaxesPerUser;
 
         [XmlElement(ElementName = "maximumConcurrentFaxesPerUser", IsNullable = false, Namespace = "")]
         [Optional]

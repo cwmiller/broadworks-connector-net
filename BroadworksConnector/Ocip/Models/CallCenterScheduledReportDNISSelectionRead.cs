@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallCenterScheduledReportDNISSelectionRead
     {
 
-        private string _serviceUserId;
+        protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:7665")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        private bool _deleted;
+        protected bool _deleted;
 
         [XmlElement(ElementName = "deleted", IsNullable = false, Namespace = "")]
         [Optional]
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeletedSpecified { get; set; }
 
-        private bool _allDNIS;
+        protected bool _allDNIS;
 
         [XmlElement(ElementName = "allDNIS", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:7668")]
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllDNISSpecified { get; set; }
 
-        private List<string> _currentName = new List<string>();
+        protected List<string> _currentName = new List<string>();
 
         [XmlElement(ElementName = "currentName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CurrentNameSpecified { get; set; }
 
-        private List<string> _pastName = new List<string>();
+        protected List<string> _pastName = new List<string>();
 
         [XmlElement(ElementName = "pastName", IsNullable = false, Namespace = "")]
         [Optional]

@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class TrunkAddressingMultipleContactModify22
     {
 
-        private BroadWorksConnector.Ocip.Models.TrunkGroupDeviceMultipleContactEndpointModify22 _trunkGroupDeviceEndpoint;
+        protected BroadWorksConnector.Ocip.Models.TrunkGroupDeviceMultipleContactEndpointModify22 _trunkGroupDeviceEndpoint;
 
         [XmlElement(ElementName = "trunkGroupDeviceEndpoint", IsNullable = true, Namespace = "")]
         [Optional]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TrunkGroupDeviceEndpointSpecified { get; set; }
 
-        private string _enterpriseTrunkName;
+        protected string _enterpriseTrunkName;
 
         [XmlElement(ElementName = "enterpriseTrunkName", IsNullable = true, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnterpriseTrunkNameSpecified { get; set; }
 
-        private string _alternateTrunkIdentity;
+        protected string _alternateTrunkIdentity;
 
         [XmlElement(ElementName = "alternateTrunkIdentity", IsNullable = true, Namespace = "")]
         [Optional]
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlternateTrunkIdentitySpecified { get; set; }
 
-        private string _alternateTrunkIdentityDomain;
+        protected string _alternateTrunkIdentityDomain;
 
         [XmlElement(ElementName = "alternateTrunkIdentityDomain", IsNullable = true, Namespace = "")]
         [Optional]
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlternateTrunkIdentityDomainSpecified { get; set; }
 
-        private string _physicalLocation;
+        protected string _physicalLocation;
 
         [XmlElement(ElementName = "physicalLocation", IsNullable = true, Namespace = "")]
         [Optional]

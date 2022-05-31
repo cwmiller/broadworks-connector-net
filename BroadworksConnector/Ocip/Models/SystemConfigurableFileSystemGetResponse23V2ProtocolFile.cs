@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemConfigurableFileSystemGetResponse23V2ProtocolFile
     {
 
-        private bool _replicated;
+        protected bool _replicated;
 
         [XmlElement(ElementName = "replicated", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6621")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReplicatedSpecified { get; set; }
 
-        private bool _secure;
+        protected bool _secure;
 
         [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6621")]

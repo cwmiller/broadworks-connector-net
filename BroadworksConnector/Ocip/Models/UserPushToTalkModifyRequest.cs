@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserPushToTalkModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"f32f4b57593f3e1ac6ed1cf45ed62b7c:123")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private bool _allowAutoAnswer;
+        protected bool _allowAutoAnswer;
 
         [XmlElement(ElementName = "allowAutoAnswer", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowAutoAnswerSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.PushToTalkOutgoingConnectionSelection _outgoingConnectionSelection;
+        protected BroadWorksConnector.Ocip.Models.PushToTalkOutgoingConnectionSelection _outgoingConnectionSelection;
 
         [XmlElement(ElementName = "outgoingConnectionSelection", IsNullable = false, Namespace = "")]
         [Optional]
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OutgoingConnectionSelectionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.PushToTalkAccessListSelection _accessListSelection;
+        protected BroadWorksConnector.Ocip.Models.PushToTalkAccessListSelection _accessListSelection;
 
         [XmlElement(ElementName = "accessListSelection", IsNullable = false, Namespace = "")]
         [Optional]
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessListSelectionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _selectedUserIdList;
+        protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _selectedUserIdList;
 
         [XmlElement(ElementName = "selectedUserIdList", IsNullable = true, Namespace = "")]
         [Optional]

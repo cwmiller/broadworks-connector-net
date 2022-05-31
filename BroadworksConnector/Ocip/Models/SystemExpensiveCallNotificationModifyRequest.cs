@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemExpensiveCallNotificationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _enablePostAnnouncementDelayTimer;
+        protected bool _enablePostAnnouncementDelayTimer;
 
         [XmlElement(ElementName = "enablePostAnnouncementDelayTimer", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnablePostAnnouncementDelayTimerSpecified { get; set; }
 
-        private int _postAnnouncementDelaySeconds;
+        protected int _postAnnouncementDelaySeconds;
 
         [XmlElement(ElementName = "postAnnouncementDelaySeconds", IsNullable = false, Namespace = "")]
         [Optional]

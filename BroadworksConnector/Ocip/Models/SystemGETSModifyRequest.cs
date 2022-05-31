@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemGETSModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _enabled;
+        protected bool _enabled;
 
         [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
         [Optional]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnabledSpecified { get; set; }
 
-        private bool _enableRequireResourcePriority;
+        protected bool _enableRequireResourcePriority;
 
         [XmlElement(ElementName = "enableRequireResourcePriority", IsNullable = false, Namespace = "")]
         [Optional]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableRequireResourcePrioritySpecified { get; set; }
 
-        private bool _sendAccessResourcePriority;
+        protected bool _sendAccessResourcePriority;
 
         [XmlElement(ElementName = "sendAccessResourcePriority", IsNullable = false, Namespace = "")]
         [Optional]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SendAccessResourcePrioritySpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.GETSCallIdentifierMode _callIdentifierMode;
+        protected BroadWorksConnector.Ocip.Models.GETSCallIdentifierMode _callIdentifierMode;
 
         [XmlElement(ElementName = "callIdentifierMode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallIdentifierModeSpecified { get; set; }
 
-        private int _defaultPriorityAVP;
+        protected int _defaultPriorityAVP;
 
         [XmlElement(ElementName = "defaultPriorityAVP", IsNullable = false, Namespace = "")]
         [Optional]
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultPriorityAVPSpecified { get; set; }
 
-        private int _signalingDSCP;
+        protected int _signalingDSCP;
 
         [XmlElement(ElementName = "signalingDSCP", IsNullable = false, Namespace = "")]
         [Optional]
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SignalingDSCPSpecified { get; set; }
 
-        private string _defaultRValue;
+        protected string _defaultRValue;
 
         [XmlElement(ElementName = "defaultRValue", IsNullable = false, Namespace = "")]
         [Optional]
@@ -153,7 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultRValueSpecified { get; set; }
 
-        private bool _bypassRoRelease;
+        protected bool _bypassRoRelease;
 
         [XmlElement(ElementName = "bypassRoRelease", IsNullable = false, Namespace = "")]
         [Optional]

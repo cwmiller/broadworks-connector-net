@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemXsiPolicyProfileGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemXsiPolicyProfileGetListResponse>
     {
 
-        private BroadWorksConnector.Ocip.Models.XsiPolicyProfileLevel _xsiPolicyProfileLevel;
+        protected BroadWorksConnector.Ocip.Models.XsiPolicyProfileLevel _xsiPolicyProfileLevel;
 
         [XmlElement(ElementName = "xsiPolicyProfileLevel", IsNullable = false, Namespace = "")]
         [Optional]

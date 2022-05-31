@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ResellerVoiceMessagingGroupGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _deliveryFromAddress;
+        protected string _deliveryFromAddress;
 
         [XmlElement(ElementName = "deliveryFromAddress", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeliveryFromAddressSpecified { get; set; }
 
-        private string _notificationFromAddress;
+        protected string _notificationFromAddress;
 
         [XmlElement(ElementName = "notificationFromAddress", IsNullable = false, Namespace = "")]
         [Optional]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NotificationFromAddressSpecified { get; set; }
 
-        private string _voicePortalLockoutFromAddress;
+        protected string _voicePortalLockoutFromAddress;
 
         [XmlElement(ElementName = "voicePortalLockoutFromAddress", IsNullable = false, Namespace = "")]
         [Optional]

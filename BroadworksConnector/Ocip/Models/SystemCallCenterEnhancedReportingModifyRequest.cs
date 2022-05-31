@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallCenterEnhancedReportingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _archiveReports;
+        protected bool _archiveReports;
 
         [XmlElement(ElementName = "archiveReports", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ArchiveReportsSpecified { get; set; }
 
-        private string _reportApplicationURL;
+        protected string _reportApplicationURL;
 
         [XmlElement(ElementName = "reportApplicationURL", IsNullable = true, Namespace = "")]
         [Optional]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReportApplicationURLSpecified { get; set; }
 
-        private string _repositoryApplicationURL;
+        protected string _repositoryApplicationURL;
 
         [XmlElement(ElementName = "repositoryApplicationURL", IsNullable = true, Namespace = "")]
         [Optional]

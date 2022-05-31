@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallRecordingDeletePlatformRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _name;
+        protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:236")]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemEmergencyCallDDoSProtectionGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _enabled;
+        protected bool _enabled;
 
         [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9657")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnabledSpecified { get; set; }
 
-        private int _sampleIntervalSeconds;
+        protected int _sampleIntervalSeconds;
 
         [XmlElement(ElementName = "sampleIntervalSeconds", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9657")]
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SampleIntervalSecondsSpecified { get; set; }
 
-        private int _protectionRate;
+        protected int _protectionRate;
 
         [XmlElement(ElementName = "protectionRate", IsNullable = false, Namespace = "")]
         [Optional]
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProtectionRateSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ProtectionAction _protectionAction;
+        protected BroadWorksConnector.Ocip.Models.ProtectionAction _protectionAction;
 
         [XmlElement(ElementName = "protectionAction", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9657")]

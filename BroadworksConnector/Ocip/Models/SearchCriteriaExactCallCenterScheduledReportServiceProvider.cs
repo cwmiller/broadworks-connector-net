@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaExactCallCenterScheduledReportServiceProvider : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:774")]

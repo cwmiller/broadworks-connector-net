@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemHPBXMobileTerminationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _routingPrefix;
+        protected string _routingPrefix;
 
         [XmlElement(ElementName = "routingPrefix", IsNullable = true, Namespace = "")]
         [Optional]

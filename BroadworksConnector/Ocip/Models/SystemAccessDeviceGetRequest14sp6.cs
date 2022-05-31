@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAccessDeviceGetRequest14sp6 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemAccessDeviceGetResponse14sp6>
     {
 
-        private string _deviceName;
+        protected string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19569")]

@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseBroadWorksMobileManagerGetHomeZoneListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _homeZonesTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _homeZonesTable;
 
         [XmlElement(ElementName = "homeZonesTable", IsNullable = false, Namespace = "")]
         [Group(@"5395c7df0157d44aa22f3351d1a5f3da:258")]

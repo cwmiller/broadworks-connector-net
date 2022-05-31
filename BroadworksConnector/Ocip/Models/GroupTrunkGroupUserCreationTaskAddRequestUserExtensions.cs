@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupTrunkGroupUserCreationTaskAddRequestUserExtensions
     {
 
-        private List<string> _extension = new List<string>();
+        protected List<string> _extension = new List<string>();
 
         [XmlElement(ElementName = "extension", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExtensionSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.ExtensionRange> _extensionRange = new List<BroadWorksConnector.Ocip.Models.ExtensionRange>();
+        protected List<BroadWorksConnector.Ocip.Models.ExtensionRange> _extensionRange = new List<BroadWorksConnector.Ocip.Models.ExtensionRange>();
 
         [XmlElement(ElementName = "extensionRange", IsNullable = false, Namespace = "")]
         [Optional]

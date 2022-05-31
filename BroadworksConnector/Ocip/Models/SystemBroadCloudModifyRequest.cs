@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemBroadCloudModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _provisioningUrl;
+        protected string _provisioningUrl;
 
         [XmlElement(ElementName = "provisioningUrl", IsNullable = true, Namespace = "")]
         [Optional]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProvisioningUrlSpecified { get; set; }
 
-        private string _provisioningUserId;
+        protected string _provisioningUserId;
 
         [XmlElement(ElementName = "provisioningUserId", IsNullable = true, Namespace = "")]
         [Optional]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProvisioningUserIdSpecified { get; set; }
 
-        private string _provisioningPassword;
+        protected string _provisioningPassword;
 
         [XmlElement(ElementName = "provisioningPassword", IsNullable = true, Namespace = "")]
         [Optional]
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProvisioningPasswordSpecified { get; set; }
 
-        private bool _enableSynchronization;
+        protected bool _enableSynchronization;
 
         [XmlElement(ElementName = "enableSynchronization", IsNullable = false, Namespace = "")]
         [Optional]

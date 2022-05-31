@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemBroadWorksMobilityGetMobileNetworkIMRNListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemBroadWorksMobilityGetMobileNetworkIMRNListResponse>
     {
 
-        private string _mobileNetworkName;
+        protected string _mobileNetworkName;
 
         [XmlElement(ElementName = "mobileNetworkName", IsNullable = false, Namespace = "")]
         [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:999")]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MobileNetworkNameSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaIMRN> _searchCriteriaIMRN = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaIMRN>();
+        protected List<BroadWorksConnector.Ocip.Models.SearchCriteriaIMRN> _searchCriteriaIMRN = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaIMRN>();
 
         [XmlElement(ElementName = "searchCriteriaIMRN", IsNullable = false, Namespace = "")]
         [Optional]

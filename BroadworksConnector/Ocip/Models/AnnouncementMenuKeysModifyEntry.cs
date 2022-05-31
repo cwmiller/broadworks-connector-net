@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class AnnouncementMenuKeysModifyEntry
     {
 
-        private string _recordAudio;
+        protected string _recordAudio;
 
         [XmlElement(ElementName = "recordAudio", IsNullable = true, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecordAudioSpecified { get; set; }
 
-        private string _recordAudioVideo;
+        protected string _recordAudioVideo;
 
         [XmlElement(ElementName = "recordAudioVideo", IsNullable = true, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecordAudioVideoSpecified { get; set; }
 
-        private string _returnToPreviousMenu;
+        protected string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReturnToPreviousMenuSpecified { get; set; }
 
-        private string _repeatMenu;
+        protected string _repeatMenu;
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class MusicOnHoldSourceRead19sp1
     {
 
-        private BroadWorksConnector.Ocip.Models.AudioFileCodecExtended _audioFilePreferredCodec;
+        protected BroadWorksConnector.Ocip.Models.AudioFileCodecExtended _audioFilePreferredCodec;
 
         [XmlElement(ElementName = "audioFilePreferredCodec", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49256")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioFilePreferredCodecSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection _messageSourceSelection;
+        protected BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection _messageSourceSelection;
 
         [XmlElement(ElementName = "messageSourceSelection", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49256")]
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MessageSourceSelectionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceRead19sp1CustomSource _customSource;
+        protected BroadWorksConnector.Ocip.Models.MusicOnHoldSourceRead19sp1CustomSource _customSource;
 
         [XmlElement(ElementName = "customSource", IsNullable = false, Namespace = "")]
         [Optional]
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CustomSourceSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceRead19sp1ExternalSource _externalSource;
+        protected BroadWorksConnector.Ocip.Models.MusicOnHoldSourceRead19sp1ExternalSource _externalSource;
 
         [XmlElement(ElementName = "externalSource", IsNullable = false, Namespace = "")]
         [Optional]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupThirdPartyVoiceMailSupportGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"3c311aa5c89c0cf5b46e1cdefd5bc387:69")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private string _groupServer;
+        protected string _groupServer;
 
         [XmlElement(ElementName = "groupServer", IsNullable = false, Namespace = "")]
         [Optional]

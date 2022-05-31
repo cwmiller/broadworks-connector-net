@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserSecurityClassificationGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _securityClassification;
+        protected string _securityClassification;
 
         [XmlElement(ElementName = "securityClassification", IsNullable = false, Namespace = "")]
         [Optional]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SecurityClassificationSpecified { get; set; }
 
-        private string _customizedSecurityClassification;
+        protected string _customizedSecurityClassification;
 
         [XmlElement(ElementName = "customizedSecurityClassification", IsNullable = false, Namespace = "")]
         [Optional]

@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserVideoAddOnGetRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserVideoAddOnGetResponse22>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"a7ae3767516578250f020b627d8fe972:42")]

@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class AccessDeviceEndpointAndHotlineModify
     {
 
-        private BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
+        protected BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
 
         [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:91")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessDeviceSpecified { get; set; }
 
-        private string _linePort;
+        protected string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:91")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LinePortSpecified { get; set; }
 
-        private string _contact;
+        protected string _contact;
 
         [XmlElement(ElementName = "contact", IsNullable = true, Namespace = "")]
         [Optional]
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ContactSpecified { get; set; }
 
-        private string _pathHeader;
+        protected string _pathHeader;
 
         [XmlElement(ElementName = "pathHeader", IsNullable = false, Namespace = "")]
         [Optional]
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PathHeaderSpecified { get; set; }
 
-        private int _portNumber;
+        protected int _portNumber;
 
         [XmlElement(ElementName = "portNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PortNumberSpecified { get; set; }
 
-        private bool _useHotline;
+        protected bool _useHotline;
 
         [XmlElement(ElementName = "useHotline", IsNullable = false, Namespace = "")]
         [Optional]
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseHotlineSpecified { get; set; }
 
-        private string _hotlineContact;
+        protected string _hotlineContact;
 
         [XmlElement(ElementName = "hotlineContact", IsNullable = true, Namespace = "")]
         [Optional]

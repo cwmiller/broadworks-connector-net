@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemLicensingGetResponse21sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.LicenseStrictness _licenseStrictness;
+        protected BroadWorksConnector.Ocip.Models.LicenseStrictness _licenseStrictness;
 
         [XmlElement(ElementName = "licenseStrictness", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11512")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LicenseStrictnessSpecified { get; set; }
 
-        private int _groupUserlimit;
+        protected int _groupUserlimit;
 
         [XmlElement(ElementName = "groupUserlimit", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11512")]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupUserlimitSpecified { get; set; }
 
-        private string _expirationDate;
+        protected string _expirationDate;
 
         [XmlElement(ElementName = "expirationDate", IsNullable = false, Namespace = "")]
         [Optional]
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExpirationDateSpecified { get; set; }
 
-        private List<string> _hostId = new List<string>();
+        protected List<string> _hostId = new List<string>();
 
         [XmlElement(ElementName = "hostId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HostIdSpecified { get; set; }
 
-        private List<string> _licenseName = new List<string>();
+        protected List<string> _licenseName = new List<string>();
 
         [XmlElement(ElementName = "licenseName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LicenseNameSpecified { get; set; }
 
-        private int _numberOfTrunkUsers;
+        protected int _numberOfTrunkUsers;
 
         [XmlElement(ElementName = "numberOfTrunkUsers", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11512")]
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberOfTrunkUsersSpecified { get; set; }
 
-        private string _systemId;
+        protected string _systemId;
 
         [XmlElement(ElementName = "systemId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SystemIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _subscriberLicenseTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _subscriberLicenseTable;
 
         [XmlElement(ElementName = "subscriberLicenseTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11512")]
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SubscriberLicenseTableSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _groupServiceLicenseTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _groupServiceLicenseTable;
 
         [XmlElement(ElementName = "groupServiceLicenseTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11512")]
@@ -181,7 +181,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupServiceLicenseTableSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _virtualServiceLicenseTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _virtualServiceLicenseTable;
 
         [XmlElement(ElementName = "virtualServiceLicenseTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11512")]
@@ -198,7 +198,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VirtualServiceLicenseTableSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _userServiceLicenseTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _userServiceLicenseTable;
 
         [XmlElement(ElementName = "userServiceLicenseTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11512")]
@@ -215,7 +215,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserServiceLicenseTableSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _systemParamLicenseTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _systemParamLicenseTable;
 
         [XmlElement(ElementName = "systemParamLicenseTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11512")]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ReceptionistContactUserAndNote
     {
 
-        private string _contactUserId;
+        protected string _contactUserId;
 
         [XmlElement(ElementName = "contactUserId", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3596")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ContactUserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.VirtualOnNetUserKey _vonUser;
+        protected BroadWorksConnector.Ocip.Models.VirtualOnNetUserKey _vonUser;
 
         [XmlElement(ElementName = "vonUser", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3596")]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VonUserSpecified { get; set; }
 
-        private string _note;
+        protected string _note;
 
         [XmlElement(ElementName = "note", IsNullable = true, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3595")]

@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCollaborateRoomGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.CollaborateRoomType _roomType;
+        protected BroadWorksConnector.Ocip.Models.CollaborateRoomType _roomType;
 
         [XmlElement(ElementName = "roomType", IsNullable = false, Namespace = "")]
         [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:933")]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RoomTypeSpecified { get; set; }
 
-        private string _roomName;
+        protected string _roomName;
 
         [XmlElement(ElementName = "roomName", IsNullable = false, Namespace = "")]
         [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:933")]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RoomNameSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CollaborateRoomAttendeeNotification _attendeeNotification;
+        protected BroadWorksConnector.Ocip.Models.CollaborateRoomAttendeeNotification _attendeeNotification;
 
         [XmlElement(ElementName = "attendeeNotification", IsNullable = false, Namespace = "")]
         [Optional]
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AttendeeNotificationSpecified { get; set; }
 
-        private bool _endCollaborateRoomSessionOnOwnerExit;
+        protected bool _endCollaborateRoomSessionOnOwnerExit;
 
         [XmlElement(ElementName = "endCollaborateRoomSessionOnOwnerExit", IsNullable = false, Namespace = "")]
         [Optional]
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EndCollaborateRoomSessionOnOwnerExitSpecified { get; set; }
 
-        private bool _ownerRequired;
+        protected bool _ownerRequired;
 
         [XmlElement(ElementName = "ownerRequired", IsNullable = false, Namespace = "")]
         [Optional]
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OwnerRequiredSpecified { get; set; }
 
-        private string _instantRoomStartTime;
+        protected string _instantRoomStartTime;
 
         [XmlElement(ElementName = "instantRoomStartTime", IsNullable = false, Namespace = "")]
         [Optional]
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool InstantRoomStartTimeSpecified { get; set; }
 
-        private string _instantRoomEndTime;
+        protected string _instantRoomEndTime;
 
         [XmlElement(ElementName = "instantRoomEndTime", IsNullable = false, Namespace = "")]
         [Optional]
@@ -149,7 +149,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool InstantRoomEndTimeSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CollaborateRoomSchedule _roomSchedule;
+        protected BroadWorksConnector.Ocip.Models.CollaborateRoomSchedule _roomSchedule;
 
         [XmlElement(ElementName = "roomSchedule", IsNullable = false, Namespace = "")]
         [Optional]

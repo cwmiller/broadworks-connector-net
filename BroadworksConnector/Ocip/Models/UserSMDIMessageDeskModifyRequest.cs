@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserSMDIMessageDeskModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"ee7bb69368e23a56a82c5d9cf07b5433:324")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private string _messageDeskNumber;
+        protected string _messageDeskNumber;
 
         [XmlElement(ElementName = "messageDeskNumber", IsNullable = true, Namespace = "")]
         [Optional]

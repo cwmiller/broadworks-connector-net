@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserMeetMeConferencingGetConferenceRecordingListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserMeetMeConferencingGetConferenceRecordingListResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"0fd24121d16995c994d40bc408dbcfa5:786")]

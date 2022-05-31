@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class IncomingCallingPlanPermissionsModify
     {
 
-        private bool _allowFromWithinGroup;
+        protected bool _allowFromWithinGroup;
 
         [XmlElement(ElementName = "allowFromWithinGroup", IsNullable = false, Namespace = "")]
         [Optional]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowFromWithinGroupSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.IncomingCallingPlanOutsideCallPermission _allowFromOutsideGroup;
+        protected BroadWorksConnector.Ocip.Models.IncomingCallingPlanOutsideCallPermission _allowFromOutsideGroup;
 
         [XmlElement(ElementName = "allowFromOutsideGroup", IsNullable = false, Namespace = "")]
         [Optional]
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowFromOutsideGroupSpecified { get; set; }
 
-        private bool _allowCollectCalls;
+        protected bool _allowCollectCalls;
 
         [XmlElement(ElementName = "allowCollectCalls", IsNullable = false, Namespace = "")]
         [Optional]
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowCollectCallsSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.IncomingCallingPlanDigitPatternPermission> _digitPatternPermission = new List<BroadWorksConnector.Ocip.Models.IncomingCallingPlanDigitPatternPermission>();
+        protected List<BroadWorksConnector.Ocip.Models.IncomingCallingPlanDigitPatternPermission> _digitPatternPermission = new List<BroadWorksConnector.Ocip.Models.IncomingCallingPlanDigitPatternPermission>();
 
         [XmlElement(ElementName = "digitPatternPermission", IsNullable = false, Namespace = "")]
         [Optional]

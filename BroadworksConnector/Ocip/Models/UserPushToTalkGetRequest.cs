@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserPushToTalkGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserPushToTalkGetResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"f32f4b57593f3e1ac6ed1cf45ed62b7c:86")]

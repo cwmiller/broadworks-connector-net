@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDeviceFamilyUnassignDeviceTypeListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _deviceFamilyName;
+        protected string _deviceFamilyName;
 
         [XmlElement(ElementName = "deviceFamilyName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7616")]
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceFamilyNameSpecified { get; set; }
 
-        private List<string> _deviceTypeName = new List<string>();
+        protected List<string> _deviceTypeName = new List<string>();
 
         [XmlElement(ElementName = "deviceTypeName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7616")]

@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserRemoteOfficeGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserRemoteOfficeGetResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"70aea661491074f1e7cc845c9a6c7ea3:41")]

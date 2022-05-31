@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCommunicationBarringProfileGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _description;
+        protected string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DescriptionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction15sp2 _originatingDefaultAction;
+        protected BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction15sp2 _originatingDefaultAction;
 
         [XmlElement(ElementName = "originatingDefaultAction", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25218")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OriginatingDefaultActionSpecified { get; set; }
 
-        private string _originatingDefaultTreatmentId;
+        protected string _originatingDefaultTreatmentId;
 
         [XmlElement(ElementName = "originatingDefaultTreatmentId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OriginatingDefaultTreatmentIdSpecified { get; set; }
 
-        private string _originatingDefaultTransferNumber;
+        protected string _originatingDefaultTransferNumber;
 
         [XmlElement(ElementName = "originatingDefaultTransferNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OriginatingDefaultTransferNumberSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingRule15sp2> _originatingRule = new List<BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingRule15sp2>();
+        protected List<BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingRule15sp2> _originatingRule = new List<BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingRule15sp2>();
 
         [XmlElement(ElementName = "originatingRule", IsNullable = false, Namespace = "")]
         [Optional]
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OriginatingRuleSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingAction15sp2 _redirectingDefaultAction;
+        protected BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingAction15sp2 _redirectingDefaultAction;
 
         [XmlElement(ElementName = "redirectingDefaultAction", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25218")]
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RedirectingDefaultActionSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingRule15sp2> _redirectingRule = new List<BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingRule15sp2>();
+        protected List<BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingRule15sp2> _redirectingRule = new List<BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingRule15sp2>();
 
         [XmlElement(ElementName = "redirectingRule", IsNullable = false, Namespace = "")]
         [Optional]

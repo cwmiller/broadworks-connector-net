@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemConfigurableFileSystemGetResponse23V2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _mediaDirectory;
+        protected string _mediaDirectory;
 
         [XmlElement(ElementName = "mediaDirectory", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6615")]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MediaDirectorySpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SystemConfigurableFileSystemGetResponse23V2ProtocolFile _protocolFile;
+        protected BroadWorksConnector.Ocip.Models.SystemConfigurableFileSystemGetResponse23V2ProtocolFile _protocolFile;
 
         [XmlElement(ElementName = "protocolFile", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6617")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProtocolFileSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SystemConfigurableFileSystemGetResponse23V2ProtocolWebDAV _protocolWebDAV;
+        protected BroadWorksConnector.Ocip.Models.SystemConfigurableFileSystemGetResponse23V2ProtocolWebDAV _protocolWebDAV;
 
         [XmlElement(ElementName = "protocolWebDAV", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6617")]

@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallCenterModifySupervisorListRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceUserId;
+        protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:5318")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _supervisorUserIdList;
+        protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _supervisorUserIdList;
 
         [XmlElement(ElementName = "supervisorUserIdList", IsNullable = true, Namespace = "")]
         [Optional]

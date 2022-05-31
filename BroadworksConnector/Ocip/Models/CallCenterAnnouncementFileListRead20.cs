@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallCenterAnnouncementFileListRead20
     {
 
-        private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _file1;
+        protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _file1;
 
         [XmlElement(ElementName = "file1", IsNullable = false, Namespace = "")]
         [Optional]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool File1Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _file2;
+        protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _file2;
 
         [XmlElement(ElementName = "file2", IsNullable = false, Namespace = "")]
         [Optional]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool File2Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _file3;
+        protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _file3;
 
         [XmlElement(ElementName = "file3", IsNullable = false, Namespace = "")]
         [Optional]
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool File3Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _file4;
+        protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _file4;
 
         [XmlElement(ElementName = "file4", IsNullable = false, Namespace = "")]
         [Optional]

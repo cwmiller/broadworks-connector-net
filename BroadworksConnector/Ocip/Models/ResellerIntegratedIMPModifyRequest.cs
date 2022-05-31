@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ResellerIntegratedIMPModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _resellerId;
+        protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Group(@"23389100b68cef3aa07ee12ac7a2bd16:146")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResellerIdSpecified { get; set; }
 
-        private bool _useSystemServiceDomain;
+        protected bool _useSystemServiceDomain;
 
         [XmlElement(ElementName = "useSystemServiceDomain", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseSystemServiceDomainSpecified { get; set; }
 
-        private string _serviceDomain;
+        protected string _serviceDomain;
 
         [XmlElement(ElementName = "serviceDomain", IsNullable = true, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceDomainSpecified { get; set; }
 
-        private int? _servicePort;
+        protected int? _servicePort;
 
         [XmlElement(ElementName = "servicePort", IsNullable = true, Namespace = "")]
         [Optional]
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServicePortSpecified { get; set; }
 
-        private bool _useSystemMessagingServer;
+        protected bool _useSystemMessagingServer;
 
         [XmlElement(ElementName = "useSystemMessagingServer", IsNullable = false, Namespace = "")]
         [Optional]
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseSystemMessagingServerSpecified { get; set; }
 
-        private string _provisioningUrl;
+        protected string _provisioningUrl;
 
         [XmlElement(ElementName = "provisioningUrl", IsNullable = true, Namespace = "")]
         [Optional]
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProvisioningUrlSpecified { get; set; }
 
-        private string _provisioningUserId;
+        protected string _provisioningUserId;
 
         [XmlElement(ElementName = "provisioningUserId", IsNullable = true, Namespace = "")]
         [Optional]
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProvisioningUserIdSpecified { get; set; }
 
-        private string _provisioningPassword;
+        protected string _provisioningPassword;
 
         [XmlElement(ElementName = "provisioningPassword", IsNullable = true, Namespace = "")]
         [Optional]
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProvisioningPasswordSpecified { get; set; }
 
-        private string _boshURL;
+        protected string _boshURL;
 
         [XmlElement(ElementName = "boshURL", IsNullable = true, Namespace = "")]
         [Optional]
@@ -194,7 +194,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BoshURLSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.IntegratedIMPUserIDType _defaultImpIdType;
+        protected BroadWorksConnector.Ocip.Models.IntegratedIMPUserIDType _defaultImpIdType;
 
         [XmlElement(ElementName = "defaultImpIdType", IsNullable = false, Namespace = "")]
         [Optional]

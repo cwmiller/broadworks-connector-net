@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemRoutePointExternalSystemApplicationControllerAddListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _name;
+        protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15042")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NameSpecified { get; set; }
 
-        private List<string> _applicationController = new List<string>();
+        protected List<string> _applicationController = new List<string>();
 
         [XmlElement(ElementName = "applicationController", IsNullable = false, Namespace = "")]
         [Optional]

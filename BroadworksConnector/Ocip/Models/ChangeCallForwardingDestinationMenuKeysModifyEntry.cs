@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ChangeCallForwardingDestinationMenuKeysModifyEntry
     {
 
-        private string _finishEnteringNewDestinationNumber;
+        protected string _finishEnteringNewDestinationNumber;
 
         [XmlElement(ElementName = "finishEnteringNewDestinationNumber", IsNullable = false, Namespace = "")]
         [Optional]

@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderMaliciousCallTraceGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ServiceProviderMaliciousCallTraceGetResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"0da7c658f240cdc10c3f9cb328db57d8:46")]

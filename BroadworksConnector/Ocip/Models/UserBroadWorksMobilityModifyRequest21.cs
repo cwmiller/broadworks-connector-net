@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserBroadWorksMobilityModifyRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1880")]
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private bool _useMobileIdentityCallAnchoring;
+        protected bool _useMobileIdentityCallAnchoring;
 
         [XmlElement(ElementName = "useMobileIdentityCallAnchoring", IsNullable = false, Namespace = "")]
         [Optional]
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseMobileIdentityCallAnchoringSpecified { get; set; }
 
-        private bool _preventCallsToOwnMobiles;
+        protected bool _preventCallsToOwnMobiles;
 
         [XmlElement(ElementName = "preventCallsToOwnMobiles", IsNullable = false, Namespace = "")]
         [Optional]
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PreventCallsToOwnMobilesSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.BroadWorksMobilityUserMobileIdentityModifyEntry> _mobileIdentity = new List<BroadWorksConnector.Ocip.Models.BroadWorksMobilityUserMobileIdentityModifyEntry>();
+        protected List<BroadWorksConnector.Ocip.Models.BroadWorksMobilityUserMobileIdentityModifyEntry> _mobileIdentity = new List<BroadWorksConnector.Ocip.Models.BroadWorksMobilityUserMobileIdentityModifyEntry>();
 
         [XmlElement(ElementName = "mobileIdentity", IsNullable = false, Namespace = "")]
         [Optional]
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MobileIdentitySpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing _profileIdentityDevicesToRing;
+        protected BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing _profileIdentityDevicesToRing;
 
         [XmlElement(ElementName = "profileIdentityDevicesToRing", IsNullable = false, Namespace = "")]
         [Optional]
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProfileIdentityDevicesToRingSpecified { get; set; }
 
-        private bool _profileIdentityIncludeSharedCallAppearance;
+        protected bool _profileIdentityIncludeSharedCallAppearance;
 
         [XmlElement(ElementName = "profileIdentityIncludeSharedCallAppearance", IsNullable = false, Namespace = "")]
         [Optional]
@@ -149,7 +149,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProfileIdentityIncludeSharedCallAppearanceSpecified { get; set; }
 
-        private bool _profileIdentityIncludeBroadworksAnywhere;
+        protected bool _profileIdentityIncludeBroadworksAnywhere;
 
         [XmlElement(ElementName = "profileIdentityIncludeBroadworksAnywhere", IsNullable = false, Namespace = "")]
         [Optional]
@@ -167,7 +167,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProfileIdentityIncludeBroadworksAnywhereSpecified { get; set; }
 
-        private bool _profileIdentityIncludeExecutiveAssistant;
+        protected bool _profileIdentityIncludeExecutiveAssistant;
 
         [XmlElement(ElementName = "profileIdentityIncludeExecutiveAssistant", IsNullable = false, Namespace = "")]
         [Optional]
@@ -185,7 +185,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProfileIdentityIncludeExecutiveAssistantSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.BroadWorksMobilityAlertingMobileNumberReplacementList _profileIdentityMobilityNumbersAlerted;
+        protected BroadWorksConnector.Ocip.Models.BroadWorksMobilityAlertingMobileNumberReplacementList _profileIdentityMobilityNumbersAlerted;
 
         [XmlElement(ElementName = "profileIdentityMobilityNumbersAlerted", IsNullable = true, Namespace = "")]
         [Optional]

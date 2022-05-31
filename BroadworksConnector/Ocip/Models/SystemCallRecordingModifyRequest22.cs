@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallRecordingModifyRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _continueCallAfterRecordingFailure;
+        protected bool _continueCallAfterRecordingFailure;
 
         [XmlElement(ElementName = "continueCallAfterRecordingFailure", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ContinueCallAfterRecordingFailureSpecified { get; set; }
 
-        private int _maxResponseWaitTimeMilliseconds;
+        protected int _maxResponseWaitTimeMilliseconds;
 
         [XmlElement(ElementName = "maxResponseWaitTimeMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxResponseWaitTimeMillisecondsSpecified { get; set; }
 
-        private bool _continueCallAfterVideoRecordingFailure;
+        protected bool _continueCallAfterVideoRecordingFailure;
 
         [XmlElement(ElementName = "continueCallAfterVideoRecordingFailure", IsNullable = false, Namespace = "")]
         [Optional]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ContinueCallAfterVideoRecordingFailureSpecified { get; set; }
 
-        private bool _useContinueCallAfterRecordingFailureForOnDemandMode;
+        protected bool _useContinueCallAfterRecordingFailureForOnDemandMode;
 
         [XmlElement(ElementName = "useContinueCallAfterRecordingFailureForOnDemandMode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseContinueCallAfterRecordingFailureForOnDemandModeSpecified { get; set; }
 
-        private bool _useContinueCallAfterRecordingFailureForOnDemandUserInitiatedStartMode;
+        protected bool _useContinueCallAfterRecordingFailureForOnDemandUserInitiatedStartMode;
 
         [XmlElement(ElementName = "useContinueCallAfterRecordingFailureForOnDemandUserInitiatedStartMode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseContinueCallAfterRecordingFailureForOnDemandUserInitiatedStartModeSpecified { get; set; }
 
-        private bool _restrictCallRecordingProvisioningAccess;
+        protected bool _restrictCallRecordingProvisioningAccess;
 
         [XmlElement(ElementName = "restrictCallRecordingProvisioningAccess", IsNullable = false, Namespace = "")]
         [Optional]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SortOrderServiceProviderGetPagedSortedList
     {
 
-        private BroadWorksConnector.Ocip.Models.SortByServiceProviderId _sortByServiceProviderId;
+        protected BroadWorksConnector.Ocip.Models.SortByServiceProviderId _sortByServiceProviderId;
 
         [XmlElement(ElementName = "sortByServiceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7246")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SortByServiceProviderIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SortByServiceProviderName _sortByServiceProviderName;
+        protected BroadWorksConnector.Ocip.Models.SortByServiceProviderName _sortByServiceProviderName;
 
         [XmlElement(ElementName = "sortByServiceProviderName", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7246")]

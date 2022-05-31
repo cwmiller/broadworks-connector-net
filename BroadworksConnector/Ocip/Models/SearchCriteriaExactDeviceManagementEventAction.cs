@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaExactDeviceManagementEventAction : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        private BroadWorksConnector.Ocip.Models.DeviceManagementEventAction _dmEventAction;
+        protected BroadWorksConnector.Ocip.Models.DeviceManagementEventAction _dmEventAction;
 
         [XmlElement(ElementName = "dmEventAction", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:834")]

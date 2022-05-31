@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserServiceGetAssignmentListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _servicePacksAssignmentTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _servicePacksAssignmentTable;
 
         [XmlElement(ElementName = "servicePacksAssignmentTable", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:3884")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServicePacksAssignmentTableSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _userServicesAssignmentTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _userServicesAssignmentTable;
 
         [XmlElement(ElementName = "userServicesAssignmentTable", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:3884")]

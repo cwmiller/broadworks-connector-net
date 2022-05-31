@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserGetServiceInstanceListInSystemResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _serviceInstanceTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _serviceInstanceTable;
 
         [XmlElement(ElementName = "serviceInstanceTable", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:2303")]

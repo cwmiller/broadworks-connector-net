@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemHomeNetworkGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemHomeNetworkGetListResponse>
     {
 
-        private int _responseSizeLimit;
+        protected int _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResponseSizeLimitSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaHomeMscAddress> _searchCriteriaHomeMscAddress = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaHomeMscAddress>();
+        protected List<BroadWorksConnector.Ocip.Models.SearchCriteriaHomeMscAddress> _searchCriteriaHomeMscAddress = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaHomeMscAddress>();
 
         [XmlElement(ElementName = "searchCriteriaHomeMscAddress", IsNullable = false, Namespace = "")]
         [Optional]

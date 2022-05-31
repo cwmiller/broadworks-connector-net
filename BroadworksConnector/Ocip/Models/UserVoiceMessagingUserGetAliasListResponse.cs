@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserVoiceMessagingUserGetAliasListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _phoneNumber = new List<string>();
+        protected List<string> _phoneNumber = new List<string>();
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Optional]

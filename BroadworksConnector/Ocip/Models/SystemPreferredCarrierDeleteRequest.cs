@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemPreferredCarrierDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _carrier;
+        protected string _carrier;
 
         [XmlElement(ElementName = "carrier", IsNullable = false, Namespace = "")]
         [Group(@"74a46a9bfccb54713c1d19735843f1df:342")]

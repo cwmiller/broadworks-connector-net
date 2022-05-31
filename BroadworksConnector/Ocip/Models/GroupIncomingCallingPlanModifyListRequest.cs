@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupIncomingCallingPlanModifyListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"3dd296d55b56269ae23d86a934b8b35c:79")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"3dd296d55b56269ae23d86a934b8b35c:79")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.IncomingCallingPlanPermissionsModify _groupPermissions;
+        protected BroadWorksConnector.Ocip.Models.IncomingCallingPlanPermissionsModify _groupPermissions;
 
         [XmlElement(ElementName = "groupPermissions", IsNullable = false, Namespace = "")]
         [Optional]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupPermissionsSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.IncomingCallingPlanDepartmentPermissionsModify> _departmentPermissions = new List<BroadWorksConnector.Ocip.Models.IncomingCallingPlanDepartmentPermissionsModify>();
+        protected List<BroadWorksConnector.Ocip.Models.IncomingCallingPlanDepartmentPermissionsModify> _departmentPermissions = new List<BroadWorksConnector.Ocip.Models.IncomingCallingPlanDepartmentPermissionsModify>();
 
         [XmlElement(ElementName = "departmentPermissions", IsNullable = false, Namespace = "")]
         [Optional]

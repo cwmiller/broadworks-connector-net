@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SortOrderGroupPhoneDirectoryGetPagedSortedList
     {
 
-        private BroadWorksConnector.Ocip.Models.SortByUserLastName _sortByUserLastName;
+        protected BroadWorksConnector.Ocip.Models.SortByUserLastName _sortByUserLastName;
 
         [XmlElement(ElementName = "sortByUserLastName", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:9144")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SortByUserLastNameSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SortByUserFirstName _sortByUserFirstName;
+        protected BroadWorksConnector.Ocip.Models.SortByUserFirstName _sortByUserFirstName;
 
         [XmlElement(ElementName = "sortByUserFirstName", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:9144")]
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SortByUserFirstNameSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SortByMobilePhoneNumber _sortByMobilePhoneNumber;
+        protected BroadWorksConnector.Ocip.Models.SortByMobilePhoneNumber _sortByMobilePhoneNumber;
 
         [XmlElement(ElementName = "sortByMobilePhoneNumber", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:9144")]
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SortByMobilePhoneNumberSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SortByEmailAddress _sortByEmailAddress;
+        protected BroadWorksConnector.Ocip.Models.SortByEmailAddress _sortByEmailAddress;
 
         [XmlElement(ElementName = "sortByEmailAddress", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:9144")]
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SortByEmailAddressSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SortByDepartmentName _sortByDepartmentName;
+        protected BroadWorksConnector.Ocip.Models.SortByDepartmentName _sortByDepartmentName;
 
         [XmlElement(ElementName = "sortByDepartmentName", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:9144")]
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SortByDepartmentNameSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SortByYahooId _sortByYahooId;
+        protected BroadWorksConnector.Ocip.Models.SortByYahooId _sortByYahooId;
 
         [XmlElement(ElementName = "sortByYahooId", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:9144")]
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SortByYahooIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SortByUserId _sortByUserId;
+        protected BroadWorksConnector.Ocip.Models.SortByUserId _sortByUserId;
 
         [XmlElement(ElementName = "sortByUserId", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:9144")]
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SortByUserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SortByImpId _sortByImpId;
+        protected BroadWorksConnector.Ocip.Models.SortByImpId _sortByImpId;
 
         [XmlElement(ElementName = "sortByImpId", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:9144")]

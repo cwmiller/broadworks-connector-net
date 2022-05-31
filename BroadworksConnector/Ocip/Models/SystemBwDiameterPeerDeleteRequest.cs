@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemBwDiameterPeerDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private BroadWorksConnector.Ocip.Models.BwDiameterPeerInstance _instance;
+        protected BroadWorksConnector.Ocip.Models.BwDiameterPeerInstance _instance;
 
         [XmlElement(ElementName = "instance", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2730")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool InstanceSpecified { get; set; }
 
-        private string _identity;
+        protected string _identity;
 
         [XmlElement(ElementName = "identity", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2730")]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CommPilotExpressRedirection
     {
 
-        private BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionAction _action;
+        protected BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionAction _action;
 
         [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
         [Group(@"8c204d784d1904d9eeea996d46de69be:202")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ActionSpecified { get; set; }
 
-        private string _forwardingPhoneNumber;
+        protected string _forwardingPhoneNumber;
 
         [XmlElement(ElementName = "forwardingPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]

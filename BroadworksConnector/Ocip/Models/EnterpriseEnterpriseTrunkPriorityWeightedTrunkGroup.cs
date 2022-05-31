@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseEnterpriseTrunkPriorityWeightedTrunkGroup
     {
 
-        private BroadWorksConnector.Ocip.Models.EnterpriseTrunkTrunkGroupKey _trunkGroup;
+        protected BroadWorksConnector.Ocip.Models.EnterpriseTrunkTrunkGroupKey _trunkGroup;
 
         [XmlElement(ElementName = "trunkGroup", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1911")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TrunkGroupSpecified { get; set; }
 
-        private int _priority;
+        protected int _priority;
 
         [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1911")]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PrioritySpecified { get; set; }
 
-        private int _weight;
+        protected int _weight;
 
         [XmlElement(ElementName = "weight", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1911")]

@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupAutoAttendantModifyInstanceExecutionServerRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceUserId;
+        protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
         [Group(@"ac6f79eeb503f2d20b15e4c8d21d7077:18")]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AutoAttendantModifyMenuExecutionServer _businessHoursMenu;
+        protected BroadWorksConnector.Ocip.Models.AutoAttendantModifyMenuExecutionServer _businessHoursMenu;
 
         [XmlElement(ElementName = "businessHoursMenu", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BusinessHoursMenuSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AutoAttendantModifyMenuExecutionServer _afterHoursMenu;
+        protected BroadWorksConnector.Ocip.Models.AutoAttendantModifyMenuExecutionServer _afterHoursMenu;
 
         [XmlElement(ElementName = "afterHoursMenu", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AfterHoursMenuSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AutoAttendantModifyMenuExecutionServer _holidayMenu;
+        protected BroadWorksConnector.Ocip.Models.AutoAttendantModifyMenuExecutionServer _holidayMenu;
 
         [XmlElement(ElementName = "holidayMenu", IsNullable = false, Namespace = "")]
         [Optional]

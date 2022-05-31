@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderOfficeZoneUnassignListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5264")]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private List<string> _officeZoneName = new List<string>();
+        protected List<string> _officeZoneName = new List<string>();
 
         [XmlElement(ElementName = "officeZoneName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OfficeZoneNameSpecified { get; set; }
 
-        private string _defaultOfficeZoneName;
+        protected string _defaultOfficeZoneName;
 
         [XmlElement(ElementName = "defaultOfficeZoneName", IsNullable = false, Namespace = "")]
         [Optional]

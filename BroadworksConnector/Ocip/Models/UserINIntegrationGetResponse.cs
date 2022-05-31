@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserINIntegrationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private int _originatingServiceKey;
+        protected int _originatingServiceKey;
 
         [XmlElement(ElementName = "originatingServiceKey", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OriginatingServiceKeySpecified { get; set; }
 
-        private int _terminatingServiceKey;
+        protected int _terminatingServiceKey;
 
         [XmlElement(ElementName = "terminatingServiceKey", IsNullable = false, Namespace = "")]
         [Optional]

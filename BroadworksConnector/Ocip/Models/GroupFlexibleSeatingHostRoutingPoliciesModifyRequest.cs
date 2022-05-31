@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupFlexibleSeatingHostRoutingPoliciesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceUserId;
+        protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
         [Group(@"43afb2158d313a1d1a148124d7caba1e:346")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        private bool _allowEmergencyCalls;
+        protected bool _allowEmergencyCalls;
 
         [XmlElement(ElementName = "allowEmergencyCalls", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowEmergencyCallsSpecified { get; set; }
 
-        private bool _allowCallsToVoicePortal;
+        protected bool _allowCallsToVoicePortal;
 
         [XmlElement(ElementName = "allowCallsToVoicePortal", IsNullable = false, Namespace = "")]
         [Optional]

@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCommunicationBarringModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _directTransferScreening;
+        protected bool _directTransferScreening;
 
         [XmlElement(ElementName = "directTransferScreening", IsNullable = false, Namespace = "")]
         [Optional]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DirectTransferScreeningSpecified { get; set; }
 
-        private bool _vmCallbackScreening;
+        protected bool _vmCallbackScreening;
 
         [XmlElement(ElementName = "vmCallbackScreening", IsNullable = false, Namespace = "")]
         [Optional]

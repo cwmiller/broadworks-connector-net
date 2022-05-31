@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCustomRingbackUserGetCriteriaResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.TimeSchedule _timeSchedule;
+        protected BroadWorksConnector.Ocip.Models.TimeSchedule _timeSchedule;
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
         [Optional]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TimeScheduleSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
+        protected BroadWorksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
         [Optional]
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HolidayScheduleSpecified { get; set; }
 
-        private bool _blacklisted;
+        protected bool _blacklisted;
 
         [XmlElement(ElementName = "blacklisted", IsNullable = false, Namespace = "")]
         [Group(@"80acd3e6f38b9682dcefe7cd473392c3:218")]
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BlacklistedSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CriteriaFromDn _fromDnCriteria;
+        protected BroadWorksConnector.Ocip.Models.CriteriaFromDn _fromDnCriteria;
 
         [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
         [Group(@"80acd3e6f38b9682dcefe7cd473392c3:218")]
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FromDnCriteriaSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.CallToNumber> _callToNumber = new List<BroadWorksConnector.Ocip.Models.CallToNumber>();
+        protected List<BroadWorksConnector.Ocip.Models.CallToNumber> _callToNumber = new List<BroadWorksConnector.Ocip.Models.CallToNumber>();
 
         [XmlElement(ElementName = "callToNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallToNumberSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioSelection;
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioSelection;
 
         [XmlElement(ElementName = "audioSelection", IsNullable = false, Namespace = "")]
         [Group(@"80acd3e6f38b9682dcefe7cd473392c3:218")]
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioSelectionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _audioFile;
+        protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _audioFile;
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
         [Optional]
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioFileSpecified { get; set; }
 
-        private string _audioFileUrl;
+        protected string _audioFileUrl;
 
         [XmlElement(ElementName = "audioFileUrl", IsNullable = false, Namespace = "")]
         [Optional]
@@ -160,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioFileUrlSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoSelection;
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoSelection;
 
         [XmlElement(ElementName = "videoSelection", IsNullable = false, Namespace = "")]
         [Group(@"80acd3e6f38b9682dcefe7cd473392c3:218")]
@@ -177,7 +177,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VideoSelectionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _videoFile;
+        protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _videoFile;
 
         [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
         [Optional]
@@ -195,7 +195,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VideoFileSpecified { get; set; }
 
-        private string _videoFileUrl;
+        protected string _videoFileUrl;
 
         [XmlElement(ElementName = "videoFileUrl", IsNullable = false, Namespace = "")]
         [Optional]
@@ -215,7 +215,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VideoFileUrlSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _callWaitingAudioSelection;
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _callWaitingAudioSelection;
 
         [XmlElement(ElementName = "callWaitingAudioSelection", IsNullable = false, Namespace = "")]
         [Optional]
@@ -233,7 +233,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallWaitingAudioSelectionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _callWaitingAudioFile;
+        protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _callWaitingAudioFile;
 
         [XmlElement(ElementName = "callWaitingAudioFile", IsNullable = false, Namespace = "")]
         [Optional]
@@ -251,7 +251,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallWaitingAudioFileSpecified { get; set; }
 
-        private string _callWaitingAudioFileUrl;
+        protected string _callWaitingAudioFileUrl;
 
         [XmlElement(ElementName = "callWaitingAudioFileUrl", IsNullable = false, Namespace = "")]
         [Optional]
@@ -271,7 +271,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallWaitingAudioFileUrlSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _callWaitingVideoSelection;
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _callWaitingVideoSelection;
 
         [XmlElement(ElementName = "callWaitingVideoSelection", IsNullable = false, Namespace = "")]
         [Optional]
@@ -289,7 +289,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallWaitingVideoSelectionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _callWaitingVideoFile;
+        protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _callWaitingVideoFile;
 
         [XmlElement(ElementName = "callWaitingVideoFile", IsNullable = false, Namespace = "")]
         [Optional]
@@ -307,7 +307,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallWaitingVideoFileSpecified { get; set; }
 
-        private string _callWaitingVideoFileUrl;
+        protected string _callWaitingVideoFileUrl;
 
         [XmlElement(ElementName = "callWaitingVideoFileUrl", IsNullable = false, Namespace = "")]
         [Optional]

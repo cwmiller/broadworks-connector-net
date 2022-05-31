@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSpeedDial100ModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _prefix;
+        protected string _prefix;
 
         [XmlElement(ElementName = "prefix", IsNullable = true, Namespace = "")]
         [Optional]

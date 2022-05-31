@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemEnhancedCallLogsGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private int _maxNonPagedResponseSize;
+        protected int _maxNonPagedResponseSize;
 
         [XmlElement(ElementName = "maxNonPagedResponseSize", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26614")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxNonPagedResponseSizeSpecified { get; set; }
 
-        private string _eclQueryApplicationURL;
+        protected string _eclQueryApplicationURL;
 
         [XmlElement(ElementName = "eclQueryApplicationURL", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EclQueryApplicationURLSpecified { get; set; }
 
-        private string _eclQueryDataRepositoryURL;
+        protected string _eclQueryDataRepositoryURL;
 
         [XmlElement(ElementName = "eclQueryDataRepositoryURL", IsNullable = false, Namespace = "")]
         [Optional]

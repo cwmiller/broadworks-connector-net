@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserVoiceMessagingUserGetVoiceManagementRequest13mp8 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserVoiceMessagingUserGetVoiceManagementResponse13mp8>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47086")]

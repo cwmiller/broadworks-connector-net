@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ResponsePagingControl
     {
 
-        private int _responseStartIndex;
+        protected int _responseStartIndex;
 
         [XmlElement(ElementName = "responseStartIndex", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4066")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResponseStartIndexSpecified { get; set; }
 
-        private int _responsePageSize;
+        protected int _responsePageSize;
 
         [XmlElement(ElementName = "responsePageSize", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4066")]

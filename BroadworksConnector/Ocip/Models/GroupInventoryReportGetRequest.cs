@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupInventoryReportGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupInventoryReportGetResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"5c0fc3a03773b4f430e938115770c82d:42")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"5c0fc3a03773b4f430e938115770c82d:42")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private bool _includeUsers;
+        protected bool _includeUsers;
 
         [XmlElement(ElementName = "includeUsers", IsNullable = false, Namespace = "")]
         [Group(@"5c0fc3a03773b4f430e938115770c82d:42")]
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeUsersSpecified { get; set; }
 
-        private bool _includeServices;
+        protected bool _includeServices;
 
         [XmlElement(ElementName = "includeServices", IsNullable = false, Namespace = "")]
         [Group(@"5c0fc3a03773b4f430e938115770c82d:42")]
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeServicesSpecified { get; set; }
 
-        private bool _includeDns;
+        protected bool _includeDns;
 
         [XmlElement(ElementName = "includeDns", IsNullable = false, Namespace = "")]
         [Group(@"5c0fc3a03773b4f430e938115770c82d:42")]
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeDnsSpecified { get; set; }
 
-        private bool _includeAccessDevices;
+        protected bool _includeAccessDevices;
 
         [XmlElement(ElementName = "includeAccessDevices", IsNullable = false, Namespace = "")]
         [Group(@"5c0fc3a03773b4f430e938115770c82d:42")]
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeAccessDevicesSpecified { get; set; }
 
-        private bool _includeDepartments;
+        protected bool _includeDepartments;
 
         [XmlElement(ElementName = "includeDepartments", IsNullable = false, Namespace = "")]
         [Group(@"5c0fc3a03773b4f430e938115770c82d:42")]
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeDepartmentsSpecified { get; set; }
 
-        private string _reportDeliveryEmailAddress;
+        protected string _reportDeliveryEmailAddress;
 
         [XmlElement(ElementName = "reportDeliveryEmailAddress", IsNullable = false, Namespace = "")]
         [Optional]

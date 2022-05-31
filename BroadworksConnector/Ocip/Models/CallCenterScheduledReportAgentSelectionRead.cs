@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallCenterScheduledReportAgentSelectionRead
     {
 
-        private bool _allAgent;
+        protected bool _allAgent;
 
         [XmlElement(ElementName = "allAgent", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:7611")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllAgentSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _agentTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _agentTable;
 
         [XmlElement(ElementName = "agentTable", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:7611")]

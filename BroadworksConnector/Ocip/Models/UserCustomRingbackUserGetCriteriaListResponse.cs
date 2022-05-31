@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCustomRingbackUserGetCriteriaListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
         [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
         [Group(@"80acd3e6f38b9682dcefe7cd473392c3:186")]

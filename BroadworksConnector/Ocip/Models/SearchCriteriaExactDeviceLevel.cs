@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaExactDeviceLevel : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        private BroadWorksConnector.Ocip.Models.AccessDeviceLevel _deviceLevel;
+        protected BroadWorksConnector.Ocip.Models.AccessDeviceLevel _deviceLevel;
 
         [XmlElement(ElementName = "deviceLevel", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:819")]

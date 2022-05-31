@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserOutgoingCallingPlanAuthorizationCodeGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserOutgoingCallingPlanAuthorizationCodeGetListResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1053")]

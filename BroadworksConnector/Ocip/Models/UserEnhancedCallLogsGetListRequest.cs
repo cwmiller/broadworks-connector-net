@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserEnhancedCallLogsGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42355")]
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.EnhancedCallLogsType _callLogType;
+        protected BroadWorksConnector.Ocip.Models.EnhancedCallLogsType _callLogType;
 
         [XmlElement(ElementName = "callLogType", IsNullable = false, Namespace = "")]
         [Optional]
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallLogTypeSpecified { get; set; }
 
-        private int _startingOffset;
+        protected int _startingOffset;
 
         [XmlElement(ElementName = "startingOffset", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42355")]
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StartingOffsetSpecified { get; set; }
 
-        private int _numCalls;
+        protected int _numCalls;
 
         [XmlElement(ElementName = "numCalls", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42355")]

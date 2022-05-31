@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserDevicePoliciesGetResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.UserDevicePolicyLineMode _lineMode;
+        protected BroadWorksConnector.Ocip.Models.UserDevicePolicyLineMode _lineMode;
 
         [XmlElement(ElementName = "lineMode", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:1615")]
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LineModeSpecified { get; set; }
 
-        private bool _enableDeviceFeatureSynchronization;
+        protected bool _enableDeviceFeatureSynchronization;
 
         [XmlElement(ElementName = "enableDeviceFeatureSynchronization", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:1615")]
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableDeviceFeatureSynchronizationSpecified { get; set; }
 
-        private bool _enableDnd;
+        protected bool _enableDnd;
 
         [XmlElement(ElementName = "enableDnd", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:1615")]
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableDndSpecified { get; set; }
 
-        private bool _enableCallForwardingAlways;
+        protected bool _enableCallForwardingAlways;
 
         [XmlElement(ElementName = "enableCallForwardingAlways", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:1615")]
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableCallForwardingAlwaysSpecified { get; set; }
 
-        private bool _enableCallForwardingBusy;
+        protected bool _enableCallForwardingBusy;
 
         [XmlElement(ElementName = "enableCallForwardingBusy", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:1615")]
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableCallForwardingBusySpecified { get; set; }
 
-        private bool _enableCallForwardingNoAnswer;
+        protected bool _enableCallForwardingNoAnswer;
 
         [XmlElement(ElementName = "enableCallForwardingNoAnswer", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:1615")]
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableCallForwardingNoAnswerSpecified { get; set; }
 
-        private bool _enableAcd;
+        protected bool _enableAcd;
 
         [XmlElement(ElementName = "enableAcd", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:1615")]
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableAcdSpecified { get; set; }
 
-        private bool _enableExecutive;
+        protected bool _enableExecutive;
 
         [XmlElement(ElementName = "enableExecutive", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:1615")]
@@ -167,7 +167,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableExecutiveSpecified { get; set; }
 
-        private bool _enableExecutiveAssistant;
+        protected bool _enableExecutiveAssistant;
 
         [XmlElement(ElementName = "enableExecutiveAssistant", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:1615")]
@@ -184,7 +184,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableExecutiveAssistantSpecified { get; set; }
 
-        private bool _enableSecurityClassification;
+        protected bool _enableSecurityClassification;
 
         [XmlElement(ElementName = "enableSecurityClassification", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:1615")]
@@ -201,7 +201,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableSecurityClassificationSpecified { get; set; }
 
-        private bool _enableCallRecording;
+        protected bool _enableCallRecording;
 
         [XmlElement(ElementName = "enableCallRecording", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:1615")]
@@ -218,7 +218,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableCallRecordingSpecified { get; set; }
 
-        private bool _enableCallDecline;
+        protected bool _enableCallDecline;
 
         [XmlElement(ElementName = "enableCallDecline", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:1615")]

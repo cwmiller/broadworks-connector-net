@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCallRecordingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.RecordingOption _recordingOption;
+        protected BroadWorksConnector.Ocip.Models.RecordingOption _recordingOption;
 
         [XmlElement(ElementName = "recordingOption", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41714")]

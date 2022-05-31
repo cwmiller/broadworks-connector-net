@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserGroupPagingGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserGroupPagingGetListResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"0d36df8c109e3ea7324f79031368c661:579")]

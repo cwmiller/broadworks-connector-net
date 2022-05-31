@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaExactCustomContactDirectory : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        private string _customContactDirectoryName;
+        protected string _customContactDirectoryName;
 
         [XmlElement(ElementName = "customContactDirectoryName", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:804")]

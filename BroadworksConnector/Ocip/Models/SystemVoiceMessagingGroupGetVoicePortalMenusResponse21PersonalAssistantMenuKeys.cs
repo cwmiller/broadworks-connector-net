@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse21PersonalAssistantMenuKeys
     {
 
-        private string _setPresenceToNone;
+        protected string _setPresenceToNone;
 
         [XmlElement(ElementName = "setPresenceToNone", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SetPresenceToNoneSpecified { get; set; }
 
-        private string _setPresenceToBusinessTrip;
+        protected string _setPresenceToBusinessTrip;
 
         [XmlElement(ElementName = "setPresenceToBusinessTrip", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SetPresenceToBusinessTripSpecified { get; set; }
 
-        private string _setPresenceToGoneForTheDay;
+        protected string _setPresenceToGoneForTheDay;
 
         [XmlElement(ElementName = "setPresenceToGoneForTheDay", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SetPresenceToGoneForTheDaySpecified { get; set; }
 
-        private string _setPresenceToLunch;
+        protected string _setPresenceToLunch;
 
         [XmlElement(ElementName = "setPresenceToLunch", IsNullable = false, Namespace = "")]
         [Optional]
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SetPresenceToLunchSpecified { get; set; }
 
-        private string _setPresenceToMeeting;
+        protected string _setPresenceToMeeting;
 
         [XmlElement(ElementName = "setPresenceToMeeting", IsNullable = false, Namespace = "")]
         [Optional]
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SetPresenceToMeetingSpecified { get; set; }
 
-        private string _setPresenceToOutOfOffice;
+        protected string _setPresenceToOutOfOffice;
 
         [XmlElement(ElementName = "setPresenceToOutOfOffice", IsNullable = false, Namespace = "")]
         [Optional]
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SetPresenceToOutOfOfficeSpecified { get; set; }
 
-        private string _setPresenceToTemporarilyOut;
+        protected string _setPresenceToTemporarilyOut;
 
         [XmlElement(ElementName = "setPresenceToTemporarilyOut", IsNullable = false, Namespace = "")]
         [Optional]
@@ -156,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SetPresenceToTemporarilyOutSpecified { get; set; }
 
-        private string _setPresenceToTraining;
+        protected string _setPresenceToTraining;
 
         [XmlElement(ElementName = "setPresenceToTraining", IsNullable = false, Namespace = "")]
         [Optional]
@@ -176,7 +176,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SetPresenceToTrainingSpecified { get; set; }
 
-        private string _setPresenceToUnavailable;
+        protected string _setPresenceToUnavailable;
 
         [XmlElement(ElementName = "setPresenceToUnavailable", IsNullable = false, Namespace = "")]
         [Optional]
@@ -196,7 +196,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SetPresenceToUnavailableSpecified { get; set; }
 
-        private string _setPresenceToVacation;
+        protected string _setPresenceToVacation;
 
         [XmlElement(ElementName = "setPresenceToVacation", IsNullable = false, Namespace = "")]
         [Optional]
@@ -216,7 +216,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SetPresenceToVacationSpecified { get; set; }
 
-        private string _returnToPreviousMenu;
+        protected string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1108")]
@@ -235,7 +235,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReturnToPreviousMenuSpecified { get; set; }
 
-        private string _repeatMenu;
+        protected string _repeatMenu;
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
         [Optional]

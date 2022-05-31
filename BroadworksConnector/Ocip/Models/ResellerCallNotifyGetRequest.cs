@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ResellerCallNotifyGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ResellerCallNotifyGetResponse>
     {
 
-        private string _resellerId;
+        protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Group(@"26f62134ab1693f4bdddc7c70b20d2eb:51")]

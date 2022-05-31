@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupFindMeFollowMeGetInstanceListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _findMeFollowMeTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _findMeFollowMeTable;
 
         [XmlElement(ElementName = "findMeFollowMeTable", IsNullable = false, Namespace = "")]
         [Group(@"79f226053ee345f2ff4c37c37c8e9114:362")]

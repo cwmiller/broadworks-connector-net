@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class TimeInterval
     {
 
-        private BroadWorksConnector.Ocip.Models.DayOfWeek _startDayOfWeek;
+        protected BroadWorksConnector.Ocip.Models.DayOfWeek _startDayOfWeek;
 
         [XmlElement(ElementName = "startDayOfWeek", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49422")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StartDayOfWeekSpecified { get; set; }
 
-        private int _startHour;
+        protected int _startHour;
 
         [XmlElement(ElementName = "startHour", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49422")]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StartHourSpecified { get; set; }
 
-        private int _startMinute;
+        protected int _startMinute;
 
         [XmlElement(ElementName = "startMinute", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49422")]
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StartMinuteSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.DayOfWeek _endDayOfWeek;
+        protected BroadWorksConnector.Ocip.Models.DayOfWeek _endDayOfWeek;
 
         [XmlElement(ElementName = "endDayOfWeek", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49422")]
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EndDayOfWeekSpecified { get; set; }
 
-        private int _endHour;
+        protected int _endHour;
 
         [XmlElement(ElementName = "endHour", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49422")]
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EndHourSpecified { get; set; }
 
-        private int _endMinute;
+        protected int _endMinute;
 
         [XmlElement(ElementName = "endMinute", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49422")]

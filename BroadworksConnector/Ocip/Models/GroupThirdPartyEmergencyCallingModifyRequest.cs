@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupThirdPartyEmergencyCallingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8485")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8485")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private bool _enableDeviceManagement;
+        protected bool _enableDeviceManagement;
 
         [XmlElement(ElementName = "enableDeviceManagement", IsNullable = false, Namespace = "")]
         [Optional]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableDeviceManagementSpecified { get; set; }
 
-        private bool _enableRouting;
+        protected bool _enableRouting;
 
         [XmlElement(ElementName = "enableRouting", IsNullable = false, Namespace = "")]
         [Optional]
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableRoutingSpecified { get; set; }
 
-        private string _customerId;
+        protected string _customerId;
 
         [XmlElement(ElementName = "customerId", IsNullable = true, Namespace = "")]
         [Optional]
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CustomerIdSpecified { get; set; }
 
-        private string _secretKey;
+        protected string _secretKey;
 
         [XmlElement(ElementName = "secretKey", IsNullable = true, Namespace = "")]
         [Optional]

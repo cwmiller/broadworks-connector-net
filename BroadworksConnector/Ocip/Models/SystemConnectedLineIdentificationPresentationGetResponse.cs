@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemConnectedLineIdentificationPresentationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _enforceUserServiceAssignment;
+        protected bool _enforceUserServiceAssignment;
 
         [XmlElement(ElementName = "enforceUserServiceAssignment", IsNullable = false, Namespace = "")]
         [Group(@"2ea11c5e213a79b17d4a363684d76c57:57")]

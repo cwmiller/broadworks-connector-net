@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallRecordingModifyPlatformRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _name;
+        protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24752")]
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NameSpecified { get; set; }
 
-        private string _netAddress;
+        protected string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
         [Optional]
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetAddressSpecified { get; set; }
 
-        private int? _port;
+        protected int? _port;
 
         [XmlElement(ElementName = "port", IsNullable = true, Namespace = "")]
         [Optional]
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PortSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MediaStream _mediaStream;
+        protected BroadWorksConnector.Ocip.Models.MediaStream _mediaStream;
 
         [XmlElement(ElementName = "mediaStream", IsNullable = false, Namespace = "")]
         [Optional]
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MediaStreamSpecified { get; set; }
 
-        private bool _becomeSystemDefault;
+        protected bool _becomeSystemDefault;
 
         [XmlElement(ElementName = "becomeSystemDefault", IsNullable = false, Namespace = "")]
         [Optional]
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BecomeSystemDefaultSpecified { get; set; }
 
-        private string _becomeResellerDefault;
+        protected string _becomeResellerDefault;
 
         [XmlElement(ElementName = "becomeResellerDefault", IsNullable = false, Namespace = "")]
         [Optional]
@@ -137,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BecomeResellerDefaultSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.TransportProtocol _transportType;
+        protected BroadWorksConnector.Ocip.Models.TransportProtocol _transportType;
 
         [XmlElement(ElementName = "transportType", IsNullable = false, Namespace = "")]
         [Optional]
@@ -155,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TransportTypeSpecified { get; set; }
 
-        private string _description;
+        protected string _description;
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
@@ -175,7 +175,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DescriptionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallRecordingPlatformSchemaVersion _schemaVersion;
+        protected BroadWorksConnector.Ocip.Models.CallRecordingPlatformSchemaVersion _schemaVersion;
 
         [XmlElement(ElementName = "schemaVersion", IsNullable = false, Namespace = "")]
         [Optional]
@@ -193,7 +193,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SchemaVersionSpecified { get; set; }
 
-        private bool _supportVideoRecording;
+        protected bool _supportVideoRecording;
 
         [XmlElement(ElementName = "supportVideoRecording", IsNullable = false, Namespace = "")]
         [Optional]

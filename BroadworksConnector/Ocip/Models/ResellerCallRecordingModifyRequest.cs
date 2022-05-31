@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ResellerCallRecordingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _resellerId;
+        protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:191")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResellerIdSpecified { get; set; }
 
-        private string _fQDN;
+        protected string _fQDN;
 
         [XmlElement(ElementName = "FQDN", IsNullable = true, Namespace = "")]
         [Optional]

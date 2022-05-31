@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupAdmin
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2839")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private string _firstName;
+        protected string _firstName;
 
         [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FirstNameSpecified { get; set; }
 
-        private string _lastName;
+        protected string _lastName;
 
         [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LastNameSpecified { get; set; }
 
-        private string _password;
+        protected string _password;
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
         [Optional]
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PasswordSpecified { get; set; }
 
-        private string _language;
+        protected string _language;
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
         [Optional]

@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ResellerGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _resellerName;
+        protected string _resellerName;
 
         [XmlElement(ElementName = "resellerName", IsNullable = false, Namespace = "")]
         [Optional]

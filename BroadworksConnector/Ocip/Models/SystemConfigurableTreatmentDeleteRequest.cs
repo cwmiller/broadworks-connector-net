@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemConfigurableTreatmentDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _treatmentId;
+        protected string _treatmentId;
 
         [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6725")]

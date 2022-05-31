@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupSpeedDial100ModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"066a3d16bce438447d23cbe6ff0885a6:80")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"066a3d16bce438447d23cbe6ff0885a6:80")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private string _prefix;
+        protected string _prefix;
 
         [XmlElement(ElementName = "prefix", IsNullable = true, Namespace = "")]
         [Optional]

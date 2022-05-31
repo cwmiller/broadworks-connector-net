@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAccessDeviceDeviceActivationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _activationCode;
+        protected string _activationCode;
 
         [XmlElement(ElementName = "activationCode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ActivationCodeSpecified { get; set; }
 
-        private string _expiryTime;
+        protected string _expiryTime;
 
         [XmlElement(ElementName = "expiryTime", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExpiryTimeSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.DeviceActivationState _activationState;
+        protected BroadWorksConnector.Ocip.Models.DeviceActivationState _activationState;
 
         [XmlElement(ElementName = "activationState", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:906")]

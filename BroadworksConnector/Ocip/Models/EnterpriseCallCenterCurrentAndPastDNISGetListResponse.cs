@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseCallCenterCurrentAndPastDNISGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _name = new List<string>();
+        protected List<string> _name = new List<string>();
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NameSpecified { get; set; }
 
-        private List<string> _deletedName = new List<string>();
+        protected List<string> _deletedName = new List<string>();
 
         [XmlElement(ElementName = "deletedName", IsNullable = false, Namespace = "")]
         [Optional]

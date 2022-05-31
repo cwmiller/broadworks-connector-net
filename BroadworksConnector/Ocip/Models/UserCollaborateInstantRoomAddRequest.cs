@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCollaborateInstantRoomAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserCollaborateInstantRoomAddResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:632")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private string _roomName;
+        protected string _roomName;
 
         [XmlElement(ElementName = "roomName", IsNullable = false, Namespace = "")]
         [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:634")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RoomNameSpecified { get; set; }
 
-        private bool _useRoomIdAsRoomName;
+        protected bool _useRoomIdAsRoomName;
 
         [XmlElement(ElementName = "useRoomIdAsRoomName", IsNullable = false, Namespace = "")]
         [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:634")]

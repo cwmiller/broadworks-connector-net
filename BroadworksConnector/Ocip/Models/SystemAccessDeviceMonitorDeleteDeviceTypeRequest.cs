@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAccessDeviceMonitorDeleteDeviceTypeRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _deleteAllDeviceTypes;
+        protected bool _deleteAllDeviceTypes;
 
         [XmlElement(ElementName = "deleteAllDeviceTypes", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1585")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeleteAllDeviceTypesSpecified { get; set; }
 
-        private string _deviceType;
+        protected string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1585")]

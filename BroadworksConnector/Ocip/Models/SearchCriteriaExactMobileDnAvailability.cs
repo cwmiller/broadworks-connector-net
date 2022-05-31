@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaExactMobileDnAvailability : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        private bool _available;
+        protected bool _available;
 
         [XmlElement(ElementName = "available", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:1089")]

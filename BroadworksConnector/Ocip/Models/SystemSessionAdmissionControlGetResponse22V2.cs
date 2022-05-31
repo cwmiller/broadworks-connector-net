@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSessionAdmissionControlGetResponse22V2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _countLongConnectionsToMediaServer;
+        protected bool _countLongConnectionsToMediaServer;
 
         [XmlElement(ElementName = "countLongConnectionsToMediaServer", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16253")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CountLongConnectionsToMediaServerSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SessionAdmissionControlForMusicOnHoldType _sacHandlingForMoH;
+        protected BroadWorksConnector.Ocip.Models.SessionAdmissionControlForMusicOnHoldType _sacHandlingForMoH;
 
         [XmlElement(ElementName = "sacHandlingForMoH", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16253")]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SacHandlingForMoHSpecified { get; set; }
 
-        private bool _blockVMDepositDueToSACLimits;
+        protected bool _blockVMDepositDueToSACLimits;
 
         [XmlElement(ElementName = "blockVMDepositDueToSACLimits", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16253")]
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BlockVMDepositDueToSACLimitsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SessionAdmissionControlCodecSelectionPolicyType _sacCodecSelectionPolicy;
+        protected BroadWorksConnector.Ocip.Models.SessionAdmissionControlCodecSelectionPolicyType _sacCodecSelectionPolicy;
 
         [XmlElement(ElementName = "sacCodecSelectionPolicy", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16253")]
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SacCodecSelectionPolicySpecified { get; set; }
 
-        private bool _countCallToMobileNumberForSACSubscriber;
+        protected bool _countCallToMobileNumberForSACSubscriber;
 
         [XmlElement(ElementName = "countCallToMobileNumberForSACSubscriber", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16253")]
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CountCallToMobileNumberForSACSubscriberSpecified { get; set; }
 
-        private bool _countBWAnywhereForSACSubscriber;
+        protected bool _countBWAnywhereForSACSubscriber;
 
         [XmlElement(ElementName = "countBWAnywhereForSACSubscriber", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16253")]
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CountBWAnywhereForSACSubscriberSpecified { get; set; }
 
-        private bool _countROForSACSubscriber;
+        protected bool _countROForSACSubscriber;
 
         [XmlElement(ElementName = "countROForSACSubscriber", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16253")]
@@ -137,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CountROForSACSubscriberSpecified { get; set; }
 
-        private bool _excludeBWMobilityForSACSubscriber;
+        protected bool _excludeBWMobilityForSACSubscriber;
 
         [XmlElement(ElementName = "excludeBWMobilityForSACSubscriber", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16253")]
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExcludeBWMobilityForSACSubscriberSpecified { get; set; }
 
-        private bool _enableHoldoverOfHighwaterSessionCounts;
+        protected bool _enableHoldoverOfHighwaterSessionCounts;
 
         [XmlElement(ElementName = "enableHoldoverOfHighwaterSessionCounts", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16253")]
@@ -171,7 +171,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableHoldoverOfHighwaterSessionCountsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SessionAdmissionControlHighwaterSessionCountHoldoverPeriodMinutes _holdoverPeriodMinutes;
+        protected BroadWorksConnector.Ocip.Models.SessionAdmissionControlHighwaterSessionCountHoldoverPeriodMinutes _holdoverPeriodMinutes;
 
         [XmlElement(ElementName = "holdoverPeriodMinutes", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16253")]
@@ -188,7 +188,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HoldoverPeriodMinutesSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SessionAdmissionControlTimeZoneOffsetMinutes _timeZoneOffsetMinutes;
+        protected BroadWorksConnector.Ocip.Models.SessionAdmissionControlTimeZoneOffsetMinutes _timeZoneOffsetMinutes;
 
         [XmlElement(ElementName = "timeZoneOffsetMinutes", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16253")]

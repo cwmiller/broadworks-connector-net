@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseVoiceVPNDigitManipulationOptionalValue : BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulation
     {
 
-        private BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulationOperationOptionalValue _operation;
+        protected BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulationOperationOptionalValue _operation;
 
         [XmlElement(ElementName = "operation", IsNullable = false, Namespace = "")]
         [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1624")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OperationSpecified { get; set; }
 
-        private string _value;
+        protected string _value;
 
         [XmlElement(ElementName = "value", IsNullable = true, Namespace = "")]
         [Optional]

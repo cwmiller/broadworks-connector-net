@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class AdviceOfChargeCostInformationSourceEntry
     {
 
-        private string _peerIdentity;
+        protected string _peerIdentity;
 
         [XmlElement(ElementName = "peerIdentity", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19847")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PeerIdentitySpecified { get; set; }
 
-        private int _priority;
+        protected int _priority;
 
         [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19847")]

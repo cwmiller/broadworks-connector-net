@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserSingleSignOnCreateDeviceTokenResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _deviceToken;
+        protected string _deviceToken;
 
         [XmlElement(ElementName = "deviceToken", IsNullable = false, Namespace = "")]
         [Group(@"6b27fcc79475236456fc113a42b75543:674")]

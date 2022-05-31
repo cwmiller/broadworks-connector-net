@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupEnterpriseTrunkModifyRequestPriorityWeightedRouting
     {
 
-        private int _maximumRerouteAttemptsWithinPriority;
+        protected int _maximumRerouteAttemptsWithinPriority;
 
         [XmlElement(ElementName = "maximumRerouteAttemptsWithinPriority", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaximumRerouteAttemptsWithinPrioritySpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ReplacementGroupEnterpriseTrunkPriorityWeightedTrunkGroupList _priorityWeightedTrunkGroupList;
+        protected BroadWorksConnector.Ocip.Models.ReplacementGroupEnterpriseTrunkPriorityWeightedTrunkGroupList _priorityWeightedTrunkGroupList;
 
         [XmlElement(ElementName = "priorityWeightedTrunkGroupList", IsNullable = true, Namespace = "")]
         [Optional]

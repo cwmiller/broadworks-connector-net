@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserZoneCallingRestrictionsGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserZoneCallingRestrictionsGetResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"da5cd0d79ddb505982e08d164e405660:100")]

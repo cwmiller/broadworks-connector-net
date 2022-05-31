@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserMeetMeConferencingGetConferenceGreetingResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _playEntranceGreeting;
+        protected bool _playEntranceGreeting;
 
         [XmlElement(ElementName = "playEntranceGreeting", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45135")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PlayEntranceGreetingSpecified { get; set; }
 
-        private string _entranceGreetingAudioFile;
+        protected string _entranceGreetingAudioFile;
 
         [XmlElement(ElementName = "entranceGreetingAudioFile", IsNullable = false, Namespace = "")]
         [Optional]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EntranceGreetingAudioFileSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MediaFileType _entranceGreetingMediaType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType _entranceGreetingMediaType;
 
         [XmlElement(ElementName = "entranceGreetingMediaType", IsNullable = false, Namespace = "")]
         [Optional]

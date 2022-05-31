@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserPolycomPhoneServicesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"4f074d986b998636e2bcb0d67372b0f4:167")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
+        protected BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
 
         [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
         [Group(@"4f074d986b998636e2bcb0d67372b0f4:167")]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessDeviceSpecified { get; set; }
 
-        private bool _integratePhoneDirectoryWithBroadWorks;
+        protected bool _integratePhoneDirectoryWithBroadWorks;
 
         [XmlElement(ElementName = "integratePhoneDirectoryWithBroadWorks", IsNullable = false, Namespace = "")]
         [Optional]
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IntegratePhoneDirectoryWithBroadWorksSpecified { get; set; }
 
-        private bool _includeUserPersonalPhoneListInDirectory;
+        protected bool _includeUserPersonalPhoneListInDirectory;
 
         [XmlElement(ElementName = "includeUserPersonalPhoneListInDirectory", IsNullable = false, Namespace = "")]
         [Optional]
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeUserPersonalPhoneListInDirectorySpecified { get; set; }
 
-        private bool _includeGroupCustomContactDirectoryInDirectory;
+        protected bool _includeGroupCustomContactDirectoryInDirectory;
 
         [XmlElement(ElementName = "includeGroupCustomContactDirectoryInDirectory", IsNullable = false, Namespace = "")]
         [Optional]
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeGroupCustomContactDirectoryInDirectorySpecified { get; set; }
 
-        private string _groupCustomContactDirectory;
+        protected string _groupCustomContactDirectory;
 
         [XmlElement(ElementName = "groupCustomContactDirectory", IsNullable = true, Namespace = "")]
         [Optional]

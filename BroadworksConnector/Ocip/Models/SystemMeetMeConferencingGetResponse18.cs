@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemMeetMeConferencingGetResponse18 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private int _conferenceIdLength;
+        protected int _conferenceIdLength;
 
         [XmlElement(ElementName = "conferenceIdLength", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27719")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConferenceIdLengthSpecified { get; set; }
 
-        private int _moderatorPinLength;
+        protected int _moderatorPinLength;
 
         [XmlElement(ElementName = "moderatorPinLength", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27719")]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ModeratorPinLengthSpecified { get; set; }
 
-        private bool _enableConferenceEndDateRestriction;
+        protected bool _enableConferenceEndDateRestriction;
 
         [XmlElement(ElementName = "enableConferenceEndDateRestriction", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27719")]
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableConferenceEndDateRestrictionSpecified { get; set; }
 
-        private int _conferenceEndDateRestrictionMonths;
+        protected int _conferenceEndDateRestrictionMonths;
 
         [XmlElement(ElementName = "conferenceEndDateRestrictionMonths", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27719")]
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConferenceEndDateRestrictionMonthsSpecified { get; set; }
 
-        private bool _deleteExpiredConferencesAfterHoldPeriod;
+        protected bool _deleteExpiredConferencesAfterHoldPeriod;
 
         [XmlElement(ElementName = "deleteExpiredConferencesAfterHoldPeriod", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27719")]
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeleteExpiredConferencesAfterHoldPeriodSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MeetMeConferencingExpiredConferenceHoldPeriodDays _expiredConferenceHoldPeriodDays;
+        protected BroadWorksConnector.Ocip.Models.MeetMeConferencingExpiredConferenceHoldPeriodDays _expiredConferenceHoldPeriodDays;
 
         [XmlElement(ElementName = "expiredConferenceHoldPeriodDays", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27719")]
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExpiredConferenceHoldPeriodDaysSpecified { get; set; }
 
-        private string _recordingWebAppURL;
+        protected string _recordingWebAppURL;
 
         [XmlElement(ElementName = "recordingWebAppURL", IsNullable = false, Namespace = "")]
         [Optional]
@@ -145,7 +145,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecordingWebAppURLSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MeetMeConferencingRecordingFileFormat _recordingFileFormat;
+        protected BroadWorksConnector.Ocip.Models.MeetMeConferencingRecordingFileFormat _recordingFileFormat;
 
         [XmlElement(ElementName = "recordingFileFormat", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27719")]
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecordingFileFormatSpecified { get; set; }
 
-        private bool _terminateAfterGracePeriod;
+        protected bool _terminateAfterGracePeriod;
 
         [XmlElement(ElementName = "terminateAfterGracePeriod", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27719")]
@@ -179,7 +179,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TerminateAfterGracePeriodSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceDuration _conferenceGracePeriodMinutes;
+        protected BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceDuration _conferenceGracePeriodMinutes;
 
         [XmlElement(ElementName = "conferenceGracePeriodMinutes", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27719")]
@@ -196,7 +196,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConferenceGracePeriodMinutesSpecified { get; set; }
 
-        private int _conferenceParticipantEarlyEntryMinutes;
+        protected int _conferenceParticipantEarlyEntryMinutes;
 
         [XmlElement(ElementName = "conferenceParticipantEarlyEntryMinutes", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27719")]
@@ -215,7 +215,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConferenceParticipantEarlyEntryMinutesSpecified { get; set; }
 
-        private bool _enableConferenceExpiryNotification;
+        protected bool _enableConferenceExpiryNotification;
 
         [XmlElement(ElementName = "enableConferenceExpiryNotification", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27719")]
@@ -232,7 +232,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableConferenceExpiryNotificationSpecified { get; set; }
 
-        private bool _enableActiveConferenceNotification;
+        protected bool _enableActiveConferenceNotification;
 
         [XmlElement(ElementName = "enableActiveConferenceNotification", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27719")]
@@ -249,7 +249,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableActiveConferenceNotificationSpecified { get; set; }
 
-        private string _conferenceFromAddress;
+        protected string _conferenceFromAddress;
 
         [XmlElement(ElementName = "conferenceFromAddress", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27719")]

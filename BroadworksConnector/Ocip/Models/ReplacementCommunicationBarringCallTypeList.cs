@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ReplacementCommunicationBarringCallTypeList
     {
 
-        private List<string> _callType = new List<string>();
+        protected List<string> _callType = new List<string>();
 
         [XmlElement(ElementName = "callType", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3834")]

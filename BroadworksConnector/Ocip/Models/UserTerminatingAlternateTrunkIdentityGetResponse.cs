@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserTerminatingAlternateTrunkIdentityGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _terminatingTrunkIdentity;
+        protected string _terminatingTrunkIdentity;
 
         [XmlElement(ElementName = "terminatingTrunkIdentity", IsNullable = false, Namespace = "")]
         [Optional]

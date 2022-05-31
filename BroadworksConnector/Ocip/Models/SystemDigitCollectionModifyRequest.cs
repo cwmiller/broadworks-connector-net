@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDigitCollectionModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _accessCode;
+        protected string _accessCode;
 
         [XmlElement(ElementName = "accessCode", IsNullable = true, Namespace = "")]
         [Optional]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessCodeSpecified { get; set; }
 
-        private string _publicDigitMap;
+        protected string _publicDigitMap;
 
         [XmlElement(ElementName = "publicDigitMap", IsNullable = false, Namespace = "")]
         [Optional]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PublicDigitMapSpecified { get; set; }
 
-        private string _privateDigitMap;
+        protected string _privateDigitMap;
 
         [XmlElement(ElementName = "privateDigitMap", IsNullable = true, Namespace = "")]
         [Optional]

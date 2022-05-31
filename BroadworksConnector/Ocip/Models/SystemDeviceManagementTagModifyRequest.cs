@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDeviceManagementTagModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _systemDefaultTagSet;
+        protected bool _systemDefaultTagSet;
 
         [XmlElement(ElementName = "systemDefaultTagSet", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8042")]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SystemDefaultTagSetSpecified { get; set; }
 
-        private string _tagSetName;
+        protected string _tagSetName;
 
         [XmlElement(ElementName = "tagSetName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8042")]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TagSetNameSpecified { get; set; }
 
-        private string _tagName;
+        protected string _tagName;
 
         [XmlElement(ElementName = "tagName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8041")]
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TagNameSpecified { get; set; }
 
-        private string _tagValue;
+        protected string _tagValue;
 
         [XmlElement(ElementName = "tagValue", IsNullable = true, Namespace = "")]
         [Optional]
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TagValueSpecified { get; set; }
 
-        private string _tagValueToEncrypt;
+        protected string _tagValueToEncrypt;
 
         [XmlElement(ElementName = "tagValueToEncrypt", IsNullable = true, Namespace = "")]
         [Optional]
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TagValueToEncryptSpecified { get; set; }
 
-        private bool _isTagValueOverridable;
+        protected bool _isTagValueOverridable;
 
         [XmlElement(ElementName = "isTagValueOverridable", IsNullable = false, Namespace = "")]
         [Optional]

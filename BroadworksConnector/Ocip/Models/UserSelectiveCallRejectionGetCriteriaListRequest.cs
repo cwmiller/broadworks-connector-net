@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserSelectiveCallRejectionGetCriteriaListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserSelectiveCallRejectionGetCriteriaListResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"41cdd93743bd17548f1ded5691680d5a:91")]

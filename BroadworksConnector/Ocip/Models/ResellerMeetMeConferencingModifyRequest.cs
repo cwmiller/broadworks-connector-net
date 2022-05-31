@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ResellerMeetMeConferencingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _resellerId;
+        protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Group(@"0fd24121d16995c994d40bc408dbcfa5:380")]
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResellerIdSpecified { get; set; }
 
-        private string _conferenceFromAddress;
+        protected string _conferenceFromAddress;
 
         [XmlElement(ElementName = "conferenceFromAddress", IsNullable = true, Namespace = "")]
         [Optional]
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConferenceFromAddressSpecified { get; set; }
 
-        private int _maxAllocatedPorts;
+        protected int _maxAllocatedPorts;
 
         [XmlElement(ElementName = "maxAllocatedPorts", IsNullable = false, Namespace = "")]
         [Optional]
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxAllocatedPortsSpecified { get; set; }
 
-        private bool _disableUnlimitedMeetMePorts;
+        protected bool _disableUnlimitedMeetMePorts;
 
         [XmlElement(ElementName = "disableUnlimitedMeetMePorts", IsNullable = false, Namespace = "")]
         [Optional]
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisableUnlimitedMeetMePortsSpecified { get; set; }
 
-        private bool _enableMaxAllocatedPorts;
+        protected bool _enableMaxAllocatedPorts;
 
         [XmlElement(ElementName = "enableMaxAllocatedPorts", IsNullable = false, Namespace = "")]
         [Optional]

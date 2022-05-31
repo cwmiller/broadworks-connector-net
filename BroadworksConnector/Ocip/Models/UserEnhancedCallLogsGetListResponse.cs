@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserEnhancedCallLogsGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> _placed = new List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry>();
+        protected List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> _placed = new List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry>();
 
         [XmlElement(ElementName = "placed", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PlacedSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> _received = new List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry>();
+        protected List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> _received = new List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry>();
 
         [XmlElement(ElementName = "received", IsNullable = false, Namespace = "")]
         [Optional]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReceivedSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> _missed = new List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry>();
+        protected List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> _missed = new List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry>();
 
         [XmlElement(ElementName = "missed", IsNullable = false, Namespace = "")]
         [Optional]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class OutgoingCallingPlanDigitPatternCallMeNowDepartmentPermissionsModify
     {
 
-        private BroadWorksConnector.Ocip.Models.DepartmentKey _departmentKey;
+        protected BroadWorksConnector.Ocip.Models.DepartmentKey _departmentKey;
 
         [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1873")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DepartmentKeySpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternCallMeNowPermissions _digitPatternPermissions;
+        protected BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternCallMeNowPermissions _digitPatternPermissions;
 
         [XmlElement(ElementName = "digitPatternPermissions", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1873")]

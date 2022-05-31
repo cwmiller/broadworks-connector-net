@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ReplacementEnterpriseEnterpriseTrunkPriorityWeightedTrunkGroupList
     {
 
-        private List<BroadWorksConnector.Ocip.Models.EnterpriseEnterpriseTrunkPriorityWeightedTrunkGroup> _trunkGroup = new List<BroadWorksConnector.Ocip.Models.EnterpriseEnterpriseTrunkPriorityWeightedTrunkGroup>();
+        protected List<BroadWorksConnector.Ocip.Models.EnterpriseEnterpriseTrunkPriorityWeightedTrunkGroup> _trunkGroup = new List<BroadWorksConnector.Ocip.Models.EnterpriseEnterpriseTrunkPriorityWeightedTrunkGroup>();
 
         [XmlElement(ElementName = "trunkGroup", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1963")]

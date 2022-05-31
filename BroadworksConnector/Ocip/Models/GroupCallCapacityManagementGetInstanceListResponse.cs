@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallCapacityManagementGetInstanceListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _callCapacityGroupTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _callCapacityGroupTable;
 
         [XmlElement(ElementName = "callCapacityGroupTable", IsNullable = false, Namespace = "")]
         [Group(@"dfcd2b22f2e2b3540d286342087ce042:190")]

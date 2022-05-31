@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserNumberPortabilityAnnouncementGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _enable;
+        protected bool _enable;
 
         [XmlElement(ElementName = "enable", IsNullable = false, Namespace = "")]
         [Group(@"6abb48a2d0672804f15670b4afa7ec02:59")]

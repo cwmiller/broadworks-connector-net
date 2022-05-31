@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAutomaticCallbackGetReleaseCauseListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<BroadWorksConnector.Ocip.Models.AutomaticCallbackReleaseCause> _releaseCause = new List<BroadWorksConnector.Ocip.Models.AutomaticCallbackReleaseCause>();
+        protected List<BroadWorksConnector.Ocip.Models.AutomaticCallbackReleaseCause> _releaseCause = new List<BroadWorksConnector.Ocip.Models.AutomaticCallbackReleaseCause>();
 
         [XmlElement(ElementName = "releaseCause", IsNullable = false, Namespace = "")]
         [Optional]

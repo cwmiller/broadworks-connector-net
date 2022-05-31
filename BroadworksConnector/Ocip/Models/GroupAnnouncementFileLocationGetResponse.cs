@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupAnnouncementFileLocationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _fileLocation;
+        protected string _fileLocation;
 
         [XmlElement(ElementName = "fileLocation", IsNullable = false, Namespace = "")]
         [Group(@"0729212f68d12c248c92a1b3b3aa84d6:69")]

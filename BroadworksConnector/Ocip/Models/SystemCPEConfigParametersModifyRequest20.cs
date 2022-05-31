@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCPEConfigParametersModifyRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _enableIPDeviceManagement;
+        protected bool _enableIPDeviceManagement;
 
         [XmlElement(ElementName = "enableIPDeviceManagement", IsNullable = false, Namespace = "")]
         [Optional]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableIPDeviceManagementSpecified { get; set; }
 
-        private int _ftpConnectTimeoutSeconds;
+        protected int _ftpConnectTimeoutSeconds;
 
         [XmlElement(ElementName = "ftpConnectTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FtpConnectTimeoutSecondsSpecified { get; set; }
 
-        private int _ftpFileTransferTimeoutSeconds;
+        protected int _ftpFileTransferTimeoutSeconds;
 
         [XmlElement(ElementName = "ftpFileTransferTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FtpFileTransferTimeoutSecondsSpecified { get; set; }
 
-        private int _pauseBetweenFileRebuildMilliseconds;
+        protected int _pauseBetweenFileRebuildMilliseconds;
 
         [XmlElement(ElementName = "pauseBetweenFileRebuildMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PauseBetweenFileRebuildMillisecondsSpecified { get; set; }
 
-        private int _maxBusyTimeMinutes;
+        protected int _maxBusyTimeMinutes;
 
         [XmlElement(ElementName = "maxBusyTimeMinutes", IsNullable = false, Namespace = "")]
         [Optional]
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxBusyTimeMinutesSpecified { get; set; }
 
-        private string _deviceAccessAppServerClusterName;
+        protected string _deviceAccessAppServerClusterName;
 
         [XmlElement(ElementName = "deviceAccessAppServerClusterName", IsNullable = true, Namespace = "")]
         [Optional]

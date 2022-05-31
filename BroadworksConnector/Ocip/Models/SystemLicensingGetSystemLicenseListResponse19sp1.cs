@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemLicensingGetSystemLicenseListResponse19sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<BroadWorksConnector.Ocip.Models.SystemLicenseType19sp1> _license = new List<BroadWorksConnector.Ocip.Models.SystemLicenseType19sp1>();
+        protected List<BroadWorksConnector.Ocip.Models.SystemLicenseType19sp1> _license = new List<BroadWorksConnector.Ocip.Models.SystemLicenseType19sp1>();
 
         [XmlElement(ElementName = "license", IsNullable = false, Namespace = "")]
         [Optional]

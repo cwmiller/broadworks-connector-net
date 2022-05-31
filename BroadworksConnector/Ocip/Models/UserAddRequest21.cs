@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserAddRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:12346")]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:12346")]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:12346")]
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private string _lastName;
+        protected string _lastName;
 
         [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:12346")]
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LastNameSpecified { get; set; }
 
-        private string _firstName;
+        protected string _firstName;
 
         [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:12346")]
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FirstNameSpecified { get; set; }
 
-        private string _callingLineIdLastName;
+        protected string _callingLineIdLastName;
 
         [XmlElement(ElementName = "callingLineIdLastName", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:12346")]
@@ -151,7 +151,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallingLineIdLastNameSpecified { get; set; }
 
-        private string _callingLineIdFirstName;
+        protected string _callingLineIdFirstName;
 
         [XmlElement(ElementName = "callingLineIdFirstName", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:12346")]
@@ -170,7 +170,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallingLineIdFirstNameSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.NameDialingName _nameDialingName;
+        protected BroadWorksConnector.Ocip.Models.NameDialingName _nameDialingName;
 
         [XmlElement(ElementName = "nameDialingName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -188,7 +188,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NameDialingNameSpecified { get; set; }
 
-        private string _hiraganaLastName;
+        protected string _hiraganaLastName;
 
         [XmlElement(ElementName = "hiraganaLastName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -208,7 +208,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HiraganaLastNameSpecified { get; set; }
 
-        private string _hiraganaFirstName;
+        protected string _hiraganaFirstName;
 
         [XmlElement(ElementName = "hiraganaFirstName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -228,7 +228,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HiraganaFirstNameSpecified { get; set; }
 
-        private string _phoneNumber;
+        protected string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -248,7 +248,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PhoneNumberSpecified { get; set; }
 
-        private string _extension;
+        protected string _extension;
 
         [XmlElement(ElementName = "extension", IsNullable = false, Namespace = "")]
         [Optional]
@@ -268,7 +268,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExtensionSpecified { get; set; }
 
-        private string _callingLineIdPhoneNumber;
+        protected string _callingLineIdPhoneNumber;
 
         [XmlElement(ElementName = "callingLineIdPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -288,7 +288,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallingLineIdPhoneNumberSpecified { get; set; }
 
-        private string _password;
+        protected string _password;
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
         [Optional]
@@ -308,7 +308,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PasswordSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.DepartmentKey _department;
+        protected BroadWorksConnector.Ocip.Models.DepartmentKey _department;
 
         [XmlElement(ElementName = "department", IsNullable = false, Namespace = "")]
         [Optional]
@@ -326,7 +326,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DepartmentSpecified { get; set; }
 
-        private string _language;
+        protected string _language;
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
         [Optional]
@@ -346,7 +346,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LanguageSpecified { get; set; }
 
-        private string _timeZone;
+        protected string _timeZone;
 
         [XmlElement(ElementName = "timeZone", IsNullable = false, Namespace = "")]
         [Optional]
@@ -366,7 +366,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TimeZoneSpecified { get; set; }
 
-        private List<string> _alias = new List<string>();
+        protected List<string> _alias = new List<string>();
 
         [XmlElement(ElementName = "alias", IsNullable = false, Namespace = "")]
         [Optional]
@@ -386,7 +386,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AliasSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AccessDeviceMultipleIdentityAndContactEndpointAdd _accessDeviceEndpoint;
+        protected BroadWorksConnector.Ocip.Models.AccessDeviceMultipleIdentityAndContactEndpointAdd _accessDeviceEndpoint;
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
         [Optional]
@@ -404,7 +404,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessDeviceEndpointSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.TrunkAddressingMultipleContactAdd _trunkAddressing;
+        protected BroadWorksConnector.Ocip.Models.TrunkAddressingMultipleContactAdd _trunkAddressing;
 
         [XmlElement(ElementName = "trunkAddressing", IsNullable = false, Namespace = "")]
         [Optional]
@@ -422,7 +422,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TrunkAddressingSpecified { get; set; }
 
-        private string _title;
+        protected string _title;
 
         [XmlElement(ElementName = "title", IsNullable = false, Namespace = "")]
         [Optional]
@@ -442,7 +442,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TitleSpecified { get; set; }
 
-        private string _pagerPhoneNumber;
+        protected string _pagerPhoneNumber;
 
         [XmlElement(ElementName = "pagerPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -462,7 +462,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PagerPhoneNumberSpecified { get; set; }
 
-        private string _mobilePhoneNumber;
+        protected string _mobilePhoneNumber;
 
         [XmlElement(ElementName = "mobilePhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -482,7 +482,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MobilePhoneNumberSpecified { get; set; }
 
-        private string _emailAddress;
+        protected string _emailAddress;
 
         [XmlElement(ElementName = "emailAddress", IsNullable = false, Namespace = "")]
         [Optional]
@@ -502,7 +502,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EmailAddressSpecified { get; set; }
 
-        private string _yahooId;
+        protected string _yahooId;
 
         [XmlElement(ElementName = "yahooId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -522,7 +522,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool YahooIdSpecified { get; set; }
 
-        private string _addressLocation;
+        protected string _addressLocation;
 
         [XmlElement(ElementName = "addressLocation", IsNullable = false, Namespace = "")]
         [Optional]
@@ -542,7 +542,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AddressLocationSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.StreetAddress _address;
+        protected BroadWorksConnector.Ocip.Models.StreetAddress _address;
 
         [XmlElement(ElementName = "address", IsNullable = false, Namespace = "")]
         [Optional]
@@ -560,7 +560,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AddressSpecified { get; set; }
 
-        private string _networkClassOfService;
+        protected string _networkClassOfService;
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
@@ -580,7 +580,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetworkClassOfServiceSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.AlternateUserIdEntry> _alternateUserId = new List<BroadWorksConnector.Ocip.Models.AlternateUserIdEntry>();
+        protected List<BroadWorksConnector.Ocip.Models.AlternateUserIdEntry> _alternateUserId = new List<BroadWorksConnector.Ocip.Models.AlternateUserIdEntry>();
 
         [XmlElement(ElementName = "alternateUserId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -598,7 +598,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlternateUserIdSpecified { get; set; }
 
-        private bool _allowVideo;
+        protected bool _allowVideo;
 
         [XmlElement(ElementName = "allowVideo", IsNullable = false, Namespace = "")]
         [Optional]

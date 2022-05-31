@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemBroadWorksMobilityServiceAccessCodeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _serviceAccessCodeTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _serviceAccessCodeTable;
 
         [XmlElement(ElementName = "serviceAccessCodeTable", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20526")]

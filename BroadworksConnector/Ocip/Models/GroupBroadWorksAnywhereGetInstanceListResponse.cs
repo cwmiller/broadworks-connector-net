@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupBroadWorksAnywhereGetInstanceListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _broadWorksAnywhereTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _broadWorksAnywhereTable;
 
         [XmlElement(ElementName = "broadWorksAnywhereTable", IsNullable = false, Namespace = "")]
         [Group(@"72f634ecc58842ce9d362ca629a47ea9:126")]

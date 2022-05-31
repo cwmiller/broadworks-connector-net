@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupScheduleGetPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupScheduleGetPagedSortedListResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7561")]
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7561")]
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
+        protected BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
         [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
         [Optional]
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResponsePagingControlSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SortByScheduleName _sortByScheduleName;
+        protected BroadWorksConnector.Ocip.Models.SortByScheduleName _sortByScheduleName;
 
         [XmlElement(ElementName = "sortByScheduleName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SortByScheduleNameSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaScheduleName> _searchCriteriaScheduleName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaScheduleName>();
+        protected List<BroadWorksConnector.Ocip.Models.SearchCriteriaScheduleName> _searchCriteriaScheduleName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaScheduleName>();
 
         [XmlElement(ElementName = "searchCriteriaScheduleName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaScheduleNameSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactScheduleType> _searchCriteriaExactScheduleType = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactScheduleType>();
+        protected List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactScheduleType> _searchCriteriaExactScheduleType = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactScheduleType>();
 
         [XmlElement(ElementName = "searchCriteriaExactScheduleType", IsNullable = false, Namespace = "")]
         [Optional]
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaExactScheduleTypeSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactScheduleLevel> _searchCriteriaExactScheduleLevel = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactScheduleLevel>();
+        protected List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactScheduleLevel> _searchCriteriaExactScheduleLevel = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactScheduleLevel>();
 
         [XmlElement(ElementName = "searchCriteriaExactScheduleLevel", IsNullable = false, Namespace = "")]
         [Optional]
@@ -153,7 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaExactScheduleLevelSpecified { get; set; }
 
-        private bool _searchCriteriaModeOr;
+        protected bool _searchCriteriaModeOr;
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]

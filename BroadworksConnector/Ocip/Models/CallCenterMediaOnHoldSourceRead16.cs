@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallCenterMediaOnHoldSourceRead16
     {
 
-        private BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldMessageSelection _audioMessageSourceSelection;
+        protected BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldMessageSelection _audioMessageSourceSelection;
 
         [XmlElement(ElementName = "audioMessageSourceSelection", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47671")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioMessageSourceSelectionSpecified { get; set; }
 
-        private string _audioFileUrl;
+        protected string _audioFileUrl;
 
         [XmlElement(ElementName = "audioFileUrl", IsNullable = false, Namespace = "")]
         [Optional]
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioFileUrlSpecified { get; set; }
 
-        private string _audioFileDescription;
+        protected string _audioFileDescription;
 
         [XmlElement(ElementName = "audioFileDescription", IsNullable = false, Namespace = "")]
         [Optional]
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioFileDescriptionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MediaFileType _audioFileMediaType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType _audioFileMediaType;
 
         [XmlElement(ElementName = "audioFileMediaType", IsNullable = false, Namespace = "")]
         [Optional]
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioFileMediaTypeSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AccessDeviceEndpointRead14 _externalAudioSource;
+        protected BroadWorksConnector.Ocip.Models.AccessDeviceEndpointRead14 _externalAudioSource;
 
         [XmlElement(ElementName = "externalAudioSource", IsNullable = false, Namespace = "")]
         [Optional]
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExternalAudioSourceSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldMessageSelection _videoMessageSourceSelection;
+        protected BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldMessageSelection _videoMessageSourceSelection;
 
         [XmlElement(ElementName = "videoMessageSourceSelection", IsNullable = false, Namespace = "")]
         [Optional]
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VideoMessageSourceSelectionSpecified { get; set; }
 
-        private string _videoFileUrl;
+        protected string _videoFileUrl;
 
         [XmlElement(ElementName = "videoFileUrl", IsNullable = false, Namespace = "")]
         [Optional]
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VideoFileUrlSpecified { get; set; }
 
-        private string _videoFileDescription;
+        protected string _videoFileDescription;
 
         [XmlElement(ElementName = "videoFileDescription", IsNullable = false, Namespace = "")]
         [Optional]
@@ -167,7 +167,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VideoFileDescriptionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MediaFileType _videoFileMediaType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType _videoFileMediaType;
 
         [XmlElement(ElementName = "videoFileMediaType", IsNullable = false, Namespace = "")]
         [Optional]
@@ -185,7 +185,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VideoFileMediaTypeSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AccessDeviceEndpointRead14 _externalVideoSource;
+        protected BroadWorksConnector.Ocip.Models.AccessDeviceEndpointRead14 _externalVideoSource;
 
         [XmlElement(ElementName = "externalVideoSource", IsNullable = false, Namespace = "")]
         [Optional]

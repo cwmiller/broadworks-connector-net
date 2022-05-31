@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseSessionAdmissionControlGroupGetResponse19sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private int _maxSession;
+        protected int _maxSession;
 
         [XmlElement(ElementName = "maxSession", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2734")]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxSessionSpecified { get; set; }
 
-        private int _maxUserOriginatingSessions;
+        protected int _maxUserOriginatingSessions;
 
         [XmlElement(ElementName = "maxUserOriginatingSessions", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxUserOriginatingSessionsSpecified { get; set; }
 
-        private int _maxUserTerminatingSessions;
+        protected int _maxUserTerminatingSessions;
 
         [XmlElement(ElementName = "maxUserTerminatingSessions", IsNullable = false, Namespace = "")]
         [Optional]
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxUserTerminatingSessionsSpecified { get; set; }
 
-        private int _reservedSession;
+        protected int _reservedSession;
 
         [XmlElement(ElementName = "reservedSession", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2734")]
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReservedSessionSpecified { get; set; }
 
-        private int _reservedUserOriginatingSessions;
+        protected int _reservedUserOriginatingSessions;
 
         [XmlElement(ElementName = "reservedUserOriginatingSessions", IsNullable = false, Namespace = "")]
         [Optional]
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReservedUserOriginatingSessionsSpecified { get; set; }
 
-        private int _reservedUserTerminatingSessions;
+        protected int _reservedUserTerminatingSessions;
 
         [XmlElement(ElementName = "reservedUserTerminatingSessions", IsNullable = false, Namespace = "")]
         [Optional]
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReservedUserTerminatingSessionsSpecified { get; set; }
 
-        private bool _defaultGroup;
+        protected bool _defaultGroup;
 
         [XmlElement(ElementName = "defaultGroup", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2734")]
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultGroupSpecified { get; set; }
 
-        private bool _countIntraSACGroupSessions;
+        protected bool _countIntraSACGroupSessions;
 
         [XmlElement(ElementName = "countIntraSACGroupSessions", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2734")]
@@ -167,7 +167,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CountIntraSACGroupSessionsSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.EnterpriseAccessDevice> _devices = new List<BroadWorksConnector.Ocip.Models.EnterpriseAccessDevice>();
+        protected List<BroadWorksConnector.Ocip.Models.EnterpriseAccessDevice> _devices = new List<BroadWorksConnector.Ocip.Models.EnterpriseAccessDevice>();
 
         [XmlElement(ElementName = "devices", IsNullable = false, Namespace = "")]
         [Optional]
@@ -185,7 +185,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DevicesSpecified { get; set; }
 
-        private bool _blockEmergencyAndRepairCallsDueToSACLimits;
+        protected bool _blockEmergencyAndRepairCallsDueToSACLimits;
 
         [XmlElement(ElementName = "blockEmergencyAndRepairCallsDueToSACLimits", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2734")]

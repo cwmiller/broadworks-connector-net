@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class MusicOnHoldSourceModify21
     {
 
-        private BroadWorksConnector.Ocip.Models.AudioFileCodecExtended _audioFilePreferredCodec;
+        protected BroadWorksConnector.Ocip.Models.AudioFileCodecExtended _audioFilePreferredCodec;
 
         [XmlElement(ElementName = "audioFilePreferredCodec", IsNullable = false, Namespace = "")]
         [Optional]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioFilePreferredCodecSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection _messageSourceSelection;
+        protected BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection _messageSourceSelection;
 
         [XmlElement(ElementName = "messageSourceSelection", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MessageSourceSelectionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceModify21LabeledCustomSourceMediaFiles _labeledCustomSourceMediaFiles;
+        protected BroadWorksConnector.Ocip.Models.MusicOnHoldSourceModify21LabeledCustomSourceMediaFiles _labeledCustomSourceMediaFiles;
 
         [XmlElement(ElementName = "labeledCustomSourceMediaFiles", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3160")]
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LabeledCustomSourceMediaFilesSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceModify21AnnouncementCustomSourceMediaFiles _announcementCustomSourceMediaFiles;
+        protected BroadWorksConnector.Ocip.Models.MusicOnHoldSourceModify21AnnouncementCustomSourceMediaFiles _announcementCustomSourceMediaFiles;
 
         [XmlElement(ElementName = "announcementCustomSourceMediaFiles", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3160")]
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AnnouncementCustomSourceMediaFilesSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MusicOnHoldSourceModify21ExternalSource _externalSource;
+        protected BroadWorksConnector.Ocip.Models.MusicOnHoldSourceModify21ExternalSource _externalSource;
 
         [XmlElement(ElementName = "externalSource", IsNullable = false, Namespace = "")]
         [Optional]

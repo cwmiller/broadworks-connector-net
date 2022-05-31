@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserAssignedServicesGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<BroadWorksConnector.Ocip.Models.AssignedGroupServicesEntry> _groupServiceEntry = new List<BroadWorksConnector.Ocip.Models.AssignedGroupServicesEntry>();
+        protected List<BroadWorksConnector.Ocip.Models.AssignedGroupServicesEntry> _groupServiceEntry = new List<BroadWorksConnector.Ocip.Models.AssignedGroupServicesEntry>();
 
         [XmlElement(ElementName = "groupServiceEntry", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupServiceEntrySpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.AssignedUserServicesEntry> _userServiceEntry = new List<BroadWorksConnector.Ocip.Models.AssignedUserServicesEntry>();
+        protected List<BroadWorksConnector.Ocip.Models.AssignedUserServicesEntry> _userServiceEntry = new List<BroadWorksConnector.Ocip.Models.AssignedUserServicesEntry>();
 
         [XmlElement(ElementName = "userServiceEntry", IsNullable = false, Namespace = "")]
         [Optional]

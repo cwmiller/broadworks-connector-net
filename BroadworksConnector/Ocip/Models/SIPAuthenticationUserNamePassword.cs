@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SIPAuthenticationUserNamePassword
     {
 
-        private string _sipAuthenticationUserName;
+        protected string _sipAuthenticationUserName;
 
         [XmlElement(ElementName = "sipAuthenticationUserName", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4630")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SipAuthenticationUserNameSpecified { get; set; }
 
-        private string _sipAuthenticationPassword;
+        protected string _sipAuthenticationPassword;
 
         [XmlElement(ElementName = "sipAuthenticationPassword", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4630")]

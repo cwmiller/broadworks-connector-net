@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserINIntegrationGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserINIntegrationGetResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"e2b7b9ea45350592016ce6935a4d7694:41")]

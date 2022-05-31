@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserSingleSignOnCreateDeviceTokenRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserSingleSignOnCreateDeviceTokenResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"6b27fcc79475236456fc113a42b75543:657")]
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AccessDeviceLevel _deviceLevel;
+        protected BroadWorksConnector.Ocip.Models.AccessDeviceLevel _deviceLevel;
 
         [XmlElement(ElementName = "deviceLevel", IsNullable = false, Namespace = "")]
         [Group(@"6b27fcc79475236456fc113a42b75543:657")]
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceLevelSpecified { get; set; }
 
-        private string _deviceName;
+        protected string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
         [Group(@"6b27fcc79475236456fc113a42b75543:657")]

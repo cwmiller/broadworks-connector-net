@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseEnterpriseTrunkModifyRequestOrderedRouting
     {
 
-        private BroadWorksConnector.Ocip.Models.ReplacementEnterpriseEnterpriseTrunkTrunkGroupKeyList _trunkGroupList;
+        protected BroadWorksConnector.Ocip.Models.ReplacementEnterpriseEnterpriseTrunkTrunkGroupKeyList _trunkGroupList;
 
         [XmlElement(ElementName = "trunkGroupList", IsNullable = true, Namespace = "")]
         [Optional]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TrunkGroupListSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.EnterpriseTrunkOrderingAlgorithm _orderingAlgorithm;
+        protected BroadWorksConnector.Ocip.Models.EnterpriseTrunkOrderingAlgorithm _orderingAlgorithm;
 
         [XmlElement(ElementName = "orderingAlgorithm", IsNullable = false, Namespace = "")]
         [Optional]

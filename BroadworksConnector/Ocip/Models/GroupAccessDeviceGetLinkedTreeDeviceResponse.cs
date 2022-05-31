@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupAccessDeviceGetLinkedTreeDeviceResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.TreeDeviceInfo _treeDeviceInfo;
+        protected BroadWorksConnector.Ocip.Models.TreeDeviceInfo _treeDeviceInfo;
 
         [XmlElement(ElementName = "treeDeviceInfo", IsNullable = false, Namespace = "")]
         [Optional]

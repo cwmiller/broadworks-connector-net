@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseVoiceVPNModifyPolicyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1535")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _locationDialingCode;
+        protected string _locationDialingCode;
 
         [XmlElement(ElementName = "locationDialingCode", IsNullable = false, Namespace = "")]
         [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1535")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LocationDialingCodeSpecified { get; set; }
 
-        private int _minExtensionLength;
+        protected int _minExtensionLength;
 
         [XmlElement(ElementName = "minExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MinExtensionLengthSpecified { get; set; }
 
-        private int _maxExtensionLength;
+        protected int _maxExtensionLength;
 
         [XmlElement(ElementName = "maxExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxExtensionLengthSpecified { get; set; }
 
-        private string _description;
+        protected string _description;
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DescriptionSpecified { get; set; }
 
-        private string _routeGroupId;
+        protected string _routeGroupId;
 
         [XmlElement(ElementName = "routeGroupId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -137,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RouteGroupIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection _policySelection;
+        protected BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection _policySelection;
 
         [XmlElement(ElementName = "policySelection", IsNullable = false, Namespace = "")]
         [Optional]
@@ -155,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PolicySelectionSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulation> _digitManipulation = new List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulation>();
+        protected List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulation> _digitManipulation = new List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulation>();
 
         [XmlElement(ElementName = "digitManipulation", IsNullable = false, Namespace = "")]
         [Optional]
@@ -173,7 +173,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DigitManipulationSpecified { get; set; }
 
-        private string _treatmentId;
+        protected string _treatmentId;
 
         [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
         [Optional]

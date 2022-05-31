@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallRecordingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _name;
+        protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Optional]

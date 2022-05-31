@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class AccessDeviceMultipleIdentityAndContactEndpointModify
     {
 
-        private BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
+        protected BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
 
         [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
         [Optional]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessDeviceSpecified { get; set; }
 
-        private string _linePort;
+        protected string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
         [Optional]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LinePortSpecified { get; set; }
 
-        private string _privateIdentity;
+        protected string _privateIdentity;
 
         [XmlElement(ElementName = "privateIdentity", IsNullable = true, Namespace = "")]
         [Optional]
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PrivateIdentitySpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ReplacementContactList _contactList;
+        protected BroadWorksConnector.Ocip.Models.ReplacementContactList _contactList;
 
         [XmlElement(ElementName = "contactList", IsNullable = true, Namespace = "")]
         [Optional]
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ContactListSpecified { get; set; }
 
-        private int _portNumber;
+        protected int _portNumber;
 
         [XmlElement(ElementName = "portNumber", IsNullable = false, Namespace = "")]
         [Optional]

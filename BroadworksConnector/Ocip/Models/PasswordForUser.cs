@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class PasswordForUser
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"6b27fcc79475236456fc113a42b75543:795")]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"6b27fcc79475236456fc113a42b75543:795")]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private bool _generatePassword;
+        protected bool _generatePassword;
 
         [XmlElement(ElementName = "generatePassword", IsNullable = false, Namespace = "")]
         [Optional]
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GeneratePasswordSpecified { get; set; }
 
-        private bool _generatePasscode;
+        protected bool _generatePasscode;
 
         [XmlElement(ElementName = "generatePasscode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GeneratePasscodeSpecified { get; set; }
 
-        private bool _generateSipPassword;
+        protected bool _generateSipPassword;
 
         [XmlElement(ElementName = "generateSipPassword", IsNullable = false, Namespace = "")]
         [Optional]

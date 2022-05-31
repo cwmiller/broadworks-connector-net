@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupExchangeIntegrationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5675")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5675")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private bool _enableExchangeIntegration;
+        protected bool _enableExchangeIntegration;
 
         [XmlElement(ElementName = "enableExchangeIntegration", IsNullable = false, Namespace = "")]
         [Optional]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableExchangeIntegrationSpecified { get; set; }
 
-        private string _exchangeURL;
+        protected string _exchangeURL;
 
         [XmlElement(ElementName = "exchangeURL", IsNullable = true, Namespace = "")]
         [Optional]
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExchangeURLSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ExchangeUserNamePassword _exchangeCredentials;
+        protected BroadWorksConnector.Ocip.Models.ExchangeUserNamePassword _exchangeCredentials;
 
         [XmlElement(ElementName = "exchangeCredentials", IsNullable = true, Namespace = "")]
         [Optional]

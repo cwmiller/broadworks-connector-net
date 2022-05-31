@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupTrunkGroupUserCreationTaskAddRequest14sp4 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private BroadWorksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
+        protected BroadWorksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
 
         [XmlElement(ElementName = "trunkGroupKey", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1470")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TrunkGroupKeySpecified { get; set; }
 
-        private string _taskName;
+        protected string _taskName;
 
         [XmlElement(ElementName = "taskName", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1470")]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TaskNameSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationUserIdFormat _userIdFormat;
+        protected BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationUserIdFormat _userIdFormat;
 
         [XmlElement(ElementName = "userIdFormat", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1470")]
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdFormatSpecified { get; set; }
 
-        private string _userIdDomain;
+        protected string _userIdDomain;
 
         [XmlElement(ElementName = "userIdDomain", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1470")]
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdDomainSpecified { get; set; }
 
-        private bool _populateExtension;
+        protected bool _populateExtension;
 
         [XmlElement(ElementName = "populateExtension", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1470")]
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PopulateExtensionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat _linePortFormat;
+        protected BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat _linePortFormat;
 
         [XmlElement(ElementName = "linePortFormat", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1470")]
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LinePortFormatSpecified { get; set; }
 
-        private string _linePortDomain;
+        protected string _linePortDomain;
 
         [XmlElement(ElementName = "linePortDomain", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1470")]
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LinePortDomainSpecified { get; set; }
 
-        private bool _populateContact;
+        protected bool _populateContact;
 
         [XmlElement(ElementName = "populateContact", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1470")]
@@ -161,7 +161,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PopulateContactSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat _contactFormat;
+        protected BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat _contactFormat;
 
         [XmlElement(ElementName = "contactFormat", IsNullable = false, Namespace = "")]
         [Optional]
@@ -179,7 +179,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ContactFormatSpecified { get; set; }
 
-        private string _contactDomain;
+        protected string _contactDomain;
 
         [XmlElement(ElementName = "contactDomain", IsNullable = false, Namespace = "")]
         [Optional]
@@ -199,7 +199,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ContactDomainSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequest14sp4UserPhoneNumbers _userPhoneNumbers;
+        protected BroadWorksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequest14sp4UserPhoneNumbers _userPhoneNumbers;
 
         [XmlElement(ElementName = "userPhoneNumbers", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1481")]
@@ -216,7 +216,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserPhoneNumbersSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequest14sp4UserExtensions _userExtensions;
+        protected BroadWorksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskAddRequest14sp4UserExtensions _userExtensions;
 
         [XmlElement(ElementName = "userExtensions", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1481")]
@@ -233,7 +233,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserExtensionsSpecified { get; set; }
 
-        private List<string> _servicePackName = new List<string>();
+        protected List<string> _servicePackName = new List<string>();
 
         [XmlElement(ElementName = "servicePackName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -253,7 +253,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServicePackNameSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.UserService> _userService = new List<BroadWorksConnector.Ocip.Models.UserService>();
+        protected List<BroadWorksConnector.Ocip.Models.UserService> _userService = new List<BroadWorksConnector.Ocip.Models.UserService>();
 
         [XmlElement(ElementName = "userService", IsNullable = false, Namespace = "")]
         [Optional]

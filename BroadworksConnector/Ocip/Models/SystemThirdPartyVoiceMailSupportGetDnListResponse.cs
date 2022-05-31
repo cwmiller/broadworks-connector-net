@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemThirdPartyVoiceMailSupportGetDnListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _thirdPartyVoiceMailSupportTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _thirdPartyVoiceMailSupportTable;
 
         [XmlElement(ElementName = "thirdPartyVoiceMailSupportTable", IsNullable = false, Namespace = "")]
         [Group(@"3c311aa5c89c0cf5b46e1cdefd5bc387:157")]

@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSIPDeviceTypeFileModifyRequest14sp8 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _deviceType;
+        protected string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:31799")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceTypeSpecified { get; set; }
 
-        private string _fileFormat;
+        protected string _fileFormat;
 
         [XmlElement(ElementName = "fileFormat", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:31799")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FileFormatSpecified { get; set; }
 
-        private bool _allowFileCustomization;
+        protected bool _allowFileCustomization;
 
         [XmlElement(ElementName = "allowFileCustomization", IsNullable = false, Namespace = "")]
         [Optional]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowFileCustomizationSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.DeviceTypeFileEnhancedConfigurationMode _fileSource;
+        protected BroadWorksConnector.Ocip.Models.DeviceTypeFileEnhancedConfigurationMode _fileSource;
 
         [XmlElement(ElementName = "fileSource", IsNullable = false, Namespace = "")]
         [Optional]
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FileSourceSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.FileResource _uploadFile;
+        protected BroadWorksConnector.Ocip.Models.FileResource _uploadFile;
 
         [XmlElement(ElementName = "uploadFile", IsNullable = false, Namespace = "")]
         [Optional]
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UploadFileSpecified { get; set; }
 
-        private bool _useHttpDigestAuthentication;
+        protected bool _useHttpDigestAuthentication;
 
         [XmlElement(ElementName = "useHttpDigestAuthentication", IsNullable = false, Namespace = "")]
         [Optional]
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseHttpDigestAuthenticationSpecified { get; set; }
 
-        private bool _macBasedFileAuthentication;
+        protected bool _macBasedFileAuthentication;
 
         [XmlElement(ElementName = "macBasedFileAuthentication", IsNullable = false, Namespace = "")]
         [Optional]
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MacBasedFileAuthenticationSpecified { get; set; }
 
-        private bool _userNamePasswordFileAuthentication;
+        protected bool _userNamePasswordFileAuthentication;
 
         [XmlElement(ElementName = "userNamePasswordFileAuthentication", IsNullable = false, Namespace = "")]
         [Optional]
@@ -165,7 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserNamePasswordFileAuthenticationSpecified { get; set; }
 
-        private bool _macInNonRequestURI;
+        protected bool _macInNonRequestURI;
 
         [XmlElement(ElementName = "macInNonRequestURI", IsNullable = false, Namespace = "")]
         [Optional]
@@ -183,7 +183,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MacInNonRequestURISpecified { get; set; }
 
-        private string _macFormatInNonRequestURI;
+        protected string _macFormatInNonRequestURI;
 
         [XmlElement(ElementName = "macFormatInNonRequestURI", IsNullable = true, Namespace = "")]
         [Optional]

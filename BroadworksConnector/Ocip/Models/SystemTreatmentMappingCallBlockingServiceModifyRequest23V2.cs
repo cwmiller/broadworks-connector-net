@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemTreatmentMappingCallBlockingServiceModifyRequest23V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private BroadWorksConnector.Ocip.Models.CallBlockingService23V2 _callBlockingService;
+        protected BroadWorksConnector.Ocip.Models.CallBlockingService23V2 _callBlockingService;
 
         [XmlElement(ElementName = "callBlockingService", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:12109")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallBlockingServiceSpecified { get; set; }
 
-        private string _treatmentId;
+        protected string _treatmentId;
 
         [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
         [Optional]

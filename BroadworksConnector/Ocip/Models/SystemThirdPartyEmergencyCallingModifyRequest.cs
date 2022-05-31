@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemThirdPartyEmergencyCallingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _primaryHELDServerURL;
+        protected string _primaryHELDServerURL;
 
         [XmlElement(ElementName = "primaryHELDServerURL", IsNullable = true, Namespace = "")]
         [Optional]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PrimaryHELDServerURLSpecified { get; set; }
 
-        private string _secondaryHELDServerURL;
+        protected string _secondaryHELDServerURL;
 
         [XmlElement(ElementName = "secondaryHELDServerURL", IsNullable = true, Namespace = "")]
         [Optional]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SecondaryHELDServerURLSpecified { get; set; }
 
-        private string _emergencyRouteNetAddress;
+        protected string _emergencyRouteNetAddress;
 
         [XmlElement(ElementName = "emergencyRouteNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EmergencyRouteNetAddressSpecified { get; set; }
 
-        private int? _emergencyRoutePort;
+        protected int? _emergencyRoutePort;
 
         [XmlElement(ElementName = "emergencyRoutePort", IsNullable = true, Namespace = "")]
         [Optional]
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EmergencyRoutePortSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol? _emergencyRouteTransport;
+        protected BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol? _emergencyRouteTransport;
 
         [XmlElement(ElementName = "emergencyRouteTransport", IsNullable = true, Namespace = "")]
         [Optional]

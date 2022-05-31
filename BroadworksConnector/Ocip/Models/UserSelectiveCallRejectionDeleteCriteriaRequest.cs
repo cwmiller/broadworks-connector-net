@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserSelectiveCallRejectionDeleteCriteriaRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"41cdd93743bd17548f1ded5691680d5a:74")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private string _criteriaName;
+        protected string _criteriaName;
 
         [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
         [Group(@"41cdd93743bd17548f1ded5691680d5a:74")]

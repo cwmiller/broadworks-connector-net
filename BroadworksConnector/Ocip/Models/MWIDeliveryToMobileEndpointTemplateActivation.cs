@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class MWIDeliveryToMobileEndpointTemplateActivation
     {
 
-        private string _language;
+        protected string _language;
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
         [Group(@"958b78cc2a785d78259c1e8a474eb40d:407")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LanguageSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateType _type;
+        protected BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateType _type;
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
         [Group(@"958b78cc2a785d78259c1e8a474eb40d:407")]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TypeSpecified { get; set; }
 
-        private bool _isEnabled;
+        protected bool _isEnabled;
 
         [XmlElement(ElementName = "isEnabled", IsNullable = false, Namespace = "")]
         [Group(@"958b78cc2a785d78259c1e8a474eb40d:407")]

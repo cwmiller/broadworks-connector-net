@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupTrunkGroupUserCreationTaskGetRequest14sp4 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupTrunkGroupUserCreationTaskGetResponse14sp4>
     {
 
-        private BroadWorksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
+        protected BroadWorksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
 
         [XmlElement(ElementName = "trunkGroupKey", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1567")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TrunkGroupKeySpecified { get; set; }
 
-        private string _taskName;
+        protected string _taskName;
 
         [XmlElement(ElementName = "taskName", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1567")]

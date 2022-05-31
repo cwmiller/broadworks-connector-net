@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemMediaGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _mediaTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _mediaTable;
 
         [XmlElement(ElementName = "mediaTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11691")]

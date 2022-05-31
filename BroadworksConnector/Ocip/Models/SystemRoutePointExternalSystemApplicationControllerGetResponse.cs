@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemRoutePointExternalSystemApplicationControllerGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _applicationController = new List<string>();
+        protected List<string> _applicationController = new List<string>();
 
         [XmlElement(ElementName = "applicationController", IsNullable = false, Namespace = "")]
         [Optional]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class XsiPolicyProfileAssignEntry
     {
 
-        private List<string> _name = new List<string>();
+        protected List<string> _name = new List<string>();
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NameSpecified { get; set; }
 
-        private string _default;
+        protected string _default;
 
         [XmlElement(ElementName = "default", IsNullable = false, Namespace = "")]
         [Optional]

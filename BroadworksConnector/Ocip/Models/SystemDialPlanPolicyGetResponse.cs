@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDialPlanPolicyGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _requiresAccessCodeForPublicCalls;
+        protected bool _requiresAccessCodeForPublicCalls;
 
         [XmlElement(ElementName = "requiresAccessCodeForPublicCalls", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26342")]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RequiresAccessCodeForPublicCallsSpecified { get; set; }
 
-        private bool _allowE164PublicCalls;
+        protected bool _allowE164PublicCalls;
 
         [XmlElement(ElementName = "allowE164PublicCalls", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26342")]
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowE164PublicCallsSpecified { get; set; }
 
-        private string _publicDigitMap;
+        protected string _publicDigitMap;
 
         [XmlElement(ElementName = "publicDigitMap", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26342")]
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PublicDigitMapSpecified { get; set; }
 
-        private string _privateDigitMap;
+        protected string _privateDigitMap;
 
         [XmlElement(ElementName = "privateDigitMap", IsNullable = false, Namespace = "")]
         [Optional]

@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserHolidayScheduleGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _holidayScheduleTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _holidayScheduleTable;
 
         [XmlElement(ElementName = "holidayScheduleTable", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44647")]

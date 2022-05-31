@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class MeetMeConferencingConferenceDuration
     {
 
-        private int _hours;
+        protected int _hours;
 
         [XmlElement(ElementName = "hours", IsNullable = false, Namespace = "")]
         [Group(@"0fd24121d16995c994d40bc408dbcfa5:945")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HoursSpecified { get; set; }
 
-        private int _minutes;
+        protected int _minutes;
 
         [XmlElement(ElementName = "minutes", IsNullable = false, Namespace = "")]
         [Group(@"0fd24121d16995c994d40bc408dbcfa5:945")]

@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupVirtualOnNetEnterpriseExtensionsAddUserRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"179b744b0183abe614e8c32c17c96b7e:98")]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"179b744b0183abe614e8c32c17c96b7e:98")]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.VirtualOnNetUser> _virtualOnNetUser = new List<BroadWorksConnector.Ocip.Models.VirtualOnNetUser>();
+        protected List<BroadWorksConnector.Ocip.Models.VirtualOnNetUser> _virtualOnNetUser = new List<BroadWorksConnector.Ocip.Models.VirtualOnNetUser>();
 
         [XmlElement(ElementName = "virtualOnNetUser", IsNullable = false, Namespace = "")]
         [Optional]
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VirtualOnNetUserSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.VirtualOnNetUserRange> _virtualOnNetUserRange = new List<BroadWorksConnector.Ocip.Models.VirtualOnNetUserRange>();
+        protected List<BroadWorksConnector.Ocip.Models.VirtualOnNetUserRange> _virtualOnNetUserRange = new List<BroadWorksConnector.Ocip.Models.VirtualOnNetUserRange>();
 
         [XmlElement(ElementName = "virtualOnNetUserRange", IsNullable = false, Namespace = "")]
         [Optional]

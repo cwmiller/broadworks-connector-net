@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemVirtualOnNetCallTypeModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _virtualOnNetCallTypeName;
+        protected string _virtualOnNetCallTypeName;
 
         [XmlElement(ElementName = "virtualOnNetCallTypeName", IsNullable = false, Namespace = "")]
         [Group(@"179b744b0183abe614e8c32c17c96b7e:309")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VirtualOnNetCallTypeNameSpecified { get; set; }
 
-        private string _virtualOnNetCallTypeCdrValue;
+        protected string _virtualOnNetCallTypeCdrValue;
 
         [XmlElement(ElementName = "virtualOnNetCallTypeCdrValue", IsNullable = false, Namespace = "")]
         [Optional]

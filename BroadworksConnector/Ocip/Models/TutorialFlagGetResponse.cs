@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class TutorialFlagGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _enableTutorial;
+        protected bool _enableTutorial;
 
         [XmlElement(ElementName = "enableTutorial", IsNullable = false, Namespace = "")]
         [Group(@"6b27fcc79475236456fc113a42b75543:552")]

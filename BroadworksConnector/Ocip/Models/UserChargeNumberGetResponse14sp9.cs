@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserChargeNumberGetResponse14sp9 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _phoneNumber;
+        protected string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PhoneNumberSpecified { get; set; }
 
-        private bool _useChargeNumberForEnhancedTranslations;
+        protected bool _useChargeNumberForEnhancedTranslations;
 
         [XmlElement(ElementName = "useChargeNumberForEnhancedTranslations", IsNullable = false, Namespace = "")]
         [Group(@"9e6c3cffd40902dc6325620cc5e3adef:56")]
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseChargeNumberForEnhancedTranslationsSpecified { get; set; }
 
-        private bool _sendChargeNumberToNetwork;
+        protected bool _sendChargeNumberToNetwork;
 
         [XmlElement(ElementName = "sendChargeNumberToNetwork", IsNullable = false, Namespace = "")]
         [Group(@"9e6c3cffd40902dc6325620cc5e3adef:56")]

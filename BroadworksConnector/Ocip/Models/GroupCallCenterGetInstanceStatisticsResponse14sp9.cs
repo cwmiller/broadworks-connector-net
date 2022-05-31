@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallCenterGetInstanceStatisticsResponse14sp9 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.CallCenterStatisticsRange _statisticsRange;
+        protected BroadWorksConnector.Ocip.Models.CallCenterStatisticsRange _statisticsRange;
 
         [XmlElement(ElementName = "statisticsRange", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:4733")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StatisticsRangeSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallCenterQueueStatistics14sp9 _queueStatistics;
+        protected BroadWorksConnector.Ocip.Models.CallCenterQueueStatistics14sp9 _queueStatistics;
 
         [XmlElement(ElementName = "queueStatistics", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:4733")]
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool QueueStatisticsSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.CallCenterAgentStatistics14sp9> _agentStatistics = new List<BroadWorksConnector.Ocip.Models.CallCenterAgentStatistics14sp9>();
+        protected List<BroadWorksConnector.Ocip.Models.CallCenterAgentStatistics14sp9> _agentStatistics = new List<BroadWorksConnector.Ocip.Models.CallCenterAgentStatistics14sp9>();
 
         [XmlElement(ElementName = "agentStatistics", IsNullable = false, Namespace = "")]
         [Optional]

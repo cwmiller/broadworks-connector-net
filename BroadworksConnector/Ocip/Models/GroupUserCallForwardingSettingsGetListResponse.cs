@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupUserCallForwardingSettingsGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _userCallForwardingTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _userCallForwardingTable;
 
         [XmlElement(ElementName = "userCallForwardingTable", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8663")]

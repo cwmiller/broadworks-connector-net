@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderPreferredCarrierGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _intraLataCarrier;
+        protected string _intraLataCarrier;
 
         [XmlElement(ElementName = "intraLataCarrier", IsNullable = false, Namespace = "")]
         [Optional]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IntraLataCarrierSpecified { get; set; }
 
-        private string _interLataCarrier;
+        protected string _interLataCarrier;
 
         [XmlElement(ElementName = "interLataCarrier", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool InterLataCarrierSpecified { get; set; }
 
-        private string _internationalCarrier;
+        protected string _internationalCarrier;
 
         [XmlElement(ElementName = "internationalCarrier", IsNullable = false, Namespace = "")]
         [Optional]

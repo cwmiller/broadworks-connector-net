@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDeviceManagementGetAccessDeviceCountForDeviceTypeRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemDeviceManagementGetAccessDeviceCountForDeviceTypeResponse>
     {
 
-        private string _deviceType;
+        protected string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
         [Optional]
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceTypeSpecified { get; set; }
 
-        private bool _countOnlyResetSupportedDevice;
+        protected bool _countOnlyResetSupportedDevice;
 
         [XmlElement(ElementName = "countOnlyResetSupportedDevice", IsNullable = false, Namespace = "")]
         [Optional]
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CountOnlyResetSupportedDeviceSpecified { get; set; }
 
-        private bool _allowUnmanagedDeviceType;
+        protected bool _allowUnmanagedDeviceType;
 
         [XmlElement(ElementName = "allowUnmanagedDeviceType", IsNullable = false, Namespace = "")]
         [Optional]

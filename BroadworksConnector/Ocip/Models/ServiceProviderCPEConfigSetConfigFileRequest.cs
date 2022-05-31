@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderCPEConfigSetConfigFileRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:2796")]
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _deviceType;
+        protected string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:2796")]
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceTypeSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.FileResource _configFile;
+        protected BroadWorksConnector.Ocip.Models.FileResource _configFile;
 
         [XmlElement(ElementName = "configFile", IsNullable = true, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:2796")]

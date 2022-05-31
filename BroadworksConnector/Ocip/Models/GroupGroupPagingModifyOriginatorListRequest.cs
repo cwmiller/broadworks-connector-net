@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupGroupPagingModifyOriginatorListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceUserId;
+        protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
         [Group(@"0d36df8c109e3ea7324f79031368c661:444")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _originatorUserIdList;
+        protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _originatorUserIdList;
 
         [XmlElement(ElementName = "originatorUserIdList", IsNullable = true, Namespace = "")]
         [Optional]

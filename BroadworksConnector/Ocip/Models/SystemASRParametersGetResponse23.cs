@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemASRParametersGetResponse23 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private int _maxTransmissions;
+        protected int _maxTransmissions;
 
         [XmlElement(ElementName = "maxTransmissions", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2397")]
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxTransmissionsSpecified { get; set; }
 
-        private int _retransmissionDelayMilliSeconds;
+        protected int _retransmissionDelayMilliSeconds;
 
         [XmlElement(ElementName = "retransmissionDelayMilliSeconds", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2397")]
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RetransmissionDelayMilliSecondsSpecified { get; set; }
 
-        private int _listeningPort;
+        protected int _listeningPort;
 
         [XmlElement(ElementName = "listeningPort", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2397")]
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ListeningPortSpecified { get; set; }
 
-        private bool _enableCustomMessageControl;
+        protected bool _enableCustomMessageControl;
 
         [XmlElement(ElementName = "enableCustomMessageControl", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2397")]
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableCustomMessageControlSpecified { get; set; }
 
-        private int _customNumberOfUsersPerMessage;
+        protected int _customNumberOfUsersPerMessage;
 
         [XmlElement(ElementName = "customNumberOfUsersPerMessage", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2397")]
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CustomNumberOfUsersPerMessageSpecified { get; set; }
 
-        private int _customMessageIntervalMilliseconds;
+        protected int _customMessageIntervalMilliseconds;
 
         [XmlElement(ElementName = "customMessageIntervalMilliseconds", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2397")]

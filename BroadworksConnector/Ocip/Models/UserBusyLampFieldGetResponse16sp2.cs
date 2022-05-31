@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserBusyLampFieldGetResponse16sp2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _listURI;
+        protected string _listURI;
 
         [XmlElement(ElementName = "listURI", IsNullable = false, Namespace = "")]
         [Optional]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ListURISpecified { get; set; }
 
-        private bool _enableCallParkNotification;
+        protected bool _enableCallParkNotification;
 
         [XmlElement(ElementName = "enableCallParkNotification", IsNullable = false, Namespace = "")]
         [Group(@"4faeca417998d23ce2ff6b0b43212aa6:185")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableCallParkNotificationSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _monitoredUserTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _monitoredUserTable;
 
         [XmlElement(ElementName = "monitoredUserTable", IsNullable = false, Namespace = "")]
         [Group(@"4faeca417998d23ce2ff6b0b43212aa6:185")]

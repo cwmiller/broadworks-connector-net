@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserSpeedDial8GetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserSpeedDial8GetListResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"00c269203c804a240d213a69b1264795:41")]

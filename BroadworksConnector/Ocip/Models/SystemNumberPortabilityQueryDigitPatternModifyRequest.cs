@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemNumberPortabilityQueryDigitPatternModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _digitPattern;
+        protected string _digitPattern;
 
         [XmlElement(ElementName = "digitPattern", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13140")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DigitPatternSpecified { get; set; }
 
-        private string _newDigitPattern;
+        protected string _newDigitPattern;
 
         [XmlElement(ElementName = "newDigitPattern", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewDigitPatternSpecified { get; set; }
 
-        private string _status;
+        protected string _status;
 
         [XmlElement(ElementName = "status", IsNullable = false, Namespace = "")]
         [Optional]

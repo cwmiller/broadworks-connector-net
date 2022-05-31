@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallingPartyCategoryAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _category;
+        protected string _category;
 
         [XmlElement(ElementName = "category", IsNullable = false, Namespace = "")]
         [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:48")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CategorySpecified { get; set; }
 
-        private string _cpcValue;
+        protected string _cpcValue;
 
         [XmlElement(ElementName = "cpcValue", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CpcValueSpecified { get; set; }
 
-        private int _isupOliValue;
+        protected int _isupOliValue;
 
         [XmlElement(ElementName = "isupOliValue", IsNullable = false, Namespace = "")]
         [Optional]
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsupOliValueSpecified { get; set; }
 
-        private string _gtdOliValue;
+        protected string _gtdOliValue;
 
         [XmlElement(ElementName = "gtdOliValue", IsNullable = false, Namespace = "")]
         [Optional]
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GtdOliValueSpecified { get; set; }
 
-        private bool _userCategory;
+        protected bool _userCategory;
 
         [XmlElement(ElementName = "userCategory", IsNullable = false, Namespace = "")]
         [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:48")]
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserCategorySpecified { get; set; }
 
-        private bool _payPhone;
+        protected bool _payPhone;
 
         [XmlElement(ElementName = "payPhone", IsNullable = false, Namespace = "")]
         [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:48")]
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PayPhoneSpecified { get; set; }
 
-        private bool _operator;
+        protected bool _operator;
 
         [XmlElement(ElementName = "operator", IsNullable = false, Namespace = "")]
         [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:48")]
@@ -149,7 +149,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OperatorSpecified { get; set; }
 
-        private bool _default;
+        protected bool _default;
 
         [XmlElement(ElementName = "default", IsNullable = false, Namespace = "")]
         [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:48")]
@@ -166,7 +166,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultSpecified { get; set; }
 
-        private bool _collectCall;
+        protected bool _collectCall;
 
         [XmlElement(ElementName = "collectCall", IsNullable = false, Namespace = "")]
         [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:48")]
@@ -183,7 +183,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CollectCallSpecified { get; set; }
 
-        private string _webDisplayKey;
+        protected string _webDisplayKey;
 
         [XmlElement(ElementName = "webDisplayKey", IsNullable = false, Namespace = "")]
         [Optional]

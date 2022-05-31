@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class RecurrenceRecurMonthlyByWeek
     {
 
-        private int _recurInterval;
+        protected int _recurInterval;
 
         [XmlElement(ElementName = "recurInterval", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecurIntervalSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.DayOfWeekInMonth _dayOfWeekInMonth;
+        protected BroadWorksConnector.Ocip.Models.DayOfWeekInMonth _dayOfWeekInMonth;
 
         [XmlElement(ElementName = "dayOfWeekInMonth", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3647")]
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DayOfWeekInMonthSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.DayOfWeek _dayOfWeek;
+        protected BroadWorksConnector.Ocip.Models.DayOfWeek _dayOfWeek;
 
         [XmlElement(ElementName = "dayOfWeek", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3647")]

@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class DeviceManagementFileAuthLocationGetResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.DeviceManagementFileAuthenticationStatus _status;
+        protected BroadWorksConnector.Ocip.Models.DeviceManagementFileAuthenticationStatus _status;
 
         [XmlElement(ElementName = "status", IsNullable = false, Namespace = "")]
         [Optional]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StatusSpecified { get; set; }
 
-        private string _fileRepositoryUserName;
+        protected string _fileRepositoryUserName;
 
         [XmlElement(ElementName = "fileRepositoryUserName", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1774")]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FileRepositoryUserNameSpecified { get; set; }
 
-        private string _fileRepositoryPassword;
+        protected string _fileRepositoryPassword;
 
         [XmlElement(ElementName = "fileRepositoryPassword", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1774")]
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FileRepositoryPasswordSpecified { get; set; }
 
-        private string _netAddress;
+        protected string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1774")]
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetAddressSpecified { get; set; }
 
-        private string _remoteFileFormat;
+        protected string _remoteFileFormat;
 
         [XmlElement(ElementName = "remoteFileFormat", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1774")]
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RemoteFileFormatSpecified { get; set; }
 
-        private int _portNumber;
+        protected int _portNumber;
 
         [XmlElement(ElementName = "portNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PortNumberSpecified { get; set; }
 
-        private string _rootDirectory;
+        protected string _rootDirectory;
 
         [XmlElement(ElementName = "rootDirectory", IsNullable = false, Namespace = "")]
         [Optional]
@@ -156,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RootDirectorySpecified { get; set; }
 
-        private string _cpeFileDirectory;
+        protected string _cpeFileDirectory;
 
         [XmlElement(ElementName = "cpeFileDirectory", IsNullable = false, Namespace = "")]
         [Optional]
@@ -176,7 +176,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CpeFileDirectorySpecified { get; set; }
 
-        private bool _secure;
+        protected bool _secure;
 
         [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
         [Optional]
@@ -194,7 +194,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SecureSpecified { get; set; }
 
-        private bool _macInNonRequestURI;
+        protected bool _macInNonRequestURI;
 
         [XmlElement(ElementName = "macInNonRequestURI", IsNullable = false, Namespace = "")]
         [Optional]
@@ -212,7 +212,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MacInNonRequestURISpecified { get; set; }
 
-        private string _macFormatInNonRequestURI;
+        protected string _macFormatInNonRequestURI;
 
         [XmlElement(ElementName = "macFormatInNonRequestURI", IsNullable = false, Namespace = "")]
         [Optional]
@@ -232,7 +232,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MacFormatInNonRequestURISpecified { get; set; }
 
-        private bool _useHttpDigestAuthentication;
+        protected bool _useHttpDigestAuthentication;
 
         [XmlElement(ElementName = "useHttpDigestAuthentication", IsNullable = false, Namespace = "")]
         [Optional]
@@ -250,7 +250,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseHttpDigestAuthenticationSpecified { get; set; }
 
-        private bool _macBasedFileAuthentication;
+        protected bool _macBasedFileAuthentication;
 
         [XmlElement(ElementName = "macBasedFileAuthentication", IsNullable = false, Namespace = "")]
         [Optional]
@@ -268,7 +268,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MacBasedFileAuthenticationSpecified { get; set; }
 
-        private bool _userNamePasswordFileAuthentication;
+        protected bool _userNamePasswordFileAuthentication;
 
         [XmlElement(ElementName = "userNamePasswordFileAuthentication", IsNullable = false, Namespace = "")]
         [Optional]
@@ -286,7 +286,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserNamePasswordFileAuthenticationSpecified { get; set; }
 
-        private bool _completionNotification;
+        protected bool _completionNotification;
 
         [XmlElement(ElementName = "completionNotification", IsNullable = false, Namespace = "")]
         [Optional]
@@ -304,7 +304,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CompletionNotificationSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.DeviceManagementFileCategory _fileCategory;
+        protected BroadWorksConnector.Ocip.Models.DeviceManagementFileCategory _fileCategory;
 
         [XmlElement(ElementName = "fileCategory", IsNullable = false, Namespace = "")]
         [Optional]
@@ -322,7 +322,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FileCategorySpecified { get; set; }
 
-        private bool _enableCaching;
+        protected bool _enableCaching;
 
         [XmlElement(ElementName = "enableCaching", IsNullable = false, Namespace = "")]
         [Optional]
@@ -340,7 +340,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableCachingSpecified { get; set; }
 
-        private bool _notifyFileUpload;
+        protected bool _notifyFileUpload;
 
         [XmlElement(ElementName = "notifyFileUpload", IsNullable = false, Namespace = "")]
         [Optional]

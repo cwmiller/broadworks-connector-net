@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseVoiceVPNDigitManipulationNoValue : BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulation
     {
 
-        private BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulationOperationNoValue _operation;
+        protected BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulationOperationNoValue _operation;
 
         [XmlElement(ElementName = "operation", IsNullable = false, Namespace = "")]
         [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1609")]

@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCollaborateBridgeGetRequest20sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserCollaborateBridgeGetResponse20sp1>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:576")]

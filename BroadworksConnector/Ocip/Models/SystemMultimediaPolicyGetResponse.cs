@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemMultimediaPolicyGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _restrictNonAudioVideoMediaTypes;
+        protected bool _restrictNonAudioVideoMediaTypes;
 
         [XmlElement(ElementName = "restrictNonAudioVideoMediaTypes", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12303")]

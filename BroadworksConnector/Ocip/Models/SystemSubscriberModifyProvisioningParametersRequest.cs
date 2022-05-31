@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSubscriberModifyProvisioningParametersRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _configurableCLIDNormalization;
+        protected bool _configurableCLIDNormalization;
 
         [XmlElement(ElementName = "configurableCLIDNormalization", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConfigurableCLIDNormalizationSpecified { get; set; }
 
-        private bool _includeDefaultDomain;
+        protected bool _includeDefaultDomain;
 
         [XmlElement(ElementName = "includeDefaultDomain", IsNullable = false, Namespace = "")]
         [Optional]

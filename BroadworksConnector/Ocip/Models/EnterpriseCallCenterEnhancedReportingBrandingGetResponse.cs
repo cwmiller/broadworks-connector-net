@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseCallCenterEnhancedReportingBrandingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.CallCenterEnhancedReportingBrandingChoice _brandingChoice;
+        protected BroadWorksConnector.Ocip.Models.CallCenterEnhancedReportingBrandingChoice _brandingChoice;
 
         [XmlElement(ElementName = "brandingChoice", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:1225")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BrandingChoiceSpecified { get; set; }
 
-        private string _brandingFileDescription;
+        protected string _brandingFileDescription;
 
         [XmlElement(ElementName = "brandingFileDescription", IsNullable = false, Namespace = "")]
         [Optional]

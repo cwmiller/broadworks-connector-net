@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserExecutiveModifyScreeningAlertingRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:419")]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private bool _enableScreening;
+        protected bool _enableScreening;
 
         [XmlElement(ElementName = "enableScreening", IsNullable = false, Namespace = "")]
         [Optional]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableScreeningSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ExecutiveScreeningAlertType _screeningAlertType;
+        protected BroadWorksConnector.Ocip.Models.ExecutiveScreeningAlertType _screeningAlertType;
 
         [XmlElement(ElementName = "screeningAlertType", IsNullable = false, Namespace = "")]
         [Optional]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ScreeningAlertTypeSpecified { get; set; }
 
-        private bool _alertBroadWorksMobilityLocation;
+        protected bool _alertBroadWorksMobilityLocation;
 
         [XmlElement(ElementName = "alertBroadWorksMobilityLocation", IsNullable = false, Namespace = "")]
         [Optional]
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlertBroadWorksMobilityLocationSpecified { get; set; }
 
-        private bool _alertBroadWorksAnywhereLocations;
+        protected bool _alertBroadWorksAnywhereLocations;
 
         [XmlElement(ElementName = "alertBroadWorksAnywhereLocations", IsNullable = false, Namespace = "")]
         [Optional]
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlertBroadWorksAnywhereLocationsSpecified { get; set; }
 
-        private bool _alertSharedCallAppearanceLocations;
+        protected bool _alertSharedCallAppearanceLocations;
 
         [XmlElement(ElementName = "alertSharedCallAppearanceLocations", IsNullable = false, Namespace = "")]
         [Optional]
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlertSharedCallAppearanceLocationsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ExecutiveAlertingMode _alertingMode;
+        protected BroadWorksConnector.Ocip.Models.ExecutiveAlertingMode _alertingMode;
 
         [XmlElement(ElementName = "alertingMode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlertingModeSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdNameMode _alertingCallingLineIdNameMode;
+        protected BroadWorksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdNameMode _alertingCallingLineIdNameMode;
 
         [XmlElement(ElementName = "alertingCallingLineIdNameMode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -165,7 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlertingCallingLineIdNameModeSpecified { get; set; }
 
-        private string _alertingCustomCallingLineIdName;
+        protected string _alertingCustomCallingLineIdName;
 
         [XmlElement(ElementName = "alertingCustomCallingLineIdName", IsNullable = true, Namespace = "")]
         [Optional]
@@ -185,7 +185,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlertingCustomCallingLineIdNameSpecified { get; set; }
 
-        private string _unicodeAlertingCustomCallingLineIdName;
+        protected string _unicodeAlertingCustomCallingLineIdName;
 
         [XmlElement(ElementName = "unicodeAlertingCustomCallingLineIdName", IsNullable = true, Namespace = "")]
         [Optional]
@@ -205,7 +205,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UnicodeAlertingCustomCallingLineIdNameSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdPhoneNumberMode _alertingCallingLineIdPhoneNumberMode;
+        protected BroadWorksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdPhoneNumberMode _alertingCallingLineIdPhoneNumberMode;
 
         [XmlElement(ElementName = "alertingCallingLineIdPhoneNumberMode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -223,7 +223,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlertingCallingLineIdPhoneNumberModeSpecified { get; set; }
 
-        private string _alertingCustomCallingLineIdPhoneNumber;
+        protected string _alertingCustomCallingLineIdPhoneNumber;
 
         [XmlElement(ElementName = "alertingCustomCallingLineIdPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
@@ -243,7 +243,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlertingCustomCallingLineIdPhoneNumberSpecified { get; set; }
 
-        private int _callPushRecallNumberOfRings;
+        protected int _callPushRecallNumberOfRings;
 
         [XmlElement(ElementName = "callPushRecallNumberOfRings", IsNullable = false, Namespace = "")]
         [Optional]
@@ -263,7 +263,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallPushRecallNumberOfRingsSpecified { get; set; }
 
-        private int _nextAssistantNumberOfRings;
+        protected int _nextAssistantNumberOfRings;
 
         [XmlElement(ElementName = "nextAssistantNumberOfRings", IsNullable = false, Namespace = "")]
         [Optional]
@@ -283,7 +283,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NextAssistantNumberOfRingsSpecified { get; set; }
 
-        private bool _enableRollover;
+        protected bool _enableRollover;
 
         [XmlElement(ElementName = "enableRollover", IsNullable = false, Namespace = "")]
         [Optional]
@@ -301,7 +301,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableRolloverSpecified { get; set; }
 
-        private int? _rolloverWaitTimeSeconds;
+        protected int? _rolloverWaitTimeSeconds;
 
         [XmlElement(ElementName = "rolloverWaitTimeSeconds", IsNullable = true, Namespace = "")]
         [Optional]
@@ -321,7 +321,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RolloverWaitTimeSecondsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ExecutiveRolloverActionType _rolloverAction;
+        protected BroadWorksConnector.Ocip.Models.ExecutiveRolloverActionType _rolloverAction;
 
         [XmlElement(ElementName = "rolloverAction", IsNullable = false, Namespace = "")]
         [Optional]
@@ -339,7 +339,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RolloverActionSpecified { get; set; }
 
-        private string _rolloverForwardToPhoneNumber;
+        protected string _rolloverForwardToPhoneNumber;
 
         [XmlElement(ElementName = "rolloverForwardToPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]

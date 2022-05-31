@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupEmergencyCallNotificationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _sendEmergencyCallNotificationEmail;
+        protected bool _sendEmergencyCallNotificationEmail;
 
         [XmlElement(ElementName = "sendEmergencyCallNotificationEmail", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5557")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SendEmergencyCallNotificationEmailSpecified { get; set; }
 
-        private string _emergencyCallNotifyEmailAddress;
+        protected string _emergencyCallNotifyEmailAddress;
 
         [XmlElement(ElementName = "emergencyCallNotifyEmailAddress", IsNullable = false, Namespace = "")]
         [Optional]

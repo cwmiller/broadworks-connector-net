@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserMusicOnHoldUserModifyRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:13988")]
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceModify16 _source;
+        protected BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceModify16 _source;
 
         [XmlElement(ElementName = "source", IsNullable = false, Namespace = "")]
         [Optional]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SourceSpecified { get; set; }
 
-        private bool _useAlternateSourceForInternalCalls;
+        protected bool _useAlternateSourceForInternalCalls;
 
         [XmlElement(ElementName = "useAlternateSourceForInternalCalls", IsNullable = false, Namespace = "")]
         [Optional]
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseAlternateSourceForInternalCallsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceModify16 _internalSource;
+        protected BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceModify16 _internalSource;
 
         [XmlElement(ElementName = "internalSource", IsNullable = false, Namespace = "")]
         [Optional]

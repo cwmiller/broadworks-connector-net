@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SortOrderGroupCollaborateBridgeGetAvailableUserPagedSortedList
     {
 
-        private BroadWorksConnector.Ocip.Models.SortByUserId _sortByUserId;
+        protected BroadWorksConnector.Ocip.Models.SortByUserId _sortByUserId;
 
         [XmlElement(ElementName = "sortByUserId", IsNullable = false, Namespace = "")]
         [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:1057")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SortByUserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SortByUserLastName _sortByUserLastName;
+        protected BroadWorksConnector.Ocip.Models.SortByUserLastName _sortByUserLastName;
 
         [XmlElement(ElementName = "sortByUserLastName", IsNullable = false, Namespace = "")]
         [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:1057")]
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SortByUserLastNameSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SortByUserFirstName _sortByUserFirstName;
+        protected BroadWorksConnector.Ocip.Models.SortByUserFirstName _sortByUserFirstName;
 
         [XmlElement(ElementName = "sortByUserFirstName", IsNullable = false, Namespace = "")]
         [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:1057")]
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SortByUserFirstNameSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SortByDn _sortByDn;
+        protected BroadWorksConnector.Ocip.Models.SortByDn _sortByDn;
 
         [XmlElement(ElementName = "sortByDn", IsNullable = false, Namespace = "")]
         [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:1057")]
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SortByDnSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SortByExtension _sortByExtension;
+        protected BroadWorksConnector.Ocip.Models.SortByExtension _sortByExtension;
 
         [XmlElement(ElementName = "sortByExtension", IsNullable = false, Namespace = "")]
         [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:1057")]

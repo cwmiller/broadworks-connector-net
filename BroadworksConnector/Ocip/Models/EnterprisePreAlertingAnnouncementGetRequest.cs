@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterprisePreAlertingAnnouncementGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.EnterprisePreAlertingAnnouncementGetResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"6165f2b4cd549de71fe8f3171488fdd8:51")]

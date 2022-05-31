@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupFindMeFollowMeAlertingGroupGetAvailableUserListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
         [Group(@"79f226053ee345f2ff4c37c37c8e9114:153")]

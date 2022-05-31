@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallRecordingGetPlatformListResponse22V2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _systemDefault;
+        protected string _systemDefault;
 
         [XmlElement(ElementName = "systemDefault", IsNullable = false, Namespace = "")]
         [Optional]
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SystemDefaultSpecified { get; set; }
 
-        private string _resellerDefault;
+        protected string _resellerDefault;
 
         [XmlElement(ElementName = "resellerDefault", IsNullable = false, Namespace = "")]
         [Optional]
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResellerDefaultSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _callRecordingPlatformTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _callRecordingPlatformTable;
 
         [XmlElement(ElementName = "callRecordingPlatformTable", IsNullable = false, Namespace = "")]
         [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:278")]

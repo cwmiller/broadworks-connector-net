@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderVoiceMessagingGroupSettingsAdd
     {
 
-        private string _deliveryFromAddress;
+        protected string _deliveryFromAddress;
 
         [XmlElement(ElementName = "deliveryFromAddress", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeliveryFromAddressSpecified { get; set; }
 
-        private string _notificationFromAddress;
+        protected string _notificationFromAddress;
 
         [XmlElement(ElementName = "notificationFromAddress", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NotificationFromAddressSpecified { get; set; }
 
-        private string _voicePortalLockoutFromAddress;
+        protected string _voicePortalLockoutFromAddress;
 
         [XmlElement(ElementName = "voicePortalLockoutFromAddress", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VoicePortalLockoutFromAddressSpecified { get; set; }
 
-        private bool _useSystemDefaultDeliveryFromAddress;
+        protected bool _useSystemDefaultDeliveryFromAddress;
 
         [XmlElement(ElementName = "useSystemDefaultDeliveryFromAddress", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7217")]
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseSystemDefaultDeliveryFromAddressSpecified { get; set; }
 
-        private bool _useSystemDefaultNotificationFromAddress;
+        protected bool _useSystemDefaultNotificationFromAddress;
 
         [XmlElement(ElementName = "useSystemDefaultNotificationFromAddress", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7217")]
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseSystemDefaultNotificationFromAddressSpecified { get; set; }
 
-        private bool _useSystemDefaultVoicePortalLockoutFromAddress;
+        protected bool _useSystemDefaultVoicePortalLockoutFromAddress;
 
         [XmlElement(ElementName = "useSystemDefaultVoicePortalLockoutFromAddress", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7217")]

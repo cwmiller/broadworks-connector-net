@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserSMDIMessageDeskGetServerListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserSMDIMessageDeskGetServerListResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"ee7bb69368e23a56a82c5d9cf07b5433:292")]

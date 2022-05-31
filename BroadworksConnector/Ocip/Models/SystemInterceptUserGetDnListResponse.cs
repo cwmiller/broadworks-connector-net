@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemInterceptUserGetDnListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<BroadWorksConnector.Ocip.Models.InterceptDNListEntry> _interceptUserList = new List<BroadWorksConnector.Ocip.Models.InterceptDNListEntry>();
+        protected List<BroadWorksConnector.Ocip.Models.InterceptDNListEntry> _interceptUserList = new List<BroadWorksConnector.Ocip.Models.InterceptDNListEntry>();
 
         [XmlElement(ElementName = "interceptUserList", IsNullable = false, Namespace = "")]
         [Optional]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ReplacementEnterpriseTrunkTrunkGroupList
     {
 
-        private List<string> _trunkGroup = new List<string>();
+        protected List<string> _trunkGroup = new List<string>();
 
         [XmlElement(ElementName = "trunkGroup", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1999")]

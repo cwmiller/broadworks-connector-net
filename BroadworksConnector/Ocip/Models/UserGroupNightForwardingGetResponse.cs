@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserGroupNightForwardingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.GroupNightForwardingUserServiceActivationMode _nightForwarding;
+        protected BroadWorksConnector.Ocip.Models.GroupNightForwardingUserServiceActivationMode _nightForwarding;
 
         [XmlElement(ElementName = "nightForwarding", IsNullable = false, Namespace = "")]
         [Group(@"1a3849774e8d2ffd90c3a2c57cbdd7a0:164")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NightForwardingSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.GroupNightForwardingGroupServiceActivationMode _groupNightForwarding;
+        protected BroadWorksConnector.Ocip.Models.GroupNightForwardingGroupServiceActivationMode _groupNightForwarding;
 
         [XmlElement(ElementName = "groupNightForwarding", IsNullable = false, Namespace = "")]
         [Group(@"1a3849774e8d2ffd90c3a2c57cbdd7a0:164")]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupNightForwardingSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.TimeSchedule _businessHours;
+        protected BroadWorksConnector.Ocip.Models.TimeSchedule _businessHours;
 
         [XmlElement(ElementName = "businessHours", IsNullable = false, Namespace = "")]
         [Optional]
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BusinessHoursSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
+        protected BroadWorksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
         [Optional]

@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserPushToTalkGetAvailableUserListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
         [Group(@"f32f4b57593f3e1ac6ed1cf45ed62b7c:70")]

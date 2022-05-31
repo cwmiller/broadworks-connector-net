@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemBCCTGetOCIInterfaceAddressListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _interfaceNetAddress = new List<string>();
+        protected List<string> _interfaceNetAddress = new List<string>();
 
         [XmlElement(ElementName = "interfaceNetAddress", IsNullable = false, Namespace = "")]
         [Optional]

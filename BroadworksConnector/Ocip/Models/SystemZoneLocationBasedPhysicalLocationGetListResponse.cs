@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemZoneLocationBasedPhysicalLocationGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _physicalLocation = new List<string>();
+        protected List<string> _physicalLocation = new List<string>();
 
         [XmlElement(ElementName = "physicalLocation", IsNullable = false, Namespace = "")]
         [Optional]

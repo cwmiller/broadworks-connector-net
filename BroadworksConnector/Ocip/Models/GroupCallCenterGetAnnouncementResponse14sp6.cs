@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallCenterGetAnnouncementResponse14sp6 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection _entranceMessageSelection;
+        protected BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection _entranceMessageSelection;
 
         [XmlElement(ElementName = "entranceMessageSelection", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5148")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EntranceMessageSelectionSpecified { get; set; }
 
-        private string _entranceMessageAudioFileDescription;
+        protected string _entranceMessageAudioFileDescription;
 
         [XmlElement(ElementName = "entranceMessageAudioFileDescription", IsNullable = false, Namespace = "")]
         [Optional]
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EntranceMessageAudioFileDescriptionSpecified { get; set; }
 
-        private string _entranceMessageVideoFileDescription;
+        protected string _entranceMessageVideoFileDescription;
 
         [XmlElement(ElementName = "entranceMessageVideoFileDescription", IsNullable = false, Namespace = "")]
         [Optional]
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EntranceMessageVideoFileDescriptionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection _periodicComfortMessageSelection;
+        protected BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection _periodicComfortMessageSelection;
 
         [XmlElement(ElementName = "periodicComfortMessageSelection", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5148")]
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PeriodicComfortMessageSelectionSpecified { get; set; }
 
-        private string _periodicComfortMessageAudioFileDescription;
+        protected string _periodicComfortMessageAudioFileDescription;
 
         [XmlElement(ElementName = "periodicComfortMessageAudioFileDescription", IsNullable = false, Namespace = "")]
         [Optional]
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PeriodicComfortMessageAudioFileDescriptionSpecified { get; set; }
 
-        private string _periodicComfortMessageVideoFileDescription;
+        protected string _periodicComfortMessageVideoFileDescription;
 
         [XmlElement(ElementName = "periodicComfortMessageVideoFileDescription", IsNullable = false, Namespace = "")]
         [Optional]
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PeriodicComfortMessageVideoFileDescriptionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallCenterMusicOnHoldSourceRead _onHoldSource;
+        protected BroadWorksConnector.Ocip.Models.CallCenterMusicOnHoldSourceRead _onHoldSource;
 
         [XmlElement(ElementName = "onHoldSource", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5148")]
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OnHoldSourceSpecified { get; set; }
 
-        private bool _onHoldUseAlternateSourceForInternalCalls;
+        protected bool _onHoldUseAlternateSourceForInternalCalls;
 
         [XmlElement(ElementName = "onHoldUseAlternateSourceForInternalCalls", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:5148")]
@@ -165,7 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OnHoldUseAlternateSourceForInternalCallsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallCenterMusicOnHoldSourceRead _onHoldInternalSource;
+        protected BroadWorksConnector.Ocip.Models.CallCenterMusicOnHoldSourceRead _onHoldInternalSource;
 
         [XmlElement(ElementName = "onHoldInternalSource", IsNullable = false, Namespace = "")]
         [Optional]

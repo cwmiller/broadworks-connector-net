@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SIPContactInfo
     {
 
-        private string _sipContact;
+        protected string _sipContact;
 
         [XmlElement(ElementName = "sipContact", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4644")]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SipContactSpecified { get; set; }
 
-        private string _pathHeader;
+        protected string _pathHeader;
 
         [XmlElement(ElementName = "pathHeader", IsNullable = false, Namespace = "")]
         [Optional]

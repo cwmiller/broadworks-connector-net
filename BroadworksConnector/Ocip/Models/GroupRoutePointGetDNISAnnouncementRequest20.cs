@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupRoutePointGetDNISAnnouncementRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupRoutePointGetDNISAnnouncementResponse20>
     {
 
-        private BroadWorksConnector.Ocip.Models.DNISKey _dnisKey;
+        protected BroadWorksConnector.Ocip.Models.DNISKey _dnisKey;
 
         [XmlElement(ElementName = "dnisKey", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:12192")]

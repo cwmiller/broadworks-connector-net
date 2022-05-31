@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemPreferredCarrierGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _systemCarrierTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _systemCarrierTable;
 
         [XmlElement(ElementName = "systemCarrierTable", IsNullable = false, Namespace = "")]
         [Group(@"74a46a9bfccb54713c1d19735843f1df:417")]

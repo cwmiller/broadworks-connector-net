@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CommunicationBarringOriginatingRule15sp2
     {
 
-        private string _criteria;
+        protected string _criteria;
 
         [XmlElement(ElementName = "criteria", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47792")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CriteriaSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction15sp2 _action;
+        protected BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction15sp2 _action;
 
         [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47792")]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ActionSpecified { get; set; }
 
-        private string _treatmentId;
+        protected string _treatmentId;
 
         [XmlElement(ElementName = "treatmentId", IsNullable = true, Namespace = "")]
         [Optional]
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TreatmentIdSpecified { get; set; }
 
-        private string _transferNumber;
+        protected string _transferNumber;
 
         [XmlElement(ElementName = "transferNumber", IsNullable = true, Namespace = "")]
         [Optional]

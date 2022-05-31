@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserBroadWorksReceptionistEnterpriseNoteGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _receptionistNote;
+        protected string _receptionistNote;
 
         [XmlElement(ElementName = "receptionistNote", IsNullable = false, Namespace = "")]
         [Optional]

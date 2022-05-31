@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ResellerCollaborateGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _collaborateFromAddress;
+        protected string _collaborateFromAddress;
 
         [XmlElement(ElementName = "collaborateFromAddress", IsNullable = false, Namespace = "")]
         [Optional]

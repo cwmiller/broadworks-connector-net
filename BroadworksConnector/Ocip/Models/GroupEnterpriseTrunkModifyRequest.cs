@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupEnterpriseTrunkModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:914")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:914")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private string _enterpriseTrunkName;
+        protected string _enterpriseTrunkName;
 
         [XmlElement(ElementName = "enterpriseTrunkName", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:914")]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnterpriseTrunkNameSpecified { get; set; }
 
-        private string _newEnterpriseTrunkName;
+        protected string _newEnterpriseTrunkName;
 
         [XmlElement(ElementName = "newEnterpriseTrunkName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewEnterpriseTrunkNameSpecified { get; set; }
 
-        private int _maximumRerouteAttempts;
+        protected int _maximumRerouteAttempts;
 
         [XmlElement(ElementName = "maximumRerouteAttempts", IsNullable = false, Namespace = "")]
         [Optional]
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaximumRerouteAttemptsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.EnterpriseTrunkRouteExhaustionAction _routeExhaustionAction;
+        protected BroadWorksConnector.Ocip.Models.EnterpriseTrunkRouteExhaustionAction _routeExhaustionAction;
 
         [XmlElement(ElementName = "routeExhaustionAction", IsNullable = false, Namespace = "")]
         [Optional]
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RouteExhaustionActionSpecified { get; set; }
 
-        private string _routeExhaustionForwardAddress;
+        protected string _routeExhaustionForwardAddress;
 
         [XmlElement(ElementName = "routeExhaustionForwardAddress", IsNullable = true, Namespace = "")]
         [Optional]
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RouteExhaustionForwardAddressSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.GroupEnterpriseTrunkModifyRequestOrderedRouting _orderedRouting;
+        protected BroadWorksConnector.Ocip.Models.GroupEnterpriseTrunkModifyRequestOrderedRouting _orderedRouting;
 
         [XmlElement(ElementName = "orderedRouting", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:922")]
@@ -171,7 +171,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OrderedRoutingSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.GroupEnterpriseTrunkModifyRequestPriorityWeightedRouting _priorityWeightedRouting;
+        protected BroadWorksConnector.Ocip.Models.GroupEnterpriseTrunkModifyRequestPriorityWeightedRouting _priorityWeightedRouting;
 
         [XmlElement(ElementName = "priorityWeightedRouting", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:922")]
@@ -188,7 +188,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PriorityWeightedRoutingSpecified { get; set; }
 
-        private bool _enableCapacityManagement;
+        protected bool _enableCapacityManagement;
 
         [XmlElement(ElementName = "enableCapacityManagement", IsNullable = false, Namespace = "")]
         [Optional]
@@ -206,7 +206,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableCapacityManagementSpecified { get; set; }
 
-        private int? _maxActiveCalls;
+        protected int? _maxActiveCalls;
 
         [XmlElement(ElementName = "maxActiveCalls", IsNullable = true, Namespace = "")]
         [Optional]
@@ -225,7 +225,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxActiveCallsSpecified { get; set; }
 
-        private int? _capacityExceededTrapInitialCalls;
+        protected int? _capacityExceededTrapInitialCalls;
 
         [XmlElement(ElementName = "capacityExceededTrapInitialCalls", IsNullable = true, Namespace = "")]
         [Optional]
@@ -244,7 +244,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CapacityExceededTrapInitialCallsSpecified { get; set; }
 
-        private int? _capacityExceededTrapOffsetCalls;
+        protected int? _capacityExceededTrapOffsetCalls;
 
         [XmlElement(ElementName = "capacityExceededTrapOffsetCalls", IsNullable = true, Namespace = "")]
         [Optional]
@@ -263,7 +263,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CapacityExceededTrapOffsetCallsSpecified { get; set; }
 
-        private int? _maximumActiveIncomingCallsAllowed;
+        protected int? _maximumActiveIncomingCallsAllowed;
 
         [XmlElement(ElementName = "maximumActiveIncomingCallsAllowed", IsNullable = true, Namespace = "")]
         [Optional]
@@ -282,7 +282,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaximumActiveIncomingCallsAllowedSpecified { get; set; }
 
-        private int? _maximumActiveOutgoingCallsAllowed;
+        protected int? _maximumActiveOutgoingCallsAllowed;
 
         [XmlElement(ElementName = "maximumActiveOutgoingCallsAllowed", IsNullable = true, Namespace = "")]
         [Optional]
@@ -301,7 +301,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaximumActiveOutgoingCallsAllowedSpecified { get; set; }
 
-        private int? _minimumActiveCallsReserved;
+        protected int? _minimumActiveCallsReserved;
 
         [XmlElement(ElementName = "minimumActiveCallsReserved", IsNullable = true, Namespace = "")]
         [Optional]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallCenterReportInterval
     {
 
-        private BroadWorksConnector.Ocip.Models.CallCenterReportIntervalDates _dates;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportIntervalDates _dates;
 
         [XmlElement(ElementName = "dates", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:7466")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DatesSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallCenterReportCurrentInterval _current;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportCurrentInterval _current;
 
         [XmlElement(ElementName = "current", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:7466")]
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CurrentSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallCenterReportPastInterval _past;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportPastInterval _past;
 
         [XmlElement(ElementName = "past", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:7466")]

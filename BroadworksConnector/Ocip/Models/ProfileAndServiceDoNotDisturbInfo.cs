@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ProfileAndServiceDoNotDisturbInfo
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:4421")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private bool _ringSplash;
+        protected bool _ringSplash;
 
         [XmlElement(ElementName = "ringSplash", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:4421")]

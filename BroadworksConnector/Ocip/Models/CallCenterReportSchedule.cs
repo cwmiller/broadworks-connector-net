@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallCenterReportSchedule
     {
 
-        private BroadWorksConnector.Ocip.Models.CallCenterReportScheduleTime _scheduleTime;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportScheduleTime _scheduleTime;
 
         [XmlElement(ElementName = "scheduleTime", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:7517")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ScheduleTimeSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallCenterReportScheduleRecurrence _recurrence;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportScheduleRecurrence _recurrence;
 
         [XmlElement(ElementName = "recurrence", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:7517")]

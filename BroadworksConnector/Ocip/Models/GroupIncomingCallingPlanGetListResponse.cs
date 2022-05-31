@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupIncomingCallingPlanGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.IncomingCallingPlanPermissions _groupPermissions;
+        protected BroadWorksConnector.Ocip.Models.IncomingCallingPlanPermissions _groupPermissions;
 
         [XmlElement(ElementName = "groupPermissions", IsNullable = false, Namespace = "")]
         [Group(@"3dd296d55b56269ae23d86a934b8b35c:62")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupPermissionsSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.IncomingCallingPlanDepartmentPermissions> _departmentPermissions = new List<BroadWorksConnector.Ocip.Models.IncomingCallingPlanDepartmentPermissions>();
+        protected List<BroadWorksConnector.Ocip.Models.IncomingCallingPlanDepartmentPermissions> _departmentPermissions = new List<BroadWorksConnector.Ocip.Models.IncomingCallingPlanDepartmentPermissions>();
 
         [XmlElement(ElementName = "departmentPermissions", IsNullable = false, Namespace = "")]
         [Optional]

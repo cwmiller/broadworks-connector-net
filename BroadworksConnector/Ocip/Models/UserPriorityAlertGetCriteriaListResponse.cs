@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserPriorityAlertGetCriteriaListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
         [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
         [Group(@"750c600a9467af6ee77c0dbca839453e:118")]

@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserAnnouncementFileGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _description;
+        protected string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39505")]
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DescriptionSpecified { get; set; }
 
-        private int _filesize;
+        protected int _filesize;
 
         [XmlElement(ElementName = "filesize", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39505")]
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FilesizeSpecified { get; set; }
 
-        private string _lastUploaded;
+        protected string _lastUploaded;
 
         [XmlElement(ElementName = "lastUploaded", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39505")]
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LastUploadedSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _usageTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _usageTable;
 
         [XmlElement(ElementName = "usageTable", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39505")]

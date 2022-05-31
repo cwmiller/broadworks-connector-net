@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallCenterScheduledReportCallCenterSelectionRead
     {
 
-        private bool _allCallCenter;
+        protected bool _allCallCenter;
 
         [XmlElement(ElementName = "allCallCenter", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:7635")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllCallCenterSpecified { get; set; }
 
-        private List<string> _currentUserId = new List<string>();
+        protected List<string> _currentUserId = new List<string>();
 
         [XmlElement(ElementName = "currentUserId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CurrentUserIdSpecified { get; set; }
 
-        private List<string> _pastUserId = new List<string>();
+        protected List<string> _pastUserId = new List<string>();
 
         [XmlElement(ElementName = "pastUserId", IsNullable = false, Namespace = "")]
         [Optional]

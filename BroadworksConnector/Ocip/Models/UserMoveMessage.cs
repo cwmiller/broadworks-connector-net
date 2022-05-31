@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserMoveMessage
     {
 
-        private int _messageCode;
+        protected int _messageCode;
 
         [XmlElement(ElementName = "messageCode", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:4629")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MessageCodeSpecified { get; set; }
 
-        private string _summary;
+        protected string _summary;
 
         [XmlElement(ElementName = "summary", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:4629")]
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SummarySpecified { get; set; }
 
-        private string _summaryEnglish;
+        protected string _summaryEnglish;
 
         [XmlElement(ElementName = "summaryEnglish", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:4629")]

@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemNumberActivationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _useNumberActivation;
+        protected bool _useNumberActivation;
 
         [XmlElement(ElementName = "useNumberActivation", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28002")]

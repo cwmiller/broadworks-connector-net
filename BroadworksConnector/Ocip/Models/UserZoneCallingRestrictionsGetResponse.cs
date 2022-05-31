@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserZoneCallingRestrictionsGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _homeZoneName;
+        protected string _homeZoneName;
 
         [XmlElement(ElementName = "homeZoneName", IsNullable = false, Namespace = "")]
         [Optional]

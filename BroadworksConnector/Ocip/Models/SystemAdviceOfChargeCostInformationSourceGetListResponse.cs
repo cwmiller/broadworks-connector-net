@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAdviceOfChargeCostInformationSourceGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _costInformationSourceTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _costInformationSourceTable;
 
         [XmlElement(ElementName = "costInformationSourceTable", IsNullable = false, Namespace = "")]
         [Group(@"a69fde15f3aa7494d83b57461a7a70bb:201")]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class VoiceMessagingAlternateNoAnswerGreetingModify
     {
 
-        private string _name;
+        protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NameSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.LabeledFileResource _audioFile;
+        protected BroadWorksConnector.Ocip.Models.LabeledFileResource _audioFile;
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
         [Optional]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioFileSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.LabeledFileResource _videoFile;
+        protected BroadWorksConnector.Ocip.Models.LabeledFileResource _videoFile;
 
         [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
         [Optional]

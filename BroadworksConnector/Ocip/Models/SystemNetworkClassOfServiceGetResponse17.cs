@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemNetworkClassOfServiceGetResponse17 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _description;
+        protected string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DescriptionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile0;
+        protected BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile0;
 
         [XmlElement(ElementName = "communicationBarringProfile0", IsNullable = false, Namespace = "")]
         [Optional]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CommunicationBarringProfile0Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile1;
+        protected BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile1;
 
         [XmlElement(ElementName = "communicationBarringProfile1", IsNullable = false, Namespace = "")]
         [Optional]
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CommunicationBarringProfile1Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile2;
+        protected BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile2;
 
         [XmlElement(ElementName = "communicationBarringProfile2", IsNullable = false, Namespace = "")]
         [Optional]
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CommunicationBarringProfile2Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile3;
+        protected BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile3;
 
         [XmlElement(ElementName = "communicationBarringProfile3", IsNullable = false, Namespace = "")]
         [Optional]
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CommunicationBarringProfile3Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile4;
+        protected BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile4;
 
         [XmlElement(ElementName = "communicationBarringProfile4", IsNullable = false, Namespace = "")]
         [Optional]
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CommunicationBarringProfile4Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile5;
+        protected BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile5;
 
         [XmlElement(ElementName = "communicationBarringProfile5", IsNullable = false, Namespace = "")]
         [Optional]
@@ -149,7 +149,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CommunicationBarringProfile5Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile6;
+        protected BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile6;
 
         [XmlElement(ElementName = "communicationBarringProfile6", IsNullable = false, Namespace = "")]
         [Optional]
@@ -167,7 +167,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CommunicationBarringProfile6Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile7;
+        protected BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile7;
 
         [XmlElement(ElementName = "communicationBarringProfile7", IsNullable = false, Namespace = "")]
         [Optional]
@@ -185,7 +185,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CommunicationBarringProfile7Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile8;
+        protected BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile8;
 
         [XmlElement(ElementName = "communicationBarringProfile8", IsNullable = false, Namespace = "")]
         [Optional]
@@ -203,7 +203,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CommunicationBarringProfile8Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile9;
+        protected BroadWorksConnector.Ocip.Models.NetworkClassOfServiceCommunicationBarringProfile _communicationBarringProfile9;
 
         [XmlElement(ElementName = "communicationBarringProfile9", IsNullable = false, Namespace = "")]
         [Optional]
@@ -221,7 +221,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CommunicationBarringProfile9Specified { get; set; }
 
-        private string _networkTranslationIndex;
+        protected string _networkTranslationIndex;
 
         [XmlElement(ElementName = "networkTranslationIndex", IsNullable = false, Namespace = "")]
         [Optional]

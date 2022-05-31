@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserAnonymousCallRejectionGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserAnonymousCallRejectionGetResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"6b25f8a296bf72b8b383a287bee9127d:95")]

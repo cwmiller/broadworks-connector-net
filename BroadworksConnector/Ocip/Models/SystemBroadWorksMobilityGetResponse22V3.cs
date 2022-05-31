@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemBroadWorksMobilityGetResponse22V3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _enableLocationServices;
+        protected bool _enableLocationServices;
 
         [XmlElement(ElementName = "enableLocationServices", IsNullable = false, Namespace = "")]
         [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1044")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableLocationServicesSpecified { get; set; }
 
-        private bool _enableMSRNLookup;
+        protected bool _enableMSRNLookup;
 
         [XmlElement(ElementName = "enableMSRNLookup", IsNullable = false, Namespace = "")]
         [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1044")]
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableMSRNLookupSpecified { get; set; }
 
-        private bool _enableMobileStateChecking;
+        protected bool _enableMobileStateChecking;
 
         [XmlElement(ElementName = "enableMobileStateChecking", IsNullable = false, Namespace = "")]
         [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1044")]
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableMobileStateCheckingSpecified { get; set; }
 
-        private bool _denyCallOriginations;
+        protected bool _denyCallOriginations;
 
         [XmlElement(ElementName = "denyCallOriginations", IsNullable = false, Namespace = "")]
         [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1044")]
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DenyCallOriginationsSpecified { get; set; }
 
-        private bool _denyCallTerminations;
+        protected bool _denyCallTerminations;
 
         [XmlElement(ElementName = "denyCallTerminations", IsNullable = false, Namespace = "")]
         [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1044")]
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DenyCallTerminationsSpecified { get; set; }
 
-        private int _imrnTimeoutMillisecnds;
+        protected int _imrnTimeoutMillisecnds;
 
         [XmlElement(ElementName = "imrnTimeoutMillisecnds", IsNullable = false, Namespace = "")]
         [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1044")]
@@ -121,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ImrnTimeoutMillisecndsSpecified { get; set; }
 
-        private bool _enableInternalCLIDDelivery;
+        protected bool _enableInternalCLIDDelivery;
 
         [XmlElement(ElementName = "enableInternalCLIDDelivery", IsNullable = false, Namespace = "")]
         [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1044")]
@@ -138,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableInternalCLIDDeliverySpecified { get; set; }
 
-        private bool _includeRedirectForMobilityTermination;
+        protected bool _includeRedirectForMobilityTermination;
 
         [XmlElement(ElementName = "includeRedirectForMobilityTermination", IsNullable = false, Namespace = "")]
         [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1044")]
@@ -155,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeRedirectForMobilityTerminationSpecified { get; set; }
 
-        private bool _enableInternalCLIDDeliveryAccessLocations;
+        protected bool _enableInternalCLIDDeliveryAccessLocations;
 
         [XmlElement(ElementName = "enableInternalCLIDDeliveryAccessLocations", IsNullable = false, Namespace = "")]
         [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1044")]
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableInternalCLIDDeliveryAccessLocationsSpecified { get; set; }
 
-        private bool _enableEnhancedUnreachableStateChecking;
+        protected bool _enableEnhancedUnreachableStateChecking;
 
         [XmlElement(ElementName = "enableEnhancedUnreachableStateChecking", IsNullable = false, Namespace = "")]
         [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1044")]
@@ -189,7 +189,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableEnhancedUnreachableStateCheckingSpecified { get; set; }
 
-        private bool _enableNetworkCallBarringStatusCheck;
+        protected bool _enableNetworkCallBarringStatusCheck;
 
         [XmlElement(ElementName = "enableNetworkCallBarringStatusCheck", IsNullable = false, Namespace = "")]
         [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1044")]
@@ -206,7 +206,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableNetworkCallBarringStatusCheckSpecified { get; set; }
 
-        private string _networkTranslationIndex;
+        protected string _networkTranslationIndex;
 
         [XmlElement(ElementName = "networkTranslationIndex", IsNullable = false, Namespace = "")]
         [Optional]

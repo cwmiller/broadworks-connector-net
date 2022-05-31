@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderConsolidatedAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _isEnterprise;
+        protected bool _isEnterprise;
 
         [XmlElement(ElementName = "isEnterprise", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:2657")]
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsEnterpriseSpecified { get; set; }
 
-        private bool _useCustomRoutingProfile;
+        protected bool _useCustomRoutingProfile;
 
         [XmlElement(ElementName = "useCustomRoutingProfile", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:2657")]
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseCustomRoutingProfileSpecified { get; set; }
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _serviceProviderExternalId;
+        protected string _serviceProviderExternalId;
 
         [XmlElement(ElementName = "serviceProviderExternalId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -141,7 +141,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderExternalIdSpecified { get; set; }
 
-        private string _defaultDomain;
+        protected string _defaultDomain;
 
         [XmlElement(ElementName = "defaultDomain", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:2656")]
@@ -160,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultDomainSpecified { get; set; }
 
-        private string _serviceProviderName;
+        protected string _serviceProviderName;
 
         [XmlElement(ElementName = "serviceProviderName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -180,7 +180,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderNameSpecified { get; set; }
 
-        private string _supportEmail;
+        protected string _supportEmail;
 
         [XmlElement(ElementName = "supportEmail", IsNullable = false, Namespace = "")]
         [Optional]
@@ -200,7 +200,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SupportEmailSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.Contact _contact;
+        protected BroadWorksConnector.Ocip.Models.Contact _contact;
 
         [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
         [Optional]
@@ -218,7 +218,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ContactSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.StreetAddress _address;
+        protected BroadWorksConnector.Ocip.Models.StreetAddress _address;
 
         [XmlElement(ElementName = "address", IsNullable = false, Namespace = "")]
         [Optional]
@@ -236,7 +236,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AddressSpecified { get; set; }
 
-        private string _servicePolicy;
+        protected string _servicePolicy;
 
         [XmlElement(ElementName = "servicePolicy", IsNullable = false, Namespace = "")]
         [Optional]
@@ -256,7 +256,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServicePolicySpecified { get; set; }
 
-        private string _callProcessingSliceId;
+        protected string _callProcessingSliceId;
 
         [XmlElement(ElementName = "callProcessingSliceId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -276,7 +276,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallProcessingSliceIdSpecified { get; set; }
 
-        private string _provisioningSliceId;
+        protected string _provisioningSliceId;
 
         [XmlElement(ElementName = "provisioningSliceId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -296,7 +296,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProvisioningSliceIdSpecified { get; set; }
 
-        private string _subscriberPartition;
+        protected string _subscriberPartition;
 
         [XmlElement(ElementName = "subscriberPartition", IsNullable = false, Namespace = "")]
         [Optional]
@@ -316,7 +316,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SubscriberPartitionSpecified { get; set; }
 
-        private string _preferredDataCenter;
+        protected string _preferredDataCenter;
 
         [XmlElement(ElementName = "preferredDataCenter", IsNullable = false, Namespace = "")]
         [Optional]
@@ -336,7 +336,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PreferredDataCenterSpecified { get; set; }
 
-        private string _resellerId;
+        protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -356,7 +356,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResellerIdSpecified { get; set; }
 
-        private string _resellerName;
+        protected string _resellerName;
 
         [XmlElement(ElementName = "resellerName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -376,7 +376,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResellerNameSpecified { get; set; }
 
-        private List<string> _domain = new List<string>();
+        protected List<string> _domain = new List<string>();
 
         [XmlElement(ElementName = "domain", IsNullable = false, Namespace = "")]
         [Optional]
@@ -396,7 +396,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DomainSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.ServiceProviderAdmin> _admin = new List<BroadWorksConnector.Ocip.Models.ServiceProviderAdmin>();
+        protected List<BroadWorksConnector.Ocip.Models.ServiceProviderAdmin> _admin = new List<BroadWorksConnector.Ocip.Models.ServiceProviderAdmin>();
 
         [XmlElement(ElementName = "admin", IsNullable = false, Namespace = "")]
         [Optional]
@@ -414,7 +414,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AdminSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.GroupServiceAuthorization> _groupServiceAuthorization = new List<BroadWorksConnector.Ocip.Models.GroupServiceAuthorization>();
+        protected List<BroadWorksConnector.Ocip.Models.GroupServiceAuthorization> _groupServiceAuthorization = new List<BroadWorksConnector.Ocip.Models.GroupServiceAuthorization>();
 
         [XmlElement(ElementName = "groupServiceAuthorization", IsNullable = false, Namespace = "")]
         [Optional]
@@ -432,7 +432,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupServiceAuthorizationSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.UserServiceAuthorization> _userServiceAuthorization = new List<BroadWorksConnector.Ocip.Models.UserServiceAuthorization>();
+        protected List<BroadWorksConnector.Ocip.Models.UserServiceAuthorization> _userServiceAuthorization = new List<BroadWorksConnector.Ocip.Models.UserServiceAuthorization>();
 
         [XmlElement(ElementName = "userServiceAuthorization", IsNullable = false, Namespace = "")]
         [Optional]
@@ -450,7 +450,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserServiceAuthorizationSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.ServicePack> _servicePack = new List<BroadWorksConnector.Ocip.Models.ServicePack>();
+        protected List<BroadWorksConnector.Ocip.Models.ServicePack> _servicePack = new List<BroadWorksConnector.Ocip.Models.ServicePack>();
 
         [XmlElement(ElementName = "servicePack", IsNullable = false, Namespace = "")]
         [Optional]
@@ -468,7 +468,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServicePackSpecified { get; set; }
 
-        private List<string> _phoneNumber = new List<string>();
+        protected List<string> _phoneNumber = new List<string>();
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -488,7 +488,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PhoneNumberSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.DNRange> _dnRange = new List<BroadWorksConnector.Ocip.Models.DNRange>();
+        protected List<BroadWorksConnector.Ocip.Models.DNRange> _dnRange = new List<BroadWorksConnector.Ocip.Models.DNRange>();
 
         [XmlElement(ElementName = "dnRange", IsNullable = false, Namespace = "")]
         [Optional]
@@ -506,7 +506,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DnRangeSpecified { get; set; }
 
-        private string _routingProfile;
+        protected string _routingProfile;
 
         [XmlElement(ElementName = "routingProfile", IsNullable = true, Namespace = "")]
         [Optional]
@@ -526,7 +526,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RoutingProfileSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts _meetMeConferencingAllocatedPorts;
+        protected BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts _meetMeConferencingAllocatedPorts;
 
         [XmlElement(ElementName = "meetMeConferencingAllocatedPorts", IsNullable = false, Namespace = "")]
         [Optional]
@@ -544,7 +544,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MeetMeConferencingAllocatedPortsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _trunkGroupMaxActiveCalls;
+        protected BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _trunkGroupMaxActiveCalls;
 
         [XmlElement(ElementName = "trunkGroupMaxActiveCalls", IsNullable = false, Namespace = "")]
         [Optional]
@@ -562,7 +562,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TrunkGroupMaxActiveCallsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _trunkGroupBurstingMaxActiveCalls;
+        protected BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _trunkGroupBurstingMaxActiveCalls;
 
         [XmlElement(ElementName = "trunkGroupBurstingMaxActiveCalls", IsNullable = false, Namespace = "")]
         [Optional]
@@ -580,7 +580,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TrunkGroupBurstingMaxActiveCallsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ServiceProviderVoiceMessagingGroupSettingsAdd _voiceMessagingGroupSettings;
+        protected BroadWorksConnector.Ocip.Models.ServiceProviderVoiceMessagingGroupSettingsAdd _voiceMessagingGroupSettings;
 
         [XmlElement(ElementName = "voiceMessagingGroupSettings", IsNullable = false, Namespace = "")]
         [Optional]
@@ -598,7 +598,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VoiceMessagingGroupSettingsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ServiceProviderVoicePortalScope _voiceMessagingGroupVoicePortalScope;
+        protected BroadWorksConnector.Ocip.Models.ServiceProviderVoicePortalScope _voiceMessagingGroupVoicePortalScope;
 
         [XmlElement(ElementName = "voiceMessagingGroupVoicePortalScope", IsNullable = false, Namespace = "")]
         [Optional]

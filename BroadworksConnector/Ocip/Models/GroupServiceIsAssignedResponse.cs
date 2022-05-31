@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupServiceIsAssignedResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isAssigned;
+        protected bool _isAssigned;
 
         [XmlElement(ElementName = "isAssigned", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7879")]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class PlayGreetingMenuKeysModifyEntry
     {
 
-        private string _skipBackward;
+        protected string _skipBackward;
 
         [XmlElement(ElementName = "skipBackward", IsNullable = true, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SkipBackwardSpecified { get; set; }
 
-        private string _pauseOrResume;
+        protected string _pauseOrResume;
 
         [XmlElement(ElementName = "pauseOrResume", IsNullable = true, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PauseOrResumeSpecified { get; set; }
 
-        private string _skipForward;
+        protected string _skipForward;
 
         [XmlElement(ElementName = "skipForward", IsNullable = true, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SkipForwardSpecified { get; set; }
 
-        private string _jumpToBegin;
+        protected string _jumpToBegin;
 
         [XmlElement(ElementName = "jumpToBegin", IsNullable = true, Namespace = "")]
         [Optional]
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool JumpToBeginSpecified { get; set; }
 
-        private string _jumpToEnd;
+        protected string _jumpToEnd;
 
         [XmlElement(ElementName = "jumpToEnd", IsNullable = true, Namespace = "")]
         [Optional]

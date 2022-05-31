@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemNumberFormattingParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _applyFormattingToE164Numbers;
+        protected bool _applyFormattingToE164Numbers;
 
         [XmlElement(ElementName = "applyFormattingToE164Numbers", IsNullable = false, Namespace = "")]
         [Optional]

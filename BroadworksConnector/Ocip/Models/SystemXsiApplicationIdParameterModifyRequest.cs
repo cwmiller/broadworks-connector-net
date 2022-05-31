@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemXsiApplicationIdParameterModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _screenXsiApplicationId;
+        protected bool _screenXsiApplicationId;
 
         [XmlElement(ElementName = "screenXsiApplicationId", IsNullable = false, Namespace = "")]
         [Optional]

@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserVoicePortalCallingGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserVoicePortalCallingGetResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"23caf3c7f8f181bcb5b4719a3564ba94:42")]

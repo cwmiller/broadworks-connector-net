@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SelectiveCallRejectionCriteriaCallType
     {
 
-        private BroadWorksConnector.Ocip.Models.SelectiveCallRejectionCriteriaCallTypeSelection _fromDnCriteriaSelection;
+        protected BroadWorksConnector.Ocip.Models.SelectiveCallRejectionCriteriaCallTypeSelection _fromDnCriteriaSelection;
 
         [XmlElement(ElementName = "fromDnCriteriaSelection", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4135")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FromDnCriteriaSelectionSpecified { get; set; }
 
-        private bool _includeAnonymousCallers;
+        protected bool _includeAnonymousCallers;
 
         [XmlElement(ElementName = "includeAnonymousCallers", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4135")]
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeAnonymousCallersSpecified { get; set; }
 
-        private bool _includeUnavailableCallers;
+        protected bool _includeUnavailableCallers;
 
         [XmlElement(ElementName = "includeUnavailableCallers", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4135")]
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeUnavailableCallersSpecified { get; set; }
 
-        private List<string> _phoneNumber = new List<string>();
+        protected List<string> _phoneNumber = new List<string>();
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Optional]

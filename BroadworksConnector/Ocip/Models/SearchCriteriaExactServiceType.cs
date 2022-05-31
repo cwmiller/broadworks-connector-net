@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaExactServiceType : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        private BroadWorksConnector.Ocip.Models.ServiceType _serviceType;
+        protected BroadWorksConnector.Ocip.Models.ServiceType _serviceType;
 
         [XmlElement(ElementName = "serviceType", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:1224")]

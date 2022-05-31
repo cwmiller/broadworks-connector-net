@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupTrunkGroupGetInstanceRequest23 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupTrunkGroupGetInstanceResponse23>
     {
 
-        private BroadWorksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
+        protected BroadWorksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
 
         [XmlElement(ElementName = "trunkGroupKey", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1154")]

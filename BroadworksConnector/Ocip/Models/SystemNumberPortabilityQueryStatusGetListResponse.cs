@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemNumberPortabilityQueryStatusGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _statusTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _statusTable;
 
         [XmlElement(ElementName = "statusTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13253")]

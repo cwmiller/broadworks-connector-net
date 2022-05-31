@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ConsolidatedGroupServiceAssignment
     {
 
-        private BroadWorksConnector.Ocip.Models.GroupService _groupServiceName;
+        protected BroadWorksConnector.Ocip.Models.GroupService _groupServiceName;
 
         [XmlElement(ElementName = "groupServiceName", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1683")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupServiceNameSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _authorizedQuantity;
+        protected BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _authorizedQuantity;
 
         [XmlElement(ElementName = "authorizedQuantity", IsNullable = false, Namespace = "")]
         [Optional]

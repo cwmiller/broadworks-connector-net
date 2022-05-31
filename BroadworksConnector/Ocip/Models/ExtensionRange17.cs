@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ExtensionRange17
     {
 
-        private string _minExtension;
+        protected string _minExtension;
 
         [XmlElement(ElementName = "minExtension", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2750")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MinExtensionSpecified { get; set; }
 
-        private string _maxExtension;
+        protected string _maxExtension;
 
         [XmlElement(ElementName = "maxExtension", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2750")]

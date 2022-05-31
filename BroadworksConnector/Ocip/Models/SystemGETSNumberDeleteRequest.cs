@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemGETSNumberDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _number;
+        protected string _number;
 
         [XmlElement(ElementName = "number", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10912")]

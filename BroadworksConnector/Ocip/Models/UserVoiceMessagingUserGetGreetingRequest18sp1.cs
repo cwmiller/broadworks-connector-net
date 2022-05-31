@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserVoiceMessagingUserGetGreetingRequest18sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserVoiceMessagingUserGetGreetingResponse18sp1>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"a8b2edcd7d6936a8b76653949ae59623:417")]

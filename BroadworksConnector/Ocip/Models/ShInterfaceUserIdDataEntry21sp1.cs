@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ShInterfaceUserIdDataEntry21sp1
     {
 
-        private BroadWorksConnector.Ocip.Models.UserType _userType;
+        protected BroadWorksConnector.Ocip.Models.UserType _userType;
 
         [XmlElement(ElementName = "userType", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4559")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserTypeSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.PublicUserIdentity _publicUserIdentity;
+        protected BroadWorksConnector.Ocip.Models.PublicUserIdentity _publicUserIdentity;
 
         [XmlElement(ElementName = "publicUserIdentity", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4559")]
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PublicUserIdentitySpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.EndpointType21sp1 _endpointType;
+        protected BroadWorksConnector.Ocip.Models.EndpointType21sp1 _endpointType;
 
         [XmlElement(ElementName = "endpointType", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4559")]
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EndpointTypeSpecified { get; set; }
 
-        private string _sCSCFName;
+        protected string _sCSCFName;
 
         [XmlElement(ElementName = "SCSCFName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SCSCFNameSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.IMSUserState _iMSUserState;
+        protected BroadWorksConnector.Ocip.Models.IMSUserState _iMSUserState;
 
         [XmlElement(ElementName = "IMSUserState", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4559")]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class VoiceMessagingAliasReplacementList
     {
 
-        private List<string> _phoneNumber = new List<string>();
+        protected List<string> _phoneNumber = new List<string>();
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3155")]

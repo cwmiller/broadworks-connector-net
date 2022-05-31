@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class XsiPolicyProfileKey
     {
 
-        private string _name;
+        protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5375")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NameSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.XsiPolicyProfileLevel _level;
+        protected BroadWorksConnector.Ocip.Models.XsiPolicyProfileLevel _level;
 
         [XmlElement(ElementName = "level", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5375")]

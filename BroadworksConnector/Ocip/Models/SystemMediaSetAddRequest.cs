@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemMediaSetAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _setName;
+        protected string _setName;
 
         [XmlElement(ElementName = "setName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12059")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SetNameSpecified { get; set; }
 
-        private List<string> _mediaName = new List<string>();
+        protected List<string> _mediaName = new List<string>();
 
         [XmlElement(ElementName = "mediaName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12059")]

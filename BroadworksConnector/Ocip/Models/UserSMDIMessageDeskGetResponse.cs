@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserSMDIMessageDeskGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"ee7bb69368e23a56a82c5d9cf07b5433:275")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private string _messageDeskNumber;
+        protected string _messageDeskNumber;
 
         [XmlElement(ElementName = "messageDeskNumber", IsNullable = false, Namespace = "")]
         [Optional]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UnboundedNonNegativeInt
     {
 
-        private bool _unlimited;
+        protected bool _unlimited;
 
         [XmlElement(ElementName = "unlimited", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5179")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UnlimitedSpecified { get; set; }
 
-        private int _quantity;
+        protected int _quantity;
 
         [XmlElement(ElementName = "quantity", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5179")]

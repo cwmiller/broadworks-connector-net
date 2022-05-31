@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderHPBXAlternateCarrierSelectionGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _processCbcCarrierSelection;
+        protected bool _processCbcCarrierSelection;
 
         [XmlElement(ElementName = "processCbcCarrierSelection", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4631")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProcessCbcCarrierSelectionSpecified { get; set; }
 
-        private string _preselectedLocalCarrier;
+        protected string _preselectedLocalCarrier;
 
         [XmlElement(ElementName = "preselectedLocalCarrier", IsNullable = false, Namespace = "")]
         [Optional]
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PreselectedLocalCarrierSpecified { get; set; }
 
-        private string _preselectedDistantCarrier;
+        protected string _preselectedDistantCarrier;
 
         [XmlElement(ElementName = "preselectedDistantCarrier", IsNullable = false, Namespace = "")]
         [Optional]

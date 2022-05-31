@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseLocalGatewayGetPagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _localGatewayTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _localGatewayTable;
 
         [XmlElement(ElementName = "localGatewayTable", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:508")]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaUserPersonalMultiPartPhoneListName : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        private List<string> _value = new List<string>();
+        protected List<string> _value = new List<string>();
 
         [XmlElement(ElementName = "value", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:2347")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ValueSpecified { get; set; }
 
-        private bool _isCaseInsensitive;
+        protected bool _isCaseInsensitive;
 
         [XmlElement(ElementName = "isCaseInsensitive", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:2347")]

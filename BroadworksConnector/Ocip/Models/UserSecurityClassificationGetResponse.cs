@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserSecurityClassificationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _securityClassification;
+        protected string _securityClassification;
 
         [XmlElement(ElementName = "securityClassification", IsNullable = false, Namespace = "")]
         [Optional]

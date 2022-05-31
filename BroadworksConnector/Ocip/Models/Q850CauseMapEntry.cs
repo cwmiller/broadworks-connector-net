@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class Q850CauseMapEntry
     {
 
-        private int _q850CauseValue;
+        protected int _q850CauseValue;
 
         [XmlElement(ElementName = "q850CauseValue", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19982")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Q850CauseValueSpecified { get; set; }
 
-        private string _treatmentId;
+        protected string _treatmentId;
 
         [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
         [Optional]

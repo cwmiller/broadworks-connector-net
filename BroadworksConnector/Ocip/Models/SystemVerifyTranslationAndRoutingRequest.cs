@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemVerifyTranslationAndRoutingRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemVerifyTranslationAndRoutingResponse>
     {
 
-        private BroadWorksConnector.Ocip.Models.VerifyTranslationAndRoutingParameters _parameters;
+        protected BroadWorksConnector.Ocip.Models.VerifyTranslationAndRoutingParameters _parameters;
 
         [XmlElement(ElementName = "parameters", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19104")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ParametersSpecified { get; set; }
 
-        private string _sipMessage;
+        protected string _sipMessage;
 
         [XmlElement(ElementName = "sipMessage", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19104")]

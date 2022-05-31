@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserAlternateNumbersGetResponse17 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _distinctiveRing;
+        protected bool _distinctiveRing;
 
         [XmlElement(ElementName = "distinctiveRing", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:12477")]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DistinctiveRingSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AlternateNumberEntry17 _alternateEntry01;
+        protected BroadWorksConnector.Ocip.Models.AlternateNumberEntry17 _alternateEntry01;
 
         [XmlElement(ElementName = "alternateEntry01", IsNullable = false, Namespace = "")]
         [Optional]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlternateEntry01Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AlternateNumberEntry17 _alternateEntry02;
+        protected BroadWorksConnector.Ocip.Models.AlternateNumberEntry17 _alternateEntry02;
 
         [XmlElement(ElementName = "alternateEntry02", IsNullable = false, Namespace = "")]
         [Optional]
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlternateEntry02Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AlternateNumberEntry17 _alternateEntry03;
+        protected BroadWorksConnector.Ocip.Models.AlternateNumberEntry17 _alternateEntry03;
 
         [XmlElement(ElementName = "alternateEntry03", IsNullable = false, Namespace = "")]
         [Optional]
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlternateEntry03Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AlternateNumberEntry17 _alternateEntry04;
+        protected BroadWorksConnector.Ocip.Models.AlternateNumberEntry17 _alternateEntry04;
 
         [XmlElement(ElementName = "alternateEntry04", IsNullable = false, Namespace = "")]
         [Optional]
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlternateEntry04Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AlternateNumberEntry17 _alternateEntry05;
+        protected BroadWorksConnector.Ocip.Models.AlternateNumberEntry17 _alternateEntry05;
 
         [XmlElement(ElementName = "alternateEntry05", IsNullable = false, Namespace = "")]
         [Optional]
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlternateEntry05Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AlternateNumberEntry17 _alternateEntry06;
+        protected BroadWorksConnector.Ocip.Models.AlternateNumberEntry17 _alternateEntry06;
 
         [XmlElement(ElementName = "alternateEntry06", IsNullable = false, Namespace = "")]
         [Optional]
@@ -145,7 +145,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlternateEntry06Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AlternateNumberEntry17 _alternateEntry07;
+        protected BroadWorksConnector.Ocip.Models.AlternateNumberEntry17 _alternateEntry07;
 
         [XmlElement(ElementName = "alternateEntry07", IsNullable = false, Namespace = "")]
         [Optional]
@@ -163,7 +163,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlternateEntry07Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AlternateNumberEntry17 _alternateEntry08;
+        protected BroadWorksConnector.Ocip.Models.AlternateNumberEntry17 _alternateEntry08;
 
         [XmlElement(ElementName = "alternateEntry08", IsNullable = false, Namespace = "")]
         [Optional]
@@ -181,7 +181,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlternateEntry08Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AlternateNumberEntry17 _alternateEntry09;
+        protected BroadWorksConnector.Ocip.Models.AlternateNumberEntry17 _alternateEntry09;
 
         [XmlElement(ElementName = "alternateEntry09", IsNullable = false, Namespace = "")]
         [Optional]
@@ -199,7 +199,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlternateEntry09Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AlternateNumberEntry17 _alternateEntry10;
+        protected BroadWorksConnector.Ocip.Models.AlternateNumberEntry17 _alternateEntry10;
 
         [XmlElement(ElementName = "alternateEntry10", IsNullable = false, Namespace = "")]
         [Optional]

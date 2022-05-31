@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallingPlanGetDigitPatternListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _digitPatternTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _digitPatternTable;
 
         [XmlElement(ElementName = "digitPatternTable", IsNullable = false, Namespace = "")]
         [Group(@"00a30b95794e8eb54c36eccd0a6188fa:97")]

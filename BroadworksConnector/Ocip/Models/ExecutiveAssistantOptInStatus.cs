@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ExecutiveAssistantOptInStatus
     {
 
-        private string _executiveUserId;
+        protected string _executiveUserId;
 
         [XmlElement(ElementName = "executiveUserId", IsNullable = false, Namespace = "")]
         [Group(@"edd49e38c60ed5c00d394f2a35697c84:104")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExecutiveUserIdSpecified { get; set; }
 
-        private bool _optIn;
+        protected bool _optIn;
 
         [XmlElement(ElementName = "optIn", IsNullable = false, Namespace = "")]
         [Group(@"edd49e38c60ed5c00d394f2a35697c84:104")]

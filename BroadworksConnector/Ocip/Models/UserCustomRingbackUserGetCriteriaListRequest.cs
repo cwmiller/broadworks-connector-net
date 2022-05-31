@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCustomRingbackUserGetCriteriaListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserCustomRingbackUserGetCriteriaListResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"80acd3e6f38b9682dcefe7cd473392c3:155")]

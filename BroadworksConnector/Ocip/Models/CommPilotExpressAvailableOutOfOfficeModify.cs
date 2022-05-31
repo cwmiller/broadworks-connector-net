@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CommPilotExpressAvailableOutOfOfficeModify
     {
 
-        private BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionModify _incomingCalls;
+        protected BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionModify _incomingCalls;
 
         [XmlElement(ElementName = "incomingCalls", IsNullable = false, Namespace = "")]
         [Optional]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncomingCallsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CommPilotExpressEmailNotifyModify _incomingCallNotify;
+        protected BroadWorksConnector.Ocip.Models.CommPilotExpressEmailNotifyModify _incomingCallNotify;
 
         [XmlElement(ElementName = "incomingCallNotify", IsNullable = false, Namespace = "")]
         [Optional]

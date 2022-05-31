@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class OutgoingCallingPlanCallMeNowDepartmentPermissions
     {
 
-        private BroadWorksConnector.Ocip.Models.DepartmentKey _departmentKey;
+        protected BroadWorksConnector.Ocip.Models.DepartmentKey _departmentKey;
 
         [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1749")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DepartmentKeySpecified { get; set; }
 
-        private string _departmentName;
+        protected string _departmentName;
 
         [XmlElement(ElementName = "departmentName", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1749")]
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DepartmentNameSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanCallMeNowPermissions _permissions;
+        protected BroadWorksConnector.Ocip.Models.OutgoingCallingPlanCallMeNowPermissions _permissions;
 
         [XmlElement(ElementName = "permissions", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1749")]

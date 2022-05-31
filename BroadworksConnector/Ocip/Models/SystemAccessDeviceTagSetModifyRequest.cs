@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAccessDeviceTagSetModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _deviceName;
+        protected string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1726")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceNameSpecified { get; set; }
 
-        private string _tagSetName;
+        protected string _tagSetName;
 
         [XmlElement(ElementName = "tagSetName", IsNullable = true, Namespace = "")]
         [Optional]

@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupPolycomPhoneServicesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"4f074d986b998636e2bcb0d67372b0f4:80")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"4f074d986b998636e2bcb0d67372b0f4:80")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private bool _includeGroupCommonPhoneListInDirectory;
+        protected bool _includeGroupCommonPhoneListInDirectory;
 
         [XmlElement(ElementName = "includeGroupCommonPhoneListInDirectory", IsNullable = false, Namespace = "")]
         [Optional]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeGroupCommonPhoneListInDirectorySpecified { get; set; }
 
-        private bool _includeGroupCustomContactDirectoryInDirectory;
+        protected bool _includeGroupCustomContactDirectoryInDirectory;
 
         [XmlElement(ElementName = "includeGroupCustomContactDirectoryInDirectory", IsNullable = false, Namespace = "")]
         [Optional]
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeGroupCustomContactDirectoryInDirectorySpecified { get; set; }
 
-        private string _groupCustomContactDirectory;
+        protected string _groupCustomContactDirectory;
 
         [XmlElement(ElementName = "groupCustomContactDirectory", IsNullable = true, Namespace = "")]
         [Optional]

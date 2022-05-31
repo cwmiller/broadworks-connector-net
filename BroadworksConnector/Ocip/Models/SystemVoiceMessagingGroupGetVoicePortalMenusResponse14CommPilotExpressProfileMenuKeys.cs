@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse14CommPilotExpressProfileMenuKeys
     {
 
-        private string _activateAvailableInOfficeProfile;
+        protected string _activateAvailableInOfficeProfile;
 
         [XmlElement(ElementName = "activateAvailableInOfficeProfile", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ActivateAvailableInOfficeProfileSpecified { get; set; }
 
-        private string _activateAvailableOutOfOfficeProfile;
+        protected string _activateAvailableOutOfOfficeProfile;
 
         [XmlElement(ElementName = "activateAvailableOutOfOfficeProfile", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ActivateAvailableOutOfOfficeProfileSpecified { get; set; }
 
-        private string _activateBusyProfile;
+        protected string _activateBusyProfile;
 
         [XmlElement(ElementName = "activateBusyProfile", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ActivateBusyProfileSpecified { get; set; }
 
-        private string _activateUnavailableProfile;
+        protected string _activateUnavailableProfile;
 
         [XmlElement(ElementName = "activateUnavailableProfile", IsNullable = false, Namespace = "")]
         [Optional]
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ActivateUnavailableProfileSpecified { get; set; }
 
-        private string _noProfile;
+        protected string _noProfile;
 
         [XmlElement(ElementName = "noProfile", IsNullable = false, Namespace = "")]
         [Optional]
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NoProfileSpecified { get; set; }
 
-        private string _returnToPreviousMenu;
+        protected string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:36425")]
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReturnToPreviousMenuSpecified { get; set; }
 
-        private string _repeatMenu;
+        protected string _repeatMenu;
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
         [Optional]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemFileGetContentResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _fileContent;
+        protected string _fileContent;
 
         [XmlElement(ElementName = "fileContent", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10234")]

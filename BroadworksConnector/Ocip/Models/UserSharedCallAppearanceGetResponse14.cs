@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserSharedCallAppearanceGetResponse14 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _alertAllAppearancesForClickToDialCalls;
+        protected bool _alertAllAppearancesForClickToDialCalls;
 
         [XmlElement(ElementName = "alertAllAppearancesForClickToDialCalls", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46189")]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlertAllAppearancesForClickToDialCallsSpecified { get; set; }
 
-        private int _maxAppearances;
+        protected int _maxAppearances;
 
         [XmlElement(ElementName = "maxAppearances", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46189")]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxAppearancesSpecified { get; set; }
 
-        private bool _enableMultipleCallArrangement;
+        protected bool _enableMultipleCallArrangement;
 
         [XmlElement(ElementName = "enableMultipleCallArrangement", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46189")]
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableMultipleCallArrangementSpecified { get; set; }
 
-        private bool _multipleCallArrangementIsActive;
+        protected bool _multipleCallArrangementIsActive;
 
         [XmlElement(ElementName = "multipleCallArrangementIsActive", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46189")]
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MultipleCallArrangementIsActiveSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _endpointTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _endpointTable;
 
         [XmlElement(ElementName = "endpointTable", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46189")]
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EndpointTableSpecified { get; set; }
 
-        private bool _allowBridgingBetweenLocations;
+        protected bool _allowBridgingBetweenLocations;
 
         [XmlElement(ElementName = "allowBridgingBetweenLocations", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46189")]
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowBridgingBetweenLocationsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone _bridgeWarningTone;
+        protected BroadWorksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone _bridgeWarningTone;
 
         [XmlElement(ElementName = "bridgeWarningTone", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46189")]

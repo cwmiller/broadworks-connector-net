@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAdviceOfChargeModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private int _delayBetweenNotificationSeconds;
+        protected int _delayBetweenNotificationSeconds;
 
         [XmlElement(ElementName = "delayBetweenNotificationSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DelayBetweenNotificationSecondsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling _incomingAocHandling;
+        protected BroadWorksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling _incomingAocHandling;
 
         [XmlElement(ElementName = "incomingAocHandling", IsNullable = false, Namespace = "")]
         [Optional]
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncomingAocHandlingSpecified { get; set; }
 
-        private string _costInformationSource;
+        protected string _costInformationSource;
 
         [XmlElement(ElementName = "costInformationSource", IsNullable = true, Namespace = "")]
         [Optional]

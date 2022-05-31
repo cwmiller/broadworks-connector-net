@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupAccessDeviceAvailablePortGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<int> _portNumber = new List<int>();
+        protected List<int> _portNumber = new List<int>();
 
         [XmlElement(ElementName = "portNumber", IsNullable = false, Namespace = "")]
         [Optional]

@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupGroupPagingGetOriginatorListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _originatorTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _originatorTable;
 
         [XmlElement(ElementName = "originatorTable", IsNullable = false, Namespace = "")]
         [Group(@"0d36df8c109e3ea7324f79031368c661:354")]

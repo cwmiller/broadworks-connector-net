@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserFeatureAccessCodeModifyEntry
     {
 
-        private string _featureAccessCodeName;
+        protected string _featureAccessCodeName;
 
         [XmlElement(ElementName = "featureAccessCodeName", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5257")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FeatureAccessCodeNameSpecified { get; set; }
 
-        private bool _enableFAC;
+        protected bool _enableFAC;
 
         [XmlElement(ElementName = "enableFAC", IsNullable = false, Namespace = "")]
         [Optional]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserOutgoingCallingPlanSustainedAuthorizationCodeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _code;
+        protected string _code;
 
         [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
         [Optional]

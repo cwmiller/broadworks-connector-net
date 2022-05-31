@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemTimeZoneGetListResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _serverTimeZone;
+        protected string _serverTimeZone;
 
         [XmlElement(ElementName = "serverTimeZone", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18598")]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServerTimeZoneSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _timeZoneTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _timeZoneTable;
 
         [XmlElement(ElementName = "timeZoneTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18598")]

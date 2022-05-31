@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseCallRecordingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _useCloudPBX;
+        protected bool _useCloudPBX;
 
         [XmlElement(ElementName = "useCloudPBX", IsNullable = false, Namespace = "")]
         [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:71")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseCloudPBXSpecified { get; set; }
 
-        private bool _useEnterpriseSetting;
+        protected bool _useEnterpriseSetting;
 
         [XmlElement(ElementName = "useEnterpriseSetting", IsNullable = false, Namespace = "")]
         [Optional]
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseEnterpriseSettingSpecified { get; set; }
 
-        private string _fQDN;
+        protected string _fQDN;
 
         [XmlElement(ElementName = "FQDN", IsNullable = false, Namespace = "")]
         [Optional]

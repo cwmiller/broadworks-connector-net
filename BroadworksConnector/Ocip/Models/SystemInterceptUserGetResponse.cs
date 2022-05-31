@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemInterceptUserGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _emergencyAndRepairIntercept;
+        protected bool _emergencyAndRepairIntercept;
 
         [XmlElement(ElementName = "emergencyAndRepairIntercept", IsNullable = false, Namespace = "")]
         [Group(@"88893c72abbbb9aaf5aecca970191d94:219")]

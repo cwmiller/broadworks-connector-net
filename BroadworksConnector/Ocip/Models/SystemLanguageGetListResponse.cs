@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemLanguageGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _defaultLanguage;
+        protected string _defaultLanguage;
 
         [XmlElement(ElementName = "defaultLanguage", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11456")]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultLanguageSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _languageTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _languageTable;
 
         [XmlElement(ElementName = "languageTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11456")]

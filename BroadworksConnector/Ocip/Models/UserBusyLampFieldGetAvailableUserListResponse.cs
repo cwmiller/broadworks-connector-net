@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserBusyLampFieldGetAvailableUserListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
         [Group(@"4faeca417998d23ce2ff6b0b43212aa6:151")]

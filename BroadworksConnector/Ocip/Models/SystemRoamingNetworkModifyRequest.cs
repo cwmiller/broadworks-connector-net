@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemRoamingNetworkModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _mscAddress;
+        protected string _mscAddress;
 
         [XmlElement(ElementName = "mscAddress", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15007")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MscAddressSpecified { get; set; }
 
-        private string _networkTranslationIndex;
+        protected string _networkTranslationIndex;
 
         [XmlElement(ElementName = "networkTranslationIndex", IsNullable = true, Namespace = "")]
         [Optional]

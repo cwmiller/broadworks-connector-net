@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupSeriesCompletionGetInstanceResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
         [Group(@"b974dc59b4b32d9f5952a0442ecaefa8:179")]

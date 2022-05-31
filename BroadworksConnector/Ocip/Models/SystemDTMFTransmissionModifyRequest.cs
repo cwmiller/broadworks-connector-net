@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDTMFTransmissionModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private BroadWorksConnector.Ocip.Models.DTMFTransmissionMethod _transmissionMethod;
+        protected BroadWorksConnector.Ocip.Models.DTMFTransmissionMethod _transmissionMethod;
 
         [XmlElement(ElementName = "transmissionMethod", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TransmissionMethodSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.DtmfTransmissionSignalingContentType _signalingContentType;
+        protected BroadWorksConnector.Ocip.Models.DtmfTransmissionSignalingContentType _signalingContentType;
 
         [XmlElement(ElementName = "signalingContentType", IsNullable = false, Namespace = "")]
         [Optional]

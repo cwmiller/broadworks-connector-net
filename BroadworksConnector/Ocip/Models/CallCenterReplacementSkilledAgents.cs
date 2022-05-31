@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallCenterReplacementSkilledAgents
     {
 
-        private int _skillLevel;
+        protected int _skillLevel;
 
         [XmlElement(ElementName = "skillLevel", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:7397")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SkillLevelSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _agents;
+        protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _agents;
 
         [XmlElement(ElementName = "agents", IsNullable = true, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:7397")]

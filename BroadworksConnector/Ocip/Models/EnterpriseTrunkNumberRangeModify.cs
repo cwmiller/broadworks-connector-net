@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseTrunkNumberRangeModify
     {
 
-        private string _dnRangeStart;
+        protected string _dnRangeStart;
 
         [XmlElement(ElementName = "dnRangeStart", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2622")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DnRangeStartSpecified { get; set; }
 
-        private int? _extensionLength;
+        protected int? _extensionLength;
 
         [XmlElement(ElementName = "extensionLength", IsNullable = true, Namespace = "")]
         [Optional]

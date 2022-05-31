@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserRouteListGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _treatOriginationsAndPBXRedirectionsAsScreened;
+        protected bool _treatOriginationsAndPBXRedirectionsAsScreened;
 
         [XmlElement(ElementName = "treatOriginationsAndPBXRedirectionsAsScreened", IsNullable = false, Namespace = "")]
         [Group(@"3f28429898a57a7f7846d3877b22df9f:838")]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TreatOriginationsAndPBXRedirectionsAsScreenedSpecified { get; set; }
 
-        private bool _useRouteListIdentityForNonEmergencyCalls;
+        protected bool _useRouteListIdentityForNonEmergencyCalls;
 
         [XmlElement(ElementName = "useRouteListIdentityForNonEmergencyCalls", IsNullable = false, Namespace = "")]
         [Group(@"3f28429898a57a7f7846d3877b22df9f:838")]
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseRouteListIdentityForNonEmergencyCallsSpecified { get; set; }
 
-        private bool _useRouteListIdentityForEmergencyCalls;
+        protected bool _useRouteListIdentityForEmergencyCalls;
 
         [XmlElement(ElementName = "useRouteListIdentityForEmergencyCalls", IsNullable = false, Namespace = "")]
         [Group(@"3f28429898a57a7f7846d3877b22df9f:838")]
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseRouteListIdentityForEmergencyCallsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _assignedNumberRangeTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _assignedNumberRangeTable;
 
         [XmlElement(ElementName = "assignedNumberRangeTable", IsNullable = false, Namespace = "")]
         [Group(@"3f28429898a57a7f7846d3877b22df9f:838")]
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AssignedNumberRangeTableSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _assignedNumberPrefixTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _assignedNumberPrefixTable;
 
         [XmlElement(ElementName = "assignedNumberPrefixTable", IsNullable = false, Namespace = "")]
         [Group(@"3f28429898a57a7f7846d3877b22df9f:838")]

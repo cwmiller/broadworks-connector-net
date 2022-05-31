@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class AutomaticCollectCallPrefixDigitsEntry
     {
 
-        private string _countryCode;
+        protected string _countryCode;
 
         [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
         [Group(@"af1b47d7cab3335a81456e64e42371b0:215")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CountryCodeSpecified { get; set; }
 
-        private string _prefixDigits;
+        protected string _prefixDigits;
 
         [XmlElement(ElementName = "prefixDigits", IsNullable = false, Namespace = "")]
         [Group(@"af1b47d7cab3335a81456e64e42371b0:215")]

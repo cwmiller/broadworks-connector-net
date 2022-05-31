@@ -26,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserBroadWorksReceptionistEnterpriseNoteModifyListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _receptionistUserId;
+        protected string _receptionistUserId;
 
         [XmlElement(ElementName = "receptionistUserId", IsNullable = false, Namespace = "")]
         [Group(@"fb12998f4f9e45cedde01f08569f4c7c:275")]
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReceptionistUserIdSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.ReceptionistContactUserAndNote> _receptionistUserAndNote = new List<BroadWorksConnector.Ocip.Models.ReceptionistContactUserAndNote>();
+        protected List<BroadWorksConnector.Ocip.Models.ReceptionistContactUserAndNote> _receptionistUserAndNote = new List<BroadWorksConnector.Ocip.Models.ReceptionistContactUserAndNote>();
 
         [XmlElement(ElementName = "receptionistUserAndNote", IsNullable = false, Namespace = "")]
         [Group(@"fb12998f4f9e45cedde01f08569f4c7c:275")]

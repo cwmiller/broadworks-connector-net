@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserMaliciousCallTraceGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserMaliciousCallTraceGetResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"0da7c658f240cdc10c3f9cb328db57d8:153")]

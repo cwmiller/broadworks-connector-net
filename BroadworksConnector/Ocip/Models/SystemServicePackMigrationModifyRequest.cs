@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemServicePackMigrationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private int _maxSimultaneousMigrationTasks;
+        protected int _maxSimultaneousMigrationTasks;
 
         [XmlElement(ElementName = "maxSimultaneousMigrationTasks", IsNullable = false, Namespace = "")]
         [Optional]

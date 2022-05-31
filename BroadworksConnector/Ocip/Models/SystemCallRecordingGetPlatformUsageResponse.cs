@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallRecordingGetPlatformUsageResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _groupTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _groupTable;
 
         [XmlElement(ElementName = "groupTable", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24660")]

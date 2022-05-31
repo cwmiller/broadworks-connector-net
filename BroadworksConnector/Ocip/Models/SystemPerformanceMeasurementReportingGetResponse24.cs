@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemPerformanceMeasurementReportingGetResponse24 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14374")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private int _reportingInterval;
+        protected int _reportingInterval;
 
         [XmlElement(ElementName = "reportingInterval", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14374")]
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReportingIntervalSpecified { get; set; }
 
-        private bool _resetMeasurementsAfterEachReport;
+        protected bool _resetMeasurementsAfterEachReport;
 
         [XmlElement(ElementName = "resetMeasurementsAfterEachReport", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14374")]
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResetMeasurementsAfterEachReportSpecified { get; set; }
 
-        private bool _reportEnterprise;
+        protected bool _reportEnterprise;
 
         [XmlElement(ElementName = "reportEnterprise", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14374")]
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReportEnterpriseSpecified { get; set; }
 
-        private bool _reportServiceProvider;
+        protected bool _reportServiceProvider;
 
         [XmlElement(ElementName = "reportServiceProvider", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14374")]
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReportServiceProviderSpecified { get; set; }
 
-        private bool _reportDevice;
+        protected bool _reportDevice;
 
         [XmlElement(ElementName = "reportDevice", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14374")]
@@ -121,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReportDeviceSpecified { get; set; }
 
-        private bool _reportTable;
+        protected bool _reportTable;
 
         [XmlElement(ElementName = "reportTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14374")]
@@ -138,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReportTableSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.PerformanceMeasurementReportingEncoding _reportEncoding;
+        protected BroadWorksConnector.Ocip.Models.PerformanceMeasurementReportingEncoding _reportEncoding;
 
         [XmlElement(ElementName = "reportEncoding", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14374")]

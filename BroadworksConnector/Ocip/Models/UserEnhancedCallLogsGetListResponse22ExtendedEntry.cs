@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserEnhancedCallLogsGetListResponse22ExtendedEntry
     {
 
-        private List<BroadWorksConnector.Ocip.Models.ExtendedMixedCallLogsEntry22> _extendedCallLog = new List<BroadWorksConnector.Ocip.Models.ExtendedMixedCallLogsEntry22>();
+        protected List<BroadWorksConnector.Ocip.Models.ExtendedMixedCallLogsEntry22> _extendedCallLog = new List<BroadWorksConnector.Ocip.Models.ExtendedMixedCallLogsEntry22>();
 
         [XmlElement(ElementName = "extendedCallLog", IsNullable = false, Namespace = "")]
         [Optional]

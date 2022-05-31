@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSubscriberGetCallProcessingParametersResponse17sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isExtendedCallingLineIdActive;
+        protected bool _isExtendedCallingLineIdActive;
 
         [XmlElement(ElementName = "isExtendedCallingLineIdActive", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35231")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsExtendedCallingLineIdActiveSpecified { get; set; }
 
-        private bool _isRingTimeOutActive;
+        protected bool _isRingTimeOutActive;
 
         [XmlElement(ElementName = "isRingTimeOutActive", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35231")]
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsRingTimeOutActiveSpecified { get; set; }
 
-        private int _ringTimeoutSeconds;
+        protected int _ringTimeoutSeconds;
 
         [XmlElement(ElementName = "ringTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35231")]
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RingTimeoutSecondsSpecified { get; set; }
 
-        private bool _allowEmergencyRemoteOfficeOriginations;
+        protected bool _allowEmergencyRemoteOfficeOriginations;
 
         [XmlElement(ElementName = "allowEmergencyRemoteOfficeOriginations", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35231")]
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowEmergencyRemoteOfficeOriginationsSpecified { get; set; }
 
-        private int _maxNoAnswerNumberOfRings;
+        protected int _maxNoAnswerNumberOfRings;
 
         [XmlElement(ElementName = "maxNoAnswerNumberOfRings", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35231")]
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxNoAnswerNumberOfRingsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.IncomingCallToUserAliasMode _incomingCallToUserAliasMode;
+        protected BroadWorksConnector.Ocip.Models.IncomingCallToUserAliasMode _incomingCallToUserAliasMode;
 
         [XmlElement(ElementName = "incomingCallToUserAliasMode", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35231")]
@@ -123,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncomingCallToUserAliasModeSpecified { get; set; }
 
-        private bool _bypassTerminationLoopDetection;
+        protected bool _bypassTerminationLoopDetection;
 
         [XmlElement(ElementName = "bypassTerminationLoopDetection", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35231")]
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BypassTerminationLoopDetectionSpecified { get; set; }
 
-        private bool _honorCLIDBlockingForEmergencyCalls;
+        protected bool _honorCLIDBlockingForEmergencyCalls;
 
         [XmlElement(ElementName = "honorCLIDBlockingForEmergencyCalls", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35231")]

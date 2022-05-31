@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemInterceptUserAddDnListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private List<BroadWorksConnector.Ocip.Models.InterceptDNListEntry> _interceptDNList = new List<BroadWorksConnector.Ocip.Models.InterceptDNListEntry>();
+        protected List<BroadWorksConnector.Ocip.Models.InterceptDNListEntry> _interceptDNList = new List<BroadWorksConnector.Ocip.Models.InterceptDNListEntry>();
 
         [XmlElement(ElementName = "interceptDNList", IsNullable = false, Namespace = "")]
         [Group(@"88893c72abbbb9aaf5aecca970191d94:143")]

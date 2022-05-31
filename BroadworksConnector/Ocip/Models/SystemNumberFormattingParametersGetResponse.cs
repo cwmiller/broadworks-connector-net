@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemNumberFormattingParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _applyFormattingToE164Numbers;
+        protected bool _applyFormattingToE164Numbers;
 
         [XmlElement(ElementName = "applyFormattingToE164Numbers", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13009")]

@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserSimultaneousRingFamilyGetRequest17 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserSimultaneousRingFamilyGetResponse17>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"239d22a382d3190a183f2ff4efdc404f:120")]

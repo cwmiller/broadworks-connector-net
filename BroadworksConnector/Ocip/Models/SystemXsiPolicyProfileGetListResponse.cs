@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemXsiPolicyProfileGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _xsiPolicyProfileTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _xsiPolicyProfileTable;
 
         [XmlElement(ElementName = "xsiPolicyProfileTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19524")]

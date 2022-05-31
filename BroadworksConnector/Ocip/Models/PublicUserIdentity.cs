@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class PublicUserIdentity
     {
 
-        private string _sipURI;
+        protected string _sipURI;
 
         [XmlElement(ElementName = "sipURI", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3526")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SipURISpecified { get; set; }
 
-        private string _telURI;
+        protected string _telURI;
 
         [XmlElement(ElementName = "telURI", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3526")]

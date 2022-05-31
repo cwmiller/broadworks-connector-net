@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemConfigurableTreatmentGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _description;
+        protected string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DescriptionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ChargeIndicator _chargeIndicator;
+        protected BroadWorksConnector.Ocip.Models.ChargeIndicator _chargeIndicator;
 
         [XmlElement(ElementName = "chargeIndicator", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25314")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ChargeIndicatorSpecified { get; set; }
 
-        private int _accessSIPStatusCode;
+        protected int _accessSIPStatusCode;
 
         [XmlElement(ElementName = "accessSIPStatusCode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessSIPStatusCodeSpecified { get; set; }
 
-        private string _accessSIPStatusMessage;
+        protected string _accessSIPStatusMessage;
 
         [XmlElement(ElementName = "accessSIPStatusMessage", IsNullable = false, Namespace = "")]
         [Optional]
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessSIPStatusMessageSpecified { get; set; }
 
-        private int _networkSIPStatusCode;
+        protected int _networkSIPStatusCode;
 
         [XmlElement(ElementName = "networkSIPStatusCode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetworkSIPStatusCodeSpecified { get; set; }
 
-        private string _networkSIPStatusMessage;
+        protected string _networkSIPStatusMessage;
 
         [XmlElement(ElementName = "networkSIPStatusMessage", IsNullable = false, Namespace = "")]
         [Optional]
@@ -137,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetworkSIPStatusMessageSpecified { get; set; }
 
-        private int _q850CauseValue;
+        protected int _q850CauseValue;
 
         [XmlElement(ElementName = "q850CauseValue", IsNullable = false, Namespace = "")]
         [Optional]
@@ -157,7 +157,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Q850CauseValueSpecified { get; set; }
 
-        private string _q850Text;
+        protected string _q850Text;
 
         [XmlElement(ElementName = "q850Text", IsNullable = false, Namespace = "")]
         [Optional]
@@ -177,7 +177,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Q850TextSpecified { get; set; }
 
-        private string _accessTreatmentAudioFile;
+        protected string _accessTreatmentAudioFile;
 
         [XmlElement(ElementName = "accessTreatmentAudioFile", IsNullable = false, Namespace = "")]
         [Optional]
@@ -197,7 +197,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessTreatmentAudioFileSpecified { get; set; }
 
-        private string _accessTreatmentVideoFile;
+        protected string _accessTreatmentVideoFile;
 
         [XmlElement(ElementName = "accessTreatmentVideoFile", IsNullable = false, Namespace = "")]
         [Optional]
@@ -217,7 +217,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessTreatmentVideoFileSpecified { get; set; }
 
-        private string _networkTreatmentAudioFile;
+        protected string _networkTreatmentAudioFile;
 
         [XmlElement(ElementName = "networkTreatmentAudioFile", IsNullable = false, Namespace = "")]
         [Optional]
@@ -237,7 +237,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetworkTreatmentAudioFileSpecified { get; set; }
 
-        private string _networkTreatmentVideoFile;
+        protected string _networkTreatmentVideoFile;
 
         [XmlElement(ElementName = "networkTreatmentVideoFile", IsNullable = false, Namespace = "")]
         [Optional]
@@ -257,7 +257,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetworkTreatmentVideoFileSpecified { get; set; }
 
-        private string _cdrTerminationCause;
+        protected string _cdrTerminationCause;
 
         [XmlElement(ElementName = "cdrTerminationCause", IsNullable = false, Namespace = "")]
         [Optional]
@@ -277,7 +277,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CdrTerminationCauseSpecified { get; set; }
 
-        private bool _routeAdvance;
+        protected bool _routeAdvance;
 
         [XmlElement(ElementName = "routeAdvance", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25314")]
@@ -294,7 +294,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RouteAdvanceSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.InternalReleaseCause _internalReleaseCause;
+        protected BroadWorksConnector.Ocip.Models.InternalReleaseCause _internalReleaseCause;
 
         [XmlElement(ElementName = "internalReleaseCause", IsNullable = false, Namespace = "")]
         [Optional]
@@ -312,7 +312,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool InternalReleaseCauseSpecified { get; set; }
 
-        private bool _accessSendReasonHeader;
+        protected bool _accessSendReasonHeader;
 
         [XmlElement(ElementName = "accessSendReasonHeader", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25314")]
@@ -329,7 +329,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessSendReasonHeaderSpecified { get; set; }
 
-        private bool _networkSendReasonHeader;
+        protected bool _networkSendReasonHeader;
 
         [XmlElement(ElementName = "networkSendReasonHeader", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25314")]

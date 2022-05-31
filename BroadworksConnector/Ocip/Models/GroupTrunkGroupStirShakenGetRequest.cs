@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupTrunkGroupStirShakenGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupTrunkGroupStirShakenGetResponse>
     {
 
-        private BroadWorksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
+        protected BroadWorksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
 
         [XmlElement(ElementName = "trunkGroupKey", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8548")]

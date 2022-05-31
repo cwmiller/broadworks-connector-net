@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallCenterModifyAgentListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceUserId;
+        protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:4995")]
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _agentUserIdList;
+        protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _agentUserIdList;
 
         [XmlElement(ElementName = "agentUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AgentUserIdListSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.CallCenterReplacementSkilledAgents> _skilledAgentUserIdList = new List<BroadWorksConnector.Ocip.Models.CallCenterReplacementSkilledAgents>();
+        protected List<BroadWorksConnector.Ocip.Models.CallCenterReplacementSkilledAgents> _skilledAgentUserIdList = new List<BroadWorksConnector.Ocip.Models.CallCenterReplacementSkilledAgents>();
 
         [XmlElement(ElementName = "skilledAgentUserIdList", IsNullable = false, Namespace = "")]
         [Optional]

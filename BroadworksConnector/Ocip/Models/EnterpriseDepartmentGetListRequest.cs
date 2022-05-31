@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseDepartmentGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.EnterpriseDepartmentGetListResponse>
     {
 
-        private string _enterpriseId;
+        protected string _enterpriseId;
 
         [XmlElement(ElementName = "enterpriseId", IsNullable = false, Namespace = "")]
         [Group(@"5395c7df0157d44aa22f3351d1a5f3da:707")]
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnterpriseIdSpecified { get; set; }
 
-        private bool _includeGroupDepartments;
+        protected bool _includeGroupDepartments;
 
         [XmlElement(ElementName = "includeGroupDepartments", IsNullable = false, Namespace = "")]
         [Group(@"5395c7df0157d44aa22f3351d1a5f3da:707")]

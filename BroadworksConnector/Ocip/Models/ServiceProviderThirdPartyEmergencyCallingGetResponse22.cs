@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderThirdPartyEmergencyCallingGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _allowActivation;
+        protected bool _allowActivation;
 
         [XmlElement(ElementName = "allowActivation", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7007")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowActivationSpecified { get; set; }
 
-        private string _customerId;
+        protected string _customerId;
 
         [XmlElement(ElementName = "customerId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CustomerIdSpecified { get; set; }
 
-        private bool _hasGroupEnabled;
+        protected bool _hasGroupEnabled;
 
         [XmlElement(ElementName = "hasGroupEnabled", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7007")]
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HasGroupEnabledSpecified { get; set; }
 
-        private string _secretKey;
+        protected string _secretKey;
 
         [XmlElement(ElementName = "secretKey", IsNullable = false, Namespace = "")]
         [Optional]

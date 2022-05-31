@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemOutgoingCallingPlanCallTypeGetMappingListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _callTypeMapping;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _callTypeMapping;
 
         [XmlElement(ElementName = "callTypeMapping", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:956")]

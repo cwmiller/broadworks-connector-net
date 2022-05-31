@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupExtensionLengthGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private int _extensionLength;
+        protected int _extensionLength;
 
         [XmlElement(ElementName = "extensionLength", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9631")]

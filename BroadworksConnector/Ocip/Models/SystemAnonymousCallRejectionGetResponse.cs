@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAnonymousCallRejectionGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _paiRequired;
+        protected bool _paiRequired;
 
         [XmlElement(ElementName = "paiRequired", IsNullable = false, Namespace = "")]
         [Group(@"6b25f8a296bf72b8b383a287bee9127d:60")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PaiRequiredSpecified { get; set; }
 
-        private bool _screenOnlyLocalCalls;
+        protected bool _screenOnlyLocalCalls;
 
         [XmlElement(ElementName = "screenOnlyLocalCalls", IsNullable = false, Namespace = "")]
         [Group(@"6b25f8a296bf72b8b383a287bee9127d:60")]

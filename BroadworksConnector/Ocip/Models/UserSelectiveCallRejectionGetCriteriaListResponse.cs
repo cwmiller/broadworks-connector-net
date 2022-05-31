@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserSelectiveCallRejectionGetCriteriaListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
         [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
         [Group(@"41cdd93743bd17548f1ded5691680d5a:122")]

@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class PrimaryInfoGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isPrimary;
+        protected bool _isPrimary;
 
         [XmlElement(ElementName = "isPrimary", IsNullable = false, Namespace = "")]
         [Group(@"6b27fcc79475236456fc113a42b75543:473")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsPrimarySpecified { get; set; }
 
-        private string _hostnameForPrimary;
+        protected string _hostnameForPrimary;
 
         [XmlElement(ElementName = "hostnameForPrimary", IsNullable = false, Namespace = "")]
         [Optional]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HostnameForPrimarySpecified { get; set; }
 
-        private List<string> _addressForPrimary = new List<string>();
+        protected List<string> _addressForPrimary = new List<string>();
 
         [XmlElement(ElementName = "addressForPrimary", IsNullable = false, Namespace = "")]
         [Optional]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AddressForPrimarySpecified { get; set; }
 
-        private List<string> _privateAddressForPrimary = new List<string>();
+        protected List<string> _privateAddressForPrimary = new List<string>();
 
         [XmlElement(ElementName = "privateAddressForPrimary", IsNullable = false, Namespace = "")]
         [Optional]

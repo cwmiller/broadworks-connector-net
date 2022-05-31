@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCollaborateBridgeGetInstanceListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _collaborateBridgeTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _collaborateBridgeTable;
 
         [XmlElement(ElementName = "collaborateBridgeTable", IsNullable = false, Namespace = "")]
         [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:322")]

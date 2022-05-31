@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemOutgoingCallingPlanGetResponse17sp3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _directTransferScreening;
+        protected bool _directTransferScreening;
 
         [XmlElement(ElementName = "directTransferScreening", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:985")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DirectTransferScreeningSpecified { get; set; }
 
-        private bool _enableEnhancedTollCallTyping;
+        protected bool _enableEnhancedTollCallTyping;
 
         [XmlElement(ElementName = "enableEnhancedTollCallTyping", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:985")]

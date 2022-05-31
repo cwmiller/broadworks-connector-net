@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemEnhancedCallLogsGetResponse20sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isSendEnabled;
+        protected bool _isSendEnabled;
 
         [XmlElement(ElementName = "isSendEnabled", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26584")]
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsSendEnabledSpecified { get; set; }
 
-        private string _server1NetAddress;
+        protected string _server1NetAddress;
 
         [XmlElement(ElementName = "server1NetAddress", IsNullable = false, Namespace = "")]
         [Optional]
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Server1NetAddressSpecified { get; set; }
 
-        private int _server1SendPort;
+        protected int _server1SendPort;
 
         [XmlElement(ElementName = "server1SendPort", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26584")]
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Server1SendPortSpecified { get; set; }
 
-        private int _server1RetrievePort;
+        protected int _server1RetrievePort;
 
         [XmlElement(ElementName = "server1RetrievePort", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26584")]
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Server1RetrievePortSpecified { get; set; }
 
-        private string _server2NetAddress;
+        protected string _server2NetAddress;
 
         [XmlElement(ElementName = "server2NetAddress", IsNullable = false, Namespace = "")]
         [Optional]
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Server2NetAddressSpecified { get; set; }
 
-        private int _server2SendPort;
+        protected int _server2SendPort;
 
         [XmlElement(ElementName = "server2SendPort", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26584")]
@@ -146,7 +146,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Server2SendPortSpecified { get; set; }
 
-        private int _server2RetrievePort;
+        protected int _server2RetrievePort;
 
         [XmlElement(ElementName = "server2RetrievePort", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26584")]
@@ -165,7 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Server2RetrievePortSpecified { get; set; }
 
-        private string _sharedSecret;
+        protected string _sharedSecret;
 
         [XmlElement(ElementName = "sharedSecret", IsNullable = false, Namespace = "")]
         [Optional]
@@ -185,7 +185,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SharedSecretSpecified { get; set; }
 
-        private int _retransmissionDelayMilliSeconds;
+        protected int _retransmissionDelayMilliSeconds;
 
         [XmlElement(ElementName = "retransmissionDelayMilliSeconds", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26584")]
@@ -204,7 +204,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RetransmissionDelayMilliSecondsSpecified { get; set; }
 
-        private int _maxTransmissions;
+        protected int _maxTransmissions;
 
         [XmlElement(ElementName = "maxTransmissions", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26584")]
@@ -223,7 +223,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxTransmissionsSpecified { get; set; }
 
-        private int _soapTimeoutSeconds;
+        protected int _soapTimeoutSeconds;
 
         [XmlElement(ElementName = "soapTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26584")]
@@ -242,7 +242,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SoapTimeoutSecondsSpecified { get; set; }
 
-        private bool _useDBS;
+        protected bool _useDBS;
 
         [XmlElement(ElementName = "useDBS", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26584")]
@@ -259,7 +259,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseDBSSpecified { get; set; }
 
-        private int _maxNonPagedResponseSize;
+        protected int _maxNonPagedResponseSize;
 
         [XmlElement(ElementName = "maxNonPagedResponseSize", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26584")]
@@ -278,7 +278,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxNonPagedResponseSizeSpecified { get; set; }
 
-        private string _eclQueryApplicationURL;
+        protected string _eclQueryApplicationURL;
 
         [XmlElement(ElementName = "eclQueryApplicationURL", IsNullable = false, Namespace = "")]
         [Optional]
@@ -298,7 +298,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EclQueryApplicationURLSpecified { get; set; }
 
-        private string _eclQueryDataRepositoryURL;
+        protected string _eclQueryDataRepositoryURL;
 
         [XmlElement(ElementName = "eclQueryDataRepositoryURL", IsNullable = false, Namespace = "")]
         [Optional]

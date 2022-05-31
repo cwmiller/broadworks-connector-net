@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CommPilotExpressUnavailableModify
     {
 
-        private BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionWithExceptionModify _incomingCalls;
+        protected BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionWithExceptionModify _incomingCalls;
 
         [XmlElement(ElementName = "incomingCalls", IsNullable = false, Namespace = "")]
         [Optional]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncomingCallsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CommPilotExpressVoiceMailGreeting _voiceMailGreeting;
+        protected BroadWorksConnector.Ocip.Models.CommPilotExpressVoiceMailGreeting _voiceMailGreeting;
 
         [XmlElement(ElementName = "voiceMailGreeting", IsNullable = false, Namespace = "")]
         [Optional]

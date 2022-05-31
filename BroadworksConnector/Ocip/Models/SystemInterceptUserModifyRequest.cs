@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemInterceptUserModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _emergencyAndRepairIntercept;
+        protected bool _emergencyAndRepairIntercept;
 
         [XmlElement(ElementName = "emergencyAndRepairIntercept", IsNullable = false, Namespace = "")]
         [Optional]

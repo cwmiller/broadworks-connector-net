@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemNumberActivationGetResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.NumberActivationMode _numberActivationMode;
+        protected BroadWorksConnector.Ocip.Models.NumberActivationMode _numberActivationMode;
 
         [XmlElement(ElementName = "numberActivationMode", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12957")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberActivationModeSpecified { get; set; }
 
-        private bool _enableEnterpriseTrunkNumberRangeActivation;
+        protected bool _enableEnterpriseTrunkNumberRangeActivation;
 
         [XmlElement(ElementName = "enableEnterpriseTrunkNumberRangeActivation", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12957")]

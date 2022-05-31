@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class PasswordForSystemAdministrator
     {
 
-        private string _administratorId;
+        protected string _administratorId;
 
         [XmlElement(ElementName = "administratorId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AdministratorIdSpecified { get; set; }
 
-        private bool _generatePassword;
+        protected bool _generatePassword;
 
         [XmlElement(ElementName = "generatePassword", IsNullable = false, Namespace = "")]
         [Group(@"6b27fcc79475236456fc113a42b75543:763")]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserAdviceOfChargeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"a69fde15f3aa7494d83b57461a7a70bb:302")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AdviceOfChargeType _aocType;
+        protected BroadWorksConnector.Ocip.Models.AdviceOfChargeType _aocType;
 
         [XmlElement(ElementName = "aocType", IsNullable = false, Namespace = "")]
         [Group(@"a69fde15f3aa7494d83b57461a7a70bb:302")]

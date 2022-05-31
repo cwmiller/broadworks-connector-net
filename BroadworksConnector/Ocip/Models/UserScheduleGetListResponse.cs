@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserScheduleGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _scheduleName = new List<string>();
+        protected List<string> _scheduleName = new List<string>();
 
         [XmlElement(ElementName = "scheduleName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ScheduleNameSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.ScheduleType> _scheduleType = new List<BroadWorksConnector.Ocip.Models.ScheduleType>();
+        protected List<BroadWorksConnector.Ocip.Models.ScheduleType> _scheduleType = new List<BroadWorksConnector.Ocip.Models.ScheduleType>();
 
         [XmlElement(ElementName = "scheduleType", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ScheduleTypeSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.ScheduleLevel> _scheduleLevel = new List<BroadWorksConnector.Ocip.Models.ScheduleLevel>();
+        protected List<BroadWorksConnector.Ocip.Models.ScheduleLevel> _scheduleLevel = new List<BroadWorksConnector.Ocip.Models.ScheduleLevel>();
 
         [XmlElement(ElementName = "scheduleLevel", IsNullable = false, Namespace = "")]
         [Optional]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallCenterScheduledReportServiceLevelInclusionsModify
     {
 
-        private bool _includeOverflowTimeTransferedInServiceLevel;
+        protected bool _includeOverflowTimeTransferedInServiceLevel;
 
         [XmlElement(ElementName = "includeOverflowTimeTransferedInServiceLevel", IsNullable = false, Namespace = "")]
         [Optional]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeOverflowTimeTransferedInServiceLevelSpecified { get; set; }
 
-        private bool _includeOtherTransfersInServiceLevel;
+        protected bool _includeOtherTransfersInServiceLevel;
 
         [XmlElement(ElementName = "includeOtherTransfersInServiceLevel", IsNullable = false, Namespace = "")]
         [Optional]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeOtherTransfersInServiceLevelSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallCenterReportAbadonedCallsInServiceLevel _abandonedCallsInServiceLevel;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportAbadonedCallsInServiceLevel _abandonedCallsInServiceLevel;
 
         [XmlElement(ElementName = "abandonedCallsInServiceLevel", IsNullable = false, Namespace = "")]
         [Optional]
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AbandonedCallsInServiceLevelSpecified { get; set; }
 
-        private int? _abandonedCallIntervalSeconds;
+        protected int? _abandonedCallIntervalSeconds;
 
         [XmlElement(ElementName = "abandonedCallIntervalSeconds", IsNullable = true, Namespace = "")]
         [Optional]

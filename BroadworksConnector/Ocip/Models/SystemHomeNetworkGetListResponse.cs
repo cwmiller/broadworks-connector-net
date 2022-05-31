@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemHomeNetworkGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _mscAddress = new List<string>();
+        protected List<string> _mscAddress = new List<string>();
 
         [XmlElement(ElementName = "mscAddress", IsNullable = false, Namespace = "")]
         [Optional]

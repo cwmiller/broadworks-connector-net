@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemNumberPortabilityQueryGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _continueCallAsDialedOnTimeoutOrError;
+        protected bool _continueCallAsDialedOnTimeoutOrError;
 
         [XmlElement(ElementName = "continueCallAsDialedOnTimeoutOrError", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13170")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ContinueCallAsDialedOnTimeoutOrErrorSpecified { get; set; }
 
-        private int _numberPortabilityNameLookupTimeoutMilliseconds;
+        protected int _numberPortabilityNameLookupTimeoutMilliseconds;
 
         [XmlElement(ElementName = "numberPortabilityNameLookupTimeoutMilliseconds", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13170")]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse19sp1ForwardOrComposeMessageMenuKeys
     {
 
-        private string _sendToPerson;
+        protected string _sendToPerson;
 
         [XmlElement(ElementName = "sendToPerson", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SendToPersonSpecified { get; set; }
 
-        private string _sendToAllGroupMembers;
+        protected string _sendToAllGroupMembers;
 
         [XmlElement(ElementName = "sendToAllGroupMembers", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SendToAllGroupMembersSpecified { get; set; }
 
-        private string _sendToDistributionList;
+        protected string _sendToDistributionList;
 
         [XmlElement(ElementName = "sendToDistributionList", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SendToDistributionListSpecified { get; set; }
 
-        private string _changeCurrentIntroductionOrMessage;
+        protected string _changeCurrentIntroductionOrMessage;
 
         [XmlElement(ElementName = "changeCurrentIntroductionOrMessage", IsNullable = false, Namespace = "")]
         [Optional]
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ChangeCurrentIntroductionOrMessageSpecified { get; set; }
 
-        private string _listenToCurrentIntroductionOrMessage;
+        protected string _listenToCurrentIntroductionOrMessage;
 
         [XmlElement(ElementName = "listenToCurrentIntroductionOrMessage", IsNullable = false, Namespace = "")]
         [Optional]
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ListenToCurrentIntroductionOrMessageSpecified { get; set; }
 
-        private string _setOrClearUrgentIndicator;
+        protected string _setOrClearUrgentIndicator;
 
         [XmlElement(ElementName = "setOrClearUrgentIndicator", IsNullable = false, Namespace = "")]
         [Optional]
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SetOrClearUrgentIndicatorSpecified { get; set; }
 
-        private string _setOrClearConfidentialIndicator;
+        protected string _setOrClearConfidentialIndicator;
 
         [XmlElement(ElementName = "setOrClearConfidentialIndicator", IsNullable = false, Namespace = "")]
         [Optional]
@@ -156,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SetOrClearConfidentialIndicatorSpecified { get; set; }
 
-        private string _returnToPreviousMenu;
+        protected string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:38084")]
@@ -175,7 +175,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReturnToPreviousMenuSpecified { get; set; }
 
-        private string _repeatMenu;
+        protected string _repeatMenu;
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
         [Optional]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseVoiceVPNGetDefaultResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection> _policySelection = new List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection>();
+        protected List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection> _policySelection = new List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection>();
 
         [XmlElement(ElementName = "policySelection", IsNullable = false, Namespace = "")]
         [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1404")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PolicySelectionSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulationOperation> _digitManipulationOperation = new List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulationOperation>();
+        protected List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulationOperation> _digitManipulationOperation = new List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulationOperation>();
 
         [XmlElement(ElementName = "digitManipulationOperation", IsNullable = false, Namespace = "")]
         [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1404")]
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DigitManipulationOperationSpecified { get; set; }
 
-        private List<string> _routeGroupId = new List<string>();
+        protected List<string> _routeGroupId = new List<string>();
 
         [XmlElement(ElementName = "routeGroupId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RouteGroupIdSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNTreatmentEntry> _treatment = new List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNTreatmentEntry>();
+        protected List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNTreatmentEntry> _treatment = new List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNTreatmentEntry>();
 
         [XmlElement(ElementName = "treatment", IsNullable = false, Namespace = "")]
         [Optional]

@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnhancedCallLogsRedirectedCallSelection23
     {
 
-        private bool _redirectedCall;
+        protected bool _redirectedCall;
 
         [XmlElement(ElementName = "redirectedCall", IsNullable = false, Namespace = "")]
         [Group(@"f6b3702edb5f67fa12c2c426d98657db:404")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RedirectedCallSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.ServiceInvocationDisposition23> _redirectType = new List<BroadWorksConnector.Ocip.Models.ServiceInvocationDisposition23>();
+        protected List<BroadWorksConnector.Ocip.Models.ServiceInvocationDisposition23> _redirectType = new List<BroadWorksConnector.Ocip.Models.ServiceInvocationDisposition23>();
 
         [XmlElement(ElementName = "redirectType", IsNullable = false, Namespace = "")]
         [Optional]

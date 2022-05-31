@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemBroadWorksAnywhereGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _enableTransferNotification;
+        protected bool _enableTransferNotification;
 
         [XmlElement(ElementName = "enableTransferNotification", IsNullable = false, Namespace = "")]
         [Group(@"72f634ecc58842ce9d362ca629a47ea9:232")]

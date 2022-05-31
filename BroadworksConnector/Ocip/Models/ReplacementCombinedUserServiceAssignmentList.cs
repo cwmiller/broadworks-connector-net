@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ReplacementCombinedUserServiceAssignmentList
     {
 
-        private List<BroadWorksConnector.Ocip.Models.CombinedUserServiceAssignment> _serviceName = new List<BroadWorksConnector.Ocip.Models.CombinedUserServiceAssignment>();
+        protected List<BroadWorksConnector.Ocip.Models.CombinedUserServiceAssignment> _serviceName = new List<BroadWorksConnector.Ocip.Models.CombinedUserServiceAssignment>();
 
         [XmlElement(ElementName = "serviceName", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3797")]

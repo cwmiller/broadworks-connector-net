@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDomainGetListResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _systemDefaultDomain;
+        protected string _systemDefaultDomain;
 
         [XmlElement(ElementName = "systemDefaultDomain", IsNullable = false, Namespace = "")]
         [Optional]
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SystemDefaultDomainSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _domainTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _domainTable;
 
         [XmlElement(ElementName = "domainTable", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26429")]

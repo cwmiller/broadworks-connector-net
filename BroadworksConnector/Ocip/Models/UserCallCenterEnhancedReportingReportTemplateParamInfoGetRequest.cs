@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCallCenterEnhancedReportingReportTemplateParamInfoGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserCallCenterEnhancedReportingReportTemplateParamInfoGetResponse>
     {
 
-        private BroadWorksConnector.Ocip.Models.CallCenterReportTemplateKey _reportTemplate;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportTemplateKey _reportTemplate;
 
         [XmlElement(ElementName = "reportTemplate", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:6763")]

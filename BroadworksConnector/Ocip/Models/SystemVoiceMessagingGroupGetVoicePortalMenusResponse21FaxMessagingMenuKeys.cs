@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse21FaxMessagingMenuKeys
     {
 
-        private string _saveFaxMessageAndSkipToNext;
+        protected string _saveFaxMessageAndSkipToNext;
 
         [XmlElement(ElementName = "saveFaxMessageAndSkipToNext", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SaveFaxMessageAndSkipToNextSpecified { get; set; }
 
-        private string _previousFaxMessage;
+        protected string _previousFaxMessage;
 
         [XmlElement(ElementName = "previousFaxMessage", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PreviousFaxMessageSpecified { get; set; }
 
-        private string _playEnvelope;
+        protected string _playEnvelope;
 
         [XmlElement(ElementName = "playEnvelope", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PlayEnvelopeSpecified { get; set; }
 
-        private string _nextFaxMessage;
+        protected string _nextFaxMessage;
 
         [XmlElement(ElementName = "nextFaxMessage", IsNullable = false, Namespace = "")]
         [Optional]
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NextFaxMessageSpecified { get; set; }
 
-        private string _deleteFaxMessage;
+        protected string _deleteFaxMessage;
 
         [XmlElement(ElementName = "deleteFaxMessage", IsNullable = false, Namespace = "")]
         [Optional]
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeleteFaxMessageSpecified { get; set; }
 
-        private string _printFaxMessage;
+        protected string _printFaxMessage;
 
         [XmlElement(ElementName = "printFaxMessage", IsNullable = false, Namespace = "")]
         [Optional]
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PrintFaxMessageSpecified { get; set; }
 
-        private string _returnToPreviousMenu;
+        protected string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Optional]

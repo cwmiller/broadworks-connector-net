@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class AuthenticationResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:340")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private string _nonce;
+        protected string _nonce;
 
         [XmlElement(ElementName = "nonce", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:340")]
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NonceSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.DigitalSignatureAlgorithm _passwordAlgorithm;
+        protected BroadWorksConnector.Ocip.Models.DigitalSignatureAlgorithm _passwordAlgorithm;
 
         [XmlElement(ElementName = "passwordAlgorithm", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:340")]

@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemTreatmentMappingCallBlockingServiceGetListResponse23 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _treatmentMappingTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _treatmentMappingTable;
 
         [XmlElement(ElementName = "treatmentMappingTable", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:11983")]

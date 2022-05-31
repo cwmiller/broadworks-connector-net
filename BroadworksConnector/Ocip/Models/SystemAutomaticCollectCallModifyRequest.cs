@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAutomaticCollectCallModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _enableAutomaticCollectCall;
+        protected bool _enableAutomaticCollectCall;
 
         [XmlElement(ElementName = "enableAutomaticCollectCall", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableAutomaticCollectCallSpecified { get; set; }
 
-        private bool _enableConnectTone;
+        protected bool _enableConnectTone;
 
         [XmlElement(ElementName = "enableConnectTone", IsNullable = false, Namespace = "")]
         [Optional]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableConnectToneSpecified { get; set; }
 
-        private bool _includeCountryCodeInCic;
+        protected bool _includeCountryCodeInCic;
 
         [XmlElement(ElementName = "includeCountryCodeInCic", IsNullable = false, Namespace = "")]
         [Optional]

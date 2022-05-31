@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaExactVirtualOnNetCallTypeName : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        private string _virtualOnNetCallTypeName;
+        protected string _virtualOnNetCallTypeName;
 
         [XmlElement(ElementName = "virtualOnNetCallTypeName", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:1375")]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ReplacementZoneList
     {
 
-        private List<string> _zoneName = new List<string>();
+        protected List<string> _zoneName = new List<string>();
 
         [XmlElement(ElementName = "zoneName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:20044")]

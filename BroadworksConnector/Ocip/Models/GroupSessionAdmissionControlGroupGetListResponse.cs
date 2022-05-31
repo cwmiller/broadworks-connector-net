@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupSessionAdmissionControlGroupGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _sessionAdmissionControlGroupTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _sessionAdmissionControlGroupTable;
 
         [XmlElement(ElementName = "sessionAdmissionControlGroupTable", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8152")]

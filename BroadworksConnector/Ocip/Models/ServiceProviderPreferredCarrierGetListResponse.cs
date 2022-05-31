@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderPreferredCarrierGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _serviceProviderCarrierTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _serviceProviderCarrierTable;
 
         [XmlElement(ElementName = "serviceProviderCarrierTable", IsNullable = false, Namespace = "")]
         [Group(@"74a46a9bfccb54713c1d19735843f1df:242")]

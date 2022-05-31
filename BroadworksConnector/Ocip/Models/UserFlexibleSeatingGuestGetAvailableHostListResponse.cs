@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserFlexibleSeatingGuestGetAvailableHostListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _hostUserTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _hostUserTable;
 
         [XmlElement(ElementName = "hostUserTable", IsNullable = false, Namespace = "")]
         [Group(@"43afb2158d313a1d1a148124d7caba1e:389")]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupMeetMeConferencingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts _availablePorts;
+        protected BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts _availablePorts;
 
         [XmlElement(ElementName = "availablePorts", IsNullable = false, Namespace = "")]
         [Group(@"0fd24121d16995c994d40bc408dbcfa5:256")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AvailablePortsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts _allocatedPorts;
+        protected BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts _allocatedPorts;
 
         [XmlElement(ElementName = "allocatedPorts", IsNullable = false, Namespace = "")]
         [Group(@"0fd24121d16995c994d40bc408dbcfa5:256")]

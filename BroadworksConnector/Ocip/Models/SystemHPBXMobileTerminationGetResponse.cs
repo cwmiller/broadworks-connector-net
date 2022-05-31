@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemHPBXMobileTerminationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _routingPrefix;
+        protected string _routingPrefix;
 
         [XmlElement(ElementName = "routingPrefix", IsNullable = false, Namespace = "")]
         [Optional]

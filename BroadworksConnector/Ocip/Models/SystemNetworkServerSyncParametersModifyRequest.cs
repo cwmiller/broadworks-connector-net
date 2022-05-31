@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemNetworkServerSyncParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _enableSync;
+        protected bool _enableSync;
 
         [XmlElement(ElementName = "enableSync", IsNullable = false, Namespace = "")]
         [Optional]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableSyncSpecified { get; set; }
 
-        private bool _syncLinePorts;
+        protected bool _syncLinePorts;
 
         [XmlElement(ElementName = "syncLinePorts", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SyncLinePortsSpecified { get; set; }
 
-        private bool _syncDeviceManagementInfo;
+        protected bool _syncDeviceManagementInfo;
 
         [XmlElement(ElementName = "syncDeviceManagementInfo", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SyncDeviceManagementInfoSpecified { get; set; }
 
-        private bool _syncTrunkGroups;
+        protected bool _syncTrunkGroups;
 
         [XmlElement(ElementName = "syncTrunkGroups", IsNullable = false, Namespace = "")]
         [Optional]
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SyncTrunkGroupsSpecified { get; set; }
 
-        private int _syncConnectionTimeoutSeconds;
+        protected int _syncConnectionTimeoutSeconds;
 
         [XmlElement(ElementName = "syncConnectionTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SyncConnectionTimeoutSecondsSpecified { get; set; }
 
-        private bool _syncEnterpriseNumbers;
+        protected bool _syncEnterpriseNumbers;
 
         [XmlElement(ElementName = "syncEnterpriseNumbers", IsNullable = false, Namespace = "")]
         [Optional]

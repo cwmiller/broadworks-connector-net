@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserAccessDeviceFileGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _templateUrl;
+        protected string _templateUrl;
 
         [XmlElement(ElementName = "templateUrl", IsNullable = false, Namespace = "")]
         [Optional]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaExactSkillLevel : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        private int _skillLevel;
+        protected int _skillLevel;
 
         [XmlElement(ElementName = "skillLevel", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:1254")]

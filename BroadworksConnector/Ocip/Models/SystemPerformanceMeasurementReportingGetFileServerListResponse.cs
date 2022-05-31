@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemPerformanceMeasurementReportingGetFileServerListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _fileServerTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _fileServerTable;
 
         [XmlElement(ElementName = "fileServerTable", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28309")]

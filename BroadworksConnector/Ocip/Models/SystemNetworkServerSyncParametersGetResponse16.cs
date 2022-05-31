@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemNetworkServerSyncParametersGetResponse16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _enableSync;
+        protected bool _enableSync;
 
         [XmlElement(ElementName = "enableSync", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27905")]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableSyncSpecified { get; set; }
 
-        private bool _syncLinePorts;
+        protected bool _syncLinePorts;
 
         [XmlElement(ElementName = "syncLinePorts", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27905")]
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SyncLinePortsSpecified { get; set; }
 
-        private bool _syncDeviceManagementInfo;
+        protected bool _syncDeviceManagementInfo;
 
         [XmlElement(ElementName = "syncDeviceManagementInfo", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27905")]

@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaUserName : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        private BroadWorksConnector.Ocip.Models.SearchMode _mode;
+        protected BroadWorksConnector.Ocip.Models.SearchMode _mode;
 
         [XmlElement(ElementName = "mode", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:2321")]
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ModeSpecified { get; set; }
 
-        private string _value;
+        protected string _value;
 
         [XmlElement(ElementName = "value", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:2321")]
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ValueSpecified { get; set; }
 
-        private bool _isCaseInsensitive;
+        protected bool _isCaseInsensitive;
 
         [XmlElement(ElementName = "isCaseInsensitive", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:2321")]

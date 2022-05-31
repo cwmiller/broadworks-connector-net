@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserBroadWorksAnywhereGetAvailablePortalListResponse21sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _portalTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _portalTable;
 
         [XmlElement(ElementName = "portalTable", IsNullable = false, Namespace = "")]
         [Group(@"72f634ecc58842ce9d362ca629a47ea9:365")]

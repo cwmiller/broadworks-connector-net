@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemXsiApplicationIdParameterGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _screenXsiApplicationId;
+        protected bool _screenXsiApplicationId;
 
         [XmlElement(ElementName = "screenXsiApplicationId", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19404")]

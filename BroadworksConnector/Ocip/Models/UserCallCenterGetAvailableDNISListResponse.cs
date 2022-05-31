@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCallCenterGetAvailableDNISListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<BroadWorksConnector.Ocip.Models.DNISKey> _availableDNIS = new List<BroadWorksConnector.Ocip.Models.DNISKey>();
+        protected List<BroadWorksConnector.Ocip.Models.DNISKey> _availableDNIS = new List<BroadWorksConnector.Ocip.Models.DNISKey>();
 
         [XmlElement(ElementName = "availableDNIS", IsNullable = false, Namespace = "")]
         [Optional]

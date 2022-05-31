@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserPrivacyGetAvailableMonitorsUserListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _availableMonitorsTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _availableMonitorsTable;
 
         [XmlElement(ElementName = "availableMonitorsTable", IsNullable = false, Namespace = "")]
         [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:128")]

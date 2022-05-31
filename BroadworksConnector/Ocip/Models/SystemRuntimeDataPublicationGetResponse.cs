@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemRuntimeDataPublicationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _enableRuntimeDataSync;
+        protected bool _enableRuntimeDataSync;
 
         [XmlElement(ElementName = "enableRuntimeDataSync", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15590")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableRuntimeDataSyncSpecified { get; set; }
 
-        private int _runtimeDataSyncIntervalInMilliSeconds;
+        protected int _runtimeDataSyncIntervalInMilliSeconds;
 
         [XmlElement(ElementName = "runtimeDataSyncIntervalInMilliSeconds", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15590")]

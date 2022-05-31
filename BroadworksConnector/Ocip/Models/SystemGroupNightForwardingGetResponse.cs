@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemGroupNightForwardingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _nightForwardInterGroupCallsWithinEnterprise;
+        protected bool _nightForwardInterGroupCallsWithinEnterprise;
 
         [XmlElement(ElementName = "nightForwardInterGroupCallsWithinEnterprise", IsNullable = false, Namespace = "")]
         [Group(@"1a3849774e8d2ffd90c3a2c57cbdd7a0:116")]

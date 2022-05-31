@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemResourcePriorityModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _sendResourcePriorityToNetwork;
+        protected bool _sendResourcePriorityToNetwork;
 
         [XmlElement(ElementName = "sendResourcePriorityToNetwork", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SendResourcePriorityToNetworkSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ResourcePriorityValue _resourcePriority;
+        protected BroadWorksConnector.Ocip.Models.ResourcePriorityValue _resourcePriority;
 
         [XmlElement(ElementName = "resourcePriority", IsNullable = false, Namespace = "")]
         [Optional]

@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderTemplateOnlyDeviceFileGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _templateFileUrl = new List<string>();
+        protected List<string> _templateFileUrl = new List<string>();
 
         [XmlElement(ElementName = "templateFileUrl", IsNullable = false, Namespace = "")]
         [Optional]

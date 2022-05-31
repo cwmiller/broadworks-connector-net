@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemPhysicalLocationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _alwaysAllowEmergencyCalls;
+        protected bool _alwaysAllowEmergencyCalls;
 
         [XmlElement(ElementName = "alwaysAllowEmergencyCalls", IsNullable = false, Namespace = "")]
         [Group(@"4a26e5fa0592a0fd3b4e60e9432f8588:57")]

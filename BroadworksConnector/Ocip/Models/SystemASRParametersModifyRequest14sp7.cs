@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemASRParametersModifyRequest14sp7 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private int _maxTransmissions;
+        protected int _maxTransmissions;
 
         [XmlElement(ElementName = "maxTransmissions", IsNullable = false, Namespace = "")]
         [Optional]
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxTransmissionsSpecified { get; set; }
 
-        private int _retransmissionDelayMilliSeconds;
+        protected int _retransmissionDelayMilliSeconds;
 
         [XmlElement(ElementName = "retransmissionDelayMilliSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RetransmissionDelayMilliSecondsSpecified { get; set; }
 
-        private int _listeningPort;
+        protected int _listeningPort;
 
         [XmlElement(ElementName = "listeningPort", IsNullable = false, Namespace = "")]
         [Optional]
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ListeningPortSpecified { get; set; }
 
-        private bool _enableCustomMessageControl;
+        protected bool _enableCustomMessageControl;
 
         [XmlElement(ElementName = "enableCustomMessageControl", IsNullable = false, Namespace = "")]
         [Optional]
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableCustomMessageControlSpecified { get; set; }
 
-        private int _customNumberOfUsersPerMessage;
+        protected int _customNumberOfUsersPerMessage;
 
         [XmlElement(ElementName = "customNumberOfUsersPerMessage", IsNullable = false, Namespace = "")]
         [Optional]
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CustomNumberOfUsersPerMessageSpecified { get; set; }
 
-        private int _customMessageIntervalMilliseconds;
+        protected int _customMessageIntervalMilliseconds;
 
         [XmlElement(ElementName = "customMessageIntervalMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]

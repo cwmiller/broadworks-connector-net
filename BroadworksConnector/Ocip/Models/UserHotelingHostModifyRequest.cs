@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserHotelingHostModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"02e7506f62aa34db418d4b19526b2ccf:81")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private bool _enforceAssociationLimit;
+        protected bool _enforceAssociationLimit;
 
         [XmlElement(ElementName = "enforceAssociationLimit", IsNullable = false, Namespace = "")]
         [Optional]
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnforceAssociationLimitSpecified { get; set; }
 
-        private int _associationLimitHours;
+        protected int _associationLimitHours;
 
         [XmlElement(ElementName = "associationLimitHours", IsNullable = false, Namespace = "")]
         [Optional]
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AssociationLimitHoursSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.HotelingHostAccessLevel _accessLevel;
+        protected BroadWorksConnector.Ocip.Models.HotelingHostAccessLevel _accessLevel;
 
         [XmlElement(ElementName = "accessLevel", IsNullable = false, Namespace = "")]
         [Optional]
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessLevelSpecified { get; set; }
 
-        private bool _removeGuestAssociation;
+        protected bool _removeGuestAssociation;
 
         [XmlElement(ElementName = "removeGuestAssociation", IsNullable = false, Namespace = "")]
         [Optional]

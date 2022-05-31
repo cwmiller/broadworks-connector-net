@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserScheduleGetEventDetailListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<BroadWorksConnector.Ocip.Models.ScheduleEvents> _scheduleEvents = new List<BroadWorksConnector.Ocip.Models.ScheduleEvents>();
+        protected List<BroadWorksConnector.Ocip.Models.ScheduleEvents> _scheduleEvents = new List<BroadWorksConnector.Ocip.Models.ScheduleEvents>();
 
         [XmlElement(ElementName = "scheduleEvents", IsNullable = false, Namespace = "")]
         [Optional]

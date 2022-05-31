@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserPreferredCarrierUserModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"74a46a9bfccb54713c1d19735843f1df:569")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.UserPreferredCarrierNameModify _intraLataCarrier;
+        protected BroadWorksConnector.Ocip.Models.UserPreferredCarrierNameModify _intraLataCarrier;
 
         [XmlElement(ElementName = "intraLataCarrier", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IntraLataCarrierSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.UserPreferredCarrierNameModify _interLataCarrier;
+        protected BroadWorksConnector.Ocip.Models.UserPreferredCarrierNameModify _interLataCarrier;
 
         [XmlElement(ElementName = "interLataCarrier", IsNullable = false, Namespace = "")]
         [Optional]
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool InterLataCarrierSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.UserPreferredCarrierNameModify _internationalCarrier;
+        protected BroadWorksConnector.Ocip.Models.UserPreferredCarrierNameModify _internationalCarrier;
 
         [XmlElement(ElementName = "internationalCarrier", IsNullable = false, Namespace = "")]
         [Optional]

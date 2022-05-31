@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class PersonalizedNameMenuKeysReadEntry
     {
 
-        private string _recordNewPersonalizedName;
+        protected string _recordNewPersonalizedName;
 
         [XmlElement(ElementName = "recordNewPersonalizedName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecordNewPersonalizedNameSpecified { get; set; }
 
-        private string _listenToCurrentPersonalizedName;
+        protected string _listenToCurrentPersonalizedName;
 
         [XmlElement(ElementName = "listenToCurrentPersonalizedName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ListenToCurrentPersonalizedNameSpecified { get; set; }
 
-        private string _deletePersonalizedName;
+        protected string _deletePersonalizedName;
 
         [XmlElement(ElementName = "deletePersonalizedName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeletePersonalizedNameSpecified { get; set; }
 
-        private string _returnToPreviousMenu;
+        protected string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2821")]
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReturnToPreviousMenuSpecified { get; set; }
 
-        private string _repeatMenu;
+        protected string _repeatMenu;
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
         [Optional]

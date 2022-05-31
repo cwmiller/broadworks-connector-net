@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSoftwareVersionGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _version;
+        protected string _version;
 
         [XmlElement(ElementName = "version", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17845")]

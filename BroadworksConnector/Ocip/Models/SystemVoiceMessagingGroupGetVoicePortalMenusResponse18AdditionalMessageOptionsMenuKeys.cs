@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse18AdditionalMessageOptionsMenuKeys
     {
 
-        private string _saveMessage;
+        protected string _saveMessage;
 
         [XmlElement(ElementName = "saveMessage", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SaveMessageSpecified { get; set; }
 
-        private string _deleteMessage;
+        protected string _deleteMessage;
 
         [XmlElement(ElementName = "deleteMessage", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeleteMessageSpecified { get; set; }
 
-        private string _playEnvelope;
+        protected string _playEnvelope;
 
         [XmlElement(ElementName = "playEnvelope", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PlayEnvelopeSpecified { get; set; }
 
-        private string _callbackCaller;
+        protected string _callbackCaller;
 
         [XmlElement(ElementName = "callbackCaller", IsNullable = false, Namespace = "")]
         [Optional]
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallbackCallerSpecified { get; set; }
 
-        private string _composeMessage;
+        protected string _composeMessage;
 
         [XmlElement(ElementName = "composeMessage", IsNullable = false, Namespace = "")]
         [Optional]
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ComposeMessageSpecified { get; set; }
 
-        private string _replyMessage;
+        protected string _replyMessage;
 
         [XmlElement(ElementName = "replyMessage", IsNullable = false, Namespace = "")]
         [Optional]
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReplyMessageSpecified { get; set; }
 
-        private string _forwardMessage;
+        protected string _forwardMessage;
 
         [XmlElement(ElementName = "forwardMessage", IsNullable = false, Namespace = "")]
         [Optional]
@@ -156,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ForwardMessageSpecified { get; set; }
 
-        private string _personalizedName;
+        protected string _personalizedName;
 
         [XmlElement(ElementName = "personalizedName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -176,7 +176,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PersonalizedNameSpecified { get; set; }
 
-        private string _passcode;
+        protected string _passcode;
 
         [XmlElement(ElementName = "passcode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -196,7 +196,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PasscodeSpecified { get; set; }
 
-        private string _returnToPreviousMenu;
+        protected string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:36875")]
@@ -215,7 +215,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReturnToPreviousMenuSpecified { get; set; }
 
-        private string _repeatMenu;
+        protected string _repeatMenu;
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
         [Optional]

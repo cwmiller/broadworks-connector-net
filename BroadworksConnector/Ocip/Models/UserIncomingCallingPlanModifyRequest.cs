@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserIncomingCallingPlanModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"3dd296d55b56269ae23d86a934b8b35c:130")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private bool _useCustomSettings;
+        protected bool _useCustomSettings;
 
         [XmlElement(ElementName = "useCustomSettings", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseCustomSettingsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.IncomingCallingPlanPermissionsModify _userPermissions;
+        protected BroadWorksConnector.Ocip.Models.IncomingCallingPlanPermissionsModify _userPermissions;
 
         [XmlElement(ElementName = "userPermissions", IsNullable = false, Namespace = "")]
         [Optional]

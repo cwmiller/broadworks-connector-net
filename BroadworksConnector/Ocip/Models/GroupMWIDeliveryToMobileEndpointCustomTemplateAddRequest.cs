@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupMWIDeliveryToMobileEndpointCustomTemplateAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"958b78cc2a785d78259c1e8a474eb40d:55")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"958b78cc2a785d78259c1e8a474eb40d:55")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private string _language;
+        protected string _language;
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
         [Group(@"958b78cc2a785d78259c1e8a474eb40d:55")]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LanguageSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateType _type;
+        protected BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateType _type;
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
         [Group(@"958b78cc2a785d78259c1e8a474eb40d:55")]
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TypeSpecified { get; set; }
 
-        private bool _isEnabled;
+        protected bool _isEnabled;
 
         [XmlElement(ElementName = "isEnabled", IsNullable = false, Namespace = "")]
         [Group(@"958b78cc2a785d78259c1e8a474eb40d:55")]
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsEnabledSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateBody _templateBody;
+        protected BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateBody _templateBody;
 
         [XmlElement(ElementName = "templateBody", IsNullable = false, Namespace = "")]
         [Group(@"958b78cc2a785d78259c1e8a474eb40d:55")]

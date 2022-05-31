@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ResellerEmergencyZonesGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _defaultFromAddress;
+        protected string _defaultFromAddress;
 
         [XmlElement(ElementName = "defaultFromAddress", IsNullable = false, Namespace = "")]
         [Optional]

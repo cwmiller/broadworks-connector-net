@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserTerminatingAlternateTrunkIdentityModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:4093")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private string _terminatingTrunkIdentity;
+        protected string _terminatingTrunkIdentity;
 
         [XmlElement(ElementName = "terminatingTrunkIdentity", IsNullable = true, Namespace = "")]
         [Optional]

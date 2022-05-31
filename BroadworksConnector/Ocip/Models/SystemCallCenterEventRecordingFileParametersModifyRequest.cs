@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallCenterEventRecordingFileParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private int _fileRetentionTimeDays;
+        protected int _fileRetentionTimeDays;
 
         [XmlElement(ElementName = "fileRetentionTimeDays", IsNullable = false, Namespace = "")]
         [Optional]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FileRetentionTimeDaysSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallCenterEventRecordingFileRotationPeriodMinutes _fileRotationPeriodMinutes;
+        protected BroadWorksConnector.Ocip.Models.CallCenterEventRecordingFileRotationPeriodMinutes _fileRotationPeriodMinutes;
 
         [XmlElement(ElementName = "fileRotationPeriodMinutes", IsNullable = false, Namespace = "")]
         [Optional]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FileRotationPeriodMinutesSpecified { get; set; }
 
-        private int _fileRotationOffsetMinutes;
+        protected int _fileRotationOffsetMinutes;
 
         [XmlElement(ElementName = "fileRotationOffsetMinutes", IsNullable = false, Namespace = "")]
         [Optional]
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FileRotationOffsetMinutesSpecified { get; set; }
 
-        private string _remoteUrl;
+        protected string _remoteUrl;
 
         [XmlElement(ElementName = "remoteUrl", IsNullable = true, Namespace = "")]
         [Optional]
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RemoteUrlSpecified { get; set; }
 
-        private string _remoteUserId;
+        protected string _remoteUserId;
 
         [XmlElement(ElementName = "remoteUserId", IsNullable = true, Namespace = "")]
         [Optional]
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RemoteUserIdSpecified { get; set; }
 
-        private string _remotePassword;
+        protected string _remotePassword;
 
         [XmlElement(ElementName = "remotePassword", IsNullable = true, Namespace = "")]
         [Optional]

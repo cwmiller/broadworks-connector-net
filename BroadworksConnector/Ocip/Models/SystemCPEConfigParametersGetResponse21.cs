@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCPEConfigParametersGetResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _enableIPDeviceManagement;
+        protected bool _enableIPDeviceManagement;
 
         [XmlElement(ElementName = "enableIPDeviceManagement", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7073")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableIPDeviceManagementSpecified { get; set; }
 
-        private int _ftpConnectTimeoutSeconds;
+        protected int _ftpConnectTimeoutSeconds;
 
         [XmlElement(ElementName = "ftpConnectTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7073")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FtpConnectTimeoutSecondsSpecified { get; set; }
 
-        private int _ftpFileTransferTimeoutSeconds;
+        protected int _ftpFileTransferTimeoutSeconds;
 
         [XmlElement(ElementName = "ftpFileTransferTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7073")]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FtpFileTransferTimeoutSecondsSpecified { get; set; }
 
-        private int _pauseBetweenFileRebuildMilliseconds;
+        protected int _pauseBetweenFileRebuildMilliseconds;
 
         [XmlElement(ElementName = "pauseBetweenFileRebuildMilliseconds", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7073")]
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PauseBetweenFileRebuildMillisecondsSpecified { get; set; }
 
-        private string _deviceAccessAppServerClusterName;
+        protected string _deviceAccessAppServerClusterName;
 
         [XmlElement(ElementName = "deviceAccessAppServerClusterName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceAccessAppServerClusterNameSpecified { get; set; }
 
-        private int _minTimeBetweenResetMilliseconds;
+        protected int _minTimeBetweenResetMilliseconds;
 
         [XmlElement(ElementName = "minTimeBetweenResetMilliseconds", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7073")]
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MinTimeBetweenResetMillisecondsSpecified { get; set; }
 
-        private bool _alwaysPushFilesOnRebuild;
+        protected bool _alwaysPushFilesOnRebuild;
 
         [XmlElement(ElementName = "alwaysPushFilesOnRebuild", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7073")]
@@ -151,7 +151,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlwaysPushFilesOnRebuildSpecified { get; set; }
 
-        private int _maxFileOperationRetryAttempts;
+        protected int _maxFileOperationRetryAttempts;
 
         [XmlElement(ElementName = "maxFileOperationRetryAttempts", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7073")]
@@ -170,7 +170,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxFileOperationRetryAttemptsSpecified { get; set; }
 
-        private bool _enableAutoRebuildConfig;
+        protected bool _enableAutoRebuildConfig;
 
         [XmlElement(ElementName = "enableAutoRebuildConfig", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7073")]
@@ -187,7 +187,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableAutoRebuildConfigSpecified { get; set; }
 
-        private int _eventQueueSize;
+        protected int _eventQueueSize;
 
         [XmlElement(ElementName = "eventQueueSize", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7073")]
@@ -206,7 +206,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EventQueueSizeSpecified { get; set; }
 
-        private bool _allowDeviceCredentialsRetrieval;
+        protected bool _allowDeviceCredentialsRetrieval;
 
         [XmlElement(ElementName = "allowDeviceCredentialsRetrieval", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7073")]

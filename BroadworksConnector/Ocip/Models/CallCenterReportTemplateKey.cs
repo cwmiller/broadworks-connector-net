@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallCenterReportTemplateKey
     {
 
-        private BroadWorksConnector.Ocip.Models.CallCenterReportTemplateLevel _templateLevel;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportTemplateLevel _templateLevel;
 
         [XmlElement(ElementName = "templateLevel", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1064")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TemplateLevelSpecified { get; set; }
 
-        private string _templateName;
+        protected string _templateName;
 
         [XmlElement(ElementName = "templateName", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1064")]

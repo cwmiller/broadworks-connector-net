@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseLocalGatewayGetUsageResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _gatewayGroupId;
+        protected string _gatewayGroupId;
 
         [XmlElement(ElementName = "gatewayGroupId", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:546")]
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GatewayGroupIdSpecified { get; set; }
 
-        private string _gatewayGroupName;
+        protected string _gatewayGroupName;
 
         [XmlElement(ElementName = "gatewayGroupName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GatewayGroupNameSpecified { get; set; }
 
-        private bool _usedByEnterprise;
+        protected bool _usedByEnterprise;
 
         [XmlElement(ElementName = "usedByEnterprise", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:546")]
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UsedByEnterpriseSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _groupTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _groupTable;
 
         [XmlElement(ElementName = "groupTable", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:546")]

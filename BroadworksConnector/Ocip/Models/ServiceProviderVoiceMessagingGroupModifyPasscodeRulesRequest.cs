@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderVoiceMessagingGroupModifyPasscodeRulesRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19319")]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private bool _disallowRepeatedDigits;
+        protected bool _disallowRepeatedDigits;
 
         [XmlElement(ElementName = "disallowRepeatedDigits", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisallowRepeatedDigitsSpecified { get; set; }
 
-        private bool _disallowUserNumber;
+        protected bool _disallowUserNumber;
 
         [XmlElement(ElementName = "disallowUserNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisallowUserNumberSpecified { get; set; }
 
-        private bool _disallowReversedUserNumber;
+        protected bool _disallowReversedUserNumber;
 
         [XmlElement(ElementName = "disallowReversedUserNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisallowReversedUserNumberSpecified { get; set; }
 
-        private bool _disallowOldPasscode;
+        protected bool _disallowOldPasscode;
 
         [XmlElement(ElementName = "disallowOldPasscode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisallowOldPasscodeSpecified { get; set; }
 
-        private bool _disallowReversedOldPasscode;
+        protected bool _disallowReversedOldPasscode;
 
         [XmlElement(ElementName = "disallowReversedOldPasscode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisallowReversedOldPasscodeSpecified { get; set; }
 
-        private int _minCodeLength;
+        protected int _minCodeLength;
 
         [XmlElement(ElementName = "minCodeLength", IsNullable = false, Namespace = "")]
         [Optional]
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MinCodeLengthSpecified { get; set; }
 
-        private int _maxCodeLength;
+        protected int _maxCodeLength;
 
         [XmlElement(ElementName = "maxCodeLength", IsNullable = false, Namespace = "")]
         [Optional]
@@ -170,7 +170,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxCodeLengthSpecified { get; set; }
 
-        private bool _disableLoginAfterMaxFailedLoginAttempts;
+        protected bool _disableLoginAfterMaxFailedLoginAttempts;
 
         [XmlElement(ElementName = "disableLoginAfterMaxFailedLoginAttempts", IsNullable = false, Namespace = "")]
         [Optional]
@@ -188,7 +188,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisableLoginAfterMaxFailedLoginAttemptsSpecified { get; set; }
 
-        private int _maxFailedLoginAttempts;
+        protected int _maxFailedLoginAttempts;
 
         [XmlElement(ElementName = "maxFailedLoginAttempts", IsNullable = false, Namespace = "")]
         [Optional]
@@ -208,7 +208,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxFailedLoginAttemptsSpecified { get; set; }
 
-        private bool _expirePassword;
+        protected bool _expirePassword;
 
         [XmlElement(ElementName = "expirePassword", IsNullable = false, Namespace = "")]
         [Optional]
@@ -226,7 +226,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExpirePasswordSpecified { get; set; }
 
-        private int _passcodeExpiresDays;
+        protected int _passcodeExpiresDays;
 
         [XmlElement(ElementName = "passcodeExpiresDays", IsNullable = false, Namespace = "")]
         [Optional]
@@ -246,7 +246,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PasscodeExpiresDaysSpecified { get; set; }
 
-        private bool _sendLoginDisabledNotifyEmail;
+        protected bool _sendLoginDisabledNotifyEmail;
 
         [XmlElement(ElementName = "sendLoginDisabledNotifyEmail", IsNullable = false, Namespace = "")]
         [Optional]
@@ -264,7 +264,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SendLoginDisabledNotifyEmailSpecified { get; set; }
 
-        private string _loginDisabledNotifyEmailAddress;
+        protected string _loginDisabledNotifyEmailAddress;
 
         [XmlElement(ElementName = "loginDisabledNotifyEmailAddress", IsNullable = true, Namespace = "")]
         [Optional]

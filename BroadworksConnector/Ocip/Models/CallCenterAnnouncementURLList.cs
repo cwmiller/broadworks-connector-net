@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallCenterAnnouncementURLList
     {
 
-        private string _url1;
+        protected string _url1;
 
         [XmlElement(ElementName = "url1", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Url1Specified { get; set; }
 
-        private string _url2;
+        protected string _url2;
 
         [XmlElement(ElementName = "url2", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Url2Specified { get; set; }
 
-        private string _url3;
+        protected string _url3;
 
         [XmlElement(ElementName = "url3", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Url3Specified { get; set; }
 
-        private string _url4;
+        protected string _url4;
 
         [XmlElement(ElementName = "url4", IsNullable = false, Namespace = "")]
         [Optional]

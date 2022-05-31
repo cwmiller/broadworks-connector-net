@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ExtendedMediaFileResource20
     {
 
-        private BroadWorksConnector.Ocip.Models.AnnouncementFileKey _file;
+        protected BroadWorksConnector.Ocip.Models.AnnouncementFileKey _file;
 
         [XmlElement(ElementName = "file", IsNullable = true, Namespace = "")]
         [Optional]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FileSpecified { get; set; }
 
-        private string _url;
+        protected string _url;
 
         [XmlElement(ElementName = "url", IsNullable = true, Namespace = "")]
         [Optional]

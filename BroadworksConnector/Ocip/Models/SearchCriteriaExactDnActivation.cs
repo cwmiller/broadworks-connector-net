@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaExactDnActivation : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        private bool _activated;
+        protected bool _activated;
 
         [XmlElement(ElementName = "activated", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:954")]

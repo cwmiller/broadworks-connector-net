@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallCenterEventRecordingFileParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private int _fileRetentionTimeDays;
+        protected int _fileRetentionTimeDays;
 
         [XmlElement(ElementName = "fileRetentionTimeDays", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:6488")]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FileRetentionTimeDaysSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallCenterEventRecordingFileRotationPeriodMinutes _fileRotationPeriodMinutes;
+        protected BroadWorksConnector.Ocip.Models.CallCenterEventRecordingFileRotationPeriodMinutes _fileRotationPeriodMinutes;
 
         [XmlElement(ElementName = "fileRotationPeriodMinutes", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:6488")]
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FileRotationPeriodMinutesSpecified { get; set; }
 
-        private int _fileRotationOffsetMinutes;
+        protected int _fileRotationOffsetMinutes;
 
         [XmlElement(ElementName = "fileRotationOffsetMinutes", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:6488")]
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FileRotationOffsetMinutesSpecified { get; set; }
 
-        private string _remoteUrl;
+        protected string _remoteUrl;
 
         [XmlElement(ElementName = "remoteUrl", IsNullable = false, Namespace = "")]
         [Optional]
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RemoteUrlSpecified { get; set; }
 
-        private string _remoteUserId;
+        protected string _remoteUserId;
 
         [XmlElement(ElementName = "remoteUserId", IsNullable = false, Namespace = "")]
         [Optional]

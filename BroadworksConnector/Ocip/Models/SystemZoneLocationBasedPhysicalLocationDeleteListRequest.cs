@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemZoneLocationBasedPhysicalLocationDeleteListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _zoneName;
+        protected string _zoneName;
 
         [XmlElement(ElementName = "zoneName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19722")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ZoneNameSpecified { get; set; }
 
-        private List<string> _physicalLocation = new List<string>();
+        protected List<string> _physicalLocation = new List<string>();
 
         [XmlElement(ElementName = "physicalLocation", IsNullable = false, Namespace = "")]
         [Optional]

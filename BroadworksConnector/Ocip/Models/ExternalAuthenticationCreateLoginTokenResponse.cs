@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ExternalAuthenticationCreateLoginTokenResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _loginToken;
+        protected string _loginToken;
 
         [XmlElement(ElementName = "loginToken", IsNullable = false, Namespace = "")]
         [Group(@"6b27fcc79475236456fc113a42b75543:270")]

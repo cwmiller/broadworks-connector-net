@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemServerAddressesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _webServerClusterPublicFQDN;
+        protected string _webServerClusterPublicFQDN;
 
         [XmlElement(ElementName = "webServerClusterPublicFQDN", IsNullable = true, Namespace = "")]
         [Optional]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool WebServerClusterPublicFQDNSpecified { get; set; }
 
-        private string _applicationServerClusterPrimaryPublicFQDN;
+        protected string _applicationServerClusterPrimaryPublicFQDN;
 
         [XmlElement(ElementName = "applicationServerClusterPrimaryPublicFQDN", IsNullable = true, Namespace = "")]
         [Optional]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ApplicationServerClusterPrimaryPublicFQDNSpecified { get; set; }
 
-        private string _applicationServerClusterSecondaryPublicFQDN;
+        protected string _applicationServerClusterSecondaryPublicFQDN;
 
         [XmlElement(ElementName = "applicationServerClusterSecondaryPublicFQDN", IsNullable = true, Namespace = "")]
         [Optional]
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ApplicationServerClusterSecondaryPublicFQDNSpecified { get; set; }
 
-        private string _applicationServerClusterPrimaryPrivateFQDN;
+        protected string _applicationServerClusterPrimaryPrivateFQDN;
 
         [XmlElement(ElementName = "applicationServerClusterPrimaryPrivateFQDN", IsNullable = true, Namespace = "")]
         [Optional]
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ApplicationServerClusterPrimaryPrivateFQDNSpecified { get; set; }
 
-        private string _applicationServerClusterSecondaryPrivateFQDN;
+        protected string _applicationServerClusterSecondaryPrivateFQDN;
 
         [XmlElement(ElementName = "applicationServerClusterSecondaryPrivateFQDN", IsNullable = true, Namespace = "")]
         [Optional]

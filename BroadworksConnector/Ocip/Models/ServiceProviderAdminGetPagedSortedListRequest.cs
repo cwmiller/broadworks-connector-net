@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderAdminGetPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ServiceProviderAdminGetPagedSortedListResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:1415")]
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
+        protected BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
         [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
         [Optional]
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResponsePagingControlSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.SortOrderServiceProviderAdminGetPagedSortedList> _sortOrder = new List<BroadWorksConnector.Ocip.Models.SortOrderServiceProviderAdminGetPagedSortedList>();
+        protected List<BroadWorksConnector.Ocip.Models.SortOrderServiceProviderAdminGetPagedSortedList> _sortOrder = new List<BroadWorksConnector.Ocip.Models.SortOrderServiceProviderAdminGetPagedSortedList>();
 
         [XmlElement(ElementName = "sortOrder", IsNullable = false, Namespace = "")]
         [Optional]
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SortOrderSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaAdminId> _searchCriteriaAdminId = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaAdminId>();
+        protected List<BroadWorksConnector.Ocip.Models.SearchCriteriaAdminId> _searchCriteriaAdminId = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaAdminId>();
 
         [XmlElement(ElementName = "searchCriteriaAdminId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaAdminIdSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaAdminLastName> _searchCriteriaAdminLastName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaAdminLastName>();
+        protected List<BroadWorksConnector.Ocip.Models.SearchCriteriaAdminLastName> _searchCriteriaAdminLastName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaAdminLastName>();
 
         [XmlElement(ElementName = "searchCriteriaAdminLastName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaAdminLastNameSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaAdminFirstName> _searchCriteriaAdminFirstName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaAdminFirstName>();
+        protected List<BroadWorksConnector.Ocip.Models.SearchCriteriaAdminFirstName> _searchCriteriaAdminFirstName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaAdminFirstName>();
 
         [XmlElement(ElementName = "searchCriteriaAdminFirstName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaAdminFirstNameSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactServiceProviderAdminType> _searchCriteriaExactServiceProviderAdminType = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactServiceProviderAdminType>();
+        protected List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactServiceProviderAdminType> _searchCriteriaExactServiceProviderAdminType = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactServiceProviderAdminType>();
 
         [XmlElement(ElementName = "searchCriteriaExactServiceProviderAdminType", IsNullable = false, Namespace = "")]
         [Optional]
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaExactServiceProviderAdminTypeSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaLanguage> _searchCriteriaLanguage = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaLanguage>();
+        protected List<BroadWorksConnector.Ocip.Models.SearchCriteriaLanguage> _searchCriteriaLanguage = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaLanguage>();
 
         [XmlElement(ElementName = "searchCriteriaLanguage", IsNullable = false, Namespace = "")]
         [Optional]
@@ -170,7 +170,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaLanguageSpecified { get; set; }
 
-        private bool _searchCriteriaModeOr;
+        protected bool _searchCriteriaModeOr;
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]

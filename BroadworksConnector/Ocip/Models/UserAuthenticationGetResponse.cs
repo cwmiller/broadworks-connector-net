@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserAuthenticationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _userName;
+        protected string _userName;
 
         [XmlElement(ElementName = "userName", IsNullable = false, Namespace = "")]
         [Optional]

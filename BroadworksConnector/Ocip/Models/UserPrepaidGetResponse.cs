@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserPrepaidGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"ec793b9c4e032de7b751034d58c39dd1:57")]

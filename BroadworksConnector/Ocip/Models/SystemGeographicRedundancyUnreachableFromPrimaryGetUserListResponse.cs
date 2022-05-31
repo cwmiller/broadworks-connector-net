@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemGeographicRedundancyUnreachableFromPrimaryGetUserListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _unreachableFromPrimaryUserTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _unreachableFromPrimaryUserTable;
 
         [XmlElement(ElementName = "unreachableFromPrimaryUserTable", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27015")]

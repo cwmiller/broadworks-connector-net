@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaExactHuntPolicy : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        private BroadWorksConnector.Ocip.Models.HuntPolicy _huntPolicy;
+        protected BroadWorksConnector.Ocip.Models.HuntPolicy _huntPolicy;
 
         [XmlElement(ElementName = "huntPolicy", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:1044")]

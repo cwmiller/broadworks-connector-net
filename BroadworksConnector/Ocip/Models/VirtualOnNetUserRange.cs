@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class VirtualOnNetUserRange
     {
 
-        private BroadWorksConnector.Ocip.Models.DNRange _dnRange;
+        protected BroadWorksConnector.Ocip.Models.DNRange _dnRange;
 
         [XmlElement(ElementName = "dnRange", IsNullable = false, Namespace = "")]
         [Group(@"179b744b0183abe614e8c32c17c96b7e:348")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DnRangeSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ExtensionRange17 _extensionRange;
+        protected BroadWorksConnector.Ocip.Models.ExtensionRange17 _extensionRange;
 
         [XmlElement(ElementName = "extensionRange", IsNullable = false, Namespace = "")]
         [Group(@"179b744b0183abe614e8c32c17c96b7e:348")]
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExtensionRangeSpecified { get; set; }
 
-        private string _firstName;
+        protected string _firstName;
 
         [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
         [Group(@"179b744b0183abe614e8c32c17c96b7e:348")]
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FirstNameSpecified { get; set; }
 
-        private string _lastName;
+        protected string _lastName;
 
         [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
         [Group(@"179b744b0183abe614e8c32c17c96b7e:348")]
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LastNameSpecified { get; set; }
 
-        private string _callingLineIdFirstName;
+        protected string _callingLineIdFirstName;
 
         [XmlElement(ElementName = "callingLineIdFirstName", IsNullable = false, Namespace = "")]
         [Group(@"179b744b0183abe614e8c32c17c96b7e:348")]
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallingLineIdFirstNameSpecified { get; set; }
 
-        private string _callingLineIdLastName;
+        protected string _callingLineIdLastName;
 
         [XmlElement(ElementName = "callingLineIdLastName", IsNullable = false, Namespace = "")]
         [Group(@"179b744b0183abe614e8c32c17c96b7e:348")]
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallingLineIdLastNameSpecified { get; set; }
 
-        private string _virtualOnNetCallTypeName;
+        protected string _virtualOnNetCallTypeName;
 
         [XmlElement(ElementName = "virtualOnNetCallTypeName", IsNullable = false, Namespace = "")]
         [Group(@"179b744b0183abe614e8c32c17c96b7e:348")]

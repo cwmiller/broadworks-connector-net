@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemMigratedUsersGetListRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemMigratedUsersGetListResponse22>
     {
 
-        private int _userListSizeLimit;
+        protected int _userListSizeLimit;
 
         [XmlElement(ElementName = "userListSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]

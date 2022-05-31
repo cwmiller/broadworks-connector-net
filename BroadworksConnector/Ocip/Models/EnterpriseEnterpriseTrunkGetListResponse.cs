@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseEnterpriseTrunkGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _enterpriseTrunkTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _enterpriseTrunkTable;
 
         [XmlElement(ElementName = "enterpriseTrunkTable", IsNullable = false, Namespace = "")]
         [Group(@"b9c14e2d80e4e7749688ca13ba233b44:306")]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallCenterQueueStatistics13mp8
     {
 
-        private int _numberOfIncomingCalls;
+        protected int _numberOfIncomingCalls;
 
         [XmlElement(ElementName = "numberOfIncomingCalls", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47773")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberOfIncomingCallsSpecified { get; set; }
 
-        private int _numberOfCallsQueued;
+        protected int _numberOfCallsQueued;
 
         [XmlElement(ElementName = "numberOfCallsQueued", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47773")]
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberOfCallsQueuedSpecified { get; set; }
 
-        private int _numberOfBusyOverflows;
+        protected int _numberOfBusyOverflows;
 
         [XmlElement(ElementName = "numberOfBusyOverflows", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47773")]
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberOfBusyOverflowsSpecified { get; set; }
 
-        private int _numberOfCallsAnswered;
+        protected int _numberOfCallsAnswered;
 
         [XmlElement(ElementName = "numberOfCallsAnswered", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47773")]
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberOfCallsAnsweredSpecified { get; set; }
 
-        private int _averageTimeWithAgentSeconds;
+        protected int _averageTimeWithAgentSeconds;
 
         [XmlElement(ElementName = "averageTimeWithAgentSeconds", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47773")]
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AverageTimeWithAgentSecondsSpecified { get; set; }
 
-        private int _averageTimeInQueueSeconds;
+        protected int _averageTimeInQueueSeconds;
 
         [XmlElement(ElementName = "averageTimeInQueueSeconds", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47773")]
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AverageTimeInQueueSecondsSpecified { get; set; }
 
-        private string _averageNumberOfAgentsBusy;
+        protected string _averageNumberOfAgentsBusy;
 
         [XmlElement(ElementName = "averageNumberOfAgentsBusy", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47773")]
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AverageNumberOfAgentsBusySpecified { get; set; }
 
-        private string _averageNumberOfAgentsLoggedOff;
+        protected string _averageNumberOfAgentsLoggedOff;
 
         [XmlElement(ElementName = "averageNumberOfAgentsLoggedOff", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47773")]
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AverageNumberOfAgentsLoggedOffSpecified { get; set; }
 
-        private int _averageHoldTimeBeforeCallLossSeconds;
+        protected int _averageHoldTimeBeforeCallLossSeconds;
 
         [XmlElement(ElementName = "averageHoldTimeBeforeCallLossSeconds", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47773")]

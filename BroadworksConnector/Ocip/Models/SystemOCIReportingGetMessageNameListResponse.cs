@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemOCIReportingGetMessageNameListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _messageNameStartsWith = new List<string>();
+        protected List<string> _messageNameStartsWith = new List<string>();
 
         [XmlElement(ElementName = "messageNameStartsWith", IsNullable = false, Namespace = "")]
         [Optional]

@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallingPartyCategoryGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemCallingPartyCategoryGetResponse>
     {
 
-        private string _category;
+        protected string _category;
 
         [XmlElement(ElementName = "category", IsNullable = false, Namespace = "")]
         [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:120")]

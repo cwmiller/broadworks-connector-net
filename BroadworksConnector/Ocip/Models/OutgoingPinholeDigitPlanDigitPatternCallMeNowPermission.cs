@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class OutgoingPinholeDigitPlanDigitPatternCallMeNowPermission
     {
 
-        private string _digitPatternName;
+        protected string _digitPatternName;
 
         [XmlElement(ElementName = "digitPatternName", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2259")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DigitPatternNameSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.OutgoingPinholeDigitPlanCallMeNowPermission _permission;
+        protected BroadWorksConnector.Ocip.Models.OutgoingPinholeDigitPlanCallMeNowPermission _permission;
 
         [XmlElement(ElementName = "permission", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2259")]

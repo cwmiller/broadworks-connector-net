@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderServicePackMigrationTaskGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _taskTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _taskTable;
 
         [XmlElement(ElementName = "taskTable", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:6253")]

@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserPushNotificationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:3446")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private bool _sendPushNotificationForClickToDial;
+        protected bool _sendPushNotificationForClickToDial;
 
         [XmlElement(ElementName = "sendPushNotificationForClickToDial", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SendPushNotificationForClickToDialSpecified { get; set; }
 
-        private bool _sendPushNotificationForGroupPaging;
+        protected bool _sendPushNotificationForGroupPaging;
 
         [XmlElement(ElementName = "sendPushNotificationForGroupPaging", IsNullable = false, Namespace = "")]
         [Optional]

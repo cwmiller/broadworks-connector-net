@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemExecutiveGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _treatVirtualOnNetCallsAsInternal;
+        protected bool _treatVirtualOnNetCallsAsInternal;
 
         [XmlElement(ElementName = "treatVirtualOnNetCallsAsInternal", IsNullable = false, Namespace = "")]
         [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:67")]

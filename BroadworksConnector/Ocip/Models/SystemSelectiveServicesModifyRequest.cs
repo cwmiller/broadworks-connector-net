@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSelectiveServicesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private BroadWorksConnector.Ocip.Models.ScheduleCombinationType _scheduleCombination;
+        protected BroadWorksConnector.Ocip.Models.ScheduleCombinationType _scheduleCombination;
 
         [XmlElement(ElementName = "scheduleCombination", IsNullable = false, Namespace = "")]
         [Optional]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ScheduleCombinationSpecified { get; set; }
 
-        private bool _screenPrivateNumber;
+        protected bool _screenPrivateNumber;
 
         [XmlElement(ElementName = "screenPrivateNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ScreenPrivateNumberSpecified { get; set; }
 
-        private bool _emptyHolidayScheduleIsOutOfSchedule;
+        protected bool _emptyHolidayScheduleIsOutOfSchedule;
 
         [XmlElement(ElementName = "emptyHolidayScheduleIsOutOfSchedule", IsNullable = false, Namespace = "")]
         [Optional]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19SendMessageToSelectedDistributionListMenuKeys
     {
 
-        private string _confirmSendingToDistributionList;
+        protected string _confirmSendingToDistributionList;
 
         [XmlElement(ElementName = "confirmSendingToDistributionList", IsNullable = true, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConfirmSendingToDistributionListSpecified { get; set; }
 
-        private string _cancelSendingToDistributionList;
+        protected string _cancelSendingToDistributionList;
 
         [XmlElement(ElementName = "cancelSendingToDistributionList", IsNullable = false, Namespace = "")]
         [Optional]

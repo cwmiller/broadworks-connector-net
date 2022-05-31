@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserExecutiveGetAvailableAssistantListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
         [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:203")]

@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class PlaceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _placeUserId;
+        protected string _placeUserId;
 
         [XmlElement(ElementName = "placeUserId", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:155")]
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PlaceUserIdSpecified { get; set; }
 
-        private string _webExSIPAddress;
+        protected string _webExSIPAddress;
 
         [XmlElement(ElementName = "webExSIPAddress", IsNullable = false, Namespace = "")]
         [Optional]

@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserExecutiveAssistantGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _enableDivert;
+        protected bool _enableDivert;
 
         [XmlElement(ElementName = "enableDivert", IsNullable = false, Namespace = "")]
         [Group(@"edd49e38c60ed5c00d394f2a35697c84:62")]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableDivertSpecified { get; set; }
 
-        private string _divertToPhoneNumber;
+        protected string _divertToPhoneNumber;
 
         [XmlElement(ElementName = "divertToPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DivertToPhoneNumberSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _executiveTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _executiveTable;
 
         [XmlElement(ElementName = "executiveTable", IsNullable = false, Namespace = "")]
         [Group(@"edd49e38c60ed5c00d394f2a35697c84:62")]

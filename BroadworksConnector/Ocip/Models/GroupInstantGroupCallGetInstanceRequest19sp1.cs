@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupInstantGroupCallGetInstanceRequest19sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupInstantGroupCallGetInstanceResponse19sp1>
     {
 
-        private string _serviceUserId;
+        protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
         [Group(@"f41dea4708922d4a3f0e26f198cc953f:122")]

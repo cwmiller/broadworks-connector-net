@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class FeatureAccessCodeReadEntry
     {
 
-        private string _featureAccessCodeName;
+        protected string _featureAccessCodeName;
 
         [XmlElement(ElementName = "featureAccessCodeName", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2785")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FeatureAccessCodeNameSpecified { get; set; }
 
-        private string _mainCode;
+        protected string _mainCode;
 
         [XmlElement(ElementName = "mainCode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MainCodeSpecified { get; set; }
 
-        private string _alternateCode;
+        protected string _alternateCode;
 
         [XmlElement(ElementName = "alternateCode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlternateCodeSpecified { get; set; }
 
-        private bool _enableFAC;
+        protected bool _enableFAC;
 
         [XmlElement(ElementName = "enableFAC", IsNullable = false, Namespace = "")]
         [Optional]

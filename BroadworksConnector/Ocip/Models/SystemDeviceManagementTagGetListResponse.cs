@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDeviceManagementTagGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _tagsTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _tagsTable;
 
         [XmlElement(ElementName = "tagsTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8021")]

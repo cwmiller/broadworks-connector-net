@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCPEConfigRebuildConfigFileRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _deviceType;
+        protected string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
         [Optional]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceTypeSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CPEDeviceConfigRebuildType _rebuildType;
+        protected BroadWorksConnector.Ocip.Models.CPEDeviceConfigRebuildType _rebuildType;
 
         [XmlElement(ElementName = "rebuildType", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RebuildTypeSpecified { get; set; }
 
-        private bool _force;
+        protected bool _force;
 
         [XmlElement(ElementName = "force", IsNullable = false, Namespace = "")]
         [Optional]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCPEConfigParametersModifyRequestFileRebuildDaily
     {
 
-        private int _startHour;
+        protected int _startHour;
 
         [XmlElement(ElementName = "startHour", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25567")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StartHourSpecified { get; set; }
 
-        private int _startMinute;
+        protected int _startMinute;
 
         [XmlElement(ElementName = "startMinute", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25567")]

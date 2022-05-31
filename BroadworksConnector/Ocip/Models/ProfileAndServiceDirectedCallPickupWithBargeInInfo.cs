@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ProfileAndServiceDirectedCallPickupWithBargeInInfo
     {
 
-        private bool _enableBargeInWarningTone;
+        protected bool _enableBargeInWarningTone;
 
         [XmlElement(ElementName = "enableBargeInWarningTone", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:4409")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableBargeInWarningToneSpecified { get; set; }
 
-        private bool _enableAutomaticTargetSelection;
+        protected bool _enableAutomaticTargetSelection;
 
         [XmlElement(ElementName = "enableAutomaticTargetSelection", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:4409")]

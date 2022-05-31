@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserPersonalAssistantExclusionNumberGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _description;
+        protected string _description;
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]

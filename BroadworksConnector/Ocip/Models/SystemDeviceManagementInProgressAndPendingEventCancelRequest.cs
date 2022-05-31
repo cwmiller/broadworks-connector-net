@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDeviceManagementInProgressAndPendingEventCancelRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _cancelAllEvents;
+        protected string _cancelAllEvents;
 
         [XmlElement(ElementName = "cancelAllEvents", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7866")]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CancelAllEventsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SystemDeviceManagementInProgressAndPendingEventCancelRequestCancelMultipleEvents _cancelMultipleEvents;
+        protected BroadWorksConnector.Ocip.Models.SystemDeviceManagementInProgressAndPendingEventCancelRequestCancelMultipleEvents _cancelMultipleEvents;
 
         [XmlElement(ElementName = "cancelMultipleEvents", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7866")]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CancelMultipleEventsSpecified { get; set; }
 
-        private List<int> _eventId = new List<int>();
+        protected List<int> _eventId = new List<int>();
 
         [XmlElement(ElementName = "eventId", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7866")]

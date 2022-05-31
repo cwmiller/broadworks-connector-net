@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemTrunkGroupOptionsMessageResponseStatusCodeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _statusCode = new List<string>();
+        protected List<string> _statusCode = new List<string>();
 
         [XmlElement(ElementName = "statusCode", IsNullable = false, Namespace = "")]
         [Optional]

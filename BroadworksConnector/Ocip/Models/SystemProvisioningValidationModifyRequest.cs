@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemProvisioningValidationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private bool _isNetworkServerQueryActive;
+        protected bool _isNetworkServerQueryActive;
 
         [XmlElement(ElementName = "isNetworkServerQueryActive", IsNullable = false, Namespace = "")]
         [Optional]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsNetworkServerQueryActiveSpecified { get; set; }
 
-        private int _timeoutSeconds;
+        protected int _timeoutSeconds;
 
         [XmlElement(ElementName = "timeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TimeoutSecondsSpecified { get; set; }
 
-        private bool _denyMobilityNumberAsRedirectionDestination;
+        protected bool _denyMobilityNumberAsRedirectionDestination;
 
         [XmlElement(ElementName = "denyMobilityNumberAsRedirectionDestination", IsNullable = false, Namespace = "")]
         [Optional]
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DenyMobilityNumberAsRedirectionDestinationSpecified { get; set; }
 
-        private bool _denyEnterpriseNumberAsNetworkLocationDestination;
+        protected bool _denyEnterpriseNumberAsNetworkLocationDestination;
 
         [XmlElement(ElementName = "denyEnterpriseNumberAsNetworkLocationDestination", IsNullable = false, Namespace = "")]
         [Optional]

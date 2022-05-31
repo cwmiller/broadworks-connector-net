@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserExternalCustomRingbackGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserExternalCustomRingbackGetResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:101")]

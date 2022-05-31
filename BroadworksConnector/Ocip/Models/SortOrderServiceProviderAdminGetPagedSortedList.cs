@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SortOrderServiceProviderAdminGetPagedSortedList
     {
 
-        private BroadWorksConnector.Ocip.Models.SortByAdminId _sortByAdminId;
+        protected BroadWorksConnector.Ocip.Models.SortByAdminId _sortByAdminId;
 
         [XmlElement(ElementName = "sortByAdminId", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7233")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SortByAdminIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SortByAdminLastName _sortByAdminLastName;
+        protected BroadWorksConnector.Ocip.Models.SortByAdminLastName _sortByAdminLastName;
 
         [XmlElement(ElementName = "sortByAdminLastName", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7233")]
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SortByAdminLastNameSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SortByAdminFirstName _sortByAdminFirstName;
+        protected BroadWorksConnector.Ocip.Models.SortByAdminFirstName _sortByAdminFirstName;
 
         [XmlElement(ElementName = "sortByAdminFirstName", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7233")]

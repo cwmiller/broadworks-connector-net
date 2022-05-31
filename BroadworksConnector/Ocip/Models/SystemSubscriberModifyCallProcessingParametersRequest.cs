@@ -27,7 +27,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSubscriberModifyCallProcessingParametersRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private BroadWorksConnector.Ocip.Models.SystemUserCallingLineIdSelection _userCallingLineIdSelection;
+        protected BroadWorksConnector.Ocip.Models.SystemUserCallingLineIdSelection _userCallingLineIdSelection;
 
         [XmlElement(ElementName = "userCallingLineIdSelection", IsNullable = false, Namespace = "")]
         [Optional]
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserCallingLineIdSelectionSpecified { get; set; }
 
-        private bool _isExtendedCallingLineIdActive;
+        protected bool _isExtendedCallingLineIdActive;
 
         [XmlElement(ElementName = "isExtendedCallingLineIdActive", IsNullable = false, Namespace = "")]
         [Optional]
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsExtendedCallingLineIdActiveSpecified { get; set; }
 
-        private bool _isRingTimeOutActive;
+        protected bool _isRingTimeOutActive;
 
         [XmlElement(ElementName = "isRingTimeOutActive", IsNullable = false, Namespace = "")]
         [Optional]
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsRingTimeOutActiveSpecified { get; set; }
 
-        private int _ringTimeoutSeconds;
+        protected int _ringTimeoutSeconds;
 
         [XmlElement(ElementName = "ringTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RingTimeoutSecondsSpecified { get; set; }
 
-        private bool _allowEmergencyRemoteOfficeOriginations;
+        protected bool _allowEmergencyRemoteOfficeOriginations;
 
         [XmlElement(ElementName = "allowEmergencyRemoteOfficeOriginations", IsNullable = false, Namespace = "")]
         [Optional]
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowEmergencyRemoteOfficeOriginationsSpecified { get; set; }
 
-        private int _maxNoAnswerNumberOfRings;
+        protected int _maxNoAnswerNumberOfRings;
 
         [XmlElement(ElementName = "maxNoAnswerNumberOfRings", IsNullable = false, Namespace = "")]
         [Optional]

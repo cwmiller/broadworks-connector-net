@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupAdviceOfChargeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _useGroupLevelAoCSettings;
+        protected bool _useGroupLevelAoCSettings;
 
         [XmlElement(ElementName = "useGroupLevelAoCSettings", IsNullable = false, Namespace = "")]
         [Group(@"a69fde15f3aa7494d83b57461a7a70bb:68")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseGroupLevelAoCSettingsSpecified { get; set; }
 
-        private int _delayBetweenNotificationSeconds;
+        protected int _delayBetweenNotificationSeconds;
 
         [XmlElement(ElementName = "delayBetweenNotificationSeconds", IsNullable = false, Namespace = "")]
         [Group(@"a69fde15f3aa7494d83b57461a7a70bb:68")]

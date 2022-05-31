@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCommunicationBarringUserControlGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _lockoutStatus;
+        protected bool _lockoutStatus;
 
         [XmlElement(ElementName = "lockoutStatus", IsNullable = false, Namespace = "")]
         [Group(@"4277c572e54919d6e29f4c0fa69aaad1:114")]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LockoutStatusSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _profileTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _profileTable;
 
         [XmlElement(ElementName = "profileTable", IsNullable = false, Namespace = "")]
         [Group(@"4277c572e54919d6e29f4c0fa69aaad1:114")]

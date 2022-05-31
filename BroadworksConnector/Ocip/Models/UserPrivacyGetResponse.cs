@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserPrivacyGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _enableDirectoryPrivacy;
+        protected bool _enableDirectoryPrivacy;
 
         [XmlElement(ElementName = "enableDirectoryPrivacy", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:45701")]

@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemLicensingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.LicenseStrictness _licenseStrictness;
+        protected BroadWorksConnector.Ocip.Models.LicenseStrictness _licenseStrictness;
 
         [XmlElement(ElementName = "licenseStrictness", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27451")]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LicenseStrictnessSpecified { get; set; }
 
-        private int _groupUserlimit;
+        protected int _groupUserlimit;
 
         [XmlElement(ElementName = "groupUserlimit", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27451")]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupUserlimitSpecified { get; set; }
 
-        private string _expirationDate;
+        protected string _expirationDate;
 
         [XmlElement(ElementName = "expirationDate", IsNullable = false, Namespace = "")]
         [Optional]
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExpirationDateSpecified { get; set; }
 
-        private List<string> _hostId = new List<string>();
+        protected List<string> _hostId = new List<string>();
 
         [XmlElement(ElementName = "hostId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HostIdSpecified { get; set; }
 
-        private List<string> _licenseName = new List<string>();
+        protected List<string> _licenseName = new List<string>();
 
         [XmlElement(ElementName = "licenseName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LicenseNameSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _licenseTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _licenseTable;
 
         [XmlElement(ElementName = "licenseTable", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27451")]

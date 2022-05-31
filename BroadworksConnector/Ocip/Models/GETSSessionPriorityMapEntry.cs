@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GETSSessionPriorityMapEntry
     {
 
-        private int _priorityLevel;
+        protected int _priorityLevel;
 
         [XmlElement(ElementName = "priorityLevel", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19933")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PriorityLevelSpecified { get; set; }
 
-        private int _sessionPriority;
+        protected int _sessionPriority;
 
         [XmlElement(ElementName = "sessionPriority", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19933")]

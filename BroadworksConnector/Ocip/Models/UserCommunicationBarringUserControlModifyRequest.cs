@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCommunicationBarringUserControlModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"4277c572e54919d6e29f4c0fa69aaad1:134")]
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private int? _enableProfile;
+        protected int? _enableProfile;
 
         [XmlElement(ElementName = "enableProfile", IsNullable = true, Namespace = "")]
         [Optional]
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableProfileSpecified { get; set; }
 
-        private string _oldPasscode;
+        protected string _oldPasscode;
 
         [XmlElement(ElementName = "oldPasscode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OldPasscodeSpecified { get; set; }
 
-        private string _newPasscode;
+        protected string _newPasscode;
 
         [XmlElement(ElementName = "newPasscode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewPasscodeSpecified { get; set; }
 
-        private bool _resetLockout;
+        protected bool _resetLockout;
 
         [XmlElement(ElementName = "resetLockout", IsNullable = false, Namespace = "")]
         [Optional]

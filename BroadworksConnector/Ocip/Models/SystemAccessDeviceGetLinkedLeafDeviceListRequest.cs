@@ -26,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAccessDeviceGetLinkedLeafDeviceListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemAccessDeviceGetLinkedLeafDeviceListResponse>
     {
 
-        private string _deviceName;
+        protected string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1155")]

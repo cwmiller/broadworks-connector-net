@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class DeviceManagementTagSetRename
     {
 
-        private string _originalTagSetName;
+        protected string _originalTagSetName;
 
         [XmlElement(ElementName = "originalTagSetName", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2396")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OriginalTagSetNameSpecified { get; set; }
 
-        private string _newTagSetName;
+        protected string _newTagSetName;
 
         [XmlElement(ElementName = "newTagSetName", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2396")]

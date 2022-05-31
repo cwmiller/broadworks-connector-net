@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallCenterGetInstanceStatisticsReportingResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _generateDailyReport;
+        protected bool _generateDailyReport;
 
         [XmlElement(ElementName = "generateDailyReport", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6119")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GenerateDailyReportSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes _collectionPeriodMinutes;
+        protected BroadWorksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes _collectionPeriodMinutes;
 
         [XmlElement(ElementName = "collectionPeriodMinutes", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6119")]
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CollectionPeriodMinutesSpecified { get; set; }
 
-        private string _reportingEmailAddress1;
+        protected string _reportingEmailAddress1;
 
         [XmlElement(ElementName = "reportingEmailAddress1", IsNullable = false, Namespace = "")]
         [Optional]
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReportingEmailAddress1Specified { get; set; }
 
-        private string _reportingEmailAddress2;
+        protected string _reportingEmailAddress2;
 
         [XmlElement(ElementName = "reportingEmailAddress2", IsNullable = false, Namespace = "")]
         [Optional]

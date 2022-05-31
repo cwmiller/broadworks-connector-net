@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupPhoneDirectoryGetListResponse18 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _directoryTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _directoryTable;
 
         [XmlElement(ElementName = "directoryTable", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:3545")]

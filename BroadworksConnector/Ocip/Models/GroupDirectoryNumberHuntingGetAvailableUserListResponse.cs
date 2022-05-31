@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupDirectoryNumberHuntingGetAvailableUserListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
         [Group(@"7c509136e6ce6be616e313c3b28a0449:65")]

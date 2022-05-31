@@ -26,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDeviceFamilyImportRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _file;
+        protected string _file;
 
         [XmlElement(ElementName = "file", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7573")]
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FileSpecified { get; set; }
 
-        private string _resellerId;
+        protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResellerIdSpecified { get; set; }
 
-        private bool _deviceFamilyOverride;
+        protected bool _deviceFamilyOverride;
 
         [XmlElement(ElementName = "deviceFamilyOverride", IsNullable = false, Namespace = "")]
         [Optional]
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceFamilyOverrideSpecified { get; set; }
 
-        private bool _tagSetOverride;
+        protected bool _tagSetOverride;
 
         [XmlElement(ElementName = "tagSetOverride", IsNullable = false, Namespace = "")]
         [Optional]
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TagSetOverrideSpecified { get; set; }
 
-        private bool _deviceTypeFileUpdate;
+        protected bool _deviceTypeFileUpdate;
 
         [XmlElement(ElementName = "deviceTypeFileUpdate", IsNullable = false, Namespace = "")]
         [Optional]

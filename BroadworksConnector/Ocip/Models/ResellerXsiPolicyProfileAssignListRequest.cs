@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ResellerXsiPolicyProfileAssignListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _resellerId;
+        protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Group(@"b009175f2a2a9d38115e319a6ad64d7f:949")]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResellerIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.XsiPolicyProfileAssignEntry _spXsiPolicyProfile;
+        protected BroadWorksConnector.Ocip.Models.XsiPolicyProfileAssignEntry _spXsiPolicyProfile;
 
         [XmlElement(ElementName = "spXsiPolicyProfile", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SpXsiPolicyProfileSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.XsiPolicyProfileAssignEntry _groupXsiPolicyProfile;
+        protected BroadWorksConnector.Ocip.Models.XsiPolicyProfileAssignEntry _groupXsiPolicyProfile;
 
         [XmlElement(ElementName = "groupXsiPolicyProfile", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupXsiPolicyProfileSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.XsiPolicyProfileAssignEntry _userXsiPolicyProfile;
+        protected BroadWorksConnector.Ocip.Models.XsiPolicyProfileAssignEntry _userXsiPolicyProfile;
 
         [XmlElement(ElementName = "userXsiPolicyProfile", IsNullable = false, Namespace = "")]
         [Optional]

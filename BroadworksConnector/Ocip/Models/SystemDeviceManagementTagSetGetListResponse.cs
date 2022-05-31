@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDeviceManagementTagSetGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _tagSetName = new List<string>();
+        protected List<string> _tagSetName = new List<string>();
 
         [XmlElement(ElementName = "tagSetName", IsNullable = false, Namespace = "")]
         [Optional]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemZoneCallingZonePhysicalLocationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _physicalLocation;
+        protected string _physicalLocation;
 
         [XmlElement(ElementName = "physicalLocation", IsNullable = false, Namespace = "")]
         [Optional]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class InternalReleaseCauseMapEntry
     {
 
-        private BroadWorksConnector.Ocip.Models.InternalReleaseCause16 _internalReleaseCause;
+        protected BroadWorksConnector.Ocip.Models.InternalReleaseCause16 _internalReleaseCause;
 
         [XmlElement(ElementName = "internalReleaseCause", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19945")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool InternalReleaseCauseSpecified { get; set; }
 
-        private string _treatmentId;
+        protected string _treatmentId;
 
         [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
         [Optional]

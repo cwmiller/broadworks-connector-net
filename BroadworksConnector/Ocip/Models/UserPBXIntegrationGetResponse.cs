@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserPBXIntegrationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _proxyToHeaderFromNetwork;
+        protected bool _proxyToHeaderFromNetwork;
 
         [XmlElement(ElementName = "proxyToHeaderFromNetwork", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:2755")]

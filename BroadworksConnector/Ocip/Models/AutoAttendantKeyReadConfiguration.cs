@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class AutoAttendantKeyReadConfiguration
     {
 
-        private BroadWorksConnector.Ocip.Models.AutoAttendantMenuKey _key;
+        protected BroadWorksConnector.Ocip.Models.AutoAttendantMenuKey _key;
 
         [XmlElement(ElementName = "key", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47532")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool KeySpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AutoAttendantKeyConfigurationReadEntry _entry;
+        protected BroadWorksConnector.Ocip.Models.AutoAttendantKeyConfigurationReadEntry _entry;
 
         [XmlElement(ElementName = "entry", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47532")]

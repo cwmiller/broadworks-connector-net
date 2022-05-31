@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallBlockingServiceMapEntry
     {
 
-        private BroadWorksConnector.Ocip.Models.CallBlockingService23V3 _callBlockingService;
+        protected BroadWorksConnector.Ocip.Models.CallBlockingService23V3 _callBlockingService;
 
         [XmlElement(ElementName = "callBlockingService", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19859")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallBlockingServiceSpecified { get; set; }
 
-        private string _treatmentId;
+        protected string _treatmentId;
 
         [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
         [Optional]

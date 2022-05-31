@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class DeviceManagementAutoRebuildConfigEntry
     {
 
-        private string _ociRequestPrefix;
+        protected string _ociRequestPrefix;
 
         [XmlElement(ElementName = "ociRequestPrefix", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19896")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OciRequestPrefixSpecified { get; set; }
 
-        private bool _autoRebuildEnabled;
+        protected bool _autoRebuildEnabled;
 
         [XmlElement(ElementName = "autoRebuildEnabled", IsNullable = false, Namespace = "")]
         [Optional]

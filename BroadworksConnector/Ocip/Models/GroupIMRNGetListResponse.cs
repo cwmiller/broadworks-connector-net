@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupIMRNGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _imrn = new List<string>();
+        protected List<string> _imrn = new List<string>();
 
         [XmlElement(ElementName = "imrn", IsNullable = false, Namespace = "")]
         [Optional]

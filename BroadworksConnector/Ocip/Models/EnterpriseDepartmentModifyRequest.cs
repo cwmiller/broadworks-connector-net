@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseDepartmentModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _enterpriseId;
+        protected string _enterpriseId;
 
         [XmlElement(ElementName = "enterpriseId", IsNullable = false, Namespace = "")]
         [Group(@"5395c7df0157d44aa22f3351d1a5f3da:741")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnterpriseIdSpecified { get; set; }
 
-        private string _departmentName;
+        protected string _departmentName;
 
         [XmlElement(ElementName = "departmentName", IsNullable = false, Namespace = "")]
         [Group(@"5395c7df0157d44aa22f3351d1a5f3da:741")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DepartmentNameSpecified { get; set; }
 
-        private string _newDepartmentName;
+        protected string _newDepartmentName;
 
         [XmlElement(ElementName = "newDepartmentName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewDepartmentNameSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.EnterpriseDepartmentKey _newParentDepartmentKey;
+        protected BroadWorksConnector.Ocip.Models.EnterpriseDepartmentKey _newParentDepartmentKey;
 
         [XmlElement(ElementName = "newParentDepartmentKey", IsNullable = true, Namespace = "")]
         [Optional]

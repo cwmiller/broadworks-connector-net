@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallingNameRetrievalModifyRequest16sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _triggerCNAMQueriesForAllNetworkCalls;
+        protected bool _triggerCNAMQueriesForAllNetworkCalls;
 
         [XmlElement(ElementName = "triggerCNAMQueriesForAllNetworkCalls", IsNullable = false, Namespace = "")]
         [Optional]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TriggerCNAMQueriesForAllNetworkCallsSpecified { get; set; }
 
-        private bool _triggerCNAMQueriesForGroupAndEnterpriseCalls;
+        protected bool _triggerCNAMQueriesForGroupAndEnterpriseCalls;
 
         [XmlElement(ElementName = "triggerCNAMQueriesForGroupAndEnterpriseCalls", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TriggerCNAMQueriesForGroupAndEnterpriseCallsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallingNameRetrievalQueryProtocol _queryProtocol;
+        protected BroadWorksConnector.Ocip.Models.CallingNameRetrievalQueryProtocol _queryProtocol;
 
         [XmlElement(ElementName = "queryProtocol", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool QueryProtocolSpecified { get; set; }
 
-        private int _queryTimeoutMilliseconds;
+        protected int _queryTimeoutMilliseconds;
 
         [XmlElement(ElementName = "queryTimeoutMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool QueryTimeoutMillisecondsSpecified { get; set; }
 
-        private string _sipExternalDatabaseNetAddress;
+        protected string _sipExternalDatabaseNetAddress;
 
         [XmlElement(ElementName = "sipExternalDatabaseNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SipExternalDatabaseNetAddressSpecified { get; set; }
 
-        private int? _sipExternalDatabasePort;
+        protected int? _sipExternalDatabasePort;
 
         [XmlElement(ElementName = "sipExternalDatabasePort", IsNullable = true, Namespace = "")]
         [Optional]
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SipExternalDatabasePortSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.TransportProtocol _sipExternalDatabaseTransport;
+        protected BroadWorksConnector.Ocip.Models.TransportProtocol _sipExternalDatabaseTransport;
 
         [XmlElement(ElementName = "sipExternalDatabaseTransport", IsNullable = false, Namespace = "")]
         [Optional]
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SipExternalDatabaseTransportSpecified { get; set; }
 
-        private string _soapExternalDatabaseNetAddress;
+        protected string _soapExternalDatabaseNetAddress;
 
         [XmlElement(ElementName = "soapExternalDatabaseNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SoapExternalDatabaseNetAddressSpecified { get; set; }
 
-        private bool _soapSupportsDNSSRV;
+        protected bool _soapSupportsDNSSRV;
 
         [XmlElement(ElementName = "soapSupportsDNSSRV", IsNullable = false, Namespace = "")]
         [Optional]
@@ -192,7 +192,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SoapSupportsDNSSRVSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallingNameRetrievalSourceIdentity _callingNameSource;
+        protected BroadWorksConnector.Ocip.Models.CallingNameRetrievalSourceIdentity _callingNameSource;
 
         [XmlElement(ElementName = "callingNameSource", IsNullable = false, Namespace = "")]
         [Optional]

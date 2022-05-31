@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemRoutePointExternalSystemGetRoutePointListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemRoutePointExternalSystemGetRoutePointListResponse>
     {
 
-        private string _routePointExternalSystem;
+        protected string _routePointExternalSystem;
 
         [XmlElement(ElementName = "routePointExternalSystem", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15156")]

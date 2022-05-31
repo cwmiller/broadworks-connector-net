@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemGETSResourcePriorityModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _priorityValue;
+        protected string _priorityValue;
 
         [XmlElement(ElementName = "priorityValue", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11115")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PriorityValueSpecified { get; set; }
 
-        private string _newPriorityValue;
+        protected string _newPriorityValue;
 
         [XmlElement(ElementName = "newPriorityValue", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewPriorityValueSpecified { get; set; }
 
-        private int _priorityLevel;
+        protected int _priorityLevel;
 
         [XmlElement(ElementName = "priorityLevel", IsNullable = false, Namespace = "")]
         [Optional]
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PriorityLevelSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.GETSPriorityClass _priorityClass;
+        protected BroadWorksConnector.Ocip.Models.GETSPriorityClass _priorityClass;
 
         [XmlElement(ElementName = "priorityClass", IsNullable = false, Namespace = "")]
         [Optional]

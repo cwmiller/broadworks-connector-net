@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallReturnModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _twoLevelActivation;
+        protected bool _twoLevelActivation;
 
         [XmlElement(ElementName = "twoLevelActivation", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TwoLevelActivationSpecified { get; set; }
 
-        private bool _provideDate;
+        protected bool _provideDate;
 
         [XmlElement(ElementName = "provideDate", IsNullable = false, Namespace = "")]
         [Optional]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProvideDateSpecified { get; set; }
 
-        private bool _lastUnansweredCallOnly;
+        protected bool _lastUnansweredCallOnly;
 
         [XmlElement(ElementName = "lastUnansweredCallOnly", IsNullable = false, Namespace = "")]
         [Optional]
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LastUnansweredCallOnlySpecified { get; set; }
 
-        private string _confirmationKey;
+        protected string _confirmationKey;
 
         [XmlElement(ElementName = "confirmationKey", IsNullable = true, Namespace = "")]
         [Optional]
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConfirmationKeySpecified { get; set; }
 
-        private bool _allowRestrictedNumber;
+        protected bool _allowRestrictedNumber;
 
         [XmlElement(ElementName = "allowRestrictedNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowRestrictedNumberSpecified { get; set; }
 
-        private bool _deleteNumberAfterAnsweredCallReturn;
+        protected bool _deleteNumberAfterAnsweredCallReturn;
 
         [XmlElement(ElementName = "deleteNumberAfterAnsweredCallReturn", IsNullable = false, Namespace = "")]
         [Optional]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupAccountAuthorizationCodesGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<BroadWorksConnector.Ocip.Models.AccountAuthorizationCodeEntry> _codeEntry = new List<BroadWorksConnector.Ocip.Models.AccountAuthorizationCodeEntry>();
+        protected List<BroadWorksConnector.Ocip.Models.AccountAuthorizationCodeEntry> _codeEntry = new List<BroadWorksConnector.Ocip.Models.AccountAuthorizationCodeEntry>();
 
         [XmlElement(ElementName = "codeEntry", IsNullable = false, Namespace = "")]
         [Optional]

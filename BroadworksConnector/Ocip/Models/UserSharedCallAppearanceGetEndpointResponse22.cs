@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserSharedCallAppearanceGetEndpointResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"524e0d071a229a44af2f953d6b50db35:113")]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private bool _allowOrigination;
+        protected bool _allowOrigination;
 
         [XmlElement(ElementName = "allowOrigination", IsNullable = false, Namespace = "")]
         [Group(@"524e0d071a229a44af2f953d6b50db35:113")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowOriginationSpecified { get; set; }
 
-        private bool _allowTermination;
+        protected bool _allowTermination;
 
         [XmlElement(ElementName = "allowTermination", IsNullable = false, Namespace = "")]
         [Group(@"524e0d071a229a44af2f953d6b50db35:113")]
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowTerminationSpecified { get; set; }
 
-        private bool _useHotline;
+        protected bool _useHotline;
 
         [XmlElement(ElementName = "useHotline", IsNullable = false, Namespace = "")]
         [Group(@"524e0d071a229a44af2f953d6b50db35:113")]
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseHotlineSpecified { get; set; }
 
-        private string _hotlineContact;
+        protected string _hotlineContact;
 
         [XmlElement(ElementName = "hotlineContact", IsNullable = false, Namespace = "")]
         [Optional]

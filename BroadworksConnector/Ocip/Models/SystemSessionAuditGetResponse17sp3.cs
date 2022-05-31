@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSessionAuditGetResponse17sp3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isAuditActive;
+        protected bool _isAuditActive;
 
         [XmlElement(ElementName = "isAuditActive", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:9282")]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsAuditActiveSpecified { get; set; }
 
-        private int _auditIntervalSeconds;
+        protected int _auditIntervalSeconds;
 
         [XmlElement(ElementName = "auditIntervalSeconds", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:9282")]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AuditIntervalSecondsSpecified { get; set; }
 
-        private int _auditTimeoutSeconds;
+        protected int _auditTimeoutSeconds;
 
         [XmlElement(ElementName = "auditTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:9282")]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AuditTimeoutSecondsSpecified { get; set; }
 
-        private bool _releaseCallOnAuditFailure;
+        protected bool _releaseCallOnAuditFailure;
 
         [XmlElement(ElementName = "releaseCallOnAuditFailure", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:9282")]
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReleaseCallOnAuditFailureSpecified { get; set; }
 
-        private bool _isSIPRefreshAllowedOnAudit;
+        protected bool _isSIPRefreshAllowedOnAudit;
 
         [XmlElement(ElementName = "isSIPRefreshAllowedOnAudit", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:9282")]
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsSIPRefreshAllowedOnAuditSpecified { get; set; }
 
-        private bool _allowUpdateForSIPRefresh;
+        protected bool _allowUpdateForSIPRefresh;
 
         [XmlElement(ElementName = "allowUpdateForSIPRefresh", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:9282")]
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowUpdateForSIPRefreshSpecified { get; set; }
 
-        private bool _isSIPSessionTimerActive;
+        protected bool _isSIPSessionTimerActive;
 
         [XmlElement(ElementName = "isSIPSessionTimerActive", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:9282")]
@@ -143,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsSIPSessionTimerActiveSpecified { get; set; }
 
-        private int _sipSessionExpiresMinimumSeconds;
+        protected int _sipSessionExpiresMinimumSeconds;
 
         [XmlElement(ElementName = "sipSessionExpiresMinimumSeconds", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:9282")]
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SipSessionExpiresMinimumSecondsSpecified { get; set; }
 
-        private bool _enforceSIPSessionExpiresMaximum;
+        protected bool _enforceSIPSessionExpiresMaximum;
 
         [XmlElement(ElementName = "enforceSIPSessionExpiresMaximum", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:9282")]
@@ -179,7 +179,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnforceSIPSessionExpiresMaximumSpecified { get; set; }
 
-        private int _sipSessionExpiresMaximumSeconds;
+        protected int _sipSessionExpiresMaximumSeconds;
 
         [XmlElement(ElementName = "sipSessionExpiresMaximumSeconds", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:9282")]
@@ -198,7 +198,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SipSessionExpiresMaximumSecondsSpecified { get; set; }
 
-        private int _sipSessionExpiresTimerSeconds;
+        protected int _sipSessionExpiresTimerSeconds;
 
         [XmlElement(ElementName = "sipSessionExpiresTimerSeconds", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:9282")]
@@ -217,7 +217,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SipSessionExpiresTimerSecondsSpecified { get; set; }
 
-        private bool _alwaysUseSessionTimerWhenSupported;
+        protected bool _alwaysUseSessionTimerWhenSupported;
 
         [XmlElement(ElementName = "alwaysUseSessionTimerWhenSupported", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:9282")]
@@ -234,7 +234,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlwaysUseSessionTimerWhenSupportedSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SessionTimerRefresher _preferredSessionTimerRefresher;
+        protected BroadWorksConnector.Ocip.Models.SessionTimerRefresher _preferredSessionTimerRefresher;
 
         [XmlElement(ElementName = "preferredSessionTimerRefresher", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:9282")]
@@ -251,7 +251,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PreferredSessionTimerRefresherSpecified { get; set; }
 
-        private bool _enableEmergencyCallAlarmTimer;
+        protected bool _enableEmergencyCallAlarmTimer;
 
         [XmlElement(ElementName = "enableEmergencyCallAlarmTimer", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:9282")]
@@ -268,7 +268,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableEmergencyCallAlarmTimerSpecified { get; set; }
 
-        private int _emergencyCallAlarmMinutes;
+        protected int _emergencyCallAlarmMinutes;
 
         [XmlElement(ElementName = "emergencyCallAlarmMinutes", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:9282")]
@@ -287,7 +287,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EmergencyCallAlarmMinutesSpecified { get; set; }
 
-        private bool _enableEmergencyCallCleanupTimer;
+        protected bool _enableEmergencyCallCleanupTimer;
 
         [XmlElement(ElementName = "enableEmergencyCallCleanupTimer", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:9282")]
@@ -304,7 +304,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableEmergencyCallCleanupTimerSpecified { get; set; }
 
-        private int _emergencyCallCleanupMinutes;
+        protected int _emergencyCallCleanupMinutes;
 
         [XmlElement(ElementName = "emergencyCallCleanupMinutes", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:9282")]

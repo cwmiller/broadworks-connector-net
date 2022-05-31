@@ -27,7 +27,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDeviceTypeImportRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _file;
+        protected string _file;
 
         [XmlElement(ElementName = "file", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:8857")]
@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FileSpecified { get; set; }
 
-        private string _resellerId;
+        protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResellerIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AccessDeviceTypeRename _deviceTypeRename;
+        protected BroadWorksConnector.Ocip.Models.AccessDeviceTypeRename _deviceTypeRename;
 
         [XmlElement(ElementName = "deviceTypeRename", IsNullable = false, Namespace = "")]
         [Optional]
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceTypeRenameSpecified { get; set; }
 
-        private bool _deviceTypeFileUpdate;
+        protected bool _deviceTypeFileUpdate;
 
         [XmlElement(ElementName = "deviceTypeFileUpdate", IsNullable = false, Namespace = "")]
         [Optional]

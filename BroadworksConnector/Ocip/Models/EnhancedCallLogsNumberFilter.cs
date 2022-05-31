@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnhancedCallLogsNumberFilter
     {
 
-        private List<BroadWorksConnector.Ocip.Models.BasicCallType> _includeBasicCallType = new List<BroadWorksConnector.Ocip.Models.BasicCallType>();
+        protected List<BroadWorksConnector.Ocip.Models.BasicCallType> _includeBasicCallType = new List<BroadWorksConnector.Ocip.Models.BasicCallType>();
 
         [XmlElement(ElementName = "includeBasicCallType", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:30")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeBasicCallTypeSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.CallCategory> _includeCallCategory = new List<BroadWorksConnector.Ocip.Models.CallCategory>();
+        protected List<BroadWorksConnector.Ocip.Models.CallCategory> _includeCallCategory = new List<BroadWorksConnector.Ocip.Models.CallCategory>();
 
         [XmlElement(ElementName = "includeCallCategory", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:30")]
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeCallCategorySpecified { get; set; }
 
-        private List<string> _includeConfigurableCallType = new List<string>();
+        protected List<string> _includeConfigurableCallType = new List<string>();
 
         [XmlElement(ElementName = "includeConfigurableCallType", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:30")]
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeConfigurableCallTypeSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> _searchCriteriaDialedNumber = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI>();
+        protected List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> _searchCriteriaDialedNumber = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI>();
 
         [XmlElement(ElementName = "searchCriteriaDialedNumber", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:30")]
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaDialedNumberSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> _searchCriteriaCalledNumber = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI>();
+        protected List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> _searchCriteriaCalledNumber = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI>();
 
         [XmlElement(ElementName = "searchCriteriaCalledNumber", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:30")]
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaCalledNumberSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> _searchCriteriaNetworkTranslatedNumber = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI>();
+        protected List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> _searchCriteriaNetworkTranslatedNumber = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI>();
 
         [XmlElement(ElementName = "searchCriteriaNetworkTranslatedNumber", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:30")]
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaNetworkTranslatedNumberSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> _searchCriteriaCallingPresentationNumber = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI>();
+        protected List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI> _searchCriteriaCallingPresentationNumber = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaOutgoingDNorSIPURI>();
 
         [XmlElement(ElementName = "searchCriteriaCallingPresentationNumber", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:30")]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallCenterAnnouncementMediaFileTypeList
     {
 
-        private BroadWorksConnector.Ocip.Models.MediaFileType _mediaType1;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType _mediaType1;
 
         [XmlElement(ElementName = "mediaType1", IsNullable = false, Namespace = "")]
         [Optional]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MediaType1Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MediaFileType _mediaType2;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType _mediaType2;
 
         [XmlElement(ElementName = "mediaType2", IsNullable = false, Namespace = "")]
         [Optional]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MediaType2Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MediaFileType _mediaType3;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType _mediaType3;
 
         [XmlElement(ElementName = "mediaType3", IsNullable = false, Namespace = "")]
         [Optional]
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MediaType3Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MediaFileType _mediaType4;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType _mediaType4;
 
         [XmlElement(ElementName = "mediaType4", IsNullable = false, Namespace = "")]
         [Optional]

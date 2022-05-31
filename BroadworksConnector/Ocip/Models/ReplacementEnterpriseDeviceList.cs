@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ReplacementEnterpriseDeviceList
     {
 
-        private List<BroadWorksConnector.Ocip.Models.EnterpriseAccessDevice> _device = new List<BroadWorksConnector.Ocip.Models.EnterpriseAccessDevice>();
+        protected List<BroadWorksConnector.Ocip.Models.EnterpriseAccessDevice> _device = new List<BroadWorksConnector.Ocip.Models.EnterpriseAccessDevice>();
 
         [XmlElement(ElementName = "device", IsNullable = false, Namespace = "")]
         [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1667")]

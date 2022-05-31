@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallParkModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"7a925e891158dfa3cb1319e045608894:519")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"7a925e891158dfa3cb1319e045608894:519")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private int _recallTimerSeconds;
+        protected int _recallTimerSeconds;
 
         [XmlElement(ElementName = "recallTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecallTimerSecondsSpecified { get; set; }
 
-        private int _displayTimerSeconds;
+        protected int _displayTimerSeconds;
 
         [XmlElement(ElementName = "displayTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisplayTimerSecondsSpecified { get; set; }
 
-        private bool _enableDestinationAnnouncement;
+        protected bool _enableDestinationAnnouncement;
 
         [XmlElement(ElementName = "enableDestinationAnnouncement", IsNullable = false, Namespace = "")]
         [Optional]
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableDestinationAnnouncementSpecified { get; set; }
 
-        private string _recallAlternateUserId;
+        protected string _recallAlternateUserId;
 
         [XmlElement(ElementName = "recallAlternateUserId", IsNullable = true, Namespace = "")]
         [Optional]
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecallAlternateUserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.RingPattern _recallRingPattern;
+        protected BroadWorksConnector.Ocip.Models.RingPattern _recallRingPattern;
 
         [XmlElement(ElementName = "recallRingPattern", IsNullable = false, Namespace = "")]
         [Optional]
@@ -153,7 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecallRingPatternSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallParkRecallTo _recallTo;
+        protected BroadWorksConnector.Ocip.Models.CallParkRecallTo _recallTo;
 
         [XmlElement(ElementName = "recallTo", IsNullable = false, Namespace = "")]
         [Optional]
@@ -171,7 +171,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecallToSpecified { get; set; }
 
-        private int _alternateUserRecallTimerSeconds;
+        protected int _alternateUserRecallTimerSeconds;
 
         [XmlElement(ElementName = "alternateUserRecallTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]

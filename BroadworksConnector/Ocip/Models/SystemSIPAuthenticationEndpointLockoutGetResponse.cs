@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSIPAuthenticationEndpointLockoutGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _lockoutTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _lockoutTable;
 
         [XmlElement(ElementName = "lockoutTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16574")]

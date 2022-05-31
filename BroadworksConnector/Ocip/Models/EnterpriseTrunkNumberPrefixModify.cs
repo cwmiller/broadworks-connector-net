@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseTrunkNumberPrefixModify
     {
 
-        private string _numberPrefix;
+        protected string _numberPrefix;
 
         [XmlElement(ElementName = "numberPrefix", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2598")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberPrefixSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ExtensionRange17 _extensionRange;
+        protected BroadWorksConnector.Ocip.Models.ExtensionRange17 _extensionRange;
 
         [XmlElement(ElementName = "extensionRange", IsNullable = true, Namespace = "")]
         [Optional]

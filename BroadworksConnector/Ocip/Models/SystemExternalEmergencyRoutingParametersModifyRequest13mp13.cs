@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemExternalEmergencyRoutingParametersModifyRequest13mp13 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceURI;
+        protected string _serviceURI;
 
         [XmlElement(ElementName = "serviceURI", IsNullable = true, Namespace = "")]
         [Optional]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceURISpecified { get; set; }
 
-        private string _defaultEmergencyNumber;
+        protected string _defaultEmergencyNumber;
 
         [XmlElement(ElementName = "defaultEmergencyNumber", IsNullable = true, Namespace = "")]
         [Optional]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultEmergencyNumberSpecified { get; set; }
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private bool _supportsDNSSRV;
+        protected bool _supportsDNSSRV;
 
         [XmlElement(ElementName = "supportsDNSSRV", IsNullable = false, Namespace = "")]
         [Optional]
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SupportsDNSSRVSpecified { get; set; }
 
-        private int _connectionTimeoutSeconds;
+        protected int _connectionTimeoutSeconds;
 
         [XmlElement(ElementName = "connectionTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]

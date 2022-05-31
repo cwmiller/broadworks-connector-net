@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserShInterfaceGetPublicIdDataRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserShInterfaceGetPublicIdDataResponse>
     {
 
-        private BroadWorksConnector.Ocip.Models.PublicUserIdentity _publicUserIdentity;
+        protected BroadWorksConnector.Ocip.Models.PublicUserIdentity _publicUserIdentity;
 
         [XmlElement(ElementName = "publicUserIdentity", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:14394")]

@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ResellerCallAdmissionControlPoliciesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _resellerId;
+        protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Group(@"b009175f2a2a9d38115e319a6ad64d7f:349")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResellerIdSpecified { get; set; }
 
-        private bool _enableCallAdmissionControl;
+        protected bool _enableCallAdmissionControl;
 
         [XmlElement(ElementName = "enableCallAdmissionControl", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableCallAdmissionControlSpecified { get; set; }
 
-        private int _maxConcurrentNetworkSessions;
+        protected int _maxConcurrentNetworkSessions;
 
         [XmlElement(ElementName = "maxConcurrentNetworkSessions", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxConcurrentNetworkSessionsSpecified { get; set; }
 
-        private int? _maxConcurrentNetworkSessionsThreshold;
+        protected int? _maxConcurrentNetworkSessionsThreshold;
 
         [XmlElement(ElementName = "maxConcurrentNetworkSessionsThreshold", IsNullable = true, Namespace = "")]
         [Optional]
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxConcurrentNetworkSessionsThresholdSpecified { get; set; }
 
-        private int _maxNetworkCallsPerSecond;
+        protected int _maxNetworkCallsPerSecond;
 
         [XmlElement(ElementName = "maxNetworkCallsPerSecond", IsNullable = false, Namespace = "")]
         [Optional]
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxNetworkCallsPerSecondSpecified { get; set; }
 
-        private int? _maxNetworkCallsPerSecondThreshold;
+        protected int? _maxNetworkCallsPerSecondThreshold;
 
         [XmlElement(ElementName = "maxNetworkCallsPerSecondThreshold", IsNullable = true, Namespace = "")]
         [Optional]
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxNetworkCallsPerSecondThresholdSpecified { get; set; }
 
-        private int _maxConcurrentExternalSIPRECSessions;
+        protected int _maxConcurrentExternalSIPRECSessions;
 
         [XmlElement(ElementName = "maxConcurrentExternalSIPRECSessions", IsNullable = false, Namespace = "")]
         [Optional]
@@ -156,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxConcurrentExternalSIPRECSessionsSpecified { get; set; }
 
-        private int? _maxConcurrentExternalSIPRECSessionsThreshold;
+        protected int? _maxConcurrentExternalSIPRECSessionsThreshold;
 
         [XmlElement(ElementName = "maxConcurrentExternalSIPRECSessionsThreshold", IsNullable = true, Namespace = "")]
         [Optional]

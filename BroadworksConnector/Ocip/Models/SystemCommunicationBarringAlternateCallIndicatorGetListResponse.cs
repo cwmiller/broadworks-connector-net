@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCommunicationBarringAlternateCallIndicatorGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _alternateCallIndicatorTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _alternateCallIndicatorTable;
 
         [XmlElement(ElementName = "alternateCallIndicatorTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5582")]

@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ReplacementCommunicationBarringIncomingRuleList
     {
 
-        private List<BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingRule> _rule = new List<BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingRule>();
+        protected List<BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingRule> _rule = new List<BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingRule>();
 
         [XmlElement(ElementName = "rule", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49351")]

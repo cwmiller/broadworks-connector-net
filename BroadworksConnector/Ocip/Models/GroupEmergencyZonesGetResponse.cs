@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupEmergencyZonesGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"e71c2205fb31894f87810b330a85ede2:137")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.EmergencyZonesProhibition _emergencyZonesProhibition;
+        protected BroadWorksConnector.Ocip.Models.EmergencyZonesProhibition _emergencyZonesProhibition;
 
         [XmlElement(ElementName = "emergencyZonesProhibition", IsNullable = false, Namespace = "")]
         [Group(@"e71c2205fb31894f87810b330a85ede2:137")]
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EmergencyZonesProhibitionSpecified { get; set; }
 
-        private bool _sendEmergencyCallNotifyEmail;
+        protected bool _sendEmergencyCallNotifyEmail;
 
         [XmlElement(ElementName = "sendEmergencyCallNotifyEmail", IsNullable = false, Namespace = "")]
         [Group(@"e71c2205fb31894f87810b330a85ede2:137")]
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SendEmergencyCallNotifyEmailSpecified { get; set; }
 
-        private string _emergencyCallNotifyEmailAddress;
+        protected string _emergencyCallNotifyEmailAddress;
 
         [XmlElement(ElementName = "emergencyCallNotifyEmailAddress", IsNullable = false, Namespace = "")]
         [Optional]

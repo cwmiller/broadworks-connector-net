@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseRouteListEnterpriseTrunkNumberRangeGetSummaryListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _numberRangeSummaryTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _numberRangeSummaryTable;
 
         [XmlElement(ElementName = "numberRangeSummaryTable", IsNullable = false, Namespace = "")]
         [Group(@"3f28429898a57a7f7846d3877b22df9f:200")]

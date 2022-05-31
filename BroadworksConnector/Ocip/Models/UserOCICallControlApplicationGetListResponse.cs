@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserOCICallControlApplicationGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _applicationId = new List<string>();
+        protected List<string> _applicationId = new List<string>();
 
         [XmlElement(ElementName = "applicationId", IsNullable = false, Namespace = "")]
         [Optional]

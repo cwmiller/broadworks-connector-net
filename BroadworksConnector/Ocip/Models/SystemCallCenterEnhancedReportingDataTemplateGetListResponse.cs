@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallCenterEnhancedReportingDataTemplateGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInfo> _info = new List<BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInfo>();
+        protected List<BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInfo> _info = new List<BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateInfo>();
 
         [XmlElement(ElementName = "info", IsNullable = false, Namespace = "")]
         [Optional]

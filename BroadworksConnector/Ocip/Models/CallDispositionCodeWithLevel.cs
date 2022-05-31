@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallDispositionCodeWithLevel
     {
 
-        private string _code;
+        protected string _code;
 
         [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:7748")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CodeSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallDispositionCodeLevel _level;
+        protected BroadWorksConnector.Ocip.Models.CallDispositionCodeLevel _level;
 
         [XmlElement(ElementName = "level", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:7748")]

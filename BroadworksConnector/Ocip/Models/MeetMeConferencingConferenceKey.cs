@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class MeetMeConferencingConferenceKey
     {
 
-        private string _bridgeId;
+        protected string _bridgeId;
 
         [XmlElement(ElementName = "bridgeId", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3011")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BridgeIdSpecified { get; set; }
 
-        private string _conferenceId;
+        protected string _conferenceId;
 
         [XmlElement(ElementName = "conferenceId", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3011")]

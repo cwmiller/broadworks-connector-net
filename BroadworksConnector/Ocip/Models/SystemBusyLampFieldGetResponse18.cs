@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemBusyLampFieldGetResponse18 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _displayLocalUserIdentityLastNameFirst;
+        protected bool _displayLocalUserIdentityLastNameFirst;
 
         [XmlElement(ElementName = "displayLocalUserIdentityLastNameFirst", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:6986")]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisplayLocalUserIdentityLastNameFirstSpecified { get; set; }
 
-        private bool _forceUseOfTCP;
+        protected bool _forceUseOfTCP;
 
         [XmlElement(ElementName = "forceUseOfTCP", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:6986")]

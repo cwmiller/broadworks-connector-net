@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CommPilotExpressAvailableInOfficeModify
     {
 
-        private string _additionalPhoneNumberToRing;
+        protected string _additionalPhoneNumberToRing;
 
         [XmlElement(ElementName = "additionalPhoneNumberToRing", IsNullable = true, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AdditionalPhoneNumberToRingSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionModify _busySetting;
+        protected BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionModify _busySetting;
 
         [XmlElement(ElementName = "busySetting", IsNullable = false, Namespace = "")]
         [Optional]
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BusySettingSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionModify _noAnswerSetting;
+        protected BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionModify _noAnswerSetting;
 
         [XmlElement(ElementName = "noAnswerSetting", IsNullable = false, Namespace = "")]
         [Optional]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSubscriberGetLoginParametersResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private int _maxFailedLoginAttempts;
+        protected int _maxFailedLoginAttempts;
 
         [XmlElement(ElementName = "maxFailedLoginAttempts", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18022")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxFailedLoginAttemptsSpecified { get; set; }
 
-        private int _minLoginIdLength;
+        protected int _minLoginIdLength;
 
         [XmlElement(ElementName = "minLoginIdLength", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18022")]

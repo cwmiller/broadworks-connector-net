@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAccountingReorderChargingFunctionElementServerRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private List<string> _orderedAddressList = new List<string>();
+        protected List<string> _orderedAddressList = new List<string>();
 
         [XmlElement(ElementName = "orderedAddressList", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2059")]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class MusicOnHoldSourceRead22V3AnnouncementCustomSourceMediaFiles
     {
 
-        private BroadWorksConnector.Ocip.Models.AnnouncementFileKey _audioFile;
+        protected BroadWorksConnector.Ocip.Models.AnnouncementFileKey _audioFile;
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
         [Optional]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioFileSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AnnouncementFileKey _videoFile;
+        protected BroadWorksConnector.Ocip.Models.AnnouncementFileKey _videoFile;
 
         [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
         [Optional]

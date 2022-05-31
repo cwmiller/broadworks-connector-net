@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallForwardingOptionsMenuKeysModifyEntry
     {
 
-        private string _activateCallForwarding;
+        protected string _activateCallForwarding;
 
         [XmlElement(ElementName = "activateCallForwarding", IsNullable = true, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ActivateCallForwardingSpecified { get; set; }
 
-        private string _deactivateCallForwarding;
+        protected string _deactivateCallForwarding;
 
         [XmlElement(ElementName = "deactivateCallForwarding", IsNullable = true, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeactivateCallForwardingSpecified { get; set; }
 
-        private string _changeCallForwardingDestination;
+        protected string _changeCallForwardingDestination;
 
         [XmlElement(ElementName = "changeCallForwardingDestination", IsNullable = true, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ChangeCallForwardingDestinationSpecified { get; set; }
 
-        private string _listenToCallForwardingStatus;
+        protected string _listenToCallForwardingStatus;
 
         [XmlElement(ElementName = "listenToCallForwardingStatus", IsNullable = true, Namespace = "")]
         [Optional]
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ListenToCallForwardingStatusSpecified { get; set; }
 
-        private string _returnToPreviousMenu;
+        protected string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Optional]
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReturnToPreviousMenuSpecified { get; set; }
 
-        private string _repeatMenu;
+        protected string _repeatMenu;
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]

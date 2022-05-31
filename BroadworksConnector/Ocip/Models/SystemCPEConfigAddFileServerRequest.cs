@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCPEConfigAddFileServerRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _deviceType;
+        protected string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25347")]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceTypeSpecified { get; set; }
 
-        private string _ftpHostNetAddress;
+        protected string _ftpHostNetAddress;
 
         [XmlElement(ElementName = "ftpHostNetAddress", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25347")]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FtpHostNetAddressSpecified { get; set; }
 
-        private string _ftpUserId;
+        protected string _ftpUserId;
 
         [XmlElement(ElementName = "ftpUserId", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25347")]
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FtpUserIdSpecified { get; set; }
 
-        private string _ftpUserPassword;
+        protected string _ftpUserPassword;
 
         [XmlElement(ElementName = "ftpUserPassword", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25347")]
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FtpUserPasswordSpecified { get; set; }
 
-        private string _cpeFileDirectory;
+        protected string _cpeFileDirectory;
 
         [XmlElement(ElementName = "cpeFileDirectory", IsNullable = false, Namespace = "")]
         [Optional]
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CpeFileDirectorySpecified { get; set; }
 
-        private bool _passiveFTP;
+        protected bool _passiveFTP;
 
         [XmlElement(ElementName = "passiveFTP", IsNullable = false, Namespace = "")]
         [Optional]

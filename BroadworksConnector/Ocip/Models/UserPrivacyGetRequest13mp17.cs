@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserPrivacyGetRequest13mp17 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserPrivacyGetResponse13mp17>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:146")]

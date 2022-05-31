@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupRouteListEnterpriseTrunkNumberRangeGetAvailableListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _availableNumberRangeTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _availableNumberRangeTable;
 
         [XmlElement(ElementName = "availableNumberRangeTable", IsNullable = false, Namespace = "")]
         [Group(@"3f28429898a57a7f7846d3877b22df9f:365")]

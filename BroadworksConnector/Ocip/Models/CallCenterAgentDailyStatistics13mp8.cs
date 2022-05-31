@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallCenterAgentDailyStatistics13mp8
     {
 
-        private int _numberOfCallsReceived;
+        protected int _numberOfCallsReceived;
 
         [XmlElement(ElementName = "numberOfCallsReceived", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47624")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberOfCallsReceivedSpecified { get; set; }
 
-        private int _numberOfCallsNotAnswered;
+        protected int _numberOfCallsNotAnswered;
 
         [XmlElement(ElementName = "numberOfCallsNotAnswered", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47624")]
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberOfCallsNotAnsweredSpecified { get; set; }
 
-        private int _averageTimePerCallSeconds;
+        protected int _averageTimePerCallSeconds;
 
         [XmlElement(ElementName = "averageTimePerCallSeconds", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47624")]
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AverageTimePerCallSecondsSpecified { get; set; }
 
-        private int _timeInCallsSeconds;
+        protected int _timeInCallsSeconds;
 
         [XmlElement(ElementName = "timeInCallsSeconds", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47624")]
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TimeInCallsSecondsSpecified { get; set; }
 
-        private int _timeLoggedOffSeconds;
+        protected int _timeLoggedOffSeconds;
 
         [XmlElement(ElementName = "timeLoggedOffSeconds", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47624")]
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TimeLoggedOffSecondsSpecified { get; set; }
 
-        private int _timeLoggedOnAndIdleSeconds;
+        protected int _timeLoggedOnAndIdleSeconds;
 
         [XmlElement(ElementName = "timeLoggedOnAndIdleSeconds", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47624")]

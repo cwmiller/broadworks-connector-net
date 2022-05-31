@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseSessionAdmissionControlGroupModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1080")]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _name;
+        protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1080")]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NameSpecified { get; set; }
 
-        private string _newName;
+        protected string _newName;
 
         [XmlElement(ElementName = "newName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewNameSpecified { get; set; }
 
-        private int _maxSession;
+        protected int _maxSession;
 
         [XmlElement(ElementName = "maxSession", IsNullable = false, Namespace = "")]
         [Optional]
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxSessionSpecified { get; set; }
 
-        private int? _maxUserOriginatingSessions;
+        protected int? _maxUserOriginatingSessions;
 
         [XmlElement(ElementName = "maxUserOriginatingSessions", IsNullable = true, Namespace = "")]
         [Optional]
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxUserOriginatingSessionsSpecified { get; set; }
 
-        private int? _maxUserTerminatingSessions;
+        protected int? _maxUserTerminatingSessions;
 
         [XmlElement(ElementName = "maxUserTerminatingSessions", IsNullable = true, Namespace = "")]
         [Optional]
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxUserTerminatingSessionsSpecified { get; set; }
 
-        private int _reservedSession;
+        protected int _reservedSession;
 
         [XmlElement(ElementName = "reservedSession", IsNullable = false, Namespace = "")]
         [Optional]
@@ -155,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReservedSessionSpecified { get; set; }
 
-        private int? _reservedUserOriginatingSessions;
+        protected int? _reservedUserOriginatingSessions;
 
         [XmlElement(ElementName = "reservedUserOriginatingSessions", IsNullable = true, Namespace = "")]
         [Optional]
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReservedUserOriginatingSessionsSpecified { get; set; }
 
-        private int? _reservedUserTerminatingSessions;
+        protected int? _reservedUserTerminatingSessions;
 
         [XmlElement(ElementName = "reservedUserTerminatingSessions", IsNullable = true, Namespace = "")]
         [Optional]
@@ -193,7 +193,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReservedUserTerminatingSessionsSpecified { get; set; }
 
-        private bool _becomeDefaultGroup;
+        protected bool _becomeDefaultGroup;
 
         [XmlElement(ElementName = "becomeDefaultGroup", IsNullable = false, Namespace = "")]
         [Optional]
@@ -211,7 +211,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BecomeDefaultGroupSpecified { get; set; }
 
-        private bool _countIntraSACGroupSessions;
+        protected bool _countIntraSACGroupSessions;
 
         [XmlElement(ElementName = "countIntraSACGroupSessions", IsNullable = false, Namespace = "")]
         [Optional]
@@ -229,7 +229,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CountIntraSACGroupSessionsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ReplacementEnterpriseDeviceList _deviceList;
+        protected BroadWorksConnector.Ocip.Models.ReplacementEnterpriseDeviceList _deviceList;
 
         [XmlElement(ElementName = "deviceList", IsNullable = true, Namespace = "")]
         [Optional]
@@ -247,7 +247,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceListSpecified { get; set; }
 
-        private bool _blockEmergencyAndRepairCallsDueToSACLimits;
+        protected bool _blockEmergencyAndRepairCallsDueToSACLimits;
 
         [XmlElement(ElementName = "blockEmergencyAndRepairCallsDueToSACLimits", IsNullable = false, Namespace = "")]
         [Optional]
@@ -265,7 +265,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BlockEmergencyAndRepairCallsDueToSACLimitsSpecified { get; set; }
 
-        private string _mediaGroupName;
+        protected string _mediaGroupName;
 
         [XmlElement(ElementName = "mediaGroupName", IsNullable = true, Namespace = "")]
         [Optional]
@@ -285,7 +285,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MediaGroupNameSpecified { get; set; }
 
-        private string _accessInfoPattern;
+        protected string _accessInfoPattern;
 
         [XmlElement(ElementName = "accessInfoPattern", IsNullable = true, Namespace = "")]
         [Optional]

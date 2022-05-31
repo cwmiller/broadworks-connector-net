@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCrInterfaceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _crAuditEnabled;
+        protected bool _crAuditEnabled;
 
         [XmlElement(ElementName = "crAuditEnabled", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CrAuditEnabledSpecified { get; set; }
 
-        private int _crAuditIntervalMilliseconds;
+        protected int _crAuditIntervalMilliseconds;
 
         [XmlElement(ElementName = "crAuditIntervalMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CrAuditIntervalMillisecondsSpecified { get; set; }
 
-        private int _crAuditTimeoutMilliseconds;
+        protected int _crAuditTimeoutMilliseconds;
 
         [XmlElement(ElementName = "crAuditTimeoutMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CrAuditTimeoutMillisecondsSpecified { get; set; }
 
-        private bool _crConnectionEnabled;
+        protected bool _crConnectionEnabled;
 
         [XmlElement(ElementName = "crConnectionEnabled", IsNullable = false, Namespace = "")]
         [Optional]
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CrConnectionEnabledSpecified { get; set; }
 
-        private int _crConnectionTimeoutMilliseconds;
+        protected int _crConnectionTimeoutMilliseconds;
 
         [XmlElement(ElementName = "crConnectionTimeoutMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CrConnectionTimeoutMillisecondsSpecified { get; set; }
 
-        private int _crTcpConnectionTimeoutSeconds;
+        protected int _crTcpConnectionTimeoutSeconds;
 
         [XmlElement(ElementName = "crTcpConnectionTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CrTcpConnectionTimeoutSecondsSpecified { get; set; }
 
-        private int _crNumberOfReconnectionAttempts;
+        protected int _crNumberOfReconnectionAttempts;
 
         [XmlElement(ElementName = "crNumberOfReconnectionAttempts", IsNullable = false, Namespace = "")]
         [Optional]

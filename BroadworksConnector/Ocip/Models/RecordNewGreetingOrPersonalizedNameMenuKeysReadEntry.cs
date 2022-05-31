@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class RecordNewGreetingOrPersonalizedNameMenuKeysReadEntry
     {
 
-        private string _endRecording;
+        protected string _endRecording;
 
         [XmlElement(ElementName = "endRecording", IsNullable = false, Namespace = "")]
         [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2957")]

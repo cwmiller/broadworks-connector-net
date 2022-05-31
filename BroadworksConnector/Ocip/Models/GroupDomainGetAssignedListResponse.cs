@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupDomainGetAssignedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _groupDefaultDomain;
+        protected string _groupDefaultDomain;
 
         [XmlElement(ElementName = "groupDefaultDomain", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5462")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupDefaultDomainSpecified { get; set; }
 
-        private List<string> _domain = new List<string>();
+        protected List<string> _domain = new List<string>();
 
         [XmlElement(ElementName = "domain", IsNullable = false, Namespace = "")]
         [Optional]

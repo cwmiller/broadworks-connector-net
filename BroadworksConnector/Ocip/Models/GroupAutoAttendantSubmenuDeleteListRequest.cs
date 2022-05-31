@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupAutoAttendantSubmenuDeleteListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceUserId;
+        protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
         [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:463")]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        private List<string> _submenuId = new List<string>();
+        protected List<string> _submenuId = new List<string>();
 
         [XmlElement(ElementName = "submenuId", IsNullable = false, Namespace = "")]
         [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:463")]

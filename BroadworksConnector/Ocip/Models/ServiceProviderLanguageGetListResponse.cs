@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderLanguageGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _language = new List<string>();
+        protected List<string> _language = new List<string>();
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LanguageSpecified { get; set; }
 
-        private string _defaultLanguage;
+        protected string _defaultLanguage;
 
         [XmlElement(ElementName = "defaultLanguage", IsNullable = false, Namespace = "")]
         [Optional]

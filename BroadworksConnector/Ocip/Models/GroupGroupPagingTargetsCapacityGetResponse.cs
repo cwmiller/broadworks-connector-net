@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupGroupPagingTargetsCapacityGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private int _maximumTargetUsersFromServiceProvider;
+        protected int _maximumTargetUsersFromServiceProvider;
 
         [XmlElement(ElementName = "maximumTargetUsersFromServiceProvider", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:2658")]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaximumTargetUsersFromServiceProviderSpecified { get; set; }
 
-        private int _maximumTargetUsers;
+        protected int _maximumTargetUsers;
 
         [XmlElement(ElementName = "maximumTargetUsers", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:2658")]

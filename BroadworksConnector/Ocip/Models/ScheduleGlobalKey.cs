@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ScheduleGlobalKey
     {
 
-        private BroadWorksConnector.Ocip.Models.ScheduleKey _scheduleKey;
+        protected BroadWorksConnector.Ocip.Models.ScheduleKey _scheduleKey;
 
         [XmlElement(ElementName = "scheduleKey", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4099")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ScheduleKeySpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ScheduleLevel _scheduleLevel;
+        protected BroadWorksConnector.Ocip.Models.ScheduleLevel _scheduleLevel;
 
         [XmlElement(ElementName = "scheduleLevel", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4099")]

@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserINIntegrationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"e2b7b9ea45350592016ce6935a4d7694:73")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private int? _originatingServiceKey;
+        protected int? _originatingServiceKey;
 
         [XmlElement(ElementName = "originatingServiceKey", IsNullable = true, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OriginatingServiceKeySpecified { get; set; }
 
-        private int? _terminatingServiceKey;
+        protected int? _terminatingServiceKey;
 
         [XmlElement(ElementName = "terminatingServiceKey", IsNullable = true, Namespace = "")]
         [Optional]

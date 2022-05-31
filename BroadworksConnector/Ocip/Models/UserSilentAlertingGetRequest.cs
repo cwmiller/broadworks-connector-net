@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserSilentAlertingGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserSilentAlertingGetResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"f2b3ec892c5d27b9eb241f1d4d0f94f9:42")]

@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemConfigurableTreatmentGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _treatmentTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _treatmentTable;
 
         [XmlElement(ElementName = "treatmentTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6755")]

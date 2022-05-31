@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserDirectRouteGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserDirectRouteGetResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"4e1b40cd187e65e0dc647394b1e74e3c:41")]

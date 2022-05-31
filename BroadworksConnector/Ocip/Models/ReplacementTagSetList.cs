@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ReplacementTagSetList
     {
 
-        private List<string> _tagSet = new List<string>();
+        protected List<string> _tagSet = new List<string>();
 
         [XmlElement(ElementName = "tagSet", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4016")]

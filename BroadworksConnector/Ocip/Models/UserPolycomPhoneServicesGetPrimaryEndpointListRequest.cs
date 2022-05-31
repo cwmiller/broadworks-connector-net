@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserPolycomPhoneServicesGetPrimaryEndpointListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserPolycomPhoneServicesGetPrimaryEndpointListResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"4f074d986b998636e2bcb0d67372b0f4:100")]

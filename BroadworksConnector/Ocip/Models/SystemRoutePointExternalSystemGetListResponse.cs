@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemRoutePointExternalSystemGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _externalSystemTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _externalSystemTable;
 
         [XmlElement(ElementName = "externalSystemTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15139")]

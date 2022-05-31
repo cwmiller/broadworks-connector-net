@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CommPilotExpressEmailNotifyModify
     {
 
-        private bool _sendEmail;
+        protected bool _sendEmail;
 
         [XmlElement(ElementName = "sendEmail", IsNullable = false, Namespace = "")]
         [Optional]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SendEmailSpecified { get; set; }
 
-        private string _emailAddress;
+        protected string _emailAddress;
 
         [XmlElement(ElementName = "emailAddress", IsNullable = true, Namespace = "")]
         [Optional]

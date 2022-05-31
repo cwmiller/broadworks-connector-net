@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserSimultaneousRingPersonalGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46528")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SimultaneousRingSelection _incomingCalls;
+        protected BroadWorksConnector.Ocip.Models.SimultaneousRingSelection _incomingCalls;
 
         [XmlElement(ElementName = "incomingCalls", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46528")]
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncomingCallsSpecified { get; set; }
 
-        private List<string> _simRingPhoneNumber = new List<string>();
+        protected List<string> _simRingPhoneNumber = new List<string>();
 
         [XmlElement(ElementName = "simRingPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]

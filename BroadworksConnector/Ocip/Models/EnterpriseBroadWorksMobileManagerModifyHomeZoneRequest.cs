@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseBroadWorksMobileManagerModifyHomeZoneRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"5395c7df0157d44aa22f3351d1a5f3da:351")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _homeZoneId;
+        protected string _homeZoneId;
 
         [XmlElement(ElementName = "homeZoneId", IsNullable = false, Namespace = "")]
         [Group(@"5395c7df0157d44aa22f3351d1a5f3da:351")]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HomeZoneIdSpecified { get; set; }
 
-        private string _homeZoneDomainName;
+        protected string _homeZoneDomainName;
 
         [XmlElement(ElementName = "homeZoneDomainName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HomeZoneDomainNameSpecified { get; set; }
 
-        private string _mobileCountryCode;
+        protected string _mobileCountryCode;
 
         [XmlElement(ElementName = "mobileCountryCode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MobileCountryCodeSpecified { get; set; }
 
-        private string _mobileNetworkCode;
+        protected string _mobileNetworkCode;
 
         [XmlElement(ElementName = "mobileNetworkCode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MobileNetworkCodeSpecified { get; set; }
 
-        private string _locationAreaCode;
+        protected string _locationAreaCode;
 
         [XmlElement(ElementName = "locationAreaCode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LocationAreaCodeSpecified { get; set; }
 
-        private string _cellIdentity;
+        protected string _cellIdentity;
 
         [XmlElement(ElementName = "cellIdentity", IsNullable = false, Namespace = "")]
         [Optional]

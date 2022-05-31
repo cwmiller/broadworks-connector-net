@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemOfficeZoneModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _officeZoneName;
+        protected string _officeZoneName;
 
         [XmlElement(ElementName = "officeZoneName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14029")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OfficeZoneNameSpecified { get; set; }
 
-        private string _newOfficeZoneName;
+        protected string _newOfficeZoneName;
 
         [XmlElement(ElementName = "newOfficeZoneName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewOfficeZoneNameSpecified { get; set; }
 
-        private string _description;
+        protected string _description;
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DescriptionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ReplacementZoneList _replacementZoneList;
+        protected BroadWorksConnector.Ocip.Models.ReplacementZoneList _replacementZoneList;
 
         [XmlElement(ElementName = "replacementZoneList", IsNullable = false, Namespace = "")]
         [Optional]
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReplacementZoneListSpecified { get; set; }
 
-        private string _primaryZoneName;
+        protected string _primaryZoneName;
 
         [XmlElement(ElementName = "primaryZoneName", IsNullable = false, Namespace = "")]
         [Optional]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserChargeNumberGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _phoneNumber;
+        protected string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Optional]

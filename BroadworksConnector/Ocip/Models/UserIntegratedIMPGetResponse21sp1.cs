@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserIntegratedIMPGetResponse21sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"23389100b68cef3aa07ee12ac7a2bd16:352")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private string _impId;
+        protected string _impId;
 
         [XmlElement(ElementName = "impId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ImpIdSpecified { get; set; }
 
-        private bool _isAlternateImpId;
+        protected bool _isAlternateImpId;
 
         [XmlElement(ElementName = "isAlternateImpId", IsNullable = false, Namespace = "")]
         [Optional]

@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseCallCenterAgentThresholdDefaultProfileGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _profileName;
+        protected string _profileName;
 
         [XmlElement(ElementName = "profileName", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:317")]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProfileNameSpecified { get; set; }
 
-        private string _profileDescription;
+        protected string _profileDescription;
 
         [XmlElement(ElementName = "profileDescription", IsNullable = false, Namespace = "")]
         [Optional]
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProfileDescriptionSpecified { get; set; }
 
-        private int _thresholdCurrentCallStateIdleTimeYellow;
+        protected int _thresholdCurrentCallStateIdleTimeYellow;
 
         [XmlElement(ElementName = "thresholdCurrentCallStateIdleTimeYellow", IsNullable = false, Namespace = "")]
         [Optional]
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdCurrentCallStateIdleTimeYellowSpecified { get; set; }
 
-        private int _thresholdCurrentCallStateIdleTimeRed;
+        protected int _thresholdCurrentCallStateIdleTimeRed;
 
         [XmlElement(ElementName = "thresholdCurrentCallStateIdleTimeRed", IsNullable = false, Namespace = "")]
         [Optional]
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdCurrentCallStateIdleTimeRedSpecified { get; set; }
 
-        private int _thresholdCurrentCallStateOnCallTimeYellow;
+        protected int _thresholdCurrentCallStateOnCallTimeYellow;
 
         [XmlElement(ElementName = "thresholdCurrentCallStateOnCallTimeYellow", IsNullable = false, Namespace = "")]
         [Optional]
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdCurrentCallStateOnCallTimeYellowSpecified { get; set; }
 
-        private int _thresholdCurrentCallStateOnCallTimeRed;
+        protected int _thresholdCurrentCallStateOnCallTimeRed;
 
         [XmlElement(ElementName = "thresholdCurrentCallStateOnCallTimeRed", IsNullable = false, Namespace = "")]
         [Optional]
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdCurrentCallStateOnCallTimeRedSpecified { get; set; }
 
-        private int _thresholdCurrentAgentStateUnavailableTimeYellow;
+        protected int _thresholdCurrentAgentStateUnavailableTimeYellow;
 
         [XmlElement(ElementName = "thresholdCurrentAgentStateUnavailableTimeYellow", IsNullable = false, Namespace = "")]
         [Optional]
@@ -160,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdCurrentAgentStateUnavailableTimeYellowSpecified { get; set; }
 
-        private int _thresholdCurrentAgentStateUnavailableTimeRed;
+        protected int _thresholdCurrentAgentStateUnavailableTimeRed;
 
         [XmlElement(ElementName = "thresholdCurrentAgentStateUnavailableTimeRed", IsNullable = false, Namespace = "")]
         [Optional]
@@ -180,7 +180,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdCurrentAgentStateUnavailableTimeRedSpecified { get; set; }
 
-        private int _thresholdAverageBusyInTimeYellow;
+        protected int _thresholdAverageBusyInTimeYellow;
 
         [XmlElement(ElementName = "thresholdAverageBusyInTimeYellow", IsNullable = false, Namespace = "")]
         [Optional]
@@ -200,7 +200,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdAverageBusyInTimeYellowSpecified { get; set; }
 
-        private int _thresholdAverageBusyInTimeRed;
+        protected int _thresholdAverageBusyInTimeRed;
 
         [XmlElement(ElementName = "thresholdAverageBusyInTimeRed", IsNullable = false, Namespace = "")]
         [Optional]
@@ -220,7 +220,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdAverageBusyInTimeRedSpecified { get; set; }
 
-        private int _thresholdAverageBusyOutTimeYellow;
+        protected int _thresholdAverageBusyOutTimeYellow;
 
         [XmlElement(ElementName = "thresholdAverageBusyOutTimeYellow", IsNullable = false, Namespace = "")]
         [Optional]
@@ -240,7 +240,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdAverageBusyOutTimeYellowSpecified { get; set; }
 
-        private int _thresholdAverageBusyOutTimeRed;
+        protected int _thresholdAverageBusyOutTimeRed;
 
         [XmlElement(ElementName = "thresholdAverageBusyOutTimeRed", IsNullable = false, Namespace = "")]
         [Optional]
@@ -260,7 +260,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdAverageBusyOutTimeRedSpecified { get; set; }
 
-        private int _thresholdAverageWrapUpTimeYellow;
+        protected int _thresholdAverageWrapUpTimeYellow;
 
         [XmlElement(ElementName = "thresholdAverageWrapUpTimeYellow", IsNullable = false, Namespace = "")]
         [Optional]
@@ -280,7 +280,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdAverageWrapUpTimeYellowSpecified { get; set; }
 
-        private int _thresholdAverageWrapUpTimeRed;
+        protected int _thresholdAverageWrapUpTimeRed;
 
         [XmlElement(ElementName = "thresholdAverageWrapUpTimeRed", IsNullable = false, Namespace = "")]
         [Optional]
@@ -300,7 +300,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdAverageWrapUpTimeRedSpecified { get; set; }
 
-        private bool _enableNotificationEmail;
+        protected bool _enableNotificationEmail;
 
         [XmlElement(ElementName = "enableNotificationEmail", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:317")]
@@ -317,7 +317,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableNotificationEmailSpecified { get; set; }
 
-        private List<string> _notificationEmailAddress = new List<string>();
+        protected List<string> _notificationEmailAddress = new List<string>();
 
         [XmlElement(ElementName = "notificationEmailAddress", IsNullable = false, Namespace = "")]
         [Optional]
@@ -337,7 +337,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NotificationEmailAddressSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _agentTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _agentTable;
 
         [XmlElement(ElementName = "agentTable", IsNullable = false, Namespace = "")]
         [Optional]

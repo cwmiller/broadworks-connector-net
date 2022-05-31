@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupServiceGetAuthorizationResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _authorized;
+        protected bool _authorized;
 
         [XmlElement(ElementName = "authorized", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7809")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AuthorizedSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _authorizedQuantity;
+        protected BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _authorizedQuantity;
 
         [XmlElement(ElementName = "authorizedQuantity", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AuthorizedQuantitySpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _usedQuantity;
+        protected BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _usedQuantity;
 
         [XmlElement(ElementName = "usedQuantity", IsNullable = false, Namespace = "")]
         [Optional]
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UsedQuantitySpecified { get; set; }
 
-        private bool _authorizable;
+        protected bool _authorizable;
 
         [XmlElement(ElementName = "authorizable", IsNullable = false, Namespace = "")]
         [Optional]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnhancedCallLogsTimeRange
     {
 
-        private string _startDateTime;
+        protected string _startDateTime;
 
         [XmlElement(ElementName = "startDateTime", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2556")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StartDateTimeSpecified { get; set; }
 
-        private string _endDateTime;
+        protected string _endDateTime;
 
         [XmlElement(ElementName = "endDateTime", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2556")]

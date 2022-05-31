@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemLegacyAutomaticCallbackGetLineTypeListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _lineTypeTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _lineTypeTable;
 
         [XmlElement(ElementName = "lineTypeTable", IsNullable = false, Namespace = "")]
         [Group(@"6bf3c0ead6c4d948122ea83af7fc6e34:63")]

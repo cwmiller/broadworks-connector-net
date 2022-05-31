@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class DirectRouteReplacementIdentityList
     {
 
-        private string _dtgIdentity;
+        protected string _dtgIdentity;
 
         [XmlElement(ElementName = "dtgIdentity", IsNullable = false, Namespace = "")]
         [Group(@"4e1b40cd187e65e0dc647394b1e74e3c:114")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DtgIdentitySpecified { get; set; }
 
-        private string _trunkIdentity;
+        protected string _trunkIdentity;
 
         [XmlElement(ElementName = "trunkIdentity", IsNullable = false, Namespace = "")]
         [Group(@"4e1b40cd187e65e0dc647394b1e74e3c:114")]

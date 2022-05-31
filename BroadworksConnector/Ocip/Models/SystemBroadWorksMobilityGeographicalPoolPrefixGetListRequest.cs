@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemBroadWorksMobilityGeographicalPoolPrefixGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemBroadWorksMobilityGeographicalPoolPrefixGetListResponse>
     {
 
-        private string _geographicalPoolName;
+        protected string _geographicalPoolName;
 
         [XmlElement(ElementName = "geographicalPoolName", IsNullable = false, Namespace = "")]
         [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:934")]

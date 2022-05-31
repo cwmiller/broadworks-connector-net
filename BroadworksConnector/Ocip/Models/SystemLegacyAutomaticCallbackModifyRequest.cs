@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemLegacyAutomaticCallbackModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private int _maxMonitorsPerOriginator;
+        protected int _maxMonitorsPerOriginator;
 
         [XmlElement(ElementName = "maxMonitorsPerOriginator", IsNullable = false, Namespace = "")]
         [Optional]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxMonitorsPerOriginatorSpecified { get; set; }
 
-        private int _maxMonitorsPerTerminator;
+        protected int _maxMonitorsPerTerminator;
 
         [XmlElement(ElementName = "maxMonitorsPerTerminator", IsNullable = false, Namespace = "")]
         [Optional]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxMonitorsPerTerminatorSpecified { get; set; }
 
-        private int _t2Minutes;
+        protected int _t2Minutes;
 
         [XmlElement(ElementName = "t2Minutes", IsNullable = false, Namespace = "")]
         [Optional]
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool T2MinutesSpecified { get; set; }
 
-        private int _t4Seconds;
+        protected int _t4Seconds;
 
         [XmlElement(ElementName = "t4Seconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool T4SecondsSpecified { get; set; }
 
-        private int _t5Seconds;
+        protected int _t5Seconds;
 
         [XmlElement(ElementName = "t5Seconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool T5SecondsSpecified { get; set; }
 
-        private int _t6Minutes;
+        protected int _t6Minutes;
 
         [XmlElement(ElementName = "t6Minutes", IsNullable = false, Namespace = "")]
         [Optional]
@@ -139,7 +139,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool T6MinutesSpecified { get; set; }
 
-        private int _t7Minutes;
+        protected int _t7Minutes;
 
         [XmlElement(ElementName = "t7Minutes", IsNullable = false, Namespace = "")]
         [Optional]
@@ -159,7 +159,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool T7MinutesSpecified { get; set; }
 
-        private int _t8Seconds;
+        protected int _t8Seconds;
 
         [XmlElement(ElementName = "t8Seconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -179,7 +179,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool T8SecondsSpecified { get; set; }
 
-        private int _tRingSeconds;
+        protected int _tRingSeconds;
 
         [XmlElement(ElementName = "tRingSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -199,7 +199,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TRingSecondsSpecified { get; set; }
 
-        private int _t10OMinutes;
+        protected int _t10OMinutes;
 
         [XmlElement(ElementName = "t10OMinutes", IsNullable = false, Namespace = "")]
         [Optional]
@@ -219,7 +219,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool T10OMinutesSpecified { get; set; }
 
-        private int _t10TMinutes;
+        protected int _t10TMinutes;
 
         [XmlElement(ElementName = "t10TMinutes", IsNullable = false, Namespace = "")]
         [Optional]

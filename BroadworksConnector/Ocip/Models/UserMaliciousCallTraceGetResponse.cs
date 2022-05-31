@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserMaliciousCallTraceGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"0da7c658f240cdc10c3f9cb328db57d8:168")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MaliciousCallTraceCallTypeSelection _traceTypeSelection;
+        protected BroadWorksConnector.Ocip.Models.MaliciousCallTraceCallTypeSelection _traceTypeSelection;
 
         [XmlElement(ElementName = "traceTypeSelection", IsNullable = false, Namespace = "")]
         [Group(@"0da7c658f240cdc10c3f9cb328db57d8:168")]
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TraceTypeSelectionSpecified { get; set; }
 
-        private bool _traceForTimePeriod;
+        protected bool _traceForTimePeriod;
 
         [XmlElement(ElementName = "traceForTimePeriod", IsNullable = false, Namespace = "")]
         [Group(@"0da7c658f240cdc10c3f9cb328db57d8:168")]
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TraceForTimePeriodSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MaliciousCallTraceTimePeriod _traceTimePeriod;
+        protected BroadWorksConnector.Ocip.Models.MaliciousCallTraceTimePeriod _traceTimePeriod;
 
         [XmlElement(ElementName = "traceTimePeriod", IsNullable = false, Namespace = "")]
         [Optional]

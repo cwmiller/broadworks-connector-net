@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ResellerMeetMeConferencingGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _conferenceFromAddress;
+        protected string _conferenceFromAddress;
 
         [XmlElement(ElementName = "conferenceFromAddress", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConferenceFromAddressSpecified { get; set; }
 
-        private int _maxAllocatedPorts;
+        protected int _maxAllocatedPorts;
 
         [XmlElement(ElementName = "maxAllocatedPorts", IsNullable = false, Namespace = "")]
         [Optional]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxAllocatedPortsSpecified { get; set; }
 
-        private bool _disableUnlimitedMeetMePorts;
+        protected bool _disableUnlimitedMeetMePorts;
 
         [XmlElement(ElementName = "disableUnlimitedMeetMePorts", IsNullable = false, Namespace = "")]
         [Optional]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisableUnlimitedMeetMePortsSpecified { get; set; }
 
-        private bool _enableMaxAllocatedPorts;
+        protected bool _enableMaxAllocatedPorts;
 
         [XmlElement(ElementName = "enableMaxAllocatedPorts", IsNullable = false, Namespace = "")]
         [Optional]

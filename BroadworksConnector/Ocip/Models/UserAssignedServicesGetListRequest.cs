@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserAssignedServicesGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserAssignedServicesGetListResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Optional]

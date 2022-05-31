@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemVoiceMessageSummaryUpdateGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _sendSavedAndUrgentMWIOnNotification;
+        protected bool _sendSavedAndUrgentMWIOnNotification;
 
         [XmlElement(ElementName = "sendSavedAndUrgentMWIOnNotification", IsNullable = false, Namespace = "")]
         [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:550")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SendSavedAndUrgentMWIOnNotificationSpecified { get; set; }
 
-        private bool _sendMessageSummaryUpdateOnRegister;
+        protected bool _sendMessageSummaryUpdateOnRegister;
 
         [XmlElement(ElementName = "sendMessageSummaryUpdateOnRegister", IsNullable = false, Namespace = "")]
         [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:550")]
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SendMessageSummaryUpdateOnRegisterSpecified { get; set; }
 
-        private int _minTimeBetweenMWIOnRegister;
+        protected int _minTimeBetweenMWIOnRegister;
 
         [XmlElement(ElementName = "minTimeBetweenMWIOnRegister", IsNullable = false, Namespace = "")]
         [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:550")]

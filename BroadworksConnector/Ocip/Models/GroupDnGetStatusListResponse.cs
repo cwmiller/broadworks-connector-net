@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupDnGetStatusListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<BroadWorksConnector.Ocip.Models.DNValidationStatusMessage> _dnStatus = new List<BroadWorksConnector.Ocip.Models.DNValidationStatusMessage>();
+        protected List<BroadWorksConnector.Ocip.Models.DNValidationStatusMessage> _dnStatus = new List<BroadWorksConnector.Ocip.Models.DNValidationStatusMessage>();
 
         [XmlElement(ElementName = "dnStatus", IsNullable = false, Namespace = "")]
         [Optional]

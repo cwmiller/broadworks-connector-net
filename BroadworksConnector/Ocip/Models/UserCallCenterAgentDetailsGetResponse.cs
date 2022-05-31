@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCallCenterAgentDetailsGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isCallCenterBasicAssigned;
+        protected bool _isCallCenterBasicAssigned;
 
         [XmlElement(ElementName = "isCallCenterBasicAssigned", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:6652")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsCallCenterBasicAssignedSpecified { get; set; }
 
-        private bool _isCallCenterStandardAssigned;
+        protected bool _isCallCenterStandardAssigned;
 
         [XmlElement(ElementName = "isCallCenterStandardAssigned", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:6652")]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsCallCenterStandardAssignedSpecified { get; set; }
 
-        private bool _isCallCenterPremiumAssigned;
+        protected bool _isCallCenterPremiumAssigned;
 
         [XmlElement(ElementName = "isCallCenterPremiumAssigned", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:6652")]

@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemMediaServerParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private int _mediaServerResponseTimerMilliseconds;
+        protected int _mediaServerResponseTimerMilliseconds;
 
         [XmlElement(ElementName = "mediaServerResponseTimerMilliseconds", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12023")]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MediaServerResponseTimerMillisecondsSpecified { get; set; }
 
-        private int _mediaServerSelectionRouteTimerMilliseconds;
+        protected int _mediaServerSelectionRouteTimerMilliseconds;
 
         [XmlElement(ElementName = "mediaServerSelectionRouteTimerMilliseconds", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12023")]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MediaServerSelectionRouteTimerMillisecondsSpecified { get; set; }
 
-        private bool _useStaticMediaServerDevice;
+        protected bool _useStaticMediaServerDevice;
 
         [XmlElement(ElementName = "useStaticMediaServerDevice", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:12023")]

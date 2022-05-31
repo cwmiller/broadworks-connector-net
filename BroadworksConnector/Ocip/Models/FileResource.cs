@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class FileResource
     {
 
-        private string _sourceFileName;
+        protected string _sourceFileName;
 
         [XmlElement(ElementName = "sourceFileName", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2826")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SourceFileNameSpecified { get; set; }
 
-        private string _fileContent;
+        protected string _fileContent;
 
         [XmlElement(ElementName = "fileContent", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2826")]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserHotelingGuestGetResponse14sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"031ad639f025838c09748154da1e429e:98")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private bool _enableAssociationLimit;
+        protected bool _enableAssociationLimit;
 
         [XmlElement(ElementName = "enableAssociationLimit", IsNullable = false, Namespace = "")]
         [Group(@"031ad639f025838c09748154da1e429e:98")]
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableAssociationLimitSpecified { get; set; }
 
-        private int _associationLimitHours;
+        protected int _associationLimitHours;
 
         [XmlElement(ElementName = "associationLimitHours", IsNullable = false, Namespace = "")]
         [Group(@"031ad639f025838c09748154da1e429e:98")]
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AssociationLimitHoursSpecified { get; set; }
 
-        private string _hostUserId;
+        protected string _hostUserId;
 
         [XmlElement(ElementName = "hostUserId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HostUserIdSpecified { get; set; }
 
-        private string _hostLastName;
+        protected string _hostLastName;
 
         [XmlElement(ElementName = "hostLastName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HostLastNameSpecified { get; set; }
 
-        private string _hostFirstName;
+        protected string _hostFirstName;
 
         [XmlElement(ElementName = "hostFirstName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HostFirstNameSpecified { get; set; }
 
-        private string _hostAssociationDateTime;
+        protected string _hostAssociationDateTime;
 
         [XmlElement(ElementName = "hostAssociationDateTime", IsNullable = false, Namespace = "")]
         [Optional]
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HostAssociationDateTimeSpecified { get; set; }
 
-        private bool _hostEnforcesAssociationLimit;
+        protected bool _hostEnforcesAssociationLimit;
 
         [XmlElement(ElementName = "hostEnforcesAssociationLimit", IsNullable = false, Namespace = "")]
         [Optional]
@@ -166,7 +166,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HostEnforcesAssociationLimitSpecified { get; set; }
 
-        private int _hostAssociationLimitHours;
+        protected int _hostAssociationLimitHours;
 
         [XmlElement(ElementName = "hostAssociationLimitHours", IsNullable = false, Namespace = "")]
         [Optional]

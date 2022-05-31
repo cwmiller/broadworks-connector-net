@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserDoNotDisturbGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"5999b2d9c77e3f1626cad635ea37a4a7:57")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private bool _ringSplash;
+        protected bool _ringSplash;
 
         [XmlElement(ElementName = "ringSplash", IsNullable = false, Namespace = "")]
         [Group(@"5999b2d9c77e3f1626cad635ea37a4a7:57")]

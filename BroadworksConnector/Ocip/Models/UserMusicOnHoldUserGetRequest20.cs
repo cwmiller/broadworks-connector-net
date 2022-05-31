@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserMusicOnHoldUserGetRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserMusicOnHoldUserGetResponse20>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:294")]

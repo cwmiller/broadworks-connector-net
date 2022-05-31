@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class OutgoingCallingPlanOriginatingPermissions
     {
 
-        private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _group;
+        protected BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _group;
 
         [XmlElement(ElementName = "group", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2040")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _local;
+        protected BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _local;
 
         [XmlElement(ElementName = "local", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2040")]
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LocalSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _tollFree;
+        protected BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _tollFree;
 
         [XmlElement(ElementName = "tollFree", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2040")]
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TollFreeSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _toll;
+        protected BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _toll;
 
         [XmlElement(ElementName = "toll", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2040")]
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TollSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _international;
+        protected BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _international;
 
         [XmlElement(ElementName = "international", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2040")]
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool InternationalSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _operatorAssisted;
+        protected BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _operatorAssisted;
 
         [XmlElement(ElementName = "operatorAssisted", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2040")]
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OperatorAssistedSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _chargeableDirectoryAssisted;
+        protected BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _chargeableDirectoryAssisted;
 
         [XmlElement(ElementName = "chargeableDirectoryAssisted", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2040")]
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ChargeableDirectoryAssistedSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _specialServicesI;
+        protected BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _specialServicesI;
 
         [XmlElement(ElementName = "specialServicesI", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2040")]
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SpecialServicesISpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _specialServicesII;
+        protected BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _specialServicesII;
 
         [XmlElement(ElementName = "specialServicesII", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2040")]
@@ -169,7 +169,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SpecialServicesIISpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _premiumServicesI;
+        protected BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _premiumServicesI;
 
         [XmlElement(ElementName = "premiumServicesI", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2040")]
@@ -186,7 +186,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PremiumServicesISpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _premiumServicesII;
+        protected BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _premiumServicesII;
 
         [XmlElement(ElementName = "premiumServicesII", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2040")]
@@ -203,7 +203,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PremiumServicesIISpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _casual;
+        protected BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _casual;
 
         [XmlElement(ElementName = "casual", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2040")]
@@ -220,7 +220,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CasualSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _urlDialing;
+        protected BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _urlDialing;
 
         [XmlElement(ElementName = "urlDialing", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2040")]
@@ -237,7 +237,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UrlDialingSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _unknown;
+        protected BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _unknown;
 
         [XmlElement(ElementName = "unknown", IsNullable = false, Namespace = "")]
         [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2040")]

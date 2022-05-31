@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class DeviceManagementPutFileRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _deviceAccessURI;
+        protected string _deviceAccessURI;
 
         [XmlElement(ElementName = "deviceAccessURI", IsNullable = false, Namespace = "")]
         [Group(@"6b27fcc79475236456fc113a42b75543:216")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceAccessURISpecified { get; set; }
 
-        private string _ipAddress;
+        protected string _ipAddress;
 
         [XmlElement(ElementName = "ipAddress", IsNullable = false, Namespace = "")]
         [Group(@"6b27fcc79475236456fc113a42b75543:216")]

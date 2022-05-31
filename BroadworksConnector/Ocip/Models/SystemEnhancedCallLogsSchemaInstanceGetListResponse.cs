@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemEnhancedCallLogsSchemaInstanceGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _schemaInstanceUsageTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _schemaInstanceUsageTable;
 
         [XmlElement(ElementName = "schemaInstanceUsageTable", IsNullable = false, Namespace = "")]
         [Group(@"f6b3702edb5f67fa12c2c426d98657db:304")]

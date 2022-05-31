@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19ReplyMessageMenuKeys
     {
 
-        private string _sendReplyToCaller;
+        protected string _sendReplyToCaller;
 
         [XmlElement(ElementName = "sendReplyToCaller", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SendReplyToCallerSpecified { get; set; }
 
-        private string _changeCurrentReply;
+        protected string _changeCurrentReply;
 
         [XmlElement(ElementName = "changeCurrentReply", IsNullable = true, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ChangeCurrentReplySpecified { get; set; }
 
-        private string _listenToCurrentReply;
+        protected string _listenToCurrentReply;
 
         [XmlElement(ElementName = "listenToCurrentReply", IsNullable = true, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ListenToCurrentReplySpecified { get; set; }
 
-        private string _setOrClearUrgentIndicator;
+        protected string _setOrClearUrgentIndicator;
 
         [XmlElement(ElementName = "setOrClearUrgentIndicator", IsNullable = true, Namespace = "")]
         [Optional]
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SetOrClearUrgentIndicatorSpecified { get; set; }
 
-        private string _setOrClearConfidentialIndicator;
+        protected string _setOrClearConfidentialIndicator;
 
         [XmlElement(ElementName = "setOrClearConfidentialIndicator", IsNullable = true, Namespace = "")]
         [Optional]
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SetOrClearConfidentialIndicatorSpecified { get; set; }
 
-        private string _returnToPreviousMenu;
+        protected string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Optional]
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReturnToPreviousMenuSpecified { get; set; }
 
-        private string _repeatMenu;
+        protected string _repeatMenu;
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]

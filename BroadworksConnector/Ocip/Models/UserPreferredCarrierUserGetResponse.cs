@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserPreferredCarrierUserGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.UserPreferredCarrierName _intraLataCarrier;
+        protected BroadWorksConnector.Ocip.Models.UserPreferredCarrierName _intraLataCarrier;
 
         [XmlElement(ElementName = "intraLataCarrier", IsNullable = false, Namespace = "")]
         [Group(@"74a46a9bfccb54713c1d19735843f1df:551")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IntraLataCarrierSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.UserPreferredCarrierName _interLataCarrier;
+        protected BroadWorksConnector.Ocip.Models.UserPreferredCarrierName _interLataCarrier;
 
         [XmlElement(ElementName = "interLataCarrier", IsNullable = false, Namespace = "")]
         [Group(@"74a46a9bfccb54713c1d19735843f1df:551")]
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool InterLataCarrierSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.UserPreferredCarrierName _internationalCarrier;
+        protected BroadWorksConnector.Ocip.Models.UserPreferredCarrierName _internationalCarrier;
 
         [XmlElement(ElementName = "internationalCarrier", IsNullable = false, Namespace = "")]
         [Group(@"74a46a9bfccb54713c1d19735843f1df:551")]

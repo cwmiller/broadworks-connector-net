@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ReplacementSIPAliasList
     {
 
-        private List<string> _sipAlias = new List<string>();
+        protected List<string> _sipAlias = new List<string>();
 
         [XmlElement(ElementName = "sipAlias", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4004")]

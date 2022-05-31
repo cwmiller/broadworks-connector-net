@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDeviceFamilyGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _deviceFamilyTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _deviceFamilyTable;
 
         [XmlElement(ElementName = "deviceFamilyTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7471")]

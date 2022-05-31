@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class IncomingCallingPlanDigitPatternPermission
     {
 
-        private string _digitPatternName;
+        protected string _digitPatternName;
 
         [XmlElement(ElementName = "digitPatternName", IsNullable = false, Namespace = "")]
         [Group(@"3dd296d55b56269ae23d86a934b8b35c:185")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DigitPatternNameSpecified { get; set; }
 
-        private bool _allow;
+        protected bool _allow;
 
         [XmlElement(ElementName = "allow", IsNullable = false, Namespace = "")]
         [Group(@"3dd296d55b56269ae23d86a934b8b35c:185")]

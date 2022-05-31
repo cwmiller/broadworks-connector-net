@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class IPAddressRange
     {
 
-        private string _minIpAddress;
+        protected string _minIpAddress;
 
         [XmlElement(ElementName = "minIpAddress", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2952")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MinIpAddressSpecified { get; set; }
 
-        private string _maxIpAddress;
+        protected string _maxIpAddress;
 
         [XmlElement(ElementName = "maxIpAddress", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2952")]

@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemRedundancyParametersGetResponse16sp2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private int _rollBackTimerMinutes;
+        protected int _rollBackTimerMinutes;
 
         [XmlElement(ElementName = "rollBackTimerMinutes", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14907")]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RollBackTimerMinutesSpecified { get; set; }
 
-        private bool _sendSipOptionMessageUponMigration;
+        protected bool _sendSipOptionMessageUponMigration;
 
         [XmlElement(ElementName = "sendSipOptionMessageUponMigration", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14907")]

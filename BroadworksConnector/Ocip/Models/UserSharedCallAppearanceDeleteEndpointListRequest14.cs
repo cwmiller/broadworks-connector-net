@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserSharedCallAppearanceDeleteEndpointListRequest14 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"524e0d071a229a44af2f953d6b50db35:73")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.AccessDeviceEndpointKey> _accessDeviceEndpoint = new List<BroadWorksConnector.Ocip.Models.AccessDeviceEndpointKey>();
+        protected List<BroadWorksConnector.Ocip.Models.AccessDeviceEndpointKey> _accessDeviceEndpoint = new List<BroadWorksConnector.Ocip.Models.AccessDeviceEndpointKey>();
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
         [Group(@"524e0d071a229a44af2f953d6b50db35:73")]

@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallCapacityManagementAddInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"dfcd2b22f2e2b3540d286342087ce042:50")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"dfcd2b22f2e2b3540d286342087ce042:50")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private string _name;
+        protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Group(@"dfcd2b22f2e2b3540d286342087ce042:50")]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NameSpecified { get; set; }
 
-        private int _maxActiveCallsAllowed;
+        protected int _maxActiveCallsAllowed;
 
         [XmlElement(ElementName = "maxActiveCallsAllowed", IsNullable = false, Namespace = "")]
         [Group(@"dfcd2b22f2e2b3540d286342087ce042:50")]
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxActiveCallsAllowedSpecified { get; set; }
 
-        private int _maxIncomingActiveCallsAllowed;
+        protected int _maxIncomingActiveCallsAllowed;
 
         [XmlElement(ElementName = "maxIncomingActiveCallsAllowed", IsNullable = false, Namespace = "")]
         [Optional]
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxIncomingActiveCallsAllowedSpecified { get; set; }
 
-        private int _maxOutgoingActiveCallsAllowed;
+        protected int _maxOutgoingActiveCallsAllowed;
 
         [XmlElement(ElementName = "maxOutgoingActiveCallsAllowed", IsNullable = false, Namespace = "")]
         [Optional]
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxOutgoingActiveCallsAllowedSpecified { get; set; }
 
-        private bool _becomeDefaultGroupForNewUsers;
+        protected bool _becomeDefaultGroupForNewUsers;
 
         [XmlElement(ElementName = "becomeDefaultGroupForNewUsers", IsNullable = false, Namespace = "")]
         [Group(@"dfcd2b22f2e2b3540d286342087ce042:50")]
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BecomeDefaultGroupForNewUsersSpecified { get; set; }
 
-        private List<string> _userId = new List<string>();
+        protected List<string> _userId = new List<string>();
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Optional]

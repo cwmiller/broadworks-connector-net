@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class LoginRequest14sp4 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.LoginResponse14sp4>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16396")]
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private string _signedPassword;
+        protected string _signedPassword;
 
         [XmlElement(ElementName = "signedPassword", IsNullable = false, Namespace = "")]
         [Optional]
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SignedPasswordSpecified { get; set; }
 
-        private string _plainTextPassword;
+        protected string _plainTextPassword;
 
         [XmlElement(ElementName = "plainTextPassword", IsNullable = false, Namespace = "")]
         [Optional]

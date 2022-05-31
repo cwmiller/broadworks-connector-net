@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemClassmarkGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _classmarkTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _classmarkTable;
 
         [XmlElement(ElementName = "classmarkTable", IsNullable = false, Namespace = "")]
         [Group(@"0d0e878cbc947aebb19ad489b2ffef11:95")]

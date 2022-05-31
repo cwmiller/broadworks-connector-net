@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserPersonalAssistantGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.PersonalAssistantPresence _presence;
+        protected BroadWorksConnector.Ocip.Models.PersonalAssistantPresence _presence;
 
         [XmlElement(ElementName = "presence", IsNullable = false, Namespace = "")]
         [Group(@"f53ece1c00394ef2d3d76f532f9a9663:317")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PresenceSpecified { get; set; }
 
-        private bool _enableTransferToAttendant;
+        protected bool _enableTransferToAttendant;
 
         [XmlElement(ElementName = "enableTransferToAttendant", IsNullable = false, Namespace = "")]
         [Group(@"f53ece1c00394ef2d3d76f532f9a9663:317")]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableTransferToAttendantSpecified { get; set; }
 
-        private string _attendantNumber;
+        protected string _attendantNumber;
 
         [XmlElement(ElementName = "attendantNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AttendantNumberSpecified { get; set; }
 
-        private bool _enableRingSplash;
+        protected bool _enableRingSplash;
 
         [XmlElement(ElementName = "enableRingSplash", IsNullable = false, Namespace = "")]
         [Group(@"f53ece1c00394ef2d3d76f532f9a9663:317")]
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableRingSplashSpecified { get; set; }
 
-        private bool _enableExpirationTime;
+        protected bool _enableExpirationTime;
 
         [XmlElement(ElementName = "enableExpirationTime", IsNullable = false, Namespace = "")]
         [Group(@"f53ece1c00394ef2d3d76f532f9a9663:317")]
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableExpirationTimeSpecified { get; set; }
 
-        private string _expirationTime;
+        protected string _expirationTime;
 
         [XmlElement(ElementName = "expirationTime", IsNullable = false, Namespace = "")]
         [Optional]
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExpirationTimeSpecified { get; set; }
 
-        private bool _alertMeFirst;
+        protected bool _alertMeFirst;
 
         [XmlElement(ElementName = "alertMeFirst", IsNullable = false, Namespace = "")]
         [Group(@"f53ece1c00394ef2d3d76f532f9a9663:317")]
@@ -141,7 +141,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlertMeFirstSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.PersonalAssistantAlertMeFirstNumberOfRings _alertMeFirstNumberOfRings;
+        protected BroadWorksConnector.Ocip.Models.PersonalAssistantAlertMeFirstNumberOfRings _alertMeFirstNumberOfRings;
 
         [XmlElement(ElementName = "alertMeFirstNumberOfRings", IsNullable = false, Namespace = "")]
         [Group(@"f53ece1c00394ef2d3d76f532f9a9663:317")]

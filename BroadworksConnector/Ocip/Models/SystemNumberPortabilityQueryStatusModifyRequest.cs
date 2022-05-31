@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemNumberPortabilityQueryStatusModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _statusName;
+        protected string _statusName;
 
         [XmlElement(ElementName = "statusName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13300")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StatusNameSpecified { get; set; }
 
-        private string _newStatusName;
+        protected string _newStatusName;
 
         [XmlElement(ElementName = "newStatusName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewStatusNameSpecified { get; set; }
 
-        private string _treatmentFileName;
+        protected string _treatmentFileName;
 
         [XmlElement(ElementName = "treatmentFileName", IsNullable = true, Namespace = "")]
         [Optional]

@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemExternalEmergencyRoutingParametersGetResponse13mp13 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _serviceURI;
+        protected string _serviceURI;
 
         [XmlElement(ElementName = "serviceURI", IsNullable = false, Namespace = "")]
         [Optional]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceURISpecified { get; set; }
 
-        private string _defaultEmergencyNumber;
+        protected string _defaultEmergencyNumber;
 
         [XmlElement(ElementName = "defaultEmergencyNumber", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultEmergencyNumberSpecified { get; set; }
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10122")]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private bool _supportsDNSSRV;
+        protected bool _supportsDNSSRV;
 
         [XmlElement(ElementName = "supportsDNSSRV", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10122")]
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SupportsDNSSRVSpecified { get; set; }
 
-        private int _connectionTimeoutSeconds;
+        protected int _connectionTimeoutSeconds;
 
         [XmlElement(ElementName = "connectionTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10122")]

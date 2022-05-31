@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserPhoneDirectoryGetSearchedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserPhoneDirectoryGetSearchedListResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:3203")]
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private string _nameSearchString;
+        protected string _nameSearchString;
 
         [XmlElement(ElementName = "nameSearchString", IsNullable = false, Namespace = "")]
         [Optional]

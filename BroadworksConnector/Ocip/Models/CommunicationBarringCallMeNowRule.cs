@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CommunicationBarringCallMeNowRule
     {
 
-        private string _criteria;
+        protected string _criteria;
 
         [XmlElement(ElementName = "criteria", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1439")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CriteriaSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowAction _action;
+        protected BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowAction _action;
 
         [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1439")]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ActionSpecified { get; set; }
 
-        private int? _callTimeoutSeconds;
+        protected int? _callTimeoutSeconds;
 
         [XmlElement(ElementName = "callTimeoutSeconds", IsNullable = true, Namespace = "")]
         [Optional]

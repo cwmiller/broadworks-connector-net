@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallParkGetInstanceResponse16sp2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _recallAlternateUserId;
+        protected string _recallAlternateUserId;
 
         [XmlElement(ElementName = "recallAlternateUserId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecallAlternateUserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallParkRecallTo _recallTo;
+        protected BroadWorksConnector.Ocip.Models.CallParkRecallTo _recallTo;
 
         [XmlElement(ElementName = "recallTo", IsNullable = false, Namespace = "")]
         [Group(@"7a925e891158dfa3cb1319e045608894:439")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecallToSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
         [Group(@"7a925e891158dfa3cb1319e045608894:439")]

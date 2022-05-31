@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class MeetMeConferencingConferenceScheduleScheduleReservationless
     {
 
-        private string _startTime;
+        protected string _startTime;
 
         [XmlElement(ElementName = "startTime", IsNullable = false, Namespace = "")]
         [Group(@"0fd24121d16995c994d40bc408dbcfa5:975")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StartTimeSpecified { get; set; }
 
-        private string _endTime;
+        protected string _endTime;
 
         [XmlElement(ElementName = "endTime", IsNullable = true, Namespace = "")]
         [Group(@"0fd24121d16995c994d40bc408dbcfa5:975")]

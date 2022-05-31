@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaComposedOrDnExtension : BroadWorksConnector.Ocip.Models.SearchCriteriaComposedOr
     {
 
-        private BroadWorksConnector.Ocip.Models.UserDNExtension _value;
+        protected BroadWorksConnector.Ocip.Models.UserDNExtension _value;
 
         [XmlElement(ElementName = "value", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:378")]

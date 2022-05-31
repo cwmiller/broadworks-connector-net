@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemBusyLampFieldModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _displayLocalUserIdentityLastNameFirst;
+        protected bool _displayLocalUserIdentityLastNameFirst;
 
         [XmlElement(ElementName = "displayLocalUserIdentityLastNameFirst", IsNullable = false, Namespace = "")]
         [Optional]
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisplayLocalUserIdentityLastNameFirstSpecified { get; set; }
 
-        private bool _forceUseOfTCP;
+        protected bool _forceUseOfTCP;
 
         [XmlElement(ElementName = "forceUseOfTCP", IsNullable = false, Namespace = "")]
         [Optional]
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ForceUseOfTCPSpecified { get; set; }
 
-        private bool _enableRedundancy;
+        protected bool _enableRedundancy;
 
         [XmlElement(ElementName = "enableRedundancy", IsNullable = false, Namespace = "")]
         [Optional]
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableRedundancySpecified { get; set; }
 
-        private int _redundancyTaskDelayMilliseconds;
+        protected int _redundancyTaskDelayMilliseconds;
 
         [XmlElement(ElementName = "redundancyTaskDelayMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RedundancyTaskDelayMillisecondsSpecified { get; set; }
 
-        private int _redundancyTaskIntervalMilliseconds;
+        protected int _redundancyTaskIntervalMilliseconds;
 
         [XmlElement(ElementName = "redundancyTaskIntervalMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RedundancyTaskIntervalMillisecondsSpecified { get; set; }
 
-        private int _maxNumberOfSubscriptionsPerRedundancyTaskInterval;
+        protected int _maxNumberOfSubscriptionsPerRedundancyTaskInterval;
 
         [XmlElement(ElementName = "maxNumberOfSubscriptionsPerRedundancyTaskInterval", IsNullable = false, Namespace = "")]
         [Optional]
@@ -146,7 +146,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxNumberOfSubscriptionsPerRedundancyTaskIntervalSpecified { get; set; }
 
-        private bool _ignoreUnansweredTerminatingCalls;
+        protected bool _ignoreUnansweredTerminatingCalls;
 
         [XmlElement(ElementName = "ignoreUnansweredTerminatingCalls", IsNullable = false, Namespace = "")]
         [Optional]

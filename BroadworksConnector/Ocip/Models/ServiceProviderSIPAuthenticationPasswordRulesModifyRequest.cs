@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderSIPAuthenticationPasswordRulesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6803")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private bool _useServiceProviderSettings;
+        protected bool _useServiceProviderSettings;
 
         [XmlElement(ElementName = "useServiceProviderSettings", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseServiceProviderSettingsSpecified { get; set; }
 
-        private bool _disallowAuthenticationName;
+        protected bool _disallowAuthenticationName;
 
         [XmlElement(ElementName = "disallowAuthenticationName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisallowAuthenticationNameSpecified { get; set; }
 
-        private bool _disallowOldPassword;
+        protected bool _disallowOldPassword;
 
         [XmlElement(ElementName = "disallowOldPassword", IsNullable = false, Namespace = "")]
         [Optional]
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisallowOldPasswordSpecified { get; set; }
 
-        private bool _disallowReversedOldPassword;
+        protected bool _disallowReversedOldPassword;
 
         [XmlElement(ElementName = "disallowReversedOldPassword", IsNullable = false, Namespace = "")]
         [Optional]
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisallowReversedOldPasswordSpecified { get; set; }
 
-        private bool _restrictMinDigits;
+        protected bool _restrictMinDigits;
 
         [XmlElement(ElementName = "restrictMinDigits", IsNullable = false, Namespace = "")]
         [Optional]
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RestrictMinDigitsSpecified { get; set; }
 
-        private int _minDigits;
+        protected int _minDigits;
 
         [XmlElement(ElementName = "minDigits", IsNullable = false, Namespace = "")]
         [Optional]
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MinDigitsSpecified { get; set; }
 
-        private bool _restrictMinUpperCaseLetters;
+        protected bool _restrictMinUpperCaseLetters;
 
         [XmlElement(ElementName = "restrictMinUpperCaseLetters", IsNullable = false, Namespace = "")]
         [Optional]
@@ -166,7 +166,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RestrictMinUpperCaseLettersSpecified { get; set; }
 
-        private int _minUpperCaseLetters;
+        protected int _minUpperCaseLetters;
 
         [XmlElement(ElementName = "minUpperCaseLetters", IsNullable = false, Namespace = "")]
         [Optional]
@@ -186,7 +186,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MinUpperCaseLettersSpecified { get; set; }
 
-        private bool _restrictMinLowerCaseLetters;
+        protected bool _restrictMinLowerCaseLetters;
 
         [XmlElement(ElementName = "restrictMinLowerCaseLetters", IsNullable = false, Namespace = "")]
         [Optional]
@@ -204,7 +204,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RestrictMinLowerCaseLettersSpecified { get; set; }
 
-        private int _minLowerCaseLetters;
+        protected int _minLowerCaseLetters;
 
         [XmlElement(ElementName = "minLowerCaseLetters", IsNullable = false, Namespace = "")]
         [Optional]
@@ -224,7 +224,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MinLowerCaseLettersSpecified { get; set; }
 
-        private bool _restrictMinNonAlphanumericCharacters;
+        protected bool _restrictMinNonAlphanumericCharacters;
 
         [XmlElement(ElementName = "restrictMinNonAlphanumericCharacters", IsNullable = false, Namespace = "")]
         [Optional]
@@ -242,7 +242,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RestrictMinNonAlphanumericCharactersSpecified { get; set; }
 
-        private int _minNonAlphanumericCharacters;
+        protected int _minNonAlphanumericCharacters;
 
         [XmlElement(ElementName = "minNonAlphanumericCharacters", IsNullable = false, Namespace = "")]
         [Optional]
@@ -262,7 +262,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MinNonAlphanumericCharactersSpecified { get; set; }
 
-        private int _minLength;
+        protected int _minLength;
 
         [XmlElement(ElementName = "minLength", IsNullable = false, Namespace = "")]
         [Optional]
@@ -282,7 +282,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MinLengthSpecified { get; set; }
 
-        private bool _sendPermanentLockoutNotification;
+        protected bool _sendPermanentLockoutNotification;
 
         [XmlElement(ElementName = "sendPermanentLockoutNotification", IsNullable = false, Namespace = "")]
         [Optional]
@@ -300,7 +300,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SendPermanentLockoutNotificationSpecified { get; set; }
 
-        private string _permanentLockoutNotifyEmailAddress;
+        protected string _permanentLockoutNotifyEmailAddress;
 
         [XmlElement(ElementName = "permanentLockoutNotifyEmailAddress", IsNullable = true, Namespace = "")]
         [Optional]
@@ -320,7 +320,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PermanentLockoutNotifyEmailAddressSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AuthenticationLockoutType _endpointAuthenticationLockoutType;
+        protected BroadWorksConnector.Ocip.Models.AuthenticationLockoutType _endpointAuthenticationLockoutType;
 
         [XmlElement(ElementName = "endpointAuthenticationLockoutType", IsNullable = false, Namespace = "")]
         [Optional]
@@ -338,7 +338,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EndpointAuthenticationLockoutTypeSpecified { get; set; }
 
-        private int _endpointTemporaryLockoutThreshold;
+        protected int _endpointTemporaryLockoutThreshold;
 
         [XmlElement(ElementName = "endpointTemporaryLockoutThreshold", IsNullable = false, Namespace = "")]
         [Optional]
@@ -358,7 +358,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EndpointTemporaryLockoutThresholdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AuthenticationLockoutWaitAlgorithmType _endpointWaitAlgorithm;
+        protected BroadWorksConnector.Ocip.Models.AuthenticationLockoutWaitAlgorithmType _endpointWaitAlgorithm;
 
         [XmlElement(ElementName = "endpointWaitAlgorithm", IsNullable = false, Namespace = "")]
         [Optional]
@@ -376,7 +376,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EndpointWaitAlgorithmSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AuthenticationLockoutFixedWaitTimeMinutes _endpointLockoutFixedMinutes;
+        protected BroadWorksConnector.Ocip.Models.AuthenticationLockoutFixedWaitTimeMinutes _endpointLockoutFixedMinutes;
 
         [XmlElement(ElementName = "endpointLockoutFixedMinutes", IsNullable = false, Namespace = "")]
         [Optional]
@@ -394,7 +394,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EndpointLockoutFixedMinutesSpecified { get; set; }
 
-        private int _endpointPermanentLockoutThreshold;
+        protected int _endpointPermanentLockoutThreshold;
 
         [XmlElement(ElementName = "endpointPermanentLockoutThreshold", IsNullable = false, Namespace = "")]
         [Optional]
@@ -414,7 +414,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EndpointPermanentLockoutThresholdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AuthenticationLockoutType _trunkGroupAuthenticationLockoutType;
+        protected BroadWorksConnector.Ocip.Models.AuthenticationLockoutType _trunkGroupAuthenticationLockoutType;
 
         [XmlElement(ElementName = "trunkGroupAuthenticationLockoutType", IsNullable = false, Namespace = "")]
         [Optional]
@@ -432,7 +432,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TrunkGroupAuthenticationLockoutTypeSpecified { get; set; }
 
-        private int _trunkGroupTemporaryLockoutThreshold;
+        protected int _trunkGroupTemporaryLockoutThreshold;
 
         [XmlElement(ElementName = "trunkGroupTemporaryLockoutThreshold", IsNullable = false, Namespace = "")]
         [Optional]
@@ -452,7 +452,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TrunkGroupTemporaryLockoutThresholdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AuthenticationLockoutWaitAlgorithmType _trunkGroupWaitAlgorithm;
+        protected BroadWorksConnector.Ocip.Models.AuthenticationLockoutWaitAlgorithmType _trunkGroupWaitAlgorithm;
 
         [XmlElement(ElementName = "trunkGroupWaitAlgorithm", IsNullable = false, Namespace = "")]
         [Optional]
@@ -470,7 +470,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TrunkGroupWaitAlgorithmSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AuthenticationLockoutFixedWaitTimeMinutes _trunkGroupLockoutFixedMinutes;
+        protected BroadWorksConnector.Ocip.Models.AuthenticationLockoutFixedWaitTimeMinutes _trunkGroupLockoutFixedMinutes;
 
         [XmlElement(ElementName = "trunkGroupLockoutFixedMinutes", IsNullable = false, Namespace = "")]
         [Optional]
@@ -488,7 +488,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TrunkGroupLockoutFixedMinutesSpecified { get; set; }
 
-        private int _trunkGroupPermanentLockoutThreshold;
+        protected int _trunkGroupPermanentLockoutThreshold;
 
         [XmlElement(ElementName = "trunkGroupPermanentLockoutThreshold", IsNullable = false, Namespace = "")]
         [Optional]

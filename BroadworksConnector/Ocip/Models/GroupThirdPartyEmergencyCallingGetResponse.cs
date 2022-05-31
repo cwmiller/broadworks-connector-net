@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupThirdPartyEmergencyCallingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _enableDeviceManagement;
+        protected bool _enableDeviceManagement;
 
         [XmlElement(ElementName = "enableDeviceManagement", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8432")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableDeviceManagementSpecified { get; set; }
 
-        private bool _enableRouting;
+        protected bool _enableRouting;
 
         [XmlElement(ElementName = "enableRouting", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8432")]

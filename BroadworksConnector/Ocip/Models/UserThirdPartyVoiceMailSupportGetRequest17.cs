@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserThirdPartyVoiceMailSupportGetRequest17 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserThirdPartyVoiceMailSupportGetResponse17>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"3c311aa5c89c0cf5b46e1cdefd5bc387:242")]

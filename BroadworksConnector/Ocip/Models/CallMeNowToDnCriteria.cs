@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallMeNowToDnCriteria
     {
 
-        private BroadWorksConnector.Ocip.Models.CriteriaDnSelection _toDnCriteriaSelection;
+        protected BroadWorksConnector.Ocip.Models.CriteriaDnSelection _toDnCriteriaSelection;
 
         [XmlElement(ElementName = "toDnCriteriaSelection", IsNullable = false, Namespace = "")]
         [Group(@"1f0f230fee2817fe00157925859dc28e:247")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ToDnCriteriaSelectionSpecified { get; set; }
 
-        private List<string> _phoneNumber = new List<string>();
+        protected List<string> _phoneNumber = new List<string>();
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Optional]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupEnterpriseTrunkGetAvailableTrunkGroupListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _trunkGroupName = new List<string>();
+        protected List<string> _trunkGroupName = new List<string>();
 
         [XmlElement(ElementName = "trunkGroupName", IsNullable = false, Namespace = "")]
         [Optional]

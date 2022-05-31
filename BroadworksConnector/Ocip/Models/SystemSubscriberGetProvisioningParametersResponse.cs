@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSubscriberGetProvisioningParametersResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _configurableCLIDNormalization;
+        protected bool _configurableCLIDNormalization;
 
         [XmlElement(ElementName = "configurableCLIDNormalization", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35272")]

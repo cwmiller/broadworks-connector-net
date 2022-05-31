@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemRoutingProfileParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _enablePermissiveRouting;
+        protected bool _enablePermissiveRouting;
 
         [XmlElement(ElementName = "enablePermissiveRouting", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15541")]

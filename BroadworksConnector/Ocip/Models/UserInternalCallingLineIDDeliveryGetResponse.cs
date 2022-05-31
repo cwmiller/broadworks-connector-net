@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserInternalCallingLineIDDeliveryGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"7230ce25187ba26cc29fe67d7389f945:59")]

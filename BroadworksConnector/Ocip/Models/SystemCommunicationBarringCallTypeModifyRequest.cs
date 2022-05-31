@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCommunicationBarringCallTypeModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _callType;
+        protected string _callType;
 
         [XmlElement(ElementName = "callType", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5677")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallTypeSpecified { get; set; }
 
-        private string _networkServerCallType;
+        protected string _networkServerCallType;
 
         [XmlElement(ElementName = "networkServerCallType", IsNullable = false, Namespace = "")]
         [Optional]

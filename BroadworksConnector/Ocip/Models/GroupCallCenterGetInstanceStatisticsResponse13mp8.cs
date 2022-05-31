@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallCenterGetInstanceStatisticsResponse13mp8 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private int _numberOfCallsQueuedNow;
+        protected int _numberOfCallsQueuedNow;
 
         [XmlElement(ElementName = "numberOfCallsQueuedNow", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6174")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberOfCallsQueuedNowSpecified { get; set; }
 
-        private bool _generateDailyReport;
+        protected bool _generateDailyReport;
 
         [XmlElement(ElementName = "generateDailyReport", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6174")]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GenerateDailyReportSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes _collectionPeriodMinutes;
+        protected BroadWorksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes _collectionPeriodMinutes;
 
         [XmlElement(ElementName = "collectionPeriodMinutes", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6174")]
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CollectionPeriodMinutesSpecified { get; set; }
 
-        private string _reportingEmailAddress1;
+        protected string _reportingEmailAddress1;
 
         [XmlElement(ElementName = "reportingEmailAddress1", IsNullable = false, Namespace = "")]
         [Optional]
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReportingEmailAddress1Specified { get; set; }
 
-        private string _reportingEmailAddress2;
+        protected string _reportingEmailAddress2;
 
         [XmlElement(ElementName = "reportingEmailAddress2", IsNullable = false, Namespace = "")]
         [Optional]
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReportingEmailAddress2Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallCenterQueueStatistics13mp8 _queueStatisticsYesterday;
+        protected BroadWorksConnector.Ocip.Models.CallCenterQueueStatistics13mp8 _queueStatisticsYesterday;
 
         [XmlElement(ElementName = "queueStatisticsYesterday", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6174")]
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool QueueStatisticsYesterdaySpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CallCenterQueueStatistics13mp8 _queueStatisticsToday;
+        protected BroadWorksConnector.Ocip.Models.CallCenterQueueStatistics13mp8 _queueStatisticsToday;
 
         [XmlElement(ElementName = "queueStatisticsToday", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6174")]
@@ -143,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool QueueStatisticsTodaySpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.CallCenterAgentStatistics13mp8> _agentStatistics = new List<BroadWorksConnector.Ocip.Models.CallCenterAgentStatistics13mp8>();
+        protected List<BroadWorksConnector.Ocip.Models.CallCenterAgentStatistics13mp8> _agentStatistics = new List<BroadWorksConnector.Ocip.Models.CallCenterAgentStatistics13mp8>();
 
         [XmlElement(ElementName = "agentStatistics", IsNullable = false, Namespace = "")]
         [Optional]

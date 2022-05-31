@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCodecGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<BroadWorksConnector.Ocip.Models.Codec> _codec = new List<BroadWorksConnector.Ocip.Models.Codec>();
+        protected List<BroadWorksConnector.Ocip.Models.Codec> _codec = new List<BroadWorksConnector.Ocip.Models.Codec>();
 
         [XmlElement(ElementName = "codec", IsNullable = false, Namespace = "")]
         [Optional]

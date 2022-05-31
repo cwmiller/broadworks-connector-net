@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemVideoServerParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private int _videoServerResponseTimerMilliseconds;
+        protected int _videoServerResponseTimerMilliseconds;
 
         [XmlElement(ElementName = "videoServerResponseTimerMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VideoServerResponseTimerMillisecondsSpecified { get; set; }
 
-        private int _videoServerSelectionRouteTimerMilliseconds;
+        protected int _videoServerSelectionRouteTimerMilliseconds;
 
         [XmlElement(ElementName = "videoServerSelectionRouteTimerMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VideoServerSelectionRouteTimerMillisecondsSpecified { get; set; }
 
-        private bool _useStaticVideoServerDevice;
+        protected bool _useStaticVideoServerDevice;
 
         [XmlElement(ElementName = "useStaticVideoServerDevice", IsNullable = false, Namespace = "")]
         [Optional]

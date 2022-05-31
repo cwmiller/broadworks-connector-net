@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseTrunkNumberRange
     {
 
-        private BroadWorksConnector.Ocip.Models.DNRange _dnRange;
+        protected BroadWorksConnector.Ocip.Models.DNRange _dnRange;
 
         [XmlElement(ElementName = "dnRange", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2610")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DnRangeSpecified { get; set; }
 
-        private int _extensionLength;
+        protected int _extensionLength;
 
         [XmlElement(ElementName = "extensionLength", IsNullable = false, Namespace = "")]
         [Optional]

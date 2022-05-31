@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderRoutingProfileGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _routingProfile;
+        protected string _routingProfile;
 
         [XmlElement(ElementName = "routingProfile", IsNullable = false, Namespace = "")]
         [Optional]

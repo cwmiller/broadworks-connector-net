@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserPhysicalLocationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"4a26e5fa0592a0fd3b4e60e9432f8588:104")]

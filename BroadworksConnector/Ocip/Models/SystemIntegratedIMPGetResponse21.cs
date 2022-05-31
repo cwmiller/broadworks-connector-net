@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemIntegratedIMPGetResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _serviceDomain;
+        protected string _serviceDomain;
 
         [XmlElement(ElementName = "serviceDomain", IsNullable = false, Namespace = "")]
         [Optional]
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceDomainSpecified { get; set; }
 
-        private int _servicePort;
+        protected int _servicePort;
 
         [XmlElement(ElementName = "servicePort", IsNullable = false, Namespace = "")]
         [Optional]
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServicePortSpecified { get; set; }
 
-        private bool _addServiceProviderInIMPUserId;
+        protected bool _addServiceProviderInIMPUserId;
 
         [XmlElement(ElementName = "addServiceProviderInIMPUserId", IsNullable = false, Namespace = "")]
         [Group(@"23389100b68cef3aa07ee12ac7a2bd16:273")]
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AddServiceProviderInIMPUserIdSpecified { get; set; }
 
-        private string _boshURL;
+        protected string _boshURL;
 
         [XmlElement(ElementName = "boshURL", IsNullable = false, Namespace = "")]
         [Optional]
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BoshURLSpecified { get; set; }
 
-        private bool _allowImpPasswordRetrieval;
+        protected bool _allowImpPasswordRetrieval;
 
         [XmlElement(ElementName = "allowImpPasswordRetrieval", IsNullable = false, Namespace = "")]
         [Group(@"23389100b68cef3aa07ee12ac7a2bd16:273")]

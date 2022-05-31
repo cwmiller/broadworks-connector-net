@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAccessDeviceGetAvailableCustomTagListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _deviceAvailableCustomTagsTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _deviceAvailableCustomTagsTable;
 
         [XmlElement(ElementName = "deviceAvailableCustomTagsTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1132")]

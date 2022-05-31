@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaExactDeviceManagementEventLevel : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        private BroadWorksConnector.Ocip.Models.DeviceManagementEventLevel _dmEventLevel;
+        protected BroadWorksConnector.Ocip.Models.DeviceManagementEventLevel _dmEventLevel;
 
         [XmlElement(ElementName = "dmEventLevel", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:849")]

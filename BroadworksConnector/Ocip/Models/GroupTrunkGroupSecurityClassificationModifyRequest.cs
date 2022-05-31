@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupTrunkGroupSecurityClassificationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private BroadWorksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
+        protected BroadWorksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
 
         [XmlElement(ElementName = "trunkGroupKey", IsNullable = false, Namespace = "")]
         [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:85")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TrunkGroupKeySpecified { get; set; }
 
-        private string _defaultSecurityClassification;
+        protected string _defaultSecurityClassification;
 
         [XmlElement(ElementName = "defaultSecurityClassification", IsNullable = true, Namespace = "")]
         [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:85")]

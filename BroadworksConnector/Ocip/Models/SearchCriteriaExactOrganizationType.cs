@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaExactOrganizationType : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        private BroadWorksConnector.Ocip.Models.OrganizationType _organizationType;
+        protected BroadWorksConnector.Ocip.Models.OrganizationType _organizationType;
 
         [XmlElement(ElementName = "organizationType", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:1119")]

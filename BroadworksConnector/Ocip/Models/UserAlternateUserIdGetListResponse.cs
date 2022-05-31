@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserAlternateUserIdGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _userIdTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _userIdTable;
 
         [XmlElement(ElementName = "userIdTable", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:462")]

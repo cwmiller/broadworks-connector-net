@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserAnonymousCallRejectionGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"6b25f8a296bf72b8b383a287bee9127d:110")]

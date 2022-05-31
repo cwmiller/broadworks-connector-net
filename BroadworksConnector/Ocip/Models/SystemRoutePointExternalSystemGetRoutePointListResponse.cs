@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemRoutePointExternalSystemGetRoutePointListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _serviceUserId = new List<string>();
+        protected List<string> _serviceUserId = new List<string>();
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
         [Optional]

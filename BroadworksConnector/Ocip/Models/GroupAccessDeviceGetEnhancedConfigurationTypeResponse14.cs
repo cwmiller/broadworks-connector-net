@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupAccessDeviceGetEnhancedConfigurationTypeResponse14 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _supportsEnhancedConfiguration;
+        protected bool _supportsEnhancedConfiguration;
 
         [XmlElement(ElementName = "supportsEnhancedConfiguration", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:853")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SupportsEnhancedConfigurationSpecified { get; set; }
 
-        private bool _supportsReset;
+        protected bool _supportsReset;
 
         [XmlElement(ElementName = "supportsReset", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:853")]
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SupportsResetSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 _configurationType;
+        protected BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 _configurationType;
 
         [XmlElement(ElementName = "configurationType", IsNullable = false, Namespace = "")]
         [Optional]
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConfigurationTypeSpecified { get; set; }
 
-        private string _configurationFileName;
+        protected string _configurationFileName;
 
         [XmlElement(ElementName = "configurationFileName", IsNullable = false, Namespace = "")]
         [Optional]

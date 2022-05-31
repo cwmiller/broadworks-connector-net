@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemRoutingProfileGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _routingProfile = new List<string>();
+        protected List<string> _routingProfile = new List<string>();
 
         [XmlElement(ElementName = "routingProfile", IsNullable = false, Namespace = "")]
         [Optional]

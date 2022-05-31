@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemRoutingGetRouteDeviceListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _routeDeviceTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _routeDeviceTable;
 
         [XmlElement(ElementName = "routeDeviceTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:15358")]

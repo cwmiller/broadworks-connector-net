@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaExactUserInTrunkGroup : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        private bool _userInTrunkGroup;
+        protected bool _userInTrunkGroup;
 
         [XmlElement(ElementName = "userInTrunkGroup", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:1300")]

@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserDoNotDisturbGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserDoNotDisturbGetResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"5999b2d9c77e3f1626cad635ea37a4a7:42")]

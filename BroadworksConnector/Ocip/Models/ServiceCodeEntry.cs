@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceCodeEntry
     {
 
-        private string _serviceCode;
+        protected string _serviceCode;
 
         [XmlElement(ElementName = "serviceCode", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:20079")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceCodeSpecified { get; set; }
 
-        private string _description;
+        protected string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:20079")]

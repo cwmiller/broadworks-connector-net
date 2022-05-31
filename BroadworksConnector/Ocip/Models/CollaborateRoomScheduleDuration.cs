@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CollaborateRoomScheduleDuration
     {
 
-        private int _hours;
+        protected int _hours;
 
         [XmlElement(ElementName = "hours", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1176")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HoursSpecified { get; set; }
 
-        private int _minutes;
+        protected int _minutes;
 
         [XmlElement(ElementName = "minutes", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1176")]

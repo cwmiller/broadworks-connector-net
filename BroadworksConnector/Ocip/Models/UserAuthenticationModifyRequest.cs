@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserAuthenticationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"9db4d5fa1bbf70f2626f52a5d6e3420e:72")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private string _userName;
+        protected string _userName;
 
         [XmlElement(ElementName = "userName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserNameSpecified { get; set; }
 
-        private string _newPassword;
+        protected string _newPassword;
 
         [XmlElement(ElementName = "newPassword", IsNullable = false, Namespace = "")]
         [Optional]
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewPasswordSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.UserAuthenticationModifyRequestPassword _password;
+        protected BroadWorksConnector.Ocip.Models.UserAuthenticationModifyRequestPassword _password;
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
         [Optional]

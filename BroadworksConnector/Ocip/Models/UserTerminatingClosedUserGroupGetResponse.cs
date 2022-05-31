@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserTerminatingClosedUserGroupGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _userInterlockCode;
+        protected string _userInterlockCode;
 
         [XmlElement(ElementName = "userInterlockCode", IsNullable = false, Namespace = "")]
         [Optional]

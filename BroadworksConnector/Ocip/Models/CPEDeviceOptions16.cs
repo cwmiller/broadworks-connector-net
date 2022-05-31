@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CPEDeviceOptions16
     {
 
-        private bool _enableMonitoring;
+        protected bool _enableMonitoring;
 
         [XmlElement(ElementName = "enableMonitoring", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47900")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableMonitoringSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CPEDeviceResetEventType _resetEvent;
+        protected BroadWorksConnector.Ocip.Models.CPEDeviceResetEventType _resetEvent;
 
         [XmlElement(ElementName = "resetEvent", IsNullable = false, Namespace = "")]
         [Optional]
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResetEventSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 _configType;
+        protected BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 _configType;
 
         [XmlElement(ElementName = "configType", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47900")]
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConfigTypeSpecified { get; set; }
 
-        private string _systemFileName;
+        protected string _systemFileName;
 
         [XmlElement(ElementName = "systemFileName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SystemFileNameSpecified { get; set; }
 
-        private string _deviceFileFormat;
+        protected string _deviceFileFormat;
 
         [XmlElement(ElementName = "deviceFileFormat", IsNullable = false, Namespace = "")]
         [Optional]
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceFileFormatSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.DeviceManagementDeviceTypeOptions16 _deviceManagementDeviceTypeOptions;
+        protected BroadWorksConnector.Ocip.Models.DeviceManagementDeviceTypeOptions16 _deviceManagementDeviceTypeOptions;
 
         [XmlElement(ElementName = "deviceManagementDeviceTypeOptions", IsNullable = false, Namespace = "")]
         [Optional]

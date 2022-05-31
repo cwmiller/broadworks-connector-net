@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderXsiPolicyProfileUnassignListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7194")]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.XsiPolicyProfileUnassignEntry _groupXsiPolicyProfile;
+        protected BroadWorksConnector.Ocip.Models.XsiPolicyProfileUnassignEntry _groupXsiPolicyProfile;
 
         [XmlElement(ElementName = "groupXsiPolicyProfile", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupXsiPolicyProfileSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.XsiPolicyProfileUnassignEntry _userXsiPolicyProfile;
+        protected BroadWorksConnector.Ocip.Models.XsiPolicyProfileUnassignEntry _userXsiPolicyProfile;
 
         [XmlElement(ElementName = "userXsiPolicyProfile", IsNullable = false, Namespace = "")]
         [Optional]

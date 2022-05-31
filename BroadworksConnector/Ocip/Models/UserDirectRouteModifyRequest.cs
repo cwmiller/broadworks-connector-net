@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserDirectRouteModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"4e1b40cd187e65e0dc647394b1e74e3c:75")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.DirectRouteOutgoingDTGPolicy _outgoingDTGPolicy;
+        protected BroadWorksConnector.Ocip.Models.DirectRouteOutgoingDTGPolicy _outgoingDTGPolicy;
 
         [XmlElement(ElementName = "outgoingDTGPolicy", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OutgoingDTGPolicySpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.DirectRouteOutgoingTrunkIdentityPolicy _outgoingTrunkIdentityPolicy;
+        protected BroadWorksConnector.Ocip.Models.DirectRouteOutgoingTrunkIdentityPolicy _outgoingTrunkIdentityPolicy;
 
         [XmlElement(ElementName = "outgoingTrunkIdentityPolicy", IsNullable = false, Namespace = "")]
         [Optional]
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OutgoingTrunkIdentityPolicySpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.DirectRouteReplacementIdentityList _directRouteIdentityList;
+        protected BroadWorksConnector.Ocip.Models.DirectRouteReplacementIdentityList _directRouteIdentityList;
 
         [XmlElement(ElementName = "directRouteIdentityList", IsNullable = true, Namespace = "")]
         [Optional]

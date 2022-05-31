@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemRoutingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _isRouteRoundRobin;
+        protected bool _isRouteRoundRobin;
 
         [XmlElement(ElementName = "isRouteRoundRobin", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsRouteRoundRobinSpecified { get; set; }
 
-        private int _routeTimerSeconds;
+        protected int _routeTimerSeconds;
 
         [XmlElement(ElementName = "routeTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RouteTimerSecondsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.RoutingDNSResolvedAddressSelectionPolicy _dnsResolvedAddressSelectionPolicy;
+        protected BroadWorksConnector.Ocip.Models.RoutingDNSResolvedAddressSelectionPolicy _dnsResolvedAddressSelectionPolicy;
 
         [XmlElement(ElementName = "dnsResolvedAddressSelectionPolicy", IsNullable = false, Namespace = "")]
         [Optional]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DnsResolvedAddressSelectionPolicySpecified { get; set; }
 
-        private int _statefulExpirationMinutes;
+        protected int _statefulExpirationMinutes;
 
         [XmlElement(ElementName = "statefulExpirationMinutes", IsNullable = false, Namespace = "")]
         [Optional]
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StatefulExpirationMinutesSpecified { get; set; }
 
-        private int _maxAddressesPerHostname;
+        protected int _maxAddressesPerHostname;
 
         [XmlElement(ElementName = "maxAddressesPerHostname", IsNullable = false, Namespace = "")]
         [Optional]
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxAddressesPerHostnameSpecified { get; set; }
 
-        private int _maxAddressesDuringSetup;
+        protected int _maxAddressesDuringSetup;
 
         [XmlElement(ElementName = "maxAddressesDuringSetup", IsNullable = false, Namespace = "")]
         [Optional]

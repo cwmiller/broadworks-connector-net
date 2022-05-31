@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ResellerCallRecordingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _fQDN;
+        protected string _fQDN;
 
         [XmlElement(ElementName = "FQDN", IsNullable = false, Namespace = "")]
         [Optional]

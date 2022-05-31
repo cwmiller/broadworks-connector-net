@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserConnectedLineIdentificationRestrictionGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"755f02354120ea5249923372461f5503:59")]

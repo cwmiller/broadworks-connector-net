@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemEnhancedCallLogsModifyRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private int _maxNonPagedResponseSize;
+        protected int _maxNonPagedResponseSize;
 
         [XmlElement(ElementName = "maxNonPagedResponseSize", IsNullable = false, Namespace = "")]
         [Optional]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxNonPagedResponseSizeSpecified { get; set; }
 
-        private string _eclQueryApplicationURL;
+        protected string _eclQueryApplicationURL;
 
         [XmlElement(ElementName = "eclQueryApplicationURL", IsNullable = true, Namespace = "")]
         [Optional]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EclQueryApplicationURLSpecified { get; set; }
 
-        private string _eclQueryDataRepositoryURL;
+        protected string _eclQueryDataRepositoryURL;
 
         [XmlElement(ElementName = "eclQueryDataRepositoryURL", IsNullable = true, Namespace = "")]
         [Optional]
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EclQueryDataRepositoryURLSpecified { get; set; }
 
-        private string _defaultSchema;
+        protected string _defaultSchema;
 
         [XmlElement(ElementName = "defaultSchema", IsNullable = true, Namespace = "")]
         [Optional]

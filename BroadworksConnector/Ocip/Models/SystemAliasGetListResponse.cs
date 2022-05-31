@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAliasGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _aliasNetAddress = new List<string>();
+        protected List<string> _aliasNetAddress = new List<string>();
 
         [XmlElement(ElementName = "aliasNetAddress", IsNullable = false, Namespace = "")]
         [Optional]

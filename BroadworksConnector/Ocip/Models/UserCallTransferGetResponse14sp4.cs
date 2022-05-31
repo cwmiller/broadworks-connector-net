@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCallTransferGetResponse14sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isRecallActive;
+        protected bool _isRecallActive;
 
         [XmlElement(ElementName = "isRecallActive", IsNullable = false, Namespace = "")]
         [Group(@"6604ba4b5f755b1ba8d7de48e87c6e63:57")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsRecallActiveSpecified { get; set; }
 
-        private int _recallNumberOfRings;
+        protected int _recallNumberOfRings;
 
         [XmlElement(ElementName = "recallNumberOfRings", IsNullable = false, Namespace = "")]
         [Group(@"6604ba4b5f755b1ba8d7de48e87c6e63:57")]
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecallNumberOfRingsSpecified { get; set; }
 
-        private bool _useDiversionInhibitorForBlindTransfer;
+        protected bool _useDiversionInhibitorForBlindTransfer;
 
         [XmlElement(ElementName = "useDiversionInhibitorForBlindTransfer", IsNullable = false, Namespace = "")]
         [Group(@"6604ba4b5f755b1ba8d7de48e87c6e63:57")]
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseDiversionInhibitorForBlindTransferSpecified { get; set; }
 
-        private bool _useDiversionInhibitorForConsultativeCalls;
+        protected bool _useDiversionInhibitorForConsultativeCalls;
 
         [XmlElement(ElementName = "useDiversionInhibitorForConsultativeCalls", IsNullable = false, Namespace = "")]
         [Group(@"6604ba4b5f755b1ba8d7de48e87c6e63:57")]
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseDiversionInhibitorForConsultativeCallsSpecified { get; set; }
 
-        private bool _enableBusyCampOn;
+        protected bool _enableBusyCampOn;
 
         [XmlElement(ElementName = "enableBusyCampOn", IsNullable = false, Namespace = "")]
         [Group(@"6604ba4b5f755b1ba8d7de48e87c6e63:57")]
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableBusyCampOnSpecified { get; set; }
 
-        private int _busyCampOnSeconds;
+        protected int _busyCampOnSeconds;
 
         [XmlElement(ElementName = "busyCampOnSeconds", IsNullable = false, Namespace = "")]
         [Group(@"6604ba4b5f755b1ba8d7de48e87c6e63:57")]

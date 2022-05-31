@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemBusyLampFieldGetResponse23V2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _displayLocalUserIdentityLastNameFirst;
+        protected bool _displayLocalUserIdentityLastNameFirst;
 
         [XmlElement(ElementName = "displayLocalUserIdentityLastNameFirst", IsNullable = false, Namespace = "")]
         [Group(@"4faeca417998d23ce2ff6b0b43212aa6:67")]
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisplayLocalUserIdentityLastNameFirstSpecified { get; set; }
 
-        private bool _forceUseOfTCP;
+        protected bool _forceUseOfTCP;
 
         [XmlElement(ElementName = "forceUseOfTCP", IsNullable = false, Namespace = "")]
         [Group(@"4faeca417998d23ce2ff6b0b43212aa6:67")]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ForceUseOfTCPSpecified { get; set; }
 
-        private bool _enableRedundancy;
+        protected bool _enableRedundancy;
 
         [XmlElement(ElementName = "enableRedundancy", IsNullable = false, Namespace = "")]
         [Group(@"4faeca417998d23ce2ff6b0b43212aa6:67")]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableRedundancySpecified { get; set; }
 
-        private int _redundancyTaskDelayMilliseconds;
+        protected int _redundancyTaskDelayMilliseconds;
 
         [XmlElement(ElementName = "redundancyTaskDelayMilliseconds", IsNullable = false, Namespace = "")]
         [Group(@"4faeca417998d23ce2ff6b0b43212aa6:67")]
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RedundancyTaskDelayMillisecondsSpecified { get; set; }
 
-        private int _redundancyTaskIntervalMilliseconds;
+        protected int _redundancyTaskIntervalMilliseconds;
 
         [XmlElement(ElementName = "redundancyTaskIntervalMilliseconds", IsNullable = false, Namespace = "")]
         [Group(@"4faeca417998d23ce2ff6b0b43212aa6:67")]
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RedundancyTaskIntervalMillisecondsSpecified { get; set; }
 
-        private int _maxNumberOfSubscriptionsPerRedundancyTaskInterval;
+        protected int _maxNumberOfSubscriptionsPerRedundancyTaskInterval;
 
         [XmlElement(ElementName = "maxNumberOfSubscriptionsPerRedundancyTaskInterval", IsNullable = false, Namespace = "")]
         [Group(@"4faeca417998d23ce2ff6b0b43212aa6:67")]
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxNumberOfSubscriptionsPerRedundancyTaskIntervalSpecified { get; set; }
 
-        private bool _ignoreUnansweredTerminatingCalls;
+        protected bool _ignoreUnansweredTerminatingCalls;
 
         [XmlElement(ElementName = "ignoreUnansweredTerminatingCalls", IsNullable = false, Namespace = "")]
         [Group(@"4faeca417998d23ce2ff6b0b43212aa6:67")]

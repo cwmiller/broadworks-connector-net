@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderServicePackGetUtilizationListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _servicePackName = new List<string>();
+        protected List<string> _servicePackName = new List<string>();
 
         [XmlElement(ElementName = "servicePackName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServicePackNameSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.C.OCITable> _serviceUtilizationTable = new List<BroadWorksConnector.Ocip.Models.C.OCITable>();
+        protected List<BroadWorksConnector.Ocip.Models.C.OCITable> _serviceUtilizationTable = new List<BroadWorksConnector.Ocip.Models.C.OCITable>();
 
         [XmlElement(ElementName = "serviceUtilizationTable", IsNullable = false, Namespace = "")]
         [Optional]

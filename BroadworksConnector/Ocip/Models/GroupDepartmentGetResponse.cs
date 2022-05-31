@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupDepartmentGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.DepartmentKey _parentDepartmentKey;
+        protected BroadWorksConnector.Ocip.Models.DepartmentKey _parentDepartmentKey;
 
         [XmlElement(ElementName = "parentDepartmentKey", IsNullable = false, Namespace = "")]
         [Optional]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ParentDepartmentKeySpecified { get; set; }
 
-        private string _callingLineIdName;
+        protected string _callingLineIdName;
 
         [XmlElement(ElementName = "callingLineIdName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallingLineIdNameSpecified { get; set; }
 
-        private string _callingLineIdPhoneNumber;
+        protected string _callingLineIdPhoneNumber;
 
         [XmlElement(ElementName = "callingLineIdPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]

@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupFindMeFollowMeModifyAlertingGroupListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceUserId;
+        protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
         [Group(@"79f226053ee345f2ff4c37c37c8e9114:428")]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        private List<string> _alertingGroupName = new List<string>();
+        protected List<string> _alertingGroupName = new List<string>();
 
         [XmlElement(ElementName = "alertingGroupName", IsNullable = false, Namespace = "")]
         [Optional]

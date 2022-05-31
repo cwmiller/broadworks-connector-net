@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemExpensiveCallTypeModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _alternateCallIndicator;
+        protected string _alternateCallIndicator;
 
         [XmlElement(ElementName = "alternateCallIndicator", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9910")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlternateCallIndicatorSpecified { get; set; }
 
-        private string _treatmentAudioFile;
+        protected string _treatmentAudioFile;
 
         [XmlElement(ElementName = "treatmentAudioFile", IsNullable = true, Namespace = "")]
         [Optional]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models.C
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.C.SuccessResponse))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.C.ErrorResponse))]
 
-
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""77f32f6c8e214eb5c1a80dedfce1cb56:154""}]")]
     public abstract class OCIResponse : BroadWorksConnector.Ocip.Models.C.OCICommand
     {
 

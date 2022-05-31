@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class MaliciousCallTraceTimePeriod
     {
 
-        private string _startDateTime;
+        protected string _startDateTime;
 
         [XmlElement(ElementName = "startDateTime", IsNullable = false, Namespace = "")]
         [Group(@"0da7c658f240cdc10c3f9cb328db57d8:213")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StartDateTimeSpecified { get; set; }
 
-        private string _stopDateTime;
+        protected string _stopDateTime;
 
         [XmlElement(ElementName = "stopDateTime", IsNullable = false, Namespace = "")]
         [Group(@"0da7c658f240cdc10c3f9cb328db57d8:213")]

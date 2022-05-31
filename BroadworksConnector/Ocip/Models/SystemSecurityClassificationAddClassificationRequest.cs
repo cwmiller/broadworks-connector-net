@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSecurityClassificationAddClassificationRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _securityClassificationName;
+        protected string _securityClassificationName;
 
         [XmlElement(ElementName = "securityClassificationName", IsNullable = false, Namespace = "")]
         [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:102")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SecurityClassificationNameSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _audioFile;
+        protected BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _audioFile;
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
         [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:102")]

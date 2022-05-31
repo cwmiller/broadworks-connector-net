@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupEmergencyZonesModifyHomeZoneListRequestHomeZoneIpAddressRangeList
     {
 
-        private BroadWorksConnector.Ocip.Models.IPAddressRange _homeZoneIpAddressRange;
+        protected BroadWorksConnector.Ocip.Models.IPAddressRange _homeZoneIpAddressRange;
 
         [XmlElement(ElementName = "homeZoneIpAddressRange", IsNullable = false, Namespace = "")]
         [Group(@"e71c2205fb31894f87810b330a85ede2:171")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HomeZoneIpAddressRangeSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.IPAddressRange _newHomeZoneIpAddressRange;
+        protected BroadWorksConnector.Ocip.Models.IPAddressRange _newHomeZoneIpAddressRange;
 
         [XmlElement(ElementName = "newHomeZoneIpAddressRange", IsNullable = false, Namespace = "")]
         [Group(@"e71c2205fb31894f87810b330a85ede2:171")]

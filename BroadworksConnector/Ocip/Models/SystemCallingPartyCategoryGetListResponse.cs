@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallingPartyCategoryGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _callingPartyCategoryTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _callingPartyCategoryTable;
 
         [XmlElement(ElementName = "callingPartyCategoryTable", IsNullable = false, Namespace = "")]
         [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:104")]

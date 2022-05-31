@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class HuntAgentWeight
     {
 
-        private string _agentUserId;
+        protected string _agentUserId;
 
         [XmlElement(ElementName = "agentUserId", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2940")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AgentUserIdSpecified { get; set; }
 
-        private int _weight;
+        protected int _weight;
 
         [XmlElement(ElementName = "weight", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2940")]

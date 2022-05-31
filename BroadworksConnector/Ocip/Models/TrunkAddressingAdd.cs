@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class TrunkAddressingAdd
     {
 
-        private BroadWorksConnector.Ocip.Models.TrunkGroupDeviceEndpointAdd _trunkGroupDeviceEndpoint;
+        protected BroadWorksConnector.Ocip.Models.TrunkGroupDeviceEndpointAdd _trunkGroupDeviceEndpoint;
 
         [XmlElement(ElementName = "trunkGroupDeviceEndpoint", IsNullable = false, Namespace = "")]
         [Optional]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TrunkGroupDeviceEndpointSpecified { get; set; }
 
-        private string _enterpriseTrunkName;
+        protected string _enterpriseTrunkName;
 
         [XmlElement(ElementName = "enterpriseTrunkName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnterpriseTrunkNameSpecified { get; set; }
 
-        private string _alternateTrunkIdentity;
+        protected string _alternateTrunkIdentity;
 
         [XmlElement(ElementName = "alternateTrunkIdentity", IsNullable = false, Namespace = "")]
         [Optional]

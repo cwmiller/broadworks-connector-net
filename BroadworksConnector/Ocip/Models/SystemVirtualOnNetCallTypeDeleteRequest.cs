@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemVirtualOnNetCallTypeDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _virtualOnNetCallTypeName;
+        protected string _virtualOnNetCallTypeName;
 
         [XmlElement(ElementName = "virtualOnNetCallTypeName", IsNullable = false, Namespace = "")]
         [Group(@"179b744b0183abe614e8c32c17c96b7e:261")]

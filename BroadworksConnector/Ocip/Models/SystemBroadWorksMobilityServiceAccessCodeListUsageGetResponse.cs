@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemBroadWorksMobilityServiceAccessCodeListUsageGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _mobileNetworkName = new List<string>();
+        protected List<string> _mobileNetworkName = new List<string>();
 
         [XmlElement(ElementName = "mobileNetworkName", IsNullable = false, Namespace = "")]
         [Optional]

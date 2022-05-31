@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserResourcePriorityModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"0c61aa8506194ca714d0fe1c4a0b57ff:182")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private bool _useDefaultResourcePriority;
+        protected bool _useDefaultResourcePriority;
 
         [XmlElement(ElementName = "useDefaultResourcePriority", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseDefaultResourcePrioritySpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ResourcePriorityValue _userResourcePriority;
+        protected BroadWorksConnector.Ocip.Models.ResourcePriorityValue _userResourcePriority;
 
         [XmlElement(ElementName = "userResourcePriority", IsNullable = false, Namespace = "")]
         [Optional]

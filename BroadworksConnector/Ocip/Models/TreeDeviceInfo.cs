@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class TreeDeviceInfo
     {
 
-        private BroadWorksConnector.Ocip.Models.AccessDeviceKey _treeDeviceKey;
+        protected BroadWorksConnector.Ocip.Models.AccessDeviceKey _treeDeviceKey;
 
         [XmlElement(ElementName = "treeDeviceKey", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4788")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TreeDeviceKeySpecified { get; set; }
 
-        private string _linkId;
+        protected string _linkId;
 
         [XmlElement(ElementName = "linkId", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4788")]

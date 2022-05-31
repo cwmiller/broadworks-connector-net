@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallingNameRetrievalModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private int _queryTimerMilliSeconds;
+        protected int _queryTimerMilliSeconds;
 
         [XmlElement(ElementName = "queryTimerMilliSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool QueryTimerMilliSecondsSpecified { get; set; }
 
-        private string _serverNetAddress;
+        protected string _serverNetAddress;
 
         [XmlElement(ElementName = "serverNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServerNetAddressSpecified { get; set; }
 
-        private int? _serverPort;
+        protected int? _serverPort;
 
         [XmlElement(ElementName = "serverPort", IsNullable = true, Namespace = "")]
         [Optional]
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServerPortSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.TransportProtocol _serverTransportProtocol;
+        protected BroadWorksConnector.Ocip.Models.TransportProtocol _serverTransportProtocol;
 
         [XmlElement(ElementName = "serverTransportProtocol", IsNullable = false, Namespace = "")]
         [Optional]

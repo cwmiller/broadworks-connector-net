@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class Holiday
     {
 
-        private string _holidayName;
+        protected string _holidayName;
 
         [XmlElement(ElementName = "holidayName", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48972")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HolidayNameSpecified { get; set; }
 
-        private string _startDate;
+        protected string _startDate;
 
         [XmlElement(ElementName = "startDate", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48972")]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StartDateSpecified { get; set; }
 
-        private string _endDate;
+        protected string _endDate;
 
         [XmlElement(ElementName = "endDate", IsNullable = false, Namespace = "")]
         [Optional]

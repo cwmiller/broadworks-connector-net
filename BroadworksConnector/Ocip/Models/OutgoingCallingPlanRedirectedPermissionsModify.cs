@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class OutgoingCallingPlanRedirectedPermissionsModify
     {
 
-        private bool _outsideGroup;
+        protected bool _outsideGroup;
 
         [XmlElement(ElementName = "outsideGroup", IsNullable = false, Namespace = "")]
         [Optional]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CombinedServicePackAuthorization
     {
 
-        private string _servicePackName;
+        protected string _servicePackName;
 
         [XmlElement(ElementName = "servicePackName", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1327")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServicePackNameSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _authorizedQuantity;
+        protected BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _authorizedQuantity;
 
         [XmlElement(ElementName = "authorizedQuantity", IsNullable = false, Namespace = "")]
         [Optional]

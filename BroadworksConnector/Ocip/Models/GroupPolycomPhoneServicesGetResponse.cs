@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupPolycomPhoneServicesGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _includeGroupCommonPhoneListInDirectory;
+        protected bool _includeGroupCommonPhoneListInDirectory;
 
         [XmlElement(ElementName = "includeGroupCommonPhoneListInDirectory", IsNullable = false, Namespace = "")]
         [Group(@"4f074d986b998636e2bcb0d67372b0f4:62")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeGroupCommonPhoneListInDirectorySpecified { get; set; }
 
-        private bool _includeGroupCustomContactDirectoryInDirectory;
+        protected bool _includeGroupCustomContactDirectoryInDirectory;
 
         [XmlElement(ElementName = "includeGroupCustomContactDirectoryInDirectory", IsNullable = false, Namespace = "")]
         [Group(@"4f074d986b998636e2bcb0d67372b0f4:62")]
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeGroupCustomContactDirectoryInDirectorySpecified { get; set; }
 
-        private string _groupCustomContactDirectory;
+        protected string _groupCustomContactDirectory;
 
         [XmlElement(ElementName = "groupCustomContactDirectory", IsNullable = false, Namespace = "")]
         [Optional]

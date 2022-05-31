@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemTwoStageDialingGetDnListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _phoneNumberTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _phoneNumberTable;
 
         [XmlElement(ElementName = "phoneNumberTable", IsNullable = false, Namespace = "")]
         [Group(@"2a1428f64736d8f970ea802e5a73c495:98")]

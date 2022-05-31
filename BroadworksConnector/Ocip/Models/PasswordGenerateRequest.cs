@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class PasswordGenerateRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.PasswordGenerateResponse>
     {
 
-        private BroadWorksConnector.Ocip.Models.PasswordForSystemAdministrator _systemAdministratorPassword;
+        protected BroadWorksConnector.Ocip.Models.PasswordForSystemAdministrator _systemAdministratorPassword;
 
         [XmlElement(ElementName = "systemAdministratorPassword", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SystemAdministratorPasswordSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.PasswordForServiceProviderAdministrator _serviceProviderAdministratorPassword;
+        protected BroadWorksConnector.Ocip.Models.PasswordForServiceProviderAdministrator _serviceProviderAdministratorPassword;
 
         [XmlElement(ElementName = "serviceProviderAdministratorPassword", IsNullable = false, Namespace = "")]
         [Optional]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderAdministratorPasswordSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.PasswordForGroupAdministrator _groupAdministratorPassword;
+        protected BroadWorksConnector.Ocip.Models.PasswordForGroupAdministrator _groupAdministratorPassword;
 
         [XmlElement(ElementName = "groupAdministratorPassword", IsNullable = false, Namespace = "")]
         [Optional]
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupAdministratorPasswordSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.PasswordForUser _userPassword;
+        protected BroadWorksConnector.Ocip.Models.PasswordForUser _userPassword;
 
         [XmlElement(ElementName = "userPassword", IsNullable = false, Namespace = "")]
         [Optional]
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserPasswordSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.PasswordForAccessDevice _accessDeviceAuthenticationPassword;
+        protected BroadWorksConnector.Ocip.Models.PasswordForAccessDevice _accessDeviceAuthenticationPassword;
 
         [XmlElement(ElementName = "accessDeviceAuthenticationPassword", IsNullable = false, Namespace = "")]
         [Optional]
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessDeviceAuthenticationPasswordSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.PasswordForTrunkGroup _trunkGroupAuthenticationPassword;
+        protected BroadWorksConnector.Ocip.Models.PasswordForTrunkGroup _trunkGroupAuthenticationPassword;
 
         [XmlElement(ElementName = "trunkGroupAuthenticationPassword", IsNullable = false, Namespace = "")]
         [Optional]

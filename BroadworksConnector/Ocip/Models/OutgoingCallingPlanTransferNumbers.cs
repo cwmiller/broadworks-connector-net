@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class OutgoingCallingPlanTransferNumbers
     {
 
-        private string _phoneNumber01;
+        protected string _phoneNumber01;
 
         [XmlElement(ElementName = "phoneNumber01", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PhoneNumber01Specified { get; set; }
 
-        private string _phoneNumber02;
+        protected string _phoneNumber02;
 
         [XmlElement(ElementName = "phoneNumber02", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PhoneNumber02Specified { get; set; }
 
-        private string _phoneNumber03;
+        protected string _phoneNumber03;
 
         [XmlElement(ElementName = "phoneNumber03", IsNullable = false, Namespace = "")]
         [Optional]

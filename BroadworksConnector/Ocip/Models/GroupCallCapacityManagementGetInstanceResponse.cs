@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallCapacityManagementGetInstanceResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _name;
+        protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Group(@"dfcd2b22f2e2b3540d286342087ce042:225")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NameSpecified { get; set; }
 
-        private int _maxActiveCallsAllowed;
+        protected int _maxActiveCallsAllowed;
 
         [XmlElement(ElementName = "maxActiveCallsAllowed", IsNullable = false, Namespace = "")]
         [Group(@"dfcd2b22f2e2b3540d286342087ce042:225")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxActiveCallsAllowedSpecified { get; set; }
 
-        private int _maxIncomingActiveCallsAllowed;
+        protected int _maxIncomingActiveCallsAllowed;
 
         [XmlElement(ElementName = "maxIncomingActiveCallsAllowed", IsNullable = false, Namespace = "")]
         [Optional]
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxIncomingActiveCallsAllowedSpecified { get; set; }
 
-        private int _maxOutgoingActiveCallsAllowed;
+        protected int _maxOutgoingActiveCallsAllowed;
 
         [XmlElement(ElementName = "maxOutgoingActiveCallsAllowed", IsNullable = false, Namespace = "")]
         [Optional]
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxOutgoingActiveCallsAllowedSpecified { get; set; }
 
-        private bool _defaultGroupForNewUsers;
+        protected bool _defaultGroupForNewUsers;
 
         [XmlElement(ElementName = "defaultGroupForNewUsers", IsNullable = false, Namespace = "")]
         [Group(@"dfcd2b22f2e2b3540d286342087ce042:225")]
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultGroupForNewUsersSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
         [Group(@"dfcd2b22f2e2b3540d286342087ce042:225")]

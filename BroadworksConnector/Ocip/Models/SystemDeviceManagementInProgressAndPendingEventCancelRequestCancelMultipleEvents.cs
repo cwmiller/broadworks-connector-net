@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDeviceManagementInProgressAndPendingEventCancelRequestCancelMultipleEvents
     {
 
-        private BroadWorksConnector.Ocip.Models.DeviceManagementEventStatusForCancel _dmEventStatusForCancel;
+        protected BroadWorksConnector.Ocip.Models.DeviceManagementEventStatusForCancel _dmEventStatusForCancel;
 
         [XmlElement(ElementName = "dmEventStatusForCancel", IsNullable = false, Namespace = "")]
         [Optional]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DmEventStatusForCancelSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.DeviceManagementEventAction _dmEventAction;
+        protected BroadWorksConnector.Ocip.Models.DeviceManagementEventAction _dmEventAction;
 
         [XmlElement(ElementName = "dmEventAction", IsNullable = false, Namespace = "")]
         [Optional]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DmEventActionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.DeviceManagementEventLevel _dmEventLevel;
+        protected BroadWorksConnector.Ocip.Models.DeviceManagementEventLevel _dmEventLevel;
 
         [XmlElement(ElementName = "dmEventLevel", IsNullable = false, Namespace = "")]
         [Optional]
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DmEventLevelSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.DeviceManagementEventType _dmEventType;
+        protected BroadWorksConnector.Ocip.Models.DeviceManagementEventType _dmEventType;
 
         [XmlElement(ElementName = "dmEventType", IsNullable = false, Namespace = "")]
         [Optional]

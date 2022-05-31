@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserHotelingGuestGetRequest14sp4 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserHotelingGuestGetResponse14sp4>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"031ad639f025838c09748154da1e429e:83")]

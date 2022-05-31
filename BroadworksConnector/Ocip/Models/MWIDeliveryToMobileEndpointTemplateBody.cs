@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class MWIDeliveryToMobileEndpointTemplateBody
     {
 
-        private List<BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateLine> _line = new List<BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateLine>();
+        protected List<BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateLine> _line = new List<BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateLine>();
 
         [XmlElement(ElementName = "line", IsNullable = false, Namespace = "")]
         [Group(@"958b78cc2a785d78259c1e8a474eb40d:420")]

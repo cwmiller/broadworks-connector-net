@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserIncomingCallingPlanGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _useCustomSettings;
+        protected bool _useCustomSettings;
 
         [XmlElement(ElementName = "useCustomSettings", IsNullable = false, Namespace = "")]
         [Group(@"3dd296d55b56269ae23d86a934b8b35c:113")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseCustomSettingsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.IncomingCallingPlanPermissions _userPermissions;
+        protected BroadWorksConnector.Ocip.Models.IncomingCallingPlanPermissions _userPermissions;
 
         [XmlElement(ElementName = "userPermissions", IsNullable = false, Namespace = "")]
         [Group(@"3dd296d55b56269ae23d86a934b8b35c:113")]

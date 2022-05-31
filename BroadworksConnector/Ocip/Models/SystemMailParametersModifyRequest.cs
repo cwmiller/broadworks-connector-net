@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemMailParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _primaryServerNetAddress;
+        protected string _primaryServerNetAddress;
 
         [XmlElement(ElementName = "primaryServerNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PrimaryServerNetAddressSpecified { get; set; }
 
-        private string _secondaryServerNetAddress;
+        protected string _secondaryServerNetAddress;
 
         [XmlElement(ElementName = "secondaryServerNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SecondaryServerNetAddressSpecified { get; set; }
 
-        private string _defaultFromAddress;
+        protected string _defaultFromAddress;
 
         [XmlElement(ElementName = "defaultFromAddress", IsNullable = false, Namespace = "")]
         [Optional]
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultFromAddressSpecified { get; set; }
 
-        private string _defaultSubject;
+        protected string _defaultSubject;
 
         [XmlElement(ElementName = "defaultSubject", IsNullable = true, Namespace = "")]
         [Optional]
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultSubjectSpecified { get; set; }
 
-        private bool _supportDNSSRVForMailServerAccess;
+        protected bool _supportDNSSRVForMailServerAccess;
 
         [XmlElement(ElementName = "supportDNSSRVForMailServerAccess", IsNullable = false, Namespace = "")]
         [Optional]
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SupportDNSSRVForMailServerAccessSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SMTPSecureMode _secureMode;
+        protected BroadWorksConnector.Ocip.Models.SMTPSecureMode _secureMode;
 
         [XmlElement(ElementName = "secureMode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SecureModeSpecified { get; set; }
 
-        private int? _port;
+        protected int? _port;
 
         [XmlElement(ElementName = "port", IsNullable = true, Namespace = "")]
         [Optional]

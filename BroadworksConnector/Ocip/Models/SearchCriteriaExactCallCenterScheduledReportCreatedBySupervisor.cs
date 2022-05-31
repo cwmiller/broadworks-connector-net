@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaExactCallCenterScheduledReportCreatedBySupervisor : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        private bool _createdBySupervisor;
+        protected bool _createdBySupervisor;
 
         [XmlElement(ElementName = "createdBySupervisor", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:742")]

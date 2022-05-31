@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallMeNowToDnCriteriaModify
     {
 
-        private BroadWorksConnector.Ocip.Models.CriteriaDnSelection _toDnCriteriaSelection;
+        protected BroadWorksConnector.Ocip.Models.CriteriaDnSelection _toDnCriteriaSelection;
 
         [XmlElement(ElementName = "toDnCriteriaSelection", IsNullable = false, Namespace = "")]
         [Optional]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ToDnCriteriaSelectionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CriteriaReplacementDNList _phoneNumberList;
+        protected BroadWorksConnector.Ocip.Models.CriteriaReplacementDNList _phoneNumberList;
 
         [XmlElement(ElementName = "phoneNumberList", IsNullable = true, Namespace = "")]
         [Optional]

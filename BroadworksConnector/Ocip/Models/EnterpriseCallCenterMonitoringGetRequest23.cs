@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseCallCenterMonitoringGetRequest23 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.EnterpriseCallCenterMonitoringGetResponse23>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"41b968f87257b8dd553215179161ccb4:49")]

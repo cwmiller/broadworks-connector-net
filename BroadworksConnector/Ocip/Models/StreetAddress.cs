@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class StreetAddress
     {
 
-        private string _addressLine1;
+        protected string _addressLine1;
 
         [XmlElement(ElementName = "addressLine1", IsNullable = true, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AddressLine1Specified { get; set; }
 
-        private string _addressLine2;
+        protected string _addressLine2;
 
         [XmlElement(ElementName = "addressLine2", IsNullable = true, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AddressLine2Specified { get; set; }
 
-        private string _city;
+        protected string _city;
 
         [XmlElement(ElementName = "city", IsNullable = true, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CitySpecified { get; set; }
 
-        private string _stateOrProvince;
+        protected string _stateOrProvince;
 
         [XmlElement(ElementName = "stateOrProvince", IsNullable = true, Namespace = "")]
         [Optional]
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StateOrProvinceSpecified { get; set; }
 
-        private string _stateOrProvinceDisplayName;
+        protected string _stateOrProvinceDisplayName;
 
         [XmlElement(ElementName = "stateOrProvinceDisplayName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StateOrProvinceDisplayNameSpecified { get; set; }
 
-        private string _zipOrPostalCode;
+        protected string _zipOrPostalCode;
 
         [XmlElement(ElementName = "zipOrPostalCode", IsNullable = true, Namespace = "")]
         [Optional]
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ZipOrPostalCodeSpecified { get; set; }
 
-        private string _country;
+        protected string _country;
 
         [XmlElement(ElementName = "country", IsNullable = true, Namespace = "")]
         [Optional]

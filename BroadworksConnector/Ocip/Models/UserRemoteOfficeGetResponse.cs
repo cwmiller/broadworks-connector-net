@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserRemoteOfficeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"70aea661491074f1e7cc845c9a6c7ea3:56")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private string _remoteOfficePhoneNumber;
+        protected string _remoteOfficePhoneNumber;
 
         [XmlElement(ElementName = "remoteOfficePhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]

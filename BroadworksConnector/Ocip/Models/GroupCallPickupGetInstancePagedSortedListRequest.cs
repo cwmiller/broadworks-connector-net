@@ -27,7 +27,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallPickupGetInstancePagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupCallPickupGetInstancePagedSortedListResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"045ce951b3e25dec090606af4ad50c63:229")]
@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"045ce951b3e25dec090606af4ad50c63:229")]
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
+        protected BroadWorksConnector.Ocip.Models.ResponsePagingControl _responsePagingControl;
 
         [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
         [Optional]
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResponsePagingControlSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SortByCallPickupName _sortByCallPickupName;
+        protected BroadWorksConnector.Ocip.Models.SortByCallPickupName _sortByCallPickupName;
 
         [XmlElement(ElementName = "sortByCallPickupName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SortByCallPickupNameSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaCallPickupName> _searchCriteriaCallPickupName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaCallPickupName>();
+        protected List<BroadWorksConnector.Ocip.Models.SearchCriteriaCallPickupName> _searchCriteriaCallPickupName = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaCallPickupName>();
 
         [XmlElement(ElementName = "searchCriteriaCallPickupName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaCallPickupNameSpecified { get; set; }
 
-        private bool _searchCriteriaModeOr;
+        protected bool _searchCriteriaModeOr;
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]

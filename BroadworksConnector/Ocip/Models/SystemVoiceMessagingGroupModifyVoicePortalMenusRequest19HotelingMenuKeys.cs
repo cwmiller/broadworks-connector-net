@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19HotelingMenuKeys
     {
 
-        private string _checkHostStatus;
+        protected string _checkHostStatus;
 
         [XmlElement(ElementName = "checkHostStatus", IsNullable = true, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CheckHostStatusSpecified { get; set; }
 
-        private string _associateWithHost;
+        protected string _associateWithHost;
 
         [XmlElement(ElementName = "associateWithHost", IsNullable = true, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AssociateWithHostSpecified { get; set; }
 
-        private string _disassociateFromHost;
+        protected string _disassociateFromHost;
 
         [XmlElement(ElementName = "disassociateFromHost", IsNullable = true, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisassociateFromHostSpecified { get; set; }
 
-        private string _disassociateFromRemoteHost;
+        protected string _disassociateFromRemoteHost;
 
         [XmlElement(ElementName = "disassociateFromRemoteHost", IsNullable = true, Namespace = "")]
         [Optional]
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisassociateFromRemoteHostSpecified { get; set; }
 
-        private string _returnToPreviousMenu;
+        protected string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Optional]
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReturnToPreviousMenuSpecified { get; set; }
 
-        private string _repeatMenu;
+        protected string _repeatMenu;
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]

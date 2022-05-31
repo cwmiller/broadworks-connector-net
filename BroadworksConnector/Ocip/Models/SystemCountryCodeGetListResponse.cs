@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCountryCodeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _defaultCountryCode;
+        protected string _defaultCountryCode;
 
         [XmlElement(ElementName = "defaultCountryCode", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6922")]
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultCountryCodeSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _countryCodeTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _countryCodeTable;
 
         [XmlElement(ElementName = "countryCodeTable", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6922")]

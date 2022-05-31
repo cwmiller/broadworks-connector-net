@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemVoiceMessagingGroupModifyVoicePortalMenusRequestVoicePortalMainMenuKeys
     {
 
-        private string _voiceMessaging;
+        protected string _voiceMessaging;
 
         [XmlElement(ElementName = "voiceMessaging", IsNullable = true, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VoiceMessagingSpecified { get; set; }
 
-        private string _commPilotExpressProfile;
+        protected string _commPilotExpressProfile;
 
         [XmlElement(ElementName = "commPilotExpressProfile", IsNullable = true, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CommPilotExpressProfileSpecified { get; set; }
 
-        private string _personalizedName;
+        protected string _personalizedName;
 
         [XmlElement(ElementName = "personalizedName", IsNullable = true, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PersonalizedNameSpecified { get; set; }
 
-        private string _callForwardingOptions;
+        protected string _callForwardingOptions;
 
         [XmlElement(ElementName = "callForwardingOptions", IsNullable = true, Namespace = "")]
         [Optional]
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallForwardingOptionsSpecified { get; set; }
 
-        private string _voicePortalCalling;
+        protected string _voicePortalCalling;
 
         [XmlElement(ElementName = "voicePortalCalling", IsNullable = true, Namespace = "")]
         [Optional]
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VoicePortalCallingSpecified { get; set; }
 
-        private string _hoteling;
+        protected string _hoteling;
 
         [XmlElement(ElementName = "hoteling", IsNullable = true, Namespace = "")]
         [Optional]
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HotelingSpecified { get; set; }
 
-        private string _passcode;
+        protected string _passcode;
 
         [XmlElement(ElementName = "passcode", IsNullable = true, Namespace = "")]
         [Optional]
@@ -156,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PasscodeSpecified { get; set; }
 
-        private string _exitVoicePortal;
+        protected string _exitVoicePortal;
 
         [XmlElement(ElementName = "exitVoicePortal", IsNullable = true, Namespace = "")]
         [Optional]
@@ -176,7 +176,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExitVoicePortalSpecified { get; set; }
 
-        private string _repeatMenu;
+        protected string _repeatMenu;
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]
@@ -196,7 +196,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RepeatMenuSpecified { get; set; }
 
-        private string _externalRouting;
+        protected string _externalRouting;
 
         [XmlElement(ElementName = "externalRouting", IsNullable = true, Namespace = "")]
         [Optional]

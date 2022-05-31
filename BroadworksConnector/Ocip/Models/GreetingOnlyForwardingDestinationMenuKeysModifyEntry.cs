@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GreetingOnlyForwardingDestinationMenuKeysModifyEntry
     {
 
-        private string _greetingOnlyForwardingDestination;
+        protected string _greetingOnlyForwardingDestination;
 
         [XmlElement(ElementName = "greetingOnlyForwardingDestination", IsNullable = true, Namespace = "")]
         [Optional]

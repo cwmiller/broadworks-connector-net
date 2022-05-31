@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderExtensionLengthGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private int _defaultExtensionLength;
+        protected int _defaultExtensionLength;
 
         [XmlElement(ElementName = "defaultExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultExtensionLengthSpecified { get; set; }
 
-        private int _locationRoutingPrefixDigit;
+        protected int _locationRoutingPrefixDigit;
 
         [XmlElement(ElementName = "locationRoutingPrefixDigit", IsNullable = false, Namespace = "")]
         [Optional]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LocationRoutingPrefixDigitSpecified { get; set; }
 
-        private int _locationCodeLength;
+        protected int _locationCodeLength;
 
         [XmlElement(ElementName = "locationCodeLength", IsNullable = false, Namespace = "")]
         [Optional]

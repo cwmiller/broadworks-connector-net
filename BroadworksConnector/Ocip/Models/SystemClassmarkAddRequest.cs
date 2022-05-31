@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemClassmarkAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _classmark;
+        protected string _classmark;
 
         [XmlElement(ElementName = "classmark", IsNullable = false, Namespace = "")]
         [Group(@"0d0e878cbc947aebb19ad489b2ffef11:47")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ClassmarkSpecified { get; set; }
 
-        private string _value;
+        protected string _value;
 
         [XmlElement(ElementName = "value", IsNullable = false, Namespace = "")]
         [Group(@"0d0e878cbc947aebb19ad489b2ffef11:47")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ValueSpecified { get; set; }
 
-        private string _webDisplayKey;
+        protected string _webDisplayKey;
 
         [XmlElement(ElementName = "webDisplayKey", IsNullable = false, Namespace = "")]
         [Optional]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class MWIDeliveryToMobileEndpointTemplateLine
     {
 
-        private string _prefix;
+        protected string _prefix;
 
         [XmlElement(ElementName = "prefix", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PrefixSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateTag _tag;
+        protected BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateTag _tag;
 
         [XmlElement(ElementName = "tag", IsNullable = false, Namespace = "")]
         [Optional]
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TagSpecified { get; set; }
 
-        private string _postfix;
+        protected string _postfix;
 
         [XmlElement(ElementName = "postfix", IsNullable = false, Namespace = "")]
         [Optional]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaExactScheduleLevel : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        private BroadWorksConnector.Ocip.Models.ScheduleLevel _level;
+        protected BroadWorksConnector.Ocip.Models.ScheduleLevel _level;
 
         [XmlElement(ElementName = "level", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:1164")]

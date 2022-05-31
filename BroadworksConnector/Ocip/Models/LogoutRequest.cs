@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class LogoutRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"6b27fcc79475236456fc113a42b75543:341")]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.LogoutRequestReason _reason;
+        protected BroadWorksConnector.Ocip.Models.LogoutRequestReason _reason;
 
         [XmlElement(ElementName = "reason", IsNullable = false, Namespace = "")]
         [Optional]

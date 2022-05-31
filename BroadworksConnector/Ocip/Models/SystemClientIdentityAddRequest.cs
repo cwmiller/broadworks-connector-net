@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemClientIdentityAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _clientIdentity;
+        protected string _clientIdentity;
 
         [XmlElement(ElementName = "clientIdentity", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5362")]

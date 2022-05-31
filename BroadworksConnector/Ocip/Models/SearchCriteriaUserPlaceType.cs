@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaUserPlaceType : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        private BroadWorksConnector.Ocip.Models.UserPlaceType _value;
+        protected BroadWorksConnector.Ocip.Models.UserPlaceType _value;
 
         [XmlElement(ElementName = "value", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:2397")]

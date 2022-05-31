@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class DefaultNetworkClassOfService
     {
 
-        private bool _useExisting;
+        protected bool _useExisting;
 
         [XmlElement(ElementName = "useExisting", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2032")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseExistingSpecified { get; set; }
 
-        private string _networkClassOfServiceName;
+        protected string _networkClassOfServiceName;
 
         [XmlElement(ElementName = "networkClassOfServiceName", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2032")]

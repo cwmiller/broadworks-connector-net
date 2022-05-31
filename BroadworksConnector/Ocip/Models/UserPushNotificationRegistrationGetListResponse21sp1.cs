@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserPushNotificationRegistrationGetListResponse21sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:3506")]
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.PushNotificationRegistrationData> _pushNotificationRegistrationData = new List<BroadWorksConnector.Ocip.Models.PushNotificationRegistrationData>();
+        protected List<BroadWorksConnector.Ocip.Models.PushNotificationRegistrationData> _pushNotificationRegistrationData = new List<BroadWorksConnector.Ocip.Models.PushNotificationRegistrationData>();
 
         [XmlElement(ElementName = "pushNotificationRegistrationData", IsNullable = false, Namespace = "")]
         [Optional]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupEmergencyZonesModifyHomeZoneListRequestHomeZoneIpAddressList
     {
 
-        private string _homeZoneIpAddress;
+        protected string _homeZoneIpAddress;
 
         [XmlElement(ElementName = "homeZoneIpAddress", IsNullable = false, Namespace = "")]
         [Group(@"e71c2205fb31894f87810b330a85ede2:162")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HomeZoneIpAddressSpecified { get; set; }
 
-        private string _newHomeZoneIpAddress;
+        protected string _newHomeZoneIpAddress;
 
         [XmlElement(ElementName = "newHomeZoneIpAddress", IsNullable = false, Namespace = "")]
         [Group(@"e71c2205fb31894f87810b330a85ede2:162")]

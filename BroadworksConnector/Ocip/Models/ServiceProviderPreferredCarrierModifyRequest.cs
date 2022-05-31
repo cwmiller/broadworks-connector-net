@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderPreferredCarrierModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"74a46a9bfccb54713c1d19735843f1df:299")]
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _countryCode;
+        protected string _countryCode;
 
         [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
         [Group(@"74a46a9bfccb54713c1d19735843f1df:299")]
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CountryCodeSpecified { get; set; }
 
-        private string _intraLataCarrier;
+        protected string _intraLataCarrier;
 
         [XmlElement(ElementName = "intraLataCarrier", IsNullable = true, Namespace = "")]
         [Optional]
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IntraLataCarrierSpecified { get; set; }
 
-        private string _interLataCarrier;
+        protected string _interLataCarrier;
 
         [XmlElement(ElementName = "interLataCarrier", IsNullable = true, Namespace = "")]
         [Optional]
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool InterLataCarrierSpecified { get; set; }
 
-        private string _internationalCarrier;
+        protected string _internationalCarrier;
 
         [XmlElement(ElementName = "internationalCarrier", IsNullable = true, Namespace = "")]
         [Optional]

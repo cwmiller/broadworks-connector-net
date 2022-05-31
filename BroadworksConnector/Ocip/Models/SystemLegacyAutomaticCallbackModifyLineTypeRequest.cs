@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemLegacyAutomaticCallbackModifyLineTypeRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private BroadWorksConnector.Ocip.Models.LegacyAutomaticCallbackLineType _lineType;
+        protected BroadWorksConnector.Ocip.Models.LegacyAutomaticCallbackLineType _lineType;
 
         [XmlElement(ElementName = "lineType", IsNullable = false, Namespace = "")]
         [Group(@"6bf3c0ead6c4d948122ea83af7fc6e34:118")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LineTypeSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.LegacyAutomaticCallbackLineMatchAction _matchAction;
+        protected BroadWorksConnector.Ocip.Models.LegacyAutomaticCallbackLineMatchAction _matchAction;
 
         [XmlElement(ElementName = "matchAction", IsNullable = false, Namespace = "")]
         [Optional]
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchActionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.LegacyAutomaticCallbackLineMatchAction _noMatchAction;
+        protected BroadWorksConnector.Ocip.Models.LegacyAutomaticCallbackLineMatchAction _noMatchAction;
 
         [XmlElement(ElementName = "noMatchAction", IsNullable = false, Namespace = "")]
         [Optional]

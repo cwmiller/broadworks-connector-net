@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class AccessDeviceTypeRename
     {
 
-        private string _originalDeviceTypeName;
+        protected string _originalDeviceTypeName;
 
         [XmlElement(ElementName = "originalDeviceTypeName", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:538")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OriginalDeviceTypeNameSpecified { get; set; }
 
-        private string _newDeviceTypeName;
+        protected string _newDeviceTypeName;
 
         [XmlElement(ElementName = "newDeviceTypeName", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:538")]

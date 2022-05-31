@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallCenterAgentStatistics14sp9
     {
 
-        private string _agentUserId;
+        protected string _agentUserId;
 
         [XmlElement(ElementName = "agentUserId", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:7330")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AgentUserIdSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.UserDisplayNames _agentDisplayNames;
+        protected BroadWorksConnector.Ocip.Models.UserDisplayNames _agentDisplayNames;
 
         [XmlElement(ElementName = "agentDisplayNames", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:7330")]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AgentDisplayNamesSpecified { get; set; }
 
-        private bool _available;
+        protected bool _available;
 
         [XmlElement(ElementName = "available", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:7330")]
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AvailableSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AgentStatistics _statistics;
+        protected BroadWorksConnector.Ocip.Models.AgentStatistics _statistics;
 
         [XmlElement(ElementName = "statistics", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:7330")]

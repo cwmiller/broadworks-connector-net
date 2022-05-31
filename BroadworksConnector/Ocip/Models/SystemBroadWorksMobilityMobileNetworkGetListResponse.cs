@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemBroadWorksMobilityMobileNetworkGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _mobileNetworkTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _mobileNetworkTable;
 
         [XmlElement(ElementName = "mobileNetworkTable", IsNullable = false, Namespace = "")]
         [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1124")]

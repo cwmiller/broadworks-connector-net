@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemPreferredCarrierModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _carrier;
+        protected string _carrier;
 
         [XmlElement(ElementName = "carrier", IsNullable = false, Namespace = "")]
         [Group(@"74a46a9bfccb54713c1d19735843f1df:515")]
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CarrierSpecified { get; set; }
 
-        private string _cic;
+        protected string _cic;
 
         [XmlElement(ElementName = "cic", IsNullable = false, Namespace = "")]
         [Optional]
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CicSpecified { get; set; }
 
-        private string _countryCode;
+        protected string _countryCode;
 
         [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CountryCodeSpecified { get; set; }
 
-        private bool _isIntraLata;
+        protected bool _isIntraLata;
 
         [XmlElement(ElementName = "isIntraLata", IsNullable = false, Namespace = "")]
         [Optional]
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsIntraLataSpecified { get; set; }
 
-        private bool _isInterLata;
+        protected bool _isInterLata;
 
         [XmlElement(ElementName = "isInterLata", IsNullable = false, Namespace = "")]
         [Optional]
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsInterLataSpecified { get; set; }
 
-        private bool _isInternational;
+        protected bool _isInternational;
 
         [XmlElement(ElementName = "isInternational", IsNullable = false, Namespace = "")]
         [Optional]

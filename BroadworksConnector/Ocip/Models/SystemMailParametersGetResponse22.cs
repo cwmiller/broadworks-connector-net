@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemMailParametersGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _primaryServerNetAddress;
+        protected string _primaryServerNetAddress;
 
         [XmlElement(ElementName = "primaryServerNetAddress", IsNullable = false, Namespace = "")]
         [Optional]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PrimaryServerNetAddressSpecified { get; set; }
 
-        private string _secondaryServerNetAddress;
+        protected string _secondaryServerNetAddress;
 
         [XmlElement(ElementName = "secondaryServerNetAddress", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SecondaryServerNetAddressSpecified { get; set; }
 
-        private string _defaultFromAddress;
+        protected string _defaultFromAddress;
 
         [XmlElement(ElementName = "defaultFromAddress", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11596")]
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultFromAddressSpecified { get; set; }
 
-        private string _defaultSubject;
+        protected string _defaultSubject;
 
         [XmlElement(ElementName = "defaultSubject", IsNullable = false, Namespace = "")]
         [Optional]
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultSubjectSpecified { get; set; }
 
-        private bool _supportDNSSRVForMailServerAccess;
+        protected bool _supportDNSSRVForMailServerAccess;
 
         [XmlElement(ElementName = "supportDNSSRVForMailServerAccess", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11596")]
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SupportDNSSRVForMailServerAccessSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.SMTPSecureMode _secureMode;
+        protected BroadWorksConnector.Ocip.Models.SMTPSecureMode _secureMode;
 
         [XmlElement(ElementName = "secureMode", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11596")]
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SecureModeSpecified { get; set; }
 
-        private int _port;
+        protected int _port;
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
         [Optional]

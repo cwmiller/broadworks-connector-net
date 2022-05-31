@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAuthenticationLockoutSettingsModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private int _counterResetIntervalDays;
+        protected int _counterResetIntervalDays;
 
         [XmlElement(ElementName = "counterResetIntervalDays", IsNullable = false, Namespace = "")]
         [Optional]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CounterResetIntervalDaysSpecified { get; set; }
 
-        private int _counterResetHour;
+        protected int _counterResetHour;
 
         [XmlElement(ElementName = "counterResetHour", IsNullable = false, Namespace = "")]
         [Optional]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CounterResetHourSpecified { get; set; }
 
-        private int _counterResetMinute;
+        protected int _counterResetMinute;
 
         [XmlElement(ElementName = "counterResetMinute", IsNullable = false, Namespace = "")]
         [Optional]
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CounterResetMinuteSpecified { get; set; }
 
-        private bool _emergencySIPBypassAllowed;
+        protected bool _emergencySIPBypassAllowed;
 
         [XmlElement(ElementName = "emergencySIPBypassAllowed", IsNullable = false, Namespace = "")]
         [Optional]

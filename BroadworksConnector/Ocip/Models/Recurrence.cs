@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class Recurrence
     {
 
-        private BroadWorksConnector.Ocip.Models.RecurrenceRecurDaily _recurDaily;
+        protected BroadWorksConnector.Ocip.Models.RecurrenceRecurDaily _recurDaily;
 
         [XmlElement(ElementName = "recurDaily", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3611")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecurDailySpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.RecurrenceRecurWeekly _recurWeekly;
+        protected BroadWorksConnector.Ocip.Models.RecurrenceRecurWeekly _recurWeekly;
 
         [XmlElement(ElementName = "recurWeekly", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3611")]
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecurWeeklySpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.RecurrenceRecurMonthlyByDay _recurMonthlyByDay;
+        protected BroadWorksConnector.Ocip.Models.RecurrenceRecurMonthlyByDay _recurMonthlyByDay;
 
         [XmlElement(ElementName = "recurMonthlyByDay", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3611")]
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecurMonthlyByDaySpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.RecurrenceRecurMonthlyByWeek _recurMonthlyByWeek;
+        protected BroadWorksConnector.Ocip.Models.RecurrenceRecurMonthlyByWeek _recurMonthlyByWeek;
 
         [XmlElement(ElementName = "recurMonthlyByWeek", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3611")]
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecurMonthlyByWeekSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.RecurrenceRecurYearlyByDay _recurYearlyByDay;
+        protected BroadWorksConnector.Ocip.Models.RecurrenceRecurYearlyByDay _recurYearlyByDay;
 
         [XmlElement(ElementName = "recurYearlyByDay", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3611")]
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecurYearlyByDaySpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.RecurrenceRecurYearlyByWeek _recurYearlyByWeek;
+        protected BroadWorksConnector.Ocip.Models.RecurrenceRecurYearlyByWeek _recurYearlyByWeek;
 
         [XmlElement(ElementName = "recurYearlyByWeek", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3611")]
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecurYearlyByWeekSpecified { get; set; }
 
-        private bool _recurForEver;
+        protected bool _recurForEver;
 
         [XmlElement(ElementName = "recurForEver", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3676")]
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecurForEverSpecified { get; set; }
 
-        private string _recurEndDate;
+        protected string _recurEndDate;
 
         [XmlElement(ElementName = "recurEndDate", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3676")]
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecurEndDateSpecified { get; set; }
 
-        private int _recurEndOccurrence;
+        protected int _recurEndOccurrence;
 
         [XmlElement(ElementName = "recurEndOccurrence", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3676")]

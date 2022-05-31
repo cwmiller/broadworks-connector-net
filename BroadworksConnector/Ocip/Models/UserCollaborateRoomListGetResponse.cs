@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCollaborateRoomListGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _roomInstanceTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _roomInstanceTable;
 
         [XmlElement(ElementName = "roomInstanceTable", IsNullable = false, Namespace = "")]
         [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:1010")]

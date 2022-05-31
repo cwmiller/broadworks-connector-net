@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserShInterfacePublicIdentityRefreshTaskStartRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private BroadWorksConnector.Ocip.Models.PublicUserIdentity _publicUserIdentity;
+        protected BroadWorksConnector.Ocip.Models.PublicUserIdentity _publicUserIdentity;
 
         [XmlElement(ElementName = "publicUserIdentity", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:4045")]

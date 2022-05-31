@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemClassmarkDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _classmark;
+        protected string _classmark;
 
         [XmlElement(ElementName = "classmark", IsNullable = false, Namespace = "")]
         [Group(@"0d0e878cbc947aebb19ad489b2ffef11:65")]

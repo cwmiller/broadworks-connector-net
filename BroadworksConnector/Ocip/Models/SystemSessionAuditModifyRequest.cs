@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSessionAuditModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private int _intervalSeconds;
+        protected int _intervalSeconds;
 
         [XmlElement(ElementName = "intervalSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IntervalSecondsSpecified { get; set; }
 
-        private int _timeoutPeriodSeconds;
+        protected int _timeoutPeriodSeconds;
 
         [XmlElement(ElementName = "timeoutPeriodSeconds", IsNullable = false, Namespace = "")]
         [Optional]

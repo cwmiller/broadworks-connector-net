@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderServiceGetAuthorizationListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _groupServicesAuthorizationTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _groupServicesAuthorizationTable;
 
         [XmlElement(ElementName = "groupServicesAuthorizationTable", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5939")]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupServicesAuthorizationTableSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _userServicesAuthorizationTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _userServicesAuthorizationTable;
 
         [XmlElement(ElementName = "userServicesAuthorizationTable", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:5939")]

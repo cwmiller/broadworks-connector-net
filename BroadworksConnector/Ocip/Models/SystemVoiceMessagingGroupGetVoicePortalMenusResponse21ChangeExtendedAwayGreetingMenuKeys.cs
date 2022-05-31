@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse21ChangeExtendedAwayGreetingMenuKeys
     {
 
-        private string _activateExtendedAwayGreeting;
+        protected string _activateExtendedAwayGreeting;
 
         [XmlElement(ElementName = "activateExtendedAwayGreeting", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ActivateExtendedAwayGreetingSpecified { get; set; }
 
-        private string _deactivateExtendedAwayGreeting;
+        protected string _deactivateExtendedAwayGreeting;
 
         [XmlElement(ElementName = "deactivateExtendedAwayGreeting", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeactivateExtendedAwayGreetingSpecified { get; set; }
 
-        private string _recordNewGreeting;
+        protected string _recordNewGreeting;
 
         [XmlElement(ElementName = "recordNewGreeting", IsNullable = false, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecordNewGreetingSpecified { get; set; }
 
-        private string _listenToCurrentGreeting;
+        protected string _listenToCurrentGreeting;
 
         [XmlElement(ElementName = "listenToCurrentGreeting", IsNullable = false, Namespace = "")]
         [Optional]
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ListenToCurrentGreetingSpecified { get; set; }
 
-        private string _returnToPreviousMenu;
+        protected string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:798")]
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReturnToPreviousMenuSpecified { get; set; }
 
-        private string _repeatMenu;
+        protected string _repeatMenu;
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
         [Optional]

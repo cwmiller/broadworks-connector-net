@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCommunicationBarringGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _useDefaultServiceProviderProfile;
+        protected bool _useDefaultServiceProviderProfile;
 
         [XmlElement(ElementName = "useDefaultServiceProviderProfile", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:3035")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseDefaultServiceProviderProfileSpecified { get; set; }
 
-        private string _profile;
+        protected string _profile;
 
         [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
         [Optional]

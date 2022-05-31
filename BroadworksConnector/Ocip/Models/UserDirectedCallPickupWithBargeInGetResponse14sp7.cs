@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserDirectedCallPickupWithBargeInGetResponse14sp7 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _enableBargeInWarningTone;
+        protected bool _enableBargeInWarningTone;
 
         [XmlElement(ElementName = "enableBargeInWarningTone", IsNullable = false, Namespace = "")]
         [Group(@"e994db048e7467a66936aa2afd5ac740:59")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableBargeInWarningToneSpecified { get; set; }
 
-        private bool _enableAutomaticTargetSelection;
+        protected bool _enableAutomaticTargetSelection;
 
         [XmlElement(ElementName = "enableAutomaticTargetSelection", IsNullable = false, Namespace = "")]
         [Group(@"e994db048e7467a66936aa2afd5ac740:59")]

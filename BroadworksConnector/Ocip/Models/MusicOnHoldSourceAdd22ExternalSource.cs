@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class MusicOnHoldSourceAdd22ExternalSource
     {
 
-        private BroadWorksConnector.Ocip.Models.AccessDeviceEndpointAdd _accessDeviceEndpoint;
+        protected BroadWorksConnector.Ocip.Models.AccessDeviceEndpointAdd _accessDeviceEndpoint;
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3136")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessDeviceEndpointSpecified { get; set; }
 
-        private bool _authenticationRequired;
+        protected bool _authenticationRequired;
 
         [XmlElement(ElementName = "authenticationRequired", IsNullable = false, Namespace = "")]
         [Optional]
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AuthenticationRequiredSpecified { get; set; }
 
-        private string _authenticationUserName;
+        protected string _authenticationUserName;
 
         [XmlElement(ElementName = "authenticationUserName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AuthenticationUserNameSpecified { get; set; }
 
-        private string _authenticationPassword;
+        protected string _authenticationPassword;
 
         [XmlElement(ElementName = "authenticationPassword", IsNullable = false, Namespace = "")]
         [Optional]

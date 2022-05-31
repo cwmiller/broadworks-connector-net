@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallToNumber
     {
 
-        private BroadWorksConnector.Ocip.Models.CallToNumberType _type;
+        protected BroadWorksConnector.Ocip.Models.CallToNumberType _type;
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1091")]
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TypeSpecified { get; set; }
 
-        private string _number;
+        protected string _number;
 
         [XmlElement(ElementName = "number", IsNullable = false, Namespace = "")]
         [Optional]
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberSpecified { get; set; }
 
-        private string _extension;
+        protected string _extension;
 
         [XmlElement(ElementName = "extension", IsNullable = false, Namespace = "")]
         [Optional]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class OutgoingCallingPlanRedirectingPermissionsModify
     {
 
-        private bool _group;
+        protected bool _group;
 
         [XmlElement(ElementName = "group", IsNullable = false, Namespace = "")]
         [Optional]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupSpecified { get; set; }
 
-        private bool _local;
+        protected bool _local;
 
         [XmlElement(ElementName = "local", IsNullable = false, Namespace = "")]
         [Optional]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LocalSpecified { get; set; }
 
-        private bool _tollFree;
+        protected bool _tollFree;
 
         [XmlElement(ElementName = "tollFree", IsNullable = false, Namespace = "")]
         [Optional]
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TollFreeSpecified { get; set; }
 
-        private bool _toll;
+        protected bool _toll;
 
         [XmlElement(ElementName = "toll", IsNullable = false, Namespace = "")]
         [Optional]
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TollSpecified { get; set; }
 
-        private bool _international;
+        protected bool _international;
 
         [XmlElement(ElementName = "international", IsNullable = false, Namespace = "")]
         [Optional]
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool InternationalSpecified { get; set; }
 
-        private bool _operatorAssisted;
+        protected bool _operatorAssisted;
 
         [XmlElement(ElementName = "operatorAssisted", IsNullable = false, Namespace = "")]
         [Optional]
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OperatorAssistedSpecified { get; set; }
 
-        private bool _chargeableDirectoryAssisted;
+        protected bool _chargeableDirectoryAssisted;
 
         [XmlElement(ElementName = "chargeableDirectoryAssisted", IsNullable = false, Namespace = "")]
         [Optional]
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ChargeableDirectoryAssistedSpecified { get; set; }
 
-        private bool _specialServicesI;
+        protected bool _specialServicesI;
 
         [XmlElement(ElementName = "specialServicesI", IsNullable = false, Namespace = "")]
         [Optional]
@@ -160,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SpecialServicesISpecified { get; set; }
 
-        private bool _specialServicesII;
+        protected bool _specialServicesII;
 
         [XmlElement(ElementName = "specialServicesII", IsNullable = false, Namespace = "")]
         [Optional]
@@ -178,7 +178,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SpecialServicesIISpecified { get; set; }
 
-        private bool _premiumServicesI;
+        protected bool _premiumServicesI;
 
         [XmlElement(ElementName = "premiumServicesI", IsNullable = false, Namespace = "")]
         [Optional]
@@ -196,7 +196,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PremiumServicesISpecified { get; set; }
 
-        private bool _premiumServicesII;
+        protected bool _premiumServicesII;
 
         [XmlElement(ElementName = "premiumServicesII", IsNullable = false, Namespace = "")]
         [Optional]
@@ -214,7 +214,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PremiumServicesIISpecified { get; set; }
 
-        private bool _casual;
+        protected bool _casual;
 
         [XmlElement(ElementName = "casual", IsNullable = false, Namespace = "")]
         [Optional]
@@ -232,7 +232,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CasualSpecified { get; set; }
 
-        private bool _urlDialing;
+        protected bool _urlDialing;
 
         [XmlElement(ElementName = "urlDialing", IsNullable = false, Namespace = "")]
         [Optional]
@@ -250,7 +250,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UrlDialingSpecified { get; set; }
 
-        private bool _unknown;
+        protected bool _unknown;
 
         [XmlElement(ElementName = "unknown", IsNullable = false, Namespace = "")]
         [Optional]

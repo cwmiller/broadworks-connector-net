@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemShInterfaceRefreshTaskGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isRunning;
+        protected bool _isRunning;
 
         [XmlElement(ElementName = "isRunning", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16452")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsRunningSpecified { get; set; }
 
-        private int _numberPublicIdentityRefreshesStarted;
+        protected int _numberPublicIdentityRefreshesStarted;
 
         [XmlElement(ElementName = "numberPublicIdentityRefreshesStarted", IsNullable = false, Namespace = "")]
         [Optional]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberPublicIdentityRefreshesStartedSpecified { get; set; }
 
-        private int _numberPublicIdentities;
+        protected int _numberPublicIdentities;
 
         [XmlElement(ElementName = "numberPublicIdentities", IsNullable = false, Namespace = "")]
         [Optional]

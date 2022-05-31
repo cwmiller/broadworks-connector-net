@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCallingPartyCategoryGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.CallingPartyCategorySelection _category;
+        protected BroadWorksConnector.Ocip.Models.CallingPartyCategorySelection _category;
 
         [XmlElement(ElementName = "category", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:40774")]

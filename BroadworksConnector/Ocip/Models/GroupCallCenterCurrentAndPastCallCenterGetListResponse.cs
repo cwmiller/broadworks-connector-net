@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallCenterCurrentAndPastCallCenterGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _serviceUserId = new List<string>();
+        protected List<string> _serviceUserId = new List<string>();
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        private List<string> _deletedServiceUserId = new List<string>();
+        protected List<string> _deletedServiceUserId = new List<string>();
 
         [XmlElement(ElementName = "deletedServiceUserId", IsNullable = false, Namespace = "")]
         [Optional]

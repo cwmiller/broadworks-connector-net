@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ActivatableDNRange
     {
 
-        private string _minPhoneNumber;
+        protected string _minPhoneNumber;
 
         [XmlElement(ElementName = "minPhoneNumber", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:562")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MinPhoneNumberSpecified { get; set; }
 
-        private string _maxPhoneNumber;
+        protected string _maxPhoneNumber;
 
         [XmlElement(ElementName = "maxPhoneNumber", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:562")]
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxPhoneNumberSpecified { get; set; }
 
-        private bool _activate;
+        protected bool _activate;
 
         [XmlElement(ElementName = "activate", IsNullable = false, Namespace = "")]
         [Optional]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCustomerOriginatedTraceGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _screenMaliciousCallers;
+        protected bool _screenMaliciousCallers;
 
         [XmlElement(ElementName = "screenMaliciousCallers", IsNullable = false, Namespace = "")]
         [Group(@"55636b88804490cf0ead7c9d4f44f28d:57")]

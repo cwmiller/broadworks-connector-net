@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDeviceFamilyAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _deviceFamilyName;
+        protected string _deviceFamilyName;
 
         [XmlElement(ElementName = "deviceFamilyName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7343")]
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceFamilyNameSpecified { get; set; }
 
-        private string _resellerId;
+        protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResellerIdSpecified { get; set; }
 
-        private List<string> _assignDeviceType = new List<string>();
+        protected List<string> _assignDeviceType = new List<string>();
 
         [XmlElement(ElementName = "assignDeviceType", IsNullable = false, Namespace = "")]
         [Optional]
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AssignDeviceTypeSpecified { get; set; }
 
-        private List<string> _assignTagSet = new List<string>();
+        protected List<string> _assignTagSet = new List<string>();
 
         [XmlElement(ElementName = "assignTagSet", IsNullable = false, Namespace = "")]
         [Optional]

@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemServiceCodeGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemServiceCodeGetListResponse>
     {
 
-        private int _responseSizeLimit;
+        protected int _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResponseSizeLimitSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCode> _searchCriteriaServiceCode = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCode>();
+        protected List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCode> _searchCriteriaServiceCode = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCode>();
 
         [XmlElement(ElementName = "searchCriteriaServiceCode", IsNullable = false, Namespace = "")]
         [Optional]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaServiceCodeSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCodeDescription> _searchCriteriaServiceCodeDescription = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCodeDescription>();
+        protected List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCodeDescription> _searchCriteriaServiceCodeDescription = new List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCodeDescription>();
 
         [XmlElement(ElementName = "searchCriteriaServiceCodeDescription", IsNullable = false, Namespace = "")]
         [Optional]

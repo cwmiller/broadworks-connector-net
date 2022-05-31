@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class RecurrenceRecurDaily
     {
 
-        private int _recurInterval;
+        protected int _recurInterval;
 
         [XmlElement(ElementName = "recurInterval", IsNullable = false, Namespace = "")]
         [Optional]

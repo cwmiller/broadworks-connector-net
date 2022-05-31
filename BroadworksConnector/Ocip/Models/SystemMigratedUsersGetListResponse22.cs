@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemMigratedUsersGetListResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _userId = new List<string>();
+        protected List<string> _userId = new List<string>();
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Optional]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private int _totalNumberOfMigratedUsers;
+        protected int _totalNumberOfMigratedUsers;
 
         [XmlElement(ElementName = "totalNumberOfMigratedUsers", IsNullable = false, Namespace = "")]
         [Optional]

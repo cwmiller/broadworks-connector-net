@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCallRecordingGetResponse23 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.RecordingOption20 _recordingOption;
+        protected BroadWorksConnector.Ocip.Models.RecordingOption20 _recordingOption;
 
         [XmlElement(ElementName = "recordingOption", IsNullable = false, Namespace = "")]
         [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:452")]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecordingOptionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.RecordingPauseResumeNotificationType _pauseResumeNotification;
+        protected BroadWorksConnector.Ocip.Models.RecordingPauseResumeNotificationType _pauseResumeNotification;
 
         [XmlElement(ElementName = "pauseResumeNotification", IsNullable = false, Namespace = "")]
         [Optional]
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PauseResumeNotificationSpecified { get; set; }
 
-        private bool _enableCallRecordingAnnouncement;
+        protected bool _enableCallRecordingAnnouncement;
 
         [XmlElement(ElementName = "enableCallRecordingAnnouncement", IsNullable = false, Namespace = "")]
         [Optional]
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableCallRecordingAnnouncementSpecified { get; set; }
 
-        private bool _enableRecordCallRepeatWarningTone;
+        protected bool _enableRecordCallRepeatWarningTone;
 
         [XmlElement(ElementName = "enableRecordCallRepeatWarningTone", IsNullable = false, Namespace = "")]
         [Optional]
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableRecordCallRepeatWarningToneSpecified { get; set; }
 
-        private int _recordCallRepeatWarningToneTimerSeconds;
+        protected int _recordCallRepeatWarningToneTimerSeconds;
 
         [XmlElement(ElementName = "recordCallRepeatWarningToneTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecordCallRepeatWarningToneTimerSecondsSpecified { get; set; }
 
-        private bool _enableVoiceMailRecording;
+        protected bool _enableVoiceMailRecording;
 
         [XmlElement(ElementName = "enableVoiceMailRecording", IsNullable = false, Namespace = "")]
         [Optional]
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableVoiceMailRecordingSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.MediaStream _mediaStream;
+        protected BroadWorksConnector.Ocip.Models.MediaStream _mediaStream;
 
         [XmlElement(ElementName = "mediaStream", IsNullable = false, Namespace = "")]
         [Optional]

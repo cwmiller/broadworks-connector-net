@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupVisualDeviceManagementGetDeviceInfoResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _deviceType;
+        protected string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8892")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceTypeSpecified { get; set; }
 
-        private bool _supportVisualDeviceManagement;
+        protected bool _supportVisualDeviceManagement;
 
         [XmlElement(ElementName = "supportVisualDeviceManagement", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8892")]
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SupportVisualDeviceManagementSpecified { get; set; }
 
-        private string _macAddress;
+        protected string _macAddress;
 
         [XmlElement(ElementName = "macAddress", IsNullable = false, Namespace = "")]
         [Optional]
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MacAddressSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.PrimaryUserInfo _primaryUser;
+        protected BroadWorksConnector.Ocip.Models.PrimaryUserInfo _primaryUser;
 
         [XmlElement(ElementName = "primaryUser", IsNullable = false, Namespace = "")]
         [Optional]

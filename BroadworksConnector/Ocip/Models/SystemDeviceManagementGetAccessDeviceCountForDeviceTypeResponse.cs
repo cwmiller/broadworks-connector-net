@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDeviceManagementGetAccessDeviceCountForDeviceTypeResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private int _accessDeviceCount;
+        protected int _accessDeviceCount;
 
         [XmlElement(ElementName = "accessDeviceCount", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7811")]

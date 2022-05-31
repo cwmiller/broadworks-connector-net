@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupScheduleGetEventListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _eventName = new List<string>();
+        protected List<string> _eventName = new List<string>();
 
         [XmlElement(ElementName = "eventName", IsNullable = false, Namespace = "")]
         [Optional]

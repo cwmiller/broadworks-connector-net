@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ResellerResourcePriorityModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _resellerId;
+        protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Group(@"0c61aa8506194ca714d0fe1c4a0b57ff:82")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResellerIdSpecified { get; set; }
 
-        private bool _useSystemSettings;
+        protected bool _useSystemSettings;
 
         [XmlElement(ElementName = "useSystemSettings", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseSystemSettingsSpecified { get; set; }
 
-        private bool _sendResourcePriorityToNetwork;
+        protected bool _sendResourcePriorityToNetwork;
 
         [XmlElement(ElementName = "sendResourcePriorityToNetwork", IsNullable = false, Namespace = "")]
         [Optional]
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SendResourcePriorityToNetworkSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ResourcePriorityValue _resourcePriority;
+        protected BroadWorksConnector.Ocip.Models.ResourcePriorityValue _resourcePriority;
 
         [XmlElement(ElementName = "resourcePriority", IsNullable = false, Namespace = "")]
         [Optional]

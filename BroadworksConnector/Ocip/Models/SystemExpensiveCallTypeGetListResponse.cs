@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemExpensiveCallTypeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _alternateCallIndicator = new List<string>();
+        protected List<string> _alternateCallIndicator = new List<string>();
 
         [XmlElement(ElementName = "alternateCallIndicator", IsNullable = false, Namespace = "")]
         [Optional]

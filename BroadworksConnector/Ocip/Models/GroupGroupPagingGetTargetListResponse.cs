@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupGroupPagingGetTargetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _targetTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _targetTable;
 
         [XmlElement(ElementName = "targetTable", IsNullable = false, Namespace = "")]
         [Group(@"0d36df8c109e3ea7324f79031368c661:388")]

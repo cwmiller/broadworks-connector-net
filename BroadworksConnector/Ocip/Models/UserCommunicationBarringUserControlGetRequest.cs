@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCommunicationBarringUserControlGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserCommunicationBarringUserControlGetResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"4277c572e54919d6e29f4c0fa69aaad1:96")]

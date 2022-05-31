@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupApplicationServerSetGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _applicationServerSetName;
+        protected string _applicationServerSetName;
 
         [XmlElement(ElementName = "applicationServerSetName", IsNullable = false, Namespace = "")]
         [Optional]

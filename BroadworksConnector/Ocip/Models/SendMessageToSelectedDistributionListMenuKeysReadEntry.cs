@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SendMessageToSelectedDistributionListMenuKeysReadEntry
     {
 
-        private string _confirmSendingToDistributionList;
+        protected string _confirmSendingToDistributionList;
 
         [XmlElement(ElementName = "confirmSendingToDistributionList", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConfirmSendingToDistributionListSpecified { get; set; }
 
-        private string _cancelSendingToDistributionList;
+        protected string _cancelSendingToDistributionList;
 
         [XmlElement(ElementName = "cancelSendingToDistributionList", IsNullable = false, Namespace = "")]
         [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3060")]

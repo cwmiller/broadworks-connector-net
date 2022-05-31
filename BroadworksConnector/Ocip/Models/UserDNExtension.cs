@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserDNExtension
     {
 
-        private string _dn;
+        protected string _dn;
 
         [XmlElement(ElementName = "dn", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DnSpecified { get; set; }
 
-        private string _extension;
+        protected string _extension;
 
         [XmlElement(ElementName = "extension", IsNullable = false, Namespace = "")]
         [Optional]

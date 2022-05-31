@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CommPilotExpressRedirectionWithExceptionModify
     {
 
-        private bool _sendCallsToVoiceMailExceptExcludedNumbers;
+        protected bool _sendCallsToVoiceMailExceptExcludedNumbers;
 
         [XmlElement(ElementName = "sendCallsToVoiceMailExceptExcludedNumbers", IsNullable = false, Namespace = "")]
         [Optional]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SendCallsToVoiceMailExceptExcludedNumbersSpecified { get; set; }
 
-        private string _excludedPhoneNumber01;
+        protected string _excludedPhoneNumber01;
 
         [XmlElement(ElementName = "excludedPhoneNumber01", IsNullable = true, Namespace = "")]
         [Optional]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExcludedPhoneNumber01Specified { get; set; }
 
-        private string _excludedPhoneNumber02;
+        protected string _excludedPhoneNumber02;
 
         [XmlElement(ElementName = "excludedPhoneNumber02", IsNullable = true, Namespace = "")]
         [Optional]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExcludedPhoneNumber02Specified { get; set; }
 
-        private string _excludedPhoneNumber03;
+        protected string _excludedPhoneNumber03;
 
         [XmlElement(ElementName = "excludedPhoneNumber03", IsNullable = true, Namespace = "")]
         [Optional]
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExcludedPhoneNumber03Specified { get; set; }
 
-        private string _forwardExcludedNumbersTo;
+        protected string _forwardExcludedNumbersTo;
 
         [XmlElement(ElementName = "forwardExcludedNumbersTo", IsNullable = true, Namespace = "")]
         [Optional]

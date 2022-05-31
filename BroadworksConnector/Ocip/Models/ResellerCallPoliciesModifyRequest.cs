@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ResellerCallPoliciesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _resellerId;
+        protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Group(@"b009175f2a2a9d38115e319a6ad64d7f:409")]
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResellerIdSpecified { get; set; }
 
-        private bool _forceRedirectingUserIdentityForRedirectedCalls;
+        protected bool _forceRedirectingUserIdentityForRedirectedCalls;
 
         [XmlElement(ElementName = "forceRedirectingUserIdentityForRedirectedCalls", IsNullable = false, Namespace = "")]
         [Optional]
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ForceRedirectingUserIdentityForRedirectedCallsSpecified { get; set; }
 
-        private bool _applyRedirectingUserIdentityToNetworkLocations;
+        protected bool _applyRedirectingUserIdentityToNetworkLocations;
 
         [XmlElement(ElementName = "applyRedirectingUserIdentityToNetworkLocations", IsNullable = false, Namespace = "")]
         [Optional]

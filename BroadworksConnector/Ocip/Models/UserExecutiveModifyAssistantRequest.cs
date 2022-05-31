@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserExecutiveModifyAssistantRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:354")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private bool _allowOptInOut;
+        protected bool _allowOptInOut;
 
         [XmlElement(ElementName = "allowOptInOut", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowOptInOutSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ReplacementUserIdList _assistantUserIdList;
+        protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _assistantUserIdList;
 
         [XmlElement(ElementName = "assistantUserIdList", IsNullable = true, Namespace = "")]
         [Optional]

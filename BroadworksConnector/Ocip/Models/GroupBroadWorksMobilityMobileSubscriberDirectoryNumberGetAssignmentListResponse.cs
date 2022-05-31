@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _mobileSubscriberDirectoryNumberTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _mobileSubscriberDirectoryNumberTable;
 
         [XmlElement(ElementName = "mobileSubscriberDirectoryNumberTable", IsNullable = false, Namespace = "")]
         [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:399")]

@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupInstantGroupCallGetInstanceListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _instantGroupCallTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _instantGroupCallTable;
 
         [XmlElement(ElementName = "instantGroupCallTable", IsNullable = false, Namespace = "")]
         [Group(@"f41dea4708922d4a3f0e26f198cc953f:106")]

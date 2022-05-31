@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemFileGetContentRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemFileGetContentResponse>
     {
 
-        private string _fileName;
+        protected string _fileName;
 
         [XmlElement(ElementName = "fileName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10219")]

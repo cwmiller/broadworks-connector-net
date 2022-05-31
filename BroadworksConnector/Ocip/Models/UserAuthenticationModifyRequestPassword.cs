@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserAuthenticationModifyRequestPassword
     {
 
-        private string _old;
+        protected string _old;
 
         [XmlElement(ElementName = "old", IsNullable = false, Namespace = "")]
         [Group(@"9db4d5fa1bbf70f2626f52a5d6e3420e:80")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OldSpecified { get; set; }
 
-        private string _new;
+        protected string _new;
 
         [XmlElement(ElementName = "new", IsNullable = false, Namespace = "")]
         [Group(@"9db4d5fa1bbf70f2626f52a5d6e3420e:80")]

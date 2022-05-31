@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class PublicClusterGetFullyQualifiedDomainNameResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _publicClusterFQDN;
+        protected string _publicClusterFQDN;
 
         [XmlElement(ElementName = "publicClusterFQDN", IsNullable = false, Namespace = "")]
         [Optional]

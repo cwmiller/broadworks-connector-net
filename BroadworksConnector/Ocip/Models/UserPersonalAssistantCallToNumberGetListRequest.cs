@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserPersonalAssistantCallToNumberGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserPersonalAssistantCallToNumberGetListResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"f53ece1c00394ef2d3d76f532f9a9663:129")]

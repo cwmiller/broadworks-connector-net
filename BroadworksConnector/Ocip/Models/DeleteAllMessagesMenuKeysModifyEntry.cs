@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class DeleteAllMessagesMenuKeysModifyEntry
     {
 
-        private string _confirmDeletion;
+        protected string _confirmDeletion;
 
         [XmlElement(ElementName = "confirmDeletion", IsNullable = false, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConfirmDeletionSpecified { get; set; }
 
-        private string _cancelDeletion;
+        protected string _cancelDeletion;
 
         [XmlElement(ElementName = "cancelDeletion", IsNullable = false, Namespace = "")]
         [Optional]

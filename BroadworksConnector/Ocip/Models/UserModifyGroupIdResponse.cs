@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserModifyGroupIdResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<BroadWorksConnector.Ocip.Models.UserMoveMessage> _error = new List<BroadWorksConnector.Ocip.Models.UserMoveMessage>();
+        protected List<BroadWorksConnector.Ocip.Models.UserMoveMessage> _error = new List<BroadWorksConnector.Ocip.Models.UserMoveMessage>();
 
         [XmlElement(ElementName = "error", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ErrorSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.UserMoveMessage> _impact = new List<BroadWorksConnector.Ocip.Models.UserMoveMessage>();
+        protected List<BroadWorksConnector.Ocip.Models.UserMoveMessage> _impact = new List<BroadWorksConnector.Ocip.Models.UserMoveMessage>();
 
         [XmlElement(ElementName = "impact", IsNullable = false, Namespace = "")]
         [Optional]

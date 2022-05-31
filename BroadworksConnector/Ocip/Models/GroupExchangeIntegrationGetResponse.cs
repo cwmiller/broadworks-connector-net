@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupExchangeIntegrationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _enableExchangeIntegration;
+        protected bool _enableExchangeIntegration;
 
         [XmlElement(ElementName = "enableExchangeIntegration", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5657")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableExchangeIntegrationSpecified { get; set; }
 
-        private string _exchangeURL;
+        protected string _exchangeURL;
 
         [XmlElement(ElementName = "exchangeURL", IsNullable = false, Namespace = "")]
         [Optional]
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExchangeURLSpecified { get; set; }
 
-        private string _exchangeUserName;
+        protected string _exchangeUserName;
 
         [XmlElement(ElementName = "exchangeUserName", IsNullable = false, Namespace = "")]
         [Optional]

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CriteriaFromDnModify
     {
 
-        private BroadWorksConnector.Ocip.Models.CriteriaDnSelection _fromDnCriteriaSelection;
+        protected BroadWorksConnector.Ocip.Models.CriteriaDnSelection _fromDnCriteriaSelection;
 
         [XmlElement(ElementName = "fromDnCriteriaSelection", IsNullable = false, Namespace = "")]
         [Optional]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FromDnCriteriaSelectionSpecified { get; set; }
 
-        private bool _includeAnonymousCallers;
+        protected bool _includeAnonymousCallers;
 
         [XmlElement(ElementName = "includeAnonymousCallers", IsNullable = false, Namespace = "")]
         [Optional]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeAnonymousCallersSpecified { get; set; }
 
-        private bool _includeUnavailableCallers;
+        protected bool _includeUnavailableCallers;
 
         [XmlElement(ElementName = "includeUnavailableCallers", IsNullable = false, Namespace = "")]
         [Optional]
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeUnavailableCallersSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.CriteriaReplacementDNList _phoneNumberList;
+        protected BroadWorksConnector.Ocip.Models.CriteriaReplacementDNList _phoneNumberList;
 
         [XmlElement(ElementName = "phoneNumberList", IsNullable = true, Namespace = "")]
         [Optional]

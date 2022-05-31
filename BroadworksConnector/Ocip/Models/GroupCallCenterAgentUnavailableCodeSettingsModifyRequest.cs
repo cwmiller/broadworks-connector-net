@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallCenterAgentUnavailableCodeSettingsModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:2695")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _groupId;
+        protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:2695")]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        private bool _enableAgentUnavailableCodes;
+        protected bool _enableAgentUnavailableCodes;
 
         [XmlElement(ElementName = "enableAgentUnavailableCodes", IsNullable = false, Namespace = "")]
         [Optional]
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableAgentUnavailableCodesSpecified { get; set; }
 
-        private string _defaultAgentUnavailableCodeOnDND;
+        protected string _defaultAgentUnavailableCodeOnDND;
 
         [XmlElement(ElementName = "defaultAgentUnavailableCodeOnDND", IsNullable = true, Namespace = "")]
         [Optional]
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultAgentUnavailableCodeOnDNDSpecified { get; set; }
 
-        private string _defaultAgentUnavailableCodeOnPersonalCalls;
+        protected string _defaultAgentUnavailableCodeOnPersonalCalls;
 
         [XmlElement(ElementName = "defaultAgentUnavailableCodeOnPersonalCalls", IsNullable = true, Namespace = "")]
         [Optional]
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultAgentUnavailableCodeOnPersonalCallsSpecified { get; set; }
 
-        private string _defaultAgentUnavailableCodeOnConsecutiveBounces;
+        protected string _defaultAgentUnavailableCodeOnConsecutiveBounces;
 
         [XmlElement(ElementName = "defaultAgentUnavailableCodeOnConsecutiveBounces", IsNullable = true, Namespace = "")]
         [Optional]
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultAgentUnavailableCodeOnConsecutiveBouncesSpecified { get; set; }
 
-        private string _defaultAgentUnavailableCodeOnNotReachable;
+        protected string _defaultAgentUnavailableCodeOnNotReachable;
 
         [XmlElement(ElementName = "defaultAgentUnavailableCodeOnNotReachable", IsNullable = true, Namespace = "")]
         [Optional]
@@ -155,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultAgentUnavailableCodeOnNotReachableSpecified { get; set; }
 
-        private bool _forceUseOfAgentUnavailableCodes;
+        protected bool _forceUseOfAgentUnavailableCodes;
 
         [XmlElement(ElementName = "forceUseOfAgentUnavailableCodes", IsNullable = false, Namespace = "")]
         [Optional]
@@ -173,7 +173,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ForceUseOfAgentUnavailableCodesSpecified { get; set; }
 
-        private string _defaultAgentUnavailableCode;
+        protected string _defaultAgentUnavailableCode;
 
         [XmlElement(ElementName = "defaultAgentUnavailableCode", IsNullable = true, Namespace = "")]
         [Optional]
@@ -193,7 +193,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultAgentUnavailableCodeSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.CallCenterAgentUnavailableCodeStateModify> _codeStateList = new List<BroadWorksConnector.Ocip.Models.CallCenterAgentUnavailableCodeStateModify>();
+        protected List<BroadWorksConnector.Ocip.Models.CallCenterAgentUnavailableCodeStateModify> _codeStateList = new List<BroadWorksConnector.Ocip.Models.CallCenterAgentUnavailableCodeStateModify>();
 
         [XmlElement(ElementName = "codeStateList", IsNullable = false, Namespace = "")]
         [Optional]

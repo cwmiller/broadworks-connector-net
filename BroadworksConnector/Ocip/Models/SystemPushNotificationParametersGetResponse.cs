@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemPushNotificationParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _enforceAllowedApplicationList;
+        protected bool _enforceAllowedApplicationList;
 
         [XmlElement(ElementName = "enforceAllowedApplicationList", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14849")]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnforceAllowedApplicationListSpecified { get; set; }
 
-        private int _maximumRegistrationsPerUser;
+        protected int _maximumRegistrationsPerUser;
 
         [XmlElement(ElementName = "maximumRegistrationsPerUser", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14849")]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaximumRegistrationsPerUserSpecified { get; set; }
 
-        private int _maximumRegistrationAgeDays;
+        protected int _maximumRegistrationAgeDays;
 
         [XmlElement(ElementName = "maximumRegistrationAgeDays", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14849")]
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaximumRegistrationAgeDaysSpecified { get; set; }
 
-        private int _newCallTimeout;
+        protected int _newCallTimeout;
 
         [XmlElement(ElementName = "newCallTimeout", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14849")]
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewCallTimeoutSpecified { get; set; }
 
-        private int _subscriptionEventsPerSecond;
+        protected int _subscriptionEventsPerSecond;
 
         [XmlElement(ElementName = "subscriptionEventsPerSecond", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14849")]

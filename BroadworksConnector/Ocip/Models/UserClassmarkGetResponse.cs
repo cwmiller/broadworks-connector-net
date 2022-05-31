@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserClassmarkGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _classmark;
+        protected string _classmark;
 
         [XmlElement(ElementName = "classmark", IsNullable = false, Namespace = "")]
         [Optional]

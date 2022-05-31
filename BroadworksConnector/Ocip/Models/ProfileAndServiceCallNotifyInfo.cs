@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ProfileAndServiceCallNotifyInfo
     {
 
-        private string _callNotifyEmailAddress;
+        protected string _callNotifyEmailAddress;
 
         [XmlElement(ElementName = "callNotifyEmailAddress", IsNullable = false, Namespace = "")]
         [Optional]
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallNotifyEmailAddressSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
         [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:4324")]

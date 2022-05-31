@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserAttendantConsoleGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _launchOnLogin;
+        protected bool _launchOnLogin;
 
         [XmlElement(ElementName = "launchOnLogin", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39558")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LaunchOnLoginSpecified { get; set; }
 
-        private bool _allowUserConfigCallDetails;
+        protected bool _allowUserConfigCallDetails;
 
         [XmlElement(ElementName = "allowUserConfigCallDetails", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39558")]
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowUserConfigCallDetailsSpecified { get; set; }
 
-        private bool _allowUserViewCallDetails;
+        protected bool _allowUserViewCallDetails;
 
         [XmlElement(ElementName = "allowUserViewCallDetails", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:39558")]
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowUserViewCallDetailsSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.AttendantConsoleDisplayColumn> _displayColumn = new List<BroadWorksConnector.Ocip.Models.AttendantConsoleDisplayColumn>();
+        protected List<BroadWorksConnector.Ocip.Models.AttendantConsoleDisplayColumn> _displayColumn = new List<BroadWorksConnector.Ocip.Models.AttendantConsoleDisplayColumn>();
 
         [XmlElement(ElementName = "displayColumn", IsNullable = false, Namespace = "")]
         [Optional]

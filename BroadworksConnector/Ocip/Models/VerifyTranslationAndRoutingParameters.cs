@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class VerifyTranslationAndRoutingParameters
     {
 
-        private BroadWorksConnector.Ocip.Models.VerifyTranslationAndRoutingOrigination _origination;
+        protected BroadWorksConnector.Ocip.Models.VerifyTranslationAndRoutingOrigination _origination;
 
         [XmlElement(ElementName = "origination", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5301")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OriginationSpecified { get; set; }
 
-        private string _destination;
+        protected string _destination;
 
         [XmlElement(ElementName = "destination", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5301")]
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DestinationSpecified { get; set; }
 
-        private string _contact;
+        protected string _contact;
 
         [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
         [Optional]
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ContactSpecified { get; set; }
 
-        private string _diversion;
+        protected string _diversion;
 
         [XmlElement(ElementName = "diversion", IsNullable = false, Namespace = "")]
         [Optional]

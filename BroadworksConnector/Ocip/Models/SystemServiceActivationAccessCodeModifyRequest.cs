@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemServiceActivationAccessCodeModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private string _terminatingAccessCode;
+        protected string _terminatingAccessCode;
 
         [XmlElement(ElementName = "terminatingAccessCode", IsNullable = true, Namespace = "")]
         [Optional]
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TerminatingAccessCodeSpecified { get; set; }
 
-        private string _redirectingAccessCode;
+        protected string _redirectingAccessCode;
 
         [XmlElement(ElementName = "redirectingAccessCode", IsNullable = true, Namespace = "")]
         [Optional]
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RedirectingAccessCodeSpecified { get; set; }
 
-        private string _clickToDialAccessCode;
+        protected string _clickToDialAccessCode;
 
         [XmlElement(ElementName = "clickToDialAccessCode", IsNullable = true, Namespace = "")]
         [Optional]

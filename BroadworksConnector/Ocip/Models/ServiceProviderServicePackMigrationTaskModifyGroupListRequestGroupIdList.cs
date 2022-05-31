@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderServicePackMigrationTaskModifyGroupListRequestGroupIdList
     {
 
-        private List<string> _groupId = new List<string>();
+        protected List<string> _groupId = new List<string>();
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6474")]

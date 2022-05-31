@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupCallCenterAddAgentListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceUserId;
+        protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:1954")]
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        private List<string> _agentUserId = new List<string>();
+        protected List<string> _agentUserId = new List<string>();
 
         [XmlElement(ElementName = "agentUserId", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:1956")]
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AgentUserIdSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.CallCenterSkillAgentList> _agentSkillList = new List<BroadWorksConnector.Ocip.Models.CallCenterSkillAgentList>();
+        protected List<BroadWorksConnector.Ocip.Models.CallCenterSkillAgentList> _agentSkillList = new List<BroadWorksConnector.Ocip.Models.CallCenterSkillAgentList>();
 
         [XmlElement(ElementName = "agentSkillList", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:1956")]

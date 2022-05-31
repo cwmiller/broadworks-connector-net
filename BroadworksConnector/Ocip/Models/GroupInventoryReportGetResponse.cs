@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupInventoryReportGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _inventoryReportTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _inventoryReportTable;
 
         [XmlElement(ElementName = "inventoryReportTable", IsNullable = false, Namespace = "")]
         [Group(@"5c0fc3a03773b4f430e938115770c82d:64")]

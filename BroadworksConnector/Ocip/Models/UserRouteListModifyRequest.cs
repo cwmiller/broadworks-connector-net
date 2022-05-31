@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserRouteListModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"3f28429898a57a7f7846d3877b22df9f:858")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private bool _treatOriginationsAndPBXRedirectionsAsScreened;
+        protected bool _treatOriginationsAndPBXRedirectionsAsScreened;
 
         [XmlElement(ElementName = "treatOriginationsAndPBXRedirectionsAsScreened", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TreatOriginationsAndPBXRedirectionsAsScreenedSpecified { get; set; }
 
-        private bool _useRouteListIdentityForNonEmergencyCalls;
+        protected bool _useRouteListIdentityForNonEmergencyCalls;
 
         [XmlElement(ElementName = "useRouteListIdentityForNonEmergencyCalls", IsNullable = false, Namespace = "")]
         [Optional]
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseRouteListIdentityForNonEmergencyCallsSpecified { get; set; }
 
-        private bool _useRouteListIdentityForEmergencyCalls;
+        protected bool _useRouteListIdentityForEmergencyCalls;
 
         [XmlElement(ElementName = "useRouteListIdentityForEmergencyCalls", IsNullable = false, Namespace = "")]
         [Optional]
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseRouteListIdentityForEmergencyCallsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.ReplacementDNList _assignedNumberRangeStartList;
+        protected BroadWorksConnector.Ocip.Models.ReplacementDNList _assignedNumberRangeStartList;
 
         [XmlElement(ElementName = "assignedNumberRangeStartList", IsNullable = true, Namespace = "")]
         [Optional]
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AssignedNumberRangeStartListSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.EnterpriseTrunkReplacementNumberPrefixList _assignedNumberPrefixList;
+        protected BroadWorksConnector.Ocip.Models.EnterpriseTrunkReplacementNumberPrefixList _assignedNumberPrefixList;
 
         [XmlElement(ElementName = "assignedNumberPrefixList", IsNullable = true, Namespace = "")]
         [Optional]

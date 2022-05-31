@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderSessionAdmissionControlWhiteListGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _matchDigitPattern = new List<string>();
+        protected List<string> _matchDigitPattern = new List<string>();
 
         [XmlElement(ElementName = "matchDigitPattern", IsNullable = false, Namespace = "")]
         [Optional]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchDigitPatternSpecified { get; set; }
 
-        private bool _enableWhiteList;
+        protected bool _enableWhiteList;
 
         [XmlElement(ElementName = "enableWhiteList", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6710")]

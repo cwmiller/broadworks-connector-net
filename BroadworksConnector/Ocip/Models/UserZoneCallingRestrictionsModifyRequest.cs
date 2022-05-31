@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserZoneCallingRestrictionsModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"da5cd0d79ddb505982e08d164e405660:132")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private string _homeZoneName;
+        protected string _homeZoneName;
 
         [XmlElement(ElementName = "homeZoneName", IsNullable = true, Namespace = "")]
         [Optional]

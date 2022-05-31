@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupSessionAdmissionControlGetAvailableDeviceListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<BroadWorksConnector.Ocip.Models.AccessDevice> _accessDevice = new List<BroadWorksConnector.Ocip.Models.AccessDevice>();
+        protected List<BroadWorksConnector.Ocip.Models.AccessDevice> _accessDevice = new List<BroadWorksConnector.Ocip.Models.AccessDevice>();
 
         [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
         [Optional]

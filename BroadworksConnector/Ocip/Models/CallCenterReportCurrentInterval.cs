@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallCenterReportCurrentInterval
     {
 
-        private BroadWorksConnector.Ocip.Models.CallCenterReportIntervalTimeUnit _timeUnit;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportIntervalTimeUnit _timeUnit;
 
         [XmlElement(ElementName = "timeUnit", IsNullable = false, Namespace = "")]
         [Group(@"e2c537e3e39483b96620673a7012ffdd:7420")]

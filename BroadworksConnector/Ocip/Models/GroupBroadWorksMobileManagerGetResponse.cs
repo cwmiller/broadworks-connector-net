@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupBroadWorksMobileManagerGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _mobileManagerId;
+        protected string _mobileManagerId;
 
         [XmlElement(ElementName = "mobileManagerId", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2436")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MobileManagerIdSpecified { get; set; }
 
-        private string _name;
+        protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2436")]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NameSpecified { get; set; }
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2436")]
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private bool _localToCarrier;
+        protected bool _localToCarrier;
 
         [XmlElement(ElementName = "localToCarrier", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2436")]
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LocalToCarrierSpecified { get; set; }
 
-        private string _deactivationReason;
+        protected string _deactivationReason;
 
         [XmlElement(ElementName = "deactivationReason", IsNullable = false, Namespace = "")]
         [Optional]
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeactivationReasonSpecified { get; set; }
 
-        private bool _maxTxPerSecondEnabled;
+        protected bool _maxTxPerSecondEnabled;
 
         [XmlElement(ElementName = "maxTxPerSecondEnabled", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2436")]
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxTxPerSecondEnabledSpecified { get; set; }
 
-        private int _maxTxPerSecond;
+        protected int _maxTxPerSecond;
 
         [XmlElement(ElementName = "maxTxPerSecond", IsNullable = false, Namespace = "")]
         [Optional]
@@ -146,7 +146,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxTxPerSecondSpecified { get; set; }
 
-        private bool _tldnEnabled;
+        protected bool _tldnEnabled;
 
         [XmlElement(ElementName = "tldnEnabled", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2436")]
@@ -163,7 +163,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TldnEnabledSpecified { get; set; }
 
-        private bool _genericNumberEnabled;
+        protected bool _genericNumberEnabled;
 
         [XmlElement(ElementName = "genericNumberEnabled", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2436")]
@@ -180,7 +180,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GenericNumberEnabledSpecified { get; set; }
 
-        private bool _mobileStateCheckEnabled;
+        protected bool _mobileStateCheckEnabled;
 
         [XmlElement(ElementName = "mobileStateCheckEnabled", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2436")]
@@ -197,7 +197,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MobileStateCheckEnabledSpecified { get; set; }
 
-        private bool _locationBasedServicesEnabled;
+        protected bool _locationBasedServicesEnabled;
 
         [XmlElement(ElementName = "locationBasedServicesEnabled", IsNullable = false, Namespace = "")]
         [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2436")]

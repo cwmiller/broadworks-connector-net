@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserClassmarkGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserClassmarkGetResponse>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"0d0e878cbc947aebb19ad489b2ffef11:172")]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCollaborateInstantRoomGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _roomName;
+        protected string _roomName;
 
         [XmlElement(ElementName = "roomName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RoomNameSpecified { get; set; }
 
-        private string _instantRoomStartTime;
+        protected string _instantRoomStartTime;
 
         [XmlElement(ElementName = "instantRoomStartTime", IsNullable = false, Namespace = "")]
         [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:684")]
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool InstantRoomStartTimeSpecified { get; set; }
 
-        private string _instantRoomEndTime;
+        protected string _instantRoomEndTime;
 
         [XmlElement(ElementName = "instantRoomEndTime", IsNullable = false, Namespace = "")]
         [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:684")]

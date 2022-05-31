@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserExecutiveGetAssistantResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _allowOptInOut;
+        protected bool _allowOptInOut;
 
         [XmlElement(ElementName = "allowOptInOut", IsNullable = false, Namespace = "")]
         [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:160")]
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowOptInOutSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _assistantUserTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _assistantUserTable;
 
         [XmlElement(ElementName = "assistantUserTable", IsNullable = false, Namespace = "")]
         [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:160")]

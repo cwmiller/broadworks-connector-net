@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class AlternateNumberEntry
     {
 
-        private string _phoneNumber;
+        protected string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PhoneNumberSpecified { get; set; }
 
-        private string _extension;
+        protected string _extension;
 
         [XmlElement(ElementName = "extension", IsNullable = true, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExtensionSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.RingPattern? _ringPattern;
+        protected BroadWorksConnector.Ocip.Models.RingPattern? _ringPattern;
 
         [XmlElement(ElementName = "ringPattern", IsNullable = true, Namespace = "")]
         [Optional]

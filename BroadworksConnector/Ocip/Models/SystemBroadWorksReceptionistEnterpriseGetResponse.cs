@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemBroadWorksReceptionistEnterpriseGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private int _maxMonitoredUsers;
+        protected int _maxMonitoredUsers;
 
         [XmlElement(ElementName = "maxMonitoredUsers", IsNullable = false, Namespace = "")]
         [Group(@"fb12998f4f9e45cedde01f08569f4c7c:65")]

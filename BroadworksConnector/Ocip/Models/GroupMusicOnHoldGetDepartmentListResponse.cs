@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupMusicOnHoldGetDepartmentListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _hasDepartment;
+        protected bool _hasDepartment;
 
         [XmlElement(ElementName = "hasDepartment", IsNullable = false, Namespace = "")]
         [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:113")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HasDepartmentSpecified { get; set; }
 
-        private List<BroadWorksConnector.Ocip.Models.DepartmentKey> _department = new List<BroadWorksConnector.Ocip.Models.DepartmentKey>();
+        protected List<BroadWorksConnector.Ocip.Models.DepartmentKey> _department = new List<BroadWorksConnector.Ocip.Models.DepartmentKey>();
 
         [XmlElement(ElementName = "department", IsNullable = false, Namespace = "")]
         [Optional]
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DepartmentSpecified { get; set; }
 
-        private List<string> _departmentFullPath = new List<string>();
+        protected List<string> _departmentFullPath = new List<string>();
 
         [XmlElement(ElementName = "departmentFullPath", IsNullable = false, Namespace = "")]
         [Optional]

@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemFaxMessagingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private int _statusDurationHours;
+        protected int _statusDurationHours;
 
         [XmlElement(ElementName = "statusDurationHours", IsNullable = false, Namespace = "")]
         [Group(@"f46f967f937c7dc89ddb3db423383aa4:61")]
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StatusDurationHoursSpecified { get; set; }
 
-        private int _statusAuditIntervalHours;
+        protected int _statusAuditIntervalHours;
 
         [XmlElement(ElementName = "statusAuditIntervalHours", IsNullable = false, Namespace = "")]
         [Group(@"f46f967f937c7dc89ddb3db423383aa4:61")]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StatusAuditIntervalHoursSpecified { get; set; }
 
-        private int _maximumConcurrentFaxesPerUser;
+        protected int _maximumConcurrentFaxesPerUser;
 
         [XmlElement(ElementName = "maximumConcurrentFaxesPerUser", IsNullable = false, Namespace = "")]
         [Group(@"f46f967f937c7dc89ddb3db423383aa4:61")]

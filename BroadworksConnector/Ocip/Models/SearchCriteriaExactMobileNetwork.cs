@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaExactMobileNetwork : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        private string _mobileNetworkName;
+        protected string _mobileNetworkName;
 
         [XmlElement(ElementName = "mobileNetworkName", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:1104")]

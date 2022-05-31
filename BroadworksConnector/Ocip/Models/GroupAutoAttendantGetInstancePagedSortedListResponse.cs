@@ -26,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupAutoAttendantGetInstancePagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _autoAttendantTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _autoAttendantTable;
 
         [XmlElement(ElementName = "autoAttendantTable", IsNullable = false, Namespace = "")]
         [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:320")]

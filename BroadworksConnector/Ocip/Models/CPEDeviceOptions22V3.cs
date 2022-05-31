@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class CPEDeviceOptions22V3
     {
 
-        private bool _enableMonitoring;
+        protected bool _enableMonitoring;
 
         [XmlElement(ElementName = "enableMonitoring", IsNullable = false, Namespace = "")]
         [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1896")]
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableMonitoringSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 _configType;
+        protected BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 _configType;
 
         [XmlElement(ElementName = "configType", IsNullable = false, Namespace = "")]
         [Optional]
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConfigTypeSpecified { get; set; }
 
-        private string _systemFileName;
+        protected string _systemFileName;
 
         [XmlElement(ElementName = "systemFileName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SystemFileNameSpecified { get; set; }
 
-        private string _deviceFileFormat;
+        protected string _deviceFileFormat;
 
         [XmlElement(ElementName = "deviceFileFormat", IsNullable = false, Namespace = "")]
         [Optional]
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceFileFormatSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.DeviceManagementDeviceTypeOptions22V3 _deviceManagementDeviceTypeOptions;
+        protected BroadWorksConnector.Ocip.Models.DeviceManagementDeviceTypeOptions22V3 _deviceManagementDeviceTypeOptions;
 
         [XmlElement(ElementName = "deviceManagementDeviceTypeOptions", IsNullable = false, Namespace = "")]
         [Optional]

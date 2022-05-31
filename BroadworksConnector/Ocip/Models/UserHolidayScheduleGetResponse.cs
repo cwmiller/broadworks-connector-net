@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserHolidayScheduleGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _holidayScheduleName;
+        protected string _holidayScheduleName;
 
         [XmlElement(ElementName = "holidayScheduleName", IsNullable = false, Namespace = "")]
         [Group(@"ab0042aa512abc10edb3c55e4b416b0b:44680")]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HolidayScheduleNameSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.Holiday _holiday01;
+        protected BroadWorksConnector.Ocip.Models.Holiday _holiday01;
 
         [XmlElement(ElementName = "holiday01", IsNullable = false, Namespace = "")]
         [Optional]
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Holiday01Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.Holiday _holiday02;
+        protected BroadWorksConnector.Ocip.Models.Holiday _holiday02;
 
         [XmlElement(ElementName = "holiday02", IsNullable = false, Namespace = "")]
         [Optional]
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Holiday02Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.Holiday _holiday03;
+        protected BroadWorksConnector.Ocip.Models.Holiday _holiday03;
 
         [XmlElement(ElementName = "holiday03", IsNullable = false, Namespace = "")]
         [Optional]
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Holiday03Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.Holiday _holiday04;
+        protected BroadWorksConnector.Ocip.Models.Holiday _holiday04;
 
         [XmlElement(ElementName = "holiday04", IsNullable = false, Namespace = "")]
         [Optional]
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Holiday04Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.Holiday _holiday05;
+        protected BroadWorksConnector.Ocip.Models.Holiday _holiday05;
 
         [XmlElement(ElementName = "holiday05", IsNullable = false, Namespace = "")]
         [Optional]
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Holiday05Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.Holiday _holiday06;
+        protected BroadWorksConnector.Ocip.Models.Holiday _holiday06;
 
         [XmlElement(ElementName = "holiday06", IsNullable = false, Namespace = "")]
         [Optional]
@@ -145,7 +145,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Holiday06Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.Holiday _holiday07;
+        protected BroadWorksConnector.Ocip.Models.Holiday _holiday07;
 
         [XmlElement(ElementName = "holiday07", IsNullable = false, Namespace = "")]
         [Optional]
@@ -163,7 +163,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Holiday07Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.Holiday _holiday08;
+        protected BroadWorksConnector.Ocip.Models.Holiday _holiday08;
 
         [XmlElement(ElementName = "holiday08", IsNullable = false, Namespace = "")]
         [Optional]
@@ -181,7 +181,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Holiday08Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.Holiday _holiday09;
+        protected BroadWorksConnector.Ocip.Models.Holiday _holiday09;
 
         [XmlElement(ElementName = "holiday09", IsNullable = false, Namespace = "")]
         [Optional]
@@ -199,7 +199,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Holiday09Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.Holiday _holiday10;
+        protected BroadWorksConnector.Ocip.Models.Holiday _holiday10;
 
         [XmlElement(ElementName = "holiday10", IsNullable = false, Namespace = "")]
         [Optional]
@@ -217,7 +217,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Holiday10Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.Holiday _holiday11;
+        protected BroadWorksConnector.Ocip.Models.Holiday _holiday11;
 
         [XmlElement(ElementName = "holiday11", IsNullable = false, Namespace = "")]
         [Optional]
@@ -235,7 +235,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Holiday11Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.Holiday _holiday12;
+        protected BroadWorksConnector.Ocip.Models.Holiday _holiday12;
 
         [XmlElement(ElementName = "holiday12", IsNullable = false, Namespace = "")]
         [Optional]
@@ -253,7 +253,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Holiday12Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.Holiday _holiday13;
+        protected BroadWorksConnector.Ocip.Models.Holiday _holiday13;
 
         [XmlElement(ElementName = "holiday13", IsNullable = false, Namespace = "")]
         [Optional]
@@ -271,7 +271,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Holiday13Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.Holiday _holiday14;
+        protected BroadWorksConnector.Ocip.Models.Holiday _holiday14;
 
         [XmlElement(ElementName = "holiday14", IsNullable = false, Namespace = "")]
         [Optional]
@@ -289,7 +289,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Holiday14Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.Holiday _holiday15;
+        protected BroadWorksConnector.Ocip.Models.Holiday _holiday15;
 
         [XmlElement(ElementName = "holiday15", IsNullable = false, Namespace = "")]
         [Optional]
@@ -307,7 +307,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Holiday15Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.Holiday _holiday16;
+        protected BroadWorksConnector.Ocip.Models.Holiday _holiday16;
 
         [XmlElement(ElementName = "holiday16", IsNullable = false, Namespace = "")]
         [Optional]
@@ -325,7 +325,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Holiday16Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.Holiday _holiday17;
+        protected BroadWorksConnector.Ocip.Models.Holiday _holiday17;
 
         [XmlElement(ElementName = "holiday17", IsNullable = false, Namespace = "")]
         [Optional]
@@ -343,7 +343,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Holiday17Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.Holiday _holiday18;
+        protected BroadWorksConnector.Ocip.Models.Holiday _holiday18;
 
         [XmlElement(ElementName = "holiday18", IsNullable = false, Namespace = "")]
         [Optional]
@@ -361,7 +361,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Holiday18Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.Holiday _holiday19;
+        protected BroadWorksConnector.Ocip.Models.Holiday _holiday19;
 
         [XmlElement(ElementName = "holiday19", IsNullable = false, Namespace = "")]
         [Optional]
@@ -379,7 +379,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool Holiday19Specified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.Holiday _holiday20;
+        protected BroadWorksConnector.Ocip.Models.Holiday _holiday20;
 
         [XmlElement(ElementName = "holiday20", IsNullable = false, Namespace = "")]
         [Optional]

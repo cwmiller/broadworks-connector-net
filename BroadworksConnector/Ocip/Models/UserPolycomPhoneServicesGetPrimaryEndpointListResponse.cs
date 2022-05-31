@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserPolycomPhoneServicesGetPrimaryEndpointListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _deviceUserTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _deviceUserTable;
 
         [XmlElement(ElementName = "deviceUserTable", IsNullable = false, Namespace = "")]
         [Group(@"4f074d986b998636e2bcb0d67372b0f4:116")]

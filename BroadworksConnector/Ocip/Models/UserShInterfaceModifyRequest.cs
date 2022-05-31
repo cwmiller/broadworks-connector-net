@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserShInterfaceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private BroadWorksConnector.Ocip.Models.PublicUserIdentity _publicUserIdentity;
+        protected BroadWorksConnector.Ocip.Models.PublicUserIdentity _publicUserIdentity;
 
         [XmlElement(ElementName = "publicUserIdentity", IsNullable = false, Namespace = "")]
         [Group(@"53d18cc797d03d802cbc411ad821f1d4:4027")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PublicUserIdentitySpecified { get; set; }
 
-        private string _sCSCFName;
+        protected string _sCSCFName;
 
         [XmlElement(ElementName = "SCSCFName", IsNullable = true, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SCSCFNameSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.IMSUserState _iMSUserState;
+        protected BroadWorksConnector.Ocip.Models.IMSUserState _iMSUserState;
 
         [XmlElement(ElementName = "IMSUserState", IsNullable = false, Namespace = "")]
         [Optional]

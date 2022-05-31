@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemBroadWorksMobileManagerModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _scfApiNetAddress1;
+        protected string _scfApiNetAddress1;
 
         [XmlElement(ElementName = "scfApiNetAddress1", IsNullable = true, Namespace = "")]
         [Optional]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ScfApiNetAddress1Specified { get; set; }
 
-        private string _scfApiNetAddress2;
+        protected string _scfApiNetAddress2;
 
         [XmlElement(ElementName = "scfApiNetAddress2", IsNullable = true, Namespace = "")]
         [Optional]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ScfApiNetAddress2Specified { get; set; }
 
-        private string _userName;
+        protected string _userName;
 
         [XmlElement(ElementName = "userName", IsNullable = true, Namespace = "")]
         [Optional]
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserNameSpecified { get; set; }
 
-        private string _password;
+        protected string _password;
 
         [XmlElement(ElementName = "password", IsNullable = true, Namespace = "")]
         [Optional]
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PasswordSpecified { get; set; }
 
-        private string _emailFromAddress;
+        protected string _emailFromAddress;
 
         [XmlElement(ElementName = "emailFromAddress", IsNullable = true, Namespace = "")]
         [Optional]
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EmailFromAddressSpecified { get; set; }
 
-        private bool _scfIMSOnly;
+        protected bool _scfIMSOnly;
 
         [XmlElement(ElementName = "scfIMSOnly", IsNullable = false, Namespace = "")]
         [Optional]
@@ -137,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ScfIMSOnlySpecified { get; set; }
 
-        private string _signalingIPAddress;
+        protected string _signalingIPAddress;
 
         [XmlElement(ElementName = "signalingIPAddress", IsNullable = true, Namespace = "")]
         [Optional]
@@ -157,7 +157,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SignalingIPAddressSpecified { get; set; }
 
-        private int? _signalingPort;
+        protected int? _signalingPort;
 
         [XmlElement(ElementName = "signalingPort", IsNullable = true, Namespace = "")]
         [Optional]

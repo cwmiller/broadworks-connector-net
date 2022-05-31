@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderServicePackMigrationTaskModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _serviceProviderId;
+        protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6515")]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        private string _taskName;
+        protected string _taskName;
 
         [XmlElement(ElementName = "taskName", IsNullable = false, Namespace = "")]
         [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6515")]
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TaskNameSpecified { get; set; }
 
-        private string _newTaskName;
+        protected string _newTaskName;
 
         [XmlElement(ElementName = "newTaskName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewTaskNameSpecified { get; set; }
 
-        private string _startTimestamp;
+        protected string _startTimestamp;
 
         [XmlElement(ElementName = "startTimestamp", IsNullable = false, Namespace = "")]
         [Optional]
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StartTimestampSpecified { get; set; }
 
-        private int _expireAfterNumHours;
+        protected int _expireAfterNumHours;
 
         [XmlElement(ElementName = "expireAfterNumHours", IsNullable = false, Namespace = "")]
         [Optional]
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExpireAfterNumHoursSpecified { get; set; }
 
-        private int _maxDurationHours;
+        protected int _maxDurationHours;
 
         [XmlElement(ElementName = "maxDurationHours", IsNullable = false, Namespace = "")]
         [Optional]
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxDurationHoursSpecified { get; set; }
 
-        private bool _sendReportEmail;
+        protected bool _sendReportEmail;
 
         [XmlElement(ElementName = "sendReportEmail", IsNullable = false, Namespace = "")]
         [Optional]
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SendReportEmailSpecified { get; set; }
 
-        private string _reportDeliveryEmailAddress;
+        protected string _reportDeliveryEmailAddress;
 
         [XmlElement(ElementName = "reportDeliveryEmailAddress", IsNullable = true, Namespace = "")]
         [Optional]
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReportDeliveryEmailAddressSpecified { get; set; }
 
-        private bool _abortOnError;
+        protected bool _abortOnError;
 
         [XmlElement(ElementName = "abortOnError", IsNullable = false, Namespace = "")]
         [Optional]
@@ -192,7 +192,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AbortOnErrorSpecified { get; set; }
 
-        private int? _abortErrorThreshold;
+        protected int? _abortErrorThreshold;
 
         [XmlElement(ElementName = "abortErrorThreshold", IsNullable = true, Namespace = "")]
         [Optional]
@@ -211,7 +211,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AbortErrorThresholdSpecified { get; set; }
 
-        private bool _reportAllUsers;
+        protected bool _reportAllUsers;
 
         [XmlElement(ElementName = "reportAllUsers", IsNullable = false, Namespace = "")]
         [Optional]
@@ -229,7 +229,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReportAllUsersSpecified { get; set; }
 
-        private bool _automaticallyIncrementServiceQuantity;
+        protected bool _automaticallyIncrementServiceQuantity;
 
         [XmlElement(ElementName = "automaticallyIncrementServiceQuantity", IsNullable = false, Namespace = "")]
         [Optional]

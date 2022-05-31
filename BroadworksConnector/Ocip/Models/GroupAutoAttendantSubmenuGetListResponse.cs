@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupAutoAttendantSubmenuGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _submenuTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _submenuTable;
 
         [XmlElement(ElementName = "submenuTable", IsNullable = false, Namespace = "")]
         [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:499")]

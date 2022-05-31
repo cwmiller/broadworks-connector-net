@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemGeographicRedundancyPeerSipConnectionMonitoringGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _enabled;
+        protected bool _enabled;
 
         [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10519")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnabledSpecified { get; set; }
 
-        private int _heartbeatInterval;
+        protected int _heartbeatInterval;
 
         [XmlElement(ElementName = "heartbeatInterval", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10519")]
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HeartbeatIntervalSpecified { get; set; }
 
-        private int _heartbeatTimeout;
+        protected int _heartbeatTimeout;
 
         [XmlElement(ElementName = "heartbeatTimeout", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10519")]

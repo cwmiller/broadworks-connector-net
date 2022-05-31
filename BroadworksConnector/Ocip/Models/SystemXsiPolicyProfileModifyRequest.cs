@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemXsiPolicyProfileModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private BroadWorksConnector.Ocip.Models.XsiPolicyProfileKey _xsiPolicyProfile;
+        protected BroadWorksConnector.Ocip.Models.XsiPolicyProfileKey _xsiPolicyProfile;
 
         [XmlElement(ElementName = "xsiPolicyProfile", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19575")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool XsiPolicyProfileSpecified { get; set; }
 
-        private string _newXsiPolicyProfileName;
+        protected string _newXsiPolicyProfileName;
 
         [XmlElement(ElementName = "newXsiPolicyProfileName", IsNullable = false, Namespace = "")]
         [Optional]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewXsiPolicyProfileNameSpecified { get; set; }
 
-        private string _description;
+        protected string _description;
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DescriptionSpecified { get; set; }
 
-        private int _maxTargetSubscription;
+        protected int _maxTargetSubscription;
 
         [XmlElement(ElementName = "maxTargetSubscription", IsNullable = false, Namespace = "")]
         [Optional]

@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupTimeScheduleGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _timeSchedule = new List<string>();
+        protected List<string> _timeSchedule = new List<string>();
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
         [Optional]

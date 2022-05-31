@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class VoicePortalLoginMenuKeysModifyEntry
     {
 
-        private string _accessUsingOtherMailboxId;
+        protected string _accessUsingOtherMailboxId;
 
         [XmlElement(ElementName = "accessUsingOtherMailboxId", IsNullable = true, Namespace = "")]
         [Optional]

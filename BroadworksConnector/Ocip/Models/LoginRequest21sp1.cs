@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class LoginRequest21sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.LoginResponse21sp1>
     {
 
-        private string _userId;
+        protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Group(@"de4d76f01f337fe4694212ec9f771753:4237")]
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        private string _signedPassword;
+        protected string _signedPassword;
 
         [XmlElement(ElementName = "signedPassword", IsNullable = false, Namespace = "")]
         [Optional]
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SignedPasswordSpecified { get; set; }
 
-        private string _plainTextPassword;
+        protected string _plainTextPassword;
 
         [XmlElement(ElementName = "plainTextPassword", IsNullable = false, Namespace = "")]
         [Optional]

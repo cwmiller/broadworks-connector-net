@@ -26,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCountryCodeAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _countryCode;
+        protected string _countryCode;
 
         [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6859")]
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CountryCodeSpecified { get; set; }
 
-        private string _countryName;
+        protected string _countryName;
 
         [XmlElement(ElementName = "countryName", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6859")]
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CountryNameSpecified { get; set; }
 
-        private int _ringPeriodMilliseconds;
+        protected int _ringPeriodMilliseconds;
 
         [XmlElement(ElementName = "ringPeriodMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RingPeriodMillisecondsSpecified { get; set; }
 
-        private int _offHookWarningTimerSeconds;
+        protected int _offHookWarningTimerSeconds;
 
         [XmlElement(ElementName = "offHookWarningTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OffHookWarningTimerSecondsSpecified { get; set; }
 
-        private bool _enableNationalPrefix;
+        protected bool _enableNationalPrefix;
 
         [XmlElement(ElementName = "enableNationalPrefix", IsNullable = false, Namespace = "")]
         [Optional]
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableNationalPrefixSpecified { get; set; }
 
-        private string _nationalPrefix;
+        protected string _nationalPrefix;
 
         [XmlElement(ElementName = "nationalPrefix", IsNullable = false, Namespace = "")]
         [Optional]
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NationalPrefixSpecified { get; set; }
 
-        private int _maxCallWaitingTones;
+        protected int _maxCallWaitingTones;
 
         [XmlElement(ElementName = "maxCallWaitingTones", IsNullable = false, Namespace = "")]
         [Optional]
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxCallWaitingTonesSpecified { get; set; }
 
-        private int _timeBetweenCallWaitingTonesMilliseconds;
+        protected int _timeBetweenCallWaitingTonesMilliseconds;
 
         [XmlElement(ElementName = "timeBetweenCallWaitingTonesMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -182,7 +182,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TimeBetweenCallWaitingTonesMillisecondsSpecified { get; set; }
 
-        private bool _disableNationalPrefixForOffNetCalls;
+        protected bool _disableNationalPrefixForOffNetCalls;
 
         [XmlElement(ElementName = "disableNationalPrefixForOffNetCalls", IsNullable = false, Namespace = "")]
         [Optional]

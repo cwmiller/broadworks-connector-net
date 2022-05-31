@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class XsiApplicationIdEntry
     {
 
-        private string _xsiApplicationId;
+        protected string _xsiApplicationId;
 
         [XmlElement(ElementName = "xsiApplicationId", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:20127")]
@@ -35,7 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool XsiApplicationIdSpecified { get; set; }
 
-        private string _description;
+        protected string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]

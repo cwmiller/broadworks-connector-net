@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDeviceManagementTagSetCountryGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _countryName = new List<string>();
+        protected List<string> _countryName = new List<string>();
 
         [XmlElement(ElementName = "countryName", IsNullable = false, Namespace = "")]
         [Optional]

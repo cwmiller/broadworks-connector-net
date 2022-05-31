@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupTrunkGroupSecurityClassificationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _defaultSecurityClassification;
+        protected string _defaultSecurityClassification;
 
         [XmlElement(ElementName = "defaultSecurityClassification", IsNullable = false, Namespace = "")]
         [Optional]

@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemLocationBasedCallingRestrictionsGetResponse17sp3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.PhysicalLocationIndicator _physicalLocationIndicator;
+        protected BroadWorksConnector.Ocip.Models.PhysicalLocationIndicator _physicalLocationIndicator;
 
         [XmlElement(ElementName = "physicalLocationIndicator", IsNullable = false, Namespace = "")]
         [Group(@"7770900887d4397dd29272c7b9c55bc4:56")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PhysicalLocationIndicatorSpecified { get; set; }
 
-        private bool _enforceMscValidation;
+        protected bool _enforceMscValidation;
 
         [XmlElement(ElementName = "enforceMscValidation", IsNullable = false, Namespace = "")]
         [Group(@"7770900887d4397dd29272c7b9c55bc4:56")]
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnforceMscValidationSpecified { get; set; }
 
-        private bool _enableOfficeZoneAnnouncement;
+        protected bool _enableOfficeZoneAnnouncement;
 
         [XmlElement(ElementName = "enableOfficeZoneAnnouncement", IsNullable = false, Namespace = "")]
         [Group(@"7770900887d4397dd29272c7b9c55bc4:56")]
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableOfficeZoneAnnouncementSpecified { get; set; }
 
-        private bool _enhanceOfficeZone;
+        protected bool _enhanceOfficeZone;
 
         [XmlElement(ElementName = "enhanceOfficeZone", IsNullable = false, Namespace = "")]
         [Group(@"7770900887d4397dd29272c7b9c55bc4:56")]

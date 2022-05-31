@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupConsolidatedAddResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<BroadWorksConnector.Ocip.Models.DNValidationStatusMessage> _dnValidationError = new List<BroadWorksConnector.Ocip.Models.DNValidationStatusMessage>();
+        protected List<BroadWorksConnector.Ocip.Models.DNValidationStatusMessage> _dnValidationError = new List<BroadWorksConnector.Ocip.Models.DNValidationStatusMessage>();
 
         [XmlElement(ElementName = "dnValidationError", IsNullable = false, Namespace = "")]
         [Optional]

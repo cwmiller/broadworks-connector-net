@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupAccountAuthorizationCodesGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.AccountAuthorizationCodeType _type;
+        protected BroadWorksConnector.Ocip.Models.AccountAuthorizationCodeType _type;
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
         [Group(@"65df37199ec43e5d21a187db39d63158:176")]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TypeSpecified { get; set; }
 
-        private int _numberOfDigits;
+        protected int _numberOfDigits;
 
         [XmlElement(ElementName = "numberOfDigits", IsNullable = false, Namespace = "")]
         [Group(@"65df37199ec43e5d21a187db39d63158:176")]
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberOfDigitsSpecified { get; set; }
 
-        private bool _allowLocalAndTollFreeCalls;
+        protected bool _allowLocalAndTollFreeCalls;
 
         [XmlElement(ElementName = "allowLocalAndTollFreeCalls", IsNullable = false, Namespace = "")]
         [Group(@"65df37199ec43e5d21a187db39d63158:176")]
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowLocalAndTollFreeCallsSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _mandatoryUsageUserTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _mandatoryUsageUserTable;
 
         [XmlElement(ElementName = "mandatoryUsageUserTable", IsNullable = false, Namespace = "")]
         [Group(@"65df37199ec43e5d21a187db39d63158:176")]
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MandatoryUsageUserTableSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _optionalUsageUserTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _optionalUsageUserTable;
 
         [XmlElement(ElementName = "optionalUsageUserTable", IsNullable = false, Namespace = "")]
         [Group(@"65df37199ec43e5d21a187db39d63158:176")]

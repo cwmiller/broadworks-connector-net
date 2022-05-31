@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemThirdPartyIMPGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _serviceNetAddress;
+        protected string _serviceNetAddress;
 
         [XmlElement(ElementName = "serviceNetAddress", IsNullable = false, Namespace = "")]
         [Optional]
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceNetAddressSpecified { get; set; }
 
-        private int _servicePort;
+        protected int _servicePort;
 
         [XmlElement(ElementName = "servicePort", IsNullable = false, Namespace = "")]
         [Optional]

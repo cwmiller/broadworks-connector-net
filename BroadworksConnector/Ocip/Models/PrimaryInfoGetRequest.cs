@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class PrimaryInfoGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.PrimaryInfoGetResponse>
     {
 
-        private bool _isPrivate;
+        protected bool _isPrivate;
 
         [XmlElement(ElementName = "isPrivate", IsNullable = false, Namespace = "")]
         [Group(@"6b27fcc79475236456fc113a42b75543:440")]
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsPrivateSpecified { get; set; }
 
-        private bool _isAddressInfoRequested;
+        protected bool _isAddressInfoRequested;
 
         [XmlElement(ElementName = "isAddressInfoRequested", IsNullable = false, Namespace = "")]
         [Group(@"6b27fcc79475236456fc113a42b75543:440")]

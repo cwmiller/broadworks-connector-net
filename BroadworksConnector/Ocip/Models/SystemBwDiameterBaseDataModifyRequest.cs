@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemBwDiameterBaseDataModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        private string _xsRealm;
+        protected string _xsRealm;
 
         [XmlElement(ElementName = "xsRealm", IsNullable = true, Namespace = "")]
         [Optional]
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool XsRealmSpecified { get; set; }
 
-        private int _xsListeningPort;
+        protected int _xsListeningPort;
 
         [XmlElement(ElementName = "xsListeningPort", IsNullable = false, Namespace = "")]
         [Optional]
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool XsListeningPortSpecified { get; set; }
 
-        private bool _xsListeningPortEnabled;
+        protected bool _xsListeningPortEnabled;
 
         [XmlElement(ElementName = "xsListeningPortEnabled", IsNullable = false, Namespace = "")]
         [Optional]
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool XsListeningPortEnabledSpecified { get; set; }
 
-        private int _xsListeningSecurePort;
+        protected int _xsListeningSecurePort;
 
         [XmlElement(ElementName = "xsListeningSecurePort", IsNullable = false, Namespace = "")]
         [Optional]
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool XsListeningSecurePortSpecified { get; set; }
 
-        private bool _xsListeningSecurePortEnabled;
+        protected bool _xsListeningSecurePortEnabled;
 
         [XmlElement(ElementName = "xsListeningSecurePortEnabled", IsNullable = false, Namespace = "")]
         [Optional]
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool XsListeningSecurePortEnabledSpecified { get; set; }
 
-        private string _psRealm;
+        protected string _psRealm;
 
         [XmlElement(ElementName = "psRealm", IsNullable = true, Namespace = "")]
         [Optional]
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PsRealmSpecified { get; set; }
 
-        private int _psListeningPort;
+        protected int _psListeningPort;
 
         [XmlElement(ElementName = "psListeningPort", IsNullable = false, Namespace = "")]
         [Optional]
@@ -155,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PsListeningPortSpecified { get; set; }
 
-        private bool _psListeningPortEnabled;
+        protected bool _psListeningPortEnabled;
 
         [XmlElement(ElementName = "psListeningPortEnabled", IsNullable = false, Namespace = "")]
         [Optional]
@@ -173,7 +173,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PsListeningPortEnabledSpecified { get; set; }
 
-        private int _psListeningSecurePort;
+        protected int _psListeningSecurePort;
 
         [XmlElement(ElementName = "psListeningSecurePort", IsNullable = false, Namespace = "")]
         [Optional]
@@ -193,7 +193,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PsListeningSecurePortSpecified { get; set; }
 
-        private bool _psListeningSecurePortEnabled;
+        protected bool _psListeningSecurePortEnabled;
 
         [XmlElement(ElementName = "psListeningSecurePortEnabled", IsNullable = false, Namespace = "")]
         [Optional]
@@ -211,7 +211,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PsListeningSecurePortEnabledSpecified { get; set; }
 
-        private bool _psRelayThroughXs;
+        protected bool _psRelayThroughXs;
 
         [XmlElement(ElementName = "psRelayThroughXs", IsNullable = false, Namespace = "")]
         [Optional]
@@ -229,7 +229,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PsRelayThroughXsSpecified { get; set; }
 
-        private int _xsRelayListeningPort;
+        protected int _xsRelayListeningPort;
 
         [XmlElement(ElementName = "xsRelayListeningPort", IsNullable = false, Namespace = "")]
         [Optional]
@@ -249,7 +249,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool XsRelayListeningPortSpecified { get; set; }
 
-        private int _tcTimerSeconds;
+        protected int _tcTimerSeconds;
 
         [XmlElement(ElementName = "tcTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -269,7 +269,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TcTimerSecondsSpecified { get; set; }
 
-        private int _twTimerSeconds;
+        protected int _twTimerSeconds;
 
         [XmlElement(ElementName = "twTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -289,7 +289,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TwTimerSecondsSpecified { get; set; }
 
-        private int _requestTimerSeconds;
+        protected int _requestTimerSeconds;
 
         [XmlElement(ElementName = "requestTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
@@ -309,7 +309,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RequestTimerSecondsSpecified { get; set; }
 
-        private int _busyPeerDetectionOutstandingTxnCount;
+        protected int _busyPeerDetectionOutstandingTxnCount;
 
         [XmlElement(ElementName = "busyPeerDetectionOutstandingTxnCount", IsNullable = false, Namespace = "")]
         [Optional]
@@ -329,7 +329,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BusyPeerDetectionOutstandingTxnCountSpecified { get; set; }
 
-        private int _busyPeerRestoreOutstandingTxnCount;
+        protected int _busyPeerRestoreOutstandingTxnCount;
 
         [XmlElement(ElementName = "busyPeerRestoreOutstandingTxnCount", IsNullable = false, Namespace = "")]
         [Optional]
@@ -349,7 +349,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BusyPeerRestoreOutstandingTxnCountSpecified { get; set; }
 
-        private int _dynamicEntryInactivityTimerHours;
+        protected int _dynamicEntryInactivityTimerHours;
 
         [XmlElement(ElementName = "dynamicEntryInactivityTimerHours", IsNullable = false, Namespace = "")]
         [Optional]
@@ -369,7 +369,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DynamicEntryInactivityTimerHoursSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication _advertisedOfflineBillingApplication;
+        protected BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication _advertisedOfflineBillingApplication;
 
         [XmlElement(ElementName = "advertisedOfflineBillingApplication", IsNullable = false, Namespace = "")]
         [Optional]
@@ -387,7 +387,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AdvertisedOfflineBillingApplicationSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication _advertisedOnlineBillingApplication;
+        protected BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication _advertisedOnlineBillingApplication;
 
         [XmlElement(ElementName = "advertisedOnlineBillingApplication", IsNullable = false, Namespace = "")]
         [Optional]
@@ -405,7 +405,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AdvertisedOnlineBillingApplicationSpecified { get; set; }
 
-        private int _defaultPort;
+        protected int _defaultPort;
 
         [XmlElement(ElementName = "defaultPort", IsNullable = false, Namespace = "")]
         [Optional]
@@ -425,7 +425,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultPortSpecified { get; set; }
 
-        private int _defaultSecurePort;
+        protected int _defaultSecurePort;
 
         [XmlElement(ElementName = "defaultSecurePort", IsNullable = false, Namespace = "")]
         [Optional]
@@ -445,7 +445,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultSecurePortSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.DiameterPeerDiscoveryMode _peerDiscoveryMode;
+        protected BroadWorksConnector.Ocip.Models.DiameterPeerDiscoveryMode _peerDiscoveryMode;
 
         [XmlElement(ElementName = "peerDiscoveryMode", IsNullable = false, Namespace = "")]
         [Optional]

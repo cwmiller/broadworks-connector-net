@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SearchCriteriaExactDeviceManagementEventStatusCompleted : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
-        private BroadWorksConnector.Ocip.Models.DeviceManagementEventStatusCompleted _dmEventStatusCompleted;
+        protected BroadWorksConnector.Ocip.Models.DeviceManagementEventStatusCompleted _dmEventStatusCompleted;
 
         [XmlElement(ElementName = "dmEventStatusCompleted", IsNullable = false, Namespace = "")]
         [Group(@"f0ada2681ca347fa83b464734259b304:864")]

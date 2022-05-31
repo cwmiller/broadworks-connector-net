@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAccessDeviceTypeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<string> _deviceType = new List<string>();
+        protected List<string> _deviceType = new List<string>();
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1790")]

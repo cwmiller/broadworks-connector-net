@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupRoutePointDistinctiveRingingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _enableDistinctiveRinging;
+        protected bool _enableDistinctiveRinging;
 
         [XmlElement(ElementName = "enableDistinctiveRinging", IsNullable = false, Namespace = "")]
         [Group(@"a27224a048c30ff69eab9209dec841cc:255")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableDistinctiveRingingSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.RingPattern _distinctiveRingingRingPattern;
+        protected BroadWorksConnector.Ocip.Models.RingPattern _distinctiveRingingRingPattern;
 
         [XmlElement(ElementName = "distinctiveRingingRingPattern", IsNullable = false, Namespace = "")]
         [Group(@"a27224a048c30ff69eab9209dec841cc:255")]
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DistinctiveRingingRingPatternSpecified { get; set; }
 
-        private BroadWorksConnector.Ocip.Models.RingPattern _distinctiveRingingForceDeliveryRingPattern;
+        protected BroadWorksConnector.Ocip.Models.RingPattern _distinctiveRingingForceDeliveryRingPattern;
 
         [XmlElement(ElementName = "distinctiveRingingForceDeliveryRingPattern", IsNullable = false, Namespace = "")]
         [Group(@"a27224a048c30ff69eab9209dec841cc:255")]

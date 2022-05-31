@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemPreferredCarrierGetGroupListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _groupsUsingCarrierTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _groupsUsingCarrierTable;
 
         [XmlElement(ElementName = "groupsUsingCarrierTable", IsNullable = false, Namespace = "")]
         [Group(@"74a46a9bfccb54713c1d19735843f1df:385")]

@@ -26,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupRouteListEnterpriseTrunkNumberPrefixGetSummaryListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private BroadWorksConnector.Ocip.Models.C.OCITable _numberPrefixSummaryTable;
+        protected BroadWorksConnector.Ocip.Models.C.OCITable _numberPrefixSummaryTable;
 
         [XmlElement(ElementName = "numberPrefixSummaryTable", IsNullable = false, Namespace = "")]
         [Group(@"3f28429898a57a7f7846d3877b22df9f:294")]

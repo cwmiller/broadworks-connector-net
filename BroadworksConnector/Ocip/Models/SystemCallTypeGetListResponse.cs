@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallTypeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private List<BroadWorksConnector.Ocip.Models.SystemCallType> _callType = new List<BroadWorksConnector.Ocip.Models.SystemCallType>();
+        protected List<BroadWorksConnector.Ocip.Models.SystemCallType> _callType = new List<BroadWorksConnector.Ocip.Models.SystemCallType>();
 
         [XmlElement(ElementName = "callType", IsNullable = false, Namespace = "")]
         [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5248")]

@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemPersonalAssistantGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private string _transferToAttendantKey;
+        protected string _transferToAttendantKey;
 
         [XmlElement(ElementName = "transferToAttendantKey", IsNullable = false, Namespace = "")]
         [Group(@"f53ece1c00394ef2d3d76f532f9a9663:65")]
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TransferToAttendantKeySpecified { get; set; }
 
-        private string _transferToVoiceMessagingKey;
+        protected string _transferToVoiceMessagingKey;
 
         [XmlElement(ElementName = "transferToVoiceMessagingKey", IsNullable = false, Namespace = "")]
         [Group(@"f53ece1c00394ef2d3d76f532f9a9663:65")]

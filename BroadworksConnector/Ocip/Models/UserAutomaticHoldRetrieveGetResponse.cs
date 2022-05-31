@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserAutomaticHoldRetrieveGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        private bool _isActive;
+        protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Group(@"83fee6d8bc1cbca3d5ef05a88de706cf:59")]
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        private int _recallTimerSeconds;
+        protected int _recallTimerSeconds;
 
         [XmlElement(ElementName = "recallTimerSeconds", IsNullable = false, Namespace = "")]
         [Group(@"83fee6d8bc1cbca3d5ef05a88de706cf:59")]
