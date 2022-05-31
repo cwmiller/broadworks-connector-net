@@ -36,6 +36,9 @@
     <None Update="test-data\GroupOutgoingCallingPlanRedirectingModifyListRequest.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="test-data\GroupUserCallForwardingSettingsGetListRequest.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="test-data\LoginResponse14sp4.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

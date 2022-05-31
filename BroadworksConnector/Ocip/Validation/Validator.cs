@@ -100,20 +100,34 @@ namespace BroadWorksConnector.Ocip.Validation
         /// <returns></returns>
         private static IEnumerable<Group> GetGroups(object instance)
         {
-            // Object should have a Groups attribute containing the group details as JSON
-            var groupsAttr = AttributeUtil.Get<GroupsAttribute>(instance.GetType());
-
-            if (groupsAttr == null)
-            {
-                throw new ArgumentException("No Groups attribute on object", nameof(instance));
-            }
-
             var groups = new List<Group>();
+            var type = instance.GetType();
 
-            // Parse JSON
-            using (var ms = new MemoryStream(Encoding.ASCII.GetBytes(groupsAttr.Json)))
+            while (type != null)
             {
-                groups = _serializer.ReadObject(ms) as List<Group>;
+                // Object should have a Groups attribute containing the group details as JSON
+                var groupsAttr = AttributeUtil.Get<GroupsAttribute>(type);
+
+                if (groupsAttr == null)
+                {
+                    throw new ArgumentException("No Groups attribute on object", nameof(instance));
+                }
+
+                if (groupsAttr != null)
+                {
+                    // Parse JSON
+                    using (var ms = new MemoryStream(Encoding.ASCII.GetBytes(groupsAttr.Json)))
+                    {
+                        groups.AddRange(_serializer.ReadObject(ms) as List<Group>);
+                    }
+                }
+
+                if ((type.BaseType != null) && (type.BaseType != typeof(Object))) {
+                    type = type.BaseType;
+                } else
+                {
+                    type = null;
+                }
             }
 
             return groups;

@@ -33,6 +33,57 @@ namespace BroadWorksConnector.Tests
         }
 
         [Fact]
+        public void TestRequirementWithInheritedPropertyMet()
+        {
+            var request = new GroupUserCallForwardingSettingsGetListRequest()
+            {
+                ServiceProviderId = "SP",
+                GroupId = "GRP",
+                CallForwardingService = CallForwardingService.CallForwardingAlways,
+                ResponsePagingControl = new ResponsePagingControl
+                {
+                    ResponsePageSize = 10,
+                    ResponseStartIndex = 1
+                },
+                SortByExtension = new SortByExtension
+                {
+                    IsAscending = false,
+                    IsCaseSensitive = false
+                }
+            };
+
+            var results = Validator.Validate(request);
+
+            Assert.True(results.Success);
+        }
+
+        [Fact]
+        public void TestRequirementWithInheritedPropertyNotMet()
+        {
+            var request = new GroupUserCallForwardingSettingsGetListRequest()
+            {
+                ServiceProviderId = "SP",
+                GroupId = "GRP",
+                CallForwardingService = CallForwardingService.CallForwardingAlways,
+                ResponsePagingControl = new ResponsePagingControl
+                {
+                    ResponsePageSize = 10,
+                    ResponseStartIndex = 1
+                },
+                SortByExtension = new SortByExtension
+                {
+                    IsAscending = false
+                    // Missing isCaseSensitive
+                }
+            };
+
+            var results = Validator.Validate(request);
+
+            Assert.False(results.Success);
+            Assert.IsType<FieldNotSetError>(results.Errors.Single());
+        }
+
+        [Fact]
         public void TestRequirementWithArrayNotMet()
         {
             var request = new GroupCommunicationBarringAuthorizationCodeAddListRequest()

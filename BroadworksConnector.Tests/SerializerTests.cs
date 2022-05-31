@@ -148,6 +148,42 @@ namespace BroadWorksConnector.Tests
         }
 
         [Fact]
+        public void SerializeWithInheritedProperties()
+        {
+            var request = new GroupUserCallForwardingSettingsGetListRequest()
+            {
+                ServiceProviderId = "SP",
+                GroupId = "GRP",
+                CallForwardingService = CallForwardingService.CallForwardingAlways,
+                ResponsePagingControl = new ResponsePagingControl
+                {
+                    ResponsePageSize = 10,
+                    ResponseStartIndex = 1
+                },
+                SortByExtension = new SortByExtension
+                {
+                    IsAscending = false,
+                    IsCaseSensitive = false
+                }
+            };
+
+            var document = new BroadsoftDocument<GroupUserCallForwardingSettingsGetListRequest>()
+            {
+                SessionId = "acbdf1234567890",
+                Protocol = "OCI",
+                Command = new List<GroupUserCallForwardingSettingsGetListRequest>() { request }
+            };
+
+            var xml = _serializer.Serialize(document);
+
+            var diff =
+                DiffBuilder.Compare(Input.FromFile(@"test-data/GroupUserCallForwardingSettingsGetListRequest.xml"))
+                .WithTest(xml).Build();
+
+            Assert.False(diff.HasDifferences());
+        }
+
+        [Fact]
         public void DeserializeUserGetListInGroupRequest()
         {
             var xmlData = File.ReadAllBytes(@"test-data/UserGetListInGroupResponse.xml");

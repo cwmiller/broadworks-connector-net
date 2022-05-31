@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BroadsoftDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" protocol="OCI" xmlns="C">
+    <sessionId xmlns="">acbdf1234567890</sessionId>
+    <command xmlns="" xsi:type="GroupUserCallForwardingSettingsGetListRequest">
+        <serviceProviderId>SP</serviceProviderId>
+        <groupId>GRP</groupId>
+        <callForwardingService>Call Forwarding Always</callForwardingService>
+        <responsePagingControl>
+            <responseStartIndex>1</responseStartIndex>
+            <responsePageSize>10</responsePageSize>
+        </responsePagingControl>
+        <sortByExtension xsi:type="SortByExtension">
+            <isAscending>false</isAscending>
+            <isCaseSensitive>false</isCaseSensitive>
+        </sortByExtension>
+    </command>
+</BroadsoftDocument>
