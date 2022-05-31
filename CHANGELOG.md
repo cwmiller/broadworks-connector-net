@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.1.2] - 2022-05-31
+### Fixed
+- Fixed issue where `Validator` was not validating parent properties inheritted by sub-classes.
+
 ## [2.1.1] - 2022-01-22
 ### Fixed
 - Fixed issue where `ErrorResponseException` and `LoginException` were not being thrown on error.
@@ -111,6 +115,7 @@
 ### Fixed
 - `OcipClient` now properly calls `Validator` on execution.
 
+[2.1.2]: https://github.com/cwmiller/broadworks-connector-net/compare/2.1.1...2.1.2
 [2.1.1]: https://github.com/cwmiller/broadworks-connector-net/compare/2.1.0...2.1.1
 [2.1.0]: https://github.com/cwmiller/broadworks-connector-net/compare/2.0.1...2.1.0
 [2.0.1]: https://github.com/cwmiller/broadworks-connector-net/compare/2.0.0...2.0.1
