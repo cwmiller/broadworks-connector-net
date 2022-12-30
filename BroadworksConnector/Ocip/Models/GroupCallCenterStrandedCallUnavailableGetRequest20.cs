@@ -8,15 +8,15 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get a call center's stranded calls - unavailable settings.
-    /// The response is either a GroupCallCenterStrandedCallUnavailableGetResponse or an ErrorResponse.
-    /// <see cref="GroupCallCenterStrandedCallUnavailableGetResponse"/>
+    /// The response is either a GroupCallCenterStrandedCallUnavailableGetResponse20 or an ErrorResponse.
+    /// <see cref="GroupCallCenterStrandedCallUnavailableGetResponse20"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
     [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:5856""}]")]
-    public class GroupCallCenterStrandedCallUnavailableGetRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupCallCenterStrandedCallUnavailableGetResponse>
+    public class GroupCallCenterStrandedCallUnavailableGetRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupCallCenterStrandedCallUnavailableGetResponse20>
     {
 
         protected string _serviceUserId;
