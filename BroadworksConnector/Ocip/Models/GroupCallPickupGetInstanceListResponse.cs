@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""045ce951b3e25dec090606af4ad50c63:205""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e52f623f7e5f77c5ed7bb6ba0012d5cd:205""}]")]
     public class GroupCallPickupGetInstanceListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"045ce951b3e25dec090606af4ad50c63:205")]
+        [Group(@"e52f623f7e5f77c5ed7bb6ba0012d5cd:205")]
         [MinLength(1)]
         [MaxLength(80)]
         public List<string> Name

@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:3072""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:3078""}]")]
     public class SendToAllGroupMembersMenuKeysModifyEntry
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "confirmSendingToEntireGroup", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3072")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:3078")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ConfirmSendingToEntireGroup
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "cancelSendingToEntireGroup", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:3072")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:3078")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string CancelSendingToEntireGroup

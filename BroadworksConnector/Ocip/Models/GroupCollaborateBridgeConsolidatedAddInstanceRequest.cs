@@ -21,14 +21,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:104""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bc805893b9cc7e3e01eec64e9ad62768:103""}]")]
     public class GroupCollaborateBridgeConsolidatedAddInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:104")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:103")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:104")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:103")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:104")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:103")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "addPhoneNumberToGroup", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:104")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:103")]
         public bool AddPhoneNumberToGroup
         {
             get => _addPhoneNumberToGroup;
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfile _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:104")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:103")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfile ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CollaborateBridgeMaximumParticipants _maximumBridgeParticipants;
 
         [XmlElement(ElementName = "maximumBridgeParticipants", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:104")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:103")]
         public BroadWorksConnector.Ocip.Models.CollaborateBridgeMaximumParticipants MaximumBridgeParticipants
         {
             get => _maximumBridgeParticipants;
@@ -138,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:104")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:103")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService
@@ -157,7 +157,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxCollaborateRoomParticipants;
 
         [XmlElement(ElementName = "maxCollaborateRoomParticipants", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:104")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:103")]
         [MinInclusive(3)]
         [MaxInclusive(145)]
         public int MaxCollaborateRoomParticipants
@@ -176,7 +176,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _supportOutdial;
 
         [XmlElement(ElementName = "supportOutdial", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:104")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:103")]
         public bool SupportOutdial
         {
             get => _supportOutdial;
@@ -194,7 +194,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "collaborateOwnerUserId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:104")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:103")]
         [MinLength(1)]
         [MaxLength(161)]
         public List<string> CollaborateOwnerUserId
@@ -214,7 +214,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "service", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:104")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:103")]
         public List<BroadWorksConnector.Ocip.Models.ConsolidatedUserServiceAssignment> Service
         {
             get => _service;

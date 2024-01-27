@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:3595""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:3672""}]")]
     public class ServiceProviderDialPlanPolicyGetAccessCodeListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _accessCodeTable;
 
         [XmlElement(ElementName = "accessCodeTable", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3595")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:3672")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AccessCodeTable
         {
             get => _accessCodeTable;

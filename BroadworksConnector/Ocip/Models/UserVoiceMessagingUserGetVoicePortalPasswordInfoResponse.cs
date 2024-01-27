@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:47147"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:47149""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:48033"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:48035""}]}]")]
     public class UserVoiceMessagingUserGetVoicePortalPasswordInfoResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isLoginDisabled;
 
         [XmlElement(ElementName = "isLoginDisabled", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47147")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48033")]
         public bool IsLoginDisabled
         {
             get => _isLoginDisabled;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _expirationDays;
 
         [XmlElement(ElementName = "expirationDays", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47149")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48035")]
         public int ExpirationDays
         {
             get => _expirationDays;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _doesNotExpire;
 
         [XmlElement(ElementName = "doesNotExpire", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47149")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48035")]
         public bool DoesNotExpire
         {
             get => _doesNotExpire;
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _password;
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47147")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48033")]
         [MinLength(1)]
         [MaxLength(60)]
         public string Password

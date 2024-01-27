@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:2020"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:2021""}]}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:2087"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:2088""}]}]")]
     public class GroupAnnouncementFileGetRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupAnnouncementFileGetResponse22>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2021")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:2088")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2021")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:2088")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.AnnouncementFileKey _announcementFileKey;
 
         [XmlElement(ElementName = "announcementFileKey", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2021")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:2088")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileKey AnnouncementFileKey
         {
             get => _announcementFileKey;
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _announcementFileExternalId;
 
         [XmlElement(ElementName = "announcementFileExternalId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:2020")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:2087")]
         [MaxLength(36)]
         public string AnnouncementFileExternalId
         {

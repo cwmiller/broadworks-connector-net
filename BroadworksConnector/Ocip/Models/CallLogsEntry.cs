@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1076""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:1109""}]")]
     public class CallLogsEntry
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1076")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1109")]
         [MaxLength(3)]
         [RegularExpression(@"[0-9]|[1-9][0-9]{1,2}")]
         public string CountryCode
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _callLogId;
 
         [XmlElement(ElementName = "callLogId", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1076")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1109")]
         [MinLength(1)]
         [MaxLength(30)]
         public string CallLogId
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1076")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1109")]
         [MinLength(1)]
         [MaxLength(161)]
         public string PhoneNumber
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1076")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1109")]
         [MinLength(1)]
         [MaxLength(62)]
         public string Name
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _time;
 
         [XmlElement(ElementName = "time", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1076")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1109")]
         public string Time
         {
             get => _time;

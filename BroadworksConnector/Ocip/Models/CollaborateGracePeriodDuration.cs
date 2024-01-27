@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1124""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:1173""}]")]
     public class CollaborateGracePeriodDuration
     {
 
         protected int _hours;
 
         [XmlElement(ElementName = "hours", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1124")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1173")]
         [MinInclusive(0)]
         [MaxInclusive(23)]
         public int Hours
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _minutes;
 
         [XmlElement(ElementName = "minutes", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1124")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1173")]
         [RegularExpression(@"0|15|30|45")]
         public int Minutes
         {

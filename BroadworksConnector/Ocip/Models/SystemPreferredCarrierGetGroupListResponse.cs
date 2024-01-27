@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""74a46a9bfccb54713c1d19735843f1df:385""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""31dec625cdd18e8228eb61ffb34ddc0e:384""}]")]
     public class SystemPreferredCarrierGetGroupListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _groupsUsingCarrierTable;
 
         [XmlElement(ElementName = "groupsUsingCarrierTable", IsNullable = false, Namespace = "")]
-        [Group(@"74a46a9bfccb54713c1d19735843f1df:385")]
+        [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:384")]
         public BroadWorksConnector.Ocip.Models.C.OCITable GroupsUsingCarrierTable
         {
             get => _groupsUsingCarrierTable;

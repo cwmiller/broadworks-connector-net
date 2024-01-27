@@ -21,14 +21,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""74a46a9bfccb54713c1d19735843f1df:515""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""31dec625cdd18e8228eb61ffb34ddc0e:515""}]")]
     public class SystemPreferredCarrierModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _carrier;
 
         [XmlElement(ElementName = "carrier", IsNullable = false, Namespace = "")]
-        [Group(@"74a46a9bfccb54713c1d19735843f1df:515")]
+        [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:515")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Carrier
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "cic", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"74a46a9bfccb54713c1d19735843f1df:515")]
+        [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:515")]
         [MinLength(1)]
         [MaxLength(6)]
         public string Cic
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"74a46a9bfccb54713c1d19735843f1df:515")]
+        [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:515")]
         [MaxLength(3)]
         [RegularExpression(@"[0-9]|[1-9][0-9]{1,2}")]
         public string CountryCode
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isIntraLata", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"74a46a9bfccb54713c1d19735843f1df:515")]
+        [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:515")]
         public bool IsIntraLata
         {
             get => _isIntraLata;
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isInterLata", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"74a46a9bfccb54713c1d19735843f1df:515")]
+        [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:515")]
         public bool IsInterLata
         {
             get => _isInterLata;
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isInternational", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"74a46a9bfccb54713c1d19735843f1df:515")]
+        [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:515")]
         public bool IsInternational
         {
             get => _isInternational;

@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:1074""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:1108""}]")]
     public class SearchCriteriaExactMediaFileType : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         protected BroadWorksConnector.Ocip.Models.MediaFileType _type;
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:1074")]
+        [Group(@"972fbf832439609ec8f2765c5637c3f1:1108")]
         public BroadWorksConnector.Ocip.Models.MediaFileType Type
         {
             get => _type;

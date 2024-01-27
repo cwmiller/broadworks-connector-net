@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1f0f230fee2817fe00157925859dc28e:183""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""adf9583170c1dc9ec6c152ba1238437a:183""}]")]
     public class UserCallMeNowGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"1f0f230fee2817fe00157925859dc28e:183")]
+        [Group(@"adf9583170c1dc9ec6c152ba1238437a:183")]
         public bool IsActive
         {
             get => _isActive;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CallMeNowAnswerConfirmation _answerConfirmation;
 
         [XmlElement(ElementName = "answerConfirmation", IsNullable = false, Namespace = "")]
-        [Group(@"1f0f230fee2817fe00157925859dc28e:183")]
+        [Group(@"adf9583170c1dc9ec6c152ba1238437a:183")]
         public BroadWorksConnector.Ocip.Models.CallMeNowAnswerConfirmation AnswerConfirmation
         {
             get => _answerConfirmation;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
         [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
-        [Group(@"1f0f230fee2817fe00157925859dc28e:183")]
+        [Group(@"adf9583170c1dc9ec6c152ba1238437a:183")]
         public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable
         {
             get => _criteriaTable;

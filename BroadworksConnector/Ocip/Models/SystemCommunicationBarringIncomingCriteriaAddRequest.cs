@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:7541""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:9406""}]")]
     public class SystemCommunicationBarringIncomingCriteriaAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7541")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9406")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7541")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9406")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7541")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9406")]
         [MinLength(1)]
         [MaxLength(40)]
         public string TimeSchedule
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7541")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9406")]
         [MinLength(1)]
         [MaxLength(40)]
         public string HolidaySchedule
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "matchNumberPortabilityStatus", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7541")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9406")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> MatchNumberPortabilityStatus

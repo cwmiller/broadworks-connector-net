@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f53ece1c00394ef2d3d76f532f9a9663:215""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6bd221784ebf8af2fe1169d36a6ac2dd:267""}]")]
     public class UserPersonalAssistantExclusionNumberGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserPersonalAssistantExclusionNumberGetListResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:215")]
+        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:267")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaPersonalAssistantExclusionNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:215")]
+        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:267")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaPersonalAssistantExclusionNumber> SearchCriteriaPersonalAssistantExclusionNumber
         {
             get => _searchCriteriaPersonalAssistantExclusionNumber;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaPersonalAssistantExclusionNumberDescription", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:215")]
+        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:267")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaPersonalAssistantExclusionNumberDescription> SearchCriteriaPersonalAssistantExclusionNumberDescription
         {
             get => _searchCriteriaPersonalAssistantExclusionNumberDescription;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:215")]
+        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:267")]
         [MinInclusive(1)]
         public int ResponseSizeLimit
         {

@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:5999""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:6966""}]")]
     public class ServiceProviderIntegratedIMPGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _useSystemServiceDomain;
 
         [XmlElement(ElementName = "useSystemServiceDomain", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:5999")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6966")]
         public bool UseSystemServiceDomain
         {
             get => _useSystemServiceDomain;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceDomain", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:5999")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6966")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServiceDomain

@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""958b78cc2a785d78259c1e8a474eb40d:431""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1ea80c1e18c25d0eed23dbc7bd18f1dc:431""}]")]
     public class MWIDeliveryToMobileEndpointTemplateLine
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "prefix", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"958b78cc2a785d78259c1e8a474eb40d:431")]
+        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:431")]
         [MinLength(1)]
         [MaxLength(128)]
         public string Prefix
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "tag", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"958b78cc2a785d78259c1e8a474eb40d:431")]
+        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:431")]
         public BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateTag Tag
         {
             get => _tag;
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "postfix", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"958b78cc2a785d78259c1e8a474eb40d:431")]
+        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:431")]
         [MinLength(1)]
         [MaxLength(128)]
         public string Postfix

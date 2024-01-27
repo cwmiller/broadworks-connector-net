@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e8517420bc6d5462dc1b2d9f82295894:174""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e6d1568083c7f74ac1e8949c7acb10cf:173""}]")]
     public class UserSelectiveCallAcceptanceModifyActiveCriteriaListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"e8517420bc6d5462dc1b2d9f82295894:174")]
+        [Group(@"e6d1568083c7f74ac1e8949c7acb10cf:173")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "criteriaActivation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e8517420bc6d5462dc1b2d9f82295894:174")]
+        [Group(@"e6d1568083c7f74ac1e8949c7acb10cf:173")]
         public List<BroadWorksConnector.Ocip.Models.CriteriaActivation> CriteriaActivation
         {
             get => _criteriaActivation;

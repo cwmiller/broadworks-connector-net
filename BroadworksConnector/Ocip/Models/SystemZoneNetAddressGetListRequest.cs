@@ -8,21 +8,21 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Gets a list of IP Addresses and/or Ranges assigned to a zone.
-    /// The response is an SystemZoneNetAddressGetListResponse or an ErrorResponse.
+    /// The response is either a SystemZoneNetAddressGetListResponse or an ErrorResponse.
     /// <see cref="SystemZoneNetAddressGetListResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:19808""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:20129""}]")]
     public class SystemZoneNetAddressGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemZoneNetAddressGetListResponse>
     {
 
         protected string _zoneName;
 
         [XmlElement(ElementName = "zoneName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19808")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:20129")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ZoneName
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19808")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:20129")]
         [MinInclusive(1)]
         public int ResponseSizeLimit
         {
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaZoneIPAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19808")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:20129")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaZoneIPAddress> SearchCriteriaZoneIPAddress
         {
             get => _searchCriteriaZoneIPAddress;

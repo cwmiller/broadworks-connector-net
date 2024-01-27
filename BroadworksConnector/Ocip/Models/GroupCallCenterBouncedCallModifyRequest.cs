@@ -24,14 +24,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:2777""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:2772""}]")]
     public class GroupCallCenterBouncedCallModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2777")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2772")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2777")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2772")]
         public bool IsActive
         {
             get => _isActive;
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "numberOfRingsBeforeBouncingCall", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2777")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2772")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
         public int NumberOfRingsBeforeBouncingCall
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableTransfer", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2777")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2772")]
         public bool EnableTransfer
         {
             get => _enableTransfer;
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "transferPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2777")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2772")]
         [MinLength(1)]
         [MaxLength(161)]
         public string TransferPhoneNumber
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "bounceCallWhenAgentUnavailable", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2777")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2772")]
         public bool BounceCallWhenAgentUnavailable
         {
             get => _bounceCallWhenAgentUnavailable;
@@ -145,7 +145,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alertCallCenterCallOnHold", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2777")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2772")]
         public bool AlertCallCenterCallOnHold
         {
             get => _alertCallCenterCallOnHold;
@@ -163,7 +163,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alertCallCenterCallOnHoldSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2777")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2772")]
         [MinInclusive(30)]
         [MaxInclusive(600)]
         public int AlertCallCenterCallOnHoldSeconds
@@ -183,7 +183,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "bounceCallCenterCallOnHold", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2777")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2772")]
         public bool BounceCallCenterCallOnHold
         {
             get => _bounceCallCenterCallOnHold;
@@ -201,7 +201,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "bounceCallCenterCallOnHoldSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2777")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2772")]
         [MinInclusive(30)]
         [MaxInclusive(600)]
         public int BounceCallCenterCallOnHoldSeconds

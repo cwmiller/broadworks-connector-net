@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ee7bb69368e23a56a82c5d9cf07b5433:164""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""aa3a240fa755015613cfb9259eccafef:164""}]")]
     public class SystemSMDIMessageDeskGetServerRouteListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _smdiServerRouteTable;
 
         [XmlElement(ElementName = "smdiServerRouteTable", IsNullable = false, Namespace = "")]
-        [Group(@"ee7bb69368e23a56a82c5d9cf07b5433:164")]
+        [Group(@"aa3a240fa755015613cfb9259eccafef:164")]
         public BroadWorksConnector.Ocip.Models.C.OCITable SmdiServerRouteTable
         {
             get => _smdiServerRouteTable;

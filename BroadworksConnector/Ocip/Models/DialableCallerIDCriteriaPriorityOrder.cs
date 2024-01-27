@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2420""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:2887""}]")]
     public class DialableCallerIDCriteriaPriorityOrder
     {
 
         protected string _criteriaName;
 
         [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2420")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2887")]
         [MinLength(1)]
         [MaxLength(40)]
         public string CriteriaName
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected decimal _priority;
 
         [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2420")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2887")]
         [MinInclusive(0)]
         [MaxInclusive(1000000)]
         public decimal Priority

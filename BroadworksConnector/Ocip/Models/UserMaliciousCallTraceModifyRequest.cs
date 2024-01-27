@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0da7c658f240cdc10c3f9cb328db57d8:187""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""be7f3162f133f8d7fcc75e712b0258e6:187""}]")]
     public class UserMaliciousCallTraceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"0da7c658f240cdc10c3f9cb328db57d8:187")]
+        [Group(@"be7f3162f133f8d7fcc75e712b0258e6:187")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0da7c658f240cdc10c3f9cb328db57d8:187")]
+        [Group(@"be7f3162f133f8d7fcc75e712b0258e6:187")]
         public bool IsActive
         {
             get => _isActive;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "traceTypeSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0da7c658f240cdc10c3f9cb328db57d8:187")]
+        [Group(@"be7f3162f133f8d7fcc75e712b0258e6:187")]
         public BroadWorksConnector.Ocip.Models.MaliciousCallTraceCallTypeSelection TraceTypeSelection
         {
             get => _traceTypeSelection;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "traceForTimePeriod", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0da7c658f240cdc10c3f9cb328db57d8:187")]
+        [Group(@"be7f3162f133f8d7fcc75e712b0258e6:187")]
         public bool TraceForTimePeriod
         {
             get => _traceForTimePeriod;
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "traceTimePeriod", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"0da7c658f240cdc10c3f9cb328db57d8:187")]
+        [Group(@"be7f3162f133f8d7fcc75e712b0258e6:187")]
         public BroadWorksConnector.Ocip.Models.MaliciousCallTraceTimePeriod TraceTimePeriod
         {
             get => _traceTimePeriod;

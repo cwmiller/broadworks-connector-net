@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:5439""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:5519""}]")]
     public class SystemClientSessionParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enableInactivityTimeout;
 
         [XmlElement(ElementName = "enableInactivityTimeout", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5439")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:5519")]
         public bool EnableInactivityTimeout
         {
             get => _enableInactivityTimeout;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _inactivityTimeoutMinutes;
 
         [XmlElement(ElementName = "inactivityTimeoutMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5439")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:5519")]
         [MinInclusive(10)]
         [MaxInclusive(360)]
         public int InactivityTimeoutMinutes

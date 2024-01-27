@@ -9,13 +9,15 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to get the system's provisioning validation attributes.
     /// The response is either a SystemProvisioningValidationGetResponse22 or ErrorResponse.
+    /// Replaced by SystemProvisioningValidationGetRequest25.
     /// <see cref="SystemProvisioningValidationGetResponse22"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemProvisioningValidationGetRequest25"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:14692""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:11470""}]")]
     public class SystemProvisioningValidationGetRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemProvisioningValidationGetResponse22>
     {
 

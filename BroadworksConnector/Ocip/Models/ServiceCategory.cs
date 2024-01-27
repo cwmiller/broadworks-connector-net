@@ -7,6 +7,7 @@ namespace BroadWorksConnector.Ocip.Models
     /// List of supported Service Categories that have configurable default attributes entries.
     /// The following elements are ignored in AS data mode:
     /// Basic Call Logs
+    /// Call Recording
     /// OMA Presence
     /// Push to Talk
     /// The following elements are ignored in XS data mode:
@@ -20,6 +21,8 @@ namespace BroadWorksConnector.Ocip.Models
     {
         [XmlEnum(Name = "Basic Call Logs")]
         BasicCallLogs,
+        [XmlEnum(Name = "Call Recording")]
+        CallRecording,
         [XmlEnum(Name = "Call Transfer")]
         CallTransfer,
         [XmlEnum(Name = "Call Waiting")]

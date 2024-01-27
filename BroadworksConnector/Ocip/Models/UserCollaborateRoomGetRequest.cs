@@ -13,21 +13,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// attendeeNotification, endRoomSessionOnOwnerExit and ownerRequired.
     /// In addition, the roomSchedule is returned for Project Room and
     /// the roomStartTime and roomEndTime are returned for Instant Room.
-    /// The response is either UserCollaborateRoomGetResponse or ErrorResponse.
+    /// The response is either UserCollaborateRoomGetResponse or
+    /// ErrorResponse.
     /// <see cref="UserCollaborateRoomGetResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:911""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bc805893b9cc7e3e01eec64e9ad62768:914""}]")]
     public class UserCollaborateRoomGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserCollaborateRoomGetResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:911")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:914")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -46,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _roomId;
 
         [XmlElement(ElementName = "roomId", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:911")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:914")]
         [MinLength(4)]
         [MaxLength(15)]
         public string RoomId

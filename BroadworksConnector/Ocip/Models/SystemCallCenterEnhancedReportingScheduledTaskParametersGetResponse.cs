@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:20711""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:21461""}]")]
     public class SystemCallCenterEnhancedReportingScheduledTaskParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected int _scheduledReportSearchIntervalMinutes;
 
         [XmlElement(ElementName = "scheduledReportSearchIntervalMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20711")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:21461")]
         [MinInclusive(1)]
         [MaxInclusive(1440)]
         public int ScheduledReportSearchIntervalMinutes
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maximumScheduledReportsPerInterval;
 
         [XmlElement(ElementName = "maximumScheduledReportsPerInterval", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20711")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:21461")]
         [MinInclusive(1)]
         [MaxInclusive(100000)]
         public int MaximumScheduledReportsPerInterval
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _deleteScheduledReportDaysAfterCompletion;
 
         [XmlElement(ElementName = "deleteScheduledReportDaysAfterCompletion", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20711")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:21461")]
         [MinInclusive(1)]
         [MaxInclusive(366)]
         public int DeleteScheduledReportDaysAfterCompletion

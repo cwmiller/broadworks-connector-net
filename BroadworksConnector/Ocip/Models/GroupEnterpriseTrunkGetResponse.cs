@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:9536"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:9540""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:9673"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:9677""}]}]")]
     public class GroupEnterpriseTrunkGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected int _maximumRerouteAttempts;
 
         [XmlElement(ElementName = "maximumRerouteAttempts", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9536")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:9673")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int MaximumRerouteAttempts
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.EnterpriseTrunkRouteExhaustionAction _routeExhaustionAction;
 
         [XmlElement(ElementName = "routeExhaustionAction", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9536")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:9673")]
         public BroadWorksConnector.Ocip.Models.EnterpriseTrunkRouteExhaustionAction RouteExhaustionAction
         {
             get => _routeExhaustionAction;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "routeExhaustionForwardAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9536")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:9673")]
         [MinLength(1)]
         [MaxLength(161)]
         public string RouteExhaustionForwardAddress
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.GroupEnterpriseTrunkGetResponseOrderedRouting _orderedRouting;
 
         [XmlElement(ElementName = "orderedRouting", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9540")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:9677")]
         public BroadWorksConnector.Ocip.Models.GroupEnterpriseTrunkGetResponseOrderedRouting OrderedRouting
         {
             get => _orderedRouting;
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.GroupEnterpriseTrunkGetResponsePriorityWeightedRouting _priorityWeightedRouting;
 
         [XmlElement(ElementName = "priorityWeightedRouting", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:9540")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:9677")]
         public BroadWorksConnector.Ocip.Models.GroupEnterpriseTrunkGetResponsePriorityWeightedRouting PriorityWeightedRouting
         {
             get => _priorityWeightedRouting;

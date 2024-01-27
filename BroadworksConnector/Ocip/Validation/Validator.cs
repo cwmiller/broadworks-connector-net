@@ -122,9 +122,11 @@ namespace BroadWorksConnector.Ocip.Validation
                     }
                 }
 
-                if ((type.BaseType != null) && (type.BaseType != typeof(Object))) {
+                if ((type.BaseType != null) && (type.BaseType != typeof(Object)))
+                {
                     type = type.BaseType;
-                } else
+                }
+                else
                 {
                     type = null;
                 }

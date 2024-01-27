@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:848""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9ae9f7d53e566e21347e23e20e2a2a39:847""}]")]
     public class SystemBroadWorksMobilityGeographicalPoolIMRNGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemBroadWorksMobilityGeographicalPoolIMRNGetListResponse>
     {
 
         protected string _geographicalPoolName;
 
         [XmlElement(ElementName = "geographicalPoolName", IsNullable = false, Namespace = "")]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:848")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:847")]
         [MinLength(1)]
         [MaxLength(80)]
         public string GeographicalPoolName
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaIMRN", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:848")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:847")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaIMRN> SearchCriteriaIMRN
         {
             get => _searchCriteriaIMRN;

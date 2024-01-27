@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3714""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4203""}]")]
     public class ReplacementCallProcessingPolicyProfileSubscriberTypeList21
     {
 
         protected List<BroadWorksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType21> _subscriberType = new List<BroadWorksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType21>();
 
         [XmlElement(ElementName = "subscriberType", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3714")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4203")]
         public List<BroadWorksConnector.Ocip.Models.CallProcessingPolicyProfileSubscriberType21> SubscriberType
         {
             get => _subscriberType;

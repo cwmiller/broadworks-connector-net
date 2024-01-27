@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9741e074fbfeb4c7312bfa4dfbaee3d3:313""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0731150ec7515df8cd710f04d8f62f66:319""}]")]
     public class SystemCallRecordingGetPlatformUsageResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _groupTable;
 
         [XmlElement(ElementName = "groupTable", IsNullable = false, Namespace = "")]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:313")]
+        [Group(@"0731150ec7515df8cd710f04d8f62f66:319")]
         public BroadWorksConnector.Ocip.Models.C.OCITable GroupTable
         {
             get => _groupTable;

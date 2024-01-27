@@ -60,14 +60,14 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SortByUserPersonalPhoneListNumber))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SortByYahooId))]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""58293b6da8bb02a6430b3eb1beb91194:737""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""846fcf536fcb4b0f0d32e089e99e4bfc:737""}]")]
     public abstract class SortCriteria
     {
 
         protected bool _isAscending;
 
         [XmlElement(ElementName = "isAscending", IsNullable = false, Namespace = "")]
-        [Group(@"58293b6da8bb02a6430b3eb1beb91194:737")]
+        [Group(@"846fcf536fcb4b0f0d32e089e99e4bfc:737")]
         public bool IsAscending
         {
             get => _isAscending;
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isCaseSensitive;
 
         [XmlElement(ElementName = "isCaseSensitive", IsNullable = false, Namespace = "")]
-        [Group(@"58293b6da8bb02a6430b3eb1beb91194:737")]
+        [Group(@"846fcf536fcb4b0f0d32e089e99e4bfc:737")]
         public bool IsCaseSensitive
         {
             get => _isCaseSensitive;

@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:8432""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:13350""}]")]
     public class GroupThirdPartyEmergencyCallingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enableDeviceManagement;
 
         [XmlElement(ElementName = "enableDeviceManagement", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8432")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:13350")]
         public bool EnableDeviceManagement
         {
             get => _enableDeviceManagement;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableRouting;
 
         [XmlElement(ElementName = "enableRouting", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:8432")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:13350")]
         public bool EnableRouting
         {
             get => _enableRouting;

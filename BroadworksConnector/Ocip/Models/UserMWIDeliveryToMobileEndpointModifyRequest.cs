@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""958b78cc2a785d78259c1e8a474eb40d:384""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1ea80c1e18c25d0eed23dbc7bd18f1dc:384""}]")]
     public class UserMWIDeliveryToMobileEndpointModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"958b78cc2a785d78259c1e8a474eb40d:384")]
+        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:384")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"958b78cc2a785d78259c1e8a474eb40d:384")]
+        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:384")]
         public bool IsActive
         {
             get => _isActive;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mobilePhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"958b78cc2a785d78259c1e8a474eb40d:384")]
+        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:384")]
         [MinLength(1)]
         [MaxLength(23)]
         public string MobilePhoneNumber

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:4649""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:4727""}]")]
     public class ServiceProviderHPBXAlternateCarrierSelectionModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4649")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:4727")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "processCbcCarrierSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4649")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:4727")]
         public bool ProcessCbcCarrierSelection
         {
             get => _processCbcCarrierSelection;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "preselectedLocalCarrier", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4649")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:4727")]
         [MinLength(1)]
         [MaxLength(80)]
         public string PreselectedLocalCarrier
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "preselectedDistantCarrier", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4649")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:4727")]
         [MinLength(1)]
         [MaxLength(80)]
         public string PreselectedDistantCarrier

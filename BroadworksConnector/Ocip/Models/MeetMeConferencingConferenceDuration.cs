@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:945""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""adf25df72505d1c476ebb480b6cce18d:945""}]")]
     public class MeetMeConferencingConferenceDuration
     {
 
         protected int _hours;
 
         [XmlElement(ElementName = "hours", IsNullable = false, Namespace = "")]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:945")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:945")]
         [MinInclusive(0)]
         [MaxInclusive(23)]
         public int Hours
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _minutes;
 
         [XmlElement(ElementName = "minutes", IsNullable = false, Namespace = "")]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:945")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:945")]
         [RegularExpression(@"0|15|30|45")]
         public int Minutes
         {

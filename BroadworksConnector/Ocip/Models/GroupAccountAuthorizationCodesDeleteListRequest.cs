@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""65df37199ec43e5d21a187db39d63158:66""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fcf43b3a58ff66521262b4426bab8748:66""}]")]
     public class GroupAccountAuthorizationCodesDeleteListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"65df37199ec43e5d21a187db39d63158:66")]
+        [Group(@"fcf43b3a58ff66521262b4426bab8748:66")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"65df37199ec43e5d21a187db39d63158:66")]
+        [Group(@"fcf43b3a58ff66521262b4426bab8748:66")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected List<string> _code = new List<string>();
 
         [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
-        [Group(@"65df37199ec43e5d21a187db39d63158:66")]
+        [Group(@"fcf43b3a58ff66521262b4426bab8748:66")]
         [MinLength(2)]
         [MaxLength(14)]
         public List<string> Code

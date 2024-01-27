@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4421""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:4430""}]")]
     public class ProfileAndServiceDoNotDisturbInfo
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4421")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:4430")]
         public bool IsActive
         {
             get => _isActive;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _ringSplash;
 
         [XmlElement(ElementName = "ringSplash", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4421")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:4430")]
         public bool RingSplash
         {
             get => _ringSplash;

@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:870""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:866""}]")]
     public class UserCallLogsClearRequest14sp4DeleteSpecifiedCallLogs
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "placedCallLogId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:870")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:866")]
         [MinLength(1)]
         [MaxLength(36)]
         public List<string> PlacedCallLogId
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "receivedCallLogId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:870")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:866")]
         [MinLength(1)]
         [MaxLength(36)]
         public List<string> ReceivedCallLogId
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "missedCallLogId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:870")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:866")]
         [MinLength(1)]
         [MaxLength(36)]
         public List<string> MissedCallLogId

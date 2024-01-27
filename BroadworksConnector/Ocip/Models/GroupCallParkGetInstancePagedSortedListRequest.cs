@@ -23,14 +23,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7a925e891158dfa3cb1319e045608894:326""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b6fd73d148b9b309dce1d2f04516ddfa:326""}]")]
     public class GroupCallParkGetInstancePagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupCallParkGetInstancePagedSortedListResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"7a925e891158dfa3cb1319e045608894:326")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:326")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"7a925e891158dfa3cb1319e045608894:326")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:326")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7a925e891158dfa3cb1319e045608894:326")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:326")]
         public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl
         {
             get => _responsePagingControl;
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sortByCallParkName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7a925e891158dfa3cb1319e045608894:326")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:326")]
         public BroadWorksConnector.Ocip.Models.SortByCallParkName SortByCallParkName
         {
             get => _sortByCallParkName;
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaCallParkName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7a925e891158dfa3cb1319e045608894:326")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:326")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaCallParkName> SearchCriteriaCallParkName
         {
             get => _searchCriteriaCallParkName;
@@ -123,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7a925e891158dfa3cb1319e045608894:326")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:326")]
         public bool SearchCriteriaModeOr
         {
             get => _searchCriteriaModeOr;

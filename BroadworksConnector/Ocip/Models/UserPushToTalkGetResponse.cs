@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f32f4b57593f3e1ac6ed1cf45ed62b7c:104""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""22c82692327758edb5adf1f1db18fc71:104""}]")]
     public class UserPushToTalkGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _allowAutoAnswer;
 
         [XmlElement(ElementName = "allowAutoAnswer", IsNullable = false, Namespace = "")]
-        [Group(@"f32f4b57593f3e1ac6ed1cf45ed62b7c:104")]
+        [Group(@"22c82692327758edb5adf1f1db18fc71:104")]
         public bool AllowAutoAnswer
         {
             get => _allowAutoAnswer;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.PushToTalkOutgoingConnectionSelection _outgoingConnectionSelection;
 
         [XmlElement(ElementName = "outgoingConnectionSelection", IsNullable = false, Namespace = "")]
-        [Group(@"f32f4b57593f3e1ac6ed1cf45ed62b7c:104")]
+        [Group(@"22c82692327758edb5adf1f1db18fc71:104")]
         public BroadWorksConnector.Ocip.Models.PushToTalkOutgoingConnectionSelection OutgoingConnectionSelection
         {
             get => _outgoingConnectionSelection;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.PushToTalkAccessListSelection _accessListSelection;
 
         [XmlElement(ElementName = "accessListSelection", IsNullable = false, Namespace = "")]
-        [Group(@"f32f4b57593f3e1ac6ed1cf45ed62b7c:104")]
+        [Group(@"22c82692327758edb5adf1f1db18fc71:104")]
         public BroadWorksConnector.Ocip.Models.PushToTalkAccessListSelection AccessListSelection
         {
             get => _accessListSelection;
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _selectedUserTable;
 
         [XmlElement(ElementName = "selectedUserTable", IsNullable = false, Namespace = "")]
-        [Group(@"f32f4b57593f3e1ac6ed1cf45ed62b7c:104")]
+        [Group(@"22c82692327758edb5adf1f1db18fc71:104")]
         public BroadWorksConnector.Ocip.Models.C.OCITable SelectedUserTable
         {
             get => _selectedUserTable;

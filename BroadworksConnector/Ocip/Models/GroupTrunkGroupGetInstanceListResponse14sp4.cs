@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:1135""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""090e91b2d78e873f5d76a2f16af08d3a:1134""}]")]
     public class GroupTrunkGroupGetInstanceListResponse14sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _trunkGroupTable;
 
         [XmlElement(ElementName = "trunkGroupTable", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:1135")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1134")]
         public BroadWorksConnector.Ocip.Models.C.OCITable TrunkGroupTable
         {
             get => _trunkGroupTable;

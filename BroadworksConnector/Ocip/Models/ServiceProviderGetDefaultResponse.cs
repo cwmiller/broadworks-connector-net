@@ -9,22 +9,19 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to the ServiceProviderGetDefaultRequest. All values are default values for
     /// a service provider or enterprise's profile.
-    /// 
-    /// The following elements are only used in AS and XS data mode and not returned in Amplify data mode.
-    /// defaultDomain
     /// <see cref="ServiceProviderGetDefaultRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:4431""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:4515""}]")]
     public class ServiceProviderGetDefaultResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isEnterprise;
 
         [XmlElement(ElementName = "isEnterprise", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4431")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:4515")]
         public bool IsEnterprise
         {
             get => _isEnterprise;
@@ -42,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultDomain", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4431")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:4515")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DefaultDomain

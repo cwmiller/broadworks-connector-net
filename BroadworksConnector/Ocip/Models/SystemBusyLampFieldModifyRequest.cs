@@ -14,7 +14,7 @@ namespace BroadWorksConnector.Ocip.Models
     /// The following elements are only used in AS data mode:
     /// forceUseOfTCP
     /// 
-    /// The following elements are only used in AS data mode and ignored in Amplify and XS data mode:
+    /// The following elements are only used in AS data mode and ignored in XS data mode:
     /// enableRedundancy
     /// redundancyTaskDelayMilliseconds
     /// redundancyTaskIntervalMilliseconds
@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4faeca417998d23ce2ff6b0b43212aa6:102""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b1745b5f688013b73224574a66f4f4b2:103""}]")]
     public class SystemBusyLampFieldModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "displayLocalUserIdentityLastNameFirst", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:102")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:103")]
         public bool DisplayLocalUserIdentityLastNameFirst
         {
             get => _displayLocalUserIdentityLastNameFirst;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forceUseOfTCP", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:102")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:103")]
         public bool ForceUseOfTCP
         {
             get => _forceUseOfTCP;
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableRedundancy", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:102")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:103")]
         public bool EnableRedundancy
         {
             get => _enableRedundancy;
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "redundancyTaskDelayMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:102")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:103")]
         [MinInclusive(10000)]
         [MaxInclusive(180000)]
         public int RedundancyTaskDelayMilliseconds
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "redundancyTaskIntervalMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:102")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:103")]
         [MinInclusive(50)]
         [MaxInclusive(20000)]
         public int RedundancyTaskIntervalMilliseconds
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxNumberOfSubscriptionsPerRedundancyTaskInterval", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:102")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:103")]
         [MinInclusive(1)]
         [MaxInclusive(50000)]
         public int MaxNumberOfSubscriptionsPerRedundancyTaskInterval
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "ignoreUnansweredTerminatingCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:102")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:103")]
         public bool IgnoreUnansweredTerminatingCalls
         {
             get => _ignoreUnansweredTerminatingCalls;

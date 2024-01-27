@@ -8,7 +8,7 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Request to get the list of the system voice portals.
-    /// The response is either SystemSystemVoicePortalGetListResponse or ErrorResponse.
+    /// The response is either a SystemSystemVoicePortalGetListResponse or ErrorResponse.
     /// <see cref="SystemSystemVoicePortalGetListResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>

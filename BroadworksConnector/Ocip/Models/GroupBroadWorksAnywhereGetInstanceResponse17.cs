@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:1464""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:1971""}]")]
     public class GroupBroadWorksAnywhereGetInstanceResponse17 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile17 _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:1464")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:1971")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile17 ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.BroadWorksAnywhereScope _broadWorksAnywhereScope;
 
         [XmlElement(ElementName = "broadWorksAnywhereScope", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:1464")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:1971")]
         public BroadWorksConnector.Ocip.Models.BroadWorksAnywhereScope BroadWorksAnywhereScope
         {
             get => _broadWorksAnywhereScope;
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.BroadWorksAnywhereCLIDPrompt _promptForCLID;
 
         [XmlElement(ElementName = "promptForCLID", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:1464")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:1971")]
         public BroadWorksConnector.Ocip.Models.BroadWorksAnywhereCLIDPrompt PromptForCLID
         {
             get => _promptForCLID;
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _silentPromptMode;
 
         [XmlElement(ElementName = "silentPromptMode", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:1464")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:1971")]
         public bool SilentPromptMode
         {
             get => _silentPromptMode;
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _promptForPasscode;
 
         [XmlElement(ElementName = "promptForPasscode", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:1464")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:1971")]
         public bool PromptForPasscode
         {
             get => _promptForPasscode;

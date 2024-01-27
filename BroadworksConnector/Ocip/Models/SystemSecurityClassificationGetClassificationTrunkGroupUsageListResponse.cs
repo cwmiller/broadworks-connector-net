@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b3afea8308b7fdaab8d385357ca9c2d:189""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""435c279b3e6710f4ada60ed66a93d278:189""}]")]
     public class SystemSecurityClassificationGetClassificationTrunkGroupUsageListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _usageTable;
 
         [XmlElement(ElementName = "usageTable", IsNullable = false, Namespace = "")]
-        [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:189")]
+        [Group(@"435c279b3e6710f4ada60ed66a93d278:189")]
         public BroadWorksConnector.Ocip.Models.C.OCITable UsageTable
         {
             get => _usageTable;

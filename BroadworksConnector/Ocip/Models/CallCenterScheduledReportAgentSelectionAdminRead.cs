@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7594"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7596""}]}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7580"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7582""}]}]")]
     public class CallCenterScheduledReportAgentSelectionAdminRead
     {
 
         protected bool _allAgent;
 
         [XmlElement(ElementName = "allAgent", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7594")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7580")]
         public bool AllAgent
         {
             get => _allAgent;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _currentAgentTable;
 
         [XmlElement(ElementName = "currentAgentTable", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7596")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7582")]
         public BroadWorksConnector.Ocip.Models.C.OCITable CurrentAgentTable
         {
             get => _currentAgentTable;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _pastAgentTable;
 
         [XmlElement(ElementName = "pastAgentTable", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7596")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7582")]
         public BroadWorksConnector.Ocip.Models.C.OCITable PastAgentTable
         {
             get => _pastAgentTable;

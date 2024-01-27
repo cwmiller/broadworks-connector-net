@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:19023""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:19259""}]")]
     public class SystemTreatmentMappingQ850CauseAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected int _q850CauseValue;
 
         [XmlElement(ElementName = "q850CauseValue", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19023")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:19259")]
         [MinInclusive(1)]
         [MaxInclusive(256)]
         public int Q850CauseValue
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _treatmentId;
 
         [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:19023")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:19259")]
         [MinLength(1)]
         [MaxLength(40)]
         public string TreatmentId

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""88893c72abbbb9aaf5aecca970191d94:235""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2a762bb9361e88044885b796c1d6b979:235""}]")]
     public class SystemInterceptUserModifyDnRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"88893c72abbbb9aaf5aecca970191d94:235")]
+        [Group(@"2a762bb9361e88044885b796c1d6b979:235")]
         [MinLength(1)]
         [MaxLength(23)]
         public string PhoneNumber
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"88893c72abbbb9aaf5aecca970191d94:235")]
+        [Group(@"2a762bb9361e88044885b796c1d6b979:235")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

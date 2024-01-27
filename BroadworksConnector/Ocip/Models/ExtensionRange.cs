@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:48948""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:49834""}]")]
     public class ExtensionRange
     {
 
         protected string _minExtension;
 
         [XmlElement(ElementName = "minExtension", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48948")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:49834")]
         [MinLength(2)]
         [MaxLength(6)]
         public string MinExtension
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _maxExtension;
 
         [XmlElement(ElementName = "maxExtension", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48948")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:49834")]
         [MinLength(2)]
         [MaxLength(6)]
         public string MaxExtension

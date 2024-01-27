@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:562""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:562""}]")]
     public class ActivatableDNRange
     {
 
         protected string _minPhoneNumber;
 
         [XmlElement(ElementName = "minPhoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:562")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:562")]
         [MinLength(1)]
         [MaxLength(23)]
         public string MinPhoneNumber
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _maxPhoneNumber;
 
         [XmlElement(ElementName = "maxPhoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:562")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:562")]
         [MinLength(1)]
         [MaxLength(23)]
         public string MaxPhoneNumber
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "activate", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:562")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:562")]
         public bool Activate
         {
             get => _activate;

@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:19752""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:20466""}]")]
     public class SystemAdviceOfChargeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected int _delayBetweenNotificationSeconds;
 
         [XmlElement(ElementName = "delayBetweenNotificationSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19752")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:20466")]
         [MinInclusive(5)]
         [MaxInclusive(1800)]
         public int DelayBetweenNotificationSeconds
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling _incomingAocHandling;
 
         [XmlElement(ElementName = "incomingAocHandling", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19752")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:20466")]
         public BroadWorksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling IncomingAocHandling
         {
             get => _incomingAocHandling;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "costInformationSource", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19752")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:20466")]
         [MinLength(1)]
         [MaxLength(80)]
         public string CostInformationSource

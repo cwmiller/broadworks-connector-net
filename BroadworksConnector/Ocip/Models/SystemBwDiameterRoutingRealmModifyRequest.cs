@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:2952""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:3002""}]")]
     public class SystemBwDiameterRoutingRealmModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected BroadWorksConnector.Ocip.Models.BwDiameterPeerInstance _instance;
 
         [XmlElement(ElementName = "instance", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2952")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:3002")]
         public BroadWorksConnector.Ocip.Models.BwDiameterPeerInstance Instance
         {
             get => _instance;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _realm;
 
         [XmlElement(ElementName = "realm", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2952")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:3002")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Realm
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.BwDiameterApplicationId _applicationId;
 
         [XmlElement(ElementName = "applicationId", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2952")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:3002")]
         public BroadWorksConnector.Ocip.Models.BwDiameterApplicationId ApplicationId
         {
             get => _applicationId;
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "default", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2952")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:3002")]
         public bool Default
         {
             get => _default;

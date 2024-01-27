@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:6474""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:6542""}]")]
     public class ServiceProviderServicePackMigrationTaskModifyGroupListRequestGroupIdList
     {
 
         protected List<string> _groupId = new List<string>();
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6474")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:6542")]
         [MinLength(1)]
         [MaxLength(30)]
         public List<string> GroupId

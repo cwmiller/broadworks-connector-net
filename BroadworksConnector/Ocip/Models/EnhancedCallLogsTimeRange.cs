@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2556""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3038""}]")]
     public class EnhancedCallLogsTimeRange
     {
 
         protected string _startDateTime;
 
         [XmlElement(ElementName = "startDateTime", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2556")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3038")]
         public string StartDateTime
         {
             get => _startDateTime;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _endDateTime;
 
         [XmlElement(ElementName = "endDateTime", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2556")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3038")]
         public string EndDateTime
         {
             get => _endDateTime;

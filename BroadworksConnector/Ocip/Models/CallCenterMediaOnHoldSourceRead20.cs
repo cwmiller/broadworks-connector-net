@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:47713""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:48599""}]")]
     public class CallCenterMediaOnHoldSourceRead20
     {
 
         protected BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldMessageSelection _audioMessageSourceSelection;
 
         [XmlElement(ElementName = "audioMessageSourceSelection", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47713")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48599")]
         public BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldMessageSelection AudioMessageSourceSelection
         {
             get => _audioMessageSourceSelection;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioUrlList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47713")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48599")]
         public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementURLList AudioUrlList
         {
             get => _audioUrlList;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFileList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47713")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48599")]
         public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementFileListRead20 AudioFileList
         {
             get => _audioFileList;
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "externalAudioSource", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47713")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48599")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointWithPortNumberRead ExternalAudioSource
         {
             get => _externalAudioSource;
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoMessageSourceSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47713")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48599")]
         public BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldMessageSelection VideoMessageSourceSelection
         {
             get => _videoMessageSourceSelection;
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoUrlList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47713")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48599")]
         public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementURLList VideoUrlList
         {
             get => _videoUrlList;
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoFileList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47713")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48599")]
         public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementFileListRead20 VideoFileList
         {
             get => _videoFileList;
@@ -145,7 +145,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "externalVideoSource", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47713")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48599")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointWithPortNumberRead ExternalVideoSource
         {
             get => _externalVideoSource;

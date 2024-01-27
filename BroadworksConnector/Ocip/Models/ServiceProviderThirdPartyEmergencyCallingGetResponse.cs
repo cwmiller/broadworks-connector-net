@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:6973""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:19809""}]")]
     public class ServiceProviderThirdPartyEmergencyCallingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _allowActivation;
 
         [XmlElement(ElementName = "allowActivation", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6973")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:19809")]
         public bool AllowActivation
         {
             get => _allowActivation;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "customerId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6973")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:19809")]
         [MinLength(1)]
         [MaxLength(36)]
         public string CustomerId
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _hasGroupEnabled;
 
         [XmlElement(ElementName = "hasGroupEnabled", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6973")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:19809")]
         public bool HasGroupEnabled
         {
             get => _hasGroupEnabled;

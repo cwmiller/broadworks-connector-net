@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f53ece1c00394ef2d3d76f532f9a9663:317""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:46272""}]")]
     public class UserPersonalAssistantGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.PersonalAssistantPresence _presence;
 
         [XmlElement(ElementName = "presence", IsNullable = false, Namespace = "")]
-        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:317")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:46272")]
         public BroadWorksConnector.Ocip.Models.PersonalAssistantPresence Presence
         {
             get => _presence;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableTransferToAttendant;
 
         [XmlElement(ElementName = "enableTransferToAttendant", IsNullable = false, Namespace = "")]
-        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:317")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:46272")]
         public bool EnableTransferToAttendant
         {
             get => _enableTransferToAttendant;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "attendantNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:317")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:46272")]
         [MinLength(1)]
         [MaxLength(161)]
         public string AttendantNumber
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableRingSplash;
 
         [XmlElement(ElementName = "enableRingSplash", IsNullable = false, Namespace = "")]
-        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:317")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:46272")]
         public bool EnableRingSplash
         {
             get => _enableRingSplash;
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableExpirationTime;
 
         [XmlElement(ElementName = "enableExpirationTime", IsNullable = false, Namespace = "")]
-        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:317")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:46272")]
         public bool EnableExpirationTime
         {
             get => _enableExpirationTime;
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "expirationTime", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:317")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:46272")]
         public string ExpirationTime
         {
             get => _expirationTime;
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _alertMeFirst;
 
         [XmlElement(ElementName = "alertMeFirst", IsNullable = false, Namespace = "")]
-        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:317")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:46272")]
         public bool AlertMeFirst
         {
             get => _alertMeFirst;
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.PersonalAssistantAlertMeFirstNumberOfRings _alertMeFirstNumberOfRings;
 
         [XmlElement(ElementName = "alertMeFirstNumberOfRings", IsNullable = false, Namespace = "")]
-        [Group(@"f53ece1c00394ef2d3d76f532f9a9663:317")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:46272")]
         public BroadWorksConnector.Ocip.Models.PersonalAssistantAlertMeFirstNumberOfRings AlertMeFirstNumberOfRings
         {
             get => _alertMeFirstNumberOfRings;

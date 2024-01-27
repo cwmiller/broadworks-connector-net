@@ -11,7 +11,7 @@ namespace BroadWorksConnector.Ocip.Models
     /// the DNs assigned to the enterprises/service providers within the reseller are returned.
     /// If reseller administrator sends the request and resellerId is not specified, the administrator's resellerId is used.
     /// 
-    /// The response is either SystemDnGetUtilizationListResponse or ErrorResponse.
+    /// The response is either a SystemDnGetUtilizationListResponse or ErrorResponse.
     /// 
     /// The following data elements are only used in AS data mode:
     /// resellerId
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9335""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:9459""}]")]
     public class SystemDnGetUtilizationListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemDnGetUtilizationListResponse>
     {
 
@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9335")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9459")]
         [MinLength(1)]
         [MaxLength(36)]
         public string ResellerId

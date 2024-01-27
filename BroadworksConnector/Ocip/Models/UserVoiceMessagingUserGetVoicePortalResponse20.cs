@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:1948""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:1954""}]")]
     public class UserVoiceMessagingUserGetVoicePortalResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _usePersonalizedName;
 
         [XmlElement(ElementName = "usePersonalizedName", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1948")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1954")]
         public bool UsePersonalizedName
         {
             get => _usePersonalizedName;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _voicePortalAutoLogin;
 
         [XmlElement(ElementName = "voicePortalAutoLogin", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1948")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1954")]
         public bool VoicePortalAutoLogin
         {
             get => _voicePortalAutoLogin;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "personalizedNameAudioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:1948")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1954")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey PersonalizedNameAudioFile
         {
             get => _personalizedNameAudioFile;

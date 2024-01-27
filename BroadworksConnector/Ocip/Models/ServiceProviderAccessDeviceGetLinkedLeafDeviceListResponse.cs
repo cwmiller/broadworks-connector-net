@@ -8,19 +8,21 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to ServiceProviderAccessDeviceGetLinkedLeafDeviceListRequest.
+    /// Replaced by: ServiceProviderAccessDeviceGetLinkedLeafDeviceListResponse22.
     /// <see cref="ServiceProviderAccessDeviceGetLinkedLeafDeviceListRequest"/>
+    /// <see cref="ServiceProviderAccessDeviceGetLinkedLeafDeviceListResponse22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:757""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:17258""}]")]
     public class ServiceProviderAccessDeviceGetLinkedLeafDeviceListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _treeDeviceLinkId;
 
         [XmlElement(ElementName = "treeDeviceLinkId", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:757")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:17258")]
         public string TreeDeviceLinkId
         {
             get => _treeDeviceLinkId;
@@ -38,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "leafDeviceKey", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:757")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:17258")]
         public List<BroadWorksConnector.Ocip.Models.AccessDeviceKey> LeafDeviceKey
         {
             get => _leafDeviceKey;

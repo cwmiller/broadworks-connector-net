@@ -8,7 +8,6 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Request to add a language to the system.
-    /// The command will fail in Amplify data mode if the locale element is greater than 5 characters in length.
     /// The response is either a SuccessResponse or an ErrorResponse.
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
@@ -16,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:11408""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:11531""}]")]
     public class SystemLanguageAddRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _language;
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11408")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11531")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Language
@@ -42,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _locale;
 
         [XmlElement(ElementName = "locale", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11408")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11531")]
         [MaxLength(20)]
         public string Locale
         {
@@ -60,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _encoding;
 
         [XmlElement(ElementName = "encoding", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11408")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11531")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Encoding

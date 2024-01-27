@@ -11,8 +11,9 @@ namespace BroadWorksConnector.Ocip.Models
     /// Contains a table with column headings: "Event Id", "Status", "Action",
     /// "Level", "Type", "Additional Info", "Is Local", "Completion %",
     /// "Pushed/ Same Hash/ Not Pushed", "Login Id", "Start Time",
-    /// "Process Time", "Rx Time", "Total Time", "Request", "Priority".
-    /// "Event Id" is a unique identifer for the event.
+    /// "Process Time", "Rx Time", "Total Time", "Request", "Priority",
+    /// "Tracking Id", "End Time".
+    /// "Event Id" is a unique identifier for the event.
     /// "Status" can be: Pending, Queued, In Progress,
     /// Process On Other Host, Stale, Completed, Canceled.
     /// "Action" can be: Delete, Download, Rebuild, Reset, Upload.
@@ -49,19 +50,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// hours, minutes, seconds, and milliseconds (hhhh:mm:ss.SSS).
     /// "Request" is the name of the OCI-P request that triggered the event.
     /// "Priority" is the priority of the event.
+    /// "Tracking Id" is the tracking id of the OCI-P request that triggered the event.
+    /// "End Time" is the difference, measured in milliseconds, between the
+    /// event's end time and midnight, January 1, 1970 UTC
     /// <see cref="GroupDeviceManagementEventGetListRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:4167""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:3903""}]")]
     public class GroupDeviceManagementEventGetListResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _eventTable;
 
         [XmlElement(ElementName = "eventTable", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4167")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:3903")]
         public BroadWorksConnector.Ocip.Models.C.OCITable EventTable
         {
             get => _eventTable;

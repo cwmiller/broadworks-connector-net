@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""045ce951b3e25dec090606af4ad50c63:376""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e52f623f7e5f77c5ed7bb6ba0012d5cd:376""}]")]
     public class UserCallPickupGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserCallPickupGetResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"045ce951b3e25dec090606af4ad50c63:376")]
+        [Group(@"e52f623f7e5f77c5ed7bb6ba0012d5cd:376")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

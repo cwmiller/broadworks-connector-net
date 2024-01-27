@@ -8,15 +8,15 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get a list of system administrators.
-    /// The response is either a SystemAdminGetResponse or an ErrorResponse.
-    /// <see cref="SystemAdminGetResponse"/>
+    /// The response is either a SystemAdminGetListResponse or an ErrorResponse.
+    /// <see cref="SystemAdminGetListResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:2113""}]")]
-    public class SystemAdminGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemAdminGetResponse>
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:2149""}]")]
+    public class SystemAdminGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemAdminGetListResponse>
     {
 
     }

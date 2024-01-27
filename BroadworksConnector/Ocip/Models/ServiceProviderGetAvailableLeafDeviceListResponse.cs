@@ -8,12 +8,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to ServiceProviderGetAvailableLeafDeviceListRequest.
+    /// Replaced by: ServiceProviderGetAvailableLeafDeviceListResponse22.
     /// <see cref="ServiceProviderGetAvailableLeafDeviceListRequest"/>
+    /// <see cref="ServiceProviderGetAvailableLeafDeviceListResponse22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:4363""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:19338""}]")]
     public class ServiceProviderGetAvailableLeafDeviceListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "leafDeviceKey", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:4363")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:19338")]
         public List<BroadWorksConnector.Ocip.Models.AccessDeviceKey> LeafDeviceKey
         {
             get => _leafDeviceKey;

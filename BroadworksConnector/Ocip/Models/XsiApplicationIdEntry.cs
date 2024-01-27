@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:20127""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:20278""}]")]
     public class XsiApplicationIdEntry
     {
 
         protected string _xsiApplicationId;
 
         [XmlElement(ElementName = "xsiApplicationId", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:20127")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:20278")]
         [MinLength(1)]
         [MaxLength(256)]
         public string XsiApplicationId
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:20127")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:20278")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

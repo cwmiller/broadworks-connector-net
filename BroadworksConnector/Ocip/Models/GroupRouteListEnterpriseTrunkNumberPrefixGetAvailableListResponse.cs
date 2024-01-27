@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3f28429898a57a7f7846d3877b22df9f:253""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""500f9871ed90b8ab3fbd262883ab503b:252""}]")]
     public class GroupRouteListEnterpriseTrunkNumberPrefixGetAvailableListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _availableNumberPrefixTable;
 
         [XmlElement(ElementName = "availableNumberPrefixTable", IsNullable = false, Namespace = "")]
-        [Group(@"3f28429898a57a7f7846d3877b22df9f:253")]
+        [Group(@"500f9871ed90b8ab3fbd262883ab503b:252")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AvailableNumberPrefixTable
         {
             get => _availableNumberPrefixTable;

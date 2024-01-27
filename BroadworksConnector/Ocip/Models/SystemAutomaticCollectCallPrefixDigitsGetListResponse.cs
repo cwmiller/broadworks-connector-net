@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""af1b47d7cab3335a81456e64e42371b0:145""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0d5db1a19a0aeda6f13d1f1c609efa0a:144""}]")]
     public class SystemAutomaticCollectCallPrefixDigitsGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _prefixTable;
 
         [XmlElement(ElementName = "prefixTable", IsNullable = false, Namespace = "")]
-        [Group(@"af1b47d7cab3335a81456e64e42371b0:145")]
+        [Group(@"0d5db1a19a0aeda6f13d1f1c609efa0a:144")]
         public BroadWorksConnector.Ocip.Models.C.OCITable PrefixTable
         {
             get => _prefixTable;

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""89aa8c9a341a3cccb2453b1ee467bf94:48""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d0efd2493d3062b292fd31759011925e:48""}]")]
     public class SystemCallingPartyCategoryAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _category;
 
         [XmlElement(ElementName = "category", IsNullable = false, Namespace = "")]
-        [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:48")]
+        [Group(@"d0efd2493d3062b292fd31759011925e:48")]
         [MinLength(1)]
         [MaxLength(20)]
         public string Category
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "cpcValue", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:48")]
+        [Group(@"d0efd2493d3062b292fd31759011925e:48")]
         [MinLength(1)]
         [MaxLength(20)]
         public string CpcValue
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isupOliValue", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:48")]
+        [Group(@"d0efd2493d3062b292fd31759011925e:48")]
         [MinInclusive(0)]
         [MaxInclusive(255)]
         public int IsupOliValue
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "gtdOliValue", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:48")]
+        [Group(@"d0efd2493d3062b292fd31759011925e:48")]
         [MinLength(1)]
         [MaxLength(3)]
         public string GtdOliValue
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _userCategory;
 
         [XmlElement(ElementName = "userCategory", IsNullable = false, Namespace = "")]
-        [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:48")]
+        [Group(@"d0efd2493d3062b292fd31759011925e:48")]
         public bool UserCategory
         {
             get => _userCategory;
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _payPhone;
 
         [XmlElement(ElementName = "payPhone", IsNullable = false, Namespace = "")]
-        [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:48")]
+        [Group(@"d0efd2493d3062b292fd31759011925e:48")]
         public bool PayPhone
         {
             get => _payPhone;
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _operator;
 
         [XmlElement(ElementName = "operator", IsNullable = false, Namespace = "")]
-        [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:48")]
+        [Group(@"d0efd2493d3062b292fd31759011925e:48")]
         public bool Operator
         {
             get => _operator;
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _default;
 
         [XmlElement(ElementName = "default", IsNullable = false, Namespace = "")]
-        [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:48")]
+        [Group(@"d0efd2493d3062b292fd31759011925e:48")]
         public bool Default
         {
             get => _default;
@@ -169,7 +169,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _collectCall;
 
         [XmlElement(ElementName = "collectCall", IsNullable = false, Namespace = "")]
-        [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:48")]
+        [Group(@"d0efd2493d3062b292fd31759011925e:48")]
         public bool CollectCall
         {
             get => _collectCall;
@@ -187,7 +187,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "webDisplayKey", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:48")]
+        [Group(@"d0efd2493d3062b292fd31759011925e:48")]
         [MinLength(1)]
         [MaxLength(40)]
         public string WebDisplayKey

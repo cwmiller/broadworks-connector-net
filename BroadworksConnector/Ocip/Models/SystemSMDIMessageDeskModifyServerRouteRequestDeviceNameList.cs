@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ee7bb69368e23a56a82c5d9cf07b5433:205""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""aa3a240fa755015613cfb9259eccafef:205""}]")]
     public class SystemSMDIMessageDeskModifyServerRouteRequestDeviceNameList
     {
 
         protected List<string> _deviceName = new List<string>();
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"ee7bb69368e23a56a82c5d9cf07b5433:205")]
+        [Group(@"aa3a240fa755015613cfb9259eccafef:205")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> DeviceName

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:6581""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:6649""}]")]
     public class ServiceProviderServicePackModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6581")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:6649")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _servicePackName;
 
         [XmlElement(ElementName = "servicePackName", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6581")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:6649")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServicePackName
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newServicePackName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6581")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:6649")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NewServicePackName
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "servicePackDescription", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6581")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:6649")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ServicePackDescription
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isAvailableForUse", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6581")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:6649")]
         public bool IsAvailableForUse
         {
             get => _isAvailableForUse;
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "servicePackQuantity", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6581")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:6649")]
         public BroadWorksConnector.Ocip.Models.UnboundedPositiveInt ServicePackQuantity
         {
             get => _servicePackQuantity;

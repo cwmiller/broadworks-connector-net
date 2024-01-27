@@ -9,18 +9,21 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Verification Translation and Routing origination
     /// value.
+    /// 
+    /// The following element is only used in AS mode:
+    /// userId
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:5285""}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:5753""}]")]
     public class VerifyTranslationAndRoutingOrigination
     {
 
         protected string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5285")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5753")]
         [MinLength(1)]
         [MaxLength(161)]
         public string LinePort
@@ -39,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _phone;
 
         [XmlElement(ElementName = "phone", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5285")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5753")]
         [MinLength(1)]
         [MaxLength(23)]
         public string Phone
@@ -58,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5285")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5753")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -77,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _url;
 
         [XmlElement(ElementName = "url", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5285")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5753")]
         [MinLength(1)]
         [MaxLength(256)]
         public string Url

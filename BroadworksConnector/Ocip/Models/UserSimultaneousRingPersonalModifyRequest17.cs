@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f64c4e06b22d19cc74a21048a08a84c7:177""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d6190622c16e29d798f0976799563da5:177""}]")]
     public class UserSimultaneousRingPersonalModifyRequest17 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"f64c4e06b22d19cc74a21048a08a84c7:177")]
+        [Group(@"d6190622c16e29d798f0976799563da5:177")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f64c4e06b22d19cc74a21048a08a84c7:177")]
+        [Group(@"d6190622c16e29d798f0976799563da5:177")]
         public bool IsActive
         {
             get => _isActive;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "doNotRingIfOnCall", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f64c4e06b22d19cc74a21048a08a84c7:177")]
+        [Group(@"d6190622c16e29d798f0976799563da5:177")]
         public bool DoNotRingIfOnCall
         {
             get => _doNotRingIfOnCall;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "simultaneousRingNumberList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f64c4e06b22d19cc74a21048a08a84c7:177")]
+        [Group(@"d6190622c16e29d798f0976799563da5:177")]
         public BroadWorksConnector.Ocip.Models.SimultaneousRingReplacementNumberList SimultaneousRingNumberList
         {
             get => _simultaneousRingNumberList;
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "criteriaActivation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f64c4e06b22d19cc74a21048a08a84c7:177")]
+        [Group(@"d6190622c16e29d798f0976799563da5:177")]
         public List<BroadWorksConnector.Ocip.Models.CriteriaActivation> CriteriaActivation
         {
             get => _criteriaActivation;

@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:376""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:376""}]")]
     public class AccessDeviceMultipleIdentityAndContactEndpointModify22
     {
 
@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:376")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:376")]
         public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice
         {
             get => _accessDevice;
@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:376")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:376")]
         [MinLength(1)]
         [MaxLength(161)]
         public string LinePort
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "privateIdentity", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:376")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:376")]
         [MinLength(1)]
         [MaxLength(161)]
         public string PrivateIdentity
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "contactList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:376")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:376")]
         public BroadWorksConnector.Ocip.Models.ReplacementContactList22 ContactList
         {
             get => _contactList;
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "portNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:376")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:376")]
         [MinInclusive(1)]
         [MaxInclusive(1024)]
         public int PortNumber
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useHotline", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:376")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:376")]
         public bool UseHotline
         {
             get => _useHotline;
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hotlineContact", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:376")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:376")]
         [MinLength(1)]
         [MaxLength(161)]
         public string HotlineContact

@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:595""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:591""}]")]
     public class UserAnnouncementFileGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserAnnouncementFileGetListResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:595")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:591")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "announcementFileType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:595")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:591")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileType AnnouncementFileType
         {
             get => _announcementFileType;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _includeAnnouncementTable;
 
         [XmlElement(ElementName = "includeAnnouncementTable", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:595")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:591")]
         public bool IncludeAnnouncementTable
         {
             get => _includeAnnouncementTable;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:595")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:591")]
         [MinInclusive(1)]
         public int ResponseSizeLimit
         {
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaAnnouncementFileName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:595")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:591")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaAnnouncementFileName> SearchCriteriaAnnouncementFileName
         {
             get => _searchCriteriaAnnouncementFileName;

@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:3665""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:3743""}]")]
     public class ServiceProviderDialPlanPolicyGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _requiresAccessCodeForPublicCalls;
 
         [XmlElement(ElementName = "requiresAccessCodeForPublicCalls", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3665")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:3743")]
         public bool RequiresAccessCodeForPublicCalls
         {
             get => _requiresAccessCodeForPublicCalls;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowE164PublicCalls;
 
         [XmlElement(ElementName = "allowE164PublicCalls", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3665")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:3743")]
         public bool AllowE164PublicCalls
         {
             get => _allowE164PublicCalls;
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _preferE164NumberFormatForCallbackServices;
 
         [XmlElement(ElementName = "preferE164NumberFormatForCallbackServices", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3665")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:3743")]
         public bool PreferE164NumberFormatForCallbackServices
         {
             get => _preferE164NumberFormatForCallbackServices;
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "publicDigitMap", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3665")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:3743")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string PublicDigitMap
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "privateDigitMap", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3665")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:3743")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string PrivateDigitMap
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _overrideResolvedDeviceDigitMap;
 
         [XmlElement(ElementName = "overrideResolvedDeviceDigitMap", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3665")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:3743")]
         public bool OverrideResolvedDeviceDigitMap
         {
             get => _overrideResolvedDeviceDigitMap;
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceDigitMap", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3665")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:3743")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string DeviceDigitMap

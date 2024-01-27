@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1f0f230fee2817fe00157925859dc28e:148""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""adf9583170c1dc9ec6c152ba1238437a:148""}]")]
     public class UserCallMeNowGetCriteriaResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1f0f230fee2817fe00157925859dc28e:148")]
+        [Group(@"adf9583170c1dc9ec6c152ba1238437a:148")]
         public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule
         {
             get => _timeSchedule;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1f0f230fee2817fe00157925859dc28e:148")]
+        [Group(@"adf9583170c1dc9ec6c152ba1238437a:148")]
         public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule
         {
             get => _holidaySchedule;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _rejectCall;
 
         [XmlElement(ElementName = "rejectCall", IsNullable = false, Namespace = "")]
-        [Group(@"1f0f230fee2817fe00157925859dc28e:148")]
+        [Group(@"adf9583170c1dc9ec6c152ba1238437a:148")]
         public bool RejectCall
         {
             get => _rejectCall;
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CallMeNowToDnCriteria _toDnCriteria;
 
         [XmlElement(ElementName = "toDnCriteria", IsNullable = false, Namespace = "")]
-        [Group(@"1f0f230fee2817fe00157925859dc28e:148")]
+        [Group(@"adf9583170c1dc9ec6c152ba1238437a:148")]
         public BroadWorksConnector.Ocip.Models.CallMeNowToDnCriteria ToDnCriteria
         {
             get => _toDnCriteria;

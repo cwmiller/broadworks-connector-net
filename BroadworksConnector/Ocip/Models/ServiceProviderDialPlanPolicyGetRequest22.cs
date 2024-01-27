@@ -8,21 +8,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Request the Service Provider level data associated with Dial Plan Policy.
-    /// The response is either a ServiceProviderDialPlanPolicyGetResponse22 or an ErrorResponse.
+    /// The response is either a ServiceProviderDialPlanPolicyGetResponse22
+    /// or an ErrorResponse.
     /// <see cref="ServiceProviderDialPlanPolicyGetResponse22"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:3646""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:3724""}]")]
     public class ServiceProviderDialPlanPolicyGetRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ServiceProviderDialPlanPolicyGetResponse22>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:3646")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:3724")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId

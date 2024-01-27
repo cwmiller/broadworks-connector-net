@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b3afea8308b7fdaab8d385357ca9c2d:102""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""435c279b3e6710f4ada60ed66a93d278:102""}]")]
     public class SystemSecurityClassificationAddClassificationRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _securityClassificationName;
 
         [XmlElement(ElementName = "securityClassificationName", IsNullable = false, Namespace = "")]
-        [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:102")]
+        [Group(@"435c279b3e6710f4ada60ed66a93d278:102")]
         [MinLength(1)]
         [MaxLength(40)]
         public string SecurityClassificationName
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _audioFile;
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
-        [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:102")]
+        [Group(@"435c279b3e6710f4ada60ed66a93d278:102")]
         public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource AudioFile
         {
             get => _audioFile;

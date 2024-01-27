@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:2160""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a63afa661ee5c74f4700e562e88c66d0:2159""}]")]
     public class OutgoingCallingPlanRedirectingPermissions
     {
 
         protected bool _group;
 
         [XmlElement(ElementName = "group", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2160")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:2159")]
         public bool Group
         {
             get => _group;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _local;
 
         [XmlElement(ElementName = "local", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2160")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:2159")]
         public bool Local
         {
             get => _local;
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _tollFree;
 
         [XmlElement(ElementName = "tollFree", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2160")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:2159")]
         public bool TollFree
         {
             get => _tollFree;
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _toll;
 
         [XmlElement(ElementName = "toll", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2160")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:2159")]
         public bool Toll
         {
             get => _toll;
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _international;
 
         [XmlElement(ElementName = "international", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2160")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:2159")]
         public bool International
         {
             get => _international;
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _operatorAssisted;
 
         [XmlElement(ElementName = "operatorAssisted", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2160")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:2159")]
         public bool OperatorAssisted
         {
             get => _operatorAssisted;
@@ -121,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _chargeableDirectoryAssisted;
 
         [XmlElement(ElementName = "chargeableDirectoryAssisted", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2160")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:2159")]
         public bool ChargeableDirectoryAssisted
         {
             get => _chargeableDirectoryAssisted;
@@ -138,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _specialServicesI;
 
         [XmlElement(ElementName = "specialServicesI", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2160")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:2159")]
         public bool SpecialServicesI
         {
             get => _specialServicesI;
@@ -155,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _specialServicesII;
 
         [XmlElement(ElementName = "specialServicesII", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2160")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:2159")]
         public bool SpecialServicesII
         {
             get => _specialServicesII;
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _premiumServicesI;
 
         [XmlElement(ElementName = "premiumServicesI", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2160")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:2159")]
         public bool PremiumServicesI
         {
             get => _premiumServicesI;
@@ -189,7 +189,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _premiumServicesII;
 
         [XmlElement(ElementName = "premiumServicesII", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2160")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:2159")]
         public bool PremiumServicesII
         {
             get => _premiumServicesII;
@@ -206,7 +206,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _casual;
 
         [XmlElement(ElementName = "casual", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2160")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:2159")]
         public bool Casual
         {
             get => _casual;
@@ -223,7 +223,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _urlDialing;
 
         [XmlElement(ElementName = "urlDialing", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2160")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:2159")]
         public bool UrlDialing
         {
             get => _urlDialing;
@@ -240,7 +240,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _unknown;
 
         [XmlElement(ElementName = "unknown", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2160")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:2159")]
         public bool Unknown
         {
             get => _unknown;

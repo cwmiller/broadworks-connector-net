@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9db4d5fa1bbf70f2626f52a5d6e3420e:56""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6e41c53467939072d1190f1f854fdccd:56""}]")]
     public class UserAuthenticationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9db4d5fa1bbf70f2626f52a5d6e3420e:56")]
+        [Group(@"6e41c53467939072d1190f1f854fdccd:56")]
         [MinLength(1)]
         [MaxLength(80)]
         public string UserName

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6604ba4b5f755b1ba8d7de48e87c6e63:78""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7a0da3cd21ff9c39efcb7d6d9f013f8b:78""}]")]
     public class UserCallTransferModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"6604ba4b5f755b1ba8d7de48e87c6e63:78")]
+        [Group(@"7a0da3cd21ff9c39efcb7d6d9f013f8b:78")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isRecallActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6604ba4b5f755b1ba8d7de48e87c6e63:78")]
+        [Group(@"7a0da3cd21ff9c39efcb7d6d9f013f8b:78")]
         public bool IsRecallActive
         {
             get => _isRecallActive;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "recallNumberOfRings", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6604ba4b5f755b1ba8d7de48e87c6e63:78")]
+        [Group(@"7a0da3cd21ff9c39efcb7d6d9f013f8b:78")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
         public int RecallNumberOfRings
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useDiversionInhibitorForBlindTransfer", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6604ba4b5f755b1ba8d7de48e87c6e63:78")]
+        [Group(@"7a0da3cd21ff9c39efcb7d6d9f013f8b:78")]
         public bool UseDiversionInhibitorForBlindTransfer
         {
             get => _useDiversionInhibitorForBlindTransfer;
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useDiversionInhibitorForConsultativeCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6604ba4b5f755b1ba8d7de48e87c6e63:78")]
+        [Group(@"7a0da3cd21ff9c39efcb7d6d9f013f8b:78")]
         public bool UseDiversionInhibitorForConsultativeCalls
         {
             get => _useDiversionInhibitorForConsultativeCalls;
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableBusyCampOn", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6604ba4b5f755b1ba8d7de48e87c6e63:78")]
+        [Group(@"7a0da3cd21ff9c39efcb7d6d9f013f8b:78")]
         public bool EnableBusyCampOn
         {
             get => _enableBusyCampOn;
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "busyCampOnSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6604ba4b5f755b1ba8d7de48e87c6e63:78")]
+        [Group(@"7a0da3cd21ff9c39efcb7d6d9f013f8b:78")]
         [MinInclusive(30)]
         [MaxInclusive(600)]
         public int BusyCampOnSeconds

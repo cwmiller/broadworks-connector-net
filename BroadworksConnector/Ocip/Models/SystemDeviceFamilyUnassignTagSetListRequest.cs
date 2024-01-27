@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7633""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:7746""}]")]
     public class SystemDeviceFamilyUnassignTagSetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _deviceFamilyName;
 
         [XmlElement(ElementName = "deviceFamilyName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7633")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7746")]
         [MinLength(1)]
         [MaxLength(30)]
         public string DeviceFamilyName
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected List<string> _tagSetName = new List<string>();
 
         [XmlElement(ElementName = "tagSetName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7633")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7746")]
         [MinLength(1)]
         [MaxLength(30)]
         public List<string> TagSetName

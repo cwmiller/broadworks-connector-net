@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7a925e891158dfa3cb1319e045608894:583""}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""b6fd73d148b9b309dce1d2f04516ddfa:587""}]")]
     public class SortOrderGroupCallParkGetAvailableAlternateRecallUserPagedSortedList
     {
 
         protected BroadWorksConnector.Ocip.Models.SortByUserId _sortByUserId;
 
         [XmlElement(ElementName = "sortByUserId", IsNullable = false, Namespace = "")]
-        [Group(@"7a925e891158dfa3cb1319e045608894:583")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:587")]
         public BroadWorksConnector.Ocip.Models.SortByUserId SortByUserId
         {
             get => _sortByUserId;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SortByUserLastName _sortByUserLastName;
 
         [XmlElement(ElementName = "sortByUserLastName", IsNullable = false, Namespace = "")]
-        [Group(@"7a925e891158dfa3cb1319e045608894:583")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:587")]
         public BroadWorksConnector.Ocip.Models.SortByUserLastName SortByUserLastName
         {
             get => _sortByUserLastName;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SortByUserFirstName _sortByUserFirstName;
 
         [XmlElement(ElementName = "sortByUserFirstName", IsNullable = false, Namespace = "")]
-        [Group(@"7a925e891158dfa3cb1319e045608894:583")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:587")]
         public BroadWorksConnector.Ocip.Models.SortByUserFirstName SortByUserFirstName
         {
             get => _sortByUserFirstName;
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SortByDn _sortByDn;
 
         [XmlElement(ElementName = "sortByDn", IsNullable = false, Namespace = "")]
-        [Group(@"7a925e891158dfa3cb1319e045608894:583")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:587")]
         public BroadWorksConnector.Ocip.Models.SortByDn SortByDn
         {
             get => _sortByDn;
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SortByExtension _sortByExtension;
 
         [XmlElement(ElementName = "sortByExtension", IsNullable = false, Namespace = "")]
-        [Group(@"7a925e891158dfa3cb1319e045608894:583")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:587")]
         public BroadWorksConnector.Ocip.Models.SortByExtension SortByExtension
         {
             get => _sortByExtension;
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SortByDepartmentName _sortByDepartmentName;
 
         [XmlElement(ElementName = "sortByDepartmentName", IsNullable = false, Namespace = "")]
-        [Group(@"7a925e891158dfa3cb1319e045608894:583")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:587")]
         public BroadWorksConnector.Ocip.Models.SortByDepartmentName SortByDepartmentName
         {
             get => _sortByDepartmentName;

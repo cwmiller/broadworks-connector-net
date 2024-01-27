@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb12998f4f9e45cedde01f08569f4c7c:65""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""44477d346d2631b033071e12af214ac8:65""}]")]
     public class SystemBroadWorksReceptionistEnterpriseGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected int _maxMonitoredUsers;
 
         [XmlElement(ElementName = "maxMonitoredUsers", IsNullable = false, Namespace = "")]
-        [Group(@"fb12998f4f9e45cedde01f08569f4c7c:65")]
+        [Group(@"44477d346d2631b033071e12af214ac8:65")]
         [MinInclusive(1)]
         [MaxInclusive(1000)]
         public int MaxMonitoredUsers

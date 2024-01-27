@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0d36df8c109e3ea7324f79031368c661:280""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""8ede928f2a9c1318573ba9c7a105655c:279""}]")]
     public class GroupGroupPagingGetInstanceListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _pagingGroupTable;
 
         [XmlElement(ElementName = "pagingGroupTable", IsNullable = false, Namespace = "")]
-        [Group(@"0d36df8c109e3ea7324f79031368c661:280")]
+        [Group(@"8ede928f2a9c1318573ba9c7a105655c:279")]
         public BroadWorksConnector.Ocip.Models.C.OCITable PagingGroupTable
         {
             get => _pagingGroupTable;

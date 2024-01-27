@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:16084""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:16516""}]")]
     public class GroupTrunkGroupUserCreationTaskGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationUserIdFormat _userIdFormat;
 
         [XmlElement(ElementName = "userIdFormat", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16084")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16516")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationUserIdFormat UserIdFormat
         {
             get => _userIdFormat;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _userIdDomain;
 
         [XmlElement(ElementName = "userIdDomain", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16084")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16516")]
         [MinLength(1)]
         [MaxLength(80)]
         public string UserIdDomain
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _populateExtension;
 
         [XmlElement(ElementName = "populateExtension", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16084")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16516")]
         public bool PopulateExtension
         {
             get => _populateExtension;
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat _linePortFormat;
 
         [XmlElement(ElementName = "linePortFormat", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16084")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16516")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat LinePortFormat
         {
             get => _linePortFormat;
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _linePortDomain;
 
         [XmlElement(ElementName = "linePortDomain", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16084")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16516")]
         [MinLength(1)]
         [MaxLength(80)]
         public string LinePortDomain
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _populateContact;
 
         [XmlElement(ElementName = "populateContact", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16084")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16516")]
         public bool PopulateContact
         {
             get => _populateContact;
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "contactFormat", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16084")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16516")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat ContactFormat
         {
             get => _contactFormat;
@@ -145,7 +145,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "contactDomain", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16084")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16516")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ContactDomain
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _usersCreated;
 
         [XmlElement(ElementName = "usersCreated", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16084")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16516")]
         public int UsersCreated
         {
             get => _usersCreated;
@@ -181,7 +181,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _totalUsersToCreate;
 
         [XmlElement(ElementName = "totalUsersToCreate", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16084")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16516")]
         public int TotalUsersToCreate
         {
             get => _totalUsersToCreate;
@@ -198,7 +198,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _errorCount;
 
         [XmlElement(ElementName = "errorCount", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16084")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16516")]
         public int ErrorCount
         {
             get => _errorCount;
@@ -216,7 +216,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "servicePackName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16084")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16516")]
         [MinLength(1)]
         [MaxLength(80)]
         public List<string> ServicePackName
@@ -236,7 +236,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userServiceName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16084")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16516")]
         public List<BroadWorksConnector.Ocip.Models.UserService> UserServiceName
         {
             get => _userServiceName;
@@ -253,7 +253,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationTaskStatus _status;
 
         [XmlElement(ElementName = "status", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16084")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16516")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationTaskStatus Status
         {
             get => _status;
@@ -270,7 +270,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationMode _userCreationMode;
 
         [XmlElement(ElementName = "userCreationMode", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16084")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16516")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationMode UserCreationMode
         {
             get => _userCreationMode;
@@ -287,7 +287,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _taskSummary;
 
         [XmlElement(ElementName = "taskSummary", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:16084")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16516")]
         public string TaskSummary
         {
             get => _taskSummary;

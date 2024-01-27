@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:819""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:822""}]")]
     public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse21DeleteAllMessagesMenuKeys
     {
 
         protected string _confirmDeletion;
 
         [XmlElement(ElementName = "confirmDeletion", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:819")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:822")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ConfirmDeletion
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _cancelDeletion;
 
         [XmlElement(ElementName = "cancelDeletion", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:819")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:822")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string CancelDeletion

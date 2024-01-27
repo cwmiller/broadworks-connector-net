@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:8669""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:10793""}]")]
     public class SystemNetworkServerSyncParametersGetResponse17sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enableSync;
 
         [XmlElement(ElementName = "enableSync", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:8669")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10793")]
         public bool EnableSync
         {
             get => _enableSync;
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _syncLinePorts;
 
         [XmlElement(ElementName = "syncLinePorts", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:8669")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10793")]
         public bool SyncLinePorts
         {
             get => _syncLinePorts;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _syncDeviceManagementInfo;
 
         [XmlElement(ElementName = "syncDeviceManagementInfo", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:8669")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10793")]
         public bool SyncDeviceManagementInfo
         {
             get => _syncDeviceManagementInfo;
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _syncTrunkGroups;
 
         [XmlElement(ElementName = "syncTrunkGroups", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:8669")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10793")]
         public bool SyncTrunkGroups
         {
             get => _syncTrunkGroups;

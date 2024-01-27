@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7a925e891158dfa3cb1319e045608894:115""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b6fd73d148b9b309dce1d2f04516ddfa:115""}]")]
     public class GroupCallParkGetAvailableAlternateRecallUserListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _availableHuntGroupTable;
 
         [XmlElement(ElementName = "availableHuntGroupTable", IsNullable = false, Namespace = "")]
-        [Group(@"7a925e891158dfa3cb1319e045608894:115")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:115")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AvailableHuntGroupTable
         {
             get => _availableHuntGroupTable;

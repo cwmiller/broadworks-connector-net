@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""02e7506f62aa34db418d4b19526b2ccf:81""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""96ad5c8258c0a6b99bd479bf1924db05:81""}]")]
     public class UserHotelingHostModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"02e7506f62aa34db418d4b19526b2ccf:81")]
+        [Group(@"96ad5c8258c0a6b99bd479bf1924db05:81")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"02e7506f62aa34db418d4b19526b2ccf:81")]
+        [Group(@"96ad5c8258c0a6b99bd479bf1924db05:81")]
         public bool IsActive
         {
             get => _isActive;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enforceAssociationLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"02e7506f62aa34db418d4b19526b2ccf:81")]
+        [Group(@"96ad5c8258c0a6b99bd479bf1924db05:81")]
         public bool EnforceAssociationLimit
         {
             get => _enforceAssociationLimit;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "associationLimitHours", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"02e7506f62aa34db418d4b19526b2ccf:81")]
+        [Group(@"96ad5c8258c0a6b99bd479bf1924db05:81")]
         [MinInclusive(1)]
         [MaxInclusive(999)]
         public int AssociationLimitHours
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessLevel", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"02e7506f62aa34db418d4b19526b2ccf:81")]
+        [Group(@"96ad5c8258c0a6b99bd479bf1924db05:81")]
         public BroadWorksConnector.Ocip.Models.HotelingHostAccessLevel AccessLevel
         {
             get => _accessLevel;
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "removeGuestAssociation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"02e7506f62aa34db418d4b19526b2ccf:81")]
+        [Group(@"96ad5c8258c0a6b99bd479bf1924db05:81")]
         public bool RemoveGuestAssociation
         {
             get => _removeGuestAssociation;

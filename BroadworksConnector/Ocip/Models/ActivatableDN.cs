@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:550""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:550""}]")]
     public class ActivatableDN
     {
 
         protected string _dN;
 
         [XmlElement(ElementName = "DN", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:550")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:550")]
         [MinLength(1)]
         [MaxLength(23)]
         public string DN
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "activate", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:550")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:550")]
         public bool Activate
         {
             get => _activate;

@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ac6f79eeb503f2d20b15e4c8d21d7077:18""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0b10bca40a55275de6ba2076c583b7fd:46""}]")]
     public class GroupAutoAttendantModifyInstanceExecutionServerRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"ac6f79eeb503f2d20b15e4c8d21d7077:18")]
+        [Group(@"0b10bca40a55275de6ba2076c583b7fd:46")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "businessHoursMenu", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ac6f79eeb503f2d20b15e4c8d21d7077:18")]
+        [Group(@"0b10bca40a55275de6ba2076c583b7fd:46")]
         public BroadWorksConnector.Ocip.Models.AutoAttendantModifyMenuExecutionServer BusinessHoursMenu
         {
             get => _businessHoursMenu;
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "afterHoursMenu", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ac6f79eeb503f2d20b15e4c8d21d7077:18")]
+        [Group(@"0b10bca40a55275de6ba2076c583b7fd:46")]
         public BroadWorksConnector.Ocip.Models.AutoAttendantModifyMenuExecutionServer AfterHoursMenu
         {
             get => _afterHoursMenu;
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "holidayMenu", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ac6f79eeb503f2d20b15e4c8d21d7077:18")]
+        [Group(@"0b10bca40a55275de6ba2076c583b7fd:46")]
         public BroadWorksConnector.Ocip.Models.AutoAttendantModifyMenuExecutionServer HolidayMenu
         {
             get => _holidayMenu;

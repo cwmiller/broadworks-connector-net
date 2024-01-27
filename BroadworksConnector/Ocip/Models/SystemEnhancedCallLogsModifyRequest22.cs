@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f6b3702edb5f67fa12c2c426d98657db:268""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1b5ee40628a3f2b1bcab94a53dec91e7:268""}]")]
     public class SystemEnhancedCallLogsModifyRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxNonPagedResponseSize", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f6b3702edb5f67fa12c2c426d98657db:268")]
+        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:268")]
         [MinInclusive(100)]
         [MaxInclusive(1000)]
         public int MaxNonPagedResponseSize
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "eclQueryApplicationURL", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f6b3702edb5f67fa12c2c426d98657db:268")]
+        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:268")]
         [MinLength(1)]
         [MaxLength(256)]
         public string EclQueryApplicationURL
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "eclQueryDataRepositoryURL", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f6b3702edb5f67fa12c2c426d98657db:268")]
+        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:268")]
         [MinLength(1)]
         [MaxLength(256)]
         public string EclQueryDataRepositoryURL
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultSchema", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f6b3702edb5f67fa12c2c426d98657db:268")]
+        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:268")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DefaultSchema

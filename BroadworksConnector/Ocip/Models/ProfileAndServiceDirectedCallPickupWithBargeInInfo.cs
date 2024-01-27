@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4409""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:4418""}]")]
     public class ProfileAndServiceDirectedCallPickupWithBargeInInfo
     {
 
         protected bool _enableBargeInWarningTone;
 
         [XmlElement(ElementName = "enableBargeInWarningTone", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4409")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:4418")]
         public bool EnableBargeInWarningTone
         {
             get => _enableBargeInWarningTone;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableAutomaticTargetSelection;
 
         [XmlElement(ElementName = "enableAutomaticTargetSelection", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4409")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:4418")]
         public bool EnableAutomaticTargetSelection
         {
             get => _enableAutomaticTargetSelection;

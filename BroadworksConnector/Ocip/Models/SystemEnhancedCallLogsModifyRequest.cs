@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:26647""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:27058""}]")]
     public class SystemEnhancedCallLogsModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isSendEnabled", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26647")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27058")]
         public bool IsSendEnabled
         {
             get => _isSendEnabled;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "server1NetAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26647")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27058")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Server1NetAddress
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "server1SendPort", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26647")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27058")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int Server1SendPort
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "server1RetrievePort", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26647")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27058")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int Server1RetrievePort
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "server2NetAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26647")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27058")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Server2NetAddress
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "server2SendPort", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26647")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27058")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int Server2SendPort
@@ -156,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "server2RetrievePort", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26647")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27058")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int Server2RetrievePort
@@ -176,7 +176,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sharedSecret", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26647")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27058")]
         [MinLength(1)]
         [MaxLength(80)]
         public string SharedSecret
@@ -196,7 +196,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "retransmissionDelayMilliSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26647")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27058")]
         [MinInclusive(200)]
         [MaxInclusive(5000)]
         public int RetransmissionDelayMilliSeconds
@@ -216,7 +216,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxTransmissions", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26647")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27058")]
         [MinInclusive(1)]
         [MaxInclusive(5)]
         public int MaxTransmissions
@@ -236,7 +236,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "soapTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26647")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27058")]
         [MinInclusive(1)]
         [MaxInclusive(120)]
         public int SoapTimeoutSeconds
@@ -256,7 +256,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useDBS", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26647")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27058")]
         public bool UseDBS
         {
             get => _useDBS;
@@ -274,7 +274,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxNonPagedResponseSize", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26647")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27058")]
         [MinInclusive(100)]
         [MaxInclusive(1000)]
         public int MaxNonPagedResponseSize
@@ -294,7 +294,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "eclQueryApplicationURL", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26647")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27058")]
         [MinLength(1)]
         [MaxLength(256)]
         public string EclQueryApplicationURL
@@ -314,7 +314,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "eclQueryDataRepositoryURL", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26647")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27058")]
         [MinLength(1)]
         [MaxLength(256)]
         public string EclQueryDataRepositoryURL

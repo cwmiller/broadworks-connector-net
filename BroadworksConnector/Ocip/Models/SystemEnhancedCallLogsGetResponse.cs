@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:26502""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:26913""}]")]
     public class SystemEnhancedCallLogsGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isSendEnabled;
 
         [XmlElement(ElementName = "isSendEnabled", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26502")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:26913")]
         public bool IsSendEnabled
         {
             get => _isSendEnabled;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "server1NetAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26502")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:26913")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Server1NetAddress
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _server1SendPort;
 
         [XmlElement(ElementName = "server1SendPort", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26502")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:26913")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int Server1SendPort
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _server1RetrievePort;
 
         [XmlElement(ElementName = "server1RetrievePort", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26502")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:26913")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int Server1RetrievePort
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "server2NetAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26502")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:26913")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Server2NetAddress
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _server2SendPort;
 
         [XmlElement(ElementName = "server2SendPort", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26502")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:26913")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int Server2SendPort
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _server2RetrievePort;
 
         [XmlElement(ElementName = "server2RetrievePort", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26502")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:26913")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int Server2RetrievePort
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sharedSecret", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26502")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:26913")]
         [MinLength(1)]
         [MaxLength(80)]
         public string SharedSecret
@@ -173,7 +173,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _retransmissionDelayMilliSeconds;
 
         [XmlElement(ElementName = "retransmissionDelayMilliSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26502")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:26913")]
         [MinInclusive(200)]
         [MaxInclusive(5000)]
         public int RetransmissionDelayMilliSeconds
@@ -192,7 +192,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxTransmissions;
 
         [XmlElement(ElementName = "maxTransmissions", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26502")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:26913")]
         [MinInclusive(1)]
         [MaxInclusive(5)]
         public int MaxTransmissions
@@ -211,7 +211,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _soapTimeoutSeconds;
 
         [XmlElement(ElementName = "soapTimeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:26502")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:26913")]
         [MinInclusive(1)]
         [MaxInclusive(120)]
         public int SoapTimeoutSeconds

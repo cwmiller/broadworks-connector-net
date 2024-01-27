@@ -12,6 +12,8 @@ namespace BroadWorksConnector.Ocip.Models
     {
         [XmlEnum(Name = "3G/4G Continuity")]
         _3G4GContinuity,
+        [XmlEnum(Name = "5G")]
+        _5G,
         [XmlEnum(Name = "Advice Of Charge")]
         AdviceOfCharge,
         [XmlEnum(Name = "Alternate Numbers")]

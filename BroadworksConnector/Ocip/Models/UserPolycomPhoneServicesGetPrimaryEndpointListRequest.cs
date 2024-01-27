@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4f074d986b998636e2bcb0d67372b0f4:100""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ff29a940e42c5c9737f7438c4e6eea9d:100""}]")]
     public class UserPolycomPhoneServicesGetPrimaryEndpointListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserPolycomPhoneServicesGetPrimaryEndpointListResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"4f074d986b998636e2bcb0d67372b0f4:100")]
+        [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:100")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

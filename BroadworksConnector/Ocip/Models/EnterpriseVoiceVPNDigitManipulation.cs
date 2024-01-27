@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulationOptionalValue))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulationRequiredValue))]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:1598""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""405ec18fe08719ecf74e749d7e18c88f:1258""}]")]
     public abstract class EnterpriseVoiceVPNDigitManipulation
     {
 

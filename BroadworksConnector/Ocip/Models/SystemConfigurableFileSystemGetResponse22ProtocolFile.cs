@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:7845""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:9712""}]")]
     public class SystemConfigurableFileSystemGetResponse22ProtocolFile
     {
 
         protected bool _replicated;
 
         [XmlElement(ElementName = "replicated", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7845")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9712")]
         public bool Replicated
         {
             get => _replicated;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _secure;
 
         [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7845")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9712")]
         public bool Secure
         {
             get => _secure;

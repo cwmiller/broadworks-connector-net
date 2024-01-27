@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:4827""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:4563""}]")]
     public class GroupDialPlanPolicyModifyAccessCodeRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4827")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:4563")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4827")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:4563")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _accessCode;
 
         [XmlElement(ElementName = "accessCode", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4827")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:4563")]
         [MinLength(1)]
         [MaxLength(5)]
         public string AccessCode
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "includeCodeForNetworkTranslationsAndRouting", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4827")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:4563")]
         public bool IncludeCodeForNetworkTranslationsAndRouting
         {
             get => _includeCodeForNetworkTranslationsAndRouting;
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "includeCodeForScreeningServices", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4827")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:4563")]
         public bool IncludeCodeForScreeningServices
         {
             get => _includeCodeForScreeningServices;
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableSecondaryDialTone", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4827")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:4563")]
         public bool EnableSecondaryDialTone
         {
             get => _enableSecondaryDialTone;
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4827")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:4563")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

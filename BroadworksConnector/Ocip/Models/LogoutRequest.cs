@@ -9,7 +9,7 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// LogoutRequest is sent when an OCI user logs out or when connection is lost.
     /// This command can be sent either to the server, or to the client from OCS.
-    /// The response is either SuccessResponse or ErrorResponse.
+    /// The response is either a SuccessResponse or ErrorResponse.
     /// <see cref="LogoutRequest"/>
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:341""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ef3c4f453d01f7ce750331de83ebc765:345""}]")]
     public class LogoutRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:341")]
+        [Group(@"ef3c4f453d01f7ce750331de83ebc765:345")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "reason", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b27fcc79475236456fc113a42b75543:341")]
+        [Group(@"ef3c4f453d01f7ce750331de83ebc765:345")]
         public BroadWorksConnector.Ocip.Models.LogoutRequestReason Reason
         {
             get => _reason;

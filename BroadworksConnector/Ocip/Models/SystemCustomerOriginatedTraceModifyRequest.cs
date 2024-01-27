@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""55636b88804490cf0ead7c9d4f44f28d:73""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b879060a029bc884d4ec2c341a2783f:73""}]")]
     public class SystemCustomerOriginatedTraceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "screenMaliciousCallers", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"55636b88804490cf0ead7c9d4f44f28d:73")]
+        [Group(@"4b879060a029bc884d4ec2c341a2783f:73")]
         public bool ScreenMaliciousCallers
         {
             get => _screenMaliciousCallers;

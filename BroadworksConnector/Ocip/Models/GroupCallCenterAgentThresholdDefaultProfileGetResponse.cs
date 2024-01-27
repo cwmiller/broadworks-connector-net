@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:2103""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:2098""}]")]
     public class GroupCallCenterAgentThresholdDefaultProfileGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _profileName;
 
         [XmlElement(ElementName = "profileName", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2103")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2098")]
         [MinLength(1)]
         [MaxLength(40)]
         public string ProfileName
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "profileDescription", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2103")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2098")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ProfileDescription
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "thresholdCurrentCallStateIdleTimeYellow", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2103")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2098")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
         public int ThresholdCurrentCallStateIdleTimeYellow
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "thresholdCurrentCallStateIdleTimeRed", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2103")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2098")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
         public int ThresholdCurrentCallStateIdleTimeRed
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "thresholdCurrentCallStateOnCallTimeYellow", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2103")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2098")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
         public int ThresholdCurrentCallStateOnCallTimeYellow
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "thresholdCurrentCallStateOnCallTimeRed", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2103")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2098")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
         public int ThresholdCurrentCallStateOnCallTimeRed
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "thresholdCurrentAgentStateUnavailableTimeYellow", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2103")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2098")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
         public int ThresholdCurrentAgentStateUnavailableTimeYellow
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "thresholdCurrentAgentStateUnavailableTimeRed", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2103")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2098")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
         public int ThresholdCurrentAgentStateUnavailableTimeRed
@@ -184,7 +184,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "thresholdAverageBusyInTimeYellow", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2103")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2098")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
         public int ThresholdAverageBusyInTimeYellow
@@ -204,7 +204,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "thresholdAverageBusyInTimeRed", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2103")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2098")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
         public int ThresholdAverageBusyInTimeRed
@@ -224,7 +224,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "thresholdAverageBusyOutTimeYellow", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2103")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2098")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
         public int ThresholdAverageBusyOutTimeYellow
@@ -244,7 +244,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "thresholdAverageBusyOutTimeRed", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2103")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2098")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
         public int ThresholdAverageBusyOutTimeRed
@@ -264,7 +264,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "thresholdAverageWrapUpTimeYellow", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2103")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2098")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
         public int ThresholdAverageWrapUpTimeYellow
@@ -284,7 +284,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "thresholdAverageWrapUpTimeRed", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2103")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2098")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
         public int ThresholdAverageWrapUpTimeRed
@@ -303,7 +303,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableNotificationEmail;
 
         [XmlElement(ElementName = "enableNotificationEmail", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2103")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2098")]
         public bool EnableNotificationEmail
         {
             get => _enableNotificationEmail;
@@ -321,7 +321,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "notificationEmailAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2103")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2098")]
         [MinLength(1)]
         [MaxLength(80)]
         public List<string> NotificationEmailAddress
@@ -341,7 +341,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "agentTable", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:2103")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2098")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AgentTable
         {
             get => _agentTable;

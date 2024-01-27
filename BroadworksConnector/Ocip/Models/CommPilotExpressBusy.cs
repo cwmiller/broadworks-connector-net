@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""8c204d784d1904d9eeea996d46de69be:153""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de7795e1833d459a7eb89116d772fd78:153""}]")]
     public class CommPilotExpressBusy
     {
 
         protected BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionWithException _incomingCalls;
 
         [XmlElement(ElementName = "incomingCalls", IsNullable = false, Namespace = "")]
-        [Group(@"8c204d784d1904d9eeea996d46de69be:153")]
+        [Group(@"de7795e1833d459a7eb89116d772fd78:153")]
         public BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionWithException IncomingCalls
         {
             get => _incomingCalls;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CommPilotExpressEmailNotify _voiceMailNotify;
 
         [XmlElement(ElementName = "voiceMailNotify", IsNullable = false, Namespace = "")]
-        [Group(@"8c204d784d1904d9eeea996d46de69be:153")]
+        [Group(@"de7795e1833d459a7eb89116d772fd78:153")]
         public BroadWorksConnector.Ocip.Models.CommPilotExpressEmailNotify VoiceMailNotify
         {
             get => _voiceMailNotify;

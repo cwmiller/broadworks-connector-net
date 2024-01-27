@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""72f634ecc58842ce9d362ca629a47ea9:126""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f39163d0e42e05c4a1692a62f625df9f:125""}]")]
     public class GroupBroadWorksAnywhereGetInstanceListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _broadWorksAnywhereTable;
 
         [XmlElement(ElementName = "broadWorksAnywhereTable", IsNullable = false, Namespace = "")]
-        [Group(@"72f634ecc58842ce9d362ca629a47ea9:126")]
+        [Group(@"f39163d0e42e05c4a1692a62f625df9f:125")]
         public BroadWorksConnector.Ocip.Models.C.OCITable BroadWorksAnywhereTable
         {
             get => _broadWorksAnywhereTable;

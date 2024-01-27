@@ -22,14 +22,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:43043""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:43652""}]")]
     public class UserFlexibleSeatingGuestModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43043")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43652")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43043")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43652")]
         public bool IsActive
         {
             get => _isActive;
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableAssociationLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43043")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43652")]
         public bool EnableAssociationLimit
         {
             get => _enableAssociationLimit;
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "associationLimitHours", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43043")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43652")]
         [MinInclusive(1)]
         [MaxInclusive(999)]
         public int AssociationLimitHours
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "unlockPhonePINCode", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43043")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43652")]
         [MinLength(4)]
         [MaxLength(10)]
         public string UnlockPhonePINCode
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43043")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43652")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointModify AccessDeviceEndpoint
         {
             get => _accessDeviceEndpoint;
@@ -143,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hostUserId", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43043")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43652")]
         [MinLength(1)]
         [MaxLength(161)]
         public string HostUserId

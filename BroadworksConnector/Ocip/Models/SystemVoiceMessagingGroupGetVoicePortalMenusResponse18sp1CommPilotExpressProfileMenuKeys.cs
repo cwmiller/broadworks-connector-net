@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:37149""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:37906""}]")]
     public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse18sp1CommPilotExpressProfileMenuKeys
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "activateAvailableInOfficeProfile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:37149")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:37906")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ActivateAvailableInOfficeProfile
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "activateAvailableOutOfOfficeProfile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:37149")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:37906")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ActivateAvailableOutOfOfficeProfile
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "activateBusyProfile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:37149")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:37906")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ActivateBusyProfile
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "activateUnavailableProfile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:37149")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:37906")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ActivateUnavailableProfile
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "noProfile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:37149")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:37906")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string NoProfile
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:37149")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:37906")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ReturnToPreviousMenu
@@ -139,7 +139,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:37149")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:37906")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string RepeatMenu

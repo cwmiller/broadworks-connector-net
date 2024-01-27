@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:830""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9ae9f7d53e566e21347e23e20e2a2a39:829""}]")]
     public class SystemBroadWorksMobilityGeographicalPoolIMRNDeleteListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _geographicalPoolName;
 
         [XmlElement(ElementName = "geographicalPoolName", IsNullable = false, Namespace = "")]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:830")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:829")]
         [MinLength(1)]
         [MaxLength(80)]
         public string GeographicalPoolName
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected List<string> _imrnNumber = new List<string>();
 
         [XmlElement(ElementName = "imrnNumber", IsNullable = false, Namespace = "")]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:830")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:829")]
         [MinLength(1)]
         [MaxLength(23)]
         public List<string> ImrnNumber

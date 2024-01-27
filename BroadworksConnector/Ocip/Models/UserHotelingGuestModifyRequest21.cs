@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""031ad639f025838c09748154da1e429e:123""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b3a47d1de480374e33d6efb9aa2bd2d0:123""}]")]
     public class UserHotelingGuestModifyRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"031ad639f025838c09748154da1e429e:123")]
+        [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:123")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"031ad639f025838c09748154da1e429e:123")]
+        [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:123")]
         public bool IsActive
         {
             get => _isActive;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableAssociationLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"031ad639f025838c09748154da1e429e:123")]
+        [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:123")]
         public bool EnableAssociationLimit
         {
             get => _enableAssociationLimit;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "associationLimitHours", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"031ad639f025838c09748154da1e429e:123")]
+        [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:123")]
         [MinInclusive(1)]
         [MaxInclusive(999)]
         public int AssociationLimitHours
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hostUserId", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"031ad639f025838c09748154da1e429e:123")]
+        [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:123")]
         [MinLength(1)]
         [MaxLength(161)]
         public string HostUserId

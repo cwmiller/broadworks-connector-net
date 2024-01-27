@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3230""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3712""}]")]
     public class MusicOnHoldSourceModify22ExternalSource
     {
 
         protected BroadWorksConnector.Ocip.Models.AccessDeviceEndpointModify _accessDeviceEndpoint;
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = true, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3230")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3712")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointModify AccessDeviceEndpoint
         {
             get => _accessDeviceEndpoint;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "authenticationRequired", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3230")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3712")]
         public bool AuthenticationRequired
         {
             get => _authenticationRequired;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "authenticationUserName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3230")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3712")]
         [MinLength(1)]
         [MaxLength(80)]
         public string AuthenticationUserName
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "authenticationPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3230")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3712")]
         [MinLength(1)]
         [MaxLength(60)]
         public string AuthenticationPassword

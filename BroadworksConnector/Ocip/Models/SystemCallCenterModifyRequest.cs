@@ -9,18 +9,13 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify the system level data associated with Call Center.
     /// The response is either a SuccessResponse or an ErrorResponse.
-    /// 
-    /// The following elements are only used in AS data mode and ignored in Amplify data mode:
-    /// callHandlingSamplingPeriodMinutes
-    /// callHandlingMinimumSamplingSize
-    /// thresholdCrossingNotificationEmailGuardTimerSeconds
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:6585""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:6571""}]")]
     public class SystemCallCenterModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -28,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultFromAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6585")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6571")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DefaultFromAddress
@@ -48,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "statisticsSamplingPeriodMinutes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6585")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6571")]
         public BroadWorksConnector.Ocip.Models.CallCenterStatisticsSamplingPeriodMinutes StatisticsSamplingPeriodMinutes
         {
             get => _statisticsSamplingPeriodMinutes;
@@ -66,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultEnableGuardTimer", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6585")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6571")]
         public bool DefaultEnableGuardTimer
         {
             get => _defaultEnableGuardTimer;
@@ -84,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultGuardTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6585")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6571")]
         [MinInclusive(1)]
         [MaxInclusive(25)]
         public int DefaultGuardTimerSeconds
@@ -104,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forceAgentUnavailableOnDNDActivation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6585")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6571")]
         public bool ForceAgentUnavailableOnDNDActivation
         {
             get => _forceAgentUnavailableOnDNDActivation;
@@ -122,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forceAgentUnavailableOnPersonalCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6585")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6571")]
         public bool ForceAgentUnavailableOnPersonalCalls
         {
             get => _forceAgentUnavailableOnPersonalCalls;
@@ -140,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forceAgentUnavailableOnBouncedCallLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6585")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6571")]
         public bool ForceAgentUnavailableOnBouncedCallLimit
         {
             get => _forceAgentUnavailableOnBouncedCallLimit;
@@ -158,7 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "numberConsecutiveBouncedCallsToForceAgentUnavailable", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6585")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6571")]
         [MinInclusive(1)]
         [MaxInclusive(5)]
         public int NumberConsecutiveBouncedCallsToForceAgentUnavailable
@@ -178,7 +173,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forceAgentUnavailableOnNotReachable", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6585")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6571")]
         public bool ForceAgentUnavailableOnNotReachable
         {
             get => _forceAgentUnavailableOnNotReachable;
@@ -196,7 +191,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultPlayRingWhenOfferCall", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6585")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6571")]
         public bool DefaultPlayRingWhenOfferCall
         {
             get => _defaultPlayRingWhenOfferCall;
@@ -214,7 +209,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "uniformCallDistributionPolicyScope", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6585")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6571")]
         public BroadWorksConnector.Ocip.Models.CallCenterUniformCallDistributionPolicyScope UniformCallDistributionPolicyScope
         {
             get => _uniformCallDistributionPolicyScope;
@@ -232,7 +227,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callHandlingSamplingPeriodMinutes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6585")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6571")]
         [MinInclusive(5)]
         [MaxInclusive(30)]
         public int CallHandlingSamplingPeriodMinutes
@@ -252,7 +247,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callHandlingMinimumSamplingSize", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6585")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6571")]
         [MinInclusive(1)]
         [MaxInclusive(100)]
         public int CallHandlingMinimumSamplingSize
@@ -272,7 +267,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "playToneToAgentForEmergencyCall", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6585")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6571")]
         public bool PlayToneToAgentForEmergencyCall
         {
             get => _playToneToAgentForEmergencyCall;
@@ -290,7 +285,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "emergencyCallCLIDPrefix", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6585")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6571")]
         [MinLength(1)]
         [MaxLength(10)]
         public string EmergencyCallCLIDPrefix
@@ -310,7 +305,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "thresholdCrossingNotificationEmailGuardTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6585")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6571")]
         [MinInclusive(3)]
         [MaxInclusive(60)]
         public int ThresholdCrossingNotificationEmailGuardTimerSeconds
@@ -330,7 +325,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowAgentDeviceInitiatedForward", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:6585")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6571")]
         public bool AllowAgentDeviceInitiatedForward
         {
             get => _allowAgentDeviceInitiatedForward;

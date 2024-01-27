@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18153""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:18387""}]")]
     public class SystemSystemServiceCallProcessingPoliciesGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _useMaxSimultaneousCalls;
 
         [XmlElement(ElementName = "useMaxSimultaneousCalls", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18153")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18387")]
         public bool UseMaxSimultaneousCalls
         {
             get => _useMaxSimultaneousCalls;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxSimultaneousCalls;
 
         [XmlElement(ElementName = "maxSimultaneousCalls", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18153")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18387")]
         [MinInclusive(1)]
         [MaxInclusive(999999)]
         public int MaxSimultaneousCalls
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useMaxSimultaneousVideoCalls;
 
         [XmlElement(ElementName = "useMaxSimultaneousVideoCalls", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18153")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18387")]
         public bool UseMaxSimultaneousVideoCalls
         {
             get => _useMaxSimultaneousVideoCalls;
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxSimultaneousVideoCalls;
 
         [XmlElement(ElementName = "maxSimultaneousVideoCalls", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18153")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18387")]
         [MinInclusive(1)]
         [MaxInclusive(999999)]
         public int MaxSimultaneousVideoCalls
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useMaxConcurrentRedirectedCalls;
 
         [XmlElement(ElementName = "useMaxConcurrentRedirectedCalls", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18153")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18387")]
         public bool UseMaxConcurrentRedirectedCalls
         {
             get => _useMaxConcurrentRedirectedCalls;
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxConcurrentRedirectedCalls;
 
         [XmlElement(ElementName = "maxConcurrentRedirectedCalls", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18153")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18387")]
         [MinInclusive(1)]
         [MaxInclusive(999999)]
         public int MaxConcurrentRedirectedCalls
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useMaxCallTimeForAnsweredCalls;
 
         [XmlElement(ElementName = "useMaxCallTimeForAnsweredCalls", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18153")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18387")]
         public bool UseMaxCallTimeForAnsweredCalls
         {
             get => _useMaxCallTimeForAnsweredCalls;
@@ -145,7 +145,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxCallTimeForAnsweredCallsMinutes;
 
         [XmlElement(ElementName = "maxCallTimeForAnsweredCallsMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18153")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18387")]
         [MinInclusive(3)]
         [MaxInclusive(2880)]
         public int MaxCallTimeForAnsweredCallsMinutes

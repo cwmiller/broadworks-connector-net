@@ -9,8 +9,10 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get the GETS system settings.
     /// The response is either SystemGETSGetResponse or ErrorResponse.
+    /// Replaced By: SystemGETSGetRequest22
     /// <see cref="SystemGETSGetResponse"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemGETSGetRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]

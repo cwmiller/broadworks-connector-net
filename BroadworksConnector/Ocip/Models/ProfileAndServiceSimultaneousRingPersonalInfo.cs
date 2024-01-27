@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4543""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:4552""}]")]
     public class ProfileAndServiceSimultaneousRingPersonalInfo
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4543")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:4552")]
         public bool IsActive
         {
             get => _isActive;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _doNotRingIfOnCall;
 
         [XmlElement(ElementName = "doNotRingIfOnCall", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4543")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:4552")]
         public bool DoNotRingIfOnCall
         {
             get => _doNotRingIfOnCall;
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "simultaneousRingNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4543")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:4552")]
         public List<BroadWorksConnector.Ocip.Models.SimultaneousRingNumber> SimultaneousRingNumber
         {
             get => _simultaneousRingNumber;
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
         [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4543")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:4552")]
         public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable
         {
             get => _criteriaTable;

@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9610""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:9728""}]")]
     public class SystemDTMFTransmissionGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.DTMFTransmissionMethod _transmissionMethod;
 
         [XmlElement(ElementName = "transmissionMethod", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9610")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9728")]
         public BroadWorksConnector.Ocip.Models.DTMFTransmissionMethod TransmissionMethod
         {
             get => _transmissionMethod;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "signalingContentType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9610")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9728")]
         public BroadWorksConnector.Ocip.Models.DtmfTransmissionSignalingContentType SignalingContentType
         {
             get => _signalingContentType;

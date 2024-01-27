@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:7246""}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:7288""}]")]
     public class SortOrderServiceProviderGetPagedSortedList
     {
 
         protected BroadWorksConnector.Ocip.Models.SortByServiceProviderId _sortByServiceProviderId;
 
         [XmlElement(ElementName = "sortByServiceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7246")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:7288")]
         public BroadWorksConnector.Ocip.Models.SortByServiceProviderId SortByServiceProviderId
         {
             get => _sortByServiceProviderId;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SortByServiceProviderName _sortByServiceProviderName;
 
         [XmlElement(ElementName = "sortByServiceProviderName", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:7246")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:7288")]
         public BroadWorksConnector.Ocip.Models.SortByServiceProviderName SortByServiceProviderName
         {
             get => _sortByServiceProviderName;

@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:28102""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:28620""}]")]
     public class SystemOCIReportingParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected int _serverPort;
 
         [XmlElement(ElementName = "serverPort", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28102")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:28620")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int ServerPort
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableConnectionPing;
 
         [XmlElement(ElementName = "enableConnectionPing", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28102")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:28620")]
         public bool EnableConnectionPing
         {
             get => _enableConnectionPing;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _connectionPingIntervalSeconds;
 
         [XmlElement(ElementName = "connectionPingIntervalSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28102")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:28620")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
         public int ConnectionPingIntervalSeconds
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _alterPasswords;
 
         [XmlElement(ElementName = "alterPasswords", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:28102")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:28620")]
         public bool AlterPasswords
         {
             get => _alterPasswords;

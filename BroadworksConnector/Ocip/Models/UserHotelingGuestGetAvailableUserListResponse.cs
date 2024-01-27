@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""031ad639f025838c09748154da1e429e:67""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b3a47d1de480374e33d6efb9aa2bd2d0:67""}]")]
     public class UserHotelingGuestGetAvailableUserListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _hostUserTable;
 
         [XmlElement(ElementName = "hostUserTable", IsNullable = false, Namespace = "")]
-        [Group(@"031ad639f025838c09748154da1e429e:67")]
+        [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:67")]
         public BroadWorksConnector.Ocip.Models.C.OCITable HostUserTable
         {
             get => _hostUserTable;

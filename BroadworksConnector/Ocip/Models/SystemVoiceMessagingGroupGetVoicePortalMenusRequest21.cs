@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:670""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:673""}]")]
     public class SystemVoiceMessagingGroupGetVoicePortalMenusRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemVoiceMessagingGroupGetVoicePortalMenusResponse21>
     {
 
         protected bool _getDefaultMenuKeys;
 
         [XmlElement(ElementName = "getDefaultMenuKeys", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:670")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:673")]
         public bool GetDefaultMenuKeys
         {
             get => _getDefaultMenuKeys;

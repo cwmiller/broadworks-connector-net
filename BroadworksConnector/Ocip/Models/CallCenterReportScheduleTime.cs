@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7543""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7529""}]")]
     public class CallCenterReportScheduleTime
     {
 
         protected string _timeZone;
 
         [XmlElement(ElementName = "timeZone", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7543")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7529")]
         [MinLength(1)]
         [MaxLength(127)]
         public string TimeZone
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _scheduleDate;
 
         [XmlElement(ElementName = "scheduleDate", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7543")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7529")]
         public string ScheduleDate
         {
             get => _scheduleDate;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.HourMinute _scheduleTime;
 
         [XmlElement(ElementName = "scheduleTime", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7543")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7529")]
         public BroadWorksConnector.Ocip.Models.HourMinute ScheduleTime
         {
             get => _scheduleTime;

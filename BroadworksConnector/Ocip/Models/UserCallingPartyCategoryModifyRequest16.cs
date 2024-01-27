@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""89aa8c9a341a3cccb2453b1ee467bf94:217""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d0efd2493d3062b292fd31759011925e:217""}]")]
     public class UserCallingPartyCategoryModifyRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:217")]
+        [Group(@"d0efd2493d3062b292fd31759011925e:217")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "category", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:217")]
+        [Group(@"d0efd2493d3062b292fd31759011925e:217")]
         [MinLength(1)]
         [MaxLength(20)]
         public string Category

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1824""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:1858""}]")]
     public class SystemAccountingAddChargingFunctionElementServerRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _address;
 
         [XmlElement(ElementName = "address", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1824")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1858")]
         [MinLength(1)]
         [MaxLength(256)]
         public string Address
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isNetAddressExtended;
 
         [XmlElement(ElementName = "isNetAddressExtended", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1824")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1858")]
         public bool IsNetAddressExtended
         {
             get => _isNetAddressExtended;
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ChargingFunctionElementServerType _type;
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1824")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1858")]
         public BroadWorksConnector.Ocip.Models.ChargingFunctionElementServerType Type
         {
             get => _type;
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1824")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1858")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

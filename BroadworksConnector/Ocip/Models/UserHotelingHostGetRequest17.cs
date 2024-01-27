@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""02e7506f62aa34db418d4b19526b2ccf:41""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""96ad5c8258c0a6b99bd479bf1924db05:41""}]")]
     public class UserHotelingHostGetRequest17 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserHotelingHostGetResponse17>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"02e7506f62aa34db418d4b19526b2ccf:41")]
+        [Group(@"96ad5c8258c0a6b99bd479bf1924db05:41")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

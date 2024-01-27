@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:632"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:634""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bc805893b9cc7e3e01eec64e9ad62768:631"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""bc805893b9cc7e3e01eec64e9ad62768:633""}]}]")]
     public class UserCollaborateInstantRoomAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserCollaborateInstantRoomAddResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:632")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:631")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _roomName;
 
         [XmlElement(ElementName = "roomName", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:634")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:633")]
         [MinLength(1)]
         [MaxLength(40)]
         public string RoomName
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useRoomIdAsRoomName;
 
         [XmlElement(ElementName = "useRoomIdAsRoomName", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:634")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:633")]
         public bool UseRoomIdAsRoomName
         {
             get => _useRoomIdAsRoomName;

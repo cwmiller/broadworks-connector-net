@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb12998f4f9e45cedde01f08569f4c7c:254""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""44477d346d2631b033071e12af214ac8:254""}]")]
     public class UserBroadWorksReceptionistEnterpriseNoteGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "receptionistNote", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb12998f4f9e45cedde01f08569f4c7c:254")]
+        [Group(@"44477d346d2631b033071e12af214ac8:254")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ReceptionistNote

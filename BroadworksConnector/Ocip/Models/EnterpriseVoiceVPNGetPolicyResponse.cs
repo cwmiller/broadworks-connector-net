@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:1477"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:1483""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""405ec18fe08719ecf74e749d7e18c88f:1137"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""405ec18fe08719ecf74e749d7e18c88f:1143""}]}]")]
     public class EnterpriseVoiceVPNGetPolicyResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected int _minExtensionLength;
 
         [XmlElement(ElementName = "minExtensionLength", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1477")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1137")]
         [MinInclusive(0)]
         [MaxInclusive(100)]
         public int MinExtensionLength
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxExtensionLength;
 
         [XmlElement(ElementName = "maxExtensionLength", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1477")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1137")]
         [MinInclusive(0)]
         [MaxInclusive(100)]
         public int MaxExtensionLength
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1477")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1137")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Description
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "routeGroupId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1477")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1137")]
         [MinLength(1)]
         [MaxLength(30)]
         public string RouteGroupId
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection _policySelection;
 
         [XmlElement(ElementName = "policySelection", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1477")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1137")]
         public BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection PolicySelection
         {
             get => _policySelection;
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "digitManipulation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1483")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1143")]
         public List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulation> DigitManipulation
         {
             get => _digitManipulation;
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1483")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1143")]
         [MinLength(1)]
         [MaxLength(30)]
         public string TreatmentId

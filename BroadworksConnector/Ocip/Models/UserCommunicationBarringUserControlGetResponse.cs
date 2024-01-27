@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4277c572e54919d6e29f4c0fa69aaad1:114""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6844af6fc359ada5d958622d62cbd13f:114""}]")]
     public class UserCommunicationBarringUserControlGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _lockoutStatus;
 
         [XmlElement(ElementName = "lockoutStatus", IsNullable = false, Namespace = "")]
-        [Group(@"4277c572e54919d6e29f4c0fa69aaad1:114")]
+        [Group(@"6844af6fc359ada5d958622d62cbd13f:114")]
         public bool LockoutStatus
         {
             get => _lockoutStatus;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _profileTable;
 
         [XmlElement(ElementName = "profileTable", IsNullable = false, Namespace = "")]
-        [Group(@"4277c572e54919d6e29f4c0fa69aaad1:114")]
+        [Group(@"6844af6fc359ada5d958622d62cbd13f:114")]
         public BroadWorksConnector.Ocip.Models.C.OCITable ProfileTable
         {
             get => _profileTable;

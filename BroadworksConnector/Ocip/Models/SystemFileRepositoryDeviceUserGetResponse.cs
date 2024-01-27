@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:10466""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10584""}]")]
     public class SystemFileRepositoryDeviceUserGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _allowPut;
 
         [XmlElement(ElementName = "allowPut", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10466")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10584")]
         public bool AllowPut
         {
             get => _allowPut;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowDelete;
 
         [XmlElement(ElementName = "allowDelete", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10466")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10584")]
         public bool AllowDelete
         {
             get => _allowDelete;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowGet;
 
         [XmlElement(ElementName = "allowGet", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10466")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10584")]
         public bool AllowGet
         {
             get => _allowGet;

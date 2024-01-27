@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3420""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3902""}]")]
     public class MusicOnHoldSourceRead22V3ExternalSource
     {
 
         protected BroadWorksConnector.Ocip.Models.AccessDeviceEndpointWithPortNumberRead22 _accessDeviceEndpoint;
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3420")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3902")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointWithPortNumberRead22 AccessDeviceEndpoint
         {
             get => _accessDeviceEndpoint;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _authenticationRequired;
 
         [XmlElement(ElementName = "authenticationRequired", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3420")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3902")]
         public bool AuthenticationRequired
         {
             get => _authenticationRequired;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "authenticationUserName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3420")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3902")]
         [MinLength(1)]
         [MaxLength(80)]
         public string AuthenticationUserName

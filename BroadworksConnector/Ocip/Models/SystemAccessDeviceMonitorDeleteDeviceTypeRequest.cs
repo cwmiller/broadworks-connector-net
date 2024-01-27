@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1584"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1585""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:1617"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:1618""}]}]")]
     public class SystemAccessDeviceMonitorDeleteDeviceTypeRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected bool _deleteAllDeviceTypes;
 
         [XmlElement(ElementName = "deleteAllDeviceTypes", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1585")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1618")]
         public bool DeleteAllDeviceTypes
         {
             get => _deleteAllDeviceTypes;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1585")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1618")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceType

@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0639a23b2e14be05c11ead49c23bd0bd:173""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3e2fc6b9722da3741a8ba4a2c4a2d05:173""}]")]
     public class GroupVoiceXmlModifyInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"0639a23b2e14be05c11ead49c23bd0bd:173")]
+        [Group(@"f3e2fc6b9722da3741a8ba4a2c4a2d05:173")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0639a23b2e14be05c11ead49c23bd0bd:173")]
+        [Group(@"f3e2fc6b9722da3741a8ba4a2c4a2d05:173")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0639a23b2e14be05c11ead49c23bd0bd:173")]
+        [Group(@"f3e2fc6b9722da3741a8ba4a2c4a2d05:173")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"0639a23b2e14be05c11ead49c23bd0bd:173")]
+        [Group(@"f3e2fc6b9722da3741a8ba4a2c4a2d05:173")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointModify AccessDeviceEndpoint
         {
             get => _accessDeviceEndpoint;

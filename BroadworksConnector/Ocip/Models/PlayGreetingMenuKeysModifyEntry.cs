@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:2836""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:2842""}]")]
     public class PlayGreetingMenuKeysModifyEntry
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "skipBackward", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2836")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2842")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SkipBackward
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "pauseOrResume", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2836")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2842")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string PauseOrResume
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "skipForward", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2836")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2842")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SkipForward
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "jumpToBegin", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2836")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2842")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string JumpToBegin
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "jumpToEnd", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2836")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2842")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string JumpToEnd

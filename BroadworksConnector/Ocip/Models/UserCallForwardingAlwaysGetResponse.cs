@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""97105b92fc80f353d25e39a7ecc8e22f:59""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c6e8b321b24b0bc38cc20e79ffb96700:59""}]")]
     public class UserCallForwardingAlwaysGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"97105b92fc80f353d25e39a7ecc8e22f:59")]
+        [Group(@"c6e8b321b24b0bc38cc20e79ffb96700:59")]
         public bool IsActive
         {
             get => _isActive;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forwardToPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"97105b92fc80f353d25e39a7ecc8e22f:59")]
+        [Group(@"c6e8b321b24b0bc38cc20e79ffb96700:59")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ForwardToPhoneNumber
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isRingSplashActive;
 
         [XmlElement(ElementName = "isRingSplashActive", IsNullable = false, Namespace = "")]
-        [Group(@"97105b92fc80f353d25e39a7ecc8e22f:59")]
+        [Group(@"c6e8b321b24b0bc38cc20e79ffb96700:59")]
         public bool IsRingSplashActive
         {
             get => _isRingSplashActive;

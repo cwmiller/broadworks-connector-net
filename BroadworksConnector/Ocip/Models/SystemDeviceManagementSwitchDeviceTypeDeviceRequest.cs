@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7898"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7899"",""optional"":true,""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7901""}]}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:8017"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:8018"",""optional"":true,""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:8020""}]}]}]")]
     public class SystemDeviceManagementSwitchDeviceTypeDeviceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7899")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8018")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _svcProviderId;
 
         [XmlElement(ElementName = "svcProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7901")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8020")]
         [MinLength(1)]
         [MaxLength(30)]
         public string SvcProviderId
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7901")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8020")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7898")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8017")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _toDeviceType;
 
         [XmlElement(ElementName = "toDeviceType", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7898")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8017")]
         [MinLength(1)]
         [MaxLength(40)]
         public string ToDeviceType

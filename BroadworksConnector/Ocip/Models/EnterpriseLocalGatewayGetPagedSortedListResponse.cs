@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:508""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""090e91b2d78e873f5d76a2f16af08d3a:507""}]")]
     public class EnterpriseLocalGatewayGetPagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _localGatewayTable;
 
         [XmlElement(ElementName = "localGatewayTable", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:508")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:507")]
         public BroadWorksConnector.Ocip.Models.C.OCITable LocalGatewayTable
         {
             get => _localGatewayTable;

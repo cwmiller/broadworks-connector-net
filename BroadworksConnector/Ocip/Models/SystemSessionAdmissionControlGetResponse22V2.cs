@@ -9,19 +9,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to the SystemSessionAdmissionControlGetRequest22V2.
     /// The response contains the session admission control settings for the system.
+    /// 
+    /// Replaced by: SystemSessionAdmissionControlGetResponse22V3
     /// <see cref="SystemSessionAdmissionControlGetRequest22V2"/>
+    /// <see cref="SystemSessionAdmissionControlGetResponse22V3"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:16253""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:29800""}]")]
     public class SystemSessionAdmissionControlGetResponse22V2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _countLongConnectionsToMediaServer;
 
         [XmlElement(ElementName = "countLongConnectionsToMediaServer", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16253")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29800")]
         public bool CountLongConnectionsToMediaServer
         {
             get => _countLongConnectionsToMediaServer;
@@ -38,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SessionAdmissionControlForMusicOnHoldType _sacHandlingForMoH;
 
         [XmlElement(ElementName = "sacHandlingForMoH", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16253")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29800")]
         public BroadWorksConnector.Ocip.Models.SessionAdmissionControlForMusicOnHoldType SacHandlingForMoH
         {
             get => _sacHandlingForMoH;
@@ -55,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _blockVMDepositDueToSACLimits;
 
         [XmlElement(ElementName = "blockVMDepositDueToSACLimits", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16253")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29800")]
         public bool BlockVMDepositDueToSACLimits
         {
             get => _blockVMDepositDueToSACLimits;
@@ -72,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SessionAdmissionControlCodecSelectionPolicyType _sacCodecSelectionPolicy;
 
         [XmlElement(ElementName = "sacCodecSelectionPolicy", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16253")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29800")]
         public BroadWorksConnector.Ocip.Models.SessionAdmissionControlCodecSelectionPolicyType SacCodecSelectionPolicy
         {
             get => _sacCodecSelectionPolicy;
@@ -89,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _countCallToMobileNumberForSACSubscriber;
 
         [XmlElement(ElementName = "countCallToMobileNumberForSACSubscriber", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16253")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29800")]
         public bool CountCallToMobileNumberForSACSubscriber
         {
             get => _countCallToMobileNumberForSACSubscriber;
@@ -106,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _countBWAnywhereForSACSubscriber;
 
         [XmlElement(ElementName = "countBWAnywhereForSACSubscriber", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16253")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29800")]
         public bool CountBWAnywhereForSACSubscriber
         {
             get => _countBWAnywhereForSACSubscriber;
@@ -123,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _countROForSACSubscriber;
 
         [XmlElement(ElementName = "countROForSACSubscriber", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16253")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29800")]
         public bool CountROForSACSubscriber
         {
             get => _countROForSACSubscriber;
@@ -140,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _excludeBWMobilityForSACSubscriber;
 
         [XmlElement(ElementName = "excludeBWMobilityForSACSubscriber", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16253")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29800")]
         public bool ExcludeBWMobilityForSACSubscriber
         {
             get => _excludeBWMobilityForSACSubscriber;
@@ -157,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableHoldoverOfHighwaterSessionCounts;
 
         [XmlElement(ElementName = "enableHoldoverOfHighwaterSessionCounts", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16253")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29800")]
         public bool EnableHoldoverOfHighwaterSessionCounts
         {
             get => _enableHoldoverOfHighwaterSessionCounts;
@@ -174,7 +177,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SessionAdmissionControlHighwaterSessionCountHoldoverPeriodMinutes _holdoverPeriodMinutes;
 
         [XmlElement(ElementName = "holdoverPeriodMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16253")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29800")]
         public BroadWorksConnector.Ocip.Models.SessionAdmissionControlHighwaterSessionCountHoldoverPeriodMinutes HoldoverPeriodMinutes
         {
             get => _holdoverPeriodMinutes;
@@ -191,7 +194,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SessionAdmissionControlTimeZoneOffsetMinutes _timeZoneOffsetMinutes;
 
         [XmlElement(ElementName = "timeZoneOffsetMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16253")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29800")]
         public BroadWorksConnector.Ocip.Models.SessionAdmissionControlTimeZoneOffsetMinutes TimeZoneOffsetMinutes
         {
             get => _timeZoneOffsetMinutes;

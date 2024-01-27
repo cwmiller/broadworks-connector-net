@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2487""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:2954""}]")]
     public class DNValidationStatusMessage
     {
 
         protected string _dn;
 
         [XmlElement(ElementName = "dn", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2487")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2954")]
         [MinLength(1)]
         [MaxLength(23)]
         public string Dn
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.DNValidationStatus _status;
 
         [XmlElement(ElementName = "status", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2487")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2954")]
         public BroadWorksConnector.Ocip.Models.DNValidationStatus Status
         {
             get => _status;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "messageCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2487")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2954")]
         public int MessageCode
         {
             get => _messageCode;
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "summary", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2487")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2954")]
         public string Summary
         {
             get => _summary;
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "summaryEnglish", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2487")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2954")]
         public string SummaryEnglish
         {
             get => _summaryEnglish;

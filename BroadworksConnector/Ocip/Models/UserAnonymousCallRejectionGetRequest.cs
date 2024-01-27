@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b25f8a296bf72b8b383a287bee9127d:95""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""17d2110a0df023b843fdbd156e17bec8:95""}]")]
     public class UserAnonymousCallRejectionGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserAnonymousCallRejectionGetResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"6b25f8a296bf72b8b383a287bee9127d:95")]
+        [Group(@"17d2110a0df023b843fdbd156e17bec8:95")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

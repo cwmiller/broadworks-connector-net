@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:1933""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a63afa661ee5c74f4700e562e88c66d0:1932""}]")]
     public class OutgoingCallingPlanDigitPatternOriginatingPermission
     {
 
         protected string _digitPatternName;
 
         [XmlElement(ElementName = "digitPatternName", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1933")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:1932")]
         [MinLength(1)]
         [MaxLength(30)]
         public string DigitPatternName
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission _permission;
 
         [XmlElement(ElementName = "permission", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1933")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:1932")]
         public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanOriginatingPermission Permission
         {
             get => _permission;

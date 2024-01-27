@@ -12,12 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// The following elements are only used in AS data mode:
     /// boshURL
+    /// Replaced by: SystemIntegratedIMPGetResponse25 in AS data mode.
     /// <see cref="SystemIntegratedIMPGetRequest21"/>
+    /// <see cref="SystemIntegratedIMPGetResponse25"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""23389100b68cef3aa07ee12ac7a2bd16:273""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:10509""}]")]
     public class SystemIntegratedIMPGetResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -25,7 +27,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceDomain", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:273")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10509")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServiceDomain
@@ -45,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "servicePort", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:273")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10509")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int ServicePort
@@ -64,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _addServiceProviderInIMPUserId;
 
         [XmlElement(ElementName = "addServiceProviderInIMPUserId", IsNullable = false, Namespace = "")]
-        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:273")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10509")]
         public bool AddServiceProviderInIMPUserId
         {
             get => _addServiceProviderInIMPUserId;
@@ -82,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "boshURL", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:273")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10509")]
         [MinLength(1)]
         [MaxLength(256)]
         public string BoshURL
@@ -101,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowImpPasswordRetrieval;
 
         [XmlElement(ElementName = "allowImpPasswordRetrieval", IsNullable = false, Namespace = "")]
-        [Group(@"23389100b68cef3aa07ee12ac7a2bd16:273")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10509")]
         public bool AllowImpPasswordRetrieval
         {
             get => _allowImpPasswordRetrieval;

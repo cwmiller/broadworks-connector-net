@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6a83dcd7b5697b78acbf42324c2dbe67:182""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""15725c7b98a01f80f88e9d5af56d48a5:181""}]")]
     public class UserSequentialRingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"6a83dcd7b5697b78acbf42324c2dbe67:182")]
+        [Group(@"15725c7b98a01f80f88e9d5af56d48a5:181")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "ringBaseLocationFirst", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6a83dcd7b5697b78acbf42324c2dbe67:182")]
+        [Group(@"15725c7b98a01f80f88e9d5af56d48a5:181")]
         public bool RingBaseLocationFirst
         {
             get => _ringBaseLocationFirst;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "baseLocationNumberOfRings", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6a83dcd7b5697b78acbf42324c2dbe67:182")]
+        [Group(@"15725c7b98a01f80f88e9d5af56d48a5:181")]
         public BroadWorksConnector.Ocip.Models.SequentialRingNumberOfRings BaseLocationNumberOfRings
         {
             get => _baseLocationNumberOfRings;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "continueIfBaseLocationIsBusy", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6a83dcd7b5697b78acbf42324c2dbe67:182")]
+        [Group(@"15725c7b98a01f80f88e9d5af56d48a5:181")]
         public bool ContinueIfBaseLocationIsBusy
         {
             get => _continueIfBaseLocationIsBusy;
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callerMayStopSearch", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6a83dcd7b5697b78acbf42324c2dbe67:182")]
+        [Group(@"15725c7b98a01f80f88e9d5af56d48a5:181")]
         public bool CallerMayStopSearch
         {
             get => _callerMayStopSearch;
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "Location01", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6a83dcd7b5697b78acbf42324c2dbe67:182")]
+        [Group(@"15725c7b98a01f80f88e9d5af56d48a5:181")]
         public BroadWorksConnector.Ocip.Models.SequentialRingLocationModify Location01
         {
             get => _location01;
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "Location02", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6a83dcd7b5697b78acbf42324c2dbe67:182")]
+        [Group(@"15725c7b98a01f80f88e9d5af56d48a5:181")]
         public BroadWorksConnector.Ocip.Models.SequentialRingLocationModify Location02
         {
             get => _location02;
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "Location03", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6a83dcd7b5697b78acbf42324c2dbe67:182")]
+        [Group(@"15725c7b98a01f80f88e9d5af56d48a5:181")]
         public BroadWorksConnector.Ocip.Models.SequentialRingLocationModify Location03
         {
             get => _location03;
@@ -168,7 +168,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "Location04", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6a83dcd7b5697b78acbf42324c2dbe67:182")]
+        [Group(@"15725c7b98a01f80f88e9d5af56d48a5:181")]
         public BroadWorksConnector.Ocip.Models.SequentialRingLocationModify Location04
         {
             get => _location04;
@@ -186,7 +186,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "Location05", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6a83dcd7b5697b78acbf42324c2dbe67:182")]
+        [Group(@"15725c7b98a01f80f88e9d5af56d48a5:181")]
         public BroadWorksConnector.Ocip.Models.SequentialRingLocationModify Location05
         {
             get => _location05;
@@ -204,7 +204,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "criteriaActivation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6a83dcd7b5697b78acbf42324c2dbe67:182")]
+        [Group(@"15725c7b98a01f80f88e9d5af56d48a5:181")]
         public List<BroadWorksConnector.Ocip.Models.CriteriaActivation> CriteriaActivation
         {
             get => _criteriaActivation;

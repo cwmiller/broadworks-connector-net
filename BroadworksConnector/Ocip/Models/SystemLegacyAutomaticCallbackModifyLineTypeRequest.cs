@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6bf3c0ead6c4d948122ea83af7fc6e34:118""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""dd4a5e667a0f0e4bd6363152331d07ab:117""}]")]
     public class SystemLegacyAutomaticCallbackModifyLineTypeRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected BroadWorksConnector.Ocip.Models.LegacyAutomaticCallbackLineType _lineType;
 
         [XmlElement(ElementName = "lineType", IsNullable = false, Namespace = "")]
-        [Group(@"6bf3c0ead6c4d948122ea83af7fc6e34:118")]
+        [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:117")]
         public BroadWorksConnector.Ocip.Models.LegacyAutomaticCallbackLineType LineType
         {
             get => _lineType;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "matchAction", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6bf3c0ead6c4d948122ea83af7fc6e34:118")]
+        [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:117")]
         public BroadWorksConnector.Ocip.Models.LegacyAutomaticCallbackLineMatchAction MatchAction
         {
             get => _matchAction;
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "noMatchAction", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6bf3c0ead6c4d948122ea83af7fc6e34:118")]
+        [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:117")]
         public BroadWorksConnector.Ocip.Models.LegacyAutomaticCallbackLineMatchAction NoMatchAction
         {
             get => _noMatchAction;

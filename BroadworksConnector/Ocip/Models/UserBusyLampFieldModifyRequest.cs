@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4faeca417998d23ce2ff6b0b43212aa6:203""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b1745b5f688013b73224574a66f4f4b2:210""}]")]
     public class UserBusyLampFieldModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:203")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:210")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "listURI", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:203")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:210")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ListURI
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "monitoredUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:203")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:210")]
         public BroadWorksConnector.Ocip.Models.ReplacementUserIdList MonitoredUserIdList
         {
             get => _monitoredUserIdList;
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableCallParkNotification", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:203")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:210")]
         public bool EnableCallParkNotification
         {
             get => _enableCallParkNotification;

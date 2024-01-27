@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9208""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:9332""}]")]
     public class SystemDialPlanPolicyModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "requiresAccessCodeForPublicCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9208")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9332")]
         public bool RequiresAccessCodeForPublicCalls
         {
             get => _requiresAccessCodeForPublicCalls;
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowE164PublicCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9208")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9332")]
         public bool AllowE164PublicCalls
         {
             get => _allowE164PublicCalls;
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "preferE164NumberFormatForCallbackServices", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9208")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9332")]
         public bool PreferE164NumberFormatForCallbackServices
         {
             get => _preferE164NumberFormatForCallbackServices;
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "publicDigitMap", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9208")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9332")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string PublicDigitMap
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "privateDigitMap", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9208")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9332")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string PrivateDigitMap
@@ -123,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "overrideResolvedDeviceDigitMap", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9208")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9332")]
         public bool OverrideResolvedDeviceDigitMap
         {
             get => _overrideResolvedDeviceDigitMap;
@@ -141,7 +141,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceDigitMap", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9208")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9332")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string DeviceDigitMap
@@ -161,7 +161,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "performInternalTranslationsWithOAC", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9208")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9332")]
         public bool PerformInternalTranslationsWithOAC
         {
             get => _performInternalTranslationsWithOAC;
@@ -179,7 +179,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "permissiveOACDialing", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9208")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9332")]
         public bool PermissiveOACDialing
         {
             get => _permissiveOACDialing;

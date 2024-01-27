@@ -20,14 +20,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7343""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:7456""}]")]
     public class SystemDeviceFamilyAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _deviceFamilyName;
 
         [XmlElement(ElementName = "deviceFamilyName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7343")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7456")]
         [MinLength(1)]
         [MaxLength(30)]
         public string DeviceFamilyName
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7343")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7456")]
         [MinLength(1)]
         [MaxLength(36)]
         public string ResellerId
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "assignDeviceType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7343")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7456")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> AssignDeviceType
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "assignTagSet", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7343")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7456")]
         [MinLength(1)]
         [MaxLength(30)]
         public List<string> AssignTagSet

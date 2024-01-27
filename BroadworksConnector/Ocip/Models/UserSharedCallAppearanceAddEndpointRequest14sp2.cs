@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:46097""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:46983""}]")]
     public class UserSharedCallAppearanceAddEndpointRequest14sp2 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46097")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:46983")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.AccessDeviceEndpointAdd _accessDeviceEndpoint;
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46097")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:46983")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointAdd AccessDeviceEndpoint
         {
             get => _accessDeviceEndpoint;
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46097")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:46983")]
         public bool IsActive
         {
             get => _isActive;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowOrigination;
 
         [XmlElement(ElementName = "allowOrigination", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46097")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:46983")]
         public bool AllowOrigination
         {
             get => _allowOrigination;
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowTermination;
 
         [XmlElement(ElementName = "allowTermination", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:46097")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:46983")]
         public bool AllowTermination
         {
             get => _allowTermination;

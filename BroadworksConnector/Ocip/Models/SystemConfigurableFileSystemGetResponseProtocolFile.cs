@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:7805""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:9672""}]")]
     public class SystemConfigurableFileSystemGetResponseProtocolFile
     {
 
         protected bool _replicated;
 
         [XmlElement(ElementName = "replicated", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7805")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9672")]
         public bool Replicated
         {
             get => _replicated;

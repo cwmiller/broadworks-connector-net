@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:10790""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10914""}]")]
     public class SystemGETSAvpCodeMapDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected int _avpCode;
 
         [XmlElement(ElementName = "avpCode", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10790")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10914")]
         public int AvpCode
         {
             get => _avpCode;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _vendorId;
 
         [XmlElement(ElementName = "vendorId", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10790")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10914")]
         public int VendorId
         {
             get => _vendorId;

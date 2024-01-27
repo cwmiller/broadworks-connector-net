@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9e6c3cffd40902dc6325620cc5e3adef:74""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e1ee26e6fdadbb813e9077c4ea7fd6d1:74""}]")]
     public class UserChargeNumberModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"9e6c3cffd40902dc6325620cc5e3adef:74")]
+        [Group(@"e1ee26e6fdadbb813e9077c4ea7fd6d1:74")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"9e6c3cffd40902dc6325620cc5e3adef:74")]
+        [Group(@"e1ee26e6fdadbb813e9077c4ea7fd6d1:74")]
         [MinLength(1)]
         [MaxLength(23)]
         public string PhoneNumber
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useChargeNumberForEnhancedTranslations", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9e6c3cffd40902dc6325620cc5e3adef:74")]
+        [Group(@"e1ee26e6fdadbb813e9077c4ea7fd6d1:74")]
         public bool UseChargeNumberForEnhancedTranslations
         {
             get => _useChargeNumberForEnhancedTranslations;
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sendChargeNumberToNetwork", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9e6c3cffd40902dc6325620cc5e3adef:74")]
+        [Group(@"e1ee26e6fdadbb813e9077c4ea7fd6d1:74")]
         public bool SendChargeNumberToNetwork
         {
             get => _sendChargeNumberToNetwork;

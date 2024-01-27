@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:1980""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:2139""}]")]
     public class CriteriaActivation
     {
 
         protected string _criteriaName;
 
         [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1980")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2139")]
         [MinLength(1)]
         [MaxLength(50)]
         public string CriteriaName
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:1980")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2139")]
         public bool IsActive
         {
             get => _isActive;

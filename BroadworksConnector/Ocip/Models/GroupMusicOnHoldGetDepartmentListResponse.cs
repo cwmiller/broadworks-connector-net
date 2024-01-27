@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""66fe518a637c74cc4b2c97aa7f68fc49:113""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3a0309eb8d406fefc891f554ef114669:113""}]")]
     public class GroupMusicOnHoldGetDepartmentListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _hasDepartment;
 
         [XmlElement(ElementName = "hasDepartment", IsNullable = false, Namespace = "")]
-        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:113")]
+        [Group(@"3a0309eb8d406fefc891f554ef114669:113")]
         public bool HasDepartment
         {
             get => _hasDepartment;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "department", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:113")]
+        [Group(@"3a0309eb8d406fefc891f554ef114669:113")]
         public List<BroadWorksConnector.Ocip.Models.DepartmentKey> Department
         {
             get => _department;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "departmentFullPath", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:113")]
+        [Group(@"3a0309eb8d406fefc891f554ef114669:113")]
         [MinLength(1)]
         public List<string> DepartmentFullPath
         {

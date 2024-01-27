@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8ae66e5f02195a36162958f9d5115db:106""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c9d445cc2023c0bbcc8118fdbfdbb447:106""}]")]
     public class UserBroadWorksReceptionistSmallBusinessGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _monitoredUserTable;
 
         [XmlElement(ElementName = "monitoredUserTable", IsNullable = false, Namespace = "")]
-        [Group(@"d8ae66e5f02195a36162958f9d5115db:106")]
+        [Group(@"c9d445cc2023c0bbcc8118fdbfdbb447:106")]
         public BroadWorksConnector.Ocip.Models.C.OCITable MonitoredUserTable
         {
             get => _monitoredUserTable;

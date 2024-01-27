@@ -9,19 +9,21 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to SystemAdviceOfChargeGetRequest.
     /// Contains a list of system Advice of Charge parameters.
+    /// Replaced by: SystemAdviceOfChargeGetResponse25.
     /// <see cref="SystemAdviceOfChargeGetRequest"/>
+    /// <see cref="SystemAdviceOfChargeGetResponse25"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a69fde15f3aa7494d83b57461a7a70bb:248""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:20485""}]")]
     public class SystemAdviceOfChargeGetResponse19sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected int _delayBetweenNotificationSeconds;
 
         [XmlElement(ElementName = "delayBetweenNotificationSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"a69fde15f3aa7494d83b57461a7a70bb:248")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:20485")]
         [MinInclusive(5)]
         [MaxInclusive(1800)]
         public int DelayBetweenNotificationSeconds
@@ -40,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling _incomingAocHandling;
 
         [XmlElement(ElementName = "incomingAocHandling", IsNullable = false, Namespace = "")]
-        [Group(@"a69fde15f3aa7494d83b57461a7a70bb:248")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:20485")]
         public BroadWorksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling IncomingAocHandling
         {
             get => _incomingAocHandling;
@@ -57,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useOCSEnquiry;
 
         [XmlElement(ElementName = "useOCSEnquiry", IsNullable = false, Namespace = "")]
-        [Group(@"a69fde15f3aa7494d83b57461a7a70bb:248")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:20485")]
         public bool UseOCSEnquiry
         {
             get => _useOCSEnquiry;
@@ -74,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.AdviceOfChargeOCSEnquiryType _oCSEnquiryType;
 
         [XmlElement(ElementName = "OCSEnquiryType", IsNullable = false, Namespace = "")]
-        [Group(@"a69fde15f3aa7494d83b57461a7a70bb:248")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:20485")]
         public BroadWorksConnector.Ocip.Models.AdviceOfChargeOCSEnquiryType OCSEnquiryType
         {
             get => _oCSEnquiryType;

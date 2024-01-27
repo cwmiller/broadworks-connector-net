@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:20474""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:21208""}]")]
     public class SystemBroadWorksMobilityServiceAccessCodeAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceAccessCode;
 
         [XmlElement(ElementName = "serviceAccessCode", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20474")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:21208")]
         [MinLength(1)]
         [MaxLength(10)]
         public string ServiceAccessCode
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _countryCode;
 
         [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20474")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:21208")]
         [MaxLength(3)]
         [RegularExpression(@"[0-9]|[1-9][0-9]{1,2}")]
         public string CountryCode
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20474")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:21208")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

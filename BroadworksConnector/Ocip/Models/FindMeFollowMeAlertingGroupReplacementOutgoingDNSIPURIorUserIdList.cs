@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""79f226053ee345f2ff4c37c37c8e9114:518"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""79f226053ee345f2ff4c37c37c8e9114:519"",""optional"":true}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""146ca46a7097f08aed7a73ab65f17df8:517"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""146ca46a7097f08aed7a73ab65f17df8:518"",""optional"":true}]}]")]
     public class FindMeFollowMeAlertingGroupReplacementOutgoingDNSIPURIorUserIdList
     {
 
         protected string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:519")]
+        [Group(@"146ca46a7097f08aed7a73ab65f17df8:518")]
         [MinLength(1)]
         [MaxLength(161)]
         public string PhoneNumber
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:519")]
+        [Group(@"146ca46a7097f08aed7a73ab65f17df8:518")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

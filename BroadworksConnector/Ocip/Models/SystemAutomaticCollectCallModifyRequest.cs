@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""af1b47d7cab3335a81456e64e42371b0:79""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0d5db1a19a0aeda6f13d1f1c609efa0a:78""}]")]
     public class SystemAutomaticCollectCallModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableAutomaticCollectCall", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"af1b47d7cab3335a81456e64e42371b0:79")]
+        [Group(@"0d5db1a19a0aeda6f13d1f1c609efa0a:78")]
         public bool EnableAutomaticCollectCall
         {
             get => _enableAutomaticCollectCall;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableConnectTone", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"af1b47d7cab3335a81456e64e42371b0:79")]
+        [Group(@"0d5db1a19a0aeda6f13d1f1c609efa0a:78")]
         public bool EnableConnectTone
         {
             get => _enableConnectTone;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "includeCountryCodeInCic", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"af1b47d7cab3335a81456e64e42371b0:79")]
+        [Group(@"0d5db1a19a0aeda6f13d1f1c609efa0a:78")]
         public bool IncludeCountryCodeInCic
         {
             get => _includeCountryCodeInCic;

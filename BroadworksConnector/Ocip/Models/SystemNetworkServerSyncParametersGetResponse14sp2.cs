@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:27887""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:28405""}]")]
     public class SystemNetworkServerSyncParametersGetResponse14sp2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enableSync;
 
         [XmlElement(ElementName = "enableSync", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27887")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:28405")]
         public bool EnableSync
         {
             get => _enableSync;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _syncLinePorts;
 
         [XmlElement(ElementName = "syncLinePorts", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27887")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:28405")]
         public bool SyncLinePorts
         {
             get => _syncLinePorts;

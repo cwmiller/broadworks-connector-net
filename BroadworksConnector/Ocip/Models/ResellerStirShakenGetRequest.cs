@@ -9,20 +9,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get Reseller Stir Shaken service settings.
     /// The response is either ResellerStirShakenGetResponse or ErrorResponse.
+    /// Replaced by ResellerStirShakenGetRequest23
     /// <see cref="ResellerStirShakenGetResponse"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="ResellerStirShakenGetRequest23"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b009175f2a2a9d38115e319a6ad64d7f:861""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:17012""}]")]
     public class ResellerStirShakenGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ResellerStirShakenGetResponse>
     {
 
         protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:861")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:17012")]
         [MinLength(1)]
         [MaxLength(36)]
         public string ResellerId

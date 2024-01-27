@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""abb5674e0e8c679a722da3c2b8dc2182:57""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""70ba216055c15b56c5068151cee2a90b:57""}]")]
     public class UserCallForwardingBusyGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"abb5674e0e8c679a722da3c2b8dc2182:57")]
+        [Group(@"70ba216055c15b56c5068151cee2a90b:57")]
         public bool IsActive
         {
             get => _isActive;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forwardToPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"abb5674e0e8c679a722da3c2b8dc2182:57")]
+        [Group(@"70ba216055c15b56c5068151cee2a90b:57")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ForwardToPhoneNumber

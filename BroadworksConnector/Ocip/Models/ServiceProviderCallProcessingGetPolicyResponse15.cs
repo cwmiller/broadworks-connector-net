@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:17944""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:18482""}]")]
     public class ServiceProviderCallProcessingGetPolicyResponse15 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _useMaxSimultaneousCalls;
 
         [XmlElement(ElementName = "useMaxSimultaneousCalls", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         public bool UseMaxSimultaneousCalls
         {
             get => _useMaxSimultaneousCalls;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxSimultaneousCalls;
 
         [XmlElement(ElementName = "maxSimultaneousCalls", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         [MinInclusive(1)]
         [MaxInclusive(500)]
         public int MaxSimultaneousCalls
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useMaxSimultaneousVideoCalls;
 
         [XmlElement(ElementName = "useMaxSimultaneousVideoCalls", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         public bool UseMaxSimultaneousVideoCalls
         {
             get => _useMaxSimultaneousVideoCalls;
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxSimultaneousVideoCalls;
 
         [XmlElement(ElementName = "maxSimultaneousVideoCalls", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         [MinInclusive(1)]
         [MaxInclusive(500)]
         public int MaxSimultaneousVideoCalls
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useMaxCallTimeForAnsweredCalls;
 
         [XmlElement(ElementName = "useMaxCallTimeForAnsweredCalls", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         public bool UseMaxCallTimeForAnsweredCalls
         {
             get => _useMaxCallTimeForAnsweredCalls;
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxCallTimeForAnsweredCallsMinutes;
 
         [XmlElement(ElementName = "maxCallTimeForAnsweredCallsMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         [MinInclusive(5)]
         [MaxInclusive(2880)]
         public int MaxCallTimeForAnsweredCallsMinutes
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useMaxCallTimeForUnansweredCalls;
 
         [XmlElement(ElementName = "useMaxCallTimeForUnansweredCalls", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         public bool UseMaxCallTimeForUnansweredCalls
         {
             get => _useMaxCallTimeForUnansweredCalls;
@@ -145,7 +145,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxCallTimeForUnansweredCallsMinutes;
 
         [XmlElement(ElementName = "maxCallTimeForUnansweredCallsMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         [MinInclusive(1)]
         [MaxInclusive(60)]
         public int MaxCallTimeForUnansweredCallsMinutes
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.MediaPolicySelection _mediaPolicySelection;
 
         [XmlElement(ElementName = "mediaPolicySelection", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         public BroadWorksConnector.Ocip.Models.MediaPolicySelection MediaPolicySelection
         {
             get => _mediaPolicySelection;
@@ -182,7 +182,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "supportedMediaSetName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         [MinLength(1)]
         [MaxLength(80)]
         public string SupportedMediaSetName
@@ -201,7 +201,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.NetworkUsageSelection _networkUsageSelection;
 
         [XmlElement(ElementName = "networkUsageSelection", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         public BroadWorksConnector.Ocip.Models.NetworkUsageSelection NetworkUsageSelection
         {
             get => _networkUsageSelection;
@@ -218,7 +218,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enforceGroupCallingLineIdentityRestriction;
 
         [XmlElement(ElementName = "enforceGroupCallingLineIdentityRestriction", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         public bool EnforceGroupCallingLineIdentityRestriction
         {
             get => _enforceGroupCallingLineIdentityRestriction;
@@ -235,7 +235,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowEnterpriseGroupCallTypingForPrivateDialingPlan;
 
         [XmlElement(ElementName = "allowEnterpriseGroupCallTypingForPrivateDialingPlan", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         public bool AllowEnterpriseGroupCallTypingForPrivateDialingPlan
         {
             get => _allowEnterpriseGroupCallTypingForPrivateDialingPlan;
@@ -252,7 +252,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowEnterpriseGroupCallTypingForPublicDialingPlan;
 
         [XmlElement(ElementName = "allowEnterpriseGroupCallTypingForPublicDialingPlan", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         public bool AllowEnterpriseGroupCallTypingForPublicDialingPlan
         {
             get => _allowEnterpriseGroupCallTypingForPublicDialingPlan;
@@ -269,7 +269,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _overrideCLIDRestrictionForPrivateCallCategory;
 
         [XmlElement(ElementName = "overrideCLIDRestrictionForPrivateCallCategory", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         public bool OverrideCLIDRestrictionForPrivateCallCategory
         {
             get => _overrideCLIDRestrictionForPrivateCallCategory;
@@ -286,7 +286,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useEnterpriseCLIDForPrivateCallCategory;
 
         [XmlElement(ElementName = "useEnterpriseCLIDForPrivateCallCategory", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         public bool UseEnterpriseCLIDForPrivateCallCategory
         {
             get => _useEnterpriseCLIDForPrivateCallCategory;
@@ -303,7 +303,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableEnterpriseExtensionDialing;
 
         [XmlElement(ElementName = "enableEnterpriseExtensionDialing", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         public bool EnableEnterpriseExtensionDialing
         {
             get => _enableEnterpriseExtensionDialing;
@@ -320,7 +320,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enforceEnterpriseCallingLineIdentityRestriction;
 
         [XmlElement(ElementName = "enforceEnterpriseCallingLineIdentityRestriction", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         public bool EnforceEnterpriseCallingLineIdentityRestriction
         {
             get => _enforceEnterpriseCallingLineIdentityRestriction;
@@ -337,7 +337,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ServiceProviderConferenceURISettingLevel _useSettingLevel;
 
         [XmlElement(ElementName = "useSettingLevel", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         public BroadWorksConnector.Ocip.Models.ServiceProviderConferenceURISettingLevel UseSettingLevel
         {
             get => _useSettingLevel;
@@ -355,7 +355,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "conferenceURI", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ConferenceURI
@@ -374,7 +374,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useMaxConcurrentRedirectedCalls;
 
         [XmlElement(ElementName = "useMaxConcurrentRedirectedCalls", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         public bool UseMaxConcurrentRedirectedCalls
         {
             get => _useMaxConcurrentRedirectedCalls;
@@ -391,7 +391,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxConcurrentRedirectedCalls;
 
         [XmlElement(ElementName = "maxConcurrentRedirectedCalls", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         [MinInclusive(1)]
         [MaxInclusive(32)]
         public int MaxConcurrentRedirectedCalls
@@ -410,7 +410,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useMaxFindMeFollowMeDepth;
 
         [XmlElement(ElementName = "useMaxFindMeFollowMeDepth", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         public bool UseMaxFindMeFollowMeDepth
         {
             get => _useMaxFindMeFollowMeDepth;
@@ -427,7 +427,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxFindMeFollowMeDepth;
 
         [XmlElement(ElementName = "maxFindMeFollowMeDepth", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int MaxFindMeFollowMeDepth
@@ -446,7 +446,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxRedirectionDepth;
 
         [XmlElement(ElementName = "maxRedirectionDepth", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         [MinInclusive(1)]
         [MaxInclusive(15)]
         public int MaxRedirectionDepth
@@ -465,7 +465,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useMaxConcurrentFindMeFollowMeInvocations;
 
         [XmlElement(ElementName = "useMaxConcurrentFindMeFollowMeInvocations", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         public bool UseMaxConcurrentFindMeFollowMeInvocations
         {
             get => _useMaxConcurrentFindMeFollowMeInvocations;
@@ -482,7 +482,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxConcurrentFindMeFollowMeInvocations;
 
         [XmlElement(ElementName = "maxConcurrentFindMeFollowMeInvocations", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17944")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18482")]
         [MinInclusive(1)]
         [MaxInclusive(32)]
         public int MaxConcurrentFindMeFollowMeInvocations

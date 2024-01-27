@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7409""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7395""}]")]
     public class CallCenterReportAbandonedCallThresholdReplacementList
     {
 
         protected List<int> _abandonedCallThresholdSeconds = new List<int>();
 
         [XmlElement(ElementName = "abandonedCallThresholdSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7409")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7395")]
         [MinInclusive(1)]
         [MaxInclusive(7200)]
         public List<int> AbandonedCallThresholdSeconds

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:47400""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:48286""}]")]
     public class AccessDeviceMultipleContactEndpointRead19
     {
 
         protected BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
 
         [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47400")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48286")]
         public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice
         {
             get => _accessDevice;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47400")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48286")]
         [MinLength(1)]
         [MaxLength(161)]
         public string LinePort
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47400")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48286")]
         [MinLength(1)]
         [MaxLength(1020)]
         public List<string> Contact
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _staticRegistrationCapable;
 
         [XmlElement(ElementName = "staticRegistrationCapable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47400")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48286")]
         public bool StaticRegistrationCapable
         {
             get => _staticRegistrationCapable;
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useDomain;
 
         [XmlElement(ElementName = "useDomain", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47400")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48286")]
         public bool UseDomain
         {
             get => _useDomain;
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "portNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47400")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48286")]
         [MinInclusive(1)]
         [MaxInclusive(1024)]
         public int PortNumber

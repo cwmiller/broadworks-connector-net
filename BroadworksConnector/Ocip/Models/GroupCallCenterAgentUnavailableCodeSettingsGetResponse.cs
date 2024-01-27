@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:4618""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:4749""}]")]
     public class GroupCallCenterAgentUnavailableCodeSettingsGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enableAgentUnavailableCodes;
 
         [XmlElement(ElementName = "enableAgentUnavailableCodes", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4618")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:4749")]
         public bool EnableAgentUnavailableCodes
         {
             get => _enableAgentUnavailableCodes;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultAgentUnavailableCodeOnDND", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4618")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:4749")]
         [MinLength(1)]
         [MaxLength(10)]
         public string DefaultAgentUnavailableCodeOnDND
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultAgentUnavailableCodeOnPersonalCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4618")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:4749")]
         [MinLength(1)]
         [MaxLength(10)]
         public string DefaultAgentUnavailableCodeOnPersonalCalls
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultAgentUnavailableCodeOnConsecutiveBounces", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4618")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:4749")]
         [MinLength(1)]
         [MaxLength(10)]
         public string DefaultAgentUnavailableCodeOnConsecutiveBounces
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _forceUseOfAgentUnavailableCodes;
 
         [XmlElement(ElementName = "forceUseOfAgentUnavailableCodes", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4618")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:4749")]
         public bool ForceUseOfAgentUnavailableCodes
         {
             get => _forceUseOfAgentUnavailableCodes;
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultAgentUnavailableCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:4618")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:4749")]
         [MinLength(1)]
         [MaxLength(10)]
         public string DefaultAgentUnavailableCode

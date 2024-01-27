@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7a925e891158dfa3cb1319e045608894:55""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b6fd73d148b9b309dce1d2f04516ddfa:55""}]")]
     public class GroupCallParkAddInstanceRequest16sp2 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"7a925e891158dfa3cb1319e045608894:55")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:55")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"7a925e891158dfa3cb1319e045608894:55")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:55")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"7a925e891158dfa3cb1319e045608894:55")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:55")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7a925e891158dfa3cb1319e045608894:55")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:55")]
         [MinLength(1)]
         [MaxLength(161)]
         public List<string> UserId
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "recallAlternateUserId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7a925e891158dfa3cb1319e045608894:55")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:55")]
         [MinLength(1)]
         [MaxLength(161)]
         public string RecallAlternateUserId
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CallParkRecallTo _recallTo;
 
         [XmlElement(ElementName = "recallTo", IsNullable = false, Namespace = "")]
-        [Group(@"7a925e891158dfa3cb1319e045608894:55")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:55")]
         public BroadWorksConnector.Ocip.Models.CallParkRecallTo RecallTo
         {
             get => _recallTo;

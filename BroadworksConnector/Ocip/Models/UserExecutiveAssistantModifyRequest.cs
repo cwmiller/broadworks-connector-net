@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""edd49e38c60ed5c00d394f2a35697c84:80""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d531efc7ebfdf83cc344962728505dd5:80""}]")]
     public class UserExecutiveAssistantModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"edd49e38c60ed5c00d394f2a35697c84:80")]
+        [Group(@"d531efc7ebfdf83cc344962728505dd5:80")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableDivert", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"edd49e38c60ed5c00d394f2a35697c84:80")]
+        [Group(@"d531efc7ebfdf83cc344962728505dd5:80")]
         public bool EnableDivert
         {
             get => _enableDivert;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "divertToPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"edd49e38c60ed5c00d394f2a35697c84:80")]
+        [Group(@"d531efc7ebfdf83cc344962728505dd5:80")]
         [MinLength(1)]
         [MaxLength(161)]
         public string DivertToPhoneNumber
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "optInStatus", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"edd49e38c60ed5c00d394f2a35697c84:80")]
+        [Group(@"d531efc7ebfdf83cc344962728505dd5:80")]
         public List<BroadWorksConnector.Ocip.Models.ExecutiveAssistantOptInStatus> OptInStatus
         {
             get => _optInStatus;

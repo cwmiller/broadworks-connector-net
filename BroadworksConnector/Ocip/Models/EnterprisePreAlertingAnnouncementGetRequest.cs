@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6165f2b4cd549de71fe8f3171488fdd8:51""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""89722c6a28e608e15bce28b0cd73fa11:51""}]")]
     public class EnterprisePreAlertingAnnouncementGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.EnterprisePreAlertingAnnouncementGetResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"6165f2b4cd549de71fe8f3171488fdd8:51")]
+        [Group(@"89722c6a28e608e15bce28b0cd73fa11:51")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId

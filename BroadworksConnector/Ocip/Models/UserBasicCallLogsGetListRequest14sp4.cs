@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f8236d2e87356bf980f5d808d1d0ceb3:42""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""cc2c4e50d2e0f1ccbe7f5a9642204822:41""}]")]
     public class UserBasicCallLogsGetListRequest14sp4 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserBasicCallLogsGetListResponse14sp4>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"f8236d2e87356bf980f5d808d1d0ceb3:42")]
+        [Group(@"cc2c4e50d2e0f1ccbe7f5a9642204822:41")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callLogType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f8236d2e87356bf980f5d808d1d0ceb3:42")]
+        [Group(@"cc2c4e50d2e0f1ccbe7f5a9642204822:41")]
         public BroadWorksConnector.Ocip.Models.CallLogsType CallLogType
         {
             get => _callLogType;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "formatNameAndNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f8236d2e87356bf980f5d808d1d0ceb3:42")]
+        [Group(@"cc2c4e50d2e0f1ccbe7f5a9642204822:41")]
         public bool FormatNameAndNumber
         {
             get => _formatNameAndNumber;

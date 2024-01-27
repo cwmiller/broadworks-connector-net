@@ -12,22 +12,19 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// The following elements are only used in AS data mode:
     /// useAliasForDomain, value "false" is returned in XS data mode.
-    /// 
-    /// The following elements are only used in AS and XS data mode and not returned in Amplify data mode.
-    /// defaultDomain
     /// <see cref="SystemDomainParametersGetRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9557""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:9677""}]")]
     public class SystemDomainParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _useAliasForDomain;
 
         [XmlElement(ElementName = "useAliasForDomain", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9557")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9677")]
         public bool UseAliasForDomain
         {
             get => _useAliasForDomain;
@@ -45,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultDomain", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9557")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9677")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DefaultDomain

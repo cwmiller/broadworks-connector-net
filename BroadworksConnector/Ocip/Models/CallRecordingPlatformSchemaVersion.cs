@@ -16,5 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
         _20,
         [XmlEnum(Name = "3.0")]
         _30,
+        [XmlEnum(Name = "4.0")]
+        _40,
     }
 }

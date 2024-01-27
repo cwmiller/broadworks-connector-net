@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7635"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7637""}]}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7621"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7623""}]}]")]
     public class CallCenterScheduledReportCallCenterSelectionRead
     {
 
         protected bool _allCallCenter;
 
         [XmlElement(ElementName = "allCallCenter", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7635")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7621")]
         public bool AllCallCenter
         {
             get => _allCallCenter;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "currentUserId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7637")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7623")]
         [MinLength(1)]
         [MaxLength(161)]
         public List<string> CurrentUserId
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "pastUserId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7637")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7623")]
         [MinLength(1)]
         [MaxLength(161)]
         public List<string> PastUserId

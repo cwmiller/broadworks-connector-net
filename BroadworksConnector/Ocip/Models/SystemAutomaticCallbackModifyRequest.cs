@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:19983""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:20717""}]")]
     public class SystemAutomaticCallbackModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "monitorMinutes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19983")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:20717")]
         [MinInclusive(5)]
         [MaxInclusive(180)]
         public int MonitorMinutes
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "waitBetweenRetryOriginatorMinutes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19983")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:20717")]
         [MinInclusive(1)]
         [MaxInclusive(15)]
         public int WaitBetweenRetryOriginatorMinutes
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxMonitorsPerOriginator", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19983")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:20717")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
         public int MaxMonitorsPerOriginator
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxCallbackRings", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19983")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:20717")]
         [MinInclusive(3)]
         [MaxInclusive(8)]
         public int MaxCallbackRings
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxRetryOriginatorMinutes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19983")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:20717")]
         [MinInclusive(180)]
         [MaxInclusive(360)]
         public int MaxRetryOriginatorMinutes

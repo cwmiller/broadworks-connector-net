@@ -12,23 +12,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// The following elements are only used in AS data mode:
     /// forceUseOfTCP
     /// enableRedundancy, value "false" is returned in XS data mode
-    /// redundancyTaskDelayMilliseconds, value "10000" is returned in Amplify and XS data mode
-    /// redundancyTaskIntervalMilliseconds, value of "1000" is returned in Amplify and XS data mode
-    /// maxNumberOfSubscriptionsPerRedundancyTaskInterval, value of "50" is returned in Amplify and XS data mode
+    /// redundancyTaskDelayMilliseconds, value "10000" is returned in XS data mode
+    /// redundancyTaskIntervalMilliseconds, value of "1000" is returned in XS data mode
+    /// maxNumberOfSubscriptionsPerRedundancyTaskInterval, value of "50" is returned in XS data mode
     /// ignoreUnansweredTerminatingCalls, value “false” is returned in XS data mode
     /// <see cref="SystemBusyLampFieldGetRequest23V2"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4faeca417998d23ce2ff6b0b43212aa6:67""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b1745b5f688013b73224574a66f4f4b2:68""}]")]
     public class SystemBusyLampFieldGetResponse23V2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _displayLocalUserIdentityLastNameFirst;
 
         [XmlElement(ElementName = "displayLocalUserIdentityLastNameFirst", IsNullable = false, Namespace = "")]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:67")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:68")]
         public bool DisplayLocalUserIdentityLastNameFirst
         {
             get => _displayLocalUserIdentityLastNameFirst;
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _forceUseOfTCP;
 
         [XmlElement(ElementName = "forceUseOfTCP", IsNullable = false, Namespace = "")]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:67")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:68")]
         public bool ForceUseOfTCP
         {
             get => _forceUseOfTCP;
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableRedundancy;
 
         [XmlElement(ElementName = "enableRedundancy", IsNullable = false, Namespace = "")]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:67")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:68")]
         public bool EnableRedundancy
         {
             get => _enableRedundancy;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _redundancyTaskDelayMilliseconds;
 
         [XmlElement(ElementName = "redundancyTaskDelayMilliseconds", IsNullable = false, Namespace = "")]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:67")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:68")]
         [MinInclusive(10000)]
         [MaxInclusive(180000)]
         public int RedundancyTaskDelayMilliseconds
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _redundancyTaskIntervalMilliseconds;
 
         [XmlElement(ElementName = "redundancyTaskIntervalMilliseconds", IsNullable = false, Namespace = "")]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:67")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:68")]
         [MinInclusive(50)]
         [MaxInclusive(20000)]
         public int RedundancyTaskIntervalMilliseconds
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxNumberOfSubscriptionsPerRedundancyTaskInterval;
 
         [XmlElement(ElementName = "maxNumberOfSubscriptionsPerRedundancyTaskInterval", IsNullable = false, Namespace = "")]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:67")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:68")]
         [MinInclusive(1)]
         [MaxInclusive(50000)]
         public int MaxNumberOfSubscriptionsPerRedundancyTaskInterval
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _ignoreUnansweredTerminatingCalls;
 
         [XmlElement(ElementName = "ignoreUnansweredTerminatingCalls", IsNullable = false, Namespace = "")]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:67")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:68")]
         public bool IgnoreUnansweredTerminatingCalls
         {
             get => _ignoreUnansweredTerminatingCalls;

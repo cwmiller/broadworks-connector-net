@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b974dc59b4b32d9f5952a0442ecaefa8:234""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5fb5b7b7662e17019e762f6db743dda1:234""}]")]
     public class UserSeriesCompletionGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b974dc59b4b32d9f5952a0442ecaefa8:234")]
+        [Group(@"5fb5b7b7662e17019e762f6db743dda1:234")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
-        [Group(@"b974dc59b4b32d9f5952a0442ecaefa8:234")]
+        [Group(@"5fb5b7b7662e17019e762f6db743dda1:234")]
         public BroadWorksConnector.Ocip.Models.C.OCITable UserTable
         {
             get => _userTable;

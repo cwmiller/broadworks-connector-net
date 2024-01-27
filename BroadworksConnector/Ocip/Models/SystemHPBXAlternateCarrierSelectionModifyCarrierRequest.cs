@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:11341""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:11465""}]")]
     public class SystemHPBXAlternateCarrierSelectionModifyCarrierRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11341")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11465")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11341")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11465")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NewName
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "prefix", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11341")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11465")]
         [MinLength(5)]
         [MaxLength(6)]
         public string Prefix
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "domain", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11341")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11465")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Domain
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11341")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11465")]
         public BroadWorksConnector.Ocip.Models.HPBXAlternateCarrierType Type
         {
             get => _type;

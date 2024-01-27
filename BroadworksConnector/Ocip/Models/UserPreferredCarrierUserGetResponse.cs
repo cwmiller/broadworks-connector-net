@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""74a46a9bfccb54713c1d19735843f1df:551""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""31dec625cdd18e8228eb61ffb34ddc0e:551""}]")]
     public class UserPreferredCarrierUserGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.UserPreferredCarrierName _intraLataCarrier;
 
         [XmlElement(ElementName = "intraLataCarrier", IsNullable = false, Namespace = "")]
-        [Group(@"74a46a9bfccb54713c1d19735843f1df:551")]
+        [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:551")]
         public BroadWorksConnector.Ocip.Models.UserPreferredCarrierName IntraLataCarrier
         {
             get => _intraLataCarrier;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.UserPreferredCarrierName _interLataCarrier;
 
         [XmlElement(ElementName = "interLataCarrier", IsNullable = false, Namespace = "")]
-        [Group(@"74a46a9bfccb54713c1d19735843f1df:551")]
+        [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:551")]
         public BroadWorksConnector.Ocip.Models.UserPreferredCarrierName InterLataCarrier
         {
             get => _interLataCarrier;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.UserPreferredCarrierName _internationalCarrier;
 
         [XmlElement(ElementName = "internationalCarrier", IsNullable = false, Namespace = "")]
-        [Group(@"74a46a9bfccb54713c1d19735843f1df:551")]
+        [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:551")]
         public BroadWorksConnector.Ocip.Models.UserPreferredCarrierName InternationalCarrier
         {
             get => _internationalCarrier;

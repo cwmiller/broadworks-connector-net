@@ -9,20 +9,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get service provider Stir Shaken service settings.
     /// The response is either ServiceProviderStirShakenGetResponse or ErrorResponse.
+    /// Replaced by the ServiceProviderStirShakenGetRequest23.
     /// <see cref="ServiceProviderStirShakenGetResponse"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="ServiceProviderStirShakenGetRequest23"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:6844""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:19745""}]")]
     public class ServiceProviderStirShakenGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ServiceProviderStirShakenGetResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6844")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:19745")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId

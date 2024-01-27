@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""66fe518a637c74cc4b2c97aa7f68fc49:309""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3a0309eb8d406fefc891f554ef114669:309""}]")]
     public class UserMusicOnHoldUserGetResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enableVideo;
 
         [XmlElement(ElementName = "enableVideo", IsNullable = false, Namespace = "")]
-        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:309")]
+        [Group(@"3a0309eb8d406fefc891f554ef114669:309")]
         public bool EnableVideo
         {
             get => _enableVideo;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead20 _source;
 
         [XmlElement(ElementName = "source", IsNullable = false, Namespace = "")]
-        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:309")]
+        [Group(@"3a0309eb8d406fefc891f554ef114669:309")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead20 Source
         {
             get => _source;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useAlternateSourceForInternalCalls;
 
         [XmlElement(ElementName = "useAlternateSourceForInternalCalls", IsNullable = false, Namespace = "")]
-        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:309")]
+        [Group(@"3a0309eb8d406fefc891f554ef114669:309")]
         public bool UseAlternateSourceForInternalCalls
         {
             get => _useAlternateSourceForInternalCalls;
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "internalSource", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"66fe518a637c74cc4b2c97aa7f68fc49:309")]
+        [Group(@"3a0309eb8d406fefc891f554ef114669:309")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead20 InternalSource
         {
             get => _internalSource;

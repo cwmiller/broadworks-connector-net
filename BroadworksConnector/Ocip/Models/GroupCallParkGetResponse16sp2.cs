@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7a925e891158dfa3cb1319e045608894:474""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b6fd73d148b9b309dce1d2f04516ddfa:474""}]")]
     public class GroupCallParkGetResponse16sp2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected int _recallTimerSeconds;
 
         [XmlElement(ElementName = "recallTimerSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"7a925e891158dfa3cb1319e045608894:474")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:474")]
         [MinInclusive(30)]
         [MaxInclusive(600)]
         public int RecallTimerSeconds
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _displayTimerSeconds;
 
         [XmlElement(ElementName = "displayTimerSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"7a925e891158dfa3cb1319e045608894:474")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:474")]
         [MinInclusive(2)]
         [MaxInclusive(15)]
         public int DisplayTimerSeconds
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableDestinationAnnouncement;
 
         [XmlElement(ElementName = "enableDestinationAnnouncement", IsNullable = false, Namespace = "")]
-        [Group(@"7a925e891158dfa3cb1319e045608894:474")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:474")]
         public bool EnableDestinationAnnouncement
         {
             get => _enableDestinationAnnouncement;
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "recallAlternateUserId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7a925e891158dfa3cb1319e045608894:474")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:474")]
         [MinLength(1)]
         [MaxLength(161)]
         public string RecallAlternateUserId
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.RingPattern _recallRingPattern;
 
         [XmlElement(ElementName = "recallRingPattern", IsNullable = false, Namespace = "")]
-        [Group(@"7a925e891158dfa3cb1319e045608894:474")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:474")]
         public BroadWorksConnector.Ocip.Models.RingPattern RecallRingPattern
         {
             get => _recallRingPattern;
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CallParkRecallTo _recallTo;
 
         [XmlElement(ElementName = "recallTo", IsNullable = false, Namespace = "")]
-        [Group(@"7a925e891158dfa3cb1319e045608894:474")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:474")]
         public BroadWorksConnector.Ocip.Models.CallParkRecallTo RecallTo
         {
             get => _recallTo;
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _alternateUserRecallTimerSeconds;
 
         [XmlElement(ElementName = "alternateUserRecallTimerSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"7a925e891158dfa3cb1319e045608894:474")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:474")]
         [MinInclusive(30)]
         [MaxInclusive(600)]
         public int AlternateUserRecallTimerSeconds

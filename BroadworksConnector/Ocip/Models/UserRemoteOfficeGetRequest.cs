@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""70aea661491074f1e7cc845c9a6c7ea3:41""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""dbef84b1c59b67471031e429db8fd980:41""}]")]
     public class UserRemoteOfficeGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserRemoteOfficeGetResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"70aea661491074f1e7cc845c9a6c7ea3:41")]
+        [Group(@"dbef84b1c59b67471031e429db8fd980:41")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

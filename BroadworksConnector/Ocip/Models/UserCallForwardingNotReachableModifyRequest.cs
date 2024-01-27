@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""894e3bfe658bf9c3ec06aa2fd09fdd43:77""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fea5a8405f72fc444317772d796b65fb:77""}]")]
     public class UserCallForwardingNotReachableModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"894e3bfe658bf9c3ec06aa2fd09fdd43:77")]
+        [Group(@"fea5a8405f72fc444317772d796b65fb:77")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"894e3bfe658bf9c3ec06aa2fd09fdd43:77")]
+        [Group(@"fea5a8405f72fc444317772d796b65fb:77")]
         public bool IsActive
         {
             get => _isActive;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forwardToPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"894e3bfe658bf9c3ec06aa2fd09fdd43:77")]
+        [Group(@"fea5a8405f72fc444317772d796b65fb:77")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ForwardToPhoneNumber

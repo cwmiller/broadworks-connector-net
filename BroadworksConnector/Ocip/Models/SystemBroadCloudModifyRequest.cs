@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:2542""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:2648""}]")]
     public class SystemBroadCloudModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "provisioningUrl", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2542")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2648")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ProvisioningUrl
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "provisioningUserId", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2542")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2648")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ProvisioningUserId
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "provisioningPassword", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2542")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2648")]
         [MinLength(1)]
         [MaxLength(20)]
         public string ProvisioningPassword
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableSynchronization", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2542")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2648")]
         public bool EnableSynchronization
         {
             get => _enableSynchronization;
@@ -96,6 +96,46 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool EnableSynchronizationSpecified { get; set; }
+
+        protected string _proxyHost;
+
+        [XmlElement(ElementName = "proxyHost", IsNullable = true, Namespace = "")]
+        [Optional]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2648")]
+        [MinLength(1)]
+        [MaxLength(80)]
+        public string ProxyHost
+        {
+            get => _proxyHost;
+            set
+            {
+                ProxyHostSpecified = true;
+                _proxyHost = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool ProxyHostSpecified { get; set; }
+
+        protected int _proxyPort;
+
+        [XmlElement(ElementName = "proxyPort", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2648")]
+        [MinInclusive(1025)]
+        [MaxInclusive(65535)]
+        public int ProxyPort
+        {
+            get => _proxyPort;
+            set
+            {
+                ProxyPortSpecified = true;
+                _proxyPort = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool ProxyPortSpecified { get; set; }
 
     }
 }

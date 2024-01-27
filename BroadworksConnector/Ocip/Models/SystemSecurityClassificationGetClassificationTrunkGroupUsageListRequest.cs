@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b3afea8308b7fdaab8d385357ca9c2d:167""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""435c279b3e6710f4ada60ed66a93d278:167""}]")]
     public class SystemSecurityClassificationGetClassificationTrunkGroupUsageListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemSecurityClassificationGetClassificationTrunkGroupUsageListResponse>
     {
 
         protected string _securityClassification;
 
         [XmlElement(ElementName = "securityClassification", IsNullable = false, Namespace = "")]
-        [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:167")]
+        [Group(@"435c279b3e6710f4ada60ed66a93d278:167")]
         [MinLength(1)]
         [MaxLength(40)]
         public string SecurityClassification
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:167")]
+        [Group(@"435c279b3e6710f4ada60ed66a93d278:167")]
         [MinInclusive(1)]
         public int ResponseSizeLimit
         {
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaTrunkGroupName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:167")]
+        [Group(@"435c279b3e6710f4ada60ed66a93d278:167")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaTrunkGroupName> SearchCriteriaTrunkGroupName
         {
             get => _searchCriteriaTrunkGroupName;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaGroupId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:167")]
+        [Group(@"435c279b3e6710f4ada60ed66a93d278:167")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupId> SearchCriteriaGroupId
         {
             get => _searchCriteriaGroupId;
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaServiceProviderId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:167")]
+        [Group(@"435c279b3e6710f4ada60ed66a93d278:167")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceProviderId> SearchCriteriaServiceProviderId
         {
             get => _searchCriteriaServiceProviderId;
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaExactOrganizationType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:167")]
+        [Group(@"435c279b3e6710f4ada60ed66a93d278:167")]
         public BroadWorksConnector.Ocip.Models.SearchCriteriaExactOrganizationType SearchCriteriaExactOrganizationType
         {
             get => _searchCriteriaExactOrganizationType;

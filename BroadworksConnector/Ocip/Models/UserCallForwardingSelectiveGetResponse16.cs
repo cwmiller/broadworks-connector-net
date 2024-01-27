@@ -28,14 +28,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""543304bb75006bfa60814c897fa03ec0:158""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a80d284dc33fadcf5b323133519ad1a8:158""}]")]
     public class UserCallForwardingSelectiveGetResponse16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"543304bb75006bfa60814c897fa03ec0:158")]
+        [Group(@"a80d284dc33fadcf5b323133519ad1a8:158")]
         public bool IsActive
         {
             get => _isActive;
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultForwardToPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"543304bb75006bfa60814c897fa03ec0:158")]
+        [Group(@"a80d284dc33fadcf5b323133519ad1a8:158")]
         [MinLength(1)]
         [MaxLength(161)]
         public string DefaultForwardToPhoneNumber
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _playRingReminder;
 
         [XmlElement(ElementName = "playRingReminder", IsNullable = false, Namespace = "")]
-        [Group(@"543304bb75006bfa60814c897fa03ec0:158")]
+        [Group(@"a80d284dc33fadcf5b323133519ad1a8:158")]
         public bool PlayRingReminder
         {
             get => _playRingReminder;
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
         [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
-        [Group(@"543304bb75006bfa60814c897fa03ec0:158")]
+        [Group(@"a80d284dc33fadcf5b323133519ad1a8:158")]
         public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable
         {
             get => _criteriaTable;

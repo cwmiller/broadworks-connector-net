@@ -14,7 +14,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:49134""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:50020""}]")]
     public class MusicOnHoldSourceModify19sp1
     {
 
@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFilePreferredCodec", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49134")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:50020")]
         public BroadWorksConnector.Ocip.Models.AudioFileCodecExtended AudioFilePreferredCodec
         {
             get => _audioFilePreferredCodec;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "messageSourceSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49134")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:50020")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection MessageSourceSelection
         {
             get => _messageSourceSelection;
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "customSource", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49134")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:50020")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceModify19sp1CustomSource CustomSource
         {
             get => _customSource;
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "externalSource", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49134")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:50020")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceModify19sp1ExternalSource ExternalSource
         {
             get => _externalSource;

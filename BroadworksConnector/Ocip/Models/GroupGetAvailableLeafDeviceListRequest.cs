@@ -13,20 +13,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// The list returned includes devices created at the system, service provider, and group levels.
     /// The response is either GroupGetAvailableLeafDeviceListResponse or
     /// ErrorResponse.
+    /// 
+    /// Replaced by: GroupGetAvailableLeafDeviceListRequest22.
     /// <see cref="GroupGetAvailableLeafDeviceListResponse"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="GroupGetAvailableLeafDeviceListRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:5976""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:10090""}]")]
     public class GroupGetAvailableLeafDeviceListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupGetAvailableLeafDeviceListResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5976")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10090")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -45,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5976")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10090")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId

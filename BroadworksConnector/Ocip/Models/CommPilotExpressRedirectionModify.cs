@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""8c204d784d1904d9eeea996d46de69be:215""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de7795e1833d459a7eb89116d772fd78:215""}]")]
     public class CommPilotExpressRedirectionModify
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"8c204d784d1904d9eeea996d46de69be:215")]
+        [Group(@"de7795e1833d459a7eb89116d772fd78:215")]
         public BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionAction Action
         {
             get => _action;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forwardingPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"8c204d784d1904d9eeea996d46de69be:215")]
+        [Group(@"de7795e1833d459a7eb89116d772fd78:215")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ForwardingPhoneNumber

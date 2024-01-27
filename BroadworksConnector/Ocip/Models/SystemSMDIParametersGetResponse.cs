@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:17716""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:17943""}]")]
     public class SystemSMDIParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enableSMDI;
 
         [XmlElement(ElementName = "enableSMDI", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17716")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:17943")]
         public bool EnableSMDI
         {
             get => _enableSMDI;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _listeningPort;
 
         [XmlElement(ElementName = "listeningPort", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17716")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:17943")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int ListeningPort
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxConnections;
 
         [XmlElement(ElementName = "maxConnections", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:17716")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:17943")]
         [MinInclusive(0)]
         [MaxInclusive(64)]
         public int MaxConnections

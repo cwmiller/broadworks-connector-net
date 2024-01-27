@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:4733""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:4729""}]")]
     public class GroupCallCenterGetInstanceStatisticsResponse14sp9 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.CallCenterStatisticsRange _statisticsRange;
 
         [XmlElement(ElementName = "statisticsRange", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:4733")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:4729")]
         public BroadWorksConnector.Ocip.Models.CallCenterStatisticsRange StatisticsRange
         {
             get => _statisticsRange;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CallCenterQueueStatistics14sp9 _queueStatistics;
 
         [XmlElement(ElementName = "queueStatistics", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:4733")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:4729")]
         public BroadWorksConnector.Ocip.Models.CallCenterQueueStatistics14sp9 QueueStatistics
         {
             get => _queueStatistics;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "agentStatistics", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:4733")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:4729")]
         public List<BroadWorksConnector.Ocip.Models.CallCenterAgentStatistics14sp9> AgentStatistics
         {
             get => _agentStatistics;

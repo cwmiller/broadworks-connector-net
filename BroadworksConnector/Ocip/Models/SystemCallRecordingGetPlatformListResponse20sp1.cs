@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:24597""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:9164""}]")]
     public class SystemCallRecordingGetPlatformListResponse20sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "systemDefault", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24597")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9164")]
         [MinLength(1)]
         [MaxLength(80)]
         public string SystemDefault
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _callRecordingPlatformTable;
 
         [XmlElement(ElementName = "callRecordingPlatformTable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24597")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9164")]
         public BroadWorksConnector.Ocip.Models.C.OCITable CallRecordingPlatformTable
         {
             get => _callRecordingPlatformTable;

@@ -34,6 +34,8 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceMACAddress))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceManagementEventAdditionalInfo))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceManagementEventLoginId))]
+    [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceManagementEventRequest))]
+    [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceManagementEventRequestTrackingId))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceName))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceNetAddress))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceSerialNumber))]
@@ -84,6 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaExactServiceType))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaExactSignalingAddressType))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaExactSkillLevel))]
+    [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaExactSubscriberType))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserDepartment))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserGroup))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserInTrunkGroup))]
@@ -119,8 +122,6 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaPersonalAssistantExclusionNumber))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaPersonalAssistantExclusionNumberDescription))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaPhysicalLocation))]
-    [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaProfileServiceCode))]
-    [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaProfileServiceCodeDescription))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaReceptionistNote))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaRegistrationURI))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaResellerId))]
@@ -153,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaZoneIPAddress))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaExactEndpointType))]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:50""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:50""}]")]
     public abstract class SearchCriteria
     {
 

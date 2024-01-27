@@ -23,14 +23,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:1031"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:1032""},{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:1036""},{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:1040""},{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:1043""}]}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:1049"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:1050""},{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:1054""},{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:1058""},{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:1061""}]}]")]
     public class AuthenticationVerifyRequest14sp8 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.AuthenticationVerifyResponse14sp8>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1043")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:1061")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _password;
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1032")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:1050")]
         [MinLength(1)]
         [MaxLength(60)]
         public string Password
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1036")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:1054")]
         [MinLength(1)]
         [MaxLength(23)]
         public string PhoneNumber
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _passcode;
 
         [XmlElement(ElementName = "passcode", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1036")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:1054")]
         [MinLength(1)]
         [MaxLength(30)]
         public string Passcode
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _loginToken;
 
         [XmlElement(ElementName = "loginToken", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1040")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:1058")]
         [MinLength(1)]
         public string LoginToken
         {
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _sipAuthenticationUserName;
 
         [XmlElement(ElementName = "sipAuthenticationUserName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1043")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:1061")]
         [MinLength(1)]
         [MaxLength(80)]
         public string SipAuthenticationUserName
@@ -143,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _sipAuthenticationPassword;
 
         [XmlElement(ElementName = "sipAuthenticationPassword", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:1043")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:1061")]
         [MinLength(1)]
         [MaxLength(60)]
         public string SipAuthenticationPassword

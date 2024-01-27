@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a69fde15f3aa7494d83b57461a7a70bb:302""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9975efc7f5883a0595f811ee72ba4df5:304""}]")]
     public class UserAdviceOfChargeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"a69fde15f3aa7494d83b57461a7a70bb:302")]
+        [Group(@"9975efc7f5883a0595f811ee72ba4df5:304")]
         public bool IsActive
         {
             get => _isActive;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.AdviceOfChargeType _aocType;
 
         [XmlElement(ElementName = "aocType", IsNullable = false, Namespace = "")]
-        [Group(@"a69fde15f3aa7494d83b57461a7a70bb:302")]
+        [Group(@"9975efc7f5883a0595f811ee72ba4df5:304")]
         public BroadWorksConnector.Ocip.Models.AdviceOfChargeType AocType
         {
             get => _aocType;

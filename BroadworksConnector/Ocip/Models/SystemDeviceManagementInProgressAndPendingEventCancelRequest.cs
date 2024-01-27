@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7865"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7866""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:7984"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:7985""}]}]")]
     public class SystemDeviceManagementInProgressAndPendingEventCancelRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _cancelAllEvents;
 
         [XmlElement(ElementName = "cancelAllEvents", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7866")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7985")]
         public string CancelAllEvents
         {
             get => _cancelAllEvents;
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SystemDeviceManagementInProgressAndPendingEventCancelRequestCancelMultipleEvents _cancelMultipleEvents;
 
         [XmlElement(ElementName = "cancelMultipleEvents", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7866")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7985")]
         public BroadWorksConnector.Ocip.Models.SystemDeviceManagementInProgressAndPendingEventCancelRequestCancelMultipleEvents CancelMultipleEvents
         {
             get => _cancelMultipleEvents;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected List<int> _eventId = new List<int>();
 
         [XmlElement(ElementName = "eventId", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7866")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7985")]
         public List<int> EventId
         {
             get => _eventId;

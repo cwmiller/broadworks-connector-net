@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:47822""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:48708""}]")]
     public class CPEDeviceModifyOptions
     {
 
@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableMonitoring", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47822")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48708")]
         public bool EnableMonitoring
         {
             get => _enableMonitoring;
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "resetEvent", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47822")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48708")]
         public BroadWorksConnector.Ocip.Models.CPEDeviceResetEventType? ResetEvent
         {
             get => _resetEvent;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceManagementDeviceTypeOptions", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47822")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48708")]
         public BroadWorksConnector.Ocip.Models.DeviceManagementDeviceTypeModifyOptions DeviceManagementDeviceTypeOptions
         {
             get => _deviceManagementDeviceTypeOptions;

@@ -14,7 +14,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ba512c9f02a5f24a24d49cc945f1524d:72""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b4095e83c8aa84e850615ffe7d48b0d6:72""}]")]
     public class ServiceProviderBroadWorksCommunicatorModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ba512c9f02a5f24a24d49cc945f1524d:72")]
+        [Group(@"b4095e83c8aa84e850615ffe7d48b0d6:72")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "configurationServerURL", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ba512c9f02a5f24a24d49cc945f1524d:72")]
+        [Group(@"b4095e83c8aa84e850615ffe7d48b0d6:72")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ConfigurationServerURL

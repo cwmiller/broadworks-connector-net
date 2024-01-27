@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:1897""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a63afa661ee5c74f4700e562e88c66d0:1896""}]")]
     public class OutgoingCallingPlanDigitPatternCallMeNowPermissions
     {
 
         protected List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternCallMeNowPermission> _digitPatternPermissions = new List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternCallMeNowPermission>();
 
         [XmlElement(ElementName = "digitPatternPermissions", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:1897")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:1896")]
         public List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDigitPatternCallMeNowPermission> DigitPatternPermissions
         {
             get => _digitPatternPermissions;

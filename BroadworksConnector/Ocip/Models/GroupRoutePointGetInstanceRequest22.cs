@@ -8,23 +8,23 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Request to get all the information of a Route Point instance.
-    /// The response is either GroupRoutePointGetInstanceResponse19sp1 or ErrorResponse.
+    /// The response is either GroupRoutePointGetInstanceResponse22 or ErrorResponse.
     /// Replaced by GroupRoutePointGetInstanceRequest23.
-    /// <see cref="GroupRoutePointGetInstanceResponse19sp1"/>
+    /// <see cref="GroupRoutePointGetInstanceResponse22"/>
     /// <see cref="ErrorResponse"/>
     /// <see cref="GroupRoutePointGetInstanceRequest23"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:3856""}]")]
-    public class GroupRoutePointGetInstanceRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupRoutePointGetInstanceResponse19sp1>
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:4405""}]")]
+    public class GroupRoutePointGetInstanceRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupRoutePointGetInstanceResponse22>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:3856")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:4405")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId

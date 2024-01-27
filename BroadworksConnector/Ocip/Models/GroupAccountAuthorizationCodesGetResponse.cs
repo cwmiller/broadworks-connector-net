@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""65df37199ec43e5d21a187db39d63158:176""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fcf43b3a58ff66521262b4426bab8748:176""}]")]
     public class GroupAccountAuthorizationCodesGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.AccountAuthorizationCodeType _type;
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-        [Group(@"65df37199ec43e5d21a187db39d63158:176")]
+        [Group(@"fcf43b3a58ff66521262b4426bab8748:176")]
         public BroadWorksConnector.Ocip.Models.AccountAuthorizationCodeType Type
         {
             get => _type;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _numberOfDigits;
 
         [XmlElement(ElementName = "numberOfDigits", IsNullable = false, Namespace = "")]
-        [Group(@"65df37199ec43e5d21a187db39d63158:176")]
+        [Group(@"fcf43b3a58ff66521262b4426bab8748:176")]
         [MinInclusive(2)]
         [MaxInclusive(14)]
         public int NumberOfDigits
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowLocalAndTollFreeCalls;
 
         [XmlElement(ElementName = "allowLocalAndTollFreeCalls", IsNullable = false, Namespace = "")]
-        [Group(@"65df37199ec43e5d21a187db39d63158:176")]
+        [Group(@"fcf43b3a58ff66521262b4426bab8748:176")]
         public bool AllowLocalAndTollFreeCalls
         {
             get => _allowLocalAndTollFreeCalls;
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _mandatoryUsageUserTable;
 
         [XmlElement(ElementName = "mandatoryUsageUserTable", IsNullable = false, Namespace = "")]
-        [Group(@"65df37199ec43e5d21a187db39d63158:176")]
+        [Group(@"fcf43b3a58ff66521262b4426bab8748:176")]
         public BroadWorksConnector.Ocip.Models.C.OCITable MandatoryUsageUserTable
         {
             get => _mandatoryUsageUserTable;
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _optionalUsageUserTable;
 
         [XmlElement(ElementName = "optionalUsageUserTable", IsNullable = false, Namespace = "")]
-        [Group(@"65df37199ec43e5d21a187db39d63158:176")]
+        [Group(@"fcf43b3a58ff66521262b4426bab8748:176")]
         public BroadWorksConnector.Ocip.Models.C.OCITable OptionalUsageUserTable
         {
             get => _optionalUsageUserTable;

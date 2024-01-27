@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ee7bb69368e23a56a82c5d9cf07b5433:180""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""aa3a240fa755015613cfb9259eccafef:180""}]")]
     public class SystemSMDIMessageDeskModifyServerRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"ee7bb69368e23a56a82c5d9cf07b5433:180")]
+        [Group(@"aa3a240fa755015613cfb9259eccafef:180")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ee7bb69368e23a56a82c5d9cf07b5433:180")]
+        [Group(@"aa3a240fa755015613cfb9259eccafef:180")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NetAddress
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ee7bb69368e23a56a82c5d9cf07b5433:180")]
+        [Group(@"aa3a240fa755015613cfb9259eccafef:180")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int Port
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ee7bb69368e23a56a82c5d9cf07b5433:180")]
+        [Group(@"aa3a240fa755015613cfb9259eccafef:180")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

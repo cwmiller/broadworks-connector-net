@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:164""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:164""}]")]
     public class SearchCriteriaAlternateTrunkIdentity : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         protected BroadWorksConnector.Ocip.Models.SearchMode _mode;
 
         [XmlElement(ElementName = "mode", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:164")]
+        [Group(@"972fbf832439609ec8f2765c5637c3f1:164")]
         public BroadWorksConnector.Ocip.Models.SearchMode Mode
         {
             get => _mode;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _value;
 
         [XmlElement(ElementName = "value", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:164")]
+        [Group(@"972fbf832439609ec8f2765c5637c3f1:164")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Value
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isCaseInsensitive;
 
         [XmlElement(ElementName = "isCaseInsensitive", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:164")]
+        [Group(@"972fbf832439609ec8f2765c5637c3f1:164")]
         public bool IsCaseInsensitive
         {
             get => _isCaseInsensitive;

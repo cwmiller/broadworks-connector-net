@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:6815""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:6947""}]")]
     public class GroupCallCenterModifySupervisorListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6815")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:6947")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "reportingServerURL", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6815")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:6947")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ReportingServerURL
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "supervisorUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6815")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:6947")]
         public BroadWorksConnector.Ocip.Models.ReplacementUserIdList SupervisorUserIdList
         {
             get => _supervisorUserIdList;

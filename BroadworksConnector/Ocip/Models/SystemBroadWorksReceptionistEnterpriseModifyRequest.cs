@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb12998f4f9e45cedde01f08569f4c7c:81""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""44477d346d2631b033071e12af214ac8:81""}]")]
     public class SystemBroadWorksReceptionistEnterpriseModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxMonitoredUsers", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb12998f4f9e45cedde01f08569f4c7c:81")]
+        [Group(@"44477d346d2631b033071e12af214ac8:81")]
         [MinInclusive(1)]
         [MaxInclusive(1000)]
         public int MaxMonitoredUsers

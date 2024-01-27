@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2032""}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:2191""}]")]
     public class DefaultNetworkClassOfService
     {
 
         protected bool _useExisting;
 
         [XmlElement(ElementName = "useExisting", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2032")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2191")]
         public bool UseExisting
         {
             get => _useExisting;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _networkClassOfServiceName;
 
         [XmlElement(ElementName = "networkClassOfServiceName", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2032")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2191")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfServiceName

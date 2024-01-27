@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:35095""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:35746""}]")]
     public class SystemSubscriberGetCallProcessingParametersResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.SystemUserCallingLineIdSelection _userCallingLineIdSelection;
 
         [XmlElement(ElementName = "userCallingLineIdSelection", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35095")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:35746")]
         public BroadWorksConnector.Ocip.Models.SystemUserCallingLineIdSelection UserCallingLineIdSelection
         {
             get => _userCallingLineIdSelection;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isExtendedCallingLineIdActive;
 
         [XmlElement(ElementName = "isExtendedCallingLineIdActive", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35095")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:35746")]
         public bool IsExtendedCallingLineIdActive
         {
             get => _isExtendedCallingLineIdActive;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isRingTimeOutActive;
 
         [XmlElement(ElementName = "isRingTimeOutActive", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35095")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:35746")]
         public bool IsRingTimeOutActive
         {
             get => _isRingTimeOutActive;
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _ringTimeoutSeconds;
 
         [XmlElement(ElementName = "ringTimeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35095")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:35746")]
         [MinInclusive(1)]
         [MaxInclusive(180)]
         public int RingTimeoutSeconds

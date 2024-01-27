@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4455""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:4464""}]")]
     public class ProfileAndServiceMusicOnHoldInfo
     {
 
         protected bool _enableVideo;
 
         [XmlElement(ElementName = "enableVideo", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4455")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:4464")]
         public bool EnableVideo
         {
             get => _enableVideo;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead16 _source;
 
         [XmlElement(ElementName = "source", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4455")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:4464")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead16 Source
         {
             get => _source;
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useAlternateSourceForInternalCalls;
 
         [XmlElement(ElementName = "useAlternateSourceForInternalCalls", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4455")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:4464")]
         public bool UseAlternateSourceForInternalCalls
         {
             get => _useAlternateSourceForInternalCalls;
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "internalSource", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4455")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:4464")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldUserSourceRead16 InternalSource
         {
             get => _internalSource;

@@ -14,7 +14,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:6188""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:6268""}]")]
     public class SystemCommunicationBarringIncomingCriteriaGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6188")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6268")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6188")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6268")]
         [MinLength(1)]
         [MaxLength(40)]
         public string TimeSchedule
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6188")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6268")]
         [MinLength(1)]
         [MaxLength(40)]
         public string HolidaySchedule
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "matchNumberPortabilityStatus", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6188")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6268")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> MatchNumberPortabilityStatus
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _callTaggedAsSpam;
 
         [XmlElement(ElementName = "callTaggedAsSpam", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6188")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6268")]
         public bool CallTaggedAsSpam
         {
             get => _callTaggedAsSpam;

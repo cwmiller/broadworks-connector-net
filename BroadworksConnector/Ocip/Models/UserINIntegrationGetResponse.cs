@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2b7b9ea45350592016ce6935a4d7694:56""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""841786e27ac49a43576369a93b4cc726:56""}]")]
     public class UserINIntegrationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "originatingServiceKey", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2b7b9ea45350592016ce6935a4d7694:56")]
+        [Group(@"841786e27ac49a43576369a93b4cc726:56")]
         [MinInclusive(0)]
         [MaxInclusive(999)]
         public int OriginatingServiceKey
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "terminatingServiceKey", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e2b7b9ea45350592016ce6935a4d7694:56")]
+        [Group(@"841786e27ac49a43576369a93b4cc726:56")]
         [MinInclusive(0)]
         [MaxInclusive(999)]
         public int TerminatingServiceKey

@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3667""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4156""}]")]
     public class RecurrenceRecurYearlyByWeek
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "recurInterval", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3667")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4156")]
         [MinInclusive(1)]
         [MaxInclusive(99)]
         public int RecurInterval
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.DayOfWeek _dayOfWeek;
 
         [XmlElement(ElementName = "dayOfWeek", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3667")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4156")]
         public BroadWorksConnector.Ocip.Models.DayOfWeek DayOfWeek
         {
             get => _dayOfWeek;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.DayOfWeekInMonth _dayOfWeekInMonth;
 
         [XmlElement(ElementName = "dayOfWeekInMonth", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3667")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4156")]
         public BroadWorksConnector.Ocip.Models.DayOfWeekInMonth DayOfWeekInMonth
         {
             get => _dayOfWeekInMonth;
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.Month _month;
 
         [XmlElement(ElementName = "month", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3667")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4156")]
         public BroadWorksConnector.Ocip.Models.Month Month
         {
             get => _month;

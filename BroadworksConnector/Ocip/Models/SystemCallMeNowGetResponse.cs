@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1f0f230fee2817fe00157925859dc28e:60""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""adf9583170c1dc9ec6c152ba1238437a:60""}]")]
     public class SystemCallMeNowGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected int _passcodeLength;
 
         [XmlElement(ElementName = "passcodeLength", IsNullable = false, Namespace = "")]
-        [Group(@"1f0f230fee2817fe00157925859dc28e:60")]
+        [Group(@"adf9583170c1dc9ec6c152ba1238437a:60")]
         [MinInclusive(2)]
         [MaxInclusive(30)]
         public int PasscodeLength
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _passcodeTimeoutSeconds;
 
         [XmlElement(ElementName = "passcodeTimeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"1f0f230fee2817fe00157925859dc28e:60")]
+        [Group(@"adf9583170c1dc9ec6c152ba1238437a:60")]
         [MinInclusive(30)]
         [MaxInclusive(180)]
         public int PasscodeTimeoutSeconds

@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:7799"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:7801""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:9666"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:9668""}]}]")]
     public class SystemConfigurableFileSystemGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _mediaDirectory;
 
         [XmlElement(ElementName = "mediaDirectory", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7799")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9666")]
         [MinLength(1)]
         [MaxLength(256)]
         public string MediaDirectory
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SystemConfigurableFileSystemGetResponseProtocolFile _protocolFile;
 
         [XmlElement(ElementName = "protocolFile", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7801")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9668")]
         public BroadWorksConnector.Ocip.Models.SystemConfigurableFileSystemGetResponseProtocolFile ProtocolFile
         {
             get => _protocolFile;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SystemConfigurableFileSystemGetResponseProtocolWebDAV _protocolWebDAV;
 
         [XmlElement(ElementName = "protocolWebDAV", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7801")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9668")]
         public BroadWorksConnector.Ocip.Models.SystemConfigurableFileSystemGetResponseProtocolWebDAV ProtocolWebDAV
         {
             get => _protocolWebDAV;

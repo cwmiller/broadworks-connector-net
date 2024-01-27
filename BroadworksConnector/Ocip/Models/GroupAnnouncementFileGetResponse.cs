@@ -21,14 +21,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:3608""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:3739""}]")]
     public class GroupAnnouncementFileGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3608")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:3739")]
         [MinLength(1)]
         [MaxLength(256)]
         public string Description
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _filesize;
 
         [XmlElement(ElementName = "filesize", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3608")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:3739")]
         public int Filesize
         {
             get => _filesize;
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _lastUploaded;
 
         [XmlElement(ElementName = "lastUploaded", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3608")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:3739")]
         public string LastUploaded
         {
             get => _lastUploaded;
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _usageTable;
 
         [XmlElement(ElementName = "usageTable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:3608")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:3739")]
         public BroadWorksConnector.Ocip.Models.C.OCITable UsageTable
         {
             get => _usageTable;

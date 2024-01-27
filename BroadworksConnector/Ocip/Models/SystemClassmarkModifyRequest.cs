@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0d0e878cbc947aebb19ad489b2ffef11:154""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bd23272215266344f26a1702c47ce590:154""}]")]
     public class SystemClassmarkModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _classmark;
 
         [XmlElement(ElementName = "classmark", IsNullable = false, Namespace = "")]
-        [Group(@"0d0e878cbc947aebb19ad489b2ffef11:154")]
+        [Group(@"bd23272215266344f26a1702c47ce590:154")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Classmark
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "value", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0d0e878cbc947aebb19ad489b2ffef11:154")]
+        [Group(@"bd23272215266344f26a1702c47ce590:154")]
         [MinLength(1)]
         [MaxLength(32)]
         public string Value
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "webDisplayKey", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"0d0e878cbc947aebb19ad489b2ffef11:154")]
+        [Group(@"bd23272215266344f26a1702c47ce590:154")]
         [MinLength(1)]
         [MaxLength(40)]
         public string WebDisplayKey

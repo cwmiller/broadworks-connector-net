@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:999""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:1033""}]")]
     public class SearchCriteriaExactDomainLevel : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         protected BroadWorksConnector.Ocip.Models.DomainLevel _domainLevel;
 
         [XmlElement(ElementName = "domainLevel", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:999")]
+        [Group(@"972fbf832439609ec8f2765c5637c3f1:1033")]
         public BroadWorksConnector.Ocip.Models.DomainLevel DomainLevel
         {
             get => _domainLevel;

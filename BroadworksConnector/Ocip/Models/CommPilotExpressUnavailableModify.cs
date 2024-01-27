@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""8c204d784d1904d9eeea996d46de69be:271""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de7795e1833d459a7eb89116d772fd78:271""}]")]
     public class CommPilotExpressUnavailableModify
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "incomingCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"8c204d784d1904d9eeea996d46de69be:271")]
+        [Group(@"de7795e1833d459a7eb89116d772fd78:271")]
         public BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionWithExceptionModify IncomingCalls
         {
             get => _incomingCalls;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "voiceMailGreeting", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"8c204d784d1904d9eeea996d46de69be:271")]
+        [Group(@"de7795e1833d459a7eb89116d772fd78:271")]
         public BroadWorksConnector.Ocip.Models.CommPilotExpressVoiceMailGreeting VoiceMailGreeting
         {
             get => _voiceMailGreeting;

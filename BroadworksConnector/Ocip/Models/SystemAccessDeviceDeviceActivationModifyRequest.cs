@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:926""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:936""}]")]
     public class SystemAccessDeviceDeviceActivationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:926")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:936")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _activateDevice;
 
         [XmlElement(ElementName = "activateDevice", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:926")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:936")]
         public bool ActivateDevice
         {
             get => _activateDevice;

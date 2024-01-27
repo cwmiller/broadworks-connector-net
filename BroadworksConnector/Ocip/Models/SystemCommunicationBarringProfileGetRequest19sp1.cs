@@ -8,7 +8,8 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get an existing Communication Barring Profile.
-    /// The response is either a SystemCommunicationBarringProfileGetResponse19sp1 or an ErrorResponse.
+    /// The response is either a SystemCommunicationBarringProfileGetResponse19sp1
+    /// or an ErrorResponse.
     /// 
     /// Replaced by: SystemCommunicationBarringProfileGetRequest19sp1V2 in AS data mode
     /// <see cref="SystemCommunicationBarringProfileGetResponse19sp1"/>
@@ -18,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:7659""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:9526""}]")]
     public class SystemCommunicationBarringProfileGetRequest19sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemCommunicationBarringProfileGetResponse19sp1>
     {
 
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7659")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9526")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name

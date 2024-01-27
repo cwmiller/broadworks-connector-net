@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:770""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bc805893b9cc7e3e01eec64e9ad62768:771""}]")]
     public class UserCollaborateMyRoomGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _roomId;
 
         [XmlElement(ElementName = "roomId", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:770")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:771")]
         [MinLength(4)]
         [MaxLength(15)]
         public string RoomId
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _roomName;
 
         [XmlElement(ElementName = "roomName", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:770")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:771")]
         [MinLength(1)]
         [MaxLength(40)]
         public string RoomName
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CollaborateRoomAttendeeNotification _attendeeNotification;
 
         [XmlElement(ElementName = "attendeeNotification", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:770")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:771")]
         public BroadWorksConnector.Ocip.Models.CollaborateRoomAttendeeNotification AttendeeNotification
         {
             get => _attendeeNotification;
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _endCollaborateRoomSessionOnOwnerExit;
 
         [XmlElement(ElementName = "endCollaborateRoomSessionOnOwnerExit", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:770")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:771")]
         public bool EndCollaborateRoomSessionOnOwnerExit
         {
             get => _endCollaborateRoomSessionOnOwnerExit;
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _ownerRequired;
 
         [XmlElement(ElementName = "ownerRequired", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:770")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:771")]
         public bool OwnerRequired
         {
             get => _ownerRequired;

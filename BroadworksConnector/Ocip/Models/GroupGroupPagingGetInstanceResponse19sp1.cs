@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0d36df8c109e3ea7324f79031368c661:316""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""8ede928f2a9c1318573ba9c7a105655c:315""}]")]
     public class GroupGroupPagingGetInstanceResponse19sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        [Group(@"0d36df8c109e3ea7324f79031368c661:316")]
+        [Group(@"8ede928f2a9c1318573ba9c7a105655c:315")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _confirmationToneTimeoutSeconds;
 
         [XmlElement(ElementName = "confirmationToneTimeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"0d36df8c109e3ea7324f79031368c661:316")]
+        [Group(@"8ede928f2a9c1318573ba9c7a105655c:315")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
         public int ConfirmationToneTimeoutSeconds
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _deliverOriginatorCLIDInstead;
 
         [XmlElement(ElementName = "deliverOriginatorCLIDInstead", IsNullable = false, Namespace = "")]
-        [Group(@"0d36df8c109e3ea7324f79031368c661:316")]
+        [Group(@"8ede928f2a9c1318573ba9c7a105655c:315")]
         public bool DeliverOriginatorCLIDInstead
         {
             get => _deliverOriginatorCLIDInstead;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "originatorCLIDPrefix", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0d36df8c109e3ea7324f79031368c661:316")]
+        [Group(@"8ede928f2a9c1318573ba9c7a105655c:315")]
         [MinLength(1)]
         [MaxLength(30)]
         public string OriginatorCLIDPrefix
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0d36df8c109e3ea7324f79031368c661:316")]
+        [Group(@"8ede928f2a9c1318573ba9c7a105655c:315")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a8df43dca23d99d8ab44c0082aadfbe0:80""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2c9f194a3272e429f2e5215dd988b94a:80""}]")]
     public class ServiceProviderExternalCustomRingbackModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:80")]
+        [Group(@"2c9f194a3272e429f2e5215dd988b94a:80")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "prefixDigits", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:80")]
+        [Group(@"2c9f194a3272e429f2e5215dd988b94a:80")]
         [MinLength(1)]
         [MaxLength(30)]
         public string PrefixDigits
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serverNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:80")]
+        [Group(@"2c9f194a3272e429f2e5215dd988b94a:80")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServerNetAddress
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serverPort", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:80")]
+        [Group(@"2c9f194a3272e429f2e5215dd988b94a:80")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int? ServerPort
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:80")]
+        [Group(@"2c9f194a3272e429f2e5215dd988b94a:80")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
         public int TimeoutSeconds

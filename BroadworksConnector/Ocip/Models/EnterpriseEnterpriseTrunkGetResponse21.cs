@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:2350"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:2354""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:2438"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:2442""}]}]")]
     public class EnterpriseEnterpriseTrunkGetResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected int _maximumRerouteAttempts;
 
         [XmlElement(ElementName = "maximumRerouteAttempts", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2350")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:2438")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int MaximumRerouteAttempts
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.EnterpriseTrunkRouteExhaustionAction _routeExhaustionAction;
 
         [XmlElement(ElementName = "routeExhaustionAction", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2350")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:2438")]
         public BroadWorksConnector.Ocip.Models.EnterpriseTrunkRouteExhaustionAction RouteExhaustionAction
         {
             get => _routeExhaustionAction;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "routeExhaustionForwardAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2350")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:2438")]
         [MinLength(1)]
         [MaxLength(161)]
         public string RouteExhaustionForwardAddress
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.EnterpriseEnterpriseTrunkGetResponse21OrderedRouting _orderedRouting;
 
         [XmlElement(ElementName = "orderedRouting", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2354")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:2442")]
         public BroadWorksConnector.Ocip.Models.EnterpriseEnterpriseTrunkGetResponse21OrderedRouting OrderedRouting
         {
             get => _orderedRouting;
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.EnterpriseEnterpriseTrunkGetResponse21PriorityWeightedRouting _priorityWeightedRouting;
 
         [XmlElement(ElementName = "priorityWeightedRouting", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2354")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:2442")]
         public BroadWorksConnector.Ocip.Models.EnterpriseEnterpriseTrunkGetResponse21PriorityWeightedRouting PriorityWeightedRouting
         {
             get => _priorityWeightedRouting;
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableCapacityManagement;
 
         [XmlElement(ElementName = "enableCapacityManagement", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2350")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:2438")]
         public bool EnableCapacityManagement
         {
             get => _enableCapacityManagement;
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxActiveCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2350")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:2438")]
         [MinInclusive(1)]
         public int MaxActiveCalls
         {
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "capacityExceededTrapInitialCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2350")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:2438")]
         [MinInclusive(0)]
         public int CapacityExceededTrapInitialCalls
         {
@@ -166,7 +166,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "capacityExceededTrapOffsetCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2350")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:2438")]
         [MinInclusive(0)]
         public int CapacityExceededTrapOffsetCalls
         {

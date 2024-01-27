@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:47624""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:48510""}]")]
     public class CallCenterAgentDailyStatistics13mp8
     {
 
         protected int _numberOfCallsReceived;
 
         [XmlElement(ElementName = "numberOfCallsReceived", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47624")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48510")]
         public int NumberOfCallsReceived
         {
             get => _numberOfCallsReceived;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _numberOfCallsNotAnswered;
 
         [XmlElement(ElementName = "numberOfCallsNotAnswered", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47624")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48510")]
         public int NumberOfCallsNotAnswered
         {
             get => _numberOfCallsNotAnswered;
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _averageTimePerCallSeconds;
 
         [XmlElement(ElementName = "averageTimePerCallSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47624")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48510")]
         public int AverageTimePerCallSeconds
         {
             get => _averageTimePerCallSeconds;
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _timeInCallsSeconds;
 
         [XmlElement(ElementName = "timeInCallsSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47624")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48510")]
         public int TimeInCallsSeconds
         {
             get => _timeInCallsSeconds;
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _timeLoggedOffSeconds;
 
         [XmlElement(ElementName = "timeLoggedOffSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47624")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48510")]
         public int TimeLoggedOffSeconds
         {
             get => _timeLoggedOffSeconds;
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _timeLoggedOnAndIdleSeconds;
 
         [XmlElement(ElementName = "timeLoggedOnAndIdleSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47624")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48510")]
         public int TimeLoggedOnAndIdleSeconds
         {
             get => _timeLoggedOnAndIdleSeconds;

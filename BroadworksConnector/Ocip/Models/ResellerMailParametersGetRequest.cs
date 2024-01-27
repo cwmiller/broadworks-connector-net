@@ -8,21 +8,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Request the reseller Mail parameters.
-    /// The response is either a ResellerMailParametersGetResponse or an ErrorResponse.
+    /// The response is either a ResellerMailParametersGetResponse or an
+    /// ErrorResponse.
     /// <see cref="ResellerMailParametersGetResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b009175f2a2a9d38115e319a6ad64d7f:620""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d45e381d6dbac771631649063122a42e:623""}]")]
     public class ResellerMailParametersGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ResellerMailParametersGetResponse>
     {
 
         protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:620")]
+        [Group(@"d45e381d6dbac771631649063122a42e:623")]
         [MinLength(1)]
         [MaxLength(36)]
         public string ResellerId

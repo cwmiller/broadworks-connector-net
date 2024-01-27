@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b9c14e2d80e4e7749688ca13ba233b44:546""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""090e91b2d78e873f5d76a2f16af08d3a:545""}]")]
     public class EnterpriseLocalGatewayGetUsageResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _gatewayGroupId;
 
         [XmlElement(ElementName = "gatewayGroupId", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:546")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:545")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GatewayGroupId
@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "gatewayGroupName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:546")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:545")]
         [MinLength(1)]
         [MaxLength(80)]
         public string GatewayGroupName
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _usedByEnterprise;
 
         [XmlElement(ElementName = "usedByEnterprise", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:546")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:545")]
         public bool UsedByEnterprise
         {
             get => _usedByEnterprise;
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _groupTable;
 
         [XmlElement(ElementName = "groupTable", IsNullable = false, Namespace = "")]
-        [Group(@"b9c14e2d80e4e7749688ca13ba233b44:546")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:545")]
         public BroadWorksConnector.Ocip.Models.C.OCITable GroupTable
         {
             get => _groupTable;

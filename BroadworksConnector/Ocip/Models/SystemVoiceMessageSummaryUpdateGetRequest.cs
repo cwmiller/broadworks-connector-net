@@ -9,13 +9,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Requests system voice mail message summary update parameter settings.
     /// The response is either SystemVoiceMessageSummaryUpdateGetResponse or ErrorResponse.
+    /// 
+    /// Replaced By: SystemVoiceMessageSummaryUpdateGetRequest25
     /// <see cref="SystemVoiceMessageSummaryUpdateGetResponse"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemVoiceMessageSummaryUpdateGetRequest25"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:537""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:36755""}]")]
     public class SystemVoiceMessageSummaryUpdateGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemVoiceMessageSummaryUpdateGetResponse>
     {
 

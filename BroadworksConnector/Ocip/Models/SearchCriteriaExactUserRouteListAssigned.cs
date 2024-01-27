@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:1330""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:1379""}]")]
     public class SearchCriteriaExactUserRouteListAssigned : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         protected bool _routeListAssigned;
 
         [XmlElement(ElementName = "routeListAssigned", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:1330")]
+        [Group(@"972fbf832439609ec8f2765c5637c3f1:1379")]
         public bool RouteListAssigned
         {
             get => _routeListAssigned;

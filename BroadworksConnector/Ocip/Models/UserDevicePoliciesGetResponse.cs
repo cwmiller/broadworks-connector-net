@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:42255""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:42864""}]")]
     public class UserDevicePoliciesGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.UserDevicePolicyLineMode _lineMode;
 
         [XmlElement(ElementName = "lineMode", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42255")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:42864")]
         public BroadWorksConnector.Ocip.Models.UserDevicePolicyLineMode LineMode
         {
             get => _lineMode;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableDeviceFeatureSynchronization;
 
         [XmlElement(ElementName = "enableDeviceFeatureSynchronization", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:42255")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:42864")]
         public bool EnableDeviceFeatureSynchronization
         {
             get => _enableDeviceFeatureSynchronization;

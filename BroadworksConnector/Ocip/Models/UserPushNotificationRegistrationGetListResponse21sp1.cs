@@ -15,19 +15,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Registration Date uses the format "yyyy-MM-dd'T'HH:mm:ss.SSSZ" in the time zone of the requested user.
     /// Example: 2010-10-01T09:30:00:000-0400.
+    /// 
+    /// Replaced by: UserPushNotificationRegistrationGetListResponse22
     /// <see cref="UserPushNotificationRegistrationGetListRequest21sp1"/>
+    /// <see cref="UserPushNotificationRegistrationGetListResponse22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3506""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:46514""}]")]
     public class UserPushNotificationRegistrationGetListResponse21sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3506")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:46514")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -47,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "pushNotificationRegistrationData", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3506")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:46514")]
         public List<BroadWorksConnector.Ocip.Models.PushNotificationRegistrationData> PushNotificationRegistrationData
         {
             get => _pushNotificationRegistrationData;

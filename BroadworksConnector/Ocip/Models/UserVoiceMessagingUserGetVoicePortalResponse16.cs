@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a8b2edcd7d6936a8b76653949ae59623:500""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9bff48d8661ff401ea11b6e32b924f02:499""}]")]
     public class UserVoiceMessagingUserGetVoicePortalResponse16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _usePersonalizedName;
 
         [XmlElement(ElementName = "usePersonalizedName", IsNullable = false, Namespace = "")]
-        [Group(@"a8b2edcd7d6936a8b76653949ae59623:500")]
+        [Group(@"9bff48d8661ff401ea11b6e32b924f02:499")]
         public bool UsePersonalizedName
         {
             get => _usePersonalizedName;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _voicePortalAutoLogin;
 
         [XmlElement(ElementName = "voicePortalAutoLogin", IsNullable = false, Namespace = "")]
-        [Group(@"a8b2edcd7d6936a8b76653949ae59623:500")]
+        [Group(@"9bff48d8661ff401ea11b6e32b924f02:499")]
         public bool VoicePortalAutoLogin
         {
             get => _voicePortalAutoLogin;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "personalizedNameAudioFileDescription", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a8b2edcd7d6936a8b76653949ae59623:500")]
+        [Group(@"9bff48d8661ff401ea11b6e32b924f02:499")]
         [MinLength(1)]
         [MaxLength(256)]
         public string PersonalizedNameAudioFileDescription
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "personalizedNameMediaType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a8b2edcd7d6936a8b76653949ae59623:500")]
+        [Group(@"9bff48d8661ff401ea11b6e32b924f02:499")]
         public BroadWorksConnector.Ocip.Models.MediaFileType PersonalizedNameMediaType
         {
             get => _personalizedNameMediaType;

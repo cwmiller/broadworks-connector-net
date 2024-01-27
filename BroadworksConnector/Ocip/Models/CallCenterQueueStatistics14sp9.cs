@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7367""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7353""}]")]
     public class CallCenterQueueStatistics14sp9
     {
 
         protected int _numberOfBusyOverflows;
 
         [XmlElement(ElementName = "numberOfBusyOverflows", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7367")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7353")]
         public int NumberOfBusyOverflows
         {
             get => _numberOfBusyOverflows;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _numberOfCallsAnswered;
 
         [XmlElement(ElementName = "numberOfCallsAnswered", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7367")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7353")]
         public int NumberOfCallsAnswered
         {
             get => _numberOfCallsAnswered;
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _numberOfCallsAbandoned;
 
         [XmlElement(ElementName = "numberOfCallsAbandoned", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7367")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7353")]
         public int NumberOfCallsAbandoned
         {
             get => _numberOfCallsAbandoned;
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _numberOfCallsTransferred;
 
         [XmlElement(ElementName = "numberOfCallsTransferred", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7367")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7353")]
         public int NumberOfCallsTransferred
         {
             get => _numberOfCallsTransferred;
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _numberOfCallsTimedout;
 
         [XmlElement(ElementName = "numberOfCallsTimedout", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7367")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7353")]
         public int NumberOfCallsTimedout
         {
             get => _numberOfCallsTimedout;
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _averageNumberOfAgentsTalking;
 
         [XmlElement(ElementName = "averageNumberOfAgentsTalking", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7367")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7353")]
         public string AverageNumberOfAgentsTalking
         {
             get => _averageNumberOfAgentsTalking;
@@ -121,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _averageNumberOfAgentsStaffed;
 
         [XmlElement(ElementName = "averageNumberOfAgentsStaffed", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7367")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7353")]
         public string AverageNumberOfAgentsStaffed
         {
             get => _averageNumberOfAgentsStaffed;
@@ -138,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _averageWaitSeconds;
 
         [XmlElement(ElementName = "averageWaitSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7367")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7353")]
         public int AverageWaitSeconds
         {
             get => _averageWaitSeconds;
@@ -155,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _averageAbandonmentSeconds;
 
         [XmlElement(ElementName = "averageAbandonmentSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7367")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7353")]
         public int AverageAbandonmentSeconds
         {
             get => _averageAbandonmentSeconds;

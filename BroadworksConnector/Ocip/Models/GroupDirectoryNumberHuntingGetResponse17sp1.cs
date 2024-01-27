@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7c509136e6ce6be616e313c3b28a0449:102""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""98227cfa4fa3d2af84e4bff7d8508ae7:101""}]")]
     public class GroupDirectoryNumberHuntingGetResponse17sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _agentUserTable;
 
         [XmlElement(ElementName = "agentUserTable", IsNullable = false, Namespace = "")]
-        [Group(@"7c509136e6ce6be616e313c3b28a0449:102")]
+        [Group(@"98227cfa4fa3d2af84e4bff7d8508ae7:101")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AgentUserTable
         {
             get => _agentUserTable;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useTerminateCallToAgentFirst;
 
         [XmlElement(ElementName = "useTerminateCallToAgentFirst", IsNullable = false, Namespace = "")]
-        [Group(@"7c509136e6ce6be616e313c3b28a0449:102")]
+        [Group(@"98227cfa4fa3d2af84e4bff7d8508ae7:101")]
         public bool UseTerminateCallToAgentFirst
         {
             get => _useTerminateCallToAgentFirst;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useOriginalAgentServicesForBusyAndNoAnswerCalls;
 
         [XmlElement(ElementName = "useOriginalAgentServicesForBusyAndNoAnswerCalls", IsNullable = false, Namespace = "")]
-        [Group(@"7c509136e6ce6be616e313c3b28a0449:102")]
+        [Group(@"98227cfa4fa3d2af84e4bff7d8508ae7:101")]
         public bool UseOriginalAgentServicesForBusyAndNoAnswerCalls
         {
             get => _useOriginalAgentServicesForBusyAndNoAnswerCalls;

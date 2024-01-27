@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:49351""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:50305""}]")]
     public class ReplacementCommunicationBarringIncomingRuleList
     {
 
         protected List<BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingRule> _rule = new List<BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingRule>();
 
         [XmlElement(ElementName = "rule", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:49351")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:50305")]
         public List<BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingRule> Rule
         {
             get => _rule;

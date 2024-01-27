@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:1516""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""405ec18fe08719ecf74e749d7e18c88f:1176""}]")]
     public class EnterpriseVoiceVPNGetResponse14sp3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1516")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1176")]
         public bool IsActive
         {
             get => _isActive;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDefaultSelection _defaultSelection;
 
         [XmlElement(ElementName = "defaultSelection", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1516")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1176")]
         public BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDefaultSelection DefaultSelection
         {
             get => _defaultSelection;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNNonMatchingE164NumberSelection _e164Selection;
 
         [XmlElement(ElementName = "e164Selection", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1516")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1176")]
         public BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNNonMatchingE164NumberSelection E164Selection
         {
             get => _e164Selection;
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _usePhoneContext;
 
         [XmlElement(ElementName = "usePhoneContext", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1516")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1176")]
         public bool UsePhoneContext
         {
             get => _usePhoneContext;

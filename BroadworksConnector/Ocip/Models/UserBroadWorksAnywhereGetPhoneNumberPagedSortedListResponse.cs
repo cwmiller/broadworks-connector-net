@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""72f634ecc58842ce9d362ca629a47ea9:405""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f39163d0e42e05c4a1692a62f625df9f:415""}]")]
     public class UserBroadWorksAnywhereGetPhoneNumberPagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _phoneNumberTable;
 
         [XmlElement(ElementName = "phoneNumberTable", IsNullable = false, Namespace = "")]
-        [Group(@"72f634ecc58842ce9d362ca629a47ea9:405")]
+        [Group(@"f39163d0e42e05c4a1692a62f625df9f:415")]
         public BroadWorksConnector.Ocip.Models.C.OCITable PhoneNumberTable
         {
             get => _phoneNumberTable;

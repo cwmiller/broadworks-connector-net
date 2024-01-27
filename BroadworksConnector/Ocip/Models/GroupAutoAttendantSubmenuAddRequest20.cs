@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ed0640d8ef49eb8b4eaa14d7c6f6c033:440""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ec63a55bc41262b2dd33a1f4e8e84674:464""}]")]
     public class GroupAutoAttendantSubmenuAddRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:440")]
+        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:464")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _submenuId;
 
         [XmlElement(ElementName = "submenuId", IsNullable = false, Namespace = "")]
-        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:440")]
+        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:464")]
         [MinLength(1)]
         [MaxLength(40)]
         public string SubmenuId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.AnnouncementSelection _announcementSelection;
 
         [XmlElement(ElementName = "announcementSelection", IsNullable = false, Namespace = "")]
-        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:440")]
+        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:464")]
         public BroadWorksConnector.Ocip.Models.AnnouncementSelection AnnouncementSelection
         {
             get => _announcementSelection;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:440")]
+        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:464")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey AudioFile
         {
             get => _audioFile;
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:440")]
+        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:464")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey VideoFile
         {
             get => _videoFile;
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableLevelExtensionDialing;
 
         [XmlElement(ElementName = "enableLevelExtensionDialing", IsNullable = false, Namespace = "")]
-        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:440")]
+        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:464")]
         public bool EnableLevelExtensionDialing
         {
             get => _enableLevelExtensionDialing;
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "keyConfiguration", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:440")]
+        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:464")]
         public List<BroadWorksConnector.Ocip.Models.AutoAttendantKeyConfiguration20> KeyConfiguration
         {
             get => _keyConfiguration;

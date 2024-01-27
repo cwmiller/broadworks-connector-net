@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip
                     {
                         break;
                     }
-                } 
+                }
             }
             finally
             {

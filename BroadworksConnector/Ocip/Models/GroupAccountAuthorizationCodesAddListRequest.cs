@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""65df37199ec43e5d21a187db39d63158:48""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fcf43b3a58ff66521262b4426bab8748:48""}]")]
     public class GroupAccountAuthorizationCodesAddListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"65df37199ec43e5d21a187db39d63158:48")]
+        [Group(@"fcf43b3a58ff66521262b4426bab8748:48")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"65df37199ec43e5d21a187db39d63158:48")]
+        [Group(@"fcf43b3a58ff66521262b4426bab8748:48")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected List<BroadWorksConnector.Ocip.Models.AccountAuthorizationCodeEntry> _codeEntry = new List<BroadWorksConnector.Ocip.Models.AccountAuthorizationCodeEntry>();
 
         [XmlElement(ElementName = "codeEntry", IsNullable = false, Namespace = "")]
-        [Group(@"65df37199ec43e5d21a187db39d63158:48")]
+        [Group(@"fcf43b3a58ff66521262b4426bab8748:48")]
         public List<BroadWorksConnector.Ocip.Models.AccountAuthorizationCodeEntry> CodeEntry
         {
             get => _codeEntry;

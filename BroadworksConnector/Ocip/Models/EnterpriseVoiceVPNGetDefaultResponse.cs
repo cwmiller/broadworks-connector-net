@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:1404""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""405ec18fe08719ecf74e749d7e18c88f:1064""}]")]
     public class EnterpriseVoiceVPNGetDefaultResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection> _policySelection = new List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection>();
 
         [XmlElement(ElementName = "policySelection", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1404")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1064")]
         public List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection> PolicySelection
         {
             get => _policySelection;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulationOperation> _digitManipulationOperation = new List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulationOperation>();
 
         [XmlElement(ElementName = "digitManipulationOperation", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1404")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1064")]
         public List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulationOperation> DigitManipulationOperation
         {
             get => _digitManipulationOperation;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "routeGroupId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1404")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1064")]
         [MinLength(1)]
         [MaxLength(30)]
         public List<string> RouteGroupId
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "treatment", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1404")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1064")]
         public List<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNTreatmentEntry> Treatment
         {
             get => _treatment;

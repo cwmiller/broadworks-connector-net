@@ -9,13 +9,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Contains a table of all matching system-level domain names and all matching reseller level domains.
     /// The column headings are: "Domain Name" and "Reseller Id".
-    /// The following elements are only used in AS and XS data mode and not returned in Amplify data mode:
-    /// systemDefaultDomain
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9520""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:9642""}]")]
     public class SystemDomainGetListResponse22V2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -23,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "systemDefaultDomain", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9520")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9642")]
         [MinLength(1)]
         [MaxLength(80)]
         public string SystemDefaultDomain
@@ -42,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _domainTable;
 
         [XmlElement(ElementName = "domainTable", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9520")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9642")]
         public BroadWorksConnector.Ocip.Models.C.OCITable DomainTable
         {
             get => _domainTable;

@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:47640""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:48526""}]")]
     public class CallCenterAgentStatistics13mp8
     {
 
         protected string _agentUserId;
 
         [XmlElement(ElementName = "agentUserId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47640")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48526")]
         [MinLength(1)]
         [MaxLength(161)]
         public string AgentUserId
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.UserDisplayNames _agentDisplayNames;
 
         [XmlElement(ElementName = "agentDisplayNames", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47640")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48526")]
         public BroadWorksConnector.Ocip.Models.UserDisplayNames AgentDisplayNames
         {
             get => _agentDisplayNames;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _available;
 
         [XmlElement(ElementName = "available", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47640")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48526")]
         public bool Available
         {
             get => _available;
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CallCenterAgentDailyStatistics13mp8 _statisticsYesterday;
 
         [XmlElement(ElementName = "statisticsYesterday", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47640")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48526")]
         public BroadWorksConnector.Ocip.Models.CallCenterAgentDailyStatistics13mp8 StatisticsYesterday
         {
             get => _statisticsYesterday;
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CallCenterAgentDailyStatistics13mp8 _statisticsToday;
 
         [XmlElement(ElementName = "statisticsToday", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47640")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48526")]
         public BroadWorksConnector.Ocip.Models.CallCenterAgentDailyStatistics13mp8 StatisticsToday
         {
             get => _statisticsToday;

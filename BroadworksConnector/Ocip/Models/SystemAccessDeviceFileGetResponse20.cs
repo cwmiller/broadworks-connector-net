@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:995""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:1005""}]")]
     public class SystemAccessDeviceFileGetResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode _fileSource;
 
         [XmlElement(ElementName = "fileSource", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:995")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1005")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode FileSource
         {
             get => _fileSource;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "configurationFileName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:995")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1005")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ConfigurationFileName
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _accessUrl;
 
         [XmlElement(ElementName = "accessUrl", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:995")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1005")]
         [MinLength(1)]
         [MaxLength(256)]
         public string AccessUrl
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "repositoryUrl", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:995")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1005")]
         [MinLength(1)]
         [MaxLength(256)]
         public string RepositoryUrl
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "templateUrl", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:995")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1005")]
         [MinLength(1)]
         [MaxLength(256)]
         public string TemplateUrl
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "extendedCaptureEnabled", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:995")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1005")]
         public bool ExtendedCaptureEnabled
         {
             get => _extendedCaptureEnabled;
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "extendedCaptureURL", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:995")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1005")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ExtendedCaptureURL

@@ -20,14 +20,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:6944""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:7057""}]")]
     public class SystemCountryCodeModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _countryCode;
 
         [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6944")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7057")]
         [MaxLength(3)]
         [RegularExpression(@"[0-9]|[1-9][0-9]{1,2}")]
         public string CountryCode
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "ringPeriodMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6944")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7057")]
         [MinInclusive(1)]
         [MaxInclusive(12000)]
         public int RingPeriodMilliseconds
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "offHookWarningTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6944")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7057")]
         [MinInclusive(1)]
         [MaxInclusive(360)]
         public int OffHookWarningTimerSeconds
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableNationalPrefix", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6944")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7057")]
         public bool EnableNationalPrefix
         {
             get => _enableNationalPrefix;
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "nationalPrefix", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6944")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7057")]
         [MinLength(1)]
         [MaxLength(2)]
         public string NationalPrefix
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "becomeDefaultCountryCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6944")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7057")]
         public bool BecomeDefaultCountryCode
         {
             get => _becomeDefaultCountryCode;
@@ -143,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxCallWaitingTones", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6944")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7057")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
         public int MaxCallWaitingTones
@@ -163,7 +163,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeBetweenCallWaitingTonesMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6944")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7057")]
         [MinInclusive(0)]
         [MaxInclusive(120000)]
         public int TimeBetweenCallWaitingTonesMilliseconds
@@ -183,7 +183,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "disableNationalPrefixForOffNetCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:6944")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7057")]
         public bool DisableNationalPrefixForOffNetCalls
         {
             get => _disableNationalPrefixForOffNetCalls;

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""dfcd2b22f2e2b3540d286342087ce042:110""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7e3b48428e45d35b1edd744adc90f9b:110""}]")]
     public class GroupCallCapacityManagementDeleteUserListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"dfcd2b22f2e2b3540d286342087ce042:110")]
+        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:110")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"dfcd2b22f2e2b3540d286342087ce042:110")]
+        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:110")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"dfcd2b22f2e2b3540d286342087ce042:110")]
+        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:110")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected List<string> _userId = new List<string>();
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"dfcd2b22f2e2b3540d286342087ce042:110")]
+        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:110")]
         [MinLength(1)]
         [MaxLength(161)]
         public List<string> UserId

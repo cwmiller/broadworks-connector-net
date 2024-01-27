@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:462""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:461""}]")]
     public class ServiceProviderVoiceMessagingGroupGetVoicePortalResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.ServiceProviderVoicePortalScope _voicePortalScope;
 
         [XmlElement(ElementName = "voicePortalScope", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:462")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:461")]
         public BroadWorksConnector.Ocip.Models.ServiceProviderVoicePortalScope VoicePortalScope
         {
             get => _voicePortalScope;

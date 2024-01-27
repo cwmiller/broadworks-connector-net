@@ -8,7 +8,8 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Request to get the configuration for a call processing policy profile Auto Attendant subscriber type profile.
-    /// The response is either a SystemCallProcessingPolicyProfileAutoAttendantProfileGetResponse22 or an ErrorResponse.
+    /// The response is either a SystemCallProcessingPolicyProfileAutoAttendantProfileGetResponse22 or an
+    /// ErrorResponse.
     /// The response contains the call processing policy profile setting for Auto Attendant.
     /// 
     /// Replaced by: SystemCallProcessingPolicyProfileAutoAttendantProfileGetRequest22V2 in AS data mode.
@@ -19,14 +20,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:22179""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:22950""}]")]
     public class SystemCallProcessingPolicyProfileAutoAttendantProfileGetRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemCallProcessingPolicyProfileAutoAttendantProfileGetResponse22>
     {
 
         protected string _callProcessingPolicyProfileName;
 
         [XmlElement(ElementName = "callProcessingPolicyProfileName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:22179")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:22950")]
         [MinLength(1)]
         [MaxLength(40)]
         public string CallProcessingPolicyProfileName

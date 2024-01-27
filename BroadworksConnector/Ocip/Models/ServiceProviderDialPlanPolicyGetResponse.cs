@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:18669""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:19207""}]")]
     public class ServiceProviderDialPlanPolicyGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _requiresAccessCodeForPublicCalls;
 
         [XmlElement(ElementName = "requiresAccessCodeForPublicCalls", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:18669")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:19207")]
         public bool RequiresAccessCodeForPublicCalls
         {
             get => _requiresAccessCodeForPublicCalls;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowE164PublicCalls;
 
         [XmlElement(ElementName = "allowE164PublicCalls", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:18669")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:19207")]
         public bool AllowE164PublicCalls
         {
             get => _allowE164PublicCalls;
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "publicDigitMap", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:18669")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:19207")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string PublicDigitMap
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "privateDigitMap", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:18669")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:19207")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string PrivateDigitMap

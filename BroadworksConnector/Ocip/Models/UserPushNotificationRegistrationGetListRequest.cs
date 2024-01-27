@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:14154"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:14155""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:46417"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:46418""}]}]")]
     public class UserPushNotificationRegistrationGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserPushNotificationRegistrationGetListResponse>
     {
 
         protected string _registrationId;
 
         [XmlElement(ElementName = "registrationId", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:14155")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:46418")]
         [MinLength(1)]
         [MaxLength(1024)]
         public string RegistrationId
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:14155")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:46418")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

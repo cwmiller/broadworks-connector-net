@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:993""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""adf25df72505d1c476ebb480b6cce18d:993""}]")]
     public class MeetMeConferencingConferenceScheduleScheduleRecurring
     {
 
         protected string _startTime;
 
         [XmlElement(ElementName = "startTime", IsNullable = false, Namespace = "")]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:993")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:993")]
         public string StartTime
         {
             get => _startTime;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceDuration _duration;
 
         [XmlElement(ElementName = "duration", IsNullable = false, Namespace = "")]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:993")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:993")]
         public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceDuration Duration
         {
             get => _duration;
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.Recurrence _recurrence;
 
         [XmlElement(ElementName = "recurrence", IsNullable = false, Namespace = "")]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:993")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:993")]
         public BroadWorksConnector.Ocip.Models.Recurrence Recurrence
         {
             get => _recurrence;

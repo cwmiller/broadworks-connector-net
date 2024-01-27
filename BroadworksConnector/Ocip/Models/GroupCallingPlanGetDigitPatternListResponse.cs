@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""00a30b95794e8eb54c36eccd0a6188fa:97""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4e20c63d19559e7dea5e6306aa6fbd0a:97""}]")]
     public class GroupCallingPlanGetDigitPatternListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _digitPatternTable;
 
         [XmlElement(ElementName = "digitPatternTable", IsNullable = false, Namespace = "")]
-        [Group(@"00a30b95794e8eb54c36eccd0a6188fa:97")]
+        [Group(@"4e20c63d19559e7dea5e6306aa6fbd0a:97")]
         public BroadWorksConnector.Ocip.Models.C.OCITable DigitPatternTable
         {
             get => _digitPatternTable;

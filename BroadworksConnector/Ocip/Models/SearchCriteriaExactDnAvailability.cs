@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:969""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:1003""}]")]
     public class SearchCriteriaExactDnAvailability : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         protected bool _available;
 
         [XmlElement(ElementName = "available", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:969")]
+        [Group(@"972fbf832439609ec8f2765c5637c3f1:1003")]
         public bool Available
         {
             get => _available;

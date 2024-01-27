@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models.C
     [Serializable]
     [XmlRoot(Namespace = "C")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""77f32f6c8e214eb5c1a80dedfce1cb56:201""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5a0dbb6ff453924acebff71a89ec0dc8:201""}]")]
     public class ErrorResponse : BroadWorksConnector.Ocip.Models.C.OCIResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models.C
 
         [XmlElement(ElementName = "errorCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:201")]
+        [Group(@"5a0dbb6ff453924acebff71a89ec0dc8:201")]
         public int ErrorCode
         {
             get => _errorCode;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models.C
         protected string _summary;
 
         [XmlElement(ElementName = "summary", IsNullable = false, Namespace = "")]
-        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:201")]
+        [Group(@"5a0dbb6ff453924acebff71a89ec0dc8:201")]
         public string Summary
         {
             get => _summary;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models.C
         protected string _summaryEnglish;
 
         [XmlElement(ElementName = "summaryEnglish", IsNullable = false, Namespace = "")]
-        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:201")]
+        [Group(@"5a0dbb6ff453924acebff71a89ec0dc8:201")]
         public string SummaryEnglish
         {
             get => _summaryEnglish;
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models.C
 
         [XmlElement(ElementName = "detail", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:201")]
+        [Group(@"5a0dbb6ff453924acebff71a89ec0dc8:201")]
         public string Detail
         {
             get => _detail;

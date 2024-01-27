@@ -8,21 +8,21 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get the list of all native tags with logic managed by the Device Management System, on a per-device profile basis.
-    /// The response is either GroupAccessDeviceGetAvailableCustomTagListResponse or ErrorResponse.
-    /// <see cref="GroupAccessDeviceGetAvailableCustomTagListResponse"/>
+    /// The response is either GroupAccessDeviceGetNativeTagsWithLogicListResponse or ErrorResponse.
+    /// <see cref="GroupAccessDeviceGetNativeTagsWithLogicListResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:1005""}]")]
-    public class GroupAccessDeviceGetNativeTagsWithLogicListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupAccessDeviceGetAvailableCustomTagListResponse>
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:1004""}]")]
+    public class GroupAccessDeviceGetNativeTagsWithLogicListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupAccessDeviceGetNativeTagsWithLogicListResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1005")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1004")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1005")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1004")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1005")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1004")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName

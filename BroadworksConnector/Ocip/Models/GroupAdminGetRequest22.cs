@@ -9,20 +9,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get a group administrators profile.
     /// The response is either a GroupAdminGetResponse22 or an ErrorResponse.
+    /// Replaced by: GroupAdminGetRequest22V2
     /// <see cref="GroupAdminGetResponse22"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="GroupAdminGetRequest22V2"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:1664""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:1491""}]")]
     public class GroupAdminGetRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupAdminGetResponse22>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:1664")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:1491")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:10484""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10602""}]")]
     public class SystemFileRepositoryDeviceUserModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _fileRepositoryName;
 
         [XmlElement(ElementName = "fileRepositoryName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10484")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10602")]
         [MinLength(1)]
         [MaxLength(40)]
         public string FileRepositoryName
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _userName;
 
         [XmlElement(ElementName = "userName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10484")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10602")]
         [MinLength(1)]
         [MaxLength(30)]
         public string UserName
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10484")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10602")]
         [MinLength(1)]
         [MaxLength(30)]
         public string Password
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowPut", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10484")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10602")]
         public bool AllowPut
         {
             get => _allowPut;
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowDelete", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10484")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10602")]
         public bool AllowDelete
         {
             get => _allowDelete;
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowGet", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10484")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10602")]
         public bool AllowGet
         {
             get => _allowGet;

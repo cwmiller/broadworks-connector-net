@@ -10,20 +10,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to the BusyLampFieldGetAvailableUserListRequest.
     /// Returns a table with column headings:
     /// "User Id", "Last Name", "First Name", "Hiragana Last Name", "Hiragana First Name",
-    /// "Phone Number", "Extension", "Department", "Email Address", "IMP Id".
+    /// "Phone Number", "Extension", "Department", "Email Address", "IMP Id",
+    /// "User External Id", and "User Place Type".
+    /// The following columns are supported in AS data mode only:
+    /// "User External Id", "User Place Type"
+    /// The possible values for "User Place Type" are: User, Place.
     /// <see cref="BusyLampFieldGetAvailableUserListRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4faeca417998d23ce2ff6b0b43212aa6:151""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b1745b5f688013b73224574a66f4f4b2:156""}]")]
     public class UserBusyLampFieldGetAvailableUserListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:151")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:156")]
         public BroadWorksConnector.Ocip.Models.C.OCITable UserTable
         {
             get => _userTable;

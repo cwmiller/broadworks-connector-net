@@ -10,13 +10,15 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to UserBusyLampFieldGetRequest16sp2.
     /// The table has column headings:
     /// "User Id", "Last Name", "First Name", "Hiragana Last Name", "Hiragana First Name",
-    /// "Phone Number", "Extension", "Department", "Email Address", "IMP Id".
+    /// "Phone Number", "Extension", "Department", "Email Address", "IMP Id",
+    /// "User External Id", and "User Place Type".
+    /// The possible values for "User Place Type" are: User, Place.
     /// <see cref="UserBusyLampFieldGetRequest16sp2"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4faeca417998d23ce2ff6b0b43212aa6:185""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b1745b5f688013b73224574a66f4f4b2:192""}]")]
     public class UserBusyLampFieldGetResponse16sp2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -24,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "listURI", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:185")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:192")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ListURI
@@ -43,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableCallParkNotification;
 
         [XmlElement(ElementName = "enableCallParkNotification", IsNullable = false, Namespace = "")]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:185")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:192")]
         public bool EnableCallParkNotification
         {
             get => _enableCallParkNotification;
@@ -60,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _monitoredUserTable;
 
         [XmlElement(ElementName = "monitoredUserTable", IsNullable = false, Namespace = "")]
-        [Group(@"4faeca417998d23ce2ff6b0b43212aa6:185")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:192")]
         public BroadWorksConnector.Ocip.Models.C.OCITable MonitoredUserTable
         {
             get => _monitoredUserTable;

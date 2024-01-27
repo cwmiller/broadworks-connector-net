@@ -22,14 +22,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a8b2edcd7d6936a8b76653949ae59623:62""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9bff48d8661ff401ea11b6e32b924f02:61""}]")]
     public class ExternalAuthenticationAuthorizeTokenRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"a8b2edcd7d6936a8b76653949ae59623:62")]
+        [Group(@"9bff48d8661ff401ea11b6e32b924f02:61")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a8b2edcd7d6936a8b76653949ae59623:62")]
+        [Group(@"9bff48d8661ff401ea11b6e32b924f02:61")]
         [MinLength(1)]
         [MaxLength(60)]
         public string Password
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _loginToken;
 
         [XmlElement(ElementName = "loginToken", IsNullable = false, Namespace = "")]
-        [Group(@"a8b2edcd7d6936a8b76653949ae59623:62")]
+        [Group(@"9bff48d8661ff401ea11b6e32b924f02:61")]
         [MinLength(1)]
         public string LoginToken
         {

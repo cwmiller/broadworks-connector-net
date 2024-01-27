@@ -8,21 +8,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get a list of Communication Barring profiles within a service provider that have a given Communication Barring Criteria assigned.
-    /// The response is either a ServiceProviderCommunicationBarringProfileGetCriteriaUsageListResponse or an ErrorResponse.
+    /// The response is either a ServiceProviderCommunicationBarringProfileGetCriteriaUsageListResponse
+    /// or an ErrorResponse.
     /// <see cref="ServiceProviderCommunicationBarringProfileGetCriteriaUsageListResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:2363""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:2443""}]")]
     public class ServiceProviderCommunicationBarringProfileGetCriteriaUsageListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ServiceProviderCommunicationBarringProfileGetCriteriaUsageListResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:2363")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:2443")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _criteriaName;
 
         [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:2363")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:2443")]
         [MinLength(1)]
         [MaxLength(40)]
         public string CriteriaName

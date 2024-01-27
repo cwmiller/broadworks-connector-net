@@ -10,20 +10,21 @@ namespace BroadWorksConnector.Ocip.Models
     /// Modify the user level data associated with Do Not Disturb.
     /// The response is either a SuccessResponse or an ErrorResponse.
     /// Engineering Note: This command is used internally by Call Processing.
+    /// The following element is only used in AS data mode and ignored in XS data mode: isDoNotDisturbSync
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5999b2d9c77e3f1626cad635ea37a4a7:75""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f424ffe4eea042849235863d758363ec:76""}]")]
     public class UserDoNotDisturbModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"5999b2d9c77e3f1626cad635ea37a4a7:75")]
+        [Group(@"f424ffe4eea042849235863d758363ec:76")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -43,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5999b2d9c77e3f1626cad635ea37a4a7:75")]
+        [Group(@"f424ffe4eea042849235863d758363ec:76")]
         public bool IsActive
         {
             get => _isActive;
@@ -61,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "ringSplash", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"5999b2d9c77e3f1626cad635ea37a4a7:75")]
+        [Group(@"f424ffe4eea042849235863d758363ec:76")]
         public bool RingSplash
         {
             get => _ringSplash;
@@ -74,6 +75,24 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool RingSplashSpecified { get; set; }
+
+        protected bool _isDoNotDisturbSync;
+
+        [XmlElement(ElementName = "isDoNotDisturbSync", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"f424ffe4eea042849235863d758363ec:76")]
+        public bool IsDoNotDisturbSync
+        {
+            get => _isDoNotDisturbSync;
+            set
+            {
+                IsDoNotDisturbSyncSpecified = true;
+                _isDoNotDisturbSync = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool IsDoNotDisturbSyncSpecified { get; set; }
 
     }
 }

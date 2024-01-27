@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7770900887d4397dd29272c7b9c55bc4:75""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4489f4baeefa41b8df0a86def4c05cd8:81""}]")]
     public class SystemLocationBasedCallingRestrictionsModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "physicalLocationIndicator", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7770900887d4397dd29272c7b9c55bc4:75")]
+        [Group(@"4489f4baeefa41b8df0a86def4c05cd8:81")]
         public BroadWorksConnector.Ocip.Models.PhysicalLocationIndicator PhysicalLocationIndicator
         {
             get => _physicalLocationIndicator;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enforceMscValidation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7770900887d4397dd29272c7b9c55bc4:75")]
+        [Group(@"4489f4baeefa41b8df0a86def4c05cd8:81")]
         public bool EnforceMscValidation
         {
             get => _enforceMscValidation;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableOfficeZoneAnnouncement", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7770900887d4397dd29272c7b9c55bc4:75")]
+        [Group(@"4489f4baeefa41b8df0a86def4c05cd8:81")]
         public bool EnableOfficeZoneAnnouncement
         {
             get => _enableOfficeZoneAnnouncement;
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enhanceOfficeZone", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7770900887d4397dd29272c7b9c55bc4:75")]
+        [Group(@"4489f4baeefa41b8df0a86def4c05cd8:81")]
         public bool EnhanceOfficeZone
         {
             get => _enhanceOfficeZone;
@@ -90,6 +90,62 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool EnhanceOfficeZoneSpecified { get; set; }
+
+        protected bool _enableMccMncBasedLocation;
+
+        [XmlElement(ElementName = "enableMccMncBasedLocation", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4489f4baeefa41b8df0a86def4c05cd8:81")]
+        public bool EnableMccMncBasedLocation
+        {
+            get => _enableMccMncBasedLocation;
+            set
+            {
+                EnableMccMncBasedLocationSpecified = true;
+                _enableMccMncBasedLocation = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool EnableMccMncBasedLocationSpecified { get; set; }
+
+        protected string _mccMncRoamingNetworkTranslationIndex;
+
+        [XmlElement(ElementName = "mccMncRoamingNetworkTranslationIndex", IsNullable = true, Namespace = "")]
+        [Optional]
+        [Group(@"4489f4baeefa41b8df0a86def4c05cd8:81")]
+        [MinLength(1)]
+        [MaxLength(128)]
+        public string MccMncRoamingNetworkTranslationIndex
+        {
+            get => _mccMncRoamingNetworkTranslationIndex;
+            set
+            {
+                MccMncRoamingNetworkTranslationIndexSpecified = true;
+                _mccMncRoamingNetworkTranslationIndex = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool MccMncRoamingNetworkTranslationIndexSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.DefaultMccMncBasedLocation _defaultMccMncBasedLocation;
+
+        [XmlElement(ElementName = "defaultMccMncBasedLocation", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4489f4baeefa41b8df0a86def4c05cd8:81")]
+        public BroadWorksConnector.Ocip.Models.DefaultMccMncBasedLocation DefaultMccMncBasedLocation
+        {
+            get => _defaultMccMncBasedLocation;
+            set
+            {
+                DefaultMccMncBasedLocationSpecified = true;
+                _defaultMccMncBasedLocation = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool DefaultMccMncBasedLocationSpecified { get; set; }
 
     }
 }

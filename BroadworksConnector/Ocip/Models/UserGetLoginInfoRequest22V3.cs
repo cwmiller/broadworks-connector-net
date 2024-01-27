@@ -14,7 +14,7 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// The response is a UserGetLoginInfoResponse22V3 or an ErrorResponse.
     /// 
-    /// The following elements are only used in AS data mode and ignored in XS and Amplify data mode.
+    /// The following elements are only used in AS data mode and ignored in XS data mode.
     /// loginRole
     /// <see cref="UserGetLoginInfoRequest22V3"/>
     /// <see cref="UserGetLoginInfoResponse22V3"/>
@@ -23,14 +23,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:43173"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:43174"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:43175""}]}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:43782"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:43783"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:43784""}]}]}]")]
     public class UserGetLoginInfoRequest22V3 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserGetLoginInfoResponse22V3>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43175")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43784")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "loginRole", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43175")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43784")]
         public BroadWorksConnector.Ocip.Models.LoginRole LoginRole
         {
             get => _loginRole;
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43174")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43783")]
         [MinLength(1)]
         [MaxLength(23)]
         public string PhoneNumber
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:43174")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43783")]
         [MinLength(1)]
         [MaxLength(161)]
         public string LinePort

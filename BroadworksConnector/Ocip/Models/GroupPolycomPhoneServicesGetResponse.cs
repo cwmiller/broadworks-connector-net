@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4f074d986b998636e2bcb0d67372b0f4:62""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ff29a940e42c5c9737f7438c4e6eea9d:62""}]")]
     public class GroupPolycomPhoneServicesGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _includeGroupCommonPhoneListInDirectory;
 
         [XmlElement(ElementName = "includeGroupCommonPhoneListInDirectory", IsNullable = false, Namespace = "")]
-        [Group(@"4f074d986b998636e2bcb0d67372b0f4:62")]
+        [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:62")]
         public bool IncludeGroupCommonPhoneListInDirectory
         {
             get => _includeGroupCommonPhoneListInDirectory;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _includeGroupCustomContactDirectoryInDirectory;
 
         [XmlElement(ElementName = "includeGroupCustomContactDirectoryInDirectory", IsNullable = false, Namespace = "")]
-        [Group(@"4f074d986b998636e2bcb0d67372b0f4:62")]
+        [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:62")]
         public bool IncludeGroupCustomContactDirectoryInDirectory
         {
             get => _includeGroupCustomContactDirectoryInDirectory;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "groupCustomContactDirectory", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4f074d986b998636e2bcb0d67372b0f4:62")]
+        [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:62")]
         [MinLength(1)]
         [MaxLength(40)]
         public string GroupCustomContactDirectory

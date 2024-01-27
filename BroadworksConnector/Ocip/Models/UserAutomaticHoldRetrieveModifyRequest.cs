@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""83fee6d8bc1cbca3d5ef05a88de706cf:76""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7e6893393b21480206131a5d901c0eef:76""}]")]
     public class UserAutomaticHoldRetrieveModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"83fee6d8bc1cbca3d5ef05a88de706cf:76")]
+        [Group(@"7e6893393b21480206131a5d901c0eef:76")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"83fee6d8bc1cbca3d5ef05a88de706cf:76")]
+        [Group(@"7e6893393b21480206131a5d901c0eef:76")]
         public bool IsActive
         {
             get => _isActive;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "recallTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"83fee6d8bc1cbca3d5ef05a88de706cf:76")]
+        [Group(@"7e6893393b21480206131a5d901c0eef:76")]
         [MinInclusive(6)]
         [MaxInclusive(600)]
         public int RecallTimerSeconds

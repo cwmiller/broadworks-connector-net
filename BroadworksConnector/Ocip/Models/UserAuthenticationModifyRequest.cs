@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9db4d5fa1bbf70f2626f52a5d6e3420e:72"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""9db4d5fa1bbf70f2626f52a5d6e3420e:75""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6e41c53467939072d1190f1f854fdccd:72"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""6e41c53467939072d1190f1f854fdccd:75""}]}]")]
     public class UserAuthenticationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"9db4d5fa1bbf70f2626f52a5d6e3420e:72")]
+        [Group(@"6e41c53467939072d1190f1f854fdccd:72")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9db4d5fa1bbf70f2626f52a5d6e3420e:72")]
+        [Group(@"6e41c53467939072d1190f1f854fdccd:72")]
         [MinLength(1)]
         [MaxLength(80)]
         public string UserName
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9db4d5fa1bbf70f2626f52a5d6e3420e:75")]
+        [Group(@"6e41c53467939072d1190f1f854fdccd:75")]
         [MinLength(1)]
         [MaxLength(60)]
         public string NewPassword
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9db4d5fa1bbf70f2626f52a5d6e3420e:75")]
+        [Group(@"6e41c53467939072d1190f1f854fdccd:75")]
         public BroadWorksConnector.Ocip.Models.UserAuthenticationModifyRequestPassword Password
         {
             get => _password;

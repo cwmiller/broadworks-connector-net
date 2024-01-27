@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a69fde15f3aa7494d83b57461a7a70bb:171""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9975efc7f5883a0595f811ee72ba4df5:171""}]")]
     public class SystemAdviceOfChargeCostInformationSourceDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _peerIdentity;
 
         [XmlElement(ElementName = "peerIdentity", IsNullable = false, Namespace = "")]
-        [Group(@"a69fde15f3aa7494d83b57461a7a70bb:171")]
+        [Group(@"9975efc7f5883a0595f811ee72ba4df5:171")]
         [MinLength(1)]
         [MaxLength(80)]
         public string PeerIdentity

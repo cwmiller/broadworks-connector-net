@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:41887""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:42496""}]")]
     public class UserCollaborateBridgeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _bridgeId;
 
         [XmlElement(ElementName = "bridgeId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41887")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:42496")]
         [MinLength(1)]
         [MaxLength(161)]
         public string BridgeId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _bridgeName;
 
         [XmlElement(ElementName = "bridgeName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41887")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:42496")]
         [MinLength(1)]
         [MaxLength(40)]
         public string BridgeName
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41887")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:42496")]
         [MinLength(1)]
         [MaxLength(23)]
         public string PhoneNumber
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "extension", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41887")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:42496")]
         [MinLength(2)]
         [MaxLength(20)]
         public string Extension
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alternateNumberEntry", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41887")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:42496")]
         public List<BroadWorksConnector.Ocip.Models.AlternateNumberEntry21> AlternateNumberEntry
         {
             get => _alternateNumberEntry;
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _supportOutDial;
 
         [XmlElement(ElementName = "supportOutDial", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41887")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:42496")]
         public bool SupportOutDial
         {
             get => _supportOutDial;
@@ -137,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxCollaborateRoomParticipants;
 
         [XmlElement(ElementName = "maxCollaborateRoomParticipants", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41887")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:42496")]
         [MinInclusive(3)]
         [MaxInclusive(30)]
         public int MaxCollaborateRoomParticipants

@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models.C
     [Serializable]
     [XmlRoot(Namespace = "C")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4fe2b27a39183ba1462cf843ba9617:22""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""df7d685617217d96d75d909cdade5735:22""}]")]
     public class ExternalUserIdentity
     {
 
         protected string _id;
 
         [XmlElement(ElementName = "id", IsNullable = false, Namespace = "")]
-        [Group(@"de4fe2b27a39183ba1462cf843ba9617:22")]
+        [Group(@"df7d685617217d96d75d909cdade5735:22")]
         [MaxLength(161)]
         public string Id
         {
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models.C
         protected string _organizationId;
 
         [XmlElement(ElementName = "organizationId", IsNullable = false, Namespace = "")]
-        [Group(@"de4fe2b27a39183ba1462cf843ba9617:22")]
+        [Group(@"df7d685617217d96d75d909cdade5735:22")]
         [MaxLength(36)]
         public string OrganizationId
         {
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models.C
         protected BroadWorksConnector.Ocip.Models.C.ExternalUserIdentityRole _role;
 
         [XmlElement(ElementName = "role", IsNullable = false, Namespace = "")]
-        [Group(@"de4fe2b27a39183ba1462cf843ba9617:22")]
+        [Group(@"df7d685617217d96d75d909cdade5735:22")]
         public BroadWorksConnector.Ocip.Models.C.ExternalUserIdentityRole Role
         {
             get => _role;

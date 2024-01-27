@@ -13,23 +13,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// A leaf device is a device associated with a device type that has the option
     /// supportLinks set to "Support Link to Device". It can be linked to only one tree device.
     /// The list includes devices created at the system, service provider, and group levels.
-    /// 
     /// The response is either SystemAccessDeviceGetLinkedLeafDeviceListResponse or
     /// ErrorResponse.
+    /// 
+    /// Replaced by: SystemAccessDeviceGetLinkedLeafDeviceListRequest22.
     /// <see cref="SystemAccessDeviceGetLinkedLeafDeviceListResponse"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemAccessDeviceGetLinkedLeafDeviceListRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:1155""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:20200""}]")]
     public class SystemAccessDeviceGetLinkedLeafDeviceListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemAccessDeviceGetLinkedLeafDeviceListResponse>
     {
 
         protected string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:1155")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:20200")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName

@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a8df43dca23d99d8ab44c0082aadfbe0:61""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2c9f194a3272e429f2e5215dd988b94a:61""}]")]
     public class ServiceProviderExternalCustomRingbackGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "prefixDigits", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:61")]
+        [Group(@"2c9f194a3272e429f2e5215dd988b94a:61")]
         [MinLength(1)]
         [MaxLength(30)]
         public string PrefixDigits
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serverNetAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:61")]
+        [Group(@"2c9f194a3272e429f2e5215dd988b94a:61")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServerNetAddress
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serverPort", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:61")]
+        [Group(@"2c9f194a3272e429f2e5215dd988b94a:61")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int ServerPort
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _timeoutSeconds;
 
         [XmlElement(ElementName = "timeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:61")]
+        [Group(@"2c9f194a3272e429f2e5215dd988b94a:61")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
         public int TimeoutSeconds

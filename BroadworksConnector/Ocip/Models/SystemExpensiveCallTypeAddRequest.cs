@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9845""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:9963""}]")]
     public class SystemExpensiveCallTypeAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _alternateCallIndicator;
 
         [XmlElement(ElementName = "alternateCallIndicator", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9845")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9963")]
         [MinLength(1)]
         [MaxLength(64)]
         public string AlternateCallIndicator
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "treatmentAudioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9845")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9963")]
         [MinLength(1)]
         [MaxLength(256)]
         public string TreatmentAudioFile

@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6abb48a2d0672804f15670b4afa7ec02:59""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""522c098907e72f4cd4af52b0c730f9c6:59""}]")]
     public class UserNumberPortabilityAnnouncementGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enable;
 
         [XmlElement(ElementName = "enable", IsNullable = false, Namespace = "")]
-        [Group(@"6abb48a2d0672804f15670b4afa7ec02:59")]
+        [Group(@"522c098907e72f4cd4af52b0c730f9c6:59")]
         public bool Enable
         {
             get => _enable;

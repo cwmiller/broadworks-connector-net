@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ac6f79eeb503f2d20b15e4c8d21d7077:35""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0b10bca40a55275de6ba2076c583b7fd:184""}]")]
     public class AutoAttendantModifyMenuExecutionServer
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "announcementSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ac6f79eeb503f2d20b15e4c8d21d7077:35")]
+        [Group(@"0b10bca40a55275de6ba2076c583b7fd:184")]
         public BroadWorksConnector.Ocip.Models.AnnouncementSelection AnnouncementSelection
         {
             get => _announcementSelection;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ac6f79eeb503f2d20b15e4c8d21d7077:35")]
+        [Group(@"0b10bca40a55275de6ba2076c583b7fd:184")]
         public BroadWorksConnector.Ocip.Models.LabeledFileNameResource AudioFile
         {
             get => _audioFile;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ac6f79eeb503f2d20b15e4c8d21d7077:35")]
+        [Group(@"0b10bca40a55275de6ba2076c583b7fd:184")]
         public BroadWorksConnector.Ocip.Models.LabeledFileNameResource VideoFile
         {
             get => _videoFile;

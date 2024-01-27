@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ec793b9c4e032de7b751034d58c39dd1:57""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""78a6b99d4a2498f0e1b41ca6979a5fd8:57""}]")]
     public class UserPrepaidGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"ec793b9c4e032de7b751034d58c39dd1:57")]
+        [Group(@"78a6b99d4a2498f0e1b41ca6979a5fd8:57")]
         public bool IsActive
         {
             get => _isActive;

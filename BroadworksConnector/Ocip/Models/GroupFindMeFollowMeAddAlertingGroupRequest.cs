@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""79f226053ee345f2ff4c37c37c8e9114:58"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""79f226053ee345f2ff4c37c37c8e9114:65"",""optional"":true}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""146ca46a7097f08aed7a73ab65f17df8:57"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""146ca46a7097f08aed7a73ab65f17df8:64"",""optional"":true}]}]")]
     public class GroupFindMeFollowMeAddAlertingGroupRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:58")]
+        [Group(@"146ca46a7097f08aed7a73ab65f17df8:57")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _alertingGroupName;
 
         [XmlElement(ElementName = "alertingGroupName", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:58")]
+        [Group(@"146ca46a7097f08aed7a73ab65f17df8:57")]
         [MinLength(1)]
         [MaxLength(40)]
         public string AlertingGroupName
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alertingGroupDescription", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:58")]
+        [Group(@"146ca46a7097f08aed7a73ab65f17df8:57")]
         [MinLength(1)]
         [MaxLength(80)]
         public string AlertingGroupDescription
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useDiversionInhibitor;
 
         [XmlElement(ElementName = "useDiversionInhibitor", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:58")]
+        [Group(@"146ca46a7097f08aed7a73ab65f17df8:57")]
         public bool UseDiversionInhibitor
         {
             get => _useDiversionInhibitor;
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _answerConfirmationRequired;
 
         [XmlElement(ElementName = "answerConfirmationRequired", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:58")]
+        [Group(@"146ca46a7097f08aed7a73ab65f17df8:57")]
         public bool AnswerConfirmationRequired
         {
             get => _answerConfirmationRequired;
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _numberOfRings;
 
         [XmlElement(ElementName = "numberOfRings", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:58")]
+        [Group(@"146ca46a7097f08aed7a73ab65f17df8:57")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
         public int NumberOfRings
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:65")]
+        [Group(@"146ca46a7097f08aed7a73ab65f17df8:64")]
         [MinLength(1)]
         [MaxLength(161)]
         public string PhoneNumber
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"79f226053ee345f2ff4c37c37c8e9114:65")]
+        [Group(@"146ca46a7097f08aed7a73ab65f17df8:64")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

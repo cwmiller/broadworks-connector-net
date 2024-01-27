@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da5cd0d79ddb505982e08d164e405660:80""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1d57523802a1435faa76c4035da1e4dc:80""}]")]
     public class ServiceProviderZoneCallingRestrictionsModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"da5cd0d79ddb505982e08d164e405660:80")]
+        [Group(@"1d57523802a1435faa76c4035da1e4dc:80")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableZoneCallingRestrictions", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da5cd0d79ddb505982e08d164e405660:80")]
+        [Group(@"1d57523802a1435faa76c4035da1e4dc:80")]
         public bool EnableZoneCallingRestrictions
         {
             get => _enableZoneCallingRestrictions;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableOriginationRoamingRestrictions", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da5cd0d79ddb505982e08d164e405660:80")]
+        [Group(@"1d57523802a1435faa76c4035da1e4dc:80")]
         public bool EnableOriginationRoamingRestrictions
         {
             get => _enableOriginationRoamingRestrictions;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableEmergencyOriginationRoamingRestrictions", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da5cd0d79ddb505982e08d164e405660:80")]
+        [Group(@"1d57523802a1435faa76c4035da1e4dc:80")]
         public bool EnableEmergencyOriginationRoamingRestrictions
         {
             get => _enableEmergencyOriginationRoamingRestrictions;
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableTerminationRoamingRestrictions", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da5cd0d79ddb505982e08d164e405660:80")]
+        [Group(@"1d57523802a1435faa76c4035da1e4dc:80")]
         public bool EnableTerminationRoamingRestrictions
         {
             get => _enableTerminationRoamingRestrictions;

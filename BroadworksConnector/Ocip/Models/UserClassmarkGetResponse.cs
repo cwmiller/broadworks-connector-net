@@ -14,7 +14,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0d0e878cbc947aebb19ad489b2ffef11:188""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bd23272215266344f26a1702c47ce590:188""}]")]
     public class UserClassmarkGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "classmark", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0d0e878cbc947aebb19ad489b2ffef11:188")]
+        [Group(@"bd23272215266344f26a1702c47ce590:188")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Classmark

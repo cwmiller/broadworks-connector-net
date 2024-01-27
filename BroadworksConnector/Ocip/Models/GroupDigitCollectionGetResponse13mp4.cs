@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:4893""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:4629""}]")]
     public class GroupDigitCollectionGetResponse13mp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.GroupDigitCollectionSettingLevel _useSetting;
 
         [XmlElement(ElementName = "useSetting", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4893")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:4629")]
         public BroadWorksConnector.Ocip.Models.GroupDigitCollectionSettingLevel UseSetting
         {
             get => _useSetting;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4893")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:4629")]
         [MinLength(1)]
         [MaxLength(1)]
         public string AccessCode
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "publicDigitMap", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4893")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:4629")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string PublicDigitMap
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "privateDigitMap", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:4893")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:4629")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string PrivateDigitMap

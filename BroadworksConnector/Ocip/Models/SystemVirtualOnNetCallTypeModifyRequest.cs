@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""179b744b0183abe614e8c32c17c96b7e:309""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ef8bc875d664cdc920228d455073e594:309""}]")]
     public class SystemVirtualOnNetCallTypeModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _virtualOnNetCallTypeName;
 
         [XmlElement(ElementName = "virtualOnNetCallTypeName", IsNullable = false, Namespace = "")]
-        [Group(@"179b744b0183abe614e8c32c17c96b7e:309")]
+        [Group(@"ef8bc875d664cdc920228d455073e594:309")]
         [MinLength(1)]
         [MaxLength(40)]
         public string VirtualOnNetCallTypeName
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "virtualOnNetCallTypeCdrValue", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"179b744b0183abe614e8c32c17c96b7e:309")]
+        [Group(@"ef8bc875d664cdc920228d455073e594:309")]
         [MinLength(1)]
         [MaxLength(6)]
         public string VirtualOnNetCallTypeCdrValue

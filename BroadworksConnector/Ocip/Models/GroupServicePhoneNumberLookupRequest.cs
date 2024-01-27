@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:7916""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:7653""}]")]
     public class GroupServicePhoneNumberLookupRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupServicePhoneNumberLookupResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7916")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:7653")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7916")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:7653")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.NumberLookupServiceType _serviceType;
 
         [XmlElement(ElementName = "serviceType", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7916")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:7653")]
         public BroadWorksConnector.Ocip.Models.NumberLookupServiceType ServiceType
         {
             get => _serviceType;
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:7916")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:7653")]
         [MinLength(1)]
         [MaxLength(23)]
         public string PhoneNumber

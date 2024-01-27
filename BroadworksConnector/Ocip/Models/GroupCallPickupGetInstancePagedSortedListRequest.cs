@@ -23,14 +23,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""045ce951b3e25dec090606af4ad50c63:229""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e52f623f7e5f77c5ed7bb6ba0012d5cd:229""}]")]
     public class GroupCallPickupGetInstancePagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupCallPickupGetInstancePagedSortedListResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"045ce951b3e25dec090606af4ad50c63:229")]
+        [Group(@"e52f623f7e5f77c5ed7bb6ba0012d5cd:229")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"045ce951b3e25dec090606af4ad50c63:229")]
+        [Group(@"e52f623f7e5f77c5ed7bb6ba0012d5cd:229")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"045ce951b3e25dec090606af4ad50c63:229")]
+        [Group(@"e52f623f7e5f77c5ed7bb6ba0012d5cd:229")]
         public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl
         {
             get => _responsePagingControl;
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sortByCallPickupName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"045ce951b3e25dec090606af4ad50c63:229")]
+        [Group(@"e52f623f7e5f77c5ed7bb6ba0012d5cd:229")]
         public BroadWorksConnector.Ocip.Models.SortByCallPickupName SortByCallPickupName
         {
             get => _sortByCallPickupName;
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaCallPickupName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"045ce951b3e25dec090606af4ad50c63:229")]
+        [Group(@"e52f623f7e5f77c5ed7bb6ba0012d5cd:229")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaCallPickupName> SearchCriteriaCallPickupName
         {
             get => _searchCriteriaCallPickupName;
@@ -123,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"045ce951b3e25dec090606af4ad50c63:229")]
+        [Group(@"e52f623f7e5f77c5ed7bb6ba0012d5cd:229")]
         public bool SearchCriteriaModeOr
         {
             get => _searchCriteriaModeOr;

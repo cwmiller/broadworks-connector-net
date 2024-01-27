@@ -14,7 +14,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:20645""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:21380""}]")]
     public class SystemBwDiameterBaseDataGetResponse17sp3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "xsRealm", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20645")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:21380")]
         [MinLength(1)]
         [MaxLength(80)]
         public string XsRealm
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _xsListeningPort;
 
         [XmlElement(ElementName = "xsListeningPort", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20645")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:21380")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int XsListeningPort
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "psRealm", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20645")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:21380")]
         [MinLength(1)]
         [MaxLength(80)]
         public string PsRealm
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _psListeningPort;
 
         [XmlElement(ElementName = "psListeningPort", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20645")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:21380")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int PsListeningPort
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _psRelayThroughXs;
 
         [XmlElement(ElementName = "psRelayThroughXs", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20645")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:21380")]
         public bool PsRelayThroughXs
         {
             get => _psRelayThroughXs;
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _xsRelayListeningPort;
 
         [XmlElement(ElementName = "xsRelayListeningPort", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20645")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:21380")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int XsRelayListeningPort
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _tcTimerSeconds;
 
         [XmlElement(ElementName = "tcTimerSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20645")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:21380")]
         [MinInclusive(1)]
         [MaxInclusive(3600)]
         public int TcTimerSeconds
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _twTimerSeconds;
 
         [XmlElement(ElementName = "twTimerSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20645")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:21380")]
         [MinInclusive(6)]
         [MaxInclusive(60)]
         public int TwTimerSeconds
@@ -173,7 +173,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _requestTimerSeconds;
 
         [XmlElement(ElementName = "requestTimerSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20645")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:21380")]
         [MinInclusive(1)]
         [MaxInclusive(600)]
         public int RequestTimerSeconds
@@ -192,7 +192,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _busyPeerDetectionOutstandingTxnCount;
 
         [XmlElement(ElementName = "busyPeerDetectionOutstandingTxnCount", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20645")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:21380")]
         [MinInclusive(1)]
         [MaxInclusive(1000000)]
         public int BusyPeerDetectionOutstandingTxnCount
@@ -211,7 +211,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _busyPeerRestoreOutstandingTxnCount;
 
         [XmlElement(ElementName = "busyPeerRestoreOutstandingTxnCount", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20645")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:21380")]
         [MinInclusive(1)]
         [MaxInclusive(1000000)]
         public int BusyPeerRestoreOutstandingTxnCount
@@ -230,7 +230,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _dynamicEntryInactivityTimerHours;
 
         [XmlElement(ElementName = "dynamicEntryInactivityTimerHours", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20645")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:21380")]
         [MinInclusive(1)]
         [MaxInclusive(168)]
         public int DynamicEntryInactivityTimerHours
@@ -249,7 +249,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication _advertisedOfflineBillingApplication;
 
         [XmlElement(ElementName = "advertisedOfflineBillingApplication", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20645")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:21380")]
         public BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication AdvertisedOfflineBillingApplication
         {
             get => _advertisedOfflineBillingApplication;
@@ -266,7 +266,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication _advertisedOnlineBillingApplication;
 
         [XmlElement(ElementName = "advertisedOnlineBillingApplication", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20645")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:21380")]
         public BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication AdvertisedOnlineBillingApplication
         {
             get => _advertisedOnlineBillingApplication;

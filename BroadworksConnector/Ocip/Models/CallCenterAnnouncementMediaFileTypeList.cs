@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:986""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:1007""}]")]
     public class CallCenterAnnouncementMediaFileTypeList
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mediaType1", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:986")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1007")]
         public BroadWorksConnector.Ocip.Models.MediaFileType MediaType1
         {
             get => _mediaType1;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mediaType2", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:986")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1007")]
         public BroadWorksConnector.Ocip.Models.MediaFileType MediaType2
         {
             get => _mediaType2;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mediaType3", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:986")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1007")]
         public BroadWorksConnector.Ocip.Models.MediaFileType MediaType3
         {
             get => _mediaType3;
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mediaType4", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:986")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1007")]
         public BroadWorksConnector.Ocip.Models.MediaFileType MediaType4
         {
             get => _mediaType4;

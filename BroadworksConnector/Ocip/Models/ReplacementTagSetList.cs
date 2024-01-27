@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:4016""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4505""}]")]
     public class ReplacementTagSetList
     {
 
         protected List<string> _tagSet = new List<string>();
 
         [XmlElement(ElementName = "tagSet", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4016")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4505")]
         [MinLength(1)]
         [MaxLength(30)]
         public List<string> TagSet

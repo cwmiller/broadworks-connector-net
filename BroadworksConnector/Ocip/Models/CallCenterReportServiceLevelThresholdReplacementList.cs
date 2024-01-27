@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7556""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7542""}]")]
     public class CallCenterReportServiceLevelThresholdReplacementList
     {
 
         protected List<int> _serviceLevelThresholdSeconds = new List<int>();
 
         [XmlElement(ElementName = "serviceLevelThresholdSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7556")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7542")]
         [MinInclusive(1)]
         [MaxInclusive(7200)]
         public List<int> ServiceLevelThresholdSeconds

@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:4066""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4555""}]")]
     public class ResponsePagingControl
     {
 
         protected int _responseStartIndex;
 
         [XmlElement(ElementName = "responseStartIndex", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4066")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4555")]
         [MinInclusive(1)]
         public int ResponseStartIndex
         {
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _responsePageSize;
 
         [XmlElement(ElementName = "responsePageSize", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4066")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4555")]
         [MinInclusive(1)]
         [MaxInclusive(2000)]
         public int ResponsePageSize

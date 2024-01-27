@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a27224a048c30ff69eab9209dec841cc:540""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e474d11df9a1d1d1041e589793e40de8:539""}]")]
     public class GroupRoutePointGetFailoverPolicyResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enableFailoverSupport;
 
         [XmlElement(ElementName = "enableFailoverSupport", IsNullable = false, Namespace = "")]
-        [Group(@"a27224a048c30ff69eab9209dec841cc:540")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:539")]
         public bool EnableFailoverSupport
         {
             get => _enableFailoverSupport;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "externalSystem", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a27224a048c30ff69eab9209dec841cc:540")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:539")]
         [MinLength(1)]
         [MaxLength(40)]
         public string ExternalSystem
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "failoverPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a27224a048c30ff69eab9209dec841cc:540")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:539")]
         [MinLength(1)]
         [MaxLength(161)]
         public string FailoverPhoneNumber
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.RoutePointFailoverStatus _failoverStatus;
 
         [XmlElement(ElementName = "failoverStatus", IsNullable = false, Namespace = "")]
-        [Group(@"a27224a048c30ff69eab9209dec841cc:540")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:539")]
         public BroadWorksConnector.Ocip.Models.RoutePointFailoverStatus FailoverStatus
         {
             get => _failoverStatus;
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _perCallEnableFailoverSupport;
 
         [XmlElement(ElementName = "perCallEnableFailoverSupport", IsNullable = false, Namespace = "")]
-        [Group(@"a27224a048c30ff69eab9209dec841cc:540")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:539")]
         public bool PerCallEnableFailoverSupport
         {
             get => _perCallEnableFailoverSupport;
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _perCallCallFailureTimeoutSeconds;
 
         [XmlElement(ElementName = "perCallCallFailureTimeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"a27224a048c30ff69eab9209dec841cc:540")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:539")]
         [MinInclusive(1)]
         [MaxInclusive(60)]
         public int PerCallCallFailureTimeoutSeconds
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _perCallOutboundCallFailureTimeoutSeconds;
 
         [XmlElement(ElementName = "perCallOutboundCallFailureTimeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"a27224a048c30ff69eab9209dec841cc:540")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:539")]
         [MinInclusive(1)]
         [MaxInclusive(60)]
         public int PerCallOutboundCallFailureTimeoutSeconds
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "perCallFailoverPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a27224a048c30ff69eab9209dec841cc:540")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:539")]
         [MinLength(1)]
         [MaxLength(161)]
         public string PerCallFailoverPhoneNumber

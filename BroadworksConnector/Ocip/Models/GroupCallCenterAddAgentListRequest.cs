@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:1954"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:1956""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:1949"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:1951""}]}]")]
     public class GroupCallCenterAddAgentListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:1954")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:1949")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected List<string> _agentUserId = new List<string>();
 
         [XmlElement(ElementName = "agentUserId", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:1956")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:1951")]
         [MinLength(1)]
         [MaxLength(161)]
         public List<string> AgentUserId
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected List<BroadWorksConnector.Ocip.Models.CallCenterSkillAgentList> _agentSkillList = new List<BroadWorksConnector.Ocip.Models.CallCenterSkillAgentList>();
 
         [XmlElement(ElementName = "agentSkillList", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:1956")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:1951")]
         public List<BroadWorksConnector.Ocip.Models.CallCenterSkillAgentList> AgentSkillList
         {
             get => _agentSkillList;

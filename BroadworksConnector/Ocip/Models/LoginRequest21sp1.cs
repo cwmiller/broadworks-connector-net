@@ -9,24 +9,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// LoginRequest21sp1 is 2nd stage of the 2 stage OCI login process.
     /// The signedPassword is not required for external authentication login from a trusted host (ACL).
-    /// The response is either LoginResponse21sp1 or ErrorResponse.
     /// Replaced by LoginRequest22V3 in AS data mode.
+    /// The response is either a LoginResponse21sp1 or ErrorResponse
     /// <see cref="LoginRequest21sp1"/>
+    /// <see cref="LoginRequest22V3"/>
     /// <see cref="LoginResponse21sp1"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="LoginRequest22V3"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:4237""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:4787""}]")]
     public class LoginRequest21sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.LoginResponse21sp1>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4237")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:4787")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "signedPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4237")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:4787")]
         [MinLength(1)]
         public string SignedPassword
         {
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "plainTextPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4237")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:4787")]
         [MinLength(1)]
         [MaxLength(60)]
         public string PlainTextPassword

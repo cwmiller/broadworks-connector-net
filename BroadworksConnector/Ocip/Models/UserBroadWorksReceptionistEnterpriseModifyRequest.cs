@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb12998f4f9e45cedde01f08569f4c7c:216""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""44477d346d2631b033071e12af214ac8:216""}]")]
     public class UserBroadWorksReceptionistEnterpriseModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"fb12998f4f9e45cedde01f08569f4c7c:216")]
+        [Group(@"44477d346d2631b033071e12af214ac8:216")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "monitoredUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"fb12998f4f9e45cedde01f08569f4c7c:216")]
+        [Group(@"44477d346d2631b033071e12af214ac8:216")]
         public BroadWorksConnector.Ocip.Models.ReplacementUserIdList MonitoredUserIdList
         {
             get => _monitoredUserIdList;

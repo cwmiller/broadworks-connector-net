@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:27905""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:28423""}]")]
     public class SystemNetworkServerSyncParametersGetResponse16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enableSync;
 
         [XmlElement(ElementName = "enableSync", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27905")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:28423")]
         public bool EnableSync
         {
             get => _enableSync;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _syncLinePorts;
 
         [XmlElement(ElementName = "syncLinePorts", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27905")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:28423")]
         public bool SyncLinePorts
         {
             get => _syncLinePorts;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _syncDeviceManagementInfo;
 
         [XmlElement(ElementName = "syncDeviceManagementInfo", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27905")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:28423")]
         public bool SyncDeviceManagementInfo
         {
             get => _syncDeviceManagementInfo;

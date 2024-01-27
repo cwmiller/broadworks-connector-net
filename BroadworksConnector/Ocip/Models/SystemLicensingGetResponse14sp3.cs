@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:27475""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:27957""}]")]
     public class SystemLicensingGetResponse14sp3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.LicenseStrictness _licenseStrictness;
 
         [XmlElement(ElementName = "licenseStrictness", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27475")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27957")]
         public BroadWorksConnector.Ocip.Models.LicenseStrictness LicenseStrictness
         {
             get => _licenseStrictness;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _groupUserlimit;
 
         [XmlElement(ElementName = "groupUserlimit", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27475")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27957")]
         [MinInclusive(1)]
         public int GroupUserlimit
         {
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "expirationDate", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27475")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27957")]
         public string ExpirationDate
         {
             get => _expirationDate;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hostId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27475")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27957")]
         [MinLength(1)]
         public List<string> HostId
         {
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "licenseName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27475")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27957")]
         [MinLength(1)]
         public List<string> LicenseName
         {
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _numberOfTrunkUsers;
 
         [XmlElement(ElementName = "numberOfTrunkUsers", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27475")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27957")]
         public int NumberOfTrunkUsers
         {
             get => _numberOfTrunkUsers;
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _subscriberLicenseTable;
 
         [XmlElement(ElementName = "subscriberLicenseTable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27475")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27957")]
         public BroadWorksConnector.Ocip.Models.C.OCITable SubscriberLicenseTable
         {
             get => _subscriberLicenseTable;
@@ -149,7 +149,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _groupServiceLicenseTable;
 
         [XmlElement(ElementName = "groupServiceLicenseTable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27475")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27957")]
         public BroadWorksConnector.Ocip.Models.C.OCITable GroupServiceLicenseTable
         {
             get => _groupServiceLicenseTable;
@@ -166,7 +166,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _virtualServiceLicenseTable;
 
         [XmlElement(ElementName = "virtualServiceLicenseTable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27475")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27957")]
         public BroadWorksConnector.Ocip.Models.C.OCITable VirtualServiceLicenseTable
         {
             get => _virtualServiceLicenseTable;
@@ -183,7 +183,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _userServiceLicenseTable;
 
         [XmlElement(ElementName = "userServiceLicenseTable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27475")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27957")]
         public BroadWorksConnector.Ocip.Models.C.OCITable UserServiceLicenseTable
         {
             get => _userServiceLicenseTable;
@@ -200,7 +200,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _systemParamLicenseTable;
 
         [XmlElement(ElementName = "systemParamLicenseTable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27475")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27957")]
         public BroadWorksConnector.Ocip.Models.C.OCITable SystemParamLicenseTable
         {
             get => _systemParamLicenseTable;

@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:7722""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:9589""}]")]
     public class SystemCommunicationBarringProfileGetResponse19sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7722")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9589")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction _originatingDefaultAction;
 
         [XmlElement(ElementName = "originatingDefaultAction", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7722")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9589")]
         public BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction OriginatingDefaultAction
         {
             get => _originatingDefaultAction;
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "originatingDefaultTreatmentId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7722")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9589")]
         [MinLength(1)]
         [MaxLength(40)]
         public string OriginatingDefaultTreatmentId
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "originatingDefaultTransferNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7722")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9589")]
         [MinLength(1)]
         [MaxLength(30)]
         public string OriginatingDefaultTransferNumber
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "originatingDefaultCallTimeout", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7722")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9589")]
         [MinInclusive(60)]
         [MaxInclusive(86400)]
         public int OriginatingDefaultCallTimeout
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "originatingRule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7722")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9589")]
         public List<BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingRule> OriginatingRule
         {
             get => _originatingRule;
@@ -146,7 +146,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingAction _redirectingDefaultAction;
 
         [XmlElement(ElementName = "redirectingDefaultAction", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7722")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9589")]
         public BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingAction RedirectingDefaultAction
         {
             get => _redirectingDefaultAction;
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "redirectingDefaultCallTimeout", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7722")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9589")]
         [MinInclusive(60)]
         [MaxInclusive(86400)]
         public int RedirectingDefaultCallTimeout
@@ -184,7 +184,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "redirectingRule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7722")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9589")]
         public List<BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingRule> RedirectingRule
         {
             get => _redirectingRule;
@@ -201,7 +201,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingAction _incomingDefaultAction;
 
         [XmlElement(ElementName = "incomingDefaultAction", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7722")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9589")]
         public BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingAction IncomingDefaultAction
         {
             get => _incomingDefaultAction;
@@ -219,7 +219,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "incomingDefaultCallTimeout", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7722")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9589")]
         [MinInclusive(60)]
         [MaxInclusive(86400)]
         public int IncomingDefaultCallTimeout
@@ -239,7 +239,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "incomingRule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7722")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9589")]
         public List<BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingRule> IncomingRule
         {
             get => _incomingRule;
@@ -256,7 +256,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowAction _callMeNowDefaultAction;
 
         [XmlElement(ElementName = "callMeNowDefaultAction", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7722")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9589")]
         public BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowAction CallMeNowDefaultAction
         {
             get => _callMeNowDefaultAction;
@@ -274,7 +274,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callMeNowDefaultCallTimeout", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7722")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9589")]
         [MinInclusive(60)]
         [MaxInclusive(86400)]
         public int CallMeNowDefaultCallTimeout
@@ -294,7 +294,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callMeNowRule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7722")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9589")]
         public List<BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowRule> CallMeNowRule
         {
             get => _callMeNowRule;
@@ -311,7 +311,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _applyToAttendedCallTransfers;
 
         [XmlElement(ElementName = "applyToAttendedCallTransfers", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:7722")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9589")]
         public bool ApplyToAttendedCallTransfers
         {
             get => _applyToAttendedCallTransfers;

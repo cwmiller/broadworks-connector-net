@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ee7bb69368e23a56a82c5d9cf07b5433:324""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""aa3a240fa755015613cfb9259eccafef:324""}]")]
     public class UserSMDIMessageDeskModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"ee7bb69368e23a56a82c5d9cf07b5433:324")]
+        [Group(@"aa3a240fa755015613cfb9259eccafef:324")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ee7bb69368e23a56a82c5d9cf07b5433:324")]
+        [Group(@"aa3a240fa755015613cfb9259eccafef:324")]
         public bool IsActive
         {
             get => _isActive;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "messageDeskNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ee7bb69368e23a56a82c5d9cf07b5433:324")]
+        [Group(@"aa3a240fa755015613cfb9259eccafef:324")]
         [MinLength(1)]
         [MaxLength(3)]
         public string MessageDeskNumber

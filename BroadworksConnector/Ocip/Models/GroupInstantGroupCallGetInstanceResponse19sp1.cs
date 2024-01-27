@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f41dea4708922d4a3f0e26f198cc953f:138""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6c8b59f80404b6283b25be24c263cb12:138""}]")]
     public class GroupInstantGroupCallGetInstanceResponse19sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        [Group(@"f41dea4708922d4a3f0e26f198cc953f:138")]
+        [Group(@"6c8b59f80404b6283b25be24c263cb12:138")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "destinationPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f41dea4708922d4a3f0e26f198cc953f:138")]
+        [Group(@"6c8b59f80404b6283b25be24c263cb12:138")]
         [MinLength(1)]
         [MaxLength(161)]
         public List<string> DestinationPhoneNumber
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isAnswerTimeoutEnabled;
 
         [XmlElement(ElementName = "isAnswerTimeoutEnabled", IsNullable = false, Namespace = "")]
-        [Group(@"f41dea4708922d4a3f0e26f198cc953f:138")]
+        [Group(@"6c8b59f80404b6283b25be24c263cb12:138")]
         public bool IsAnswerTimeoutEnabled
         {
             get => _isAnswerTimeoutEnabled;
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "answerTimeoutMinutes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f41dea4708922d4a3f0e26f198cc953f:138")]
+        [Group(@"6c8b59f80404b6283b25be24c263cb12:138")]
         [MinInclusive(1)]
         [MaxInclusive(60)]
         public int AnswerTimeoutMinutes
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f41dea4708922d4a3f0e26f198cc953f:138")]
+        [Group(@"6c8b59f80404b6283b25be24c263cb12:138")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService

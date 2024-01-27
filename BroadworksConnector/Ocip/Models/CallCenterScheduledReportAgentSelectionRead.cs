@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7611""}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7597""}]")]
     public class CallCenterScheduledReportAgentSelectionRead
     {
 
         protected bool _allAgent;
 
         [XmlElement(ElementName = "allAgent", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7611")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7597")]
         public bool AllAgent
         {
             get => _allAgent;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _agentTable;
 
         [XmlElement(ElementName = "agentTable", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7611")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7597")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AgentTable
         {
             get => _agentTable;

@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:1284""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:1333""}]")]
     public class SearchCriteriaExactUserGroup : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:1284")]
+        [Group(@"972fbf832439609ec8f2765c5637c3f1:1333")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:1284")]
+        [Group(@"972fbf832439609ec8f2765c5637c3f1:1333")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId

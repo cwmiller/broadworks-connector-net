@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b87b6355d5858fdbeb8c1eb05dc1651a:128""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0850ccc76fd27f9c07cb7218b2c1f84:127""}]")]
     public class UserPrivacyGetAvailableMonitorsUserListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _availableMonitorsTable;
 
         [XmlElement(ElementName = "availableMonitorsTable", IsNullable = false, Namespace = "")]
-        [Group(@"b87b6355d5858fdbeb8c1eb05dc1651a:128")]
+        [Group(@"f0850ccc76fd27f9c07cb7218b2c1f84:127")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AvailableMonitorsTable
         {
             get => _availableMonitorsTable;

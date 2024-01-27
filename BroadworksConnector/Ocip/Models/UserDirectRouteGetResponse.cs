@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4e1b40cd187e65e0dc647394b1e74e3c:57""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""448c1807ef39a1a06e7d8d4d16ecaa31:57""}]")]
     public class UserDirectRouteGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.DirectRouteOutgoingDTGPolicy _outgoingDTGPolicy;
 
         [XmlElement(ElementName = "outgoingDTGPolicy", IsNullable = false, Namespace = "")]
-        [Group(@"4e1b40cd187e65e0dc647394b1e74e3c:57")]
+        [Group(@"448c1807ef39a1a06e7d8d4d16ecaa31:57")]
         public BroadWorksConnector.Ocip.Models.DirectRouteOutgoingDTGPolicy OutgoingDTGPolicy
         {
             get => _outgoingDTGPolicy;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.DirectRouteOutgoingTrunkIdentityPolicy _outgoingTrunkIdentityPolicy;
 
         [XmlElement(ElementName = "outgoingTrunkIdentityPolicy", IsNullable = false, Namespace = "")]
-        [Group(@"4e1b40cd187e65e0dc647394b1e74e3c:57")]
+        [Group(@"448c1807ef39a1a06e7d8d4d16ecaa31:57")]
         public BroadWorksConnector.Ocip.Models.DirectRouteOutgoingTrunkIdentityPolicy OutgoingTrunkIdentityPolicy
         {
             get => _outgoingTrunkIdentityPolicy;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "directRouteIdentityList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4e1b40cd187e65e0dc647394b1e74e3c:57")]
+        [Group(@"448c1807ef39a1a06e7d8d4d16ecaa31:57")]
         public BroadWorksConnector.Ocip.Models.DirectRouteIdentifiers DirectRouteIdentityList
         {
             get => _directRouteIdentityList;

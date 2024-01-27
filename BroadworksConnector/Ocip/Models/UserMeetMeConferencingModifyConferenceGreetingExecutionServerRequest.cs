@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ac6f79eeb503f2d20b15e4c8d21d7077:74""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0b10bca40a55275de6ba2076c583b7fd:108""}]")]
     public class UserMeetMeConferencingModifyConferenceGreetingExecutionServerRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"ac6f79eeb503f2d20b15e4c8d21d7077:74")]
+        [Group(@"0b10bca40a55275de6ba2076c583b7fd:108")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceKey _conferenceKey;
 
         [XmlElement(ElementName = "conferenceKey", IsNullable = false, Namespace = "")]
-        [Group(@"ac6f79eeb503f2d20b15e4c8d21d7077:74")]
+        [Group(@"0b10bca40a55275de6ba2076c583b7fd:108")]
         public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceKey ConferenceKey
         {
             get => _conferenceKey;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "playEntranceGreeting", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ac6f79eeb503f2d20b15e4c8d21d7077:74")]
+        [Group(@"0b10bca40a55275de6ba2076c583b7fd:108")]
         public bool PlayEntranceGreeting
         {
             get => _playEntranceGreeting;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "entranceGreetingFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ac6f79eeb503f2d20b15e4c8d21d7077:74")]
+        [Group(@"0b10bca40a55275de6ba2076c583b7fd:108")]
         public BroadWorksConnector.Ocip.Models.LabeledFileNameResource EntranceGreetingFile
         {
             get => _entranceGreetingFile;

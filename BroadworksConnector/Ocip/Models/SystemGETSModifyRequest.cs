@@ -8,8 +8,6 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Modify GETS system settings.
-    /// The following elements are only used in AS data mode and ignored in the Amplify data mode:
-    /// callIdentifierMode
     /// The response is either SuccessResponse or ErrorResponse.
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
@@ -17,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:10871""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10994""}]")]
     public class SystemGETSModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -25,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10871")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10994")]
         public bool Enabled
         {
             get => _enabled;
@@ -43,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableRequireResourcePriority", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10871")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10994")]
         public bool EnableRequireResourcePriority
         {
             get => _enableRequireResourcePriority;
@@ -61,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sendAccessResourcePriority", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10871")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10994")]
         public bool SendAccessResourcePriority
         {
             get => _sendAccessResourcePriority;
@@ -79,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callIdentifierMode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10871")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10994")]
         public BroadWorksConnector.Ocip.Models.GETSCallIdentifierMode CallIdentifierMode
         {
             get => _callIdentifierMode;
@@ -97,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultPriorityAVP", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10871")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10994")]
         [MinInclusive(0)]
         [MaxInclusive(4)]
         public int DefaultPriorityAVP
@@ -117,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "signalingDSCP", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10871")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10994")]
         [MinInclusive(0)]
         [MaxInclusive(63)]
         public int SignalingDSCP
@@ -137,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultRValue", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10871")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10994")]
         [MinLength(3)]
         [MaxLength(80)]
         public string DefaultRValue
@@ -157,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "bypassRoRelease", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:10871")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10994")]
         public bool BypassRoRelease
         {
             get => _bypassRoRelease;
@@ -170,6 +168,24 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool BypassRoReleaseSpecified { get; set; }
+
+        protected bool _ignoreResourcePrioritiesWhenGETSDisabled;
+
+        [XmlElement(ElementName = "ignoreResourcePrioritiesWhenGETSDisabled", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10994")]
+        public bool IgnoreResourcePrioritiesWhenGETSDisabled
+        {
+            get => _ignoreResourcePrioritiesWhenGETSDisabled;
+            set
+            {
+                IgnoreResourcePrioritiesWhenGETSDisabledSpecified = true;
+                _ignoreResourcePrioritiesWhenGETSDisabled = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool IgnoreResourcePrioritiesWhenGETSDisabledSpecified { get; set; }
 
     }
 }

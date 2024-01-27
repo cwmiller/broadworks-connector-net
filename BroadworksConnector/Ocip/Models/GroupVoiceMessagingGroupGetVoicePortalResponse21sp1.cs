@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:213""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:212""}]")]
     public class GroupVoiceMessagingGroupGetVoicePortalResponse21sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:213")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:212")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:213")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:212")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:213")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:212")]
         public bool IsActive
         {
             get => _isActive;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableExtendedScope;
 
         [XmlElement(ElementName = "enableExtendedScope", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:213")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:212")]
         public bool EnableExtendedScope
         {
             get => _enableExtendedScope;
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin;
 
         [XmlElement(ElementName = "allowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:213")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:212")]
         public bool AllowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin
         {
             get => _allowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin;
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useVoicePortalWizard;
 
         [XmlElement(ElementName = "useVoicePortalWizard", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:213")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:212")]
         public bool UseVoicePortalWizard
         {
             get => _useVoicePortalWizard;
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.VoicePortalExternalRoutingScope _voicePortalExternalRoutingScope;
 
         [XmlElement(ElementName = "voicePortalExternalRoutingScope", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:213")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:212")]
         public BroadWorksConnector.Ocip.Models.VoicePortalExternalRoutingScope VoicePortalExternalRoutingScope
         {
             get => _voicePortalExternalRoutingScope;
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useExternalRouting;
 
         [XmlElement(ElementName = "useExternalRouting", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:213")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:212")]
         public bool UseExternalRouting
         {
             get => _useExternalRouting;
@@ -165,7 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "externalRoutingAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:213")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:212")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ExternalRoutingAddress
@@ -185,7 +185,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "homeZoneName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:213")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:212")]
         [MinLength(1)]
         [MaxLength(80)]
         public string HomeZoneName
@@ -205,7 +205,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:213")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:212")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService
@@ -224,7 +224,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _expressMode;
 
         [XmlElement(ElementName = "expressMode", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:213")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:212")]
         public bool ExpressMode
         {
             get => _expressMode;

@@ -24,14 +24,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:738""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:734""}]")]
     public class UserAnnouncementFileGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _description;
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:738")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:734")]
         [MinLength(1)]
         [MaxLength(256)]
         public string Description
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _filesize;
 
         [XmlElement(ElementName = "filesize", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:738")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:734")]
         public int Filesize
         {
             get => _filesize;
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _lastUploaded;
 
         [XmlElement(ElementName = "lastUploaded", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:738")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:734")]
         public string LastUploaded
         {
             get => _lastUploaded;
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:738")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:734")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.AnnouncementFileKey _announcementFileKey;
 
         [XmlElement(ElementName = "announcementFileKey", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:738")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:734")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileKey AnnouncementFileKey
         {
             get => _announcementFileKey;
@@ -121,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "announcementFileExternalId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:738")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:734")]
         [MaxLength(36)]
         public string AnnouncementFileExternalId
         {
@@ -139,7 +139,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _usageTable;
 
         [XmlElement(ElementName = "usageTable", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:738")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:734")]
         public BroadWorksConnector.Ocip.Models.C.OCITable UsageTable
         {
             get => _usageTable;

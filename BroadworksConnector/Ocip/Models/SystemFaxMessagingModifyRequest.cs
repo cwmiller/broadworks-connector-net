@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f46f967f937c7dc89ddb3db423383aa4:82""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b2249333b9e085ee149c29960c00214e:81""}]")]
     public class SystemFaxMessagingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -26,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "statusDurationHours", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f46f967f937c7dc89ddb3db423383aa4:82")]
+        [Group(@"b2249333b9e085ee149c29960c00214e:81")]
         [MinInclusive(1)]
         [MaxInclusive(24)]
         public int StatusDurationHours
@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "statusAuditIntervalHours", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f46f967f937c7dc89ddb3db423383aa4:82")]
+        [Group(@"b2249333b9e085ee149c29960c00214e:81")]
         [MinInclusive(1)]
         [MaxInclusive(24)]
         public int StatusAuditIntervalHours
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maximumConcurrentFaxesPerUser", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f46f967f937c7dc89ddb3db423383aa4:82")]
+        [Group(@"b2249333b9e085ee149c29960c00214e:81")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int MaximumConcurrentFaxesPerUser

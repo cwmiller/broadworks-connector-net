@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:11715""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:15490""}]")]
     public class SystemTreatmentMappingCallBlockingServiceAddRequest23 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected BroadWorksConnector.Ocip.Models.CallBlockingService23 _callBlockingService;
 
         [XmlElement(ElementName = "callBlockingService", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:11715")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:15490")]
         public BroadWorksConnector.Ocip.Models.CallBlockingService23 CallBlockingService
         {
             get => _callBlockingService;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _treatmentId;
 
         [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:11715")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:15490")]
         [MinLength(1)]
         [MaxLength(40)]
         public string TreatmentId

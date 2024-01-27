@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""dcbd2c8b4418bae71f73d8ae679071f8:45""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:7137""}]")]
     public class ServiceProviderPortalPasscodeRulesGetRequest19 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ServiceProviderPortalPasscodeRulesGetResponse19>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"dcbd2c8b4418bae71f73d8ae679071f8:45")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:7137")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId

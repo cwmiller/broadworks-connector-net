@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5395c7df0157d44aa22f3351d1a5f3da:1640""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""405ec18fe08719ecf74e749d7e18c88f:1300""}]")]
     public class EnterpriseVoiceVPNDigitManipulationRequiredValue : BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulation
     {
 
         protected BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulationOperationRequiredValue _operation;
 
         [XmlElement(ElementName = "operation", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1640")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1300")]
         public BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulationOperationRequiredValue Operation
         {
             get => _operation;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _value;
 
         [XmlElement(ElementName = "value", IsNullable = false, Namespace = "")]
-        [Group(@"5395c7df0157d44aa22f3351d1a5f3da:1640")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1300")]
         [MinLength(1)]
         [MaxLength(30)]
         public string Value

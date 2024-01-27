@@ -8,7 +8,7 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to SystemCallRecordingGetPlatformListRequest22V2.
-    /// Contains the default system Call Recording platform, default reseller Call Recording Platform (when applicable) and a table with columns headings
+    /// Contains the default system Call Recording platform, default reseller Call Recording Platform (when applicable in AS data mode) and a table with columns headings
     /// "Name", "Net Address", "Port", "Transport Type", "Media Stream", "Description", "Schema Version", "Support Video Rec", "Reseller Id", "Route".
     /// The system default recording platform also appears in the table with the other platforms.
     /// 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9741e074fbfeb4c7312bfa4dfbaee3d3:278""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0731150ec7515df8cd710f04d8f62f66:284""}]")]
     public class SystemCallRecordingGetPlatformListResponse22V2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "systemDefault", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:278")]
+        [Group(@"0731150ec7515df8cd710f04d8f62f66:284")]
         [MinLength(1)]
         [MaxLength(80)]
         public string SystemDefault
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "resellerDefault", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:278")]
+        [Group(@"0731150ec7515df8cd710f04d8f62f66:284")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ResellerDefault
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _callRecordingPlatformTable;
 
         [XmlElement(ElementName = "callRecordingPlatformTable", IsNullable = false, Namespace = "")]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:278")]
+        [Group(@"0731150ec7515df8cd710f04d8f62f66:284")]
         public BroadWorksConnector.Ocip.Models.C.OCITable CallRecordingPlatformTable
         {
             get => _callRecordingPlatformTable;

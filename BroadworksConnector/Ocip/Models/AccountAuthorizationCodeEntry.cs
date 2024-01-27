@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""65df37199ec43e5d21a187db39d63158:223""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fcf43b3a58ff66521262b4426bab8748:223""}]")]
     public class AccountAuthorizationCodeEntry
     {
 
         protected string _code;
 
         [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
-        [Group(@"65df37199ec43e5d21a187db39d63158:223")]
+        [Group(@"fcf43b3a58ff66521262b4426bab8748:223")]
         [MinLength(2)]
         [MaxLength(14)]
         public string Code
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"65df37199ec43e5d21a187db39d63158:223")]
+        [Group(@"fcf43b3a58ff66521262b4426bab8748:223")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

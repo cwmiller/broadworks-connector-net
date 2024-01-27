@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7abfb1e02a3465af832e0a8a8adfc741:147""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ba51f415ebda0240287c719bc767eadf:165""}]")]
     public class UserCallingNameRetrievalModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"7abfb1e02a3465af832e0a8a8adfc741:147")]
+        [Group(@"ba51f415ebda0240287c719bc767eadf:165")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7abfb1e02a3465af832e0a8a8adfc741:147")]
+        [Group(@"ba51f415ebda0240287c719bc767eadf:165")]
         public bool IsActive
         {
             get => _isActive;
@@ -55,6 +55,42 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
+
+        protected bool _bypassFiltering;
+
+        [XmlElement(ElementName = "bypassFiltering", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"ba51f415ebda0240287c719bc767eadf:165")]
+        public bool BypassFiltering
+        {
+            get => _bypassFiltering;
+            set
+            {
+                BypassFilteringSpecified = true;
+                _bypassFiltering = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool BypassFilteringSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.CallingNameRetrievalWhiteListReplacementList _dnWhiteList;
+
+        [XmlElement(ElementName = "dnWhiteList", IsNullable = true, Namespace = "")]
+        [Optional]
+        [Group(@"ba51f415ebda0240287c719bc767eadf:165")]
+        public BroadWorksConnector.Ocip.Models.CallingNameRetrievalWhiteListReplacementList DnWhiteList
+        {
+            get => _dnWhiteList;
+            set
+            {
+                DnWhiteListSpecified = true;
+                _dnWhiteList = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool DnWhiteListSpecified { get; set; }
 
     }
 }

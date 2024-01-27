@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""750c600a9467af6ee77c0dbca839453e:71""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""48b0abc609ecbfab1fb1ee61c1de62ea:71""}]")]
     public class UserPriorityAlertDeleteCriteriaRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"750c600a9467af6ee77c0dbca839453e:71")]
+        [Group(@"48b0abc609ecbfab1fb1ee61c1de62ea:71")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _criteriaName;
 
         [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
-        [Group(@"750c600a9467af6ee77c0dbca839453e:71")]
+        [Group(@"48b0abc609ecbfab1fb1ee61c1de62ea:71")]
         [MinLength(1)]
         [MaxLength(50)]
         public string CriteriaName

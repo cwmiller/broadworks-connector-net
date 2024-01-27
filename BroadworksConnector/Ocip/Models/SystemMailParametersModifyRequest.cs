@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:11618""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:11740""}]")]
     public class SystemMailParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "primaryServerNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11618")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11740")]
         [MinLength(1)]
         [MaxLength(80)]
         public string PrimaryServerNetAddress
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "secondaryServerNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11618")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11740")]
         [MinLength(1)]
         [MaxLength(80)]
         public string SecondaryServerNetAddress
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultFromAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11618")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11740")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DefaultFromAddress
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultSubject", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11618")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11740")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DefaultSubject
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "supportDNSSRVForMailServerAccess", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11618")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11740")]
         public bool SupportDNSSRVForMailServerAccess
         {
             get => _supportDNSSRVForMailServerAccess;
@@ -121,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "secureMode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11618")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11740")]
         public BroadWorksConnector.Ocip.Models.SMTPSecureMode SecureMode
         {
             get => _secureMode;
@@ -139,7 +139,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "port", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:11618")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11740")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int? Port

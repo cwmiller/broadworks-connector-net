@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// Recording Service Play Resume Notidication Type.
+    /// Recording Service Play Resume Notification Type.
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]

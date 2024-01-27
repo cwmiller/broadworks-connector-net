@@ -31,14 +31,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9741e074fbfeb4c7312bfa4dfbaee3d3:490""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0731150ec7515df8cd710f04d8f62f66:514""}]")]
     public class UserCallRecordingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:490")]
+        [Group(@"0731150ec7515df8cd710f04d8f62f66:514")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "recordingOption", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:490")]
+        [Group(@"0731150ec7515df8cd710f04d8f62f66:514")]
         public BroadWorksConnector.Ocip.Models.RecordingOption20 RecordingOption
         {
             get => _recordingOption;
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "pauseResumeNotification", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:490")]
+        [Group(@"0731150ec7515df8cd710f04d8f62f66:514")]
         public BroadWorksConnector.Ocip.Models.RecordingPauseResumeNotificationType PauseResumeNotification
         {
             get => _pauseResumeNotification;
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableCallRecordingAnnouncement", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:490")]
+        [Group(@"0731150ec7515df8cd710f04d8f62f66:514")]
         public bool EnableCallRecordingAnnouncement
         {
             get => _enableCallRecordingAnnouncement;
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableRecordCallRepeatWarningTone", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:490")]
+        [Group(@"0731150ec7515df8cd710f04d8f62f66:514")]
         public bool EnableRecordCallRepeatWarningTone
         {
             get => _enableRecordCallRepeatWarningTone;
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "recordCallRepeatWarningToneTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:490")]
+        [Group(@"0731150ec7515df8cd710f04d8f62f66:514")]
         [MinInclusive(10)]
         [MaxInclusive(1800)]
         public int RecordCallRepeatWarningToneTimerSeconds
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableVoiceMailRecording", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:490")]
+        [Group(@"0731150ec7515df8cd710f04d8f62f66:514")]
         public bool EnableVoiceMailRecording
         {
             get => _enableVoiceMailRecording;
@@ -168,7 +168,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mediaStream", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:490")]
+        [Group(@"0731150ec7515df8cd710f04d8f62f66:514")]
         public BroadWorksConnector.Ocip.Models.MediaStream MediaStream
         {
             get => _mediaStream;

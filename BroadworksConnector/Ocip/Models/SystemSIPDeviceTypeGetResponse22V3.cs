@@ -32,14 +32,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:33743""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:34346""}]")]
     public class SystemSIPDeviceTypeGetResponse22V3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isObsolete;
 
         [XmlElement(ElementName = "isObsolete", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool IsObsolete
         {
             get => _isObsolete;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _numberOfPorts;
 
         [XmlElement(ElementName = "numberOfPorts", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public BroadWorksConnector.Ocip.Models.UnboundedPositiveInt NumberOfPorts
         {
             get => _numberOfPorts;
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SignalingAddressType _profile;
 
         [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public BroadWorksConnector.Ocip.Models.SignalingAddressType Profile
         {
             get => _profile;
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _registrationCapable;
 
         [XmlElement(ElementName = "registrationCapable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool RegistrationCapable
         {
             get => _registrationCapable;
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isConferenceDevice;
 
         [XmlElement(ElementName = "isConferenceDevice", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool IsConferenceDevice
         {
             get => _isConferenceDevice;
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isMobilityManagerDevice;
 
         [XmlElement(ElementName = "isMobilityManagerDevice", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool IsMobilityManagerDevice
         {
             get => _isMobilityManagerDevice;
@@ -141,7 +141,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isMusicOnHoldDevice;
 
         [XmlElement(ElementName = "isMusicOnHoldDevice", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool IsMusicOnHoldDevice
         {
             get => _isMusicOnHoldDevice;
@@ -158,7 +158,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.HoldNormalizationMode _holdNormalization;
 
         [XmlElement(ElementName = "holdNormalization", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public BroadWorksConnector.Ocip.Models.HoldNormalizationMode HoldNormalization
         {
             get => _holdNormalization;
@@ -175,7 +175,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.HoldAnnouncementMethodMode _holdAnnouncementMethod;
 
         [XmlElement(ElementName = "holdAnnouncementMethod", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public BroadWorksConnector.Ocip.Models.HoldAnnouncementMethodMode HoldAnnouncementMethod
         {
             get => _holdAnnouncementMethod;
@@ -192,7 +192,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isTrusted;
 
         [XmlElement(ElementName = "isTrusted", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool IsTrusted
         {
             get => _isTrusted;
@@ -209,7 +209,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _e164Capable;
 
         [XmlElement(ElementName = "E164Capable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool E164Capable
         {
             get => _e164Capable;
@@ -226,7 +226,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _routeAdvance;
 
         [XmlElement(ElementName = "routeAdvance", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool RouteAdvance
         {
             get => _routeAdvance;
@@ -243,7 +243,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _forwardingOverride;
 
         [XmlElement(ElementName = "forwardingOverride", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool ForwardingOverride
         {
             get => _forwardingOverride;
@@ -260,7 +260,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _wirelessIntegration;
 
         [XmlElement(ElementName = "wirelessIntegration", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool WirelessIntegration
         {
             get => _wirelessIntegration;
@@ -278,7 +278,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "webBasedConfigURL", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         [MinLength(1)]
         [MaxLength(80)]
         public string WebBasedConfigURL
@@ -297,7 +297,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isVideoCapable;
 
         [XmlElement(ElementName = "isVideoCapable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool IsVideoCapable
         {
             get => _isVideoCapable;
@@ -314,7 +314,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _pBXIntegration;
 
         [XmlElement(ElementName = "PBXIntegration", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool PBXIntegration
         {
             get => _pBXIntegration;
@@ -331,7 +331,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _staticRegistrationCapable;
 
         [XmlElement(ElementName = "staticRegistrationCapable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool StaticRegistrationCapable
         {
             get => _staticRegistrationCapable;
@@ -349,7 +349,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "cpeDeviceOptions", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public BroadWorksConnector.Ocip.Models.CPEDeviceOptionsRead21sp1 CpeDeviceOptions
         {
             get => _cpeDeviceOptions;
@@ -366,7 +366,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected List<string> _protocolChoice = new List<string>();
 
         [XmlElement(ElementName = "protocolChoice", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         [MinLength(1)]
         [MaxLength(20)]
         public List<string> ProtocolChoice
@@ -385,7 +385,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.EarlyMediaSupportType _earlyMediaSupport;
 
         [XmlElement(ElementName = "earlyMediaSupport", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public BroadWorksConnector.Ocip.Models.EarlyMediaSupportType EarlyMediaSupport
         {
             get => _earlyMediaSupport;
@@ -402,7 +402,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _authenticateRefer;
 
         [XmlElement(ElementName = "authenticateRefer", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool AuthenticateRefer
         {
             get => _authenticateRefer;
@@ -419,7 +419,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _autoConfigSoftClient;
 
         [XmlElement(ElementName = "autoConfigSoftClient", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool AutoConfigSoftClient
         {
             get => _autoConfigSoftClient;
@@ -436,7 +436,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.AuthenticationMode22 _authenticationMode;
 
         [XmlElement(ElementName = "authenticationMode", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public BroadWorksConnector.Ocip.Models.AuthenticationMode22 AuthenticationMode
         {
             get => _authenticationMode;
@@ -453,7 +453,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _requiresBroadWorksDigitCollection;
 
         [XmlElement(ElementName = "requiresBroadWorksDigitCollection", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool RequiresBroadWorksDigitCollection
         {
             get => _requiresBroadWorksDigitCollection;
@@ -470,7 +470,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _requiresBroadWorksCallWaitingTone;
 
         [XmlElement(ElementName = "requiresBroadWorksCallWaitingTone", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool RequiresBroadWorksCallWaitingTone
         {
             get => _requiresBroadWorksCallWaitingTone;
@@ -487,7 +487,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _requiresMWISubscription;
 
         [XmlElement(ElementName = "requiresMWISubscription", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool RequiresMWISubscription
         {
             get => _requiresMWISubscription;
@@ -504,7 +504,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useHistoryInfoHeaderOnAccessSide;
 
         [XmlElement(ElementName = "useHistoryInfoHeaderOnAccessSide", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool UseHistoryInfoHeaderOnAccessSide
         {
             get => _useHistoryInfoHeaderOnAccessSide;
@@ -521,7 +521,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _adviceOfChargeCapable;
 
         [XmlElement(ElementName = "adviceOfChargeCapable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool AdviceOfChargeCapable
         {
             get => _adviceOfChargeCapable;
@@ -539,7 +539,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "resetEvent", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceResetEvent ResetEvent
         {
             get => _resetEvent;
@@ -556,7 +556,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _supportCallCenterMIMEType;
 
         [XmlElement(ElementName = "supportCallCenterMIMEType", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool SupportCallCenterMIMEType
         {
             get => _supportCallCenterMIMEType;
@@ -573,7 +573,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.TrunkMode _trunkMode;
 
         [XmlElement(ElementName = "trunkMode", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public BroadWorksConnector.Ocip.Models.TrunkMode TrunkMode
         {
             get => _trunkMode;
@@ -590,7 +590,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _addPCalledPartyId;
 
         [XmlElement(ElementName = "addPCalledPartyId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool AddPCalledPartyId
         {
             get => _addPCalledPartyId;
@@ -607,7 +607,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _supportIdentityInUpdateAndReInvite;
 
         [XmlElement(ElementName = "supportIdentityInUpdateAndReInvite", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool SupportIdentityInUpdateAndReInvite
         {
             get => _supportIdentityInUpdateAndReInvite;
@@ -624,7 +624,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.UnscreenedPresentationIdentityPolicy _unscreenedPresentationIdentityPolicy;
 
         [XmlElement(ElementName = "unscreenedPresentationIdentityPolicy", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public BroadWorksConnector.Ocip.Models.UnscreenedPresentationIdentityPolicy UnscreenedPresentationIdentityPolicy
         {
             get => _unscreenedPresentationIdentityPolicy;
@@ -641,7 +641,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enhancedForICS;
 
         [XmlElement(ElementName = "enhancedForICS", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool EnhancedForICS
         {
             get => _enhancedForICS;
@@ -658,7 +658,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _supportEmergencyDisconnectControl;
 
         [XmlElement(ElementName = "supportEmergencyDisconnectControl", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool SupportEmergencyDisconnectControl
         {
             get => _supportEmergencyDisconnectControl;
@@ -675,7 +675,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType _deviceTypeConfigurationOption;
 
         [XmlElement(ElementName = "deviceTypeConfigurationOption", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType DeviceTypeConfigurationOption
         {
             get => _deviceTypeConfigurationOption;
@@ -692,7 +692,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _supportRFC3398;
 
         [XmlElement(ElementName = "supportRFC3398", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool SupportRFC3398
         {
             get => _supportRFC3398;
@@ -709,7 +709,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _staticLineOrdering;
 
         [XmlElement(ElementName = "staticLineOrdering", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool StaticLineOrdering
         {
             get => _staticLineOrdering;
@@ -726,7 +726,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _supportClientSessionInfo;
 
         [XmlElement(ElementName = "supportClientSessionInfo", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool SupportClientSessionInfo
         {
             get => _supportClientSessionInfo;
@@ -743,7 +743,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _supportCallInfoConferenceSubscriptionURI;
 
         [XmlElement(ElementName = "supportCallInfoConferenceSubscriptionURI", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool SupportCallInfoConferenceSubscriptionURI
         {
             get => _supportCallInfoConferenceSubscriptionURI;
@@ -760,7 +760,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _supportRemotePartyInfo;
 
         [XmlElement(ElementName = "supportRemotePartyInfo", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool SupportRemotePartyInfo
         {
             get => _supportRemotePartyInfo;
@@ -777,7 +777,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _supportVisualDeviceManagement;
 
         [XmlElement(ElementName = "supportVisualDeviceManagement", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool SupportVisualDeviceManagement
         {
             get => _supportVisualDeviceManagement;
@@ -794,7 +794,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _bypassMediaTreatment;
 
         [XmlElement(ElementName = "bypassMediaTreatment", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool BypassMediaTreatment
         {
             get => _bypassMediaTreatment;
@@ -811,7 +811,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _supports3G4GContinuity;
 
         [XmlElement(ElementName = "supports3G4GContinuity", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool Supports3G4GContinuity
         {
             get => _supports3G4GContinuity;
@@ -828,7 +828,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _publishesOwnPresence;
 
         [XmlElement(ElementName = "publishesOwnPresence", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool PublishesOwnPresence
         {
             get => _publishesOwnPresence;
@@ -845,7 +845,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _supportCauseParameter;
 
         [XmlElement(ElementName = "supportCauseParameter", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool SupportCauseParameter
         {
             get => _supportCauseParameter;
@@ -862,7 +862,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.LocationNetworkType _locationNetwork;
 
         [XmlElement(ElementName = "locationNetwork", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public BroadWorksConnector.Ocip.Models.LocationNetworkType LocationNetwork
         {
             get => _locationNetwork;
@@ -879,7 +879,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowTerminationBasedOnICSI;
 
         [XmlElement(ElementName = "allowTerminationBasedOnICSI", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public bool AllowTerminationBasedOnICSI
         {
             get => _allowTerminationBasedOnICSI;
@@ -896,7 +896,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.RoamingMode _roamingMode;
 
         [XmlElement(ElementName = "roamingMode", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         public BroadWorksConnector.Ocip.Models.RoamingMode RoamingMode
         {
             get => _roamingMode;
@@ -914,7 +914,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:33743")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:34346")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ResellerId

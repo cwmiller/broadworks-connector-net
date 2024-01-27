@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3f28429898a57a7f7846d3877b22df9f:858""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""500f9871ed90b8ab3fbd262883ab503b:858""}]")]
     public class UserRouteListModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"3f28429898a57a7f7846d3877b22df9f:858")]
+        [Group(@"500f9871ed90b8ab3fbd262883ab503b:858")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "treatOriginationsAndPBXRedirectionsAsScreened", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3f28429898a57a7f7846d3877b22df9f:858")]
+        [Group(@"500f9871ed90b8ab3fbd262883ab503b:858")]
         public bool TreatOriginationsAndPBXRedirectionsAsScreened
         {
             get => _treatOriginationsAndPBXRedirectionsAsScreened;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useRouteListIdentityForNonEmergencyCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3f28429898a57a7f7846d3877b22df9f:858")]
+        [Group(@"500f9871ed90b8ab3fbd262883ab503b:858")]
         public bool UseRouteListIdentityForNonEmergencyCalls
         {
             get => _useRouteListIdentityForNonEmergencyCalls;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useRouteListIdentityForEmergencyCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3f28429898a57a7f7846d3877b22df9f:858")]
+        [Group(@"500f9871ed90b8ab3fbd262883ab503b:858")]
         public bool UseRouteListIdentityForEmergencyCalls
         {
             get => _useRouteListIdentityForEmergencyCalls;
@@ -92,11 +92,29 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseRouteListIdentityForEmergencyCallsSpecified { get; set; }
 
+        protected bool _ignoreCallingNameForCallProcessing;
+
+        [XmlElement(ElementName = "ignoreCallingNameForCallProcessing", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"500f9871ed90b8ab3fbd262883ab503b:858")]
+        public bool IgnoreCallingNameForCallProcessing
+        {
+            get => _ignoreCallingNameForCallProcessing;
+            set
+            {
+                IgnoreCallingNameForCallProcessingSpecified = true;
+                _ignoreCallingNameForCallProcessing = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool IgnoreCallingNameForCallProcessingSpecified { get; set; }
+
         protected BroadWorksConnector.Ocip.Models.ReplacementDNList _assignedNumberRangeStartList;
 
         [XmlElement(ElementName = "assignedNumberRangeStartList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3f28429898a57a7f7846d3877b22df9f:858")]
+        [Group(@"500f9871ed90b8ab3fbd262883ab503b:858")]
         public BroadWorksConnector.Ocip.Models.ReplacementDNList AssignedNumberRangeStartList
         {
             get => _assignedNumberRangeStartList;
@@ -114,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "assignedNumberPrefixList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3f28429898a57a7f7846d3877b22df9f:858")]
+        [Group(@"500f9871ed90b8ab3fbd262883ab503b:858")]
         public BroadWorksConnector.Ocip.Models.EnterpriseTrunkReplacementNumberPrefixList AssignedNumberPrefixList
         {
             get => _assignedNumberPrefixList;

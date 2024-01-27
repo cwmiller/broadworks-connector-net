@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:4111""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4600""}]")]
     public class ScheduleKey
     {
 
         protected string _scheduleName;
 
         [XmlElement(ElementName = "scheduleName", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4111")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4600")]
         [MinLength(1)]
         [MaxLength(40)]
         public string ScheduleName
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ScheduleType _scheduleType;
 
         [XmlElement(ElementName = "scheduleType", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4111")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4600")]
         public BroadWorksConnector.Ocip.Models.ScheduleType ScheduleType
         {
             get => _scheduleType;

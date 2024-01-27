@@ -9,23 +9,20 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to SystemPushNotificationParametersGetRequest.
     /// 
-    /// The following elements are only used in AS data mode:
-    /// subscriptionEventsPerSecond, value "100" is returned in Amplify data mode.
-    /// 
     /// Contains a list of system push notification parameters.
     /// <see cref="SystemPushNotificationParametersGetRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:14849""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:15068""}]")]
     public class SystemPushNotificationParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enforceAllowedApplicationList;
 
         [XmlElement(ElementName = "enforceAllowedApplicationList", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14849")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:15068")]
         public bool EnforceAllowedApplicationList
         {
             get => _enforceAllowedApplicationList;
@@ -42,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maximumRegistrationsPerUser;
 
         [XmlElement(ElementName = "maximumRegistrationsPerUser", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14849")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:15068")]
         [MinInclusive(1)]
         [MaxInclusive(100)]
         public int MaximumRegistrationsPerUser
@@ -61,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maximumRegistrationAgeDays;
 
         [XmlElement(ElementName = "maximumRegistrationAgeDays", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14849")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:15068")]
         [MinInclusive(30)]
         [MaxInclusive(120)]
         public int MaximumRegistrationAgeDays
@@ -80,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _newCallTimeout;
 
         [XmlElement(ElementName = "newCallTimeout", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14849")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:15068")]
         [MinInclusive(30)]
         [MaxInclusive(600)]
         public int NewCallTimeout
@@ -99,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _subscriptionEventsPerSecond;
 
         [XmlElement(ElementName = "subscriptionEventsPerSecond", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14849")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:15068")]
         [MinInclusive(1)]
         [MaxInclusive(5000)]
         public int SubscriptionEventsPerSecond

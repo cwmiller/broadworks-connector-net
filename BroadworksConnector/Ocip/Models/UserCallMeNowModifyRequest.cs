@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1f0f230fee2817fe00157925859dc28e:223""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""adf9583170c1dc9ec6c152ba1238437a:223""}]")]
     public class UserCallMeNowModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"1f0f230fee2817fe00157925859dc28e:223")]
+        [Group(@"adf9583170c1dc9ec6c152ba1238437a:223")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1f0f230fee2817fe00157925859dc28e:223")]
+        [Group(@"adf9583170c1dc9ec6c152ba1238437a:223")]
         public bool IsActive
         {
             get => _isActive;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "answerConfirmation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1f0f230fee2817fe00157925859dc28e:223")]
+        [Group(@"adf9583170c1dc9ec6c152ba1238437a:223")]
         public BroadWorksConnector.Ocip.Models.CallMeNowAnswerConfirmation AnswerConfirmation
         {
             get => _answerConfirmation;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "criteriaActivation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1f0f230fee2817fe00157925859dc28e:223")]
+        [Group(@"adf9583170c1dc9ec6c152ba1238437a:223")]
         public List<BroadWorksConnector.Ocip.Models.CriteriaActivation> CriteriaActivation
         {
             get => _criteriaActivation;

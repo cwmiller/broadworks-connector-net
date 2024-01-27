@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ed0640d8ef49eb8b4eaa14d7c6f6c033:629""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ec63a55bc41262b2dd33a1f4e8e84674:653""}]")]
     public class AutoAttendantKeyConfigurationReadEntry20
     {
 
@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:629")]
+        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:653")]
         [MinLength(1)]
         [MaxLength(20)]
         public string Description
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.AutoAttendantKeyAction _action;
 
         [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
-        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:629")]
+        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:653")]
         public BroadWorksConnector.Ocip.Models.AutoAttendantKeyAction Action
         {
             get => _action;
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:629")]
+        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:653")]
         [MinLength(1)]
         [MaxLength(30)]
         public string PhoneNumber
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:629")]
+        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:653")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey AudioFile
         {
             get => _audioFile;
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:629")]
+        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:653")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey VideoFile
         {
             get => _videoFile;
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "submenuId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:629")]
+        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:653")]
         [MinLength(1)]
         [MaxLength(40)]
         public string SubmenuId

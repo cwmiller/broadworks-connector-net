@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f6b3702edb5f67fa12c2c426d98657db:249""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1b5ee40628a3f2b1bcab94a53dec91e7:249""}]")]
     public class SystemEnhancedCallLogsGetResponse22V2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultSchema", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f6b3702edb5f67fa12c2c426d98657db:249")]
+        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:249")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DefaultSchema
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxNonPagedResponseSize;
 
         [XmlElement(ElementName = "maxNonPagedResponseSize", IsNullable = false, Namespace = "")]
-        [Group(@"f6b3702edb5f67fa12c2c426d98657db:249")]
+        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:249")]
         [MinInclusive(100)]
         [MaxInclusive(1000)]
         public int MaxNonPagedResponseSize
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "eclQueryApplicationURL", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f6b3702edb5f67fa12c2c426d98657db:249")]
+        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:249")]
         [MinLength(1)]
         [MaxLength(256)]
         public string EclQueryApplicationURL
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "eclQueryDataRepositoryURL", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f6b3702edb5f67fa12c2c426d98657db:249")]
+        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:249")]
         [MinLength(1)]
         [MaxLength(256)]
         public string EclQueryDataRepositoryURL

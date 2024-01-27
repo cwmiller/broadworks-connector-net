@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:16516""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:16736""}]")]
     public class SystemSIPAddContentTypeRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _contentType;
 
         [XmlElement(ElementName = "contentType", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16516")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:16736")]
         [MinLength(2)]
         [MaxLength(80)]
         public string ContentType
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SystemSIPSupportedInterface _interface;
 
         [XmlElement(ElementName = "interface", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:16516")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:16736")]
         public BroadWorksConnector.Ocip.Models.SystemSIPSupportedInterface Interface
         {
             get => _interface;

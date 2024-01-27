@@ -9,20 +9,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Add a system call type mapping.
     /// The response is either SuccessResponse or ErrorResponse.
+    /// The following element is used only in AS mode:
+    /// ignoreASEmergencyRoute
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:5200""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:5259""}]")]
     public class SystemCallTypeAddMappingRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _countryCode;
 
         [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5200")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:5259")]
         [MaxLength(3)]
         [RegularExpression(@"[0-9]|[1-9][0-9]{1,2}")]
         public string CountryCode
@@ -41,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _digitMap;
 
         [XmlElement(ElementName = "digitMap", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5200")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:5259")]
         [MinLength(1)]
         [MaxLength(30)]
         public string DigitMap
@@ -60,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SystemCallType _callType;
 
         [XmlElement(ElementName = "callType", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:5200")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:5259")]
         public BroadWorksConnector.Ocip.Models.SystemCallType CallType
         {
             get => _callType;
@@ -73,6 +75,24 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool CallTypeSpecified { get; set; }
+
+        protected bool _ignoreASEmergencyRoute;
+
+        [XmlElement(ElementName = "ignoreASEmergencyRoute", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"da582a1f8028404e70d260cf1f891033:5259")]
+        public bool IgnoreASEmergencyRoute
+        {
+            get => _ignoreASEmergencyRoute;
+            set
+            {
+                IgnoreASEmergencyRouteSpecified = true;
+                _ignoreASEmergencyRoute = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool IgnoreASEmergencyRouteSpecified { get; set; }
 
     }
 }

@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b009175f2a2a9d38115e319a6ad64d7f:388""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d45e381d6dbac771631649063122a42e:390""}]")]
     public class ResellerCallPoliciesGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _forceRedirectingUserIdentityForRedirectedCalls;
 
         [XmlElement(ElementName = "forceRedirectingUserIdentityForRedirectedCalls", IsNullable = false, Namespace = "")]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:388")]
+        [Group(@"d45e381d6dbac771631649063122a42e:390")]
         public bool ForceRedirectingUserIdentityForRedirectedCalls
         {
             get => _forceRedirectingUserIdentityForRedirectedCalls;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _applyRedirectingUserIdentityToNetworkLocations;
 
         [XmlElement(ElementName = "applyRedirectingUserIdentityToNetworkLocations", IsNullable = false, Namespace = "")]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:388")]
+        [Group(@"d45e381d6dbac771631649063122a42e:390")]
         public bool ApplyRedirectingUserIdentityToNetworkLocations
         {
             get => _applyRedirectingUserIdentityToNetworkLocations;

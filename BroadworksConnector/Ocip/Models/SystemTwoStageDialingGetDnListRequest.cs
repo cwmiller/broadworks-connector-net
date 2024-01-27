@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2a1428f64736d8f970ea802e5a73c495:80""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""103e8fba76512e5a1abfb373758f36e2:80""}]")]
     public class SystemTwoStageDialingGetDnListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemTwoStageDialingGetDnListResponse>
     {
 
@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"2a1428f64736d8f970ea802e5a73c495:80")]
+        [Group(@"103e8fba76512e5a1abfb373758f36e2:80")]
         [MinInclusive(1)]
         public int ResponseSizeLimit
         {
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaSystemServiceDn", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"2a1428f64736d8f970ea802e5a73c495:80")]
+        [Group(@"103e8fba76512e5a1abfb373758f36e2:80")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaSystemServiceDn> SearchCriteriaSystemServiceDn
         {
             get => _searchCriteriaSystemServiceDn;

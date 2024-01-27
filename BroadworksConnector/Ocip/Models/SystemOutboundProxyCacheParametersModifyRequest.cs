@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:14092""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:14268""}]")]
     public class SystemOutboundProxyCacheParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "evictionTimeoutMinutes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14092")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14268")]
         [MinInclusive(0)]
         [MaxInclusive(525600)]
         public int EvictionTimeoutMinutes
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "refreshTimeoutMinutes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14092")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14268")]
         [MinInclusive(0)]
         [MaxInclusive(525600)]
         public int RefreshTimeoutMinutes
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "auditIntervalMinutes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14092")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14268")]
         [MinInclusive(0)]
         [MaxInclusive(525600)]
         public int AuditIntervalMinutes
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maximumCacheSize", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14092")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14268")]
         [MinInclusive(0)]
         public int MaximumCacheSize
         {
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "dnsTypeDefaultValue", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14092")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14268")]
         [MinLength(1)]
         [MaxLength(256)]
         public string DnsTypeDefaultValue
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useDnsSrvDefaultValue", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14092")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14268")]
         [MinLength(1)]
         [MaxLength(256)]
         public string UseDnsSrvDefaultValue
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "srvPrefixDefaultValue", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14092")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14268")]
         [MinLength(1)]
         [MaxLength(256)]
         public string SrvPrefixDefaultValue
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "outboundProxyDefaultValue", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14092")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14268")]
         [MinLength(1)]
         [MaxLength(256)]
         public string OutboundProxyDefaultValue
@@ -184,7 +184,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "transportTypeDefaultValue", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14092")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14268")]
         [MinLength(1)]
         [MaxLength(256)]
         public string TransportTypeDefaultValue
@@ -204,7 +204,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "secureRtpDefaultValue", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14092")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14268")]
         [MinLength(1)]
         [MaxLength(256)]
         public string SecureRtpDefaultValue

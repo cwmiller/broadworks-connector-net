@@ -20,14 +20,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:25784""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:26193""}]")]
     public class SystemDeviceTypeGetAvailableListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemDeviceTypeGetAvailableListResponse>
     {
 
         protected bool _allowConference;
 
         [XmlElement(ElementName = "allowConference", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25784")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:26193")]
         public bool AllowConference
         {
             get => _allowConference;
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowMusicOnHold;
 
         [XmlElement(ElementName = "allowMusicOnHold", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25784")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:26193")]
         public bool AllowMusicOnHold
         {
             get => _allowMusicOnHold;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _onlyConference;
 
         [XmlElement(ElementName = "onlyConference", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25784")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:26193")]
         public bool OnlyConference
         {
             get => _onlyConference;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _onlyVideoCapable;
 
         [XmlElement(ElementName = "onlyVideoCapable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25784")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:26193")]
         public bool OnlyVideoCapable
         {
             get => _onlyVideoCapable;
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _onlyOptionalIpAddress;
 
         [XmlElement(ElementName = "onlyOptionalIpAddress", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25784")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:26193")]
         public bool OnlyOptionalIpAddress
         {
             get => _onlyOptionalIpAddress;

@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:378""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:378""}]")]
     public class SearchCriteriaComposedOrDnExtension : BroadWorksConnector.Ocip.Models.SearchCriteriaComposedOr
     {
 
         protected BroadWorksConnector.Ocip.Models.UserDNExtension _value;
 
         [XmlElement(ElementName = "value", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:378")]
+        [Group(@"972fbf832439609ec8f2765c5637c3f1:378")]
         public BroadWorksConnector.Ocip.Models.UserDNExtension Value
         {
             get => _value;

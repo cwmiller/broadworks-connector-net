@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:2896""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:2902""}]")]
     public class PlayMessagesMenuKeysModifyEntry
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "saveMessage", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2896")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2902")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SaveMessage
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deleteMessage", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2896")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2902")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string DeleteMessage
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "playMessage", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2896")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2902")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string PlayMessage
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "previousMessage", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2896")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2902")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string PreviousMessage
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "playEnvelope", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2896")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2902")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string PlayEnvelope
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "nextMessage", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2896")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2902")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string NextMessage
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callbackCaller", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2896")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2902")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string CallbackCaller
@@ -160,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "composeMessage", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2896")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2902")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ComposeMessage
@@ -180,7 +180,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "replyMessage", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2896")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2902")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ReplyMessage
@@ -200,7 +200,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forwardMessage", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2896")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2902")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ForwardMessage
@@ -220,7 +220,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "additionalMessageOptions", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2896")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2902")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string AdditionalMessageOptions
@@ -240,7 +240,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "personalizedName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2896")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2902")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string PersonalizedName
@@ -260,7 +260,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "passcode", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2896")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2902")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string Passcode
@@ -280,7 +280,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2896")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2902")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ReturnToPreviousMenu
@@ -300,7 +300,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2896")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2902")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string RepeatMenu

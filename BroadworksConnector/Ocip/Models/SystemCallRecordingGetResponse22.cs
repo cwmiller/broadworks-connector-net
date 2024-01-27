@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:24732""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:9299""}]")]
     public class SystemCallRecordingGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _continueCallAfterRecordingFailure;
 
         [XmlElement(ElementName = "continueCallAfterRecordingFailure", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24732")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9299")]
         public bool ContinueCallAfterRecordingFailure
         {
             get => _continueCallAfterRecordingFailure;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxResponseWaitTimeMilliseconds;
 
         [XmlElement(ElementName = "maxResponseWaitTimeMilliseconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24732")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9299")]
         [MinInclusive(50)]
         [MaxInclusive(10000)]
         public int MaxResponseWaitTimeMilliseconds
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _continueCallAfterVideoRecordingFailure;
 
         [XmlElement(ElementName = "continueCallAfterVideoRecordingFailure", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24732")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:9299")]
         public bool ContinueCallAfterVideoRecordingFailure
         {
             get => _continueCallAfterVideoRecordingFailure;

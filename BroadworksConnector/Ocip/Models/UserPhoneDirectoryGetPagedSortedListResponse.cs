@@ -19,7 +19,8 @@ namespace BroadWorksConnector.Ocip.Models
     /// "Email Address", "Yahoo Id", "Department", "Group Id", "Location",
     /// "Address Line 1", "Address Line 2", "City", "State", "Zip",
     /// "Country", "IMP Id", "Location Code", "My Room Room Id",
-    /// "My Room Bridge Id", "Service Name", and "Receptionist Note".
+    /// "My Room Bridge Id", "Service Name", "Receptionist Note",
+    /// "User External Id", and "User Place Type".
     /// The Service Name represents the localized service name for service instances.
     /// The localized values are taken from the BroadworksLabel.properties file.
     /// Service Name is currently supporting:
@@ -33,20 +34,20 @@ namespace BroadWorksConnector.Ocip.Models
     /// the request is the owner of the Receptionist Note and a Note exists.
     /// 
     /// The following columns are returned in AS data mode only:
-    /// "Service Name", "Receptionist Notes"
+    /// "Service Name", "Receptionist Notes", "User External Id", "User Place Type".
     /// <see cref="UserPhoneDirectoryGetPagedSortedListRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3180""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:3186""}]")]
     public class UserPhoneDirectoryGetPagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected int _totalNumberOfRows;
 
         [XmlElement(ElementName = "totalNumberOfRows", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3180")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3186")]
         public int TotalNumberOfRows
         {
             get => _totalNumberOfRows;
@@ -63,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _directoryTable;
 
         [XmlElement(ElementName = "directoryTable", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3180")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3186")]
         public BroadWorksConnector.Ocip.Models.C.OCITable DirectoryTable
         {
             get => _directoryTable;

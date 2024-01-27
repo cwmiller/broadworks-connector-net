@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3c311aa5c89c0cf5b46e1cdefd5bc387:224""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""21e97b8199c6e7eff29a84874335b46e:224""}]")]
     public class SystemThirdPartyVoiceMailSupportModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -26,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "overrideAltCallerIdForVMRetrieval", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3c311aa5c89c0cf5b46e1cdefd5bc387:224")]
+        [Group(@"21e97b8199c6e7eff29a84874335b46e:224")]
         public bool OverrideAltCallerIdForVMRetrieval
         {
             get => _overrideAltCallerIdForVMRetrieval;
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "stripDiversionOnVMDestinationRetrieval", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3c311aa5c89c0cf5b46e1cdefd5bc387:224")]
+        [Group(@"21e97b8199c6e7eff29a84874335b46e:224")]
         public bool StripDiversionOnVMDestinationRetrieval
         {
             get => _stripDiversionOnVMDestinationRetrieval;

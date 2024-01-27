@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b3afea8308b7fdaab8d385357ca9c2d:275""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""435c279b3e6710f4ada60ed66a93d278:275""}]")]
     public class SystemSecurityClassificationModifyClassificationRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _securityClassificationName;
 
         [XmlElement(ElementName = "securityClassificationName", IsNullable = false, Namespace = "")]
-        [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:275")]
+        [Group(@"435c279b3e6710f4ada60ed66a93d278:275")]
         [MinLength(1)]
         [MaxLength(40)]
         public string SecurityClassificationName
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newSecurityClassificationName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:275")]
+        [Group(@"435c279b3e6710f4ada60ed66a93d278:275")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NewSecurityClassificationName
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:275")]
+        [Group(@"435c279b3e6710f4ada60ed66a93d278:275")]
         public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource AudioFile
         {
             get => _audioFile;

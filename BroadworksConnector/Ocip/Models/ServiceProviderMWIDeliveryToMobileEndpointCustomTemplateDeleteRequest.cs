@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""958b78cc2a785d78259c1e8a474eb40d:230""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1ea80c1e18c25d0eed23dbc7bd18f1dc:230""}]")]
     public class ServiceProviderMWIDeliveryToMobileEndpointCustomTemplateDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"958b78cc2a785d78259c1e8a474eb40d:230")]
+        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:230")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _language;
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
-        [Group(@"958b78cc2a785d78259c1e8a474eb40d:230")]
+        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:230")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Language
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateType _type;
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-        [Group(@"958b78cc2a785d78259c1e8a474eb40d:230")]
+        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:230")]
         public BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateType Type
         {
             get => _type;

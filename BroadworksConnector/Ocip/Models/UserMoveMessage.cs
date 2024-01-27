@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4629""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:4638""}]")]
     public class UserMoveMessage
     {
 
         protected int _messageCode;
 
         [XmlElement(ElementName = "messageCode", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4629")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:4638")]
         public int MessageCode
         {
             get => _messageCode;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _summary;
 
         [XmlElement(ElementName = "summary", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4629")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:4638")]
         public string Summary
         {
             get => _summary;
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _summaryEnglish;
 
         [XmlElement(ElementName = "summaryEnglish", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4629")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:4638")]
         public string SummaryEnglish
         {
             get => _summaryEnglish;

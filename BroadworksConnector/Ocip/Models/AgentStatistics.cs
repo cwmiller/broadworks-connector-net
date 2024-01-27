@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7315""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7301""}]")]
     public class AgentStatistics
     {
 
         protected int _numberOfCallsHandled;
 
         [XmlElement(ElementName = "numberOfCallsHandled", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7315")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7301")]
         public int NumberOfCallsHandled
         {
             get => _numberOfCallsHandled;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _numberOfCallsUnanswered;
 
         [XmlElement(ElementName = "numberOfCallsUnanswered", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7315")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7301")]
         public int NumberOfCallsUnanswered
         {
             get => _numberOfCallsUnanswered;
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _averageCallSeconds;
 
         [XmlElement(ElementName = "averageCallSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7315")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7301")]
         public int AverageCallSeconds
         {
             get => _averageCallSeconds;
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _totalTalkSeconds;
 
         [XmlElement(ElementName = "totalTalkSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7315")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7301")]
         public int TotalTalkSeconds
         {
             get => _totalTalkSeconds;
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _totalStaffedSeconds;
 
         [XmlElement(ElementName = "totalStaffedSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7315")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7301")]
         public int TotalStaffedSeconds
         {
             get => _totalStaffedSeconds;

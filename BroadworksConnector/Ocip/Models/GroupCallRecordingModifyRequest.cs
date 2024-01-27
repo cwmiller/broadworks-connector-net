@@ -9,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify the Call Recording platform assignment for a group.
     /// The response is either a SuccessResponse or an ErrorResponse.
+    /// 
+    /// The following element is only nillable in XS data mode:
+    /// name
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9741e074fbfeb4c7312bfa4dfbaee3d3:141""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0731150ec7515df8cd710f04d8f62f66:143""}]")]
     public class GroupCallRecordingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:141")]
+        [Group(@"0731150ec7515df8cd710f04d8f62f66:143")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:141")]
+        [Group(@"0731150ec7515df8cd710f04d8f62f66:143")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -59,9 +62,9 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _name;
 
-        [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
+        [XmlElement(ElementName = "name", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"9741e074fbfeb4c7312bfa4dfbaee3d3:141")]
+        [Group(@"0731150ec7515df8cd710f04d8f62f66:143")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name

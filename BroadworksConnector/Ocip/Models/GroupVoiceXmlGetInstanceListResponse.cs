@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0639a23b2e14be05c11ead49c23bd0bd:106""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3e2fc6b9722da3741a8ba4a2c4a2d05:106""}]")]
     public class GroupVoiceXmlGetInstanceListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _voiceXmlTable;
 
         [XmlElement(ElementName = "voiceXmlTable", IsNullable = false, Namespace = "")]
-        [Group(@"0639a23b2e14be05c11ead49c23bd0bd:106")]
+        [Group(@"f3e2fc6b9722da3741a8ba4a2c4a2d05:106")]
         public BroadWorksConnector.Ocip.Models.C.OCITable VoiceXmlTable
         {
             get => _voiceXmlTable;

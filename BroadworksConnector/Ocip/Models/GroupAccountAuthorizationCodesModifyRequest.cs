@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""65df37199ec43e5d21a187db39d63158:196""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fcf43b3a58ff66521262b4426bab8748:196""}]")]
     public class GroupAccountAuthorizationCodesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"65df37199ec43e5d21a187db39d63158:196")]
+        [Group(@"fcf43b3a58ff66521262b4426bab8748:196")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"65df37199ec43e5d21a187db39d63158:196")]
+        [Group(@"fcf43b3a58ff66521262b4426bab8748:196")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "codeType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"65df37199ec43e5d21a187db39d63158:196")]
+        [Group(@"fcf43b3a58ff66521262b4426bab8748:196")]
         public BroadWorksConnector.Ocip.Models.AccountAuthorizationCodeType CodeType
         {
             get => _codeType;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "numberOfDigits", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"65df37199ec43e5d21a187db39d63158:196")]
+        [Group(@"fcf43b3a58ff66521262b4426bab8748:196")]
         [MinInclusive(2)]
         [MaxInclusive(14)]
         public int NumberOfDigits
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowLocalAndTollFreeCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"65df37199ec43e5d21a187db39d63158:196")]
+        [Group(@"fcf43b3a58ff66521262b4426bab8748:196")]
         public bool AllowLocalAndTollFreeCalls
         {
             get => _allowLocalAndTollFreeCalls;
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mandatoryUsageUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"65df37199ec43e5d21a187db39d63158:196")]
+        [Group(@"fcf43b3a58ff66521262b4426bab8748:196")]
         public BroadWorksConnector.Ocip.Models.ReplacementUserIdList MandatoryUsageUserIdList
         {
             get => _mandatoryUsageUserIdList;
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "optionalUsageUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"65df37199ec43e5d21a187db39d63158:196")]
+        [Group(@"fcf43b3a58ff66521262b4426bab8748:196")]
         public BroadWorksConnector.Ocip.Models.ReplacementUserIdList OptionalUsageUserIdList
         {
             get => _optionalUsageUserIdList;

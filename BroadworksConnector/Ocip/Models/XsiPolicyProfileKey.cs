@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:5375""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:5855""}]")]
     public class XsiPolicyProfileKey
     {
 
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5375")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5855")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.XsiPolicyProfileLevel _level;
 
         [XmlElement(ElementName = "level", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5375")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5855")]
         public BroadWorksConnector.Ocip.Models.XsiPolicyProfileLevel Level
         {
             get => _level;

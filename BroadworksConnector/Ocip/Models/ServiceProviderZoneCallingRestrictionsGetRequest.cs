@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da5cd0d79ddb505982e08d164e405660:46""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1d57523802a1435faa76c4035da1e4dc:46""}]")]
     public class ServiceProviderZoneCallingRestrictionsGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ServiceProviderZoneCallingRestrictionsGetResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"da5cd0d79ddb505982e08d164e405660:46")]
+        [Group(@"1d57523802a1435faa76c4035da1e4dc:46")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId

@@ -9,20 +9,20 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Information related to a tree device.
     /// A tree device is a device associated with a device type that has the option
-    /// supportLinks set to "Support Links from Devices".  Many leaf devices can link to it.
+    /// supportLinks set to "Support Links from Devices"..  Many leaf devices can link to it.
     /// When a tree device is created, it is assigned a system-wide unique linkId.
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:4788""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:5253""}]")]
     public class TreeDeviceInfo
     {
 
         protected BroadWorksConnector.Ocip.Models.AccessDeviceKey _treeDeviceKey;
 
         [XmlElement(ElementName = "treeDeviceKey", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4788")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5253")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceKey TreeDeviceKey
         {
             get => _treeDeviceKey;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _linkId;
 
         [XmlElement(ElementName = "linkId", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4788")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5253")]
         public string LinkId
         {
             get => _linkId;

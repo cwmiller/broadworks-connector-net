@@ -8,19 +8,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to SystemVoiceMessageSummaryUpdateGetRequest.
+    /// 
+    /// Replaced By: SystemVoiceMessageSummaryUpdateGetResponse25
     /// <see cref="SystemVoiceMessageSummaryUpdateGetRequest"/>
+    /// <see cref="SystemVoiceMessageSummaryUpdateGetResponse25"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:550""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:36770""}]")]
     public class SystemVoiceMessageSummaryUpdateGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _sendSavedAndUrgentMWIOnNotification;
 
         [XmlElement(ElementName = "sendSavedAndUrgentMWIOnNotification", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:550")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36770")]
         public bool SendSavedAndUrgentMWIOnNotification
         {
             get => _sendSavedAndUrgentMWIOnNotification;
@@ -37,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _sendMessageSummaryUpdateOnRegister;
 
         [XmlElement(ElementName = "sendMessageSummaryUpdateOnRegister", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:550")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36770")]
         public bool SendMessageSummaryUpdateOnRegister
         {
             get => _sendMessageSummaryUpdateOnRegister;
@@ -54,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _minTimeBetweenMWIOnRegister;
 
         [XmlElement(ElementName = "minTimeBetweenMWIOnRegister", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:550")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36770")]
         [MinInclusive(0)]
         [MaxInclusive(86400)]
         public int MinTimeBetweenMWIOnRegister

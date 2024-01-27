@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:20019""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:20753""}]")]
     public class SystemAutomaticCollectCallGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enableAutomaticCollectCall;
 
         [XmlElement(ElementName = "enableAutomaticCollectCall", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20019")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:20753")]
         public bool EnableAutomaticCollectCall
         {
             get => _enableAutomaticCollectCall;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableConnectTone;
 
         [XmlElement(ElementName = "enableConnectTone", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:20019")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:20753")]
         public bool EnableConnectTone
         {
             get => _enableConnectTone;

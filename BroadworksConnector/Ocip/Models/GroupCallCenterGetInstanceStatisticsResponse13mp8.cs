@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:6174""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:6306""}]")]
     public class GroupCallCenterGetInstanceStatisticsResponse13mp8 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected int _numberOfCallsQueuedNow;
 
         [XmlElement(ElementName = "numberOfCallsQueuedNow", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6174")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:6306")]
         public int NumberOfCallsQueuedNow
         {
             get => _numberOfCallsQueuedNow;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _generateDailyReport;
 
         [XmlElement(ElementName = "generateDailyReport", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6174")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:6306")]
         public bool GenerateDailyReport
         {
             get => _generateDailyReport;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes _collectionPeriodMinutes;
 
         [XmlElement(ElementName = "collectionPeriodMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6174")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:6306")]
         public BroadWorksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes CollectionPeriodMinutes
         {
             get => _collectionPeriodMinutes;
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "reportingEmailAddress1", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6174")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:6306")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ReportingEmailAddress1
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "reportingEmailAddress2", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6174")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:6306")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ReportingEmailAddress2
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CallCenterQueueStatistics13mp8 _queueStatisticsYesterday;
 
         [XmlElement(ElementName = "queueStatisticsYesterday", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6174")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:6306")]
         public BroadWorksConnector.Ocip.Models.CallCenterQueueStatistics13mp8 QueueStatisticsYesterday
         {
             get => _queueStatisticsYesterday;
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CallCenterQueueStatistics13mp8 _queueStatisticsToday;
 
         [XmlElement(ElementName = "queueStatisticsToday", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6174")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:6306")]
         public BroadWorksConnector.Ocip.Models.CallCenterQueueStatistics13mp8 QueueStatisticsToday
         {
             get => _queueStatisticsToday;
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "agentStatistics", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:6174")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:6306")]
         public List<BroadWorksConnector.Ocip.Models.CallCenterAgentStatistics13mp8> AgentStatistics
         {
             get => _agentStatistics;

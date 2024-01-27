@@ -13,13 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     /// The following elements are only used in AS data mode and ignored in XS data mode:
     /// denyMobilityNumberAsRedirectionDestination
     /// denyEnterpriseNumberAsNetworkLocationDestination
+    /// denyAutoAttendantIdentityAsAutoAttendantTransferNumber
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:14729""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:14950""}]")]
     public class SystemProvisioningValidationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -27,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14729")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14950")]
         public bool IsActive
         {
             get => _isActive;
@@ -45,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isNetworkServerQueryActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14729")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14950")]
         public bool IsNetworkServerQueryActive
         {
             get => _isNetworkServerQueryActive;
@@ -63,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14729")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14950")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
         public int TimeoutSeconds
@@ -83,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "denyMobilityNumberAsRedirectionDestination", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14729")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14950")]
         public bool DenyMobilityNumberAsRedirectionDestination
         {
             get => _denyMobilityNumberAsRedirectionDestination;
@@ -101,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "denyEnterpriseNumberAsNetworkLocationDestination", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:14729")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14950")]
         public bool DenyEnterpriseNumberAsNetworkLocationDestination
         {
             get => _denyEnterpriseNumberAsNetworkLocationDestination;
@@ -114,6 +115,24 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool DenyEnterpriseNumberAsNetworkLocationDestinationSpecified { get; set; }
+
+        protected bool _denyAutoAttendantIdentityAsAutoAttendantTransferNumber;
+
+        [XmlElement(ElementName = "denyAutoAttendantIdentityAsAutoAttendantTransferNumber", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14950")]
+        public bool DenyAutoAttendantIdentityAsAutoAttendantTransferNumber
+        {
+            get => _denyAutoAttendantIdentityAsAutoAttendantTransferNumber;
+            set
+            {
+                DenyAutoAttendantIdentityAsAutoAttendantTransferNumberSpecified = true;
+                _denyAutoAttendantIdentityAsAutoAttendantTransferNumber = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool DenyAutoAttendantIdentityAsAutoAttendantTransferNumberSpecified { get; set; }
 
     }
 }

@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:5269"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:5271""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:5734"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:5736""}]}]")]
     public class UserServiceAuthorization
     {
 
         protected BroadWorksConnector.Ocip.Models.UserService _serviceName;
 
         [XmlElement(ElementName = "serviceName", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5269")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5734")]
         public BroadWorksConnector.Ocip.Models.UserService ServiceName
         {
             get => _serviceName;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _authorizedQuantity;
 
         [XmlElement(ElementName = "authorizedQuantity", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5271")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5736")]
         public BroadWorksConnector.Ocip.Models.UnboundedPositiveInt AuthorizedQuantity
         {
             get => _authorizedQuantity;
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _unauthorized;
 
         [XmlElement(ElementName = "unauthorized", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:5271")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5736")]
         public bool Unauthorized
         {
             get => _unauthorized;

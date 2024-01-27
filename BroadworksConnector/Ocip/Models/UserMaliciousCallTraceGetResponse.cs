@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0da7c658f240cdc10c3f9cb328db57d8:168""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""be7f3162f133f8d7fcc75e712b0258e6:168""}]")]
     public class UserMaliciousCallTraceGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"0da7c658f240cdc10c3f9cb328db57d8:168")]
+        [Group(@"be7f3162f133f8d7fcc75e712b0258e6:168")]
         public bool IsActive
         {
             get => _isActive;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.MaliciousCallTraceCallTypeSelection _traceTypeSelection;
 
         [XmlElement(ElementName = "traceTypeSelection", IsNullable = false, Namespace = "")]
-        [Group(@"0da7c658f240cdc10c3f9cb328db57d8:168")]
+        [Group(@"be7f3162f133f8d7fcc75e712b0258e6:168")]
         public BroadWorksConnector.Ocip.Models.MaliciousCallTraceCallTypeSelection TraceTypeSelection
         {
             get => _traceTypeSelection;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _traceForTimePeriod;
 
         [XmlElement(ElementName = "traceForTimePeriod", IsNullable = false, Namespace = "")]
-        [Group(@"0da7c658f240cdc10c3f9cb328db57d8:168")]
+        [Group(@"be7f3162f133f8d7fcc75e712b0258e6:168")]
         public bool TraceForTimePeriod
         {
             get => _traceForTimePeriod;
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "traceTimePeriod", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0da7c658f240cdc10c3f9cb328db57d8:168")]
+        [Group(@"be7f3162f133f8d7fcc75e712b0258e6:168")]
         public BroadWorksConnector.Ocip.Models.MaliciousCallTraceTimePeriod TraceTimePeriod
         {
             get => _traceTimePeriod;

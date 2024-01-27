@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3265"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3267""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:3271"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:3273""}]}]")]
     public class UserPortalPasscodeGetInfoResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isLoginDisabled;
 
         [XmlElement(ElementName = "isLoginDisabled", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3265")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3271")]
         public bool IsLoginDisabled
         {
             get => _isLoginDisabled;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _expirationDays;
 
         [XmlElement(ElementName = "expirationDays", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3267")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3273")]
         public int ExpirationDays
         {
             get => _expirationDays;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _doesNotExpire;
 
         [XmlElement(ElementName = "doesNotExpire", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3267")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3273")]
         public bool DoesNotExpire
         {
             get => _doesNotExpire;
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _passcode;
 
         [XmlElement(ElementName = "passcode", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3265")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3271")]
         [MinLength(1)]
         [MaxLength(30)]
         public string Passcode

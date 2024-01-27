@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:8066""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:10098""}]")]
     public class SystemDeviceTypeGetResponse22V2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isObsolete;
 
         [XmlElement(ElementName = "isObsolete", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:8066")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10098")]
         public bool IsObsolete
         {
             get => _isObsolete;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SignalingAddressType _profile;
 
         [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:8066")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10098")]
         public BroadWorksConnector.Ocip.Models.SignalingAddressType Profile
         {
             get => _profile;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "webBasedConfigURL", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:8066")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10098")]
         [MinLength(1)]
         [MaxLength(80)]
         public string WebBasedConfigURL
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _staticRegistrationCapable;
 
         [XmlElement(ElementName = "staticRegistrationCapable", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:8066")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10098")]
         public bool StaticRegistrationCapable
         {
             get => _staticRegistrationCapable;
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "cpeDeviceOptions", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:8066")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10098")]
         public BroadWorksConnector.Ocip.Models.CPEDeviceOptionsRead22V2 CpeDeviceOptions
         {
             get => _cpeDeviceOptions;
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected List<string> _protocolChoice = new List<string>();
 
         [XmlElement(ElementName = "protocolChoice", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:8066")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10098")]
         [MinLength(1)]
         [MaxLength(20)]
         public List<string> ProtocolChoice
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isIpAddressOptional;
 
         [XmlElement(ElementName = "isIpAddressOptional", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:8066")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10098")]
         public bool IsIpAddressOptional
         {
             get => _isIpAddressOptional;
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useDomain;
 
         [XmlElement(ElementName = "useDomain", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:8066")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10098")]
         public bool UseDomain
         {
             get => _useDomain;
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isMobilityManagerDevice;
 
         [XmlElement(ElementName = "isMobilityManagerDevice", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:8066")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10098")]
         public bool IsMobilityManagerDevice
         {
             get => _isMobilityManagerDevice;
@@ -182,7 +182,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceTypeConfigurationOption", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:8066")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10098")]
         public BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType DeviceTypeConfigurationOption
         {
             get => _deviceTypeConfigurationOption;
@@ -200,7 +200,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "staticLineOrdering", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:8066")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10098")]
         public bool StaticLineOrdering
         {
             get => _staticLineOrdering;
@@ -218,7 +218,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:8066")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10098")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ResellerId

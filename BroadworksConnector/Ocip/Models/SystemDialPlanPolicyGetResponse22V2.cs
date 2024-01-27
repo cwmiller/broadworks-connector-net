@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9157""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:9281""}]")]
     public class SystemDialPlanPolicyGetResponse22V2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _requiresAccessCodeForPublicCalls;
 
         [XmlElement(ElementName = "requiresAccessCodeForPublicCalls", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9157")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9281")]
         public bool RequiresAccessCodeForPublicCalls
         {
             get => _requiresAccessCodeForPublicCalls;
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowE164PublicCalls;
 
         [XmlElement(ElementName = "allowE164PublicCalls", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9157")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9281")]
         public bool AllowE164PublicCalls
         {
             get => _allowE164PublicCalls;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _preferE164NumberFormatForCallbackServices;
 
         [XmlElement(ElementName = "preferE164NumberFormatForCallbackServices", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9157")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9281")]
         public bool PreferE164NumberFormatForCallbackServices
         {
             get => _preferE164NumberFormatForCallbackServices;
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _publicDigitMap;
 
         [XmlElement(ElementName = "publicDigitMap", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9157")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9281")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string PublicDigitMap
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "privateDigitMap", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9157")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9281")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string PrivateDigitMap
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _overrideResolvedDeviceDigitMap;
 
         [XmlElement(ElementName = "overrideResolvedDeviceDigitMap", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9157")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9281")]
         public bool OverrideResolvedDeviceDigitMap
         {
             get => _overrideResolvedDeviceDigitMap;
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceDigitMap", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9157")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9281")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string DeviceDigitMap
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "performInternalTranslationsWithOAC", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9157")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9281")]
         public bool PerformInternalTranslationsWithOAC
         {
             get => _performInternalTranslationsWithOAC;
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "permissiveOACDialing", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9157")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9281")]
         public bool PermissiveOACDialing
         {
             get => _permissiveOACDialing;

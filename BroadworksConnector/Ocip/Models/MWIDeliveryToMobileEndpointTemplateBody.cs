@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""958b78cc2a785d78259c1e8a474eb40d:420""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1ea80c1e18c25d0eed23dbc7bd18f1dc:420""}]")]
     public class MWIDeliveryToMobileEndpointTemplateBody
     {
 
         protected List<BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateLine> _line = new List<BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateLine>();
 
         [XmlElement(ElementName = "line", IsNullable = false, Namespace = "")]
-        [Group(@"958b78cc2a785d78259c1e8a474eb40d:420")]
+        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:420")]
         public List<BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateLine> Line
         {
             get => _line;

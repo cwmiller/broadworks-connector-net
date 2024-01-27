@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:538""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:538""}]")]
     public class AccessDeviceTypeRename
     {
 
         protected string _originalDeviceTypeName;
 
         [XmlElement(ElementName = "originalDeviceTypeName", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:538")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:538")]
         [MinLength(1)]
         [MaxLength(40)]
         public string OriginalDeviceTypeName
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _newDeviceTypeName;
 
         [XmlElement(ElementName = "newDeviceTypeName", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:538")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:538")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NewDeviceTypeName

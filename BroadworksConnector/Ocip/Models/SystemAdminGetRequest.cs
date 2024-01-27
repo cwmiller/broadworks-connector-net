@@ -9,20 +9,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get a system or provisioning administrators profile.
     /// The response is either a SystemAdminGetResponse or an ErrorResponse.
+    /// Replaced by: SystemAdminGetRequest22
     /// <see cref="SystemAdminGetResponse"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemAdminGetRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:2144""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:8222""}]")]
     public class SystemAdminGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemAdminGetResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:2144")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:8222")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

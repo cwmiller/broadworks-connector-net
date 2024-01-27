@@ -20,14 +20,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a8df43dca23d99d8ab44c0082aadfbe0:139""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2c9f194a3272e429f2e5215dd988b94a:139""}]")]
     public class UserExternalCustomRingbackModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:139")]
+        [Group(@"2c9f194a3272e429f2e5215dd988b94a:139")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:139")]
+        [Group(@"2c9f194a3272e429f2e5215dd988b94a:139")]
         public bool IsActive
         {
             get => _isActive;
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useSettingLevel", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:139")]
+        [Group(@"2c9f194a3272e429f2e5215dd988b94a:139")]
         public BroadWorksConnector.Ocip.Models.ExternalCustomRingbackSettingLevel UseSettingLevel
         {
             get => _useSettingLevel;
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sipRequestURI", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"a8df43dca23d99d8ab44c0082aadfbe0:139")]
+        [Group(@"2c9f194a3272e429f2e5215dd988b94a:139")]
         [MinLength(1)]
         [MaxLength(1020)]
         public string SipRequestURI

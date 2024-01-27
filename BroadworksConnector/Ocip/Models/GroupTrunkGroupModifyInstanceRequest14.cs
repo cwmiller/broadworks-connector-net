@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:15634""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:16024""}]")]
     public class GroupTrunkGroupModifyInstanceRequest14 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15634")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16024")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15634")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16024")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfileTrunkGroup ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15634")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16024")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointModify AccessDeviceEndpoint
         {
             get => _accessDeviceEndpoint;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxActiveCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15634")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16024")]
         [MinInclusive(1)]
         public int MaxActiveCalls
         {
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxIncomingCalls", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15634")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16024")]
         [MinInclusive(1)]
         [MaxInclusive(999999)]
         public int? MaxIncomingCalls
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxOutgoingCalls", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15634")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16024")]
         [MinInclusive(1)]
         [MaxInclusive(999999)]
         public int? MaxOutgoingCalls
@@ -138,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableBursting", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15634")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16024")]
         public bool EnableBursting
         {
             get => _enableBursting;
@@ -156,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "burstingMaxActiveCalls", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15634")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16024")]
         [MinInclusive(0)]
         [MaxInclusive(999999)]
         public int? BurstingMaxActiveCalls
@@ -176,7 +176,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "burstingMaxIncomingCalls", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15634")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16024")]
         [MinInclusive(0)]
         [MaxInclusive(999999)]
         public int? BurstingMaxIncomingCalls
@@ -196,7 +196,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "burstingMaxOutgoingCalls", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15634")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16024")]
         [MinInclusive(0)]
         [MaxInclusive(999999)]
         public int? BurstingMaxOutgoingCalls
@@ -216,7 +216,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "capacityExceededAction", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15634")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16024")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupCapacityExceededAction? CapacityExceededAction
         {
             get => _capacityExceededAction;
@@ -234,7 +234,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "capacityExceededForwardAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15634")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16024")]
         [MinLength(1)]
         [MaxLength(161)]
         public string CapacityExceededForwardAddress
@@ -254,7 +254,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "capacityExceededRerouteTrunkGroupId", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15634")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16024")]
         [MinLength(1)]
         [MaxLength(161)]
         public string CapacityExceededRerouteTrunkGroupId
@@ -274,7 +274,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "capacityExceededTrapInitialCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15634")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16024")]
         [MinInclusive(0)]
         public int CapacityExceededTrapInitialCalls
         {
@@ -293,7 +293,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "capacityExceededTrapOffsetCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15634")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16024")]
         [MinInclusive(0)]
         public int CapacityExceededTrapOffsetCalls
         {
@@ -312,7 +312,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "unreachableDestinationAction", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15634")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16024")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupUnreachableDestinationAction? UnreachableDestinationAction
         {
             get => _unreachableDestinationAction;
@@ -330,7 +330,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "unreachableDestinationForwardAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15634")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16024")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UnreachableDestinationForwardAddress
@@ -350,7 +350,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "unreachableDestinationRerouteTrunkGroupId", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15634")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16024")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UnreachableDestinationRerouteTrunkGroupId
@@ -370,7 +370,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "unreachableDestinationTrapInitialCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15634")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16024")]
         [MinInclusive(0)]
         public int UnreachableDestinationTrapInitialCalls
         {
@@ -389,7 +389,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "unreachableDestinationTrapOffsetCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15634")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16024")]
         [MinInclusive(0)]
         public int UnreachableDestinationTrapOffsetCalls
         {
@@ -408,7 +408,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "invitationTimeout", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15634")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16024")]
         [MinInclusive(1)]
         [MaxInclusive(255)]
         public int InvitationTimeout
@@ -428,7 +428,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "requireAuthentication", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15634")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16024")]
         public bool RequireAuthentication
         {
             get => _requireAuthentication;
@@ -446,7 +446,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sipAuthenticationUserName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15634")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16024")]
         [MinLength(1)]
         [MaxLength(80)]
         public string SipAuthenticationUserName
@@ -466,7 +466,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sipAuthenticationPassword", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:15634")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16024")]
         [MinLength(1)]
         [MaxLength(60)]
         public string SipAuthenticationPassword

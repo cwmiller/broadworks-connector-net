@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f64c4e06b22d19cc74a21048a08a84c7:136""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d6190622c16e29d798f0976799563da5:136""}]")]
     public class UserSimultaneousRingPersonalGetResponse17 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"f64c4e06b22d19cc74a21048a08a84c7:136")]
+        [Group(@"d6190622c16e29d798f0976799563da5:136")]
         public bool IsActive
         {
             get => _isActive;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _doNotRingIfOnCall;
 
         [XmlElement(ElementName = "doNotRingIfOnCall", IsNullable = false, Namespace = "")]
-        [Group(@"f64c4e06b22d19cc74a21048a08a84c7:136")]
+        [Group(@"d6190622c16e29d798f0976799563da5:136")]
         public bool DoNotRingIfOnCall
         {
             get => _doNotRingIfOnCall;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "simultaneousRingNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f64c4e06b22d19cc74a21048a08a84c7:136")]
+        [Group(@"d6190622c16e29d798f0976799563da5:136")]
         public List<BroadWorksConnector.Ocip.Models.SimultaneousRingNumber> SimultaneousRingNumber
         {
             get => _simultaneousRingNumber;
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
         [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
-        [Group(@"f64c4e06b22d19cc74a21048a08a84c7:136")]
+        [Group(@"d6190622c16e29d798f0976799563da5:136")]
         public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable
         {
             get => _criteriaTable;

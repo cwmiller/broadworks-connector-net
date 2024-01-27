@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f1088f4c5ceb30d524d2ba0f8097c393:6126""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:6193""}]")]
     public class ServiceProviderServicePackGetDetailListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _servicePackName;
 
         [XmlElement(ElementName = "servicePackName", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6126")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:6193")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServicePackName
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "servicePackDescription", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6126")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:6193")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ServicePackDescription
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isAvailableForUse;
 
         [XmlElement(ElementName = "isAvailableForUse", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6126")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:6193")]
         public bool IsAvailableForUse
         {
             get => _isAvailableForUse;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _servicePackQuantity;
 
         [XmlElement(ElementName = "servicePackQuantity", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6126")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:6193")]
         public BroadWorksConnector.Ocip.Models.UnboundedPositiveInt ServicePackQuantity
         {
             get => _servicePackQuantity;
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _assignedQuantity;
 
         [XmlElement(ElementName = "assignedQuantity", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6126")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:6193")]
         public BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt AssignedQuantity
         {
             get => _assignedQuantity;
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _allowedQuantity;
 
         [XmlElement(ElementName = "allowedQuantity", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6126")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:6193")]
         public BroadWorksConnector.Ocip.Models.UnboundedPositiveInt AllowedQuantity
         {
             get => _allowedQuantity;
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _userServiceTable;
 
         [XmlElement(ElementName = "userServiceTable", IsNullable = false, Namespace = "")]
-        [Group(@"f1088f4c5ceb30d524d2ba0f8097c393:6126")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:6193")]
         public BroadWorksConnector.Ocip.Models.C.OCITable UserServiceTable
         {
             get => _userServiceTable;

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""74a46a9bfccb54713c1d19735843f1df:93""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""31dec625cdd18e8228eb61ffb34ddc0e:92""}]")]
     public class GroupPreferredCarrierGroupModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"74a46a9bfccb54713c1d19735843f1df:93")]
+        [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:92")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"74a46a9bfccb54713c1d19735843f1df:93")]
+        [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:92")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "intraLataCarrier", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"74a46a9bfccb54713c1d19735843f1df:93")]
+        [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:92")]
         public BroadWorksConnector.Ocip.Models.GroupPreferredCarrierNameModify IntraLataCarrier
         {
             get => _intraLataCarrier;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "interLataCarrier", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"74a46a9bfccb54713c1d19735843f1df:93")]
+        [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:92")]
         public BroadWorksConnector.Ocip.Models.GroupPreferredCarrierNameModify InterLataCarrier
         {
             get => _interLataCarrier;
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "internationalCarrier", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"74a46a9bfccb54713c1d19735843f1df:93")]
+        [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:92")]
         public BroadWorksConnector.Ocip.Models.GroupPreferredCarrierNameModify InternationalCarrier
         {
             get => _internationalCarrier;

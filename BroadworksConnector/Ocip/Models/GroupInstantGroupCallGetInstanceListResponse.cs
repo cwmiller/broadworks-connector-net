@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f41dea4708922d4a3f0e26f198cc953f:106""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6c8b59f80404b6283b25be24c263cb12:106""}]")]
     public class GroupInstantGroupCallGetInstanceListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _instantGroupCallTable;
 
         [XmlElement(ElementName = "instantGroupCallTable", IsNullable = false, Namespace = "")]
-        [Group(@"f41dea4708922d4a3f0e26f198cc953f:106")]
+        [Group(@"6c8b59f80404b6283b25be24c263cb12:106")]
         public BroadWorksConnector.Ocip.Models.C.OCITable InstantGroupCallTable
         {
             get => _instantGroupCallTable;

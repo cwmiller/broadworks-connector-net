@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b009175f2a2a9d38115e319a6ad64d7f:1060""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d45e381d6dbac771631649063122a42e:1075""}]")]
     public class ResellerXsiPolicyProfileUnassignListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:1060")]
+        [Group(@"d45e381d6dbac771631649063122a42e:1075")]
         [MinLength(1)]
         [MaxLength(36)]
         public string ResellerId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "spXsiPolicyProfile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:1060")]
+        [Group(@"d45e381d6dbac771631649063122a42e:1075")]
         public BroadWorksConnector.Ocip.Models.XsiPolicyProfileUnassignEntry SpXsiPolicyProfile
         {
             get => _spXsiPolicyProfile;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "groupXsiPolicyProfile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:1060")]
+        [Group(@"d45e381d6dbac771631649063122a42e:1075")]
         public BroadWorksConnector.Ocip.Models.XsiPolicyProfileUnassignEntry GroupXsiPolicyProfile
         {
             get => _groupXsiPolicyProfile;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userXsiPolicyProfile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:1060")]
+        [Group(@"d45e381d6dbac771631649063122a42e:1075")]
         public BroadWorksConnector.Ocip.Models.XsiPolicyProfileUnassignEntry UserXsiPolicyProfile
         {
             get => _userXsiPolicyProfile;

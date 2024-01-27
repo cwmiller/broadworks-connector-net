@@ -9,19 +9,21 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to the ResellerAdminGetRequest22.
     /// The response contains the reseller administrators profile information.
+    /// Replaced by: ResellerAdminGetResponse22V2
     /// <see cref="ResellerAdminGetRequest22"/>
+    /// <see cref="ResellerAdminGetResponse22V2"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b009175f2a2a9d38115e319a6ad64d7f:271""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:5031""}]")]
     public class ResellerAdminGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:271")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5031")]
         [MinLength(1)]
         [MaxLength(36)]
         public string ResellerId
@@ -41,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:271")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5031")]
         [MinLength(1)]
         [MaxLength(30)]
         public string FirstName
@@ -61,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:271")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5031")]
         [MinLength(1)]
         [MaxLength(30)]
         public string LastName
@@ -80,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _language;
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:271")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5031")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Language

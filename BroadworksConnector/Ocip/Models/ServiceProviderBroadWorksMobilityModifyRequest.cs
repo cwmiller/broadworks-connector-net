@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:646""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9ae9f7d53e566e21347e23e20e2a2a39:645""}]")]
     public class ServiceProviderBroadWorksMobilityModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:646")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:645")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useSettingLevel", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:646")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:645")]
         public BroadWorksConnector.Ocip.Models.BroadWorksMobilityServiceProviderSettingLevel UseSettingLevel
         {
             get => _useSettingLevel;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableLocationServices", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:646")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:645")]
         public bool EnableLocationServices
         {
             get => _enableLocationServices;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableMSRNLookup", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:646")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:645")]
         public bool EnableMSRNLookup
         {
             get => _enableMSRNLookup;
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableMobileStateChecking", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:646")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:645")]
         public bool EnableMobileStateChecking
         {
             get => _enableMobileStateChecking;
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "denyCallOriginations", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:646")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:645")]
         public bool DenyCallOriginations
         {
             get => _denyCallOriginations;
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "denyCallTerminations", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:646")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:645")]
         public bool DenyCallTerminations
         {
             get => _denyCallTerminations;
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableAnnouncementSuppression", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:646")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:645")]
         public bool EnableAnnouncementSuppression
         {
             get => _enableAnnouncementSuppression;
@@ -168,7 +168,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableInternalCLIDDelivery", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:646")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:645")]
         public bool EnableInternalCLIDDelivery
         {
             get => _enableInternalCLIDDelivery;
@@ -186,7 +186,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableInternalCLIDDeliveryAccessLocations", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:646")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:645")]
         public bool EnableInternalCLIDDeliveryAccessLocations
         {
             get => _enableInternalCLIDDeliveryAccessLocations;
@@ -204,7 +204,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableEnhancedUnreachableStateChecking", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:646")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:645")]
         public bool EnableEnhancedUnreachableStateChecking
         {
             get => _enableEnhancedUnreachableStateChecking;
@@ -222,7 +222,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableNetworkCallBarringStatusCheck", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:646")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:645")]
         public bool EnableNetworkCallBarringStatusCheck
         {
             get => _enableNetworkCallBarringStatusCheck;
@@ -240,7 +240,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkTranslationIndex", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:646")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:645")]
         [MinLength(1)]
         [MaxLength(128)]
         public string NetworkTranslationIndex

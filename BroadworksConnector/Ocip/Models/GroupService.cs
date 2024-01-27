@@ -36,6 +36,8 @@ namespace BroadWorksConnector.Ocip.Models
         EnhancedOutgoingCallingPlan,
         [XmlEnum(Name = "Find-me/Follow-me")]
         FindmeFollowme,
+        [XmlEnum(Name = "Group Call Queue")]
+        GroupCallQueue,
         [XmlEnum(Name = "Group Paging")]
         GroupPaging,
         [XmlEnum(Name = "Hunt Group")]

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b009175f2a2a9d38115e319a6ad64d7f:724""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d45e381d6dbac771631649063122a42e:728""}]")]
     public class ResellerNetworkClassOfServiceGetAssignedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _networkClassOfServiceTable;
 
         [XmlElement(ElementName = "networkClassOfServiceTable", IsNullable = false, Namespace = "")]
-        [Group(@"b009175f2a2a9d38115e319a6ad64d7f:724")]
+        [Group(@"d45e381d6dbac771631649063122a42e:728")]
         public BroadWorksConnector.Ocip.Models.C.OCITable NetworkClassOfServiceTable
         {
             get => _networkClassOfServiceTable;

@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:2355""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a63afa661ee5c74f4700e562e88c66d0:2354""}]")]
     public class OutgoingPinholeDigitPlanDigitPatternRedirectingPermission
     {
 
         protected string _digitPatternName;
 
         [XmlElement(ElementName = "digitPatternName", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2355")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:2354")]
         [MinLength(1)]
         [MaxLength(30)]
         public string DigitPatternName
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.OutgoingPinholeDigitPlanRedirectingPermission _permission;
 
         [XmlElement(ElementName = "permission", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:2355")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:2354")]
         public BroadWorksConnector.Ocip.Models.OutgoingPinholeDigitPlanRedirectingPermission Permission
         {
             get => _permission;

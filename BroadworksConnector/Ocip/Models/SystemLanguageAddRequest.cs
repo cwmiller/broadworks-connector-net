@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:27381""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:27863""}]")]
     public class SystemLanguageAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _language;
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27381")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27863")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Language
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _locale;
 
         [XmlElement(ElementName = "locale", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27381")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27863")]
         [MaxLength(5)]
         public string Locale
         {
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _encoding;
 
         [XmlElement(ElementName = "encoding", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:27381")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27863")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Encoding

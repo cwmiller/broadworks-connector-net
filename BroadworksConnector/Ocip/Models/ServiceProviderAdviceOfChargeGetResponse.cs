@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a69fde15f3aa7494d83b57461a7a70bb:120""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9975efc7f5883a0595f811ee72ba4df5:120""}]")]
     public class ServiceProviderAdviceOfChargeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _useSPLevelAoCSettings;
 
         [XmlElement(ElementName = "useSPLevelAoCSettings", IsNullable = false, Namespace = "")]
-        [Group(@"a69fde15f3aa7494d83b57461a7a70bb:120")]
+        [Group(@"9975efc7f5883a0595f811ee72ba4df5:120")]
         public bool UseSPLevelAoCSettings
         {
             get => _useSPLevelAoCSettings;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _delayBetweenNotificationSeconds;
 
         [XmlElement(ElementName = "delayBetweenNotificationSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"a69fde15f3aa7494d83b57461a7a70bb:120")]
+        [Group(@"9975efc7f5883a0595f811ee72ba4df5:120")]
         [MinInclusive(5)]
         [MaxInclusive(1800)]
         public int DelayBetweenNotificationSeconds

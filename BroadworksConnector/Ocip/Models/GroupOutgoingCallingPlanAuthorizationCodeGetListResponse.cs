@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6f793dfca9bd3d121bb35e0f9cf1cb2e:124""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a63afa661ee5c74f4700e562e88c66d0:123""}]")]
     public class GroupOutgoingCallingPlanAuthorizationCodeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.OutgoingCallingPlanGroupAuthorizationCodes _groupCodeList;
 
         [XmlElement(ElementName = "groupCodeList", IsNullable = false, Namespace = "")]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:124")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:123")]
         public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanGroupAuthorizationCodes GroupCodeList
         {
             get => _groupCodeList;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "departmentCodeList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6f793dfca9bd3d121bb35e0f9cf1cb2e:124")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:123")]
         public List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanDepartmentAuthorizationCodes> DepartmentCodeList
         {
             get => _departmentCodeList;

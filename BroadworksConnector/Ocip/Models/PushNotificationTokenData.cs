@@ -7,20 +7,19 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// ?
     /// The common push notification token elements.
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3570""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:50268""}]")]
     public class PushNotificationTokenData
     {
 
         protected string _pushNotificationToken;
 
         [XmlElement(ElementName = "pushNotificationToken", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3570")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:50268")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string PushNotificationToken
@@ -39,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _pushNotificationType;
 
         [XmlElement(ElementName = "pushNotificationType", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3570")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:50268")]
         [MinLength(1)]
         [MaxLength(80)]
         public string PushNotificationType
@@ -59,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "pushNotificationEventData", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3570")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:50268")]
         public List<BroadWorksConnector.Ocip.Models.PushNotificationEventData> PushNotificationEventData
         {
             get => _pushNotificationEventData;

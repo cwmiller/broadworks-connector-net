@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""939fd5846dfae8bdf58308d6cb9ebb12:684""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bc805893b9cc7e3e01eec64e9ad62768:684""}]")]
     public class UserCollaborateInstantRoomGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "roomName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:684")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:684")]
         [MinLength(1)]
         [MaxLength(40)]
         public string RoomName
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _instantRoomStartTime;
 
         [XmlElement(ElementName = "instantRoomStartTime", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:684")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:684")]
         public string InstantRoomStartTime
         {
             get => _instantRoomStartTime;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _instantRoomEndTime;
 
         [XmlElement(ElementName = "instantRoomEndTime", IsNullable = false, Namespace = "")]
-        [Group(@"939fd5846dfae8bdf58308d6cb9ebb12:684")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:684")]
         public string InstantRoomEndTime
         {
             get => _instantRoomEndTime;

@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9db4d5fa1bbf70f2626f52a5d6e3420e:80""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6e41c53467939072d1190f1f854fdccd:80""}]")]
     public class UserAuthenticationModifyRequestPassword
     {
 
         protected string _old;
 
         [XmlElement(ElementName = "old", IsNullable = false, Namespace = "")]
-        [Group(@"9db4d5fa1bbf70f2626f52a5d6e3420e:80")]
+        [Group(@"6e41c53467939072d1190f1f854fdccd:80")]
         [MinLength(1)]
         [MaxLength(60)]
         public string Old
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _new;
 
         [XmlElement(ElementName = "new", IsNullable = false, Namespace = "")]
-        [Group(@"9db4d5fa1bbf70f2626f52a5d6e3420e:80")]
+        [Group(@"6e41c53467939072d1190f1f854fdccd:80")]
         [MinLength(1)]
         [MaxLength(60)]
         public string New

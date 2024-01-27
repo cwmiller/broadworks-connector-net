@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0da7c658f240cdc10c3f9cb328db57d8:213""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""be7f3162f133f8d7fcc75e712b0258e6:213""}]")]
     public class MaliciousCallTraceTimePeriod
     {
 
         protected string _startDateTime;
 
         [XmlElement(ElementName = "startDateTime", IsNullable = false, Namespace = "")]
-        [Group(@"0da7c658f240cdc10c3f9cb328db57d8:213")]
+        [Group(@"be7f3162f133f8d7fcc75e712b0258e6:213")]
         public string StartDateTime
         {
             get => _startDateTime;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _stopDateTime;
 
         [XmlElement(ElementName = "stopDateTime", IsNullable = false, Namespace = "")]
-        [Group(@"0da7c658f240cdc10c3f9cb328db57d8:213")]
+        [Group(@"be7f3162f133f8d7fcc75e712b0258e6:213")]
         public string StopDateTime
         {
             get => _stopDateTime;

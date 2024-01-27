@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:14220""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:46595""}]")]
     public class UserRouteListGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _treatOriginationsAndPBXRedirectionsAsScreened;
 
         [XmlElement(ElementName = "treatOriginationsAndPBXRedirectionsAsScreened", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:14220")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:46595")]
         public bool TreatOriginationsAndPBXRedirectionsAsScreened
         {
             get => _treatOriginationsAndPBXRedirectionsAsScreened;
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useRouteListIdentityForNonEmergencyCalls;
 
         [XmlElement(ElementName = "useRouteListIdentityForNonEmergencyCalls", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:14220")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:46595")]
         public bool UseRouteListIdentityForNonEmergencyCalls
         {
             get => _useRouteListIdentityForNonEmergencyCalls;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useRouteListIdentityForEmergencyCalls;
 
         [XmlElement(ElementName = "useRouteListIdentityForEmergencyCalls", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:14220")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:46595")]
         public bool UseRouteListIdentityForEmergencyCalls
         {
             get => _useRouteListIdentityForEmergencyCalls;
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _assignedNumberRangeTable;
 
         [XmlElement(ElementName = "assignedNumberRangeTable", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:14220")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:46595")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AssignedNumberRangeTable
         {
             get => _assignedNumberRangeTable;

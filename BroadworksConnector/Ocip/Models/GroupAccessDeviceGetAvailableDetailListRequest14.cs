@@ -20,14 +20,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:2999""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:3087""}]")]
     public class GroupAccessDeviceGetAvailableDetailListRequest14 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupAccessDeviceGetAvailableDetailListResponse14>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2999")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:3087")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2999")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:3087")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isMusicOnHold;
 
         [XmlElement(ElementName = "isMusicOnHold", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2999")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:3087")]
         public bool IsMusicOnHold
         {
             get => _isMusicOnHold;
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _onlyVideoCapable;
 
         [XmlElement(ElementName = "onlyVideoCapable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:2999")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:3087")]
         public bool OnlyVideoCapable
         {
             get => _onlyVideoCapable;

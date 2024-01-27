@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da5cd0d79ddb505982e08d164e405660:132""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1d57523802a1435faa76c4035da1e4dc:132""}]")]
     public class UserZoneCallingRestrictionsModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"da5cd0d79ddb505982e08d164e405660:132")]
+        [Group(@"1d57523802a1435faa76c4035da1e4dc:132")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "homeZoneName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"da5cd0d79ddb505982e08d164e405660:132")]
+        [Group(@"1d57523802a1435faa76c4035da1e4dc:132")]
         [MinLength(1)]
         [MaxLength(80)]
         public string HomeZoneName

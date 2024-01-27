@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0da7c658f240cdc10c3f9cb328db57d8:80""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""be7f3162f133f8d7fcc75e712b0258e6:80""}]")]
     public class ServiceProviderMaliciousCallTraceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"0da7c658f240cdc10c3f9cb328db57d8:80")]
+        [Group(@"be7f3162f133f8d7fcc75e712b0258e6:80")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useSystemPlayMCTWarningAnnouncement", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0da7c658f240cdc10c3f9cb328db57d8:80")]
+        [Group(@"be7f3162f133f8d7fcc75e712b0258e6:80")]
         public bool UseSystemPlayMCTWarningAnnouncement
         {
             get => _useSystemPlayMCTWarningAnnouncement;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "playMCTWarningAnnouncement", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0da7c658f240cdc10c3f9cb328db57d8:80")]
+        [Group(@"be7f3162f133f8d7fcc75e712b0258e6:80")]
         public bool PlayMCTWarningAnnouncement
         {
             get => _playMCTWarningAnnouncement;

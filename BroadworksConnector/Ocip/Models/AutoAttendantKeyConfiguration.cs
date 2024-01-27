@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:47480""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:48366""}]")]
     public class AutoAttendantKeyConfiguration
     {
 
         protected BroadWorksConnector.Ocip.Models.AutoAttendantMenuKey _key;
 
         [XmlElement(ElementName = "key", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47480")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48366")]
         public BroadWorksConnector.Ocip.Models.AutoAttendantMenuKey Key
         {
             get => _key;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.AutoAttendantKeyConfigurationEntry _entry;
 
         [XmlElement(ElementName = "entry", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:47480")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48366")]
         public BroadWorksConnector.Ocip.Models.AutoAttendantKeyConfigurationEntry Entry
         {
             get => _entry;

@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9657""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:9775""}]")]
     public class SystemEmergencyCallDDoSProtectionGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enabled;
 
         [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9657")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9775")]
         public bool Enabled
         {
             get => _enabled;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _sampleIntervalSeconds;
 
         [XmlElement(ElementName = "sampleIntervalSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9657")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9775")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
         public int SampleIntervalSeconds
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "protectionRate", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9657")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9775")]
         [MinInclusive(1)]
         [MaxInclusive(10000)]
         public int ProtectionRate
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ProtectionAction _protectionAction;
 
         [XmlElement(ElementName = "protectionAction", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9657")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9775")]
         public BroadWorksConnector.Ocip.Models.ProtectionAction ProtectionAction
         {
             get => _protectionAction;

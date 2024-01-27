@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2ea11c5e213a79b17d4a363684d76c57:73""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2256aa4d4c7d3679ce18e4f471895147:72""}]")]
     public class SystemConnectedLineIdentificationPresentationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enforceUserServiceAssignment", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"2ea11c5e213a79b17d4a363684d76c57:73")]
+        [Group(@"2256aa4d4c7d3679ce18e4f471895147:72")]
         public bool EnforceUserServiceAssignment
         {
             get => _enforceUserServiceAssignment;

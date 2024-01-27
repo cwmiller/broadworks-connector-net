@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4175""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:4184""}]")]
     public class UserXsiPolicyProfileGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _xsiPolicyProfile;
 
         [XmlElement(ElementName = "xsiPolicyProfile", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4175")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:4184")]
         [MinLength(1)]
         [MaxLength(40)]
         public string XsiPolicyProfile

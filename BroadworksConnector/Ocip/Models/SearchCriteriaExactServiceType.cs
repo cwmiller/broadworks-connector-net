@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0ada2681ca347fa83b464734259b304:1224""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:1258""}]")]
     public class SearchCriteriaExactServiceType : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         protected BroadWorksConnector.Ocip.Models.ServiceType _serviceType;
 
         [XmlElement(ElementName = "serviceType", IsNullable = false, Namespace = "")]
-        [Group(@"f0ada2681ca347fa83b464734259b304:1224")]
+        [Group(@"972fbf832439609ec8f2765c5637c3f1:1258")]
         public BroadWorksConnector.Ocip.Models.ServiceType ServiceType
         {
             get => _serviceType;

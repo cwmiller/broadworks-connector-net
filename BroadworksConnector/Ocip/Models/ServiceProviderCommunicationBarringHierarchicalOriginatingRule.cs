@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:4468"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:4469""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4933"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4934""}]}]")]
     public class ServiceProviderCommunicationBarringHierarchicalOriginatingRule
     {
 
         protected string _criteria;
 
         [XmlElement(ElementName = "criteria", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4469")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4934")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Criteria
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _digitPatternCriteria;
 
         [XmlElement(ElementName = "digitPatternCriteria", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4469")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4934")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DigitPatternCriteria
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction _action;
 
         [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4468")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4933")]
         public BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction Action
         {
             get => _action;
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "treatmentId", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4468")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4933")]
         [MinLength(1)]
         [MaxLength(40)]
         public string TreatmentId
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "transferNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4468")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4933")]
         [MinLength(1)]
         [MaxLength(30)]
         public string TransferNumber
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4468")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4933")]
         [MinInclusive(60)]
         [MaxInclusive(86400)]
         public int CallTimeoutSeconds
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4468")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4933")]
         [MinLength(1)]
         [MaxLength(40)]
         public string TimeSchedule
@@ -155,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4468")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4933")]
         [MinLength(1)]
         [MaxLength(40)]
         public string HolidaySchedule
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected decimal _priority;
 
         [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4468")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4933")]
         [MinInclusive(0)]
         [MaxInclusive(1000000)]
         public decimal Priority

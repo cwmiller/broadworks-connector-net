@@ -14,7 +14,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""88893c72abbbb9aaf5aecca970191d94:190""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2a762bb9361e88044885b796c1d6b979:190""}]")]
     public class SystemInterceptUserGetDnListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "interceptUserList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"88893c72abbbb9aaf5aecca970191d94:190")]
+        [Group(@"2a762bb9361e88044885b796c1d6b979:190")]
         public List<BroadWorksConnector.Ocip.Models.InterceptDNListEntry> InterceptUserList
         {
             get => _interceptUserList;

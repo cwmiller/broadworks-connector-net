@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3c311aa5c89c0cf5b46e1cdefd5bc387:157""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""21e97b8199c6e7eff29a84874335b46e:157""}]")]
     public class SystemThirdPartyVoiceMailSupportGetDnListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _thirdPartyVoiceMailSupportTable;
 
         [XmlElement(ElementName = "thirdPartyVoiceMailSupportTable", IsNullable = false, Namespace = "")]
-        [Group(@"3c311aa5c89c0cf5b46e1cdefd5bc387:157")]
+        [Group(@"21e97b8199c6e7eff29a84874335b46e:157")]
         public BroadWorksConnector.Ocip.Models.C.OCITable ThirdPartyVoiceMailSupportTable
         {
             get => _thirdPartyVoiceMailSupportTable;

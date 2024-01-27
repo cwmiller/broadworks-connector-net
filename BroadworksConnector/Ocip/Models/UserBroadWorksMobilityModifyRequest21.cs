@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7ae3539fd471e995b07dc1bf8836e2d:1880""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9ae9f7d53e566e21347e23e20e2a2a39:1879""}]")]
     public class UserBroadWorksMobilityModifyRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1880")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1879")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1880")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1879")]
         public bool IsActive
         {
             get => _isActive;
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useMobileIdentityCallAnchoring", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1880")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1879")]
         public bool UseMobileIdentityCallAnchoring
         {
             get => _useMobileIdentityCallAnchoring;
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "preventCallsToOwnMobiles", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1880")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1879")]
         public bool PreventCallsToOwnMobiles
         {
             get => _preventCallsToOwnMobiles;
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mobileIdentity", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1880")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1879")]
         public List<BroadWorksConnector.Ocip.Models.BroadWorksMobilityUserMobileIdentityModifyEntry> MobileIdentity
         {
             get => _mobileIdentity;
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "profileIdentityDevicesToRing", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1880")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1879")]
         public BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing ProfileIdentityDevicesToRing
         {
             get => _profileIdentityDevicesToRing;
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "profileIdentityIncludeSharedCallAppearance", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1880")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1879")]
         public bool ProfileIdentityIncludeSharedCallAppearance
         {
             get => _profileIdentityIncludeSharedCallAppearance;
@@ -153,7 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "profileIdentityIncludeBroadworksAnywhere", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1880")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1879")]
         public bool ProfileIdentityIncludeBroadworksAnywhere
         {
             get => _profileIdentityIncludeBroadworksAnywhere;
@@ -171,7 +171,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "profileIdentityIncludeExecutiveAssistant", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1880")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1879")]
         public bool ProfileIdentityIncludeExecutiveAssistant
         {
             get => _profileIdentityIncludeExecutiveAssistant;
@@ -189,7 +189,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "profileIdentityMobilityNumbersAlerted", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f7ae3539fd471e995b07dc1bf8836e2d:1880")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1879")]
         public BroadWorksConnector.Ocip.Models.BroadWorksMobilityAlertingMobileNumberReplacementList ProfileIdentityMobilityNumbersAlerted
         {
             get => _profileIdentityMobilityNumbersAlerted;

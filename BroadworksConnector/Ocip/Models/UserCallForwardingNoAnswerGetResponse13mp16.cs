@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9bba36247a6338c8a1cff754a22a6c6b:59""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2ff622bc00c4bb36e12eeb68ca8af579:59""}]")]
     public class UserCallForwardingNoAnswerGetResponse13mp16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"9bba36247a6338c8a1cff754a22a6c6b:59")]
+        [Group(@"2ff622bc00c4bb36e12eeb68ca8af579:59")]
         public bool IsActive
         {
             get => _isActive;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forwardToPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9bba36247a6338c8a1cff754a22a6c6b:59")]
+        [Group(@"2ff622bc00c4bb36e12eeb68ca8af579:59")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ForwardToPhoneNumber
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CallForwardingNoAnswerNumberOfRings _numberOfRings;
 
         [XmlElement(ElementName = "numberOfRings", IsNullable = false, Namespace = "")]
-        [Group(@"9bba36247a6338c8a1cff754a22a6c6b:59")]
+        [Group(@"2ff622bc00c4bb36e12eeb68ca8af579:59")]
         public BroadWorksConnector.Ocip.Models.CallForwardingNoAnswerNumberOfRings NumberOfRings
         {
             get => _numberOfRings;

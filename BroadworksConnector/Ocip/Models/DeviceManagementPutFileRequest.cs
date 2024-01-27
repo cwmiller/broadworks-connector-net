@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:216""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ef3c4f453d01f7ce750331de83ebc765:219""}]")]
     public class DeviceManagementPutFileRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _deviceAccessURI;
 
         [XmlElement(ElementName = "deviceAccessURI", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:216")]
+        [Group(@"ef3c4f453d01f7ce750331de83ebc765:219")]
         [MinLength(1)]
         [MaxLength(256)]
         public string DeviceAccessURI
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _ipAddress;
 
         [XmlElement(ElementName = "ipAddress", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:216")]
+        [Group(@"ef3c4f453d01f7ce750331de83ebc765:219")]
         [MinLength(1)]
         [MaxLength(80)]
         public string IpAddress

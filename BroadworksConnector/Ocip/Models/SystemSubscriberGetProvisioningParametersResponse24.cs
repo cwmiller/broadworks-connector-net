@@ -8,19 +8,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to the SystemSubscriberGetProvisioningParametersRequest24.
+    /// 
+    /// Replaced by: SystemSubscriberGetProvisioningParametersResponse24V2.
     /// <see cref="SystemSubscriberGetProvisioningParametersRequest24"/>
+    /// <see cref="SystemSubscriberGetProvisioningParametersResponse24V2"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18053""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:35992""}]")]
     public class SystemSubscriberGetProvisioningParametersResponse24 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _configurableCLIDNormalization;
 
         [XmlElement(ElementName = "configurableCLIDNormalization", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18053")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:35992")]
         public bool ConfigurableCLIDNormalization
         {
             get => _configurableCLIDNormalization;
@@ -37,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _includeDefaultDomain;
 
         [XmlElement(ElementName = "includeDefaultDomain", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18053")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:35992")]
         public bool IncludeDefaultDomain
         {
             get => _includeDefaultDomain;

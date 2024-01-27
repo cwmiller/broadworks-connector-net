@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:4444""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:5011""}]")]
     public class ResellerAdminGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4444")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5011")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ResellerId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4444")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5011")]
         [MinLength(1)]
         [MaxLength(30)]
         public string FirstName
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4444")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5011")]
         [MinLength(1)]
         [MaxLength(30)]
         public string LastName
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _language;
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:4444")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5011")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Language

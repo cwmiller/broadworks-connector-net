@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e12337fe0480db757507a0699bc195d9:128""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""08ee5b5ec09321975436b908fd540e7f:128""}]")]
     public class UserCallWaitingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"e12337fe0480db757507a0699bc195d9:128")]
+        [Group(@"08ee5b5ec09321975436b908fd540e7f:128")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e12337fe0480db757507a0699bc195d9:128")]
+        [Group(@"08ee5b5ec09321975436b908fd540e7f:128")]
         public bool IsActive
         {
             get => _isActive;
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "disableCallingLineIdDelivery", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e12337fe0480db757507a0699bc195d9:128")]
+        [Group(@"08ee5b5ec09321975436b908fd540e7f:128")]
         public bool DisableCallingLineIdDelivery
         {
             get => _disableCallingLineIdDelivery;

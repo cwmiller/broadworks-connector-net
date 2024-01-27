@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""524e0d071a229a44af2f953d6b50db35:73""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4e9808afa6161bba01df39d17a849c79:72""}]")]
     public class UserSharedCallAppearanceDeleteEndpointListRequest14 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"524e0d071a229a44af2f953d6b50db35:73")]
+        [Group(@"4e9808afa6161bba01df39d17a849c79:72")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected List<BroadWorksConnector.Ocip.Models.AccessDeviceEndpointKey> _accessDeviceEndpoint = new List<BroadWorksConnector.Ocip.Models.AccessDeviceEndpointKey>();
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
-        [Group(@"524e0d071a229a44af2f953d6b50db35:73")]
+        [Group(@"4e9808afa6161bba01df39d17a849c79:72")]
         public List<BroadWorksConnector.Ocip.Models.AccessDeviceEndpointKey> AccessDeviceEndpoint
         {
             get => _accessDeviceEndpoint;

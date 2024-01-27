@@ -296,7 +296,7 @@ namespace BroadWorksConnector
         /// <exception cref="BadResponseException">Thrown when server returns something that isn't expected.</exception>
         /// <exception cref="ErrorResponseException">Thrown when server returns an ErrorResponse object.</exception>
         /// <returns></returns>
-        private async Task<IEnumerable<OCIResponse>> ExecuteCommandsAsync(IEnumerable<OCIRequest> commands, CancellationToken cancellationToken = default) 
+        private async Task<IEnumerable<OCIResponse>> ExecuteCommandsAsync(IEnumerable<OCIRequest> commands, CancellationToken cancellationToken = default)
         {
             ValidateCommands(commands);
 

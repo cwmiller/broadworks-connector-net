@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e12337fe0480db757507a0699bc195d9:108""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""08ee5b5ec09321975436b908fd540e7f:108""}]")]
     public class UserCallWaitingGetResponse17sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"e12337fe0480db757507a0699bc195d9:108")]
+        [Group(@"08ee5b5ec09321975436b908fd540e7f:108")]
         public bool IsActive
         {
             get => _isActive;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _disableCallingLineIdDelivery;
 
         [XmlElement(ElementName = "disableCallingLineIdDelivery", IsNullable = false, Namespace = "")]
-        [Group(@"e12337fe0480db757507a0699bc195d9:108")]
+        [Group(@"08ee5b5ec09321975436b908fd540e7f:108")]
         public bool DisableCallingLineIdDelivery
         {
             get => _disableCallingLineIdDelivery;

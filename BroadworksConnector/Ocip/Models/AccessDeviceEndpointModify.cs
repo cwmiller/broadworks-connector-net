@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:124""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:124""}]")]
     public class AccessDeviceEndpointModify
     {
 
         protected BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
 
         [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:124")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:124")]
         public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice
         {
             get => _accessDevice;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:124")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:124")]
         [MinLength(1)]
         [MaxLength(161)]
         public string LinePort
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "contact", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:124")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:124")]
         [MinLength(1)]
         [MaxLength(1020)]
         public string Contact
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "pathHeader", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:124")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:124")]
         [MinLength(1)]
         [MaxLength(1024)]
         public string PathHeader
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "portNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:124")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:124")]
         [MinInclusive(1)]
         [MaxInclusive(1024)]
         public int PortNumber

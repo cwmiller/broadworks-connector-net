@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:37355""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:38112""}]")]
     public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse18sp1SendToPersonMenuKeys
     {
 
         protected string _confirmSendingMessage;
 
         [XmlElement(ElementName = "confirmSendingMessage", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:37355")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:38112")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ConfirmSendingMessage
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _cancelSendingMessage;
 
         [XmlElement(ElementName = "cancelSendingMessage", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:37355")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:38112")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string CancelSendingMessage
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _finishEnteringNumberWhereToSendMessageTo;
 
         [XmlElement(ElementName = "finishEnteringNumberWhereToSendMessageTo", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:37355")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:38112")]
         [Length(1)]
         [RegularExpression(@"\*|#")]
         public string FinishEnteringNumberWhereToSendMessageTo
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _finishForwardingOrSendingMessage;
 
         [XmlElement(ElementName = "finishForwardingOrSendingMessage", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:37355")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:38112")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string FinishForwardingOrSendingMessage

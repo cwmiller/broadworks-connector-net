@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:4601""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:4610""}]")]
     public class ReplacementOCICallControlApplicationIdList
     {
 
         protected List<string> _applicationId = new List<string>();
 
         [XmlElement(ElementName = "applicationId", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:4601")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:4610")]
         [MinLength(1)]
         [MaxLength(80)]
         public List<string> ApplicationId

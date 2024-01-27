@@ -14,7 +14,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""94766dfbb33c7fae7c6022754ea24721:53""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b1b5afcbe1032212748a9c624f00158f:53""}]")]
     public class SystemThirdPartyIMPGetResponse19 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceNetAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"94766dfbb33c7fae7c6022754ea24721:53")]
+        [Group(@"b1b5afcbe1032212748a9c624f00158f:53")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServiceNetAddress
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "servicePort", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"94766dfbb33c7fae7c6022754ea24721:53")]
+        [Group(@"b1b5afcbe1032212748a9c624f00158f:53")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int ServicePort
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "boshURL", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"94766dfbb33c7fae7c6022754ea24721:53")]
+        [Group(@"b1b5afcbe1032212748a9c624f00158f:53")]
         [MinLength(1)]
         [MaxLength(256)]
         public string BoshURL

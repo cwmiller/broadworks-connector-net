@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e994db048e7467a66936aa2afd5ac740:76""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""629ec0086c245a4408ed537aa86aab18:76""}]")]
     public class UserDirectedCallPickupWithBargeInModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"e994db048e7467a66936aa2afd5ac740:76")]
+        [Group(@"629ec0086c245a4408ed537aa86aab18:76")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableBargeInWarningTone", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e994db048e7467a66936aa2afd5ac740:76")]
+        [Group(@"629ec0086c245a4408ed537aa86aab18:76")]
         public bool EnableBargeInWarningTone
         {
             get => _enableBargeInWarningTone;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableAutomaticTargetSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e994db048e7467a66936aa2afd5ac740:76")]
+        [Group(@"629ec0086c245a4408ed537aa86aab18:76")]
         public bool EnableAutomaticTargetSelection
         {
             get => _enableAutomaticTargetSelection;

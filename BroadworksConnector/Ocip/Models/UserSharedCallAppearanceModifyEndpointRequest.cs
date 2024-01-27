@@ -20,14 +20,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""524e0d071a229a44af2f953d6b50db35:184""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4e9808afa6161bba01df39d17a849c79:183""}]")]
     public class UserSharedCallAppearanceModifyEndpointRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"524e0d071a229a44af2f953d6b50db35:184")]
+        [Group(@"4e9808afa6161bba01df39d17a849c79:183")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.AccessDeviceEndpointKey _accessDeviceEndpoint;
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
-        [Group(@"524e0d071a229a44af2f953d6b50db35:184")]
+        [Group(@"4e9808afa6161bba01df39d17a849c79:183")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointKey AccessDeviceEndpoint
         {
             get => _accessDeviceEndpoint;
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"524e0d071a229a44af2f953d6b50db35:184")]
+        [Group(@"4e9808afa6161bba01df39d17a849c79:183")]
         public bool IsActive
         {
             get => _isActive;
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowOrigination", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"524e0d071a229a44af2f953d6b50db35:184")]
+        [Group(@"4e9808afa6161bba01df39d17a849c79:183")]
         public bool AllowOrigination
         {
             get => _allowOrigination;
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowTermination", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"524e0d071a229a44af2f953d6b50db35:184")]
+        [Group(@"4e9808afa6161bba01df39d17a849c79:183")]
         public bool AllowTermination
         {
             get => _allowTermination;
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useHotline", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"524e0d071a229a44af2f953d6b50db35:184")]
+        [Group(@"4e9808afa6161bba01df39d17a849c79:183")]
         public bool UseHotline
         {
             get => _useHotline;
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hotlineContact", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"524e0d071a229a44af2f953d6b50db35:184")]
+        [Group(@"4e9808afa6161bba01df39d17a849c79:183")]
         [MinLength(1)]
         [MaxLength(161)]
         public string HotlineContact

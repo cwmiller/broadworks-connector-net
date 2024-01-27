@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:7593""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:7706""}]")]
     public class SystemDeviceFamilyModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _deviceFamilyName;
 
         [XmlElement(ElementName = "deviceFamilyName", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7593")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7706")]
         [MinLength(1)]
         [MaxLength(30)]
         public string DeviceFamilyName
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newDeviceFamilyName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7593")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7706")]
         [MinLength(1)]
         [MaxLength(30)]
         public string NewDeviceFamilyName
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceTypeList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7593")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7706")]
         public BroadWorksConnector.Ocip.Models.ReplacementDeviceTypeList DeviceTypeList
         {
             get => _deviceTypeList;
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "tagSetList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:7593")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7706")]
         public BroadWorksConnector.Ocip.Models.ReplacementTagSetList TagSetList
         {
             get => _tagSetList;

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4e1b40cd187e65e0dc647394b1e74e3c:75""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""448c1807ef39a1a06e7d8d4d16ecaa31:75""}]")]
     public class UserDirectRouteModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"4e1b40cd187e65e0dc647394b1e74e3c:75")]
+        [Group(@"448c1807ef39a1a06e7d8d4d16ecaa31:75")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "outgoingDTGPolicy", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4e1b40cd187e65e0dc647394b1e74e3c:75")]
+        [Group(@"448c1807ef39a1a06e7d8d4d16ecaa31:75")]
         public BroadWorksConnector.Ocip.Models.DirectRouteOutgoingDTGPolicy OutgoingDTGPolicy
         {
             get => _outgoingDTGPolicy;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "outgoingTrunkIdentityPolicy", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4e1b40cd187e65e0dc647394b1e74e3c:75")]
+        [Group(@"448c1807ef39a1a06e7d8d4d16ecaa31:75")]
         public BroadWorksConnector.Ocip.Models.DirectRouteOutgoingTrunkIdentityPolicy OutgoingTrunkIdentityPolicy
         {
             get => _outgoingTrunkIdentityPolicy;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "directRouteIdentityList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4e1b40cd187e65e0dc647394b1e74e3c:75")]
+        [Group(@"448c1807ef39a1a06e7d8d4d16ecaa31:75")]
         public BroadWorksConnector.Ocip.Models.DirectRouteReplacementIdentityList DirectRouteIdentityList
         {
             get => _directRouteIdentityList;

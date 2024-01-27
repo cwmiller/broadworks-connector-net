@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""dfcd2b22f2e2b3540d286342087ce042:225""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7e3b48428e45d35b1edd744adc90f9b:225""}]")]
     public class GroupCallCapacityManagementGetInstanceResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"dfcd2b22f2e2b3540d286342087ce042:225")]
+        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:225")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxActiveCallsAllowed;
 
         [XmlElement(ElementName = "maxActiveCallsAllowed", IsNullable = false, Namespace = "")]
-        [Group(@"dfcd2b22f2e2b3540d286342087ce042:225")]
+        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:225")]
         [MinInclusive(0)]
         [MaxInclusive(99999)]
         public int MaxActiveCallsAllowed
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxIncomingActiveCallsAllowed", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"dfcd2b22f2e2b3540d286342087ce042:225")]
+        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:225")]
         [MinInclusive(0)]
         [MaxInclusive(99999)]
         public int MaxIncomingActiveCallsAllowed
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxOutgoingActiveCallsAllowed", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"dfcd2b22f2e2b3540d286342087ce042:225")]
+        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:225")]
         [MinInclusive(0)]
         [MaxInclusive(99999)]
         public int MaxOutgoingActiveCallsAllowed
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _defaultGroupForNewUsers;
 
         [XmlElement(ElementName = "defaultGroupForNewUsers", IsNullable = false, Namespace = "")]
-        [Group(@"dfcd2b22f2e2b3540d286342087ce042:225")]
+        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:225")]
         public bool DefaultGroupForNewUsers
         {
             get => _defaultGroupForNewUsers;
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
-        [Group(@"dfcd2b22f2e2b3540d286342087ce042:225")]
+        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:225")]
         public BroadWorksConnector.Ocip.Models.C.OCITable UserTable
         {
             get => _userTable;

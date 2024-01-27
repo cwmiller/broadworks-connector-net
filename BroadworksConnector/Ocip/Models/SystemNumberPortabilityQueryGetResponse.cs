@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:13170""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:13340""}]")]
     public class SystemNumberPortabilityQueryGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _continueCallAsDialedOnTimeoutOrError;
 
         [XmlElement(ElementName = "continueCallAsDialedOnTimeoutOrError", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13170")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:13340")]
         public bool ContinueCallAsDialedOnTimeoutOrError
         {
             get => _continueCallAsDialedOnTimeoutOrError;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _numberPortabilityNameLookupTimeoutMilliseconds;
 
         [XmlElement(ElementName = "numberPortabilityNameLookupTimeoutMilliseconds", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:13170")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:13340")]
         [MinInclusive(100)]
         [MaxInclusive(10000)]
         public int NumberPortabilityNameLookupTimeoutMilliseconds

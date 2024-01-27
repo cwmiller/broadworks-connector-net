@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9994""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10112""}]")]
     public class SystemExtensionLengthGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected int _minExtensionLength;
 
         [XmlElement(ElementName = "minExtensionLength", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9994")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10112")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
         public int MinExtensionLength
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxExtensionLength;
 
         [XmlElement(ElementName = "maxExtensionLength", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9994")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10112")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
         public int MaxExtensionLength

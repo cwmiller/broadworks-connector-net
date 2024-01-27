@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:10523""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:10699""}]")]
     public class GroupHuntGroupGetInstanceResponse14 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10523")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10699")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.HuntPolicy _policy;
 
         [XmlElement(ElementName = "policy", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10523")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10699")]
         public BroadWorksConnector.Ocip.Models.HuntPolicy Policy
         {
             get => _policy;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _huntAfterNoAnswer;
 
         [XmlElement(ElementName = "huntAfterNoAnswer", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10523")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10699")]
         public bool HuntAfterNoAnswer
         {
             get => _huntAfterNoAnswer;
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _noAnswerNumberOfRings;
 
         [XmlElement(ElementName = "noAnswerNumberOfRings", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10523")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10699")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
         public int NoAnswerNumberOfRings
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _forwardAfterTimeout;
 
         [XmlElement(ElementName = "forwardAfterTimeout", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10523")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10699")]
         public bool ForwardAfterTimeout
         {
             get => _forwardAfterTimeout;
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _forwardTimeoutSeconds;
 
         [XmlElement(ElementName = "forwardTimeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10523")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10699")]
         [MinInclusive(0)]
         [MaxInclusive(7200)]
         public int ForwardTimeoutSeconds
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forwardToPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10523")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10699")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ForwardToPhoneNumber
@@ -149,7 +149,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _agentUserTable;
 
         [XmlElement(ElementName = "agentUserTable", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10523")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10699")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AgentUserTable
         {
             get => _agentUserTable;
@@ -166,7 +166,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowCallWaitingForAgents;
 
         [XmlElement(ElementName = "allowCallWaitingForAgents", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:10523")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10699")]
         public bool AllowCallWaitingForAgents
         {
             get => _allowCallWaitingForAgents;

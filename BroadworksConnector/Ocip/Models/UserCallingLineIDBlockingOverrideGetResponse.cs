@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f23c819d0aa2b40aeba3248b27fe2520:59""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2f311a4894deb89024261851208263ff:59""}]")]
     public class UserCallingLineIDBlockingOverrideGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"f23c819d0aa2b40aeba3248b27fe2520:59")]
+        [Group(@"2f311a4894deb89024261851208263ff:59")]
         public bool IsActive
         {
             get => _isActive;

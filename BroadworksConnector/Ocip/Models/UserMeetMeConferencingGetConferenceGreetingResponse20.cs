@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:733""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""adf25df72505d1c476ebb480b6cce18d:733""}]")]
     public class UserMeetMeConferencingGetConferenceGreetingResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _playEntranceGreeting;
 
         [XmlElement(ElementName = "playEntranceGreeting", IsNullable = false, Namespace = "")]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:733")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:733")]
         public bool PlayEntranceGreeting
         {
             get => _playEntranceGreeting;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "entranceGreetingFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:733")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:733")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileKey EntranceGreetingFile
         {
             get => _entranceGreetingFile;

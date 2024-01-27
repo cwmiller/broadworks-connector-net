@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b3afea8308b7fdaab8d385357ca9c2d:150""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""435c279b3e6710f4ada60ed66a93d278:150""}]")]
     public class SystemSecurityClassificationGetClassificationResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _audioAnnouncementFileDescription;
 
         [XmlElement(ElementName = "audioAnnouncementFileDescription", IsNullable = false, Namespace = "")]
-        [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:150")]
+        [Group(@"435c279b3e6710f4ada60ed66a93d278:150")]
         [MinLength(1)]
         [MaxLength(256)]
         public string AudioAnnouncementFileDescription
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.MediaFileType _audioAnnouncementFileType;
 
         [XmlElement(ElementName = "audioAnnouncementFileType", IsNullable = false, Namespace = "")]
-        [Group(@"6b3afea8308b7fdaab8d385357ca9c2d:150")]
+        [Group(@"435c279b3e6710f4ada60ed66a93d278:150")]
         public BroadWorksConnector.Ocip.Models.MediaFileType AudioAnnouncementFileType
         {
             get => _audioAnnouncementFileType;

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:9037""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:9161""}]")]
     public class SystemDialPlanPolicyAddAccessCodeRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _accessCode;
 
         [XmlElement(ElementName = "accessCode", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9037")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9161")]
         [MinLength(1)]
         [MaxLength(5)]
         public string AccessCode
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _includeCodeForNetworkTranslationsAndRouting;
 
         [XmlElement(ElementName = "includeCodeForNetworkTranslationsAndRouting", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9037")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9161")]
         public bool IncludeCodeForNetworkTranslationsAndRouting
         {
             get => _includeCodeForNetworkTranslationsAndRouting;
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _includeCodeForScreeningServices;
 
         [XmlElement(ElementName = "includeCodeForScreeningServices", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9037")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9161")]
         public bool IncludeCodeForScreeningServices
         {
             get => _includeCodeForScreeningServices;
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableSecondaryDialTone;
 
         [XmlElement(ElementName = "enableSecondaryDialTone", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9037")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9161")]
         public bool EnableSecondaryDialTone
         {
             get => _enableSecondaryDialTone;
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:9037")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9161")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

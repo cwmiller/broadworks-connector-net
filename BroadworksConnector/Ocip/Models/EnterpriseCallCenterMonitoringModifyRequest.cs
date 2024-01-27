@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""41b968f87257b8dd553215179161ccb4:81""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b5e86c5d60603bdb61de308d278500d9:80""}]")]
     public class EnterpriseCallCenterMonitoringModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"41b968f87257b8dd553215179161ccb4:81")]
+        [Group(@"b5e86c5d60603bdb61de308d278500d9:80")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableSupervisorCoaching", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"41b968f87257b8dd553215179161ccb4:81")]
+        [Group(@"b5e86c5d60603bdb61de308d278500d9:80")]
         public bool EnableSupervisorCoaching
         {
             get => _enableSupervisorCoaching;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "bypassEnforcementOfSupervisorAgentRelationship", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"41b968f87257b8dd553215179161ccb4:81")]
+        [Group(@"b5e86c5d60603bdb61de308d278500d9:80")]
         public bool BypassEnforcementOfSupervisorAgentRelationship
         {
             get => _bypassEnforcementOfSupervisorAgentRelationship;

@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e2c537e3e39483b96620673a7012ffdd:7529""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7515""}]")]
     public class CallCenterReportScheduleRecurrence
     {
 
         protected string _timeZone;
 
         [XmlElement(ElementName = "timeZone", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7529")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7515")]
         [MinLength(1)]
         [MaxLength(127)]
         public string TimeZone
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _startDate;
 
         [XmlElement(ElementName = "startDate", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7529")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7515")]
         public string StartDate
         {
             get => _startDate;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.HourMinute _scheduleTime;
 
         [XmlElement(ElementName = "scheduleTime", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7529")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7515")]
         public BroadWorksConnector.Ocip.Models.HourMinute ScheduleTime
         {
             get => _scheduleTime;
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.Recurrence _recurrence;
 
         [XmlElement(ElementName = "recurrence", IsNullable = false, Namespace = "")]
-        [Group(@"e2c537e3e39483b96620673a7012ffdd:7529")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7515")]
         public BroadWorksConnector.Ocip.Models.Recurrence Recurrence
         {
             get => _recurrence;

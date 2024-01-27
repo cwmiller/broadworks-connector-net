@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:6986""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:8376""}]")]
     public class SystemBusyLampFieldGetResponse18 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _displayLocalUserIdentityLastNameFirst;
 
         [XmlElement(ElementName = "displayLocalUserIdentityLastNameFirst", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:6986")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:8376")]
         public bool DisplayLocalUserIdentityLastNameFirst
         {
             get => _displayLocalUserIdentityLastNameFirst;
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _forceUseOfTCP;
 
         [XmlElement(ElementName = "forceUseOfTCP", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:6986")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:8376")]
         public bool ForceUseOfTCP
         {
             get => _forceUseOfTCP;

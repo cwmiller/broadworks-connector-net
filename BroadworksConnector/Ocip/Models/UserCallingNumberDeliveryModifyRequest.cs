@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2739e54a6c7a2ab6abe092f89482573e:76""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""38ec4da6ddf415ad78a6ce9d97cf9c52:76""}]")]
     public class UserCallingNumberDeliveryModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"2739e54a6c7a2ab6abe092f89482573e:76")]
+        [Group(@"38ec4da6ddf415ad78a6ce9d97cf9c52:76")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActiveForExternalCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"2739e54a6c7a2ab6abe092f89482573e:76")]
+        [Group(@"38ec4da6ddf415ad78a6ce9d97cf9c52:76")]
         public bool IsActiveForExternalCalls
         {
             get => _isActiveForExternalCalls;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActiveForInternalCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"2739e54a6c7a2ab6abe092f89482573e:76")]
+        [Group(@"38ec4da6ddf415ad78a6ce9d97cf9c52:76")]
         public bool IsActiveForInternalCalls
         {
             get => _isActiveForInternalCalls;

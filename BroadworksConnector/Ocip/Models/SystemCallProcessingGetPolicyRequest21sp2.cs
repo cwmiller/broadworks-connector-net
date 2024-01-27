@@ -7,7 +7,8 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// The response is either a SystemCallProcessingGetPolicyResponse21sp2 or an ErrorResponse.
+    /// The response is either a SystemCallProcessingGetPolicyResponse21sp2 or an
+    /// ErrorResponse.
     /// Replaced by: SystemCallProcessingGetPolicyRequest22 in AS data mode.
     /// <see cref="SystemCallProcessingGetPolicyResponse21sp2"/>
     /// <see cref="ErrorResponse"/>
@@ -16,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:7051""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:8442""}]")]
     public class SystemCallProcessingGetPolicyRequest21sp2 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemCallProcessingGetPolicyResponse21sp2>
     {
 

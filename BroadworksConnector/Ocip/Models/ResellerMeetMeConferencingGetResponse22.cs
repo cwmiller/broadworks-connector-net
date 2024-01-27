@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0fd24121d16995c994d40bc408dbcfa5:356""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""adf25df72505d1c476ebb480b6cce18d:355""}]")]
     public class ResellerMeetMeConferencingGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "conferenceFromAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:356")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:355")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ConferenceFromAddress
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxAllocatedPorts", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:356")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:355")]
         [MinInclusive(0)]
         [MaxInclusive(999999)]
         public int MaxAllocatedPorts
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "disableUnlimitedMeetMePorts", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:356")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:355")]
         public bool DisableUnlimitedMeetMePorts
         {
             get => _disableUnlimitedMeetMePorts;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableMaxAllocatedPorts", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0fd24121d16995c994d40bc408dbcfa5:356")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:355")]
         public bool EnableMaxAllocatedPorts
         {
             get => _enableMaxAllocatedPorts;

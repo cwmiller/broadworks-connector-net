@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ece0b65e69189d3e8b8deee895f0a7ff:61""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2f2cc47dc637fa680d158d93a58af0fd:61""}]")]
     public class ServiceProviderInCallServiceActivationGetResponse17 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _flashActivationDigits;
 
         [XmlElement(ElementName = "flashActivationDigits", IsNullable = false, Namespace = "")]
-        [Group(@"ece0b65e69189d3e8b8deee895f0a7ff:61")]
+        [Group(@"2f2cc47dc637fa680d158d93a58af0fd:61")]
         [MinLength(1)]
         [MaxLength(8)]
         public string FlashActivationDigits
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _callTransferActivationDigits;
 
         [XmlElement(ElementName = "callTransferActivationDigits", IsNullable = false, Namespace = "")]
-        [Group(@"ece0b65e69189d3e8b8deee895f0a7ff:61")]
+        [Group(@"2f2cc47dc637fa680d158d93a58af0fd:61")]
         [MinLength(1)]
         [MaxLength(8)]
         public string CallTransferActivationDigits

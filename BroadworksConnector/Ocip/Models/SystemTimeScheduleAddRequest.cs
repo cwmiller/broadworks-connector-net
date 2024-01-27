@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:35555""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:36276""}]")]
     public class SystemTimeScheduleAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _timeScheduleName;
 
         [XmlElement(ElementName = "timeScheduleName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35555")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36276")]
         [MinLength(1)]
         [MaxLength(40)]
         public string TimeScheduleName
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeInterval01", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35555")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36276")]
         public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval01
         {
             get => _timeInterval01;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeInterval02", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35555")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36276")]
         public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval02
         {
             get => _timeInterval02;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeInterval03", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35555")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36276")]
         public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval03
         {
             get => _timeInterval03;
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeInterval04", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35555")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36276")]
         public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval04
         {
             get => _timeInterval04;
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeInterval05", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35555")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36276")]
         public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval05
         {
             get => _timeInterval05;
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeInterval06", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35555")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36276")]
         public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval06
         {
             get => _timeInterval06;
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeInterval07", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35555")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36276")]
         public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval07
         {
             get => _timeInterval07;
@@ -168,7 +168,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeInterval08", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35555")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36276")]
         public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval08
         {
             get => _timeInterval08;
@@ -186,7 +186,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeInterval09", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35555")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36276")]
         public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval09
         {
             get => _timeInterval09;
@@ -204,7 +204,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeInterval10", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35555")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36276")]
         public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval10
         {
             get => _timeInterval10;
@@ -222,7 +222,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeInterval11", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35555")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36276")]
         public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval11
         {
             get => _timeInterval11;
@@ -240,7 +240,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeInterval12", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35555")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36276")]
         public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval12
         {
             get => _timeInterval12;
@@ -258,7 +258,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeInterval13", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35555")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36276")]
         public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval13
         {
             get => _timeInterval13;
@@ -276,7 +276,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeInterval14", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35555")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36276")]
         public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval14
         {
             get => _timeInterval14;
@@ -294,7 +294,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeInterval15", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35555")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36276")]
         public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval15
         {
             get => _timeInterval15;
@@ -312,7 +312,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeInterval16", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35555")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36276")]
         public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval16
         {
             get => _timeInterval16;
@@ -330,7 +330,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeInterval17", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35555")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36276")]
         public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval17
         {
             get => _timeInterval17;
@@ -348,7 +348,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeInterval18", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35555")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36276")]
         public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval18
         {
             get => _timeInterval18;
@@ -366,7 +366,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeInterval19", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35555")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36276")]
         public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval19
         {
             get => _timeInterval19;
@@ -384,7 +384,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeInterval20", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35555")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36276")]
         public BroadWorksConnector.Ocip.Models.TimeInterval TimeInterval20
         {
             get => _timeInterval20;

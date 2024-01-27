@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:1236""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:1232""}]")]
     public class UserCommunicationBarringGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _useGroupSetting;
 
         [XmlElement(ElementName = "useGroupSetting", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1236")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1232")]
         public bool UseGroupSetting
         {
             get => _useGroupSetting;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "profileName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:1236")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1232")]
         [MinLength(1)]
         [MaxLength(40)]
         public string ProfileName

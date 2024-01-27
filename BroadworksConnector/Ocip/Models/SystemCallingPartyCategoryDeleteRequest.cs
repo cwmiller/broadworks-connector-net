@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""89aa8c9a341a3cccb2453b1ee467bf94:73""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d0efd2493d3062b292fd31759011925e:73""}]")]
     public class SystemCallingPartyCategoryDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _category;
 
         [XmlElement(ElementName = "category", IsNullable = false, Namespace = "")]
-        [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:73")]
+        [Group(@"d0efd2493d3062b292fd31759011925e:73")]
         [MinLength(1)]
         [MaxLength(20)]
         public string Category

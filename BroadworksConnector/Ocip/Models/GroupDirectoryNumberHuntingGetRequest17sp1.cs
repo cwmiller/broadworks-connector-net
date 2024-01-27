@@ -11,21 +11,21 @@ namespace BroadWorksConnector.Ocip.Models
     /// It gets the agents of a call center or hunt group that are members
     /// of a directory number hunting group.  They are agents that are not already
     /// assigned to any other directory number hunting group.
-    /// The response is either GroupDirectoryNumberHuntingGetResponse or ErrorResponse.
-    /// <see cref="GroupDirectoryNumberHuntingGetResponse"/>
+    /// The response is either GroupDirectoryNumberHuntingGetResponse17sp1 or ErrorResponse.
+    /// <see cref="GroupDirectoryNumberHuntingGetResponse17sp1"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7c509136e6ce6be616e313c3b28a0449:84""}]")]
-    public class GroupDirectoryNumberHuntingGetRequest17sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupDirectoryNumberHuntingGetResponse>
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""98227cfa4fa3d2af84e4bff7d8508ae7:83""}]")]
+    public class GroupDirectoryNumberHuntingGetRequest17sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupDirectoryNumberHuntingGetResponse17sp1>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"7c509136e6ce6be616e313c3b28a0449:84")]
+        [Group(@"98227cfa4fa3d2af84e4bff7d8508ae7:83")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId

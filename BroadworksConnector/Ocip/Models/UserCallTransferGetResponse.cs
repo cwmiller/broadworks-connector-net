@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:41784""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:42393""}]")]
     public class UserCallTransferGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isRecallActive;
 
         [XmlElement(ElementName = "isRecallActive", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41784")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:42393")]
         public bool IsRecallActive
         {
             get => _isRecallActive;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _recallNumberOfRings;
 
         [XmlElement(ElementName = "recallNumberOfRings", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41784")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:42393")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
         public int RecallNumberOfRings
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useDiversionInhibitorForBlindTransfer;
 
         [XmlElement(ElementName = "useDiversionInhibitorForBlindTransfer", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41784")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:42393")]
         public bool UseDiversionInhibitorForBlindTransfer
         {
             get => _useDiversionInhibitorForBlindTransfer;
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useDiversionInhibitorForConsultativeCalls;
 
         [XmlElement(ElementName = "useDiversionInhibitorForConsultativeCalls", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:41784")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:42393")]
         public bool UseDiversionInhibitorForConsultativeCalls
         {
             get => _useDiversionInhibitorForConsultativeCalls;

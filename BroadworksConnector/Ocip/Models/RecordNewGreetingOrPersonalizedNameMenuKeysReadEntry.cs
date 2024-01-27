@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:2957""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:2963""}]")]
     public class RecordNewGreetingOrPersonalizedNameMenuKeysReadEntry
     {
 
         protected string _endRecording;
 
         [XmlElement(ElementName = "endRecording", IsNullable = false, Namespace = "")]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:2957")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2963")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string EndRecording

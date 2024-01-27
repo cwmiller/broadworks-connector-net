@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:674""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ef3c4f453d01f7ce750331de83ebc765:612""}]")]
     public class UserSingleSignOnCreateDeviceTokenResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _deviceToken;
 
         [XmlElement(ElementName = "deviceToken", IsNullable = false, Namespace = "")]
-        [Group(@"6b27fcc79475236456fc113a42b75543:674")]
+        [Group(@"ef3c4f453d01f7ce750331de83ebc765:612")]
         [MinLength(1)]
         public string DeviceToken
         {

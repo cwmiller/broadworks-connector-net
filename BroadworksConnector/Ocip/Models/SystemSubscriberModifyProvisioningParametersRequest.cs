@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18125""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:18358""}]")]
     public class SystemSubscriberModifyProvisioningParametersRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "configurableCLIDNormalization", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18125")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18358")]
         public bool ConfigurableCLIDNormalization
         {
             get => _configurableCLIDNormalization;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "includeDefaultDomain", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18125")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18358")]
         public bool IncludeDefaultDomain
         {
             get => _includeDefaultDomain;
@@ -54,6 +54,24 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool IncludeDefaultDomainSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.AuthorizationLevelToProvisionAlternateUserID _minAuthLevelToProvisionAltUserID;
+
+        [XmlElement(ElementName = "minAuthLevelToProvisionAltUserID", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18358")]
+        public BroadWorksConnector.Ocip.Models.AuthorizationLevelToProvisionAlternateUserID MinAuthLevelToProvisionAltUserID
+        {
+            get => _minAuthLevelToProvisionAltUserID;
+            set
+            {
+                MinAuthLevelToProvisionAltUserIDSpecified = true;
+                _minAuthLevelToProvisionAltUserID = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool MinAuthLevelToProvisionAltUserIDSpecified { get; set; }
 
     }
 }

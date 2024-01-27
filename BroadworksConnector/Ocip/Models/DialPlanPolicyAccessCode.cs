@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:2448""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:2915""}]")]
     public class DialPlanPolicyAccessCode
     {
 
         protected string _accessCode;
 
         [XmlElement(ElementName = "accessCode", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2448")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2915")]
         [MinLength(1)]
         [MaxLength(5)]
         public string AccessCode
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2448")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2915")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "includeCodeForNetworkTranslationsAndRouting", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2448")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2915")]
         public bool IncludeCodeForNetworkTranslationsAndRouting
         {
             get => _includeCodeForNetworkTranslationsAndRouting;
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "includeCodeForScreeningServices", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2448")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2915")]
         public bool IncludeCodeForScreeningServices
         {
             get => _includeCodeForScreeningServices;
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableSecondaryDialTone", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:2448")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2915")]
         public bool EnableSecondaryDialTone
         {
             get => _enableSecondaryDialTone;

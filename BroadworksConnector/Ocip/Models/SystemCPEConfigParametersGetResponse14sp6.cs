@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:25490"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:25497""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:25899"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:25906""}]}]")]
     public class SystemCPEConfigParametersGetResponse14sp6 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enableIPDeviceManagement;
 
         [XmlElement(ElementName = "enableIPDeviceManagement", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25490")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:25899")]
         public bool EnableIPDeviceManagement
         {
             get => _enableIPDeviceManagement;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _ftpConnectTimeoutSeconds;
 
         [XmlElement(ElementName = "ftpConnectTimeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25490")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:25899")]
         [MinInclusive(1)]
         [MaxInclusive(600)]
         public int FtpConnectTimeoutSeconds
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _ftpFileTransferTimeoutSeconds;
 
         [XmlElement(ElementName = "ftpFileTransferTimeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25490")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:25899")]
         [MinInclusive(1)]
         [MaxInclusive(600)]
         public int FtpFileTransferTimeoutSeconds
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _pauseBetweenFileRebuildMilliseconds;
 
         [XmlElement(ElementName = "pauseBetweenFileRebuildMilliseconds", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25490")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:25899")]
         [MinInclusive(0)]
         [MaxInclusive(10000)]
         public int PauseBetweenFileRebuildMilliseconds
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxBusyTimeMinutes;
 
         [XmlElement(ElementName = "maxBusyTimeMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25490")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:25899")]
         [MinInclusive(1)]
         [MaxInclusive(1440)]
         public int MaxBusyTimeMinutes
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceAccessAppServerClusterName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25490")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:25899")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DeviceAccessAppServerClusterName
@@ -137,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _fileRebuildImmediate;
 
         [XmlElement(ElementName = "fileRebuildImmediate", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25497")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:25906")]
         public string FileRebuildImmediate
         {
             get => _fileRebuildImmediate;
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SystemCPEConfigParametersGetResponse14sp6FileRebuildDaily _fileRebuildDaily;
 
         [XmlElement(ElementName = "fileRebuildDaily", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25497")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:25906")]
         public BroadWorksConnector.Ocip.Models.SystemCPEConfigParametersGetResponse14sp6FileRebuildDaily FileRebuildDaily
         {
             get => _fileRebuildDaily;
@@ -171,7 +171,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SystemCPEConfigParametersGetResponse14sp6FileRebuildHourly _fileRebuildHourly;
 
         [XmlElement(ElementName = "fileRebuildHourly", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:25497")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:25906")]
         public BroadWorksConnector.Ocip.Models.SystemCPEConfigParametersGetResponse14sp6FileRebuildHourly FileRebuildHourly
         {
             get => _fileRebuildHourly;

@@ -8,24 +8,25 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get a list of Communication Barring Authorization Codes for a group.
-    /// The response is either a GroupCommunicationBarringAuthorizationCodeGetListResponse or an ErrorResponse.
+    /// The response is either a GroupCommunicationBarringAuthorizationCodeGetListResponse
+    /// or an ErorResponse.
     /// 
     /// Replaced by: GroupCommunicationBarringAuthorizationCodeGetListRequest21sp1 in AS data mode
     /// <see cref="GroupCommunicationBarringAuthorizationCodeGetListResponse"/>
-    /// <see cref="ErrorResponse"/>
+    /// <see cref="ErorResponse"/>
     /// <see cref="GroupCommunicationBarringAuthorizationCodeGetListRequest21sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:2122""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:2631""}]")]
     public class GroupCommunicationBarringAuthorizationCodeGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupCommunicationBarringAuthorizationCodeGetListResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:2122")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:2631")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -44,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:2122")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:2631")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId

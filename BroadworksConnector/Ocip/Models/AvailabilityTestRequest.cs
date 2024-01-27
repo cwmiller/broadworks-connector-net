@@ -8,7 +8,7 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// AvailabilityTestRequest is for high-availability support.
-    /// The response is either SuccessResponse or ErrorResponse.
+    /// The response is either a SuccessResponse or ErrorResponse.
     /// <see cref="AvailabilityTestRequest"/>
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6b27fcc79475236456fc113a42b75543:133""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ef3c4f453d01f7ce750331de83ebc765:131""}]")]
     public class AvailabilityTestRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 

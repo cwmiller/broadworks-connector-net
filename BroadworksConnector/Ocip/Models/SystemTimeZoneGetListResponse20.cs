@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7f663d5135470c33ca64b0eed3c3aa0c:18598""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:18832""}]")]
     public class SystemTimeZoneGetListResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _serverTimeZone;
 
         [XmlElement(ElementName = "serverTimeZone", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18598")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18832")]
         [MinLength(1)]
         [MaxLength(127)]
         public string ServerTimeZone
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _timeZoneTable;
 
         [XmlElement(ElementName = "timeZoneTable", IsNullable = false, Namespace = "")]
-        [Group(@"7f663d5135470c33ca64b0eed3c3aa0c:18598")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18832")]
         public BroadWorksConnector.Ocip.Models.C.OCITable TimeZoneTable
         {
             get => _timeZoneTable;

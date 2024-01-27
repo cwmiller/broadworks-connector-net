@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""750c600a9467af6ee77c0dbca839453e:219""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""48b0abc609ecbfab1fb1ee61c1de62ea:219""}]")]
     public class PriorityAlertCriteriaFromDnModify
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "fromDnCriteriaSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"750c600a9467af6ee77c0dbca839453e:219")]
+        [Group(@"48b0abc609ecbfab1fb1ee61c1de62ea:219")]
         public BroadWorksConnector.Ocip.Models.PriorityAlertCriteriaFromDnSelection FromDnCriteriaSelection
         {
             get => _fromDnCriteriaSelection;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "includeAnonymousCallers", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"750c600a9467af6ee77c0dbca839453e:219")]
+        [Group(@"48b0abc609ecbfab1fb1ee61c1de62ea:219")]
         public bool IncludeAnonymousCallers
         {
             get => _includeAnonymousCallers;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "includeUnavailableCallers", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"750c600a9467af6ee77c0dbca839453e:219")]
+        [Group(@"48b0abc609ecbfab1fb1ee61c1de62ea:219")]
         public bool IncludeUnavailableCallers
         {
             get => _includeUnavailableCallers;
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumberList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"750c600a9467af6ee77c0dbca839453e:219")]
+        [Group(@"48b0abc609ecbfab1fb1ee61c1de62ea:219")]
         public BroadWorksConnector.Ocip.Models.CriteriaReplacementDNList PhoneNumberList
         {
             get => _phoneNumberList;

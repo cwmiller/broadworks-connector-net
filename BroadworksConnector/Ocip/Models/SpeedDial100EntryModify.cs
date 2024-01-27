@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:4671""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:5136""}]")]
     public class SpeedDial100EntryModify
     {
 
         protected int _speedCode;
 
         [XmlElement(ElementName = "speedCode", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4671")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5136")]
         [MinInclusive(0)]
         [MaxInclusive(99)]
         public int SpeedCode
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4671")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5136")]
         [MinLength(1)]
         [MaxLength(161)]
         public string PhoneNumber
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:4671")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5136")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

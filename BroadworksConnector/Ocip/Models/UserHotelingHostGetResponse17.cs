@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""02e7506f62aa34db418d4b19526b2ccf:56""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""96ad5c8258c0a6b99bd479bf1924db05:56""}]")]
     public class UserHotelingHostGetResponse17 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"02e7506f62aa34db418d4b19526b2ccf:56")]
+        [Group(@"96ad5c8258c0a6b99bd479bf1924db05:56")]
         public bool IsActive
         {
             get => _isActive;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enforceAssociationLimit;
 
         [XmlElement(ElementName = "enforceAssociationLimit", IsNullable = false, Namespace = "")]
-        [Group(@"02e7506f62aa34db418d4b19526b2ccf:56")]
+        [Group(@"96ad5c8258c0a6b99bd479bf1924db05:56")]
         public bool EnforceAssociationLimit
         {
             get => _enforceAssociationLimit;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _associationLimitHours;
 
         [XmlElement(ElementName = "associationLimitHours", IsNullable = false, Namespace = "")]
-        [Group(@"02e7506f62aa34db418d4b19526b2ccf:56")]
+        [Group(@"96ad5c8258c0a6b99bd479bf1924db05:56")]
         [MinInclusive(1)]
         [MaxInclusive(999)]
         public int AssociationLimitHours
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.HotelingHostAccessLevel _accessLevel;
 
         [XmlElement(ElementName = "accessLevel", IsNullable = false, Namespace = "")]
-        [Group(@"02e7506f62aa34db418d4b19526b2ccf:56")]
+        [Group(@"96ad5c8258c0a6b99bd479bf1924db05:56")]
         public BroadWorksConnector.Ocip.Models.HotelingHostAccessLevel AccessLevel
         {
             get => _accessLevel;
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "guestLastName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"02e7506f62aa34db418d4b19526b2ccf:56")]
+        [Group(@"96ad5c8258c0a6b99bd479bf1924db05:56")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GuestLastName
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "guestFirstName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"02e7506f62aa34db418d4b19526b2ccf:56")]
+        [Group(@"96ad5c8258c0a6b99bd479bf1924db05:56")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GuestFirstName
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "guestPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"02e7506f62aa34db418d4b19526b2ccf:56")]
+        [Group(@"96ad5c8258c0a6b99bd479bf1924db05:56")]
         [MinLength(1)]
         [MaxLength(23)]
         public string GuestPhoneNumber
@@ -151,7 +151,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "guestExtension", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"02e7506f62aa34db418d4b19526b2ccf:56")]
+        [Group(@"96ad5c8258c0a6b99bd479bf1924db05:56")]
         [MinLength(2)]
         [MaxLength(20)]
         public string GuestExtension
@@ -171,7 +171,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "guestLocationDialingCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"02e7506f62aa34db418d4b19526b2ccf:56")]
+        [Group(@"96ad5c8258c0a6b99bd479bf1924db05:56")]
         [MinLength(1)]
         [MaxLength(15)]
         public string GuestLocationDialingCode
@@ -191,7 +191,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "guestAssociationDateTime", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"02e7506f62aa34db418d4b19526b2ccf:56")]
+        [Group(@"96ad5c8258c0a6b99bd479bf1924db05:56")]
         public string GuestAssociationDateTime
         {
             get => _guestAssociationDateTime;

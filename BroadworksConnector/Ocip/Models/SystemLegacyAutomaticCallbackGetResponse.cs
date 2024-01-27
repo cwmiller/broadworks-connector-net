@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6bf3c0ead6c4d948122ea83af7fc6e34:92""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""dd4a5e667a0f0e4bd6363152331d07ab:91""}]")]
     public class SystemLegacyAutomaticCallbackGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected int _maxMonitorsPerOriginator;
 
         [XmlElement(ElementName = "maxMonitorsPerOriginator", IsNullable = false, Namespace = "")]
-        [Group(@"6bf3c0ead6c4d948122ea83af7fc6e34:92")]
+        [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:91")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
         public int MaxMonitorsPerOriginator
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxMonitorsPerTerminator;
 
         [XmlElement(ElementName = "maxMonitorsPerTerminator", IsNullable = false, Namespace = "")]
-        [Group(@"6bf3c0ead6c4d948122ea83af7fc6e34:92")]
+        [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:91")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
         public int MaxMonitorsPerTerminator
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _t2Minutes;
 
         [XmlElement(ElementName = "t2Minutes", IsNullable = false, Namespace = "")]
-        [Group(@"6bf3c0ead6c4d948122ea83af7fc6e34:92")]
+        [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:91")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
         public int T2Minutes
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _t4Seconds;
 
         [XmlElement(ElementName = "t4Seconds", IsNullable = false, Namespace = "")]
-        [Group(@"6bf3c0ead6c4d948122ea83af7fc6e34:92")]
+        [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:91")]
         [MinInclusive(0)]
         [MaxInclusive(15)]
         public int T4Seconds
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _t5Seconds;
 
         [XmlElement(ElementName = "t5Seconds", IsNullable = false, Namespace = "")]
-        [Group(@"6bf3c0ead6c4d948122ea83af7fc6e34:92")]
+        [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:91")]
         [MinInclusive(2)]
         [MaxInclusive(10)]
         public int T5Seconds
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _t6Minutes;
 
         [XmlElement(ElementName = "t6Minutes", IsNullable = false, Namespace = "")]
-        [Group(@"6bf3c0ead6c4d948122ea83af7fc6e34:92")]
+        [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:91")]
         [MinInclusive(1)]
         [MaxInclusive(60)]
         public int T6Minutes
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _t7Minutes;
 
         [XmlElement(ElementName = "t7Minutes", IsNullable = false, Namespace = "")]
-        [Group(@"6bf3c0ead6c4d948122ea83af7fc6e34:92")]
+        [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:91")]
         [MinInclusive(5)]
         [MaxInclusive(180)]
         public int T7Minutes
@@ -153,7 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _t8Seconds;
 
         [XmlElement(ElementName = "t8Seconds", IsNullable = false, Namespace = "")]
-        [Group(@"6bf3c0ead6c4d948122ea83af7fc6e34:92")]
+        [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:91")]
         [MinInclusive(0)]
         [MaxInclusive(120)]
         public int T8Seconds
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _tRingSeconds;
 
         [XmlElement(ElementName = "tRingSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"6bf3c0ead6c4d948122ea83af7fc6e34:92")]
+        [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:91")]
         [MinInclusive(1)]
         [MaxInclusive(120)]
         public int TRingSeconds
@@ -191,7 +191,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _t10OMinutes;
 
         [XmlElement(ElementName = "t10OMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"6bf3c0ead6c4d948122ea83af7fc6e34:92")]
+        [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:91")]
         [MinInclusive(1)]
         [MaxInclusive(120)]
         public int T10OMinutes
@@ -210,7 +210,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _t10TMinutes;
 
         [XmlElement(ElementName = "t10TMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"6bf3c0ead6c4d948122ea83af7fc6e34:92")]
+        [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:91")]
         [MinInclusive(1)]
         [MaxInclusive(120)]
         public int T10TMinutes

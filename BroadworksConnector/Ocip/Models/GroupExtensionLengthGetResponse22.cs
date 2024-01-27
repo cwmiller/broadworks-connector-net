@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:5759""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:5495""}]")]
     public class GroupExtensionLengthGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected int _minExtensionLength;
 
         [XmlElement(ElementName = "minExtensionLength", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5759")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:5495")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
         public int MinExtensionLength
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxExtensionLength;
 
         [XmlElement(ElementName = "maxExtensionLength", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5759")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:5495")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
         public int MaxExtensionLength
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _defaultExtensionLength;
 
         [XmlElement(ElementName = "defaultExtensionLength", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5759")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:5495")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
         public int DefaultExtensionLength
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useEnterpriseExtensionLengthSetting", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:5759")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:5495")]
         public bool UseEnterpriseExtensionLengthSetting
         {
             get => _useEnterpriseExtensionLengthSetting;

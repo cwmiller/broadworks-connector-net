@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""74a46a9bfccb54713c1d19735843f1df:242""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""31dec625cdd18e8228eb61ffb34ddc0e:241""}]")]
     public class ServiceProviderPreferredCarrierGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _serviceProviderCarrierTable;
 
         [XmlElement(ElementName = "serviceProviderCarrierTable", IsNullable = false, Namespace = "")]
-        [Group(@"74a46a9bfccb54713c1d19735843f1df:242")]
+        [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:241")]
         public BroadWorksConnector.Ocip.Models.C.OCITable ServiceProviderCarrierTable
         {
             get => _serviceProviderCarrierTable;

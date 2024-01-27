@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""74a46a9bfccb54713c1d19735843f1df:621""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""31dec625cdd18e8228eb61ffb34ddc0e:621""}]")]
     public class UserPreferredCarrierName
     {
 
         protected bool _useGroupPreferredCarrier;
 
         [XmlElement(ElementName = "useGroupPreferredCarrier", IsNullable = false, Namespace = "")]
-        [Group(@"74a46a9bfccb54713c1d19735843f1df:621")]
+        [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:621")]
         public bool UseGroupPreferredCarrier
         {
             get => _useGroupPreferredCarrier;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "carrier", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"74a46a9bfccb54713c1d19735843f1df:621")]
+        [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:621")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Carrier

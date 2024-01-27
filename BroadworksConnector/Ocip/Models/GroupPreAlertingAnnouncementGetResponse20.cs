@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6165f2b4cd549de71fe8f3171488fdd8:130""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""89722c6a28e608e15bce28b0cd73fa11:130""}]")]
     public class GroupPreAlertingAnnouncementGetResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.PreAlertingAnnouncementInterrupt _announcementInterruption;
 
         [XmlElement(ElementName = "announcementInterruption", IsNullable = false, Namespace = "")]
-        [Group(@"6165f2b4cd549de71fe8f3171488fdd8:130")]
+        [Group(@"89722c6a28e608e15bce28b0cd73fa11:130")]
         public BroadWorksConnector.Ocip.Models.PreAlertingAnnouncementInterrupt AnnouncementInterruption
         {
             get => _announcementInterruption;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "interruptionDigitSequence", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6165f2b4cd549de71fe8f3171488fdd8:130")]
+        [Group(@"89722c6a28e608e15bce28b0cd73fa11:130")]
         [MinLength(1)]
         [MaxLength(10)]
         public string InterruptionDigitSequence
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioSelection;
 
         [XmlElement(ElementName = "audioSelection", IsNullable = false, Namespace = "")]
-        [Group(@"6165f2b4cd549de71fe8f3171488fdd8:130")]
+        [Group(@"89722c6a28e608e15bce28b0cd73fa11:130")]
         public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection AudioSelection
         {
             get => _audioSelection;
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6165f2b4cd549de71fe8f3171488fdd8:130")]
+        [Group(@"89722c6a28e608e15bce28b0cd73fa11:130")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileKey AudioFile
         {
             get => _audioFile;
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFileUrl", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6165f2b4cd549de71fe8f3171488fdd8:130")]
+        [Group(@"89722c6a28e608e15bce28b0cd73fa11:130")]
         [MinLength(1)]
         [MaxLength(256)]
         public string AudioFileUrl
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoSelection;
 
         [XmlElement(ElementName = "videoSelection", IsNullable = false, Namespace = "")]
-        [Group(@"6165f2b4cd549de71fe8f3171488fdd8:130")]
+        [Group(@"89722c6a28e608e15bce28b0cd73fa11:130")]
         public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection VideoSelection
         {
             get => _videoSelection;
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6165f2b4cd549de71fe8f3171488fdd8:130")]
+        [Group(@"89722c6a28e608e15bce28b0cd73fa11:130")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileKey VideoFile
         {
             get => _videoFile;
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoFileUrl", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6165f2b4cd549de71fe8f3171488fdd8:130")]
+        [Group(@"89722c6a28e608e15bce28b0cd73fa11:130")]
         [MinLength(1)]
         [MaxLength(256)]
         public string VideoFileUrl

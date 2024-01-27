@@ -11,20 +11,20 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either a GroupTrunkGroupGetInstanceResponse14sp9A or an ErrorResponse.
     /// The response contains a hosted user table with column headings: "User Id", "Last Name",
     /// "First Name", "Hiragana Last Name", "Hiragana First Name".
-    /// <see cref="GroupTrunkGroupGetInstanceResponse14sp9"/>
+    /// <see cref="GroupTrunkGroupGetInstanceResponse14sp9A"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:14149""}]")]
-    public class GroupTrunkGroupGetInstanceRequest14sp9A : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupTrunkGroupGetInstanceResponse14sp9>
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:14539""}]")]
+    public class GroupTrunkGroupGetInstanceRequest14sp9A : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupTrunkGroupGetInstanceResponse14sp9A>
     {
 
         protected BroadWorksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
 
         [XmlElement(ElementName = "trunkGroupKey", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:14149")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:14539")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupKey TrunkGroupKey
         {
             get => _trunkGroupKey;

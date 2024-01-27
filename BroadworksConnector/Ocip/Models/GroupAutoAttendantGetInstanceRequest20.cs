@@ -9,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to get all the information of a Auto Attendant instance.
     /// The response is either GroupAutoAttendantGetInstanceResponse20 or ErrorResponse.
+    /// 
+    /// Replaced by: GroupAutoAttendantGetInstanceRequest24 in AS data mode
     /// <see cref="GroupAutoAttendantGetInstanceResponse20"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="GroupAutoAttendantGetInstanceRequest24"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ed0640d8ef49eb8b4eaa14d7c6f6c033:336""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:1698""}]")]
     public class GroupAutoAttendantGetInstanceRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupAutoAttendantGetInstanceResponse20>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"ed0640d8ef49eb8b4eaa14d7c6f6c033:336")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:1698")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId

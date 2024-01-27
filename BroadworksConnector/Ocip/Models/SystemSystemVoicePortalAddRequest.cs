@@ -20,14 +20,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:35320""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:36041""}]")]
     public class SystemSystemVoicePortalAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _systemVoicePortalId;
 
         [XmlElement(ElementName = "systemVoicePortalId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35320")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36041")]
         [MinLength(1)]
         [MaxLength(161)]
         public string SystemVoicePortalId
@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35320")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36041")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _callingLineIdName;
 
         [XmlElement(ElementName = "callingLineIdName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35320")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36041")]
         [MinLength(1)]
         [MaxLength(80)]
         public string CallingLineIdName
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _language;
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35320")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36041")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Language
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _timeZone;
 
         [XmlElement(ElementName = "timeZone", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35320")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36041")]
         [MinLength(1)]
         [MaxLength(127)]
         public string TimeZone
@@ -123,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35320")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36041")]
         [MinLength(1)]
         [MaxLength(23)]
         public string PhoneNumber
@@ -143,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "publicUserIdentity", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35320")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36041")]
         [MinLength(1)]
         [MaxLength(161)]
         public string PublicUserIdentity
@@ -163,7 +163,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkVoicePortalNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35320")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36041")]
         [MinLength(1)]
         [MaxLength(23)]
         public string NetworkVoicePortalNumber
@@ -182,7 +182,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin;
 
         [XmlElement(ElementName = "allowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35320")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36041")]
         public bool AllowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin
         {
             get => _allowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin;
@@ -199,7 +199,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useVoicePortalWizard;
 
         [XmlElement(ElementName = "useVoicePortalWizard", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35320")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36041")]
         public bool UseVoicePortalWizard
         {
             get => _useVoicePortalWizard;
@@ -216,7 +216,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useVoicePortalDefaultGreeting;
 
         [XmlElement(ElementName = "useVoicePortalDefaultGreeting", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35320")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36041")]
         public bool UseVoicePortalDefaultGreeting
         {
             get => _useVoicePortalDefaultGreeting;
@@ -234,7 +234,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "voicePortalGreetingFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35320")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36041")]
         public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource VoicePortalGreetingFile
         {
             get => _voicePortalGreetingFile;
@@ -251,7 +251,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useVoiceMessagingDefaultGreeting;
 
         [XmlElement(ElementName = "useVoiceMessagingDefaultGreeting", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35320")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36041")]
         public bool UseVoiceMessagingDefaultGreeting
         {
             get => _useVoiceMessagingDefaultGreeting;
@@ -269,7 +269,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "voiceMessagingGreetingFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:35320")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36041")]
         public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource VoiceMessagingGreetingFile
         {
             get => _voiceMessagingGreetingFile;

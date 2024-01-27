@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:24887""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:25294""}]")]
     public class SystemCollaborateModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -26,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "collaborateRoomIdLength", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24887")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:25294")]
         [MinInclusive(4)]
         [MaxInclusive(15)]
         public int CollaborateRoomIdLength
@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "instantRoomIdleTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24887")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:25294")]
         [MinInclusive(1)]
         [MaxInclusive(3600)]
         public int InstantRoomIdleTimeoutSeconds
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "collaborateRoomMaximumDurationMinutes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24887")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:25294")]
         [MinInclusive(1)]
         [MaxInclusive(7200)]
         public int CollaborateRoomMaximumDurationMinutes
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "supportOutdial", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24887")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:25294")]
         public bool SupportOutdial
         {
             get => _supportOutdial;
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxCollaborateRoomParticipants", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24887")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:25294")]
         [MinInclusive(3)]
         [MaxInclusive(30)]
         public int MaxCollaborateRoomParticipants
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "collaborateActiveTalkerRefreshIntervalSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24887")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:25294")]
         [MinInclusive(1)]
         [MaxInclusive(5)]
         public int CollaborateActiveTalkerRefreshIntervalSeconds
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "terminateCollaborateAfterGracePeriod", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24887")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:25294")]
         public bool TerminateCollaborateAfterGracePeriod
         {
             get => _terminateCollaborateAfterGracePeriod;
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "collaborateGracePeriod", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24887")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:25294")]
         public BroadWorksConnector.Ocip.Models.CollaborateGracePeriodDuration CollaborateGracePeriod
         {
             get => _collaborateGracePeriod;
@@ -180,7 +180,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableActiveCollaborateNotification", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24887")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:25294")]
         public bool EnableActiveCollaborateNotification
         {
             get => _enableActiveCollaborateNotification;
@@ -198,7 +198,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "collaborateFromAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:24887")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:25294")]
         [MinLength(1)]
         [MaxLength(80)]
         public string CollaborateFromAddress

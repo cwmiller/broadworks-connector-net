@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3347d430e0d5c93a9ff8dcf0e3b60d6c:568""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:568""}]")]
     public class SystemVoiceMessageSummaryUpdateModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sendSavedAndUrgentMWIOnNotification", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:568")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:568")]
         public bool SendSavedAndUrgentMWIOnNotification
         {
             get => _sendSavedAndUrgentMWIOnNotification;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sendMessageSummaryUpdateOnRegister", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:568")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:568")]
         public bool SendMessageSummaryUpdateOnRegister
         {
             get => _sendMessageSummaryUpdateOnRegister;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "minTimeBetweenMWIOnRegister", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3347d430e0d5c93a9ff8dcf0e3b60d6c:568")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:568")]
         [MinInclusive(0)]
         [MaxInclusive(86400)]
         public int MinTimeBetweenMWIOnRegister
@@ -74,6 +74,24 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool MinTimeBetweenMWIOnRegisterSpecified { get; set; }
+
+        protected bool _allowMultipleUsersPerAccount;
+
+        [XmlElement(ElementName = "allowMultipleUsersPerAccount", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:568")]
+        public bool AllowMultipleUsersPerAccount
+        {
+            get => _allowMultipleUsersPerAccount;
+            set
+            {
+                AllowMultipleUsersPerAccountSpecified = true;
+                _allowMultipleUsersPerAccount = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool AllowMultipleUsersPerAccountSpecified { get; set; }
 
     }
 }

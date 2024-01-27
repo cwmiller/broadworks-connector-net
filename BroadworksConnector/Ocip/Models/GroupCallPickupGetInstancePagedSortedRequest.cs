@@ -25,14 +25,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""045ce951b3e25dec090606af4ad50c63:275""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e52f623f7e5f77c5ed7bb6ba0012d5cd:275""}]")]
     public class GroupCallPickupGetInstancePagedSortedRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupCallPickupGetInstancePagedSortedResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"045ce951b3e25dec090606af4ad50c63:275")]
+        [Group(@"e52f623f7e5f77c5ed7bb6ba0012d5cd:275")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"045ce951b3e25dec090606af4ad50c63:275")]
+        [Group(@"e52f623f7e5f77c5ed7bb6ba0012d5cd:275")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"045ce951b3e25dec090606af4ad50c63:275")]
+        [Group(@"e52f623f7e5f77c5ed7bb6ba0012d5cd:275")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"045ce951b3e25dec090606af4ad50c63:275")]
+        [Group(@"e52f623f7e5f77c5ed7bb6ba0012d5cd:275")]
         public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl
         {
             get => _responsePagingControl;
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sortOrder", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"045ce951b3e25dec090606af4ad50c63:275")]
+        [Group(@"e52f623f7e5f77c5ed7bb6ba0012d5cd:275")]
         public List<BroadWorksConnector.Ocip.Models.SortOrderGroupCallPickupGetInstancePagedSorted> SortOrder
         {
             get => _sortOrder;
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaUserId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"045ce951b3e25dec090606af4ad50c63:275")]
+        [Group(@"e52f623f7e5f77c5ed7bb6ba0012d5cd:275")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserId> SearchCriteriaUserId
         {
             get => _searchCriteriaUserId;
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaUserLastName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"045ce951b3e25dec090606af4ad50c63:275")]
+        [Group(@"e52f623f7e5f77c5ed7bb6ba0012d5cd:275")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserLastName> SearchCriteriaUserLastName
         {
             get => _searchCriteriaUserLastName;
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaUserFirstName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"045ce951b3e25dec090606af4ad50c63:275")]
+        [Group(@"e52f623f7e5f77c5ed7bb6ba0012d5cd:275")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaUserFirstName> SearchCriteriaUserFirstName
         {
             get => _searchCriteriaUserFirstName;
@@ -180,7 +180,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaDn", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"045ce951b3e25dec090606af4ad50c63:275")]
+        [Group(@"e52f623f7e5f77c5ed7bb6ba0012d5cd:275")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDn> SearchCriteriaDn
         {
             get => _searchCriteriaDn;
@@ -198,7 +198,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaExtension", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"045ce951b3e25dec090606af4ad50c63:275")]
+        [Group(@"e52f623f7e5f77c5ed7bb6ba0012d5cd:275")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaExtension> SearchCriteriaExtension
         {
             get => _searchCriteriaExtension;
@@ -216,7 +216,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaDepartmentName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"045ce951b3e25dec090606af4ad50c63:275")]
+        [Group(@"e52f623f7e5f77c5ed7bb6ba0012d5cd:275")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDepartmentName> SearchCriteriaDepartmentName
         {
             get => _searchCriteriaDepartmentName;
@@ -234,7 +234,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaEmailAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"045ce951b3e25dec090606af4ad50c63:275")]
+        [Group(@"e52f623f7e5f77c5ed7bb6ba0012d5cd:275")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaEmailAddress> SearchCriteriaEmailAddress
         {
             get => _searchCriteriaEmailAddress;
@@ -252,7 +252,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"045ce951b3e25dec090606af4ad50c63:275")]
+        [Group(@"e52f623f7e5f77c5ed7bb6ba0012d5cd:275")]
         public bool SearchCriteriaModeOr
         {
             get => _searchCriteriaModeOr;

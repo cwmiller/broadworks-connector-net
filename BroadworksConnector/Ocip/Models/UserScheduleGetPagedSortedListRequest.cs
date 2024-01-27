@@ -23,14 +23,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""53d18cc797d03d802cbc411ad821f1d4:3759""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:3765""}]")]
     public class UserScheduleGetPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserScheduleGetPagedSortedListResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3759")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3765")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3759")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3765")]
         public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl
         {
             get => _responsePagingControl;
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sortByScheduleName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3759")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3765")]
         public BroadWorksConnector.Ocip.Models.SortByScheduleName SortByScheduleName
         {
             get => _sortByScheduleName;
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaScheduleName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3759")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3765")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaScheduleName> SearchCriteriaScheduleName
         {
             get => _searchCriteriaScheduleName;
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaExactScheduleType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3759")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3765")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactScheduleType> SearchCriteriaExactScheduleType
         {
             get => _searchCriteriaExactScheduleType;
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaExactScheduleLevel", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3759")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3765")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactScheduleLevel> SearchCriteriaExactScheduleLevel
         {
             get => _searchCriteriaExactScheduleLevel;
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"53d18cc797d03d802cbc411ad821f1d4:3759")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3765")]
         public bool SearchCriteriaModeOr
         {
             get => _searchCriteriaModeOr;

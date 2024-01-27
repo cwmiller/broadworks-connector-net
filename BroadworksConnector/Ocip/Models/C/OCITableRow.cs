@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models.C
     [Serializable]
     [XmlRoot(Namespace = "C")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""77f32f6c8e214eb5c1a80dedfce1cb56:253""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""5a0dbb6ff453924acebff71a89ec0dc8:253""}]")]
     public class OCITableRow
     {
 
         protected List<string> _col = new List<string>();
 
         [XmlElement(ElementName = "col", IsNullable = false, Namespace = "")]
-        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:253")]
+        [Group(@"5a0dbb6ff453924acebff71a89ec0dc8:253")]
         public List<string> Col
         {
             get => _col;

@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:14413""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:18852""}]")]
     public class UserShInterfaceGetPublicIdDataResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:14413")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:18852")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.UserType _userType;
 
         [XmlElement(ElementName = "userType", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:14413")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:18852")]
         public BroadWorksConnector.Ocip.Models.UserType UserType
         {
             get => _userType;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.EndpointType _endpointType;
 
         [XmlElement(ElementName = "endpointType", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:14413")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:18852")]
         public BroadWorksConnector.Ocip.Models.EndpointType EndpointType
         {
             get => _endpointType;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "SCSCFName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:14413")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:18852")]
         [MinLength(1)]
         [MaxLength(161)]
         public string SCSCFName
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.IMSUserState _iMSUserState;
 
         [XmlElement(ElementName = "IMSUserState", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:14413")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:18852")]
         public BroadWorksConnector.Ocip.Models.IMSUserState IMSUserState
         {
             get => _iMSUserState;

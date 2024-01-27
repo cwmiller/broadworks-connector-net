@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""89aa8c9a341a3cccb2453b1ee467bf94:201""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d0efd2493d3062b292fd31759011925e:201""}]")]
     public class UserCallingPartyCategoryGetResponse16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _category;
 
         [XmlElement(ElementName = "category", IsNullable = false, Namespace = "")]
-        [Group(@"89aa8c9a341a3cccb2453b1ee467bf94:201")]
+        [Group(@"d0efd2493d3062b292fd31759011925e:201")]
         [MinLength(1)]
         [MaxLength(20)]
         public string Category

@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de4d76f01f337fe4694212ec9f771753:8751""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:10875""}]")]
     public class SystemNumberActivationGetResponse18sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.NumberActivationMode _numberActivationMode;
 
         [XmlElement(ElementName = "numberActivationMode", IsNullable = false, Namespace = "")]
-        [Group(@"de4d76f01f337fe4694212ec9f771753:8751")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10875")]
         public BroadWorksConnector.Ocip.Models.NumberActivationMode NumberActivationMode
         {
             get => _numberActivationMode;

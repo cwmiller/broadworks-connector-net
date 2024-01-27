@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""c0d21ef9ba207c335d8347e5172fce1d:3538""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:50213""}]")]
     public class PushNotificationEventData
     {
 
         protected string _eventName;
 
         [XmlElement(ElementName = "eventName", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3538")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:50213")]
         [MinLength(1)]
         [MaxLength(128)]
         public string EventName
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _silent;
 
         [XmlElement(ElementName = "silent", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3538")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:50213")]
         public bool Silent
         {
             get => _silent;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _mutableContent;
 
         [XmlElement(ElementName = "mutableContent", IsNullable = false, Namespace = "")]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3538")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:50213")]
         public bool MutableContent
         {
             get => _mutableContent;
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "pushNotificationEventParameters", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"c0d21ef9ba207c335d8347e5172fce1d:3538")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:50213")]
         [MinLength(1)]
         [MaxLength(5899)]
         public string PushNotificationEventParameters

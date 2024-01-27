@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:19423""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:20081""}]")]
     public class SystemAccessDeviceFileGetRequest14sp8 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemAccessDeviceFileGetResponse14sp8>
     {
 
         protected string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19423")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:20081")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _fileFormat;
 
         [XmlElement(ElementName = "fileFormat", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:19423")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:20081")]
         [MinLength(1)]
         [MaxLength(128)]
         public string FileFormat

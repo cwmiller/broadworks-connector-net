@@ -8,7 +8,8 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Request the service provider level data associated with Call Processing
-    /// Policy. The response is either a ServiceProviderCallProcessingGetPolicyResponse14sp7 or an ErrorResponse.
+    /// Policy.
+    /// The response is either a ServiceProviderCallProcessingGetPolicyResponse14sp7 or an ErrorResponse.
     /// Replaced By: ServiceProviderCallProcessingGetPolicyRequest16
     /// <see cref="ServiceProviderCallProcessingGetPolicyResponse14sp7"/>
     /// <see cref="ErrorResponse"/>
@@ -17,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:17610""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:18138""}]")]
     public class ServiceProviderCallProcessingGetPolicyRequest14sp7 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ServiceProviderCallProcessingGetPolicyResponse14sp7>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:17610")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18138")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId

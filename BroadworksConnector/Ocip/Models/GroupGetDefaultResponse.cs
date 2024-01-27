@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3a93cf15de4abd7903673e44ee3e07b:6059""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:5801""}]")]
     public class GroupGetDefaultResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _defaultDomain;
 
         [XmlElement(ElementName = "defaultDomain", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6059")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:5801")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DefaultDomain
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _userLimit;
 
         [XmlElement(ElementName = "userLimit", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6059")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:5801")]
         [MinInclusive(1)]
         [MaxInclusive(999999)]
         public int UserLimit
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _timeZone;
 
         [XmlElement(ElementName = "timeZone", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6059")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:5801")]
         [MinLength(1)]
         [MaxLength(127)]
         public string TimeZone
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _timeZoneDisplayName;
 
         [XmlElement(ElementName = "timeZoneDisplayName", IsNullable = false, Namespace = "")]
-        [Group(@"f3a93cf15de4abd7903673e44ee3e07b:6059")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:5801")]
         [MinLength(1)]
         [MaxLength(127)]
         public string TimeZoneDisplayName

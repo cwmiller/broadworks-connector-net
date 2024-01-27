@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ece0b65e69189d3e8b8deee895f0a7ff:107""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2f2cc47dc637fa680d158d93a58af0fd:107""}]")]
     public class SystemInCallServiceActivationGetResponse17 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _defaultFlashActivationDigits;
 
         [XmlElement(ElementName = "defaultFlashActivationDigits", IsNullable = false, Namespace = "")]
-        [Group(@"ece0b65e69189d3e8b8deee895f0a7ff:107")]
+        [Group(@"2f2cc47dc637fa680d158d93a58af0fd:107")]
         [MinLength(1)]
         [MaxLength(8)]
         public string DefaultFlashActivationDigits
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _defaultCallTransferActivationDigits;
 
         [XmlElement(ElementName = "defaultCallTransferActivationDigits", IsNullable = false, Namespace = "")]
-        [Group(@"ece0b65e69189d3e8b8deee895f0a7ff:107")]
+        [Group(@"2f2cc47dc637fa680d158d93a58af0fd:107")]
         [MinLength(1)]
         [MaxLength(8)]
         public string DefaultCallTransferActivationDigits

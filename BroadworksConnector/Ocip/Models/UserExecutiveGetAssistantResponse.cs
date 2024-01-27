@@ -10,21 +10,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to the UserExecutiveGetAssistantsRequest.
     /// Contains the assistant setting and a table of assigned assistants.
     /// The table has column headings: "User Id", "Last Name", "First Name", "Hiragana Last Name",
-    /// "Hiragana First Name", "Phone Number", "Extension", "Department", "Email Address" and "Opt-in".
+    /// "Hiragana First Name", "Phone Number", "Extension", "Department", "Email Address", "Opt-in",
+    /// "User External Id" and "User Place Type".
     /// The possible values for "Opt-in" column are "true" and "false".
+    /// The possible values for "User Place Type" are: User, Place.
     /// <see cref="UserExecutiveGetAssistantsRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9a6dbade05624033cf7fe782b7c9a9a7:160""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3a54ac906cb7002cc1a30fbb0efadb0a:161""}]")]
     public class UserExecutiveGetAssistantResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _allowOptInOut;
 
         [XmlElement(ElementName = "allowOptInOut", IsNullable = false, Namespace = "")]
-        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:160")]
+        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:161")]
         public bool AllowOptInOut
         {
             get => _allowOptInOut;
@@ -41,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _assistantUserTable;
 
         [XmlElement(ElementName = "assistantUserTable", IsNullable = false, Namespace = "")]
-        [Group(@"9a6dbade05624033cf7fe782b7c9a9a7:160")]
+        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:161")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AssistantUserTable
         {
             get => _assistantUserTable;

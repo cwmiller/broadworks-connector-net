@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4f074d986b998636e2bcb0d67372b0f4:148""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ff29a940e42c5c9737f7438c4e6eea9d:148""}]")]
     public class UserPolycomPhoneServicesGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _integratePhoneDirectoryWithBroadWorks;
 
         [XmlElement(ElementName = "integratePhoneDirectoryWithBroadWorks", IsNullable = false, Namespace = "")]
-        [Group(@"4f074d986b998636e2bcb0d67372b0f4:148")]
+        [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:148")]
         public bool IntegratePhoneDirectoryWithBroadWorks
         {
             get => _integratePhoneDirectoryWithBroadWorks;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _includeUserPersonalPhoneListInDirectory;
 
         [XmlElement(ElementName = "includeUserPersonalPhoneListInDirectory", IsNullable = false, Namespace = "")]
-        [Group(@"4f074d986b998636e2bcb0d67372b0f4:148")]
+        [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:148")]
         public bool IncludeUserPersonalPhoneListInDirectory
         {
             get => _includeUserPersonalPhoneListInDirectory;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _includeGroupCustomContactDirectoryInDirectory;
 
         [XmlElement(ElementName = "includeGroupCustomContactDirectoryInDirectory", IsNullable = false, Namespace = "")]
-        [Group(@"4f074d986b998636e2bcb0d67372b0f4:148")]
+        [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:148")]
         public bool IncludeGroupCustomContactDirectoryInDirectory
         {
             get => _includeGroupCustomContactDirectoryInDirectory;
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "groupCustomContactDirectory", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4f074d986b998636e2bcb0d67372b0f4:148")]
+        [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:148")]
         [MinLength(1)]
         [MaxLength(40)]
         public string GroupCustomContactDirectory

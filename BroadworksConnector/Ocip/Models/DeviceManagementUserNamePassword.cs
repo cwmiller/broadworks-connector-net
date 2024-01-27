@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ab0042aa512abc10edb3c55e4b416b0b:48393""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:49279""}]")]
     public class DeviceManagementUserNamePassword
     {
 
         protected string _userName;
 
         [XmlElement(ElementName = "userName", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48393")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:49279")]
         [MinLength(1)]
         [MaxLength(30)]
         public string UserName
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _password;
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
-        [Group(@"ab0042aa512abc10edb3c55e4b416b0b:48393")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:49279")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Password

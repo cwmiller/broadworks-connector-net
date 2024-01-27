@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4277c572e54919d6e29f4c0fa69aaad1:134""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6844af6fc359ada5d958622d62cbd13f:134""}]")]
     public class UserCommunicationBarringUserControlModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"4277c572e54919d6e29f4c0fa69aaad1:134")]
+        [Group(@"6844af6fc359ada5d958622d62cbd13f:134")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableProfile", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4277c572e54919d6e29f4c0fa69aaad1:134")]
+        [Group(@"6844af6fc359ada5d958622d62cbd13f:134")]
         [MinInclusive(0)]
         [MaxInclusive(9)]
         public int? EnableProfile
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "oldPasscode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4277c572e54919d6e29f4c0fa69aaad1:134")]
+        [Group(@"6844af6fc359ada5d958622d62cbd13f:134")]
         [MinLength(1)]
         [MaxLength(30)]
         public string OldPasscode
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newPasscode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4277c572e54919d6e29f4c0fa69aaad1:134")]
+        [Group(@"6844af6fc359ada5d958622d62cbd13f:134")]
         [MinLength(1)]
         [MaxLength(30)]
         public string NewPasscode
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "resetLockout", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4277c572e54919d6e29f4c0fa69aaad1:134")]
+        [Group(@"6844af6fc359ada5d958622d62cbd13f:134")]
         public bool ResetLockout
         {
             get => _resetLockout;
