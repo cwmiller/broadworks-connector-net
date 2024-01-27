@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.0.0] - 2024-01-27
+### Changed
+- Updated all models using `Rel_2022_08_1_350` schema files.
+
 ## [2.1.3] - 2022-12-30
 ### Fixed
 - Fixed response type for `GroupCallCenterStrandedCallUnavailableGetRequest20` request
