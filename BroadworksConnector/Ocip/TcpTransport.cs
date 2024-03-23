@@ -49,14 +49,6 @@ namespace BroadWorksConnector.Ocip
         /// Send request to host and return results
         /// </summary>
         /// <param name="request"></param>
-        /// <returns></returns>
-        [Obsolete("Method deprecated. Use SendAsync instead.")]
-        public Task<string> Send(string request) => SendAsync(request);
-
-        /// <summary>
-        /// Send request to host and return results
-        /// </summary>
-        /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         public async Task<string> SendAsync(string request, CancellationToken cancellationToken = default)

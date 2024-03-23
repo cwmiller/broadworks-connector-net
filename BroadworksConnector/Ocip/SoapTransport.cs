@@ -48,10 +48,9 @@ namespace BroadWorksConnector.Ocip
         /// Handle request
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        [Obsolete("This method is deprecated. Use SendAsync instead.")]
-        public Task<string> Send(string request) => SendAsync(request);
-
+        /// <exception cref="BadResponseException"></exception>
         public async Task<string> SendAsync(string request, CancellationToken cancellationToken = default)
         {
             cancellationToken.ThrowIfCancellationRequested();
