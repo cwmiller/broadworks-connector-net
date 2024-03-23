@@ -1,7 +1,11 @@
-﻿using BroadWorksConnector.Ocip.Soap;
-using System;
+﻿using System;
+using System.Linq;
+using System.Net.Http;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace BroadWorksConnector.Ocip
 {
@@ -10,7 +14,14 @@ namespace BroadWorksConnector.Ocip
     /// </summary>
     internal class SoapTransport : ITransport
     {
-        private BWProvisioningServiceClient _client;
+        private readonly Uri _uri;
+
+        private readonly HttpClient _httpClient;
+
+        private static readonly XNamespace _soapEnvelopeNs = "http://schemas.xmlsoap.org/soap/envelope/";
+        private static readonly XNamespace _soapEncodingeNs = "http://schemas.xmlsoap.org/soap/encoding/";
+        private static readonly XNamespace _xsiNs = "http://www.w3.org/2001/XMLSchema-instance";
+        private static readonly XNamespace _bwNs = "urn:com:broadsoft:webservice";
 
         /// <summary>
         /// Constructor
@@ -19,12 +30,18 @@ namespace BroadWorksConnector.Ocip
         /// <param name="ocipOptions"></param>
         public SoapTransport(Uri uri, OcipClientOptions ocipOptions)
         {
-            _client = new BWProvisioningServiceClient(BWProvisioningServiceClient.EndpointConfiguration.ProvisioningService, uri.ToString(), ocipOptions);
+            _uri = uri;
+            _httpClient = new HttpClient()
+            {
+                Timeout = ocipOptions.SoapTimeout <= 0
+                    ? Timeout.InfiniteTimeSpan
+                    : TimeSpan.FromMilliseconds(ocipOptions.SoapTimeout)
+            };
         }
 
         public void Dispose()
         {
-            // Nothing to dispose of
+            _httpClient.Dispose();
         }
 
         /// <summary>
@@ -37,32 +54,51 @@ namespace BroadWorksConnector.Ocip
 
         public async Task<string> SendAsync(string request, CancellationToken cancellationToken = default)
         {
-            processOCIMessageResponse response = null;
+            cancellationToken.ThrowIfCancellationRequested();
 
-            if (!cancellationToken.IsCancellationRequested)
+            var envelope = new XElement(_soapEnvelopeNs + "Envelope",
+                new XElement(_soapEnvelopeNs + "Body",
+                    new XElement("processOCIMessage",
+                        new XElement("arg0",
+                            new XAttribute(_xsiNs + "type", _soapEncodingeNs + "string"),
+                            request
+                        )
+                    )
+                )
+            );
+
+            var httpRequest = new HttpRequestMessage(HttpMethod.Post, _uri)
             {
-                using (var ctr = cancellationToken.Register(() =>
-                {
-                    _client.Abort();
+                Content = new StringContent(envelope.ToString(), Encoding.UTF8, "text/xml")
+            };
 
-                    cancellationToken.ThrowIfCancellationRequested();
-                }))
-                {
-                    response = await _client.processOCIMessageAsync(request).ConfigureAwait(false);
+            httpRequest.Headers.Add("SOAPAction", "");
 
-                    if (response.Body?.processOCIMessageReturn == null)
-                    {
-                        throw new BadResponseException("No processOCIMessageReturn in response");
-                    }
+            var httpResponse = await _httpClient.SendAsync(httpRequest, cancellationToken);
 
-                }
-            }
-            else
+            if (!httpResponse.IsSuccessStatusCode)
             {
-                cancellationToken.ThrowIfCancellationRequested();
+                throw new BadResponseException($"SOAP endpoint responded with status code {httpResponse.StatusCode}");
             }
 
-            return response?.Body?.processOCIMessageReturn;
+            var resp =  await httpResponse.Content.ReadAsStringAsync();
+
+
+            string processOCIMessageReturn = null;
+
+            try
+            {
+                var document = XDocument.Parse(resp);
+                processOCIMessageReturn = document.Descendants(_bwNs + "processOCIMessageReturn").FirstOrDefault()?.Value;
+            }
+            catch (XmlException)
+            {
+                throw new BadResponseException("SOAP endpoint did not respond with a SOAP response");
+            }
+
+            return processOCIMessageReturn == null
+                ? throw new BadResponseException("No processOCIMessageReturn in SOAP response")
+                : processOCIMessageReturn;
         }
     }
 }

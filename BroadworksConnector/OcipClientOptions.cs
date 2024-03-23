@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 
 namespace BroadWorksConnector
 {
@@ -13,17 +14,26 @@ namespace BroadWorksConnector
         /// <summary>
         /// Timeout setting for opening new connections with SOAP transport. Value is in milliseconds. Defaults to 60 seconds.
         /// </summary>
+        [Obsolete("Value has no effect. Use SoapTimeout instead.")]
         public int SoapOpenTimeout { get; set; } = 60000;
 
         /// <summary>
         /// Timeout setting for closing connections with SOAP transport. Value is in milliseconds. Defaults to 60 seconds.
         /// </summary>
+        [Obsolete("Value has no effect. Use SoapTimeout instead.")]
         public int SoapCloseTimeout { get; set; } = 60000;
 
         /// <summary>
         /// Timeout setting for sending and receiving data with SOAP transport. Value is in milliseconds. Defaults to 60 seconds.
         /// </summary>
+        [Obsolete("Value has no effect. Use SoapTimeout instead.")]
         public int SoapSendTimeout { get; set; } = 60000;
+
+        /// <summary>
+        /// Timeout setting to wait before SOAP transport times out. Value is in milliseconds. 
+        /// Defaults to 100 seconds. Any value equal or below 0 will be treated as an infinite timeout
+        /// </summary>
+        public int SoapTimeout { get; set; } = 100_000;
 
         /// <summary>
         /// Timeout setting for sending data with TCP transport. Value is in milliseconds. Defaults to 0.
