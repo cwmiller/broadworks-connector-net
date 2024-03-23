@@ -169,9 +169,9 @@ namespace BroadWorksConnector
         {
             await _semaphore.WaitAsync();
 
-            if (UserDetails == null)
+            try
             {
-                try
+                if (UserDetails == null)
                 {
                     if (Options.MinServerVersion == ServerVersion.R22)
                     {
@@ -182,14 +182,14 @@ namespace BroadWorksConnector
                         UserDetails = await Login14Async(cancellationToken);
                     }
                 }
-                catch (ErrorResponseException e)
-                {
-                    throw new LoginException(e.Message, e);
-                }
-                finally
-                {
-                    _semaphore.Release();
-                }
+            }
+            catch (ErrorResponseException e)
+            {
+                throw new LoginException(e.Message, e);
+            }
+            finally
+            {
+                _semaphore.Release();
             }
 
             return UserDetails;
