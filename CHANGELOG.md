@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.0.0] - 2024-03-31
+### Changed
+- Changed `SoapTransport` to utilize `HttpClient` rather than Service Model.
+- Updated dependencies
+
+### Fixed
+- Fixed issue where calling `LoginAsync` multiple times will lead to a lock that never releases.
+
 ## [3.0.0] - 2024-01-27
 ### Changed
 - Updated all models using `Rel_2022_08_1_350` schema files.
@@ -123,6 +131,8 @@
 ### Fixed
 - `OcipClient` now properly calls `Validator` on execution.
 
+[4.0.0]: https://github.com/cwmiller/broadworks-connector-net/compare/3.0.0...4.0.0
+[3.0.0]: https://github.com/cwmiller/broadworks-connector-net/compare/2.1.3...3.0.0
 [2.1.3]: https://github.com/cwmiller/broadworks-connector-net/compare/2.1.2...2.1.3
 [2.1.2]: https://github.com/cwmiller/broadworks-connector-net/compare/2.1.1...2.1.2
 [2.1.1]: https://github.com/cwmiller/broadworks-connector-net/compare/2.1.0...2.1.1

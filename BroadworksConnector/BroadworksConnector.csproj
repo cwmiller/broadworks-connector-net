@@ -8,7 +8,7 @@
     <Copyright>2019</Copyright>
     <RepositoryUrl></RepositoryUrl>
     <PackageProjectUrl>https://github.com/cwmiller/broadworks-connector-net</PackageProjectUrl>
-    <Version>3.0.0</Version>
+    <Version>4.0.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageTags>broadworks ocip broadsoft cisco</PackageTags>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -21,8 +21,16 @@
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
 
+	<PropertyGroup>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	<ItemGroup>
+		<None Include="..\README.md" Pack="true" PackagePath="\"/>
+	</ItemGroup>
+
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
