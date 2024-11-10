@@ -1,5 +1,9 @@
 # Changelog
 
+## [4.1.0] - 2024-11-09
+### Added
+- Added missing `GroupAnnouncementFileLocationGetRequest` and `UserAnnouncementFileLocationGetRequest` requests.
+
 ## [4.0.0] - 2024-03-31
 ### Changed
 - Changed `SoapTransport` to utilize `HttpClient` rather than Service Model.
