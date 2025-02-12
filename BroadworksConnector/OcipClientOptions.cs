@@ -54,5 +54,11 @@ namespace BroadWorksConnector
         /// Encoding setting for decoding the request data with TCP transport. Defaults to UTF8.
         /// </summary>
         public Encoding TcpResponseEncoding { get; set; } = Encoding.UTF8;
+
+        /// <summary>
+        /// Whether to ignore the Ssl certificate errors which can happen when working against a server with expired certificate. 
+        /// Defaults to false.
+        /// </summary>
+        public bool IgnoreSslCertificateErrors { get; set; } = false;
     }
 }
