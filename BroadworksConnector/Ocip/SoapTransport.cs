@@ -31,11 +31,18 @@ namespace BroadWorksConnector.Ocip
         public SoapTransport(Uri uri, OcipClientOptions ocipOptions)
         {
             _uri = uri;
-            _httpClient = new HttpClient()
+            var handler = new HttpClientHandler();
+
+            if (ocipOptions.IgnoreSslCertificateErrors)
+            {
+                handler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true;
+            }
+
+            _httpClient = new HttpClient(handler)
             {
                 Timeout = ocipOptions.SoapTimeout <= 0
-                    ? Timeout.InfiniteTimeSpan
-                    : TimeSpan.FromMilliseconds(ocipOptions.SoapTimeout)
+                         ? Timeout.InfiniteTimeSpan
+                         : TimeSpan.FromMilliseconds(ocipOptions.SoapTimeout)
             };
         }
 
