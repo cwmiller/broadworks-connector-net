@@ -71,7 +71,12 @@ namespace BroadWorksConnector.Ocip
 
                     if (_useSsl)
                     {
-                        _stream = new SslStream(_tcpClient.GetStream());
+                        if (_options.IgnoreSslCertificateErrors) {
+                             _stream = new SslStream(_tcpClient.GetStream(), false, (message, cert, chain, errors) => true);
+                        } else {
+                            _stream = new SslStream(_tcpClient.GetStream());
+                        }
+
                         await (_stream as SslStream).AuthenticateAsClientAsync(_host).ConfigureAwait(false);
                     }
                     else
