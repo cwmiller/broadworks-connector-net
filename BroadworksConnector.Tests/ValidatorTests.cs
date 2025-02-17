@@ -121,13 +121,13 @@ namespace BroadWorksConnector.Tests
             {
                 ServiceProviderId = "SID",
                 GroupId = "GID",
-                Code = new List<CommunicationBarringAuthorizationCodeEntry>()
-                {
+                Code =
+                [
                     new CommunicationBarringAuthorizationCodeEntry()
                     {
                         Code = "123"
                     }
-                }
+                ]
             };
 
             var results = Validator.Validate(request);
@@ -229,7 +229,7 @@ namespace BroadWorksConnector.Tests
             var request = new GroupCallCenterAddAgentListRequest()
             {
                 ServiceUserId = "test@test.com",
-                AgentUserId = new List<string>() { "user@test.com" }
+                AgentUserId = ["user@test.com"]
             };
 
             var results = Validator.Validate(request);
@@ -243,15 +243,15 @@ namespace BroadWorksConnector.Tests
             var request = new GroupCallCenterAddAgentListRequest()
             {
                 ServiceUserId = "test@test.com",
-                AgentUserId = new List<string>() { "user@test.com" },
-                AgentSkillList = new List<CallCenterSkillAgentList>()
-                {
+                AgentUserId = ["user@test.com"],
+                AgentSkillList =
+                [
                     new CallCenterSkillAgentList()
                     {
-                        Agent = new List<string>() { "test" },
+                        Agent = ["test"],
                         SkillLevel = 1
                     }
-                }
+                ]
             };
 
             var results = Validator.Validate(request);
@@ -291,13 +291,13 @@ namespace BroadWorksConnector.Tests
             {
                 ServiceProviderId = "SP",
                 GroupId = "G",
-                SearchCriteriaDeviceMACAddress = new List<SearchCriteriaDeviceMACAddress>() {
+                SearchCriteriaDeviceMACAddress = [
                     new SearchCriteriaDeviceMACAddress()
                     {
                         Value = "000000000000",
                         Mode = SearchMode.EqualTo
                     }
-                }
+                ]
             };
 
             var results = Validator.Validate(request);
@@ -313,7 +313,7 @@ namespace BroadWorksConnector.Tests
             {
                 ServiceProviderId = "SP",
                 GroupId = "G",
-                SearchCriteriaDeviceMACAddress = new List<SearchCriteriaDeviceMACAddress>() {
+                SearchCriteriaDeviceMACAddress = [
                         new SearchCriteriaDeviceMACAddress()
                         {
                             Value = "000000000000",
@@ -326,7 +326,7 @@ namespace BroadWorksConnector.Tests
                             IsCaseInsensitive = true,
                             Mode = SearchMode.EqualTo
                         }
-                    }
+                    ]
             };
 
             var results = Validator.Validate(request);

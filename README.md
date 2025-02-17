@@ -1,6 +1,6 @@
 # BroadWorks Connector.NET
 
-BroadWorks Connector.NET is a .NET Standard 2.0 library for connecting to the BroadWorks OCI-P API. It is based on the [BroadWorks Connector](https://github.com/cwmiller/broadworks-connector) library for PHP.
+BroadWorks Connector.NET is a .NET Standard 2.0 library for connecting to the BroadWorks OCI-P API.
 
 ### Installation
 
@@ -30,14 +30,15 @@ var req1 = new UserGetListInGroupRequest
 {
     ServiceProviderId = "test-service-provider",
     GroupId = "test-group",
-    SearchCriteriaUserFirstName = new List<SearchCriteriaUserFirstName> {
+    SearchCriteriaUserFirstName = 
+    [
         new SearchCriteriaUserFirstName
         {
             IsCaseInsensitive = false,
             Mode = SearchMode.EqualTo,
             Value = "John"
         }
-    }
+    ]
 };
 
 try
@@ -65,19 +66,20 @@ var req2 = new UserGetListInGroupRequest
 {
     ServiceProviderId = "test-service-provider",
     GroupId = "test-group",
-    SearchCriteriaUserLastName = new List<SearchCriteriaUserLastName> {
+    SearchCriteriaUserLastName = 
+    [
         new SearchCriteriaUserLastName
         {
             IsCaseInsensitive = false,
             Mode = SearchMode.StartsWith,
             Value = "M"
         }
-    }
+    ]
 };
 
 try
 {
-    var responses = await ocip.CallAllAsync(new OCIRequest[] { req1, req2 });
+    var responses = await ocip.CallAllAsync([req1, req2]);
 
     foreach (var response in responses)
     {

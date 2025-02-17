@@ -60,17 +60,17 @@ namespace BroadWorksConnector.Tests
             {
                 ServiceProviderId = "Service Provider ID",
                 GroupId = "Group ID",
-                DepartmentPermissions = new List<OutgoingCallingPlanRedirectingDepartmentPermissionsModify>()
-                {
+                DepartmentPermissions =
+                [
                     departmentPermission
-                }
+                ]
             };
 
             var document = new BroadsoftDocument<GroupOutgoingCallingPlanRedirectingModifyListRequest>()
             {
                 SessionId = "636956952081463406",
                 Protocol = "OCI",
-                Command = new List<GroupOutgoingCallingPlanRedirectingModifyListRequest>() { request }
+                Command = [request]
             };
 
             var xml = _serializer.Serialize(document);
@@ -89,22 +89,22 @@ namespace BroadWorksConnector.Tests
             {
                 ServiceProviderId = "SP",
                 GroupId = "Group",
-                SearchCriteriaUserFirstName = new List<SearchCriteriaUserFirstName>()
-                {
+                SearchCriteriaUserFirstName =
+                [
                     new SearchCriteriaUserFirstName()
                     {
                         IsCaseInsensitive = false,
                         Mode = SearchMode.EqualTo,
                         Value = "John"
                     }
-                }
+                ]
             };
 
             var document = new BroadsoftDocument<UserGetListInGroupRequest>()
             {
                 SessionId = "acbdf1234567890",
                 Protocol = "OCI",
-                Command = new List<UserGetListInGroupRequest>() { request }
+                Command = [request]
             };
 
             var xml = _serializer.Serialize(document);
@@ -122,20 +122,20 @@ namespace BroadWorksConnector.Tests
             var request = new UserServiceAssignListRequest()
             {
                 UserId = "john.doe@test.com",
-                ServiceName = new List<UserService>()
-                {
+                ServiceName =
+                [
                     UserService.AdviceOfCharge,
                     UserService.AlternateNumbers,
                     UserService.AnonymousCallRejection,
                     UserService.AttendantConsole
-                }
+                ]
             };
 
             var document = new BroadsoftDocument<UserServiceAssignListRequest>()
             {
                 SessionId = "acbdf1234567890",
                 Protocol = "OCI",
-                Command = new List<UserServiceAssignListRequest>() { request }
+                Command = [request]
             };
 
             var xml = _serializer.Serialize(document);
@@ -171,7 +171,7 @@ namespace BroadWorksConnector.Tests
             {
                 SessionId = "acbdf1234567890",
                 Protocol = "OCI",
-                Command = new List<GroupUserCallForwardingSettingsGetListRequest>() { request }
+                Command = [request]
             };
 
             var xml = _serializer.Serialize(document);
@@ -263,7 +263,7 @@ namespace BroadWorksConnector.Tests
             {
                 SessionId = "636956952081463406",
                 Protocol = "OCI",
-                Command = new List<UserModifyRequest22>() { request }
+                Command = [request]
             };
 
             var xml = _serializer.Serialize(document);
@@ -290,7 +290,7 @@ namespace BroadWorksConnector.Tests
             {
                 SessionId = "636956952081463406",
                 Protocol = "OCI",
-                Command = new List<UserModifyRequest22>() { request }
+                Command = [request]
             };
 
             var xml = _serializer.Serialize(document);
