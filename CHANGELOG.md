@@ -1,5 +1,9 @@
 # Changelog
 
+## [4.2.0] - 2025-02-17
+### Added
+- Added `IgnoreSslCertificateErrors` option to `OcipClientOptions` to ignore all errors when validating the server's SSL certificate. [@simonunivonix](https://github.com/simonunivonix)
+
 ## [4.1.0] - 2024-11-09
 ### Added
 - Added missing `GroupAnnouncementFileLocationGetRequest` and `UserAnnouncementFileLocationGetRequest` requests.
@@ -135,6 +139,8 @@
 ### Fixed
 - `OcipClient` now properly calls `Validator` on execution.
 
+[4.2.0]: https://github.com/cwmiller/broadworks-connector-net/compare/4.1.0...4.2.0
+[4.1.0]: https://github.com/cwmiller/broadworks-connector-net/compare/4.0.0...4.1.0
 [4.0.0]: https://github.com/cwmiller/broadworks-connector-net/compare/3.0.0...4.0.0
 [3.0.0]: https://github.com/cwmiller/broadworks-connector-net/compare/2.1.3...3.0.0
 [2.1.3]: https://github.com/cwmiller/broadworks-connector-net/compare/2.1.2...2.1.3
