@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newTaskName;
             set
             {
-                NewTaskNameSpecified = true;
+                NewTaskNameSpecified = (value != null);
                 _newTaskName = value;
             }
         }
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _startTimestamp;
             set
             {
-                StartTimestampSpecified = true;
+                StartTimestampSpecified = (value != null);
                 _startTimestamp = value;
             }
         }
@@ -96,19 +96,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StartTimestampSpecified { get; set; }
 
-        protected int _expireAfterNumHours;
+        protected int? _expireAfterNumHours;
 
         [XmlElement(ElementName = "expireAfterNumHours", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6583")]
         [MinInclusive(1)]
         [MaxInclusive(168)]
-        public int ExpireAfterNumHours
+        public int? ExpireAfterNumHours
         {
             get => _expireAfterNumHours;
             set
             {
-                ExpireAfterNumHoursSpecified = true;
+                ExpireAfterNumHoursSpecified = (value != null);
                 _expireAfterNumHours = value;
             }
         }
@@ -116,19 +116,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExpireAfterNumHoursSpecified { get; set; }
 
-        protected int _maxDurationHours;
+        protected int? _maxDurationHours;
 
         [XmlElement(ElementName = "maxDurationHours", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6583")]
         [MinInclusive(1)]
         [MaxInclusive(9)]
-        public int MaxDurationHours
+        public int? MaxDurationHours
         {
             get => _maxDurationHours;
             set
             {
-                MaxDurationHoursSpecified = true;
+                MaxDurationHoursSpecified = (value != null);
                 _maxDurationHours = value;
             }
         }
@@ -136,17 +136,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxDurationHoursSpecified { get; set; }
 
-        protected bool _sendReportEmail;
+        protected bool? _sendReportEmail;
 
         [XmlElement(ElementName = "sendReportEmail", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6583")]
-        public bool SendReportEmail
+        public bool? SendReportEmail
         {
             get => _sendReportEmail;
             set
             {
-                SendReportEmailSpecified = true;
+                SendReportEmailSpecified = (value != null);
                 _sendReportEmail = value;
             }
         }
@@ -174,17 +174,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReportDeliveryEmailAddressSpecified { get; set; }
 
-        protected bool _abortOnError;
+        protected bool? _abortOnError;
 
         [XmlElement(ElementName = "abortOnError", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6583")]
-        public bool AbortOnError
+        public bool? AbortOnError
         {
             get => _abortOnError;
             set
             {
-                AbortOnErrorSpecified = true;
+                AbortOnErrorSpecified = (value != null);
                 _abortOnError = value;
             }
         }
@@ -211,17 +211,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AbortErrorThresholdSpecified { get; set; }
 
-        protected bool _reportAllUsers;
+        protected bool? _reportAllUsers;
 
         [XmlElement(ElementName = "reportAllUsers", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6583")]
-        public bool ReportAllUsers
+        public bool? ReportAllUsers
         {
             get => _reportAllUsers;
             set
             {
-                ReportAllUsersSpecified = true;
+                ReportAllUsersSpecified = (value != null);
                 _reportAllUsers = value;
             }
         }
@@ -229,17 +229,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReportAllUsersSpecified { get; set; }
 
-        protected bool _automaticallyIncrementServiceQuantity;
+        protected bool? _automaticallyIncrementServiceQuantity;
 
         [XmlElement(ElementName = "automaticallyIncrementServiceQuantity", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6583")]
-        public bool AutomaticallyIncrementServiceQuantity
+        public bool? AutomaticallyIncrementServiceQuantity
         {
             get => _automaticallyIncrementServiceQuantity;
             set
             {
-                AutomaticallyIncrementServiceQuantitySpecified = true;
+                AutomaticallyIncrementServiceQuantitySpecified = (value != null);
                 _automaticallyIncrementServiceQuantity = value;
             }
         }

@@ -57,18 +57,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:2654")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaCommunicationBarringAuthorizationCode;
             set
             {
-                SearchCriteriaCommunicationBarringAuthorizationCodeSpecified = true;
+                SearchCriteriaCommunicationBarringAuthorizationCodeSpecified = (value != null);
                 _searchCriteriaCommunicationBarringAuthorizationCode = value;
             }
         }
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaCommunicationBarringAuthorizationCodeDescription;
             set
             {
-                SearchCriteriaCommunicationBarringAuthorizationCodeDescriptionSpecified = true;
+                SearchCriteriaCommunicationBarringAuthorizationCodeDescriptionSpecified = (value != null);
                 _searchCriteriaCommunicationBarringAuthorizationCodeDescription = value;
             }
         }
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaNetworkClassOfServiceName;
             set
             {
-                SearchCriteriaNetworkClassOfServiceNameSpecified = true;
+                SearchCriteriaNetworkClassOfServiceNameSpecified = (value != null);
                 _searchCriteriaNetworkClassOfServiceName = value;
             }
         }

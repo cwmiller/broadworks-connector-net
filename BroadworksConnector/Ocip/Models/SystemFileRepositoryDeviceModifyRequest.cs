@@ -58,17 +58,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RootDirectorySpecified { get; set; }
 
-        protected bool _secure;
+        protected bool? _secure;
 
         [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:27385")]
-        public bool Secure
+        public bool? Secure
         {
             get => _secure;
             set
             {
-                SecureSpecified = true;
+                SecureSpecified = (value != null);
                 _secure = value;
             }
         }
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _netAddress;
             set
             {
-                NetAddressSpecified = true;
+                NetAddressSpecified = (value != null);
                 _netAddress = value;
             }
         }
@@ -96,17 +96,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetAddressSpecified { get; set; }
 
-        protected bool _ftpPassive;
+        protected bool? _ftpPassive;
 
         [XmlElement(ElementName = "ftpPassive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:27385")]
-        public bool FtpPassive
+        public bool? FtpPassive
         {
             get => _ftpPassive;
             set
             {
-                FtpPassiveSpecified = true;
+                FtpPassiveSpecified = (value != null);
                 _ftpPassive = value;
             }
         }
@@ -114,17 +114,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FtpPassiveSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.FileRepositoryProtocol _protocol;
+        protected BroadWorksConnector.Ocip.Models.FileRepositoryProtocol? _protocol;
 
         [XmlElement(ElementName = "protocol", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:27385")]
-        public BroadWorksConnector.Ocip.Models.FileRepositoryProtocol Protocol
+        public BroadWorksConnector.Ocip.Models.FileRepositoryProtocol? Protocol
         {
             get => _protocol;
             set
             {
-                ProtocolSpecified = true;
+                ProtocolSpecified = (value != null);
                 _protocol = value;
             }
         }
@@ -152,17 +152,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PortSpecified { get; set; }
 
-        protected bool _ftpRemoteVerification;
+        protected bool? _ftpRemoteVerification;
 
         [XmlElement(ElementName = "ftpRemoteVerification", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:27385")]
-        public bool FtpRemoteVerification
+        public bool? FtpRemoteVerification
         {
             get => _ftpRemoteVerification;
             set
             {
-                FtpRemoteVerificationSpecified = true;
+                FtpRemoteVerificationSpecified = (value != null);
                 _ftpRemoteVerification = value;
             }
         }

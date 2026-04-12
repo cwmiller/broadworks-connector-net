@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.VoiceMessagingGroupMailServerChoices _useMailServerSetting;
+        protected BroadWorksConnector.Ocip.Models.VoiceMessagingGroupMailServerChoices? _useMailServerSetting;
 
         [XmlElement(ElementName = "useMailServerSetting", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:239")]
-        public BroadWorksConnector.Ocip.Models.VoiceMessagingGroupMailServerChoices UseMailServerSetting
+        public BroadWorksConnector.Ocip.Models.VoiceMessagingGroupMailServerChoices? UseMailServerSetting
         {
             get => _useMailServerSetting;
             set
             {
-                UseMailServerSettingSpecified = true;
+                UseMailServerSettingSpecified = (value != null);
                 _useMailServerSetting = value;
             }
         }
@@ -75,17 +75,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseMailServerSettingSpecified { get; set; }
 
-        protected bool _warnCallerBeforeRecordingVoiceMessage;
+        protected bool? _warnCallerBeforeRecordingVoiceMessage;
 
         [XmlElement(ElementName = "warnCallerBeforeRecordingVoiceMessage", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:239")]
-        public bool WarnCallerBeforeRecordingVoiceMessage
+        public bool? WarnCallerBeforeRecordingVoiceMessage
         {
             get => _warnCallerBeforeRecordingVoiceMessage;
             set
             {
-                WarnCallerBeforeRecordingVoiceMessageSpecified = true;
+                WarnCallerBeforeRecordingVoiceMessageSpecified = (value != null);
                 _warnCallerBeforeRecordingVoiceMessage = value;
             }
         }
@@ -93,17 +93,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool WarnCallerBeforeRecordingVoiceMessageSpecified { get; set; }
 
-        protected bool _allowUsersConfiguringAdvancedSettings;
+        protected bool? _allowUsersConfiguringAdvancedSettings;
 
         [XmlElement(ElementName = "allowUsersConfiguringAdvancedSettings", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:239")]
-        public bool AllowUsersConfiguringAdvancedSettings
+        public bool? AllowUsersConfiguringAdvancedSettings
         {
             get => _allowUsersConfiguringAdvancedSettings;
             set
             {
-                AllowUsersConfiguringAdvancedSettingsSpecified = true;
+                AllowUsersConfiguringAdvancedSettingsSpecified = (value != null);
                 _allowUsersConfiguringAdvancedSettings = value;
             }
         }
@@ -111,17 +111,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowUsersConfiguringAdvancedSettingsSpecified { get; set; }
 
-        protected bool _allowComposeOrForwardMessageToEntireGroup;
+        protected bool? _allowComposeOrForwardMessageToEntireGroup;
 
         [XmlElement(ElementName = "allowComposeOrForwardMessageToEntireGroup", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:239")]
-        public bool AllowComposeOrForwardMessageToEntireGroup
+        public bool? AllowComposeOrForwardMessageToEntireGroup
         {
             get => _allowComposeOrForwardMessageToEntireGroup;
             set
             {
-                AllowComposeOrForwardMessageToEntireGroupSpecified = true;
+                AllowComposeOrForwardMessageToEntireGroupSpecified = (value != null);
                 _allowComposeOrForwardMessageToEntireGroup = value;
             }
         }
@@ -149,17 +149,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MailServerNetAddressSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.VoiceMessagingMailServerProtocol _mailServerProtocol;
+        protected BroadWorksConnector.Ocip.Models.VoiceMessagingMailServerProtocol? _mailServerProtocol;
 
         [XmlElement(ElementName = "mailServerProtocol", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:239")]
-        public BroadWorksConnector.Ocip.Models.VoiceMessagingMailServerProtocol MailServerProtocol
+        public BroadWorksConnector.Ocip.Models.VoiceMessagingMailServerProtocol? MailServerProtocol
         {
             get => _mailServerProtocol;
             set
             {
-                MailServerProtocolSpecified = true;
+                MailServerProtocolSpecified = (value != null);
                 _mailServerProtocol = value;
             }
         }
@@ -167,17 +167,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MailServerProtocolSpecified { get; set; }
 
-        protected bool _realDeleteForImap;
+        protected bool? _realDeleteForImap;
 
         [XmlElement(ElementName = "realDeleteForImap", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:239")]
-        public bool RealDeleteForImap
+        public bool? RealDeleteForImap
         {
             get => _realDeleteForImap;
             set
             {
-                RealDeleteForImapSpecified = true;
+                RealDeleteForImapSpecified = (value != null);
                 _realDeleteForImap = value;
             }
         }
@@ -185,17 +185,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RealDeleteForImapSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.VoiceMessagingMailboxLengthMinutes _maxMailboxLengthMinutes;
+        protected BroadWorksConnector.Ocip.Models.VoiceMessagingMailboxLengthMinutes? _maxMailboxLengthMinutes;
 
         [XmlElement(ElementName = "maxMailboxLengthMinutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:239")]
-        public BroadWorksConnector.Ocip.Models.VoiceMessagingMailboxLengthMinutes MaxMailboxLengthMinutes
+        public BroadWorksConnector.Ocip.Models.VoiceMessagingMailboxLengthMinutes? MaxMailboxLengthMinutes
         {
             get => _maxMailboxLengthMinutes;
             set
             {
-                MaxMailboxLengthMinutesSpecified = true;
+                MaxMailboxLengthMinutesSpecified = (value != null);
                 _maxMailboxLengthMinutes = value;
             }
         }
@@ -203,17 +203,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxMailboxLengthMinutesSpecified { get; set; }
 
-        protected bool _doesMessageAge;
+        protected bool? _doesMessageAge;
 
         [XmlElement(ElementName = "doesMessageAge", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:239")]
-        public bool DoesMessageAge
+        public bool? DoesMessageAge
         {
             get => _doesMessageAge;
             set
             {
-                DoesMessageAgeSpecified = true;
+                DoesMessageAgeSpecified = (value != null);
                 _doesMessageAge = value;
             }
         }
@@ -221,17 +221,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DoesMessageAgeSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.VoiceMessagingHoldPeriodDays _holdPeriodDays;
+        protected BroadWorksConnector.Ocip.Models.VoiceMessagingHoldPeriodDays? _holdPeriodDays;
 
         [XmlElement(ElementName = "holdPeriodDays", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:239")]
-        public BroadWorksConnector.Ocip.Models.VoiceMessagingHoldPeriodDays HoldPeriodDays
+        public BroadWorksConnector.Ocip.Models.VoiceMessagingHoldPeriodDays? HoldPeriodDays
         {
             get => _holdPeriodDays;
             set
             {
-                HoldPeriodDaysSpecified = true;
+                HoldPeriodDaysSpecified = (value != null);
                 _holdPeriodDays = value;
             }
         }

@@ -38,18 +38,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SecurityClassificationSpecified { get; set; }
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"435c279b3e6710f4ada60ed66a93d278:167")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaTrunkGroupName;
             set
             {
-                SearchCriteriaTrunkGroupNameSpecified = true;
+                SearchCriteriaTrunkGroupNameSpecified = (value != null);
                 _searchCriteriaTrunkGroupName = value;
             }
         }
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaGroupId;
             set
             {
-                SearchCriteriaGroupIdSpecified = true;
+                SearchCriteriaGroupIdSpecified = (value != null);
                 _searchCriteriaGroupId = value;
             }
         }
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaServiceProviderId;
             set
             {
-                SearchCriteriaServiceProviderIdSpecified = true;
+                SearchCriteriaServiceProviderIdSpecified = (value != null);
                 _searchCriteriaServiceProviderId = value;
             }
         }
@@ -121,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactOrganizationType;
             set
             {
-                SearchCriteriaExactOrganizationTypeSpecified = true;
+                SearchCriteriaExactOrganizationTypeSpecified = (value != null);
                 _searchCriteriaExactOrganizationType = value;
             }
         }

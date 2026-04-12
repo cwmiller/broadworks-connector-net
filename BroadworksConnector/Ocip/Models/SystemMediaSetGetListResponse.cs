@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _mediaSetName;
             set
             {
-                MediaSetNameSpecified = true;
+                MediaSetNameSpecified = (value != null);
                 _mediaSetName = value;
             }
         }

@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _skilledAgentUserIdList;
             set
             {
-                SkilledAgentUserIdListSpecified = true;
+                SkilledAgentUserIdListSpecified = (value != null);
                 _skilledAgentUserIdList = value;
             }
         }

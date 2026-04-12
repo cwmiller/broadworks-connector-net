@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userServer;
             set
             {
-                UserServerSpecified = true;
+                UserServerSpecified = (value != null);
                 _userServer = value;
             }
         }
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _mailboxURL;
             set
             {
-                MailboxURLSpecified = true;
+                MailboxURLSpecified = (value != null);
                 _mailboxURL = value;
             }
         }

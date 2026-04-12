@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultCountryCode;
             set
             {
-                DefaultCountryCodeSpecified = true;
+                DefaultCountryCodeSpecified = (value != null);
                 _defaultCountryCode = value;
             }
         }
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _countryCode;
             set
             {
-                CountryCodeSpecified = true;
+                CountryCodeSpecified = (value != null);
                 _countryCode = value;
             }
         }

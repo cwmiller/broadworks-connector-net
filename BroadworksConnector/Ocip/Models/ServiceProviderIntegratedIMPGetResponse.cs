@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceDomain;
             set
             {
-                ServiceDomainSpecified = true;
+                ServiceDomainSpecified = (value != null);
                 _serviceDomain = value;
             }
         }

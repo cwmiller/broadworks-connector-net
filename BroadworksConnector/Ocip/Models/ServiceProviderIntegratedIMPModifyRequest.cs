@@ -52,17 +52,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        protected bool _useSystemServiceDomain;
+        protected bool? _useSystemServiceDomain;
 
         [XmlElement(ElementName = "useSystemServiceDomain", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"37cec25308bcc82fe5a80bf541c42c89:247")]
-        public bool UseSystemServiceDomain
+        public bool? UseSystemServiceDomain
         {
             get => _useSystemServiceDomain;
             set
             {
-                UseSystemServiceDomainSpecified = true;
+                UseSystemServiceDomainSpecified = (value != null);
                 _useSystemServiceDomain = value;
             }
         }
@@ -110,17 +110,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServicePortSpecified { get; set; }
 
-        protected bool _useSystemMessagingServer;
+        protected bool? _useSystemMessagingServer;
 
         [XmlElement(ElementName = "useSystemMessagingServer", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"37cec25308bcc82fe5a80bf541c42c89:247")]
-        public bool UseSystemMessagingServer
+        public bool? UseSystemMessagingServer
         {
             get => _useSystemMessagingServer;
             set
             {
-                UseSystemMessagingServerSpecified = true;
+                UseSystemMessagingServerSpecified = (value != null);
                 _useSystemMessagingServer = value;
             }
         }

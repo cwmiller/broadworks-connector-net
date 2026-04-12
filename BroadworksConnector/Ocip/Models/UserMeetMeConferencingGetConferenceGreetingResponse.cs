@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _entranceGreetingAudioFile;
             set
             {
-                EntranceGreetingAudioFileSpecified = true;
+                EntranceGreetingAudioFileSpecified = (value != null);
                 _entranceGreetingAudioFile = value;
             }
         }
@@ -55,17 +55,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EntranceGreetingAudioFileSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MediaFileType _entranceGreetingMediaType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType? _entranceGreetingMediaType;
 
         [XmlElement(ElementName = "entranceGreetingMediaType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:45757")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType EntranceGreetingMediaType
+        public BroadWorksConnector.Ocip.Models.MediaFileType? EntranceGreetingMediaType
         {
             get => _entranceGreetingMediaType;
             set
             {
-                EntranceGreetingMediaTypeSpecified = true;
+                EntranceGreetingMediaTypeSpecified = (value != null);
                 _entranceGreetingMediaType = value;
             }
         }

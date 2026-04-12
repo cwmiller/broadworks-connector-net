@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _description;
             set
             {
-                DescriptionSpecified = true;
+                DescriptionSpecified = (value != null);
                 _description = value;
             }
         }
@@ -80,19 +80,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DescriptionSpecified { get; set; }
 
-        protected int _order;
+        protected int? _order;
 
         [XmlElement(ElementName = "order", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:13017")]
         [MinInclusive(1)]
         [MaxInclusive(32767)]
-        public int Order
+        public int? Order
         {
             get => _order;
             set
             {
-                OrderSpecified = true;
+                OrderSpecified = (value != null);
                 _order = value;
             }
         }

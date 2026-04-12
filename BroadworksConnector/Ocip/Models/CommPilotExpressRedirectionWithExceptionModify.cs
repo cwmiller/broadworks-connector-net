@@ -17,17 +17,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class CommPilotExpressRedirectionWithExceptionModify
     {
 
-        protected bool _sendCallsToVoiceMailExceptExcludedNumbers;
+        protected bool? _sendCallsToVoiceMailExceptExcludedNumbers;
 
         [XmlElement(ElementName = "sendCallsToVoiceMailExceptExcludedNumbers", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"de7795e1833d459a7eb89116d772fd78:244")]
-        public bool SendCallsToVoiceMailExceptExcludedNumbers
+        public bool? SendCallsToVoiceMailExceptExcludedNumbers
         {
             get => _sendCallsToVoiceMailExceptExcludedNumbers;
             set
             {
-                SendCallsToVoiceMailExceptExcludedNumbersSpecified = true;
+                SendCallsToVoiceMailExceptExcludedNumbersSpecified = (value != null);
                 _sendCallsToVoiceMailExceptExcludedNumbers = value;
             }
         }

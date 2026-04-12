@@ -42,17 +42,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LanguageSpecified { get; set; }
 
-        protected bool _becomeDefaultLanguage;
+        protected bool? _becomeDefaultLanguage;
 
         [XmlElement(ElementName = "becomeDefaultLanguage", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:27884")]
-        public bool BecomeDefaultLanguage
+        public bool? BecomeDefaultLanguage
         {
             get => _becomeDefaultLanguage;
             set
             {
-                BecomeDefaultLanguageSpecified = true;
+                BecomeDefaultLanguageSpecified = (value != null);
                 _becomeDefaultLanguage = value;
             }
         }
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _locale;
             set
             {
-                LocaleSpecified = true;
+                LocaleSpecified = (value != null);
                 _locale = value;
             }
         }
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _encoding;
             set
             {
-                EncodingSpecified = true;
+                EncodingSpecified = (value != null);
                 _encoding = value;
             }
         }

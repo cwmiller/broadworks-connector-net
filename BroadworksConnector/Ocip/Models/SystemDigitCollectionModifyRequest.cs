@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _publicDigitMap;
             set
             {
-                PublicDigitMapSpecified = true;
+                PublicDigitMapSpecified = (value != null);
                 _publicDigitMap = value;
             }
         }

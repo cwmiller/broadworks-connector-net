@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _imrnNumber;
             set
             {
-                ImrnNumberSpecified = true;
+                ImrnNumberSpecified = (value != null);
                 _imrnNumber = value;
             }
         }

@@ -58,17 +58,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PortSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.TransportProtocol _transportProtocol;
+        protected BroadWorksConnector.Ocip.Models.TransportProtocol? _transportProtocol;
 
         [XmlElement(ElementName = "transportProtocol", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:12933")]
-        public BroadWorksConnector.Ocip.Models.TransportProtocol TransportProtocol
+        public BroadWorksConnector.Ocip.Models.TransportProtocol? TransportProtocol
         {
             get => _transportProtocol;
             set
             {
-                TransportProtocolSpecified = true;
+                TransportProtocolSpecified = (value != null);
                 _transportProtocol = value;
             }
         }
@@ -76,17 +76,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TransportProtocolSpecified { get; set; }
 
-        protected bool _poll;
+        protected bool? _poll;
 
         [XmlElement(ElementName = "poll", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:12933")]
-        public bool Poll
+        public bool? Poll
         {
             get => _poll;
             set
             {
-                PollSpecified = true;
+                PollSpecified = (value != null);
                 _poll = value;
             }
         }

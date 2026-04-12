@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerId;
             set
             {
-                ResellerIdSpecified = true;
+                ResellerIdSpecified = (value != null);
                 _resellerId = value;
             }
         }
@@ -64,17 +64,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResellerIdSpecified { get; set; }
 
-        protected bool _tagSetOverride;
+        protected bool? _tagSetOverride;
 
         [XmlElement(ElementName = "tagSetOverride", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:8375")]
-        public bool TagSetOverride
+        public bool? TagSetOverride
         {
             get => _tagSetOverride;
             set
             {
-                TagSetOverrideSpecified = true;
+                TagSetOverrideSpecified = (value != null);
                 _tagSetOverride = value;
             }
         }
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _tagSetRename;
             set
             {
-                TagSetRenameSpecified = true;
+                TagSetRenameSpecified = (value != null);
                 _tagSetRename = value;
             }
         }

@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _protocol;
             set
             {
-                ProtocolSpecified = true;
+                ProtocolSpecified = (value != null);
                 _protocol = value;
             }
         }
@@ -288,7 +288,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _configurationFile;
             set
             {
-                ConfigurationFileSpecified = true;
+                ConfigurationFileSpecified = (value != null);
                 _configurationFile = value;
             }
         }
@@ -316,17 +316,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PhysicalLocationSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol _transportProtocol;
+        protected BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol? _transportProtocol;
 
         [XmlElement(ElementName = "transportProtocol", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:1258")]
-        public BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol TransportProtocol
+        public BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol? TransportProtocol
         {
             get => _transportProtocol;
             set
             {
-                TransportProtocolSpecified = true;
+                TransportProtocolSpecified = (value != null);
                 _transportProtocol = value;
             }
         }
@@ -334,17 +334,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TransportProtocolSpecified { get; set; }
 
-        protected bool _useCustomUserNamePassword;
+        protected bool? _useCustomUserNamePassword;
 
         [XmlElement(ElementName = "useCustomUserNamePassword", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:1258")]
-        public bool UseCustomUserNamePassword
+        public bool? UseCustomUserNamePassword
         {
             get => _useCustomUserNamePassword;
             set
             {
-                UseCustomUserNamePasswordSpecified = true;
+                UseCustomUserNamePasswordSpecified = (value != null);
                 _useCustomUserNamePassword = value;
             }
         }
@@ -390,17 +390,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceIPEISpecified { get; set; }
 
-        protected bool _useDeviceCode;
+        protected bool? _useDeviceCode;
 
         [XmlElement(ElementName = "useDeviceCode", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:1258")]
-        public bool UseDeviceCode
+        public bool? UseDeviceCode
         {
             get => _useDeviceCode;
             set
             {
-                UseDeviceCodeSpecified = true;
+                UseDeviceCodeSpecified = (value != null);
                 _useDeviceCode = value;
             }
         }

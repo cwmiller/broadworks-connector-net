@@ -57,19 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected int _recallTimerSeconds;
+        protected int? _recallTimerSeconds;
 
         [XmlElement(ElementName = "recallTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:519")]
         [MinInclusive(30)]
         [MaxInclusive(600)]
-        public int RecallTimerSeconds
+        public int? RecallTimerSeconds
         {
             get => _recallTimerSeconds;
             set
             {
-                RecallTimerSecondsSpecified = true;
+                RecallTimerSecondsSpecified = (value != null);
                 _recallTimerSeconds = value;
             }
         }
@@ -77,19 +77,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecallTimerSecondsSpecified { get; set; }
 
-        protected int _displayTimerSeconds;
+        protected int? _displayTimerSeconds;
 
         [XmlElement(ElementName = "displayTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:519")]
         [MinInclusive(2)]
         [MaxInclusive(15)]
-        public int DisplayTimerSeconds
+        public int? DisplayTimerSeconds
         {
             get => _displayTimerSeconds;
             set
             {
-                DisplayTimerSecondsSpecified = true;
+                DisplayTimerSecondsSpecified = (value != null);
                 _displayTimerSeconds = value;
             }
         }
@@ -97,17 +97,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisplayTimerSecondsSpecified { get; set; }
 
-        protected bool _enableDestinationAnnouncement;
+        protected bool? _enableDestinationAnnouncement;
 
         [XmlElement(ElementName = "enableDestinationAnnouncement", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:519")]
-        public bool EnableDestinationAnnouncement
+        public bool? EnableDestinationAnnouncement
         {
             get => _enableDestinationAnnouncement;
             set
             {
-                EnableDestinationAnnouncementSpecified = true;
+                EnableDestinationAnnouncementSpecified = (value != null);
                 _enableDestinationAnnouncement = value;
             }
         }
@@ -135,17 +135,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecallAlternateUserIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.RingPattern _recallRingPattern;
+        protected BroadWorksConnector.Ocip.Models.RingPattern? _recallRingPattern;
 
         [XmlElement(ElementName = "recallRingPattern", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:519")]
-        public BroadWorksConnector.Ocip.Models.RingPattern RecallRingPattern
+        public BroadWorksConnector.Ocip.Models.RingPattern? RecallRingPattern
         {
             get => _recallRingPattern;
             set
             {
-                RecallRingPatternSpecified = true;
+                RecallRingPatternSpecified = (value != null);
                 _recallRingPattern = value;
             }
         }
@@ -153,17 +153,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecallRingPatternSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallParkRecallTo _recallTo;
+        protected BroadWorksConnector.Ocip.Models.CallParkRecallTo? _recallTo;
 
         [XmlElement(ElementName = "recallTo", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:519")]
-        public BroadWorksConnector.Ocip.Models.CallParkRecallTo RecallTo
+        public BroadWorksConnector.Ocip.Models.CallParkRecallTo? RecallTo
         {
             get => _recallTo;
             set
             {
-                RecallToSpecified = true;
+                RecallToSpecified = (value != null);
                 _recallTo = value;
             }
         }
@@ -171,19 +171,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecallToSpecified { get; set; }
 
-        protected int _alternateUserRecallTimerSeconds;
+        protected int? _alternateUserRecallTimerSeconds;
 
         [XmlElement(ElementName = "alternateUserRecallTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:519")]
         [MinInclusive(30)]
         [MaxInclusive(600)]
-        public int AlternateUserRecallTimerSeconds
+        public int? AlternateUserRecallTimerSeconds
         {
             get => _alternateUserRecallTimerSeconds;
             set
             {
-                AlternateUserRecallTimerSecondsSpecified = true;
+                AlternateUserRecallTimerSecondsSpecified = (value != null);
                 _alternateUserRecallTimerSeconds = value;
             }
         }

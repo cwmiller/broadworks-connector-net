@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _category;
             set
             {
-                CategorySpecified = true;
+                CategorySpecified = (value != null);
                 _category = value;
             }
         }

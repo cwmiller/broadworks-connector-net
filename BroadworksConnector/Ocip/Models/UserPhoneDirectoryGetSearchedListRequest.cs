@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _nameSearchString;
             set
             {
-                NameSearchStringSpecified = true;
+                NameSearchStringSpecified = (value != null);
                 _nameSearchString = value;
             }
         }

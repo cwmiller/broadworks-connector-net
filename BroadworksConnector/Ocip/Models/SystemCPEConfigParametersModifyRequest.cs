@@ -22,17 +22,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCPEConfigParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _enableIPDeviceManagement;
+        protected bool? _enableIPDeviceManagement;
 
         [XmlElement(ElementName = "enableIPDeviceManagement", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:25964")]
-        public bool EnableIPDeviceManagement
+        public bool? EnableIPDeviceManagement
         {
             get => _enableIPDeviceManagement;
             set
             {
-                EnableIPDeviceManagementSpecified = true;
+                EnableIPDeviceManagementSpecified = (value != null);
                 _enableIPDeviceManagement = value;
             }
         }
@@ -40,19 +40,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableIPDeviceManagementSpecified { get; set; }
 
-        protected int _ftpConnectTimeoutSeconds;
+        protected int? _ftpConnectTimeoutSeconds;
 
         [XmlElement(ElementName = "ftpConnectTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:25964")]
         [MinInclusive(1)]
         [MaxInclusive(600)]
-        public int FtpConnectTimeoutSeconds
+        public int? FtpConnectTimeoutSeconds
         {
             get => _ftpConnectTimeoutSeconds;
             set
             {
-                FtpConnectTimeoutSecondsSpecified = true;
+                FtpConnectTimeoutSecondsSpecified = (value != null);
                 _ftpConnectTimeoutSeconds = value;
             }
         }
@@ -60,19 +60,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FtpConnectTimeoutSecondsSpecified { get; set; }
 
-        protected int _ftpFileTransferTimeoutSeconds;
+        protected int? _ftpFileTransferTimeoutSeconds;
 
         [XmlElement(ElementName = "ftpFileTransferTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:25964")]
         [MinInclusive(1)]
         [MaxInclusive(600)]
-        public int FtpFileTransferTimeoutSeconds
+        public int? FtpFileTransferTimeoutSeconds
         {
             get => _ftpFileTransferTimeoutSeconds;
             set
             {
-                FtpFileTransferTimeoutSecondsSpecified = true;
+                FtpFileTransferTimeoutSecondsSpecified = (value != null);
                 _ftpFileTransferTimeoutSeconds = value;
             }
         }
@@ -80,19 +80,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FtpFileTransferTimeoutSecondsSpecified { get; set; }
 
-        protected int _pauseBetweenFileRebuildMilliseconds;
+        protected int? _pauseBetweenFileRebuildMilliseconds;
 
         [XmlElement(ElementName = "pauseBetweenFileRebuildMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:25964")]
         [MinInclusive(0)]
         [MaxInclusive(10000)]
-        public int PauseBetweenFileRebuildMilliseconds
+        public int? PauseBetweenFileRebuildMilliseconds
         {
             get => _pauseBetweenFileRebuildMilliseconds;
             set
             {
-                PauseBetweenFileRebuildMillisecondsSpecified = true;
+                PauseBetweenFileRebuildMillisecondsSpecified = (value != null);
                 _pauseBetweenFileRebuildMilliseconds = value;
             }
         }
@@ -100,19 +100,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PauseBetweenFileRebuildMillisecondsSpecified { get; set; }
 
-        protected int _maxBusyTimeMinutes;
+        protected int? _maxBusyTimeMinutes;
 
         [XmlElement(ElementName = "maxBusyTimeMinutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:25964")]
         [MinInclusive(1)]
         [MaxInclusive(1440)]
-        public int MaxBusyTimeMinutes
+        public int? MaxBusyTimeMinutes
         {
             get => _maxBusyTimeMinutes;
             set
             {
-                MaxBusyTimeMinutesSpecified = true;
+                MaxBusyTimeMinutesSpecified = (value != null);
                 _maxBusyTimeMinutes = value;
             }
         }

@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _mobileIdentity;
             set
             {
-                MobileIdentitySpecified = true;
+                MobileIdentitySpecified = (value != null);
                 _mobileIdentity = value;
             }
         }
@@ -166,7 +166,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _profileIdentityMobileNumberAlerted;
             set
             {
-                ProfileIdentityMobileNumberAlertedSpecified = true;
+                ProfileIdentityMobileNumberAlertedSpecified = (value != null);
                 _profileIdentityMobileNumberAlerted = value;
             }
         }

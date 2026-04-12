@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _confirmSendingToDistributionList;
             set
             {
-                ConfirmSendingToDistributionListSpecified = true;
+                ConfirmSendingToDistributionListSpecified = (value != null);
                 _confirmSendingToDistributionList = value;
             }
         }

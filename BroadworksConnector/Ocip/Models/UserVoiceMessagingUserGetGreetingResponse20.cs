@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _busyPersonalAudioFile;
             set
             {
-                BusyPersonalAudioFileSpecified = true;
+                BusyPersonalAudioFileSpecified = (value != null);
                 _busyPersonalAudioFile = value;
             }
         }
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _busyPersonalVideoFile;
             set
             {
-                BusyPersonalVideoFileSpecified = true;
+                BusyPersonalVideoFileSpecified = (value != null);
                 _busyPersonalVideoFile = value;
             }
         }
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _noAnswerPersonalAudioFile;
             set
             {
-                NoAnswerPersonalAudioFileSpecified = true;
+                NoAnswerPersonalAudioFileSpecified = (value != null);
                 _noAnswerPersonalAudioFile = value;
             }
         }
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _noAnswerPersonalVideoFile;
             set
             {
-                NoAnswerPersonalVideoFileSpecified = true;
+                NoAnswerPersonalVideoFileSpecified = (value != null);
                 _noAnswerPersonalVideoFile = value;
             }
         }
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _noAnswerAlternateGreeting01;
             set
             {
-                NoAnswerAlternateGreeting01Specified = true;
+                NoAnswerAlternateGreeting01Specified = (value != null);
                 _noAnswerAlternateGreeting01 = value;
             }
         }
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _noAnswerAlternateGreeting02;
             set
             {
-                NoAnswerAlternateGreeting02Specified = true;
+                NoAnswerAlternateGreeting02Specified = (value != null);
                 _noAnswerAlternateGreeting02 = value;
             }
         }
@@ -180,7 +180,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _noAnswerAlternateGreeting03;
             set
             {
-                NoAnswerAlternateGreeting03Specified = true;
+                NoAnswerAlternateGreeting03Specified = (value != null);
                 _noAnswerAlternateGreeting03 = value;
             }
         }
@@ -232,7 +232,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _extendedAwayAudioFile;
             set
             {
-                ExtendedAwayAudioFileSpecified = true;
+                ExtendedAwayAudioFileSpecified = (value != null);
                 _extendedAwayAudioFile = value;
             }
         }
@@ -250,7 +250,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _extendedAwayVideoFile;
             set
             {
-                ExtendedAwayVideoFileSpecified = true;
+                ExtendedAwayVideoFileSpecified = (value != null);
                 _extendedAwayVideoFile = value;
             }
         }
@@ -321,7 +321,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _greetingOnlyForwardDestination;
             set
             {
-                GreetingOnlyForwardDestinationSpecified = true;
+                GreetingOnlyForwardDestinationSpecified = (value != null);
                 _greetingOnlyForwardDestination = value;
             }
         }

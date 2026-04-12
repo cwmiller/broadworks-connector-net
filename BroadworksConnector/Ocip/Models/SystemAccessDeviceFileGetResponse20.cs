@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _configurationFileName;
             set
             {
-                ConfigurationFileNameSpecified = true;
+                ConfigurationFileNameSpecified = (value != null);
                 _configurationFileName = value;
             }
         }
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _repositoryUrl;
             set
             {
-                RepositoryUrlSpecified = true;
+                RepositoryUrlSpecified = (value != null);
                 _repositoryUrl = value;
             }
         }
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _templateUrl;
             set
             {
-                TemplateUrlSpecified = true;
+                TemplateUrlSpecified = (value != null);
                 _templateUrl = value;
             }
         }
@@ -113,17 +113,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TemplateUrlSpecified { get; set; }
 
-        protected bool _extendedCaptureEnabled;
+        protected bool? _extendedCaptureEnabled;
 
         [XmlElement(ElementName = "extendedCaptureEnabled", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:1005")]
-        public bool ExtendedCaptureEnabled
+        public bool? ExtendedCaptureEnabled
         {
             get => _extendedCaptureEnabled;
             set
             {
-                ExtendedCaptureEnabledSpecified = true;
+                ExtendedCaptureEnabledSpecified = (value != null);
                 _extendedCaptureEnabled = value;
             }
         }
@@ -143,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _extendedCaptureURL;
             set
             {
-                ExtendedCaptureURLSpecified = true;
+                ExtendedCaptureURLSpecified = (value != null);
                 _extendedCaptureURL = value;
             }
         }

@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _matchDigitPattern;
             set
             {
-                MatchDigitPatternSpecified = true;
+                MatchDigitPatternSpecified = (value != null);
                 _matchDigitPattern = value;
             }
         }

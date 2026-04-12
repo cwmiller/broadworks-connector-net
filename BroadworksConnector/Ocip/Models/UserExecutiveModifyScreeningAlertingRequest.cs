@@ -39,17 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _enableScreening;
+        protected bool? _enableScreening;
 
         [XmlElement(ElementName = "enableScreening", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:422")]
-        public bool EnableScreening
+        public bool? EnableScreening
         {
             get => _enableScreening;
             set
             {
-                EnableScreeningSpecified = true;
+                EnableScreeningSpecified = (value != null);
                 _enableScreening = value;
             }
         }
@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableScreeningSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExecutiveScreeningAlertType _screeningAlertType;
+        protected BroadWorksConnector.Ocip.Models.ExecutiveScreeningAlertType? _screeningAlertType;
 
         [XmlElement(ElementName = "screeningAlertType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:422")]
-        public BroadWorksConnector.Ocip.Models.ExecutiveScreeningAlertType ScreeningAlertType
+        public BroadWorksConnector.Ocip.Models.ExecutiveScreeningAlertType? ScreeningAlertType
         {
             get => _screeningAlertType;
             set
             {
-                ScreeningAlertTypeSpecified = true;
+                ScreeningAlertTypeSpecified = (value != null);
                 _screeningAlertType = value;
             }
         }
@@ -75,17 +75,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ScreeningAlertTypeSpecified { get; set; }
 
-        protected bool _alertBroadWorksMobilityLocation;
+        protected bool? _alertBroadWorksMobilityLocation;
 
         [XmlElement(ElementName = "alertBroadWorksMobilityLocation", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:422")]
-        public bool AlertBroadWorksMobilityLocation
+        public bool? AlertBroadWorksMobilityLocation
         {
             get => _alertBroadWorksMobilityLocation;
             set
             {
-                AlertBroadWorksMobilityLocationSpecified = true;
+                AlertBroadWorksMobilityLocationSpecified = (value != null);
                 _alertBroadWorksMobilityLocation = value;
             }
         }
@@ -93,17 +93,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlertBroadWorksMobilityLocationSpecified { get; set; }
 
-        protected bool _alertBroadWorksAnywhereLocations;
+        protected bool? _alertBroadWorksAnywhereLocations;
 
         [XmlElement(ElementName = "alertBroadWorksAnywhereLocations", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:422")]
-        public bool AlertBroadWorksAnywhereLocations
+        public bool? AlertBroadWorksAnywhereLocations
         {
             get => _alertBroadWorksAnywhereLocations;
             set
             {
-                AlertBroadWorksAnywhereLocationsSpecified = true;
+                AlertBroadWorksAnywhereLocationsSpecified = (value != null);
                 _alertBroadWorksAnywhereLocations = value;
             }
         }
@@ -111,17 +111,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlertBroadWorksAnywhereLocationsSpecified { get; set; }
 
-        protected bool _alertSharedCallAppearanceLocations;
+        protected bool? _alertSharedCallAppearanceLocations;
 
         [XmlElement(ElementName = "alertSharedCallAppearanceLocations", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:422")]
-        public bool AlertSharedCallAppearanceLocations
+        public bool? AlertSharedCallAppearanceLocations
         {
             get => _alertSharedCallAppearanceLocations;
             set
             {
-                AlertSharedCallAppearanceLocationsSpecified = true;
+                AlertSharedCallAppearanceLocationsSpecified = (value != null);
                 _alertSharedCallAppearanceLocations = value;
             }
         }
@@ -129,17 +129,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlertSharedCallAppearanceLocationsSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExecutiveAlertingMode _alertingMode;
+        protected BroadWorksConnector.Ocip.Models.ExecutiveAlertingMode? _alertingMode;
 
         [XmlElement(ElementName = "alertingMode", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:422")]
-        public BroadWorksConnector.Ocip.Models.ExecutiveAlertingMode AlertingMode
+        public BroadWorksConnector.Ocip.Models.ExecutiveAlertingMode? AlertingMode
         {
             get => _alertingMode;
             set
             {
-                AlertingModeSpecified = true;
+                AlertingModeSpecified = (value != null);
                 _alertingMode = value;
             }
         }
@@ -147,17 +147,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlertingModeSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdNameMode _alertingCallingLineIdNameMode;
+        protected BroadWorksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdNameMode? _alertingCallingLineIdNameMode;
 
         [XmlElement(ElementName = "alertingCallingLineIdNameMode", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:422")]
-        public BroadWorksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdNameMode AlertingCallingLineIdNameMode
+        public BroadWorksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdNameMode? AlertingCallingLineIdNameMode
         {
             get => _alertingCallingLineIdNameMode;
             set
             {
-                AlertingCallingLineIdNameModeSpecified = true;
+                AlertingCallingLineIdNameModeSpecified = (value != null);
                 _alertingCallingLineIdNameMode = value;
             }
         }
@@ -205,17 +205,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UnicodeAlertingCustomCallingLineIdNameSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdPhoneNumberMode _alertingCallingLineIdPhoneNumberMode;
+        protected BroadWorksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdPhoneNumberMode? _alertingCallingLineIdPhoneNumberMode;
 
         [XmlElement(ElementName = "alertingCallingLineIdPhoneNumberMode", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:422")]
-        public BroadWorksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdPhoneNumberMode AlertingCallingLineIdPhoneNumberMode
+        public BroadWorksConnector.Ocip.Models.ExecutiveAlertingCallingLineIdPhoneNumberMode? AlertingCallingLineIdPhoneNumberMode
         {
             get => _alertingCallingLineIdPhoneNumberMode;
             set
             {
-                AlertingCallingLineIdPhoneNumberModeSpecified = true;
+                AlertingCallingLineIdPhoneNumberModeSpecified = (value != null);
                 _alertingCallingLineIdPhoneNumberMode = value;
             }
         }
@@ -243,19 +243,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlertingCustomCallingLineIdPhoneNumberSpecified { get; set; }
 
-        protected int _callPushRecallNumberOfRings;
+        protected int? _callPushRecallNumberOfRings;
 
         [XmlElement(ElementName = "callPushRecallNumberOfRings", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:422")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
-        public int CallPushRecallNumberOfRings
+        public int? CallPushRecallNumberOfRings
         {
             get => _callPushRecallNumberOfRings;
             set
             {
-                CallPushRecallNumberOfRingsSpecified = true;
+                CallPushRecallNumberOfRingsSpecified = (value != null);
                 _callPushRecallNumberOfRings = value;
             }
         }
@@ -263,19 +263,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallPushRecallNumberOfRingsSpecified { get; set; }
 
-        protected int _nextAssistantNumberOfRings;
+        protected int? _nextAssistantNumberOfRings;
 
         [XmlElement(ElementName = "nextAssistantNumberOfRings", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:422")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
-        public int NextAssistantNumberOfRings
+        public int? NextAssistantNumberOfRings
         {
             get => _nextAssistantNumberOfRings;
             set
             {
-                NextAssistantNumberOfRingsSpecified = true;
+                NextAssistantNumberOfRingsSpecified = (value != null);
                 _nextAssistantNumberOfRings = value;
             }
         }
@@ -283,17 +283,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NextAssistantNumberOfRingsSpecified { get; set; }
 
-        protected bool _enableRollover;
+        protected bool? _enableRollover;
 
         [XmlElement(ElementName = "enableRollover", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:422")]
-        public bool EnableRollover
+        public bool? EnableRollover
         {
             get => _enableRollover;
             set
             {
-                EnableRolloverSpecified = true;
+                EnableRolloverSpecified = (value != null);
                 _enableRollover = value;
             }
         }
@@ -321,17 +321,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RolloverWaitTimeSecondsSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExecutiveRolloverActionType _rolloverAction;
+        protected BroadWorksConnector.Ocip.Models.ExecutiveRolloverActionType? _rolloverAction;
 
         [XmlElement(ElementName = "rolloverAction", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:422")]
-        public BroadWorksConnector.Ocip.Models.ExecutiveRolloverActionType RolloverAction
+        public BroadWorksConnector.Ocip.Models.ExecutiveRolloverActionType? RolloverAction
         {
             get => _rolloverAction;
             set
             {
-                RolloverActionSpecified = true;
+                RolloverActionSpecified = (value != null);
                 _rolloverAction = value;
             }
         }

@@ -44,17 +44,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AgentACDState _agentACDState;
+        protected BroadWorksConnector.Ocip.Models.AgentACDState? _agentACDState;
 
         [XmlElement(ElementName = "agentACDState", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:41274")]
-        public BroadWorksConnector.Ocip.Models.AgentACDState AgentACDState
+        public BroadWorksConnector.Ocip.Models.AgentACDState? AgentACDState
         {
             get => _agentACDState;
             set
             {
-                AgentACDStateSpecified = true;
+                AgentACDStateSpecified = (value != null);
                 _agentACDState = value;
             }
         }
@@ -82,17 +82,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AgentUnavailableCodeSpecified { get; set; }
 
-        protected bool _useDefaultGuardTimer;
+        protected bool? _useDefaultGuardTimer;
 
         [XmlElement(ElementName = "useDefaultGuardTimer", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:41274")]
-        public bool UseDefaultGuardTimer
+        public bool? UseDefaultGuardTimer
         {
             get => _useDefaultGuardTimer;
             set
             {
-                UseDefaultGuardTimerSpecified = true;
+                UseDefaultGuardTimerSpecified = (value != null);
                 _useDefaultGuardTimer = value;
             }
         }
@@ -100,17 +100,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseDefaultGuardTimerSpecified { get; set; }
 
-        protected bool _enableGuardTimer;
+        protected bool? _enableGuardTimer;
 
         [XmlElement(ElementName = "enableGuardTimer", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:41274")]
-        public bool EnableGuardTimer
+        public bool? EnableGuardTimer
         {
             get => _enableGuardTimer;
             set
             {
-                EnableGuardTimerSpecified = true;
+                EnableGuardTimerSpecified = (value != null);
                 _enableGuardTimer = value;
             }
         }
@@ -118,19 +118,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableGuardTimerSpecified { get; set; }
 
-        protected int _guardTimerSeconds;
+        protected int? _guardTimerSeconds;
 
         [XmlElement(ElementName = "guardTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:41274")]
         [MinInclusive(1)]
         [MaxInclusive(25)]
-        public int GuardTimerSeconds
+        public int? GuardTimerSeconds
         {
             get => _guardTimerSeconds;
             set
             {
-                GuardTimerSecondsSpecified = true;
+                GuardTimerSecondsSpecified = (value != null);
                 _guardTimerSeconds = value;
             }
         }
@@ -138,17 +138,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GuardTimerSecondsSpecified { get; set; }
 
-        protected bool _useSystemDefaultUnavailableSettings;
+        protected bool? _useSystemDefaultUnavailableSettings;
 
         [XmlElement(ElementName = "useSystemDefaultUnavailableSettings", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:41274")]
-        public bool UseSystemDefaultUnavailableSettings
+        public bool? UseSystemDefaultUnavailableSettings
         {
             get => _useSystemDefaultUnavailableSettings;
             set
             {
-                UseSystemDefaultUnavailableSettingsSpecified = true;
+                UseSystemDefaultUnavailableSettingsSpecified = (value != null);
                 _useSystemDefaultUnavailableSettings = value;
             }
         }
@@ -156,17 +156,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseSystemDefaultUnavailableSettingsSpecified { get; set; }
 
-        protected bool _forceAgentUnavailableOnDNDActivation;
+        protected bool? _forceAgentUnavailableOnDNDActivation;
 
         [XmlElement(ElementName = "forceAgentUnavailableOnDNDActivation", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:41274")]
-        public bool ForceAgentUnavailableOnDNDActivation
+        public bool? ForceAgentUnavailableOnDNDActivation
         {
             get => _forceAgentUnavailableOnDNDActivation;
             set
             {
-                ForceAgentUnavailableOnDNDActivationSpecified = true;
+                ForceAgentUnavailableOnDNDActivationSpecified = (value != null);
                 _forceAgentUnavailableOnDNDActivation = value;
             }
         }
@@ -174,17 +174,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ForceAgentUnavailableOnDNDActivationSpecified { get; set; }
 
-        protected bool _forceUnavailableOnPersonalCalls;
+        protected bool? _forceUnavailableOnPersonalCalls;
 
         [XmlElement(ElementName = "forceUnavailableOnPersonalCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:41274")]
-        public bool ForceUnavailableOnPersonalCalls
+        public bool? ForceUnavailableOnPersonalCalls
         {
             get => _forceUnavailableOnPersonalCalls;
             set
             {
-                ForceUnavailableOnPersonalCallsSpecified = true;
+                ForceUnavailableOnPersonalCallsSpecified = (value != null);
                 _forceUnavailableOnPersonalCalls = value;
             }
         }
@@ -192,17 +192,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ForceUnavailableOnPersonalCallsSpecified { get; set; }
 
-        protected bool _forceAgentUnavailableOnBouncedCallLimit;
+        protected bool? _forceAgentUnavailableOnBouncedCallLimit;
 
         [XmlElement(ElementName = "forceAgentUnavailableOnBouncedCallLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:41274")]
-        public bool ForceAgentUnavailableOnBouncedCallLimit
+        public bool? ForceAgentUnavailableOnBouncedCallLimit
         {
             get => _forceAgentUnavailableOnBouncedCallLimit;
             set
             {
-                ForceAgentUnavailableOnBouncedCallLimitSpecified = true;
+                ForceAgentUnavailableOnBouncedCallLimitSpecified = (value != null);
                 _forceAgentUnavailableOnBouncedCallLimit = value;
             }
         }
@@ -210,19 +210,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ForceAgentUnavailableOnBouncedCallLimitSpecified { get; set; }
 
-        protected int _numberConsecutiveBouncedCallsToForceAgentUnavailable;
+        protected int? _numberConsecutiveBouncedCallsToForceAgentUnavailable;
 
         [XmlElement(ElementName = "numberConsecutiveBouncedCallsToForceAgentUnavailable", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:41274")]
         [MinInclusive(1)]
         [MaxInclusive(5)]
-        public int NumberConsecutiveBouncedCallsToForceAgentUnavailable
+        public int? NumberConsecutiveBouncedCallsToForceAgentUnavailable
         {
             get => _numberConsecutiveBouncedCallsToForceAgentUnavailable;
             set
             {
-                NumberConsecutiveBouncedCallsToForceAgentUnavailableSpecified = true;
+                NumberConsecutiveBouncedCallsToForceAgentUnavailableSpecified = (value != null);
                 _numberConsecutiveBouncedCallsToForceAgentUnavailable = value;
             }
         }
@@ -230,17 +230,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberConsecutiveBouncedCallsToForceAgentUnavailableSpecified { get; set; }
 
-        protected bool _makeOutgoingCallsAsCallCenter;
+        protected bool? _makeOutgoingCallsAsCallCenter;
 
         [XmlElement(ElementName = "makeOutgoingCallsAsCallCenter", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:41274")]
-        public bool MakeOutgoingCallsAsCallCenter
+        public bool? MakeOutgoingCallsAsCallCenter
         {
             get => _makeOutgoingCallsAsCallCenter;
             set
             {
-                MakeOutgoingCallsAsCallCenterSpecified = true;
+                MakeOutgoingCallsAsCallCenterSpecified = (value != null);
                 _makeOutgoingCallsAsCallCenter = value;
             }
         }
@@ -276,7 +276,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callCenterAvailability;
             set
             {
-                CallCenterAvailabilitySpecified = true;
+                CallCenterAvailabilitySpecified = (value != null);
                 _callCenterAvailability = value;
             }
         }

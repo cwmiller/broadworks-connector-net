@@ -27,7 +27,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _dnValidationError;
             set
             {
-                DnValidationErrorSpecified = true;
+                DnValidationErrorSpecified = (value != null);
                 _dnValidationError = value;
             }
         }

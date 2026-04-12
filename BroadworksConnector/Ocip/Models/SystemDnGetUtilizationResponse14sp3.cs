@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupId;
             set
             {
-                GroupIdSpecified = true;
+                GroupIdSpecified = (value != null);
                 _groupId = value;
             }
         }
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userId;
             set
             {
-                UserIdSpecified = true;
+                UserIdSpecified = (value != null);
                 _userId = value;
             }
         }
@@ -78,17 +78,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.UserType _userType;
+        protected BroadWorksConnector.Ocip.Models.UserType? _userType;
 
         [XmlElement(ElementName = "userType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:9512")]
-        public BroadWorksConnector.Ocip.Models.UserType UserType
+        public BroadWorksConnector.Ocip.Models.UserType? UserType
         {
             get => _userType;
             set
             {
-                UserTypeSpecified = true;
+                UserTypeSpecified = (value != null);
                 _userType = value;
             }
         }
@@ -113,17 +113,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsGroupCallingLineIdSpecified { get; set; }
 
-        protected bool _isActivated;
+        protected bool? _isActivated;
 
         [XmlElement(ElementName = "isActivated", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:9512")]
-        public bool IsActivated
+        public bool? IsActivated
         {
             get => _isActivated;
             set
             {
-                IsActivatedSpecified = true;
+                IsActivatedSpecified = (value != null);
                 _isActivated = value;
             }
         }

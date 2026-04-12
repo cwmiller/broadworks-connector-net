@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _systemDefaultDomain;
             set
             {
-                SystemDefaultDomainSpecified = true;
+                SystemDefaultDomainSpecified = (value != null);
                 _systemDefaultDomain = value;
             }
         }
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _domain;
             set
             {
-                DomainSpecified = true;
+                DomainSpecified = (value != null);
                 _domain = value;
             }
         }

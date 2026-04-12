@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _transferToOperatorAudioFile;
             set
             {
-                TransferToOperatorAudioFileSpecified = true;
+                TransferToOperatorAudioFileSpecified = (value != null);
                 _transferToOperatorAudioFile = value;
             }
         }
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _transferToOperatorVideoFile;
             set
             {
-                TransferToOperatorVideoFileSpecified = true;
+                TransferToOperatorVideoFileSpecified = (value != null);
                 _transferToOperatorVideoFile = value;
             }
         }
@@ -166,7 +166,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _businessHours;
             set
             {
-                BusinessHoursSpecified = true;
+                BusinessHoursSpecified = (value != null);
                 _businessHours = value;
             }
         }
@@ -184,7 +184,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holidaySchedule;
             set
             {
-                HolidayScheduleSpecified = true;
+                HolidayScheduleSpecified = (value != null);
                 _holidaySchedule = value;
             }
         }
@@ -287,7 +287,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holidayMenu;
             set
             {
-                HolidayMenuSpecified = true;
+                HolidayMenuSpecified = (value != null);
                 _holidayMenu = value;
             }
         }
@@ -307,7 +307,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkClassOfService;
             set
             {
-                NetworkClassOfServiceSpecified = true;
+                NetworkClassOfServiceSpecified = (value != null);
                 _networkClassOfService = value;
             }
         }

@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _sendToPerson;
             set
             {
-                SendToPersonSpecified = true;
+                SendToPersonSpecified = (value != null);
                 _sendToPerson = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _sendToAllGroupMembers;
             set
             {
-                SendToAllGroupMembersSpecified = true;
+                SendToAllGroupMembersSpecified = (value != null);
                 _sendToAllGroupMembers = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _sendToDistributionList;
             set
             {
-                SendToDistributionListSpecified = true;
+                SendToDistributionListSpecified = (value != null);
                 _sendToDistributionList = value;
             }
         }
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _changeCurrentIntroductionOrMessage;
             set
             {
-                ChangeCurrentIntroductionOrMessageSpecified = true;
+                ChangeCurrentIntroductionOrMessageSpecified = (value != null);
                 _changeCurrentIntroductionOrMessage = value;
             }
         }
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _listenToCurrentIntroductionOrMessage;
             set
             {
-                ListenToCurrentIntroductionOrMessageSpecified = true;
+                ListenToCurrentIntroductionOrMessageSpecified = (value != null);
                 _listenToCurrentIntroductionOrMessage = value;
             }
         }
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _setOrClearUrgentIndicator;
             set
             {
-                SetOrClearUrgentIndicatorSpecified = true;
+                SetOrClearUrgentIndicatorSpecified = (value != null);
                 _setOrClearUrgentIndicator = value;
             }
         }
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _setOrClearConfidentialIndicator;
             set
             {
-                SetOrClearConfidentialIndicatorSpecified = true;
+                SetOrClearConfidentialIndicatorSpecified = (value != null);
                 _setOrClearConfidentialIndicator = value;
             }
         }
@@ -187,7 +187,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _repeatMenu;
             set
             {
-                RepeatMenuSpecified = true;
+                RepeatMenuSpecified = (value != null);
                 _repeatMenu = value;
             }
         }

@@ -27,7 +27,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _treeDeviceInfo;
             set
             {
-                TreeDeviceInfoSpecified = true;
+                TreeDeviceInfoSpecified = (value != null);
                 _treeDeviceInfo = value;
             }
         }

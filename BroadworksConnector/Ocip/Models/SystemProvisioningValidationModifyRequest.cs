@@ -24,17 +24,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemProvisioningValidationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14950")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -42,17 +42,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected bool _isNetworkServerQueryActive;
+        protected bool? _isNetworkServerQueryActive;
 
         [XmlElement(ElementName = "isNetworkServerQueryActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14950")]
-        public bool IsNetworkServerQueryActive
+        public bool? IsNetworkServerQueryActive
         {
             get => _isNetworkServerQueryActive;
             set
             {
-                IsNetworkServerQueryActiveSpecified = true;
+                IsNetworkServerQueryActiveSpecified = (value != null);
                 _isNetworkServerQueryActive = value;
             }
         }
@@ -60,19 +60,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsNetworkServerQueryActiveSpecified { get; set; }
 
-        protected int _timeoutSeconds;
+        protected int? _timeoutSeconds;
 
         [XmlElement(ElementName = "timeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14950")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
-        public int TimeoutSeconds
+        public int? TimeoutSeconds
         {
             get => _timeoutSeconds;
             set
             {
-                TimeoutSecondsSpecified = true;
+                TimeoutSecondsSpecified = (value != null);
                 _timeoutSeconds = value;
             }
         }
@@ -80,17 +80,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TimeoutSecondsSpecified { get; set; }
 
-        protected bool _denyMobilityNumberAsRedirectionDestination;
+        protected bool? _denyMobilityNumberAsRedirectionDestination;
 
         [XmlElement(ElementName = "denyMobilityNumberAsRedirectionDestination", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14950")]
-        public bool DenyMobilityNumberAsRedirectionDestination
+        public bool? DenyMobilityNumberAsRedirectionDestination
         {
             get => _denyMobilityNumberAsRedirectionDestination;
             set
             {
-                DenyMobilityNumberAsRedirectionDestinationSpecified = true;
+                DenyMobilityNumberAsRedirectionDestinationSpecified = (value != null);
                 _denyMobilityNumberAsRedirectionDestination = value;
             }
         }
@@ -98,17 +98,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DenyMobilityNumberAsRedirectionDestinationSpecified { get; set; }
 
-        protected bool _denyEnterpriseNumberAsNetworkLocationDestination;
+        protected bool? _denyEnterpriseNumberAsNetworkLocationDestination;
 
         [XmlElement(ElementName = "denyEnterpriseNumberAsNetworkLocationDestination", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14950")]
-        public bool DenyEnterpriseNumberAsNetworkLocationDestination
+        public bool? DenyEnterpriseNumberAsNetworkLocationDestination
         {
             get => _denyEnterpriseNumberAsNetworkLocationDestination;
             set
             {
-                DenyEnterpriseNumberAsNetworkLocationDestinationSpecified = true;
+                DenyEnterpriseNumberAsNetworkLocationDestinationSpecified = (value != null);
                 _denyEnterpriseNumberAsNetworkLocationDestination = value;
             }
         }
@@ -116,17 +116,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DenyEnterpriseNumberAsNetworkLocationDestinationSpecified { get; set; }
 
-        protected bool _denyAutoAttendantIdentityAsAutoAttendantTransferNumber;
+        protected bool? _denyAutoAttendantIdentityAsAutoAttendantTransferNumber;
 
         [XmlElement(ElementName = "denyAutoAttendantIdentityAsAutoAttendantTransferNumber", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14950")]
-        public bool DenyAutoAttendantIdentityAsAutoAttendantTransferNumber
+        public bool? DenyAutoAttendantIdentityAsAutoAttendantTransferNumber
         {
             get => _denyAutoAttendantIdentityAsAutoAttendantTransferNumber;
             set
             {
-                DenyAutoAttendantIdentityAsAutoAttendantTransferNumberSpecified = true;
+                DenyAutoAttendantIdentityAsAutoAttendantTransferNumberSpecified = (value != null);
                 _denyAutoAttendantIdentityAsAutoAttendantTransferNumber = value;
             }
         }

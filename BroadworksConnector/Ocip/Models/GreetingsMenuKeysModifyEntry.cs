@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _returnToPreviousMenu;
             set
             {
-                ReturnToPreviousMenuSpecified = true;
+                ReturnToPreviousMenuSpecified = (value != null);
                 _returnToPreviousMenu = value;
             }
         }

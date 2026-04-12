@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _sendReplyToCaller;
             set
             {
-                SendReplyToCallerSpecified = true;
+                SendReplyToCallerSpecified = (value != null);
                 _sendReplyToCaller = value;
             }
         }
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _returnToPreviousMenu;
             set
             {
-                ReturnToPreviousMenuSpecified = true;
+                ReturnToPreviousMenuSpecified = (value != null);
                 _returnToPreviousMenu = value;
             }
         }

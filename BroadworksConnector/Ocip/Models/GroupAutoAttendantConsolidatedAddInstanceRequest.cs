@@ -89,17 +89,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        protected bool _addPhoneNumberToGroup;
+        protected bool? _addPhoneNumberToGroup;
 
         [XmlElement(ElementName = "addPhoneNumberToGroup", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:110")]
-        public bool AddPhoneNumberToGroup
+        public bool? AddPhoneNumberToGroup
         {
             get => _addPhoneNumberToGroup;
             set
             {
-                AddPhoneNumberToGroupSpecified = true;
+                AddPhoneNumberToGroupSpecified = (value != null);
                 _addPhoneNumberToGroup = value;
             }
         }
@@ -187,7 +187,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _businessHours;
             set
             {
-                BusinessHoursSpecified = true;
+                BusinessHoursSpecified = (value != null);
                 _businessHours = value;
             }
         }
@@ -205,7 +205,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holidaySchedule;
             set
             {
-                HolidayScheduleSpecified = true;
+                HolidayScheduleSpecified = (value != null);
                 _holidaySchedule = value;
             }
         }
@@ -274,7 +274,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _businessHoursMenu;
             set
             {
-                BusinessHoursMenuSpecified = true;
+                BusinessHoursMenuSpecified = (value != null);
                 _businessHoursMenu = value;
             }
         }
@@ -292,7 +292,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _afterHoursMenu;
             set
             {
-                AfterHoursMenuSpecified = true;
+                AfterHoursMenuSpecified = (value != null);
                 _afterHoursMenu = value;
             }
         }
@@ -310,7 +310,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holidayMenu;
             set
             {
-                HolidayMenuSpecified = true;
+                HolidayMenuSpecified = (value != null);
                 _holidayMenu = value;
             }
         }
@@ -330,7 +330,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkClassOfService;
             set
             {
-                NetworkClassOfServiceSpecified = true;
+                NetworkClassOfServiceSpecified = (value != null);
                 _networkClassOfService = value;
             }
         }
@@ -348,7 +348,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _service;
             set
             {
-                ServiceSpecified = true;
+                ServiceSpecified = (value != null);
                 _service = value;
             }
         }

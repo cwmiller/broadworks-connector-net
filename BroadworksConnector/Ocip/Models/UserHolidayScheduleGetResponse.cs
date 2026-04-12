@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holiday01;
             set
             {
-                Holiday01Specified = true;
+                Holiday01Specified = (value != null);
                 _holiday01 = value;
             }
         }
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holiday02;
             set
             {
-                Holiday02Specified = true;
+                Holiday02Specified = (value != null);
                 _holiday02 = value;
             }
         }
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holiday03;
             set
             {
-                Holiday03Specified = true;
+                Holiday03Specified = (value != null);
                 _holiday03 = value;
             }
         }
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holiday04;
             set
             {
-                Holiday04Specified = true;
+                Holiday04Specified = (value != null);
                 _holiday04 = value;
             }
         }
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holiday05;
             set
             {
-                Holiday05Specified = true;
+                Holiday05Specified = (value != null);
                 _holiday05 = value;
             }
         }
@@ -137,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holiday06;
             set
             {
-                Holiday06Specified = true;
+                Holiday06Specified = (value != null);
                 _holiday06 = value;
             }
         }
@@ -155,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holiday07;
             set
             {
-                Holiday07Specified = true;
+                Holiday07Specified = (value != null);
                 _holiday07 = value;
             }
         }
@@ -173,7 +173,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holiday08;
             set
             {
-                Holiday08Specified = true;
+                Holiday08Specified = (value != null);
                 _holiday08 = value;
             }
         }
@@ -191,7 +191,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holiday09;
             set
             {
-                Holiday09Specified = true;
+                Holiday09Specified = (value != null);
                 _holiday09 = value;
             }
         }
@@ -209,7 +209,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holiday10;
             set
             {
-                Holiday10Specified = true;
+                Holiday10Specified = (value != null);
                 _holiday10 = value;
             }
         }
@@ -227,7 +227,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holiday11;
             set
             {
-                Holiday11Specified = true;
+                Holiday11Specified = (value != null);
                 _holiday11 = value;
             }
         }
@@ -245,7 +245,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holiday12;
             set
             {
-                Holiday12Specified = true;
+                Holiday12Specified = (value != null);
                 _holiday12 = value;
             }
         }
@@ -263,7 +263,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holiday13;
             set
             {
-                Holiday13Specified = true;
+                Holiday13Specified = (value != null);
                 _holiday13 = value;
             }
         }
@@ -281,7 +281,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holiday14;
             set
             {
-                Holiday14Specified = true;
+                Holiday14Specified = (value != null);
                 _holiday14 = value;
             }
         }
@@ -299,7 +299,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holiday15;
             set
             {
-                Holiday15Specified = true;
+                Holiday15Specified = (value != null);
                 _holiday15 = value;
             }
         }
@@ -317,7 +317,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holiday16;
             set
             {
-                Holiday16Specified = true;
+                Holiday16Specified = (value != null);
                 _holiday16 = value;
             }
         }
@@ -335,7 +335,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holiday17;
             set
             {
-                Holiday17Specified = true;
+                Holiday17Specified = (value != null);
                 _holiday17 = value;
             }
         }
@@ -353,7 +353,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holiday18;
             set
             {
-                Holiday18Specified = true;
+                Holiday18Specified = (value != null);
                 _holiday18 = value;
             }
         }
@@ -371,7 +371,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holiday19;
             set
             {
-                Holiday19Specified = true;
+                Holiday19Specified = (value != null);
                 _holiday19 = value;
             }
         }
@@ -389,7 +389,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holiday20;
             set
             {
-                Holiday20Specified = true;
+                Holiday20Specified = (value != null);
                 _holiday20 = value;
             }
         }

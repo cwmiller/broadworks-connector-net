@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _securityPin;
             set
             {
-                SecurityPinSpecified = true;
+                SecurityPinSpecified = (value != null);
                 _securityPin = value;
             }
         }

@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _placedCallLogId;
             set
             {
-                PlacedCallLogIdSpecified = true;
+                PlacedCallLogIdSpecified = (value != null);
                 _placedCallLogId = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _receivedCallLogId;
             set
             {
-                ReceivedCallLogIdSpecified = true;
+                ReceivedCallLogIdSpecified = (value != null);
                 _receivedCallLogId = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _missedCallLogId;
             set
             {
-                MissedCallLogIdSpecified = true;
+                MissedCallLogIdSpecified = (value != null);
                 _missedCallLogId = value;
             }
         }

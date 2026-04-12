@@ -57,19 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LocationDialingCodeSpecified { get; set; }
 
-        protected int _minExtensionLength;
+        protected int? _minExtensionLength;
 
         [XmlElement(ElementName = "minExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:1195")]
         [MinInclusive(0)]
         [MaxInclusive(100)]
-        public int MinExtensionLength
+        public int? MinExtensionLength
         {
             get => _minExtensionLength;
             set
             {
-                MinExtensionLengthSpecified = true;
+                MinExtensionLengthSpecified = (value != null);
                 _minExtensionLength = value;
             }
         }
@@ -77,19 +77,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MinExtensionLengthSpecified { get; set; }
 
-        protected int _maxExtensionLength;
+        protected int? _maxExtensionLength;
 
         [XmlElement(ElementName = "maxExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:1195")]
         [MinInclusive(0)]
         [MaxInclusive(100)]
-        public int MaxExtensionLength
+        public int? MaxExtensionLength
         {
             get => _maxExtensionLength;
             set
             {
-                MaxExtensionLengthSpecified = true;
+                MaxExtensionLengthSpecified = (value != null);
                 _maxExtensionLength = value;
             }
         }
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _routeGroupId;
             set
             {
-                RouteGroupIdSpecified = true;
+                RouteGroupIdSpecified = (value != null);
                 _routeGroupId = value;
             }
         }
@@ -137,17 +137,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RouteGroupIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection _policySelection;
+        protected BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection? _policySelection;
 
         [XmlElement(ElementName = "policySelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:1195")]
-        public BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection PolicySelection
+        public BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection? PolicySelection
         {
             get => _policySelection;
             set
             {
-                PolicySelectionSpecified = true;
+                PolicySelectionSpecified = (value != null);
                 _policySelection = value;
             }
         }
@@ -165,7 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _digitManipulation;
             set
             {
-                DigitManipulationSpecified = true;
+                DigitManipulationSpecified = (value != null);
                 _digitManipulation = value;
             }
         }
@@ -185,7 +185,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _treatmentId;
             set
             {
-                TreatmentIdSpecified = true;
+                TreatmentIdSpecified = (value != null);
                 _treatmentId = value;
             }
         }

@@ -42,17 +42,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResellerIdSpecified { get; set; }
 
-        protected bool _forceRedirectingUserIdentityForRedirectedCalls;
+        protected bool? _forceRedirectingUserIdentityForRedirectedCalls;
 
         [XmlElement(ElementName = "forceRedirectingUserIdentityForRedirectedCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d45e381d6dbac771631649063122a42e:411")]
-        public bool ForceRedirectingUserIdentityForRedirectedCalls
+        public bool? ForceRedirectingUserIdentityForRedirectedCalls
         {
             get => _forceRedirectingUserIdentityForRedirectedCalls;
             set
             {
-                ForceRedirectingUserIdentityForRedirectedCallsSpecified = true;
+                ForceRedirectingUserIdentityForRedirectedCallsSpecified = (value != null);
                 _forceRedirectingUserIdentityForRedirectedCalls = value;
             }
         }
@@ -60,17 +60,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ForceRedirectingUserIdentityForRedirectedCallsSpecified { get; set; }
 
-        protected bool _applyRedirectingUserIdentityToNetworkLocations;
+        protected bool? _applyRedirectingUserIdentityToNetworkLocations;
 
         [XmlElement(ElementName = "applyRedirectingUserIdentityToNetworkLocations", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d45e381d6dbac771631649063122a42e:411")]
-        public bool ApplyRedirectingUserIdentityToNetworkLocations
+        public bool? ApplyRedirectingUserIdentityToNetworkLocations
         {
             get => _applyRedirectingUserIdentityToNetworkLocations;
             set
             {
-                ApplyRedirectingUserIdentityToNetworkLocationsSpecified = true;
+                ApplyRedirectingUserIdentityToNetworkLocationsSpecified = (value != null);
                 _applyRedirectingUserIdentityToNetworkLocations = value;
             }
         }

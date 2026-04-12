@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"be7f3162f133f8d7fcc75e712b0258e6:187")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MaliciousCallTraceCallTypeSelection _traceTypeSelection;
+        protected BroadWorksConnector.Ocip.Models.MaliciousCallTraceCallTypeSelection? _traceTypeSelection;
 
         [XmlElement(ElementName = "traceTypeSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"be7f3162f133f8d7fcc75e712b0258e6:187")]
-        public BroadWorksConnector.Ocip.Models.MaliciousCallTraceCallTypeSelection TraceTypeSelection
+        public BroadWorksConnector.Ocip.Models.MaliciousCallTraceCallTypeSelection? TraceTypeSelection
         {
             get => _traceTypeSelection;
             set
             {
-                TraceTypeSelectionSpecified = true;
+                TraceTypeSelectionSpecified = (value != null);
                 _traceTypeSelection = value;
             }
         }
@@ -74,17 +74,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TraceTypeSelectionSpecified { get; set; }
 
-        protected bool _traceForTimePeriod;
+        protected bool? _traceForTimePeriod;
 
         [XmlElement(ElementName = "traceForTimePeriod", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"be7f3162f133f8d7fcc75e712b0258e6:187")]
-        public bool TraceForTimePeriod
+        public bool? TraceForTimePeriod
         {
             get => _traceForTimePeriod;
             set
             {
-                TraceForTimePeriodSpecified = true;
+                TraceForTimePeriodSpecified = (value != null);
                 _traceForTimePeriod = value;
             }
         }

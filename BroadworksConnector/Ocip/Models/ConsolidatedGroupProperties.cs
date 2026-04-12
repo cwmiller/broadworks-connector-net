@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupName;
             set
             {
-                GroupNameSpecified = true;
+                GroupNameSpecified = (value != null);
                 _groupName = value;
             }
         }
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callingLineIdName;
             set
             {
-                CallingLineIdNameSpecified = true;
+                CallingLineIdNameSpecified = (value != null);
                 _callingLineIdName = value;
             }
         }
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeZone;
             set
             {
-                TimeZoneSpecified = true;
+                TimeZoneSpecified = (value != null);
                 _timeZone = value;
             }
         }
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _locationDialingCode;
             set
             {
-                LocationDialingCodeSpecified = true;
+                LocationDialingCodeSpecified = (value != null);
                 _locationDialingCode = value;
             }
         }
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _contact;
             set
             {
-                ContactSpecified = true;
+                ContactSpecified = (value != null);
                 _contact = value;
             }
         }
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _address;
             set
             {
-                AddressSpecified = true;
+                AddressSpecified = (value != null);
                 _address = value;
             }
         }
@@ -182,7 +182,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkClassOfService;
             set
             {
-                NetworkClassOfServiceSpecified = true;
+                NetworkClassOfServiceSpecified = (value != null);
                 _networkClassOfService = value;
             }
         }
@@ -200,7 +200,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultNetworkClassOfService;
             set
             {
-                DefaultNetworkClassOfServiceSpecified = true;
+                DefaultNetworkClassOfServiceSpecified = (value != null);
                 _defaultNetworkClassOfService = value;
             }
         }
@@ -218,7 +218,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupService;
             set
             {
-                GroupServiceSpecified = true;
+                GroupServiceSpecified = (value != null);
                 _groupService = value;
             }
         }
@@ -238,7 +238,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _servicePolicy;
             set
             {
-                ServicePolicySpecified = true;
+                ServicePolicySpecified = (value != null);
                 _servicePolicy = value;
             }
         }

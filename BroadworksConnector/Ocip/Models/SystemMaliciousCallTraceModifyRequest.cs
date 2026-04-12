@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemMaliciousCallTraceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _playMCTWarningAnnouncement;
+        protected bool? _playMCTWarningAnnouncement;
 
         [XmlElement(ElementName = "playMCTWarningAnnouncement", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"be7f3162f133f8d7fcc75e712b0258e6:136")]
-        public bool PlayMCTWarningAnnouncement
+        public bool? PlayMCTWarningAnnouncement
         {
             get => _playMCTWarningAnnouncement;
             set
             {
-                PlayMCTWarningAnnouncementSpecified = true;
+                PlayMCTWarningAnnouncementSpecified = (value != null);
                 _playMCTWarningAnnouncement = value;
             }
         }

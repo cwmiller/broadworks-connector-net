@@ -33,17 +33,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessDeviceEndpointSpecified { get; set; }
 
-        protected bool _authenticationRequired;
+        protected bool? _authenticationRequired;
 
         [XmlElement(ElementName = "authenticationRequired", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:3712")]
-        public bool AuthenticationRequired
+        public bool? AuthenticationRequired
         {
             get => _authenticationRequired;
             set
             {
-                AuthenticationRequiredSpecified = true;
+                AuthenticationRequiredSpecified = (value != null);
                 _authenticationRequired = value;
             }
         }
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _authenticationUserName;
             set
             {
-                AuthenticationUserNameSpecified = true;
+                AuthenticationUserNameSpecified = (value != null);
                 _authenticationUserName = value;
             }
         }
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _authenticationPassword;
             set
             {
-                AuthenticationPasswordSpecified = true;
+                AuthenticationPasswordSpecified = (value != null);
                 _authenticationPassword = value;
             }
         }

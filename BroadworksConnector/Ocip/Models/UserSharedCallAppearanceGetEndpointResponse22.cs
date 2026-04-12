@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hotlineContact;
             set
             {
-                HotlineContactSpecified = true;
+                HotlineContactSpecified = (value != null);
                 _hotlineContact = value;
             }
         }

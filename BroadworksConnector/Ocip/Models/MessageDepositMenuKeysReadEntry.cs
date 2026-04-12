@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _enableMessageDeposit;
             set
             {
-                EnableMessageDepositSpecified = true;
+                EnableMessageDepositSpecified = (value != null);
                 _enableMessageDeposit = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _disableMessageDeposit;
             set
             {
-                DisableMessageDepositSpecified = true;
+                DisableMessageDepositSpecified = (value != null);
                 _disableMessageDeposit = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _listenToMessageDepositStatus;
             set
             {
-                ListenToMessageDepositStatusSpecified = true;
+                ListenToMessageDepositStatusSpecified = (value != null);
                 _listenToMessageDepositStatus = value;
             }
         }
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _repeatMenu;
             set
             {
-                RepeatMenuSpecified = true;
+                RepeatMenuSpecified = (value != null);
                 _repeatMenu = value;
             }
         }

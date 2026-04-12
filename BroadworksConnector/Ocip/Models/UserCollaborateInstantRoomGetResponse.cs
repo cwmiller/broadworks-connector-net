@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _roomName;
             set
             {
-                RoomNameSpecified = true;
+                RoomNameSpecified = (value != null);
                 _roomName = value;
             }
         }

@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _ftpHostNetAddress;
             set
             {
-                FtpHostNetAddressSpecified = true;
+                FtpHostNetAddressSpecified = (value != null);
                 _ftpHostNetAddress = value;
             }
         }
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _ftpUserId;
             set
             {
-                FtpUserIdSpecified = true;
+                FtpUserIdSpecified = (value != null);
                 _ftpUserId = value;
             }
         }
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _ftpUserPassword;
             set
             {
-                FtpUserPasswordSpecified = true;
+                FtpUserPasswordSpecified = (value != null);
                 _ftpUserPassword = value;
             }
         }
@@ -120,17 +120,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CpeFileDirectorySpecified { get; set; }
 
-        protected bool _passiveFTP;
+        protected bool? _passiveFTP;
 
         [XmlElement(ElementName = "passiveFTP", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:25810")]
-        public bool PassiveFTP
+        public bool? PassiveFTP
         {
             get => _passiveFTP;
             set
             {
-                PassiveFTPSpecified = true;
+                PassiveFTPSpecified = (value != null);
                 _passiveFTP = value;
             }
         }

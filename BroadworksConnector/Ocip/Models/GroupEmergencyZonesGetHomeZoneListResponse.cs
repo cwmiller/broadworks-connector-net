@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _homeZoneIpAddress;
             set
             {
-                HomeZoneIpAddressSpecified = true;
+                HomeZoneIpAddressSpecified = (value != null);
                 _homeZoneIpAddress = value;
             }
         }
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _homeZoneIpAddressRange;
             set
             {
-                HomeZoneIpAddressRangeSpecified = true;
+                HomeZoneIpAddressRangeSpecified = (value != null);
                 _homeZoneIpAddressRange = value;
             }
         }

@@ -50,17 +50,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StaticRegistrationCapableSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 _configType;
+        protected BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14? _configType;
 
         [XmlElement(ElementName = "configType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:26322")]
-        public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 ConfigType
+        public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14? ConfigType
         {
             get => _configType;
             set
             {
-                ConfigTypeSpecified = true;
+                ConfigTypeSpecified = (value != null);
                 _configType = value;
             }
         }
@@ -138,17 +138,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsMobilityManagerDeviceSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType _deviceConfigurationOption;
+        protected BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType? _deviceConfigurationOption;
 
         [XmlElement(ElementName = "deviceConfigurationOption", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:26322")]
-        public BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType DeviceConfigurationOption
+        public BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType? DeviceConfigurationOption
         {
             get => _deviceConfigurationOption;
             set
             {
-                DeviceConfigurationOptionSpecified = true;
+                DeviceConfigurationOptionSpecified = (value != null);
                 _deviceConfigurationOption = value;
             }
         }

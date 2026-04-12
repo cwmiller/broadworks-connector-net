@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newName;
             set
             {
-                NewNameSpecified = true;
+                NewNameSpecified = (value != null);
                 _newName = value;
             }
         }
@@ -96,19 +96,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewNameSpecified { get; set; }
 
-        protected int _maxActiveCallsAllowed;
+        protected int? _maxActiveCallsAllowed;
 
         [XmlElement(ElementName = "maxActiveCallsAllowed", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"f7e3b48428e45d35b1edd744adc90f9b:246")]
         [MinInclusive(0)]
         [MaxInclusive(99999)]
-        public int MaxActiveCallsAllowed
+        public int? MaxActiveCallsAllowed
         {
             get => _maxActiveCallsAllowed;
             set
             {
-                MaxActiveCallsAllowedSpecified = true;
+                MaxActiveCallsAllowedSpecified = (value != null);
                 _maxActiveCallsAllowed = value;
             }
         }
@@ -156,17 +156,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxOutgoingActiveCallsAllowedSpecified { get; set; }
 
-        protected bool _becomeDefaultGroupForNewUsers;
+        protected bool? _becomeDefaultGroupForNewUsers;
 
         [XmlElement(ElementName = "becomeDefaultGroupForNewUsers", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"f7e3b48428e45d35b1edd744adc90f9b:246")]
-        public bool BecomeDefaultGroupForNewUsers
+        public bool? BecomeDefaultGroupForNewUsers
         {
             get => _becomeDefaultGroupForNewUsers;
             set
             {
-                BecomeDefaultGroupForNewUsersSpecified = true;
+                BecomeDefaultGroupForNewUsersSpecified = (value != null);
                 _becomeDefaultGroupForNewUsers = value;
             }
         }

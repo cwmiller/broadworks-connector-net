@@ -16,17 +16,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class MusicOnHoldUserSourceModify
     {
 
-        protected BroadWorksConnector.Ocip.Models.MusicOnHoldUserMessageSelection _messageSourceSelection;
+        protected BroadWorksConnector.Ocip.Models.MusicOnHoldUserMessageSelection? _messageSourceSelection;
 
         [XmlElement(ElementName = "messageSourceSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:50173")]
-        public BroadWorksConnector.Ocip.Models.MusicOnHoldUserMessageSelection MessageSourceSelection
+        public BroadWorksConnector.Ocip.Models.MusicOnHoldUserMessageSelection? MessageSourceSelection
         {
             get => _messageSourceSelection;
             set
             {
-                MessageSourceSelectionSpecified = true;
+                MessageSourceSelectionSpecified = (value != null);
                 _messageSourceSelection = value;
             }
         }
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _customSource;
             set
             {
-                CustomSourceSpecified = true;
+                CustomSourceSpecified = (value != null);
                 _customSource = value;
             }
         }

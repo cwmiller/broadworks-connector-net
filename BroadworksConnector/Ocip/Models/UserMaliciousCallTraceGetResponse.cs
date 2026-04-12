@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _traceTimePeriod;
             set
             {
-                TraceTimePeriodSpecified = true;
+                TraceTimePeriodSpecified = (value != null);
                 _traceTimePeriod = value;
             }
         }

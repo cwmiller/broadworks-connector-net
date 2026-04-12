@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _number;
             set
             {
-                NumberSpecified = true;
+                NumberSpecified = (value != null);
                 _number = value;
             }
         }
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _extension;
             set
             {
-                ExtensionSpecified = true;
+                ExtensionSpecified = (value != null);
                 _extension = value;
             }
         }

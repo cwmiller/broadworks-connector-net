@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _systemDefault;
             set
             {
-                SystemDefaultSpecified = true;
+                SystemDefaultSpecified = (value != null);
                 _systemDefault = value;
             }
         }
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerDefault;
             set
             {
-                ResellerDefaultSpecified = true;
+                ResellerDefaultSpecified = (value != null);
                 _resellerDefault = value;
             }
         }

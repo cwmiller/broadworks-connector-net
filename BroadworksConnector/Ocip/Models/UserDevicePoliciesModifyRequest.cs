@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.UserDevicePolicyLineMode _lineMode;
+        protected BroadWorksConnector.Ocip.Models.UserDevicePolicyLineMode? _lineMode;
 
         [XmlElement(ElementName = "lineMode", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1658")]
-        public BroadWorksConnector.Ocip.Models.UserDevicePolicyLineMode LineMode
+        public BroadWorksConnector.Ocip.Models.UserDevicePolicyLineMode? LineMode
         {
             get => _lineMode;
             set
             {
-                LineModeSpecified = true;
+                LineModeSpecified = (value != null);
                 _lineMode = value;
             }
         }
@@ -74,17 +74,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LineModeSpecified { get; set; }
 
-        protected bool _enableDeviceFeatureSynchronization;
+        protected bool? _enableDeviceFeatureSynchronization;
 
         [XmlElement(ElementName = "enableDeviceFeatureSynchronization", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1658")]
-        public bool EnableDeviceFeatureSynchronization
+        public bool? EnableDeviceFeatureSynchronization
         {
             get => _enableDeviceFeatureSynchronization;
             set
             {
-                EnableDeviceFeatureSynchronizationSpecified = true;
+                EnableDeviceFeatureSynchronizationSpecified = (value != null);
                 _enableDeviceFeatureSynchronization = value;
             }
         }
@@ -92,17 +92,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableDeviceFeatureSynchronizationSpecified { get; set; }
 
-        protected bool _enableDnd;
+        protected bool? _enableDnd;
 
         [XmlElement(ElementName = "enableDnd", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1658")]
-        public bool EnableDnd
+        public bool? EnableDnd
         {
             get => _enableDnd;
             set
             {
-                EnableDndSpecified = true;
+                EnableDndSpecified = (value != null);
                 _enableDnd = value;
             }
         }
@@ -110,17 +110,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableDndSpecified { get; set; }
 
-        protected bool _enableCallForwardingAlways;
+        protected bool? _enableCallForwardingAlways;
 
         [XmlElement(ElementName = "enableCallForwardingAlways", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1658")]
-        public bool EnableCallForwardingAlways
+        public bool? EnableCallForwardingAlways
         {
             get => _enableCallForwardingAlways;
             set
             {
-                EnableCallForwardingAlwaysSpecified = true;
+                EnableCallForwardingAlwaysSpecified = (value != null);
                 _enableCallForwardingAlways = value;
             }
         }
@@ -128,17 +128,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableCallForwardingAlwaysSpecified { get; set; }
 
-        protected bool _enableCallForwardingBusy;
+        protected bool? _enableCallForwardingBusy;
 
         [XmlElement(ElementName = "enableCallForwardingBusy", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1658")]
-        public bool EnableCallForwardingBusy
+        public bool? EnableCallForwardingBusy
         {
             get => _enableCallForwardingBusy;
             set
             {
-                EnableCallForwardingBusySpecified = true;
+                EnableCallForwardingBusySpecified = (value != null);
                 _enableCallForwardingBusy = value;
             }
         }
@@ -146,17 +146,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableCallForwardingBusySpecified { get; set; }
 
-        protected bool _enableCallForwardingNoAnswer;
+        protected bool? _enableCallForwardingNoAnswer;
 
         [XmlElement(ElementName = "enableCallForwardingNoAnswer", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1658")]
-        public bool EnableCallForwardingNoAnswer
+        public bool? EnableCallForwardingNoAnswer
         {
             get => _enableCallForwardingNoAnswer;
             set
             {
-                EnableCallForwardingNoAnswerSpecified = true;
+                EnableCallForwardingNoAnswerSpecified = (value != null);
                 _enableCallForwardingNoAnswer = value;
             }
         }
@@ -164,17 +164,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableCallForwardingNoAnswerSpecified { get; set; }
 
-        protected bool _enableAcd;
+        protected bool? _enableAcd;
 
         [XmlElement(ElementName = "enableAcd", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1658")]
-        public bool EnableAcd
+        public bool? EnableAcd
         {
             get => _enableAcd;
             set
             {
-                EnableAcdSpecified = true;
+                EnableAcdSpecified = (value != null);
                 _enableAcd = value;
             }
         }
@@ -182,17 +182,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableAcdSpecified { get; set; }
 
-        protected bool _enableExecutive;
+        protected bool? _enableExecutive;
 
         [XmlElement(ElementName = "enableExecutive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1658")]
-        public bool EnableExecutive
+        public bool? EnableExecutive
         {
             get => _enableExecutive;
             set
             {
-                EnableExecutiveSpecified = true;
+                EnableExecutiveSpecified = (value != null);
                 _enableExecutive = value;
             }
         }
@@ -200,17 +200,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableExecutiveSpecified { get; set; }
 
-        protected bool _enableExecutiveAssistant;
+        protected bool? _enableExecutiveAssistant;
 
         [XmlElement(ElementName = "enableExecutiveAssistant", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1658")]
-        public bool EnableExecutiveAssistant
+        public bool? EnableExecutiveAssistant
         {
             get => _enableExecutiveAssistant;
             set
             {
-                EnableExecutiveAssistantSpecified = true;
+                EnableExecutiveAssistantSpecified = (value != null);
                 _enableExecutiveAssistant = value;
             }
         }
@@ -218,17 +218,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableExecutiveAssistantSpecified { get; set; }
 
-        protected bool _enableSecurityClassification;
+        protected bool? _enableSecurityClassification;
 
         [XmlElement(ElementName = "enableSecurityClassification", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1658")]
-        public bool EnableSecurityClassification
+        public bool? EnableSecurityClassification
         {
             get => _enableSecurityClassification;
             set
             {
-                EnableSecurityClassificationSpecified = true;
+                EnableSecurityClassificationSpecified = (value != null);
                 _enableSecurityClassification = value;
             }
         }
@@ -236,17 +236,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableSecurityClassificationSpecified { get; set; }
 
-        protected bool _enableCallRecording;
+        protected bool? _enableCallRecording;
 
         [XmlElement(ElementName = "enableCallRecording", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1658")]
-        public bool EnableCallRecording
+        public bool? EnableCallRecording
         {
             get => _enableCallRecording;
             set
             {
-                EnableCallRecordingSpecified = true;
+                EnableCallRecordingSpecified = (value != null);
                 _enableCallRecording = value;
             }
         }
@@ -254,17 +254,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableCallRecordingSpecified { get; set; }
 
-        protected bool _enableCallDecline;
+        protected bool? _enableCallDecline;
 
         [XmlElement(ElementName = "enableCallDecline", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1658")]
-        public bool EnableCallDecline
+        public bool? EnableCallDecline
         {
             get => _enableCallDecline;
             set
             {
-                EnableCallDeclineSpecified = true;
+                EnableCallDeclineSpecified = (value != null);
                 _enableCallDecline = value;
             }
         }

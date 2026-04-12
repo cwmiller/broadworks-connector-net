@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _personalizedNameAudioFileDescription;
             set
             {
-                PersonalizedNameAudioFileDescriptionSpecified = true;
+                PersonalizedNameAudioFileDescriptionSpecified = (value != null);
                 _personalizedNameAudioFileDescription = value;
             }
         }
@@ -71,17 +71,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PersonalizedNameAudioFileDescriptionSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MediaFileType _personalizedNameMediaType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType? _personalizedNameMediaType;
 
         [XmlElement(ElementName = "personalizedNameMediaType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9bff48d8661ff401ea11b6e32b924f02:499")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType PersonalizedNameMediaType
+        public BroadWorksConnector.Ocip.Models.MediaFileType? PersonalizedNameMediaType
         {
             get => _personalizedNameMediaType;
             set
             {
-                PersonalizedNameMediaTypeSpecified = true;
+                PersonalizedNameMediaTypeSpecified = (value != null);
                 _personalizedNameMediaType = value;
             }
         }

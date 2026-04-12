@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceInstanceProfile;
             set
             {
-                ServiceInstanceProfileSpecified = true;
+                ServiceInstanceProfileSpecified = (value != null);
                 _serviceInstanceProfile = value;
             }
         }
@@ -64,19 +64,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceInstanceProfileSpecified { get; set; }
 
-        protected int _firstDigitTimeoutSeconds;
+        protected int? _firstDigitTimeoutSeconds;
 
         [XmlElement(ElementName = "firstDigitTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:1828")]
         [MinInclusive(1)]
         [MaxInclusive(60)]
-        public int FirstDigitTimeoutSeconds
+        public int? FirstDigitTimeoutSeconds
         {
             get => _firstDigitTimeoutSeconds;
             set
             {
-                FirstDigitTimeoutSecondsSpecified = true;
+                FirstDigitTimeoutSecondsSpecified = (value != null);
                 _firstDigitTimeoutSeconds = value;
             }
         }
@@ -84,17 +84,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FirstDigitTimeoutSecondsSpecified { get; set; }
 
-        protected bool _enableVideo;
+        protected bool? _enableVideo;
 
         [XmlElement(ElementName = "enableVideo", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:1828")]
-        public bool EnableVideo
+        public bool? EnableVideo
         {
             get => _enableVideo;
             set
             {
-                EnableVideoSpecified = true;
+                EnableVideoSpecified = (value != null);
                 _enableVideo = value;
             }
         }
@@ -138,17 +138,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HolidayScheduleSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AutoAttendantDialingScope _extensionDialingScope;
+        protected BroadWorksConnector.Ocip.Models.AutoAttendantDialingScope? _extensionDialingScope;
 
         [XmlElement(ElementName = "extensionDialingScope", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:1828")]
-        public BroadWorksConnector.Ocip.Models.AutoAttendantDialingScope ExtensionDialingScope
+        public BroadWorksConnector.Ocip.Models.AutoAttendantDialingScope? ExtensionDialingScope
         {
             get => _extensionDialingScope;
             set
             {
-                ExtensionDialingScopeSpecified = true;
+                ExtensionDialingScopeSpecified = (value != null);
                 _extensionDialingScope = value;
             }
         }
@@ -156,17 +156,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExtensionDialingScopeSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AutoAttendantDialingScope _nameDialingScope;
+        protected BroadWorksConnector.Ocip.Models.AutoAttendantDialingScope? _nameDialingScope;
 
         [XmlElement(ElementName = "nameDialingScope", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:1828")]
-        public BroadWorksConnector.Ocip.Models.AutoAttendantDialingScope NameDialingScope
+        public BroadWorksConnector.Ocip.Models.AutoAttendantDialingScope? NameDialingScope
         {
             get => _nameDialingScope;
             set
             {
-                NameDialingScopeSpecified = true;
+                NameDialingScopeSpecified = (value != null);
                 _nameDialingScope = value;
             }
         }
@@ -174,17 +174,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NameDialingScopeSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AutoAttendantNameDialingEntry _nameDialingEntries;
+        protected BroadWorksConnector.Ocip.Models.AutoAttendantNameDialingEntry? _nameDialingEntries;
 
         [XmlElement(ElementName = "nameDialingEntries", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:1828")]
-        public BroadWorksConnector.Ocip.Models.AutoAttendantNameDialingEntry NameDialingEntries
+        public BroadWorksConnector.Ocip.Models.AutoAttendantNameDialingEntry? NameDialingEntries
         {
             get => _nameDialingEntries;
             set
             {
-                NameDialingEntriesSpecified = true;
+                NameDialingEntriesSpecified = (value != null);
                 _nameDialingEntries = value;
             }
         }
@@ -202,7 +202,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _businessHoursMenu;
             set
             {
-                BusinessHoursMenuSpecified = true;
+                BusinessHoursMenuSpecified = (value != null);
                 _businessHoursMenu = value;
             }
         }
@@ -220,7 +220,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _afterHoursMenu;
             set
             {
-                AfterHoursMenuSpecified = true;
+                AfterHoursMenuSpecified = (value != null);
                 _afterHoursMenu = value;
             }
         }
@@ -238,7 +238,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holidayMenu;
             set
             {
-                HolidayMenuSpecified = true;
+                HolidayMenuSpecified = (value != null);
                 _holidayMenu = value;
             }
         }
@@ -258,7 +258,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkClassOfService;
             set
             {
-                NetworkClassOfServiceSpecified = true;
+                NetworkClassOfServiceSpecified = (value != null);
                 _networkClassOfService = value;
             }
         }

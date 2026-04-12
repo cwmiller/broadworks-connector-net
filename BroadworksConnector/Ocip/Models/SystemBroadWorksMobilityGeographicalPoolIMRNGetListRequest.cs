@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaIMRN;
             set
             {
-                SearchCriteriaIMRNSpecified = true;
+                SearchCriteriaIMRNSpecified = (value != null);
                 _searchCriteriaIMRN = value;
             }
         }

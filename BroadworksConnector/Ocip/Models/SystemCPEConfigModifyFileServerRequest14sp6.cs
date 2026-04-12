@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _fileRepositoryName;
             set
             {
-                FileRepositoryNameSpecified = true;
+                FileRepositoryNameSpecified = (value != null);
                 _fileRepositoryName = value;
             }
         }

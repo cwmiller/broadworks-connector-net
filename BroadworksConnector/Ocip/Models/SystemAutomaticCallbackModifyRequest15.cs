@@ -19,19 +19,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAutomaticCallbackModifyRequest15 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected int _monitorMinutes;
+        protected int? _monitorMinutes;
 
         [XmlElement(ElementName = "monitorMinutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6e1812074dca6af91b3958d73ab352fc:143")]
         [MinInclusive(5)]
         [MaxInclusive(180)]
-        public int MonitorMinutes
+        public int? MonitorMinutes
         {
             get => _monitorMinutes;
             set
             {
-                MonitorMinutesSpecified = true;
+                MonitorMinutesSpecified = (value != null);
                 _monitorMinutes = value;
             }
         }
@@ -39,19 +39,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MonitorMinutesSpecified { get; set; }
 
-        protected int _maxMonitorsPerOriginator;
+        protected int? _maxMonitorsPerOriginator;
 
         [XmlElement(ElementName = "maxMonitorsPerOriginator", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6e1812074dca6af91b3958d73ab352fc:143")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
-        public int MaxMonitorsPerOriginator
+        public int? MaxMonitorsPerOriginator
         {
             get => _maxMonitorsPerOriginator;
             set
             {
-                MaxMonitorsPerOriginatorSpecified = true;
+                MaxMonitorsPerOriginatorSpecified = (value != null);
                 _maxMonitorsPerOriginator = value;
             }
         }
@@ -59,19 +59,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxMonitorsPerOriginatorSpecified { get; set; }
 
-        protected int _maxCallbackRings;
+        protected int? _maxCallbackRings;
 
         [XmlElement(ElementName = "maxCallbackRings", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6e1812074dca6af91b3958d73ab352fc:143")]
         [MinInclusive(3)]
         [MaxInclusive(8)]
-        public int MaxCallbackRings
+        public int? MaxCallbackRings
         {
             get => _maxCallbackRings;
             set
             {
-                MaxCallbackRingsSpecified = true;
+                MaxCallbackRingsSpecified = (value != null);
                 _maxCallbackRings = value;
             }
         }
@@ -79,19 +79,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxCallbackRingsSpecified { get; set; }
 
-        protected int _maxMonitorsPerTerminator;
+        protected int? _maxMonitorsPerTerminator;
 
         [XmlElement(ElementName = "maxMonitorsPerTerminator", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6e1812074dca6af91b3958d73ab352fc:143")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
-        public int MaxMonitorsPerTerminator
+        public int? MaxMonitorsPerTerminator
         {
             get => _maxMonitorsPerTerminator;
             set
             {
-                MaxMonitorsPerTerminatorSpecified = true;
+                MaxMonitorsPerTerminatorSpecified = (value != null);
                 _maxMonitorsPerTerminator = value;
             }
         }
@@ -99,19 +99,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxMonitorsPerTerminatorSpecified { get; set; }
 
-        protected int _terminatorIdleGuardSeconds;
+        protected int? _terminatorIdleGuardSeconds;
 
         [XmlElement(ElementName = "terminatorIdleGuardSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6e1812074dca6af91b3958d73ab352fc:143")]
         [MinInclusive(5)]
         [MaxInclusive(300)]
-        public int TerminatorIdleGuardSeconds
+        public int? TerminatorIdleGuardSeconds
         {
             get => _terminatorIdleGuardSeconds;
             set
             {
-                TerminatorIdleGuardSecondsSpecified = true;
+                TerminatorIdleGuardSecondsSpecified = (value != null);
                 _terminatorIdleGuardSeconds = value;
             }
         }
@@ -119,17 +119,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TerminatorIdleGuardSecondsSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AutomaticCallbackMethod _callbackMethod;
+        protected BroadWorksConnector.Ocip.Models.AutomaticCallbackMethod? _callbackMethod;
 
         [XmlElement(ElementName = "callbackMethod", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6e1812074dca6af91b3958d73ab352fc:143")]
-        public BroadWorksConnector.Ocip.Models.AutomaticCallbackMethod CallbackMethod
+        public BroadWorksConnector.Ocip.Models.AutomaticCallbackMethod? CallbackMethod
         {
             get => _callbackMethod;
             set
             {
-                CallbackMethodSpecified = true;
+                CallbackMethodSpecified = (value != null);
                 _callbackMethod = value;
             }
         }
@@ -137,19 +137,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallbackMethodSpecified { get; set; }
 
-        protected int _pollingIntervalSeconds;
+        protected int? _pollingIntervalSeconds;
 
         [XmlElement(ElementName = "pollingIntervalSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6e1812074dca6af91b3958d73ab352fc:143")]
         [MinInclusive(60)]
         [MaxInclusive(900)]
-        public int PollingIntervalSeconds
+        public int? PollingIntervalSeconds
         {
             get => _pollingIntervalSeconds;
             set
             {
-                PollingIntervalSecondsSpecified = true;
+                PollingIntervalSecondsSpecified = (value != null);
                 _pollingIntervalSeconds = value;
             }
         }
@@ -157,19 +157,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PollingIntervalSecondsSpecified { get; set; }
 
-        protected int _activationDigit;
+        protected int? _activationDigit;
 
         [XmlElement(ElementName = "activationDigit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6e1812074dca6af91b3958d73ab352fc:143")]
         [MinInclusive(0)]
         [MaxInclusive(9)]
-        public int ActivationDigit
+        public int? ActivationDigit
         {
             get => _activationDigit;
             set
             {
-                ActivationDigitSpecified = true;
+                ActivationDigitSpecified = (value != null);
                 _activationDigit = value;
             }
         }

@@ -175,7 +175,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _mailServerNetAddress;
             set
             {
-                MailServerNetAddressSpecified = true;
+                MailServerNetAddressSpecified = (value != null);
                 _mailServerNetAddress = value;
             }
         }
@@ -373,7 +373,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultExternalRoutingAddress;
             set
             {
-                DefaultExternalRoutingAddressSpecified = true;
+                DefaultExternalRoutingAddressSpecified = (value != null);
                 _defaultExternalRoutingAddress = value;
             }
         }

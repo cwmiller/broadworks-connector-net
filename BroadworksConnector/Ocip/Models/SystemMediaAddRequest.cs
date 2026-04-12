@@ -91,19 +91,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BandwidthEnforcementTypeSpecified { get; set; }
 
-        protected int _mediaBandwidth;
+        protected int? _mediaBandwidth;
 
         [XmlElement(ElementName = "mediaBandwidth", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:28123")]
         [MinInclusive(1)]
         [MaxInclusive(100000000)]
-        public int MediaBandwidth
+        public int? MediaBandwidth
         {
             get => _mediaBandwidth;
             set
             {
-                MediaBandwidthSpecified = true;
+                MediaBandwidthSpecified = (value != null);
                 _mediaBandwidth = value;
             }
         }

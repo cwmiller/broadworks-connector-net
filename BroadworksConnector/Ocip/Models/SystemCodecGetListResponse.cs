@@ -27,7 +27,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _codec;
             set
             {
-                CodecSpecified = true;
+                CodecSpecified = (value != null);
                 _codec = value;
             }
         }

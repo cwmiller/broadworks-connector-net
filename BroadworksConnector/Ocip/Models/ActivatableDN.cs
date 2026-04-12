@@ -35,17 +35,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DNSpecified { get; set; }
 
-        protected bool _activate;
+        protected bool? _activate;
 
         [XmlElement(ElementName = "activate", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:550")]
-        public bool Activate
+        public bool? Activate
         {
             get => _activate;
             set
             {
-                ActivateSpecified = true;
+                ActivateSpecified = (value != null);
                 _activate = value;
             }
         }

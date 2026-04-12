@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _busySetting;
             set
             {
-                BusySettingSpecified = true;
+                BusySettingSpecified = (value != null);
                 _busySetting = value;
             }
         }
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _noAnswerSetting;
             set
             {
-                NoAnswerSettingSpecified = true;
+                NoAnswerSettingSpecified = (value != null);
                 _noAnswerSetting = value;
             }
         }

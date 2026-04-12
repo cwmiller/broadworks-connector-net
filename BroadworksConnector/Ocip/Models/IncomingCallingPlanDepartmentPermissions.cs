@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _digitPatternPermission;
             set
             {
-                DigitPatternPermissionSpecified = true;
+                DigitPatternPermissionSpecified = (value != null);
                 _digitPatternPermission = value;
             }
         }

@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupName;
             set
             {
-                GroupNameSpecified = true;
+                GroupNameSpecified = (value != null);
                 _groupName = value;
             }
         }
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callingLineIdName;
             set
             {
-                CallingLineIdNameSpecified = true;
+                CallingLineIdNameSpecified = (value != null);
                 _callingLineIdName = value;
             }
         }
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callingLineIdPhoneNumber;
             set
             {
-                CallingLineIdPhoneNumberSpecified = true;
+                CallingLineIdPhoneNumberSpecified = (value != null);
                 _callingLineIdPhoneNumber = value;
             }
         }
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callingLineIdDisplayPhoneNumber;
             set
             {
-                CallingLineIdDisplayPhoneNumberSpecified = true;
+                CallingLineIdDisplayPhoneNumberSpecified = (value != null);
                 _callingLineIdDisplayPhoneNumber = value;
             }
         }
@@ -222,7 +222,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _locationDialingCode;
             set
             {
-                LocationDialingCodeSpecified = true;
+                LocationDialingCodeSpecified = (value != null);
                 _locationDialingCode = value;
             }
         }
@@ -240,7 +240,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _contact;
             set
             {
-                ContactSpecified = true;
+                ContactSpecified = (value != null);
                 _contact = value;
             }
         }
@@ -258,7 +258,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _address;
             set
             {
-                AddressSpecified = true;
+                AddressSpecified = (value != null);
                 _address = value;
             }
         }
@@ -278,7 +278,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _servicePolicy;
             set
             {
-                ServicePolicySpecified = true;
+                ServicePolicySpecified = (value != null);
                 _servicePolicy = value;
             }
         }
@@ -298,7 +298,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callProcessingSliceId;
             set
             {
-                CallProcessingSliceIdSpecified = true;
+                CallProcessingSliceIdSpecified = (value != null);
                 _callProcessingSliceId = value;
             }
         }
@@ -318,7 +318,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _provisioningSliceId;
             set
             {
-                ProvisioningSliceIdSpecified = true;
+                ProvisioningSliceIdSpecified = (value != null);
                 _provisioningSliceId = value;
             }
         }
@@ -338,7 +338,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _subscriberPartition;
             set
             {
-                SubscriberPartitionSpecified = true;
+                SubscriberPartitionSpecified = (value != null);
                 _subscriberPartition = value;
             }
         }
@@ -358,7 +358,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _preferredDataCenter;
             set
             {
-                PreferredDataCenterSpecified = true;
+                PreferredDataCenterSpecified = (value != null);
                 _preferredDataCenter = value;
             }
         }
@@ -378,7 +378,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerId;
             set
             {
-                ResellerIdSpecified = true;
+                ResellerIdSpecified = (value != null);
                 _resellerId = value;
             }
         }
@@ -398,7 +398,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultUserCallingLineIdPhoneNumber;
             set
             {
-                DefaultUserCallingLineIdPhoneNumberSpecified = true;
+                DefaultUserCallingLineIdPhoneNumberSpecified = (value != null);
                 _defaultUserCallingLineIdPhoneNumber = value;
             }
         }
@@ -455,7 +455,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupExternalId;
             set
             {
-                GroupExternalIdSpecified = true;
+                GroupExternalIdSpecified = (value != null);
                 _groupExternalId = value;
             }
         }

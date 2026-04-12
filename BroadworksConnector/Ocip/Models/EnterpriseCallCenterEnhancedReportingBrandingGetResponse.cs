@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _brandingFileDescription;
             set
             {
-                BrandingFileDescriptionSpecified = true;
+                BrandingFileDescriptionSpecified = (value != null);
                 _brandingFileDescription = value;
             }
         }

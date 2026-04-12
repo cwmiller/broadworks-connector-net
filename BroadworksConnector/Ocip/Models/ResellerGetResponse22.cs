@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerName;
             set
             {
-                ResellerNameSpecified = true;
+                ResellerNameSpecified = (value != null);
                 _resellerName = value;
             }
         }

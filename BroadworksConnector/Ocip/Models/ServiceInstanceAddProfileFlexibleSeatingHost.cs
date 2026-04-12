@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hiraganaLastName;
             set
             {
-                HiraganaLastNameSpecified = true;
+                HiraganaLastNameSpecified = (value != null);
                 _hiraganaLastName = value;
             }
         }
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hiraganaFirstName;
             set
             {
-                HiraganaFirstNameSpecified = true;
+                HiraganaFirstNameSpecified = (value != null);
                 _hiraganaFirstName = value;
             }
         }
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _phoneNumber;
             set
             {
-                PhoneNumberSpecified = true;
+                PhoneNumberSpecified = (value != null);
                 _phoneNumber = value;
             }
         }
@@ -145,7 +145,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _extension;
             set
             {
-                ExtensionSpecified = true;
+                ExtensionSpecified = (value != null);
                 _extension = value;
             }
         }
@@ -165,7 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _password;
             set
             {
-                PasswordSpecified = true;
+                PasswordSpecified = (value != null);
                 _password = value;
             }
         }
@@ -183,7 +183,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _department;
             set
             {
-                DepartmentSpecified = true;
+                DepartmentSpecified = (value != null);
                 _department = value;
             }
         }
@@ -203,7 +203,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _language;
             set
             {
-                LanguageSpecified = true;
+                LanguageSpecified = (value != null);
                 _language = value;
             }
         }
@@ -223,7 +223,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeZone;
             set
             {
-                TimeZoneSpecified = true;
+                TimeZoneSpecified = (value != null);
                 _timeZone = value;
             }
         }
@@ -243,7 +243,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callingLineIdPhoneNumber;
             set
             {
-                CallingLineIdPhoneNumberSpecified = true;
+                CallingLineIdPhoneNumberSpecified = (value != null);
                 _callingLineIdPhoneNumber = value;
             }
         }

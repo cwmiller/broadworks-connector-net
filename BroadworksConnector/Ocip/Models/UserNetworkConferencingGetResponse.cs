@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _conferenceURI;
             set
             {
-                ConferenceURISpecified = true;
+                ConferenceURISpecified = (value != null);
                 _conferenceURI = value;
             }
         }

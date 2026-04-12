@@ -36,17 +36,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PhoneNumberSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.SequentialRingNumberOfRings _numberOfRings;
+        protected BroadWorksConnector.Ocip.Models.SequentialRingNumberOfRings? _numberOfRings;
 
         [XmlElement(ElementName = "numberOfRings", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"15725c7b98a01f80f88e9d5af56d48a5:225")]
-        public BroadWorksConnector.Ocip.Models.SequentialRingNumberOfRings NumberOfRings
+        public BroadWorksConnector.Ocip.Models.SequentialRingNumberOfRings? NumberOfRings
         {
             get => _numberOfRings;
             set
             {
-                NumberOfRingsSpecified = true;
+                NumberOfRingsSpecified = (value != null);
                 _numberOfRings = value;
             }
         }
@@ -54,17 +54,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberOfRingsSpecified { get; set; }
 
-        protected bool _answerConfirmationRequired;
+        protected bool? _answerConfirmationRequired;
 
         [XmlElement(ElementName = "answerConfirmationRequired", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"15725c7b98a01f80f88e9d5af56d48a5:225")]
-        public bool AnswerConfirmationRequired
+        public bool? AnswerConfirmationRequired
         {
             get => _answerConfirmationRequired;
             set
             {
-                AnswerConfirmationRequiredSpecified = true;
+                AnswerConfirmationRequiredSpecified = (value != null);
                 _answerConfirmationRequired = value;
             }
         }

@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _password;
             set
             {
-                PasswordSpecified = true;
+                PasswordSpecified = (value != null);
                 _password = value;
             }
         }
@@ -96,17 +96,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PasswordSpecified { get; set; }
 
-        protected bool _allowPut;
+        protected bool? _allowPut;
 
         [XmlElement(ElementName = "allowPut", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:4403")]
-        public bool AllowPut
+        public bool? AllowPut
         {
             get => _allowPut;
             set
             {
-                AllowPutSpecified = true;
+                AllowPutSpecified = (value != null);
                 _allowPut = value;
             }
         }
@@ -114,17 +114,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowPutSpecified { get; set; }
 
-        protected bool _allowDelete;
+        protected bool? _allowDelete;
 
         [XmlElement(ElementName = "allowDelete", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:4403")]
-        public bool AllowDelete
+        public bool? AllowDelete
         {
             get => _allowDelete;
             set
             {
-                AllowDeleteSpecified = true;
+                AllowDeleteSpecified = (value != null);
                 _allowDelete = value;
             }
         }
@@ -132,17 +132,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowDeleteSpecified { get; set; }
 
-        protected bool _allowGet;
+        protected bool? _allowGet;
 
         [XmlElement(ElementName = "allowGet", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:4403")]
-        public bool AllowGet
+        public bool? AllowGet
         {
             get => _allowGet;
             set
             {
-                AllowGetSpecified = true;
+                AllowGetSpecified = (value != null);
                 _allowGet = value;
             }
         }

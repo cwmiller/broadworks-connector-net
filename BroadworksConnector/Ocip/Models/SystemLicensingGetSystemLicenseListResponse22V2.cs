@@ -27,7 +27,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _license;
             set
             {
-                LicenseSpecified = true;
+                LicenseSpecified = (value != null);
                 _license = value;
             }
         }

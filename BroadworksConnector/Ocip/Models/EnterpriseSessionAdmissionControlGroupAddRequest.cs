@@ -75,18 +75,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxSessionSpecified { get; set; }
 
-        protected int _maxUserOriginatingSessions;
+        protected int? _maxUserOriginatingSessions;
 
         [XmlElement(ElementName = "maxUserOriginatingSessions", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:2717")]
         [MinInclusive(0)]
-        public int MaxUserOriginatingSessions
+        public int? MaxUserOriginatingSessions
         {
             get => _maxUserOriginatingSessions;
             set
             {
-                MaxUserOriginatingSessionsSpecified = true;
+                MaxUserOriginatingSessionsSpecified = (value != null);
                 _maxUserOriginatingSessions = value;
             }
         }
@@ -94,18 +94,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxUserOriginatingSessionsSpecified { get; set; }
 
-        protected int _maxUserTerminatingSessions;
+        protected int? _maxUserTerminatingSessions;
 
         [XmlElement(ElementName = "maxUserTerminatingSessions", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:2717")]
         [MinInclusive(0)]
-        public int MaxUserTerminatingSessions
+        public int? MaxUserTerminatingSessions
         {
             get => _maxUserTerminatingSessions;
             set
             {
-                MaxUserTerminatingSessionsSpecified = true;
+                MaxUserTerminatingSessionsSpecified = (value != null);
                 _maxUserTerminatingSessions = value;
             }
         }
@@ -131,18 +131,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReservedSessionSpecified { get; set; }
 
-        protected int _reservedUserOriginatingSessions;
+        protected int? _reservedUserOriginatingSessions;
 
         [XmlElement(ElementName = "reservedUserOriginatingSessions", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:2717")]
         [MinInclusive(0)]
-        public int ReservedUserOriginatingSessions
+        public int? ReservedUserOriginatingSessions
         {
             get => _reservedUserOriginatingSessions;
             set
             {
-                ReservedUserOriginatingSessionsSpecified = true;
+                ReservedUserOriginatingSessionsSpecified = (value != null);
                 _reservedUserOriginatingSessions = value;
             }
         }
@@ -150,18 +150,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReservedUserOriginatingSessionsSpecified { get; set; }
 
-        protected int _reservedUserTerminatingSessions;
+        protected int? _reservedUserTerminatingSessions;
 
         [XmlElement(ElementName = "reservedUserTerminatingSessions", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:2717")]
         [MinInclusive(0)]
-        public int ReservedUserTerminatingSessions
+        public int? ReservedUserTerminatingSessions
         {
             get => _reservedUserTerminatingSessions;
             set
             {
-                ReservedUserTerminatingSessionsSpecified = true;
+                ReservedUserTerminatingSessionsSpecified = (value != null);
                 _reservedUserTerminatingSessions = value;
             }
         }
@@ -213,7 +213,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _devices;
             set
             {
-                DevicesSpecified = true;
+                DevicesSpecified = (value != null);
                 _devices = value;
             }
         }

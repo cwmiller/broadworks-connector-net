@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"3a0309eb8d406fefc891f554ef114669:277")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }

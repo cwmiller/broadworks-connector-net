@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _password;
             set
             {
-                PasswordSpecified = true;
+                PasswordSpecified = (value != null);
                 _password = value;
             }
         }
@@ -60,17 +60,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PasswordSpecified { get; set; }
 
-        protected bool _isPasswordHashed;
+        protected bool? _isPasswordHashed;
 
         [XmlElement(ElementName = "isPasswordHashed", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ef3c4f453d01f7ce750331de83ebc765:238")]
-        public bool IsPasswordHashed
+        public bool? IsPasswordHashed
         {
             get => _isPasswordHashed;
             set
             {
-                IsPasswordHashedSpecified = true;
+                IsPasswordHashedSpecified = (value != null);
                 _isPasswordHashed = value;
             }
         }

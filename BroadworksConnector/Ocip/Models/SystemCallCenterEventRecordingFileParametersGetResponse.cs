@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _remoteUrl;
             set
             {
-                RemoteUrlSpecified = true;
+                RemoteUrlSpecified = (value != null);
                 _remoteUrl = value;
             }
         }
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _remoteUserId;
             set
             {
-                RemoteUserIdSpecified = true;
+                RemoteUserIdSpecified = (value != null);
                 _remoteUserId = value;
             }
         }

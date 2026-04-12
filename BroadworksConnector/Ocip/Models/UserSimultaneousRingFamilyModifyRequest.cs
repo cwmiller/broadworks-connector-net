@@ -40,17 +40,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:47277")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -58,17 +58,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.SimultaneousRingSelection _incomingCalls;
+        protected BroadWorksConnector.Ocip.Models.SimultaneousRingSelection? _incomingCalls;
 
         [XmlElement(ElementName = "incomingCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:47277")]
-        public BroadWorksConnector.Ocip.Models.SimultaneousRingSelection IncomingCalls
+        public BroadWorksConnector.Ocip.Models.SimultaneousRingSelection? IncomingCalls
         {
             get => _incomingCalls;
             set
             {
-                IncomingCallsSpecified = true;
+                IncomingCallsSpecified = (value != null);
                 _incomingCalls = value;
             }
         }

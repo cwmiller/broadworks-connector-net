@@ -72,17 +72,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ApplicationIdSpecified { get; set; }
 
-        protected bool _default;
+        protected bool? _default;
 
         [XmlElement(ElementName = "default", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:3002")]
-        public bool Default
+        public bool? Default
         {
             get => _default;
             set
             {
-                DefaultSpecified = true;
+                DefaultSpecified = (value != null);
                 _default = value;
             }
         }

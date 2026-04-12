@@ -39,17 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AnnouncementFileType _announcementFileType;
+        protected BroadWorksConnector.Ocip.Models.AnnouncementFileType? _announcementFileType;
 
         [XmlElement(ElementName = "announcementFileType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:544")]
-        public BroadWorksConnector.Ocip.Models.AnnouncementFileType AnnouncementFileType
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileType? AnnouncementFileType
         {
             get => _announcementFileType;
             set
             {
-                AnnouncementFileTypeSpecified = true;
+                AnnouncementFileTypeSpecified = (value != null);
                 _announcementFileType = value;
             }
         }

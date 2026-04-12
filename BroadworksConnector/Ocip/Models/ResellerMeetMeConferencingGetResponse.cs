@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _conferenceFromAddress;
             set
             {
-                ConferenceFromAddressSpecified = true;
+                ConferenceFromAddressSpecified = (value != null);
                 _conferenceFromAddress = value;
             }
         }
@@ -37,19 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConferenceFromAddressSpecified { get; set; }
 
-        protected int _maxAllocatedPorts;
+        protected int? _maxAllocatedPorts;
 
         [XmlElement(ElementName = "maxAllocatedPorts", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:5144")]
         [MinInclusive(0)]
         [MaxInclusive(999999)]
-        public int MaxAllocatedPorts
+        public int? MaxAllocatedPorts
         {
             get => _maxAllocatedPorts;
             set
             {
-                MaxAllocatedPortsSpecified = true;
+                MaxAllocatedPortsSpecified = (value != null);
                 _maxAllocatedPorts = value;
             }
         }

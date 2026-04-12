@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _mobilePhoneNumber;
             set
             {
-                MobilePhoneNumberSpecified = true;
+                MobilePhoneNumberSpecified = (value != null);
                 _mobilePhoneNumber = value;
             }
         }

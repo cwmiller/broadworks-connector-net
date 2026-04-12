@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _repeatMenuOrFinishEnteringDistributionListNumber;
             set
             {
-                RepeatMenuOrFinishEnteringDistributionListNumberSpecified = true;
+                RepeatMenuOrFinishEnteringDistributionListNumberSpecified = (value != null);
                 _repeatMenuOrFinishEnteringDistributionListNumber = value;
             }
         }

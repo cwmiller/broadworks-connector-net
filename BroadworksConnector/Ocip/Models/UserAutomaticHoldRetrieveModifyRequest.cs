@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"7e6893393b21480206131a5d901c0eef:76")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -56,19 +56,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected int _recallTimerSeconds;
+        protected int? _recallTimerSeconds;
 
         [XmlElement(ElementName = "recallTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"7e6893393b21480206131a5d901c0eef:76")]
         [MinInclusive(6)]
         [MaxInclusive(600)]
-        public int RecallTimerSeconds
+        public int? RecallTimerSeconds
         {
             get => _recallTimerSeconds;
             set
             {
-                RecallTimerSecondsSpecified = true;
+                RecallTimerSecondsSpecified = (value != null);
                 _recallTimerSeconds = value;
             }
         }

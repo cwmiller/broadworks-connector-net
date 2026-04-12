@@ -60,17 +60,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice _reportingServer;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice? _reportingServer;
 
         [XmlElement(ElementName = "reportingServer", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:5044")]
-        public BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice ReportingServer
+        public BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice? ReportingServer
         {
             get => _reportingServer;
             set
             {
-                ReportingServerSpecified = true;
+                ReportingServerSpecified = (value != null);
                 _reportingServer = value;
             }
         }
@@ -78,17 +78,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReportingServerSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterReportWebStatisticsSource _webStatisticSource;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportWebStatisticsSource? _webStatisticSource;
 
         [XmlElement(ElementName = "webStatisticSource", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:5044")]
-        public BroadWorksConnector.Ocip.Models.CallCenterReportWebStatisticsSource WebStatisticSource
+        public BroadWorksConnector.Ocip.Models.CallCenterReportWebStatisticsSource? WebStatisticSource
         {
             get => _webStatisticSource;
             set
             {
-                WebStatisticSourceSpecified = true;
+                WebStatisticSourceSpecified = (value != null);
                 _webStatisticSource = value;
             }
         }

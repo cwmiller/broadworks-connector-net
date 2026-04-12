@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _alternateCallIndicator;
             set
             {
-                AlternateCallIndicatorSpecified = true;
+                AlternateCallIndicatorSpecified = (value != null);
                 _alternateCallIndicator = value;
             }
         }

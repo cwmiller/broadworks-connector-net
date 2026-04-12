@@ -22,17 +22,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemRuntimeDataPublicationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _enableRuntimeDataSync;
+        protected bool? _enableRuntimeDataSync;
 
         [XmlElement(ElementName = "enableRuntimeDataSync", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:15826")]
-        public bool EnableRuntimeDataSync
+        public bool? EnableRuntimeDataSync
         {
             get => _enableRuntimeDataSync;
             set
             {
-                EnableRuntimeDataSyncSpecified = true;
+                EnableRuntimeDataSyncSpecified = (value != null);
                 _enableRuntimeDataSync = value;
             }
         }
@@ -40,19 +40,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableRuntimeDataSyncSpecified { get; set; }
 
-        protected int _runtimeDataSyncIntervalInMilliSeconds;
+        protected int? _runtimeDataSyncIntervalInMilliSeconds;
 
         [XmlElement(ElementName = "runtimeDataSyncIntervalInMilliSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:15826")]
         [MinInclusive(500)]
         [MaxInclusive(360000)]
-        public int RuntimeDataSyncIntervalInMilliSeconds
+        public int? RuntimeDataSyncIntervalInMilliSeconds
         {
             get => _runtimeDataSyncIntervalInMilliSeconds;
             set
             {
-                RuntimeDataSyncIntervalInMilliSecondsSpecified = true;
+                RuntimeDataSyncIntervalInMilliSecondsSpecified = (value != null);
                 _runtimeDataSyncIntervalInMilliSeconds = value;
             }
         }

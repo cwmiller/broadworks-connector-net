@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _accessCode;
             set
             {
-                AccessCodeSpecified = true;
+                AccessCodeSpecified = (value != null);
                 _accessCode = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _privateDigitMap;
             set
             {
-                PrivateDigitMapSpecified = true;
+                PrivateDigitMapSpecified = (value != null);
                 _privateDigitMap = value;
             }
         }

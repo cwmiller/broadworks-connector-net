@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        protected bool _enableZoneCallingRestrictions;
+        protected bool? _enableZoneCallingRestrictions;
 
         [XmlElement(ElementName = "enableZoneCallingRestrictions", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1d57523802a1435faa76c4035da1e4dc:80")]
-        public bool EnableZoneCallingRestrictions
+        public bool? EnableZoneCallingRestrictions
         {
             get => _enableZoneCallingRestrictions;
             set
             {
-                EnableZoneCallingRestrictionsSpecified = true;
+                EnableZoneCallingRestrictionsSpecified = (value != null);
                 _enableZoneCallingRestrictions = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableZoneCallingRestrictionsSpecified { get; set; }
 
-        protected bool _enableOriginationRoamingRestrictions;
+        protected bool? _enableOriginationRoamingRestrictions;
 
         [XmlElement(ElementName = "enableOriginationRoamingRestrictions", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1d57523802a1435faa76c4035da1e4dc:80")]
-        public bool EnableOriginationRoamingRestrictions
+        public bool? EnableOriginationRoamingRestrictions
         {
             get => _enableOriginationRoamingRestrictions;
             set
             {
-                EnableOriginationRoamingRestrictionsSpecified = true;
+                EnableOriginationRoamingRestrictionsSpecified = (value != null);
                 _enableOriginationRoamingRestrictions = value;
             }
         }
@@ -74,17 +74,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableOriginationRoamingRestrictionsSpecified { get; set; }
 
-        protected bool _enableEmergencyOriginationRoamingRestrictions;
+        protected bool? _enableEmergencyOriginationRoamingRestrictions;
 
         [XmlElement(ElementName = "enableEmergencyOriginationRoamingRestrictions", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1d57523802a1435faa76c4035da1e4dc:80")]
-        public bool EnableEmergencyOriginationRoamingRestrictions
+        public bool? EnableEmergencyOriginationRoamingRestrictions
         {
             get => _enableEmergencyOriginationRoamingRestrictions;
             set
             {
-                EnableEmergencyOriginationRoamingRestrictionsSpecified = true;
+                EnableEmergencyOriginationRoamingRestrictionsSpecified = (value != null);
                 _enableEmergencyOriginationRoamingRestrictions = value;
             }
         }
@@ -92,17 +92,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableEmergencyOriginationRoamingRestrictionsSpecified { get; set; }
 
-        protected bool _enableTerminationRoamingRestrictions;
+        protected bool? _enableTerminationRoamingRestrictions;
 
         [XmlElement(ElementName = "enableTerminationRoamingRestrictions", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1d57523802a1435faa76c4035da1e4dc:80")]
-        public bool EnableTerminationRoamingRestrictions
+        public bool? EnableTerminationRoamingRestrictions
         {
             get => _enableTerminationRoamingRestrictions;
             set
             {
-                EnableTerminationRoamingRestrictionsSpecified = true;
+                EnableTerminationRoamingRestrictionsSpecified = (value != null);
                 _enableTerminationRoamingRestrictions = value;
             }
         }

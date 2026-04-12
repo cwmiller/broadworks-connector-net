@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _extensionRange;
             set
             {
-                ExtensionRangeSpecified = true;
+                ExtensionRangeSpecified = (value != null);
                 _extensionRange = value;
             }
         }

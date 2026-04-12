@@ -103,17 +103,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SortByEnterpriseCommonPhoneListNameSpecified { get; set; }
 
-        protected bool _searchCriteriaModeOr;
+        protected bool? _searchCriteriaModeOr;
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1733")]
-        public bool SearchCriteriaModeOr
+        public bool? SearchCriteriaModeOr
         {
             get => _searchCriteriaModeOr;
             set
             {
-                SearchCriteriaModeOrSpecified = true;
+                SearchCriteriaModeOrSpecified = (value != null);
                 _searchCriteriaModeOr = value;
             }
         }
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaEnterpriseCommonPhoneListName;
             set
             {
-                SearchCriteriaEnterpriseCommonPhoneListNameSpecified = true;
+                SearchCriteriaEnterpriseCommonPhoneListNameSpecified = (value != null);
                 _searchCriteriaEnterpriseCommonPhoneListName = value;
             }
         }
@@ -149,7 +149,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaEnterpriseCommonPhoneListNumber;
             set
             {
-                SearchCriteriaEnterpriseCommonPhoneListNumberSpecified = true;
+                SearchCriteriaEnterpriseCommonPhoneListNumberSpecified = (value != null);
                 _searchCriteriaEnterpriseCommonPhoneListNumber = value;
             }
         }
@@ -167,7 +167,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaEnterpriseCommonMultiPartPhoneListName;
             set
             {
-                SearchCriteriaEnterpriseCommonMultiPartPhoneListNameSpecified = true;
+                SearchCriteriaEnterpriseCommonMultiPartPhoneListNameSpecified = (value != null);
                 _searchCriteriaEnterpriseCommonMultiPartPhoneListName = value;
             }
         }

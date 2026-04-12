@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _virtualOnNetUser;
             set
             {
-                VirtualOnNetUserSpecified = true;
+                VirtualOnNetUserSpecified = (value != null);
                 _virtualOnNetUser = value;
             }
         }
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _virtualOnNetUserRange;
             set
             {
-                VirtualOnNetUserRangeSpecified = true;
+                VirtualOnNetUserRangeSpecified = (value != null);
                 _virtualOnNetUserRange = value;
             }
         }

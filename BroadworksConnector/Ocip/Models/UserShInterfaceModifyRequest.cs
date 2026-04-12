@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SCSCFNameSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.IMSUserState _iMSUserState;
+        protected BroadWorksConnector.Ocip.Models.IMSUserState? _iMSUserState;
 
         [XmlElement(ElementName = "IMSUserState", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:4036")]
-        public BroadWorksConnector.Ocip.Models.IMSUserState IMSUserState
+        public BroadWorksConnector.Ocip.Models.IMSUserState? IMSUserState
         {
             get => _iMSUserState;
             set
             {
-                IMSUserStateSpecified = true;
+                IMSUserStateSpecified = (value != null);
                 _iMSUserState = value;
             }
         }

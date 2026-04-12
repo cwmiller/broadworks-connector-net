@@ -37,17 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallingNameRetrievalModifyRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _triggerCNAMQueriesForAllNetworkCalls;
+        protected bool? _triggerCNAMQueriesForAllNetworkCalls;
 
         [XmlElement(ElementName = "triggerCNAMQueriesForAllNetworkCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ba51f415ebda0240287c719bc767eadf:104")]
-        public bool TriggerCNAMQueriesForAllNetworkCalls
+        public bool? TriggerCNAMQueriesForAllNetworkCalls
         {
             get => _triggerCNAMQueriesForAllNetworkCalls;
             set
             {
-                TriggerCNAMQueriesForAllNetworkCallsSpecified = true;
+                TriggerCNAMQueriesForAllNetworkCallsSpecified = (value != null);
                 _triggerCNAMQueriesForAllNetworkCalls = value;
             }
         }
@@ -55,17 +55,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TriggerCNAMQueriesForAllNetworkCallsSpecified { get; set; }
 
-        protected bool _triggerCNAMQueriesForGroupAndEnterpriseCalls;
+        protected bool? _triggerCNAMQueriesForGroupAndEnterpriseCalls;
 
         [XmlElement(ElementName = "triggerCNAMQueriesForGroupAndEnterpriseCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ba51f415ebda0240287c719bc767eadf:104")]
-        public bool TriggerCNAMQueriesForGroupAndEnterpriseCalls
+        public bool? TriggerCNAMQueriesForGroupAndEnterpriseCalls
         {
             get => _triggerCNAMQueriesForGroupAndEnterpriseCalls;
             set
             {
-                TriggerCNAMQueriesForGroupAndEnterpriseCallsSpecified = true;
+                TriggerCNAMQueriesForGroupAndEnterpriseCallsSpecified = (value != null);
                 _triggerCNAMQueriesForGroupAndEnterpriseCalls = value;
             }
         }
@@ -73,17 +73,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TriggerCNAMQueriesForGroupAndEnterpriseCallsSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallingNameRetrievalQueryProtocol _queryProtocol;
+        protected BroadWorksConnector.Ocip.Models.CallingNameRetrievalQueryProtocol? _queryProtocol;
 
         [XmlElement(ElementName = "queryProtocol", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ba51f415ebda0240287c719bc767eadf:104")]
-        public BroadWorksConnector.Ocip.Models.CallingNameRetrievalQueryProtocol QueryProtocol
+        public BroadWorksConnector.Ocip.Models.CallingNameRetrievalQueryProtocol? QueryProtocol
         {
             get => _queryProtocol;
             set
             {
-                QueryProtocolSpecified = true;
+                QueryProtocolSpecified = (value != null);
                 _queryProtocol = value;
             }
         }
@@ -91,19 +91,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool QueryProtocolSpecified { get; set; }
 
-        protected int _queryTimeoutMilliseconds;
+        protected int? _queryTimeoutMilliseconds;
 
         [XmlElement(ElementName = "queryTimeoutMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ba51f415ebda0240287c719bc767eadf:104")]
         [MinInclusive(100)]
         [MaxInclusive(10000)]
-        public int QueryTimeoutMilliseconds
+        public int? QueryTimeoutMilliseconds
         {
             get => _queryTimeoutMilliseconds;
             set
             {
-                QueryTimeoutMillisecondsSpecified = true;
+                QueryTimeoutMillisecondsSpecified = (value != null);
                 _queryTimeoutMilliseconds = value;
             }
         }
@@ -151,17 +151,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SipExternalDatabasePortSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol _sipExternalDatabaseTransport;
+        protected BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol? _sipExternalDatabaseTransport;
 
         [XmlElement(ElementName = "sipExternalDatabaseTransport", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ba51f415ebda0240287c719bc767eadf:104")]
-        public BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol SipExternalDatabaseTransport
+        public BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol? SipExternalDatabaseTransport
         {
             get => _sipExternalDatabaseTransport;
             set
             {
-                SipExternalDatabaseTransportSpecified = true;
+                SipExternalDatabaseTransportSpecified = (value != null);
                 _sipExternalDatabaseTransport = value;
             }
         }
@@ -189,17 +189,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SoapExternalDatabaseNetAddressSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallingNameRetrievalSourceIdentity _callingNameSource;
+        protected BroadWorksConnector.Ocip.Models.CallingNameRetrievalSourceIdentity? _callingNameSource;
 
         [XmlElement(ElementName = "callingNameSource", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ba51f415ebda0240287c719bc767eadf:104")]
-        public BroadWorksConnector.Ocip.Models.CallingNameRetrievalSourceIdentity CallingNameSource
+        public BroadWorksConnector.Ocip.Models.CallingNameRetrievalSourceIdentity? CallingNameSource
         {
             get => _callingNameSource;
             set
             {
-                CallingNameSourceSpecified = true;
+                CallingNameSourceSpecified = (value != null);
                 _callingNameSource = value;
             }
         }
@@ -207,19 +207,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallingNameSourceSpecified { get; set; }
 
-        protected int _routeAdvanceTimer;
+        protected int? _routeAdvanceTimer;
 
         [XmlElement(ElementName = "routeAdvanceTimer", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ba51f415ebda0240287c719bc767eadf:104")]
         [MinInclusive(100)]
         [MaxInclusive(2000)]
-        public int RouteAdvanceTimer
+        public int? RouteAdvanceTimer
         {
             get => _routeAdvanceTimer;
             set
             {
-                RouteAdvanceTimerSpecified = true;
+                RouteAdvanceTimerSpecified = (value != null);
                 _routeAdvanceTimer = value;
             }
         }
@@ -227,19 +227,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RouteAdvanceTimerSpecified { get; set; }
 
-        protected int _retryFailedCNAMServerInterval;
+        protected int? _retryFailedCNAMServerInterval;
 
         [XmlElement(ElementName = "retryFailedCNAMServerInterval", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ba51f415ebda0240287c719bc767eadf:104")]
         [MinInclusive(0)]
         [MaxInclusive(604800)]
-        public int RetryFailedCNAMServerInterval
+        public int? RetryFailedCNAMServerInterval
         {
             get => _retryFailedCNAMServerInterval;
             set
             {
-                RetryFailedCNAMServerIntervalSpecified = true;
+                RetryFailedCNAMServerIntervalSpecified = (value != null);
                 _retryFailedCNAMServerInterval = value;
             }
         }
@@ -247,17 +247,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RetryFailedCNAMServerIntervalSpecified { get; set; }
 
-        protected bool _ignoreRestrictedPresentationIndicator;
+        protected bool? _ignoreRestrictedPresentationIndicator;
 
         [XmlElement(ElementName = "ignoreRestrictedPresentationIndicator", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ba51f415ebda0240287c719bc767eadf:104")]
-        public bool IgnoreRestrictedPresentationIndicator
+        public bool? IgnoreRestrictedPresentationIndicator
         {
             get => _ignoreRestrictedPresentationIndicator;
             set
             {
-                IgnoreRestrictedPresentationIndicatorSpecified = true;
+                IgnoreRestrictedPresentationIndicatorSpecified = (value != null);
                 _ignoreRestrictedPresentationIndicator = value;
             }
         }
@@ -265,17 +265,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IgnoreRestrictedPresentationIndicatorSpecified { get; set; }
 
-        protected bool _supportsDNSSRV;
+        protected bool? _supportsDNSSRV;
 
         [XmlElement(ElementName = "supportsDNSSRV", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ba51f415ebda0240287c719bc767eadf:104")]
-        public bool SupportsDNSSRV
+        public bool? SupportsDNSSRV
         {
             get => _supportsDNSSRV;
             set
             {
-                SupportsDNSSRVSpecified = true;
+                SupportsDNSSRVSpecified = (value != null);
                 _supportsDNSSRV = value;
             }
         }
@@ -283,17 +283,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SupportsDNSSRVSpecified { get; set; }
 
-        protected bool _callFilteringProvisioningEnabled;
+        protected bool? _callFilteringProvisioningEnabled;
 
         [XmlElement(ElementName = "callFilteringProvisioningEnabled", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ba51f415ebda0240287c719bc767eadf:104")]
-        public bool CallFilteringProvisioningEnabled
+        public bool? CallFilteringProvisioningEnabled
         {
             get => _callFilteringProvisioningEnabled;
             set
             {
-                CallFilteringProvisioningEnabledSpecified = true;
+                CallFilteringProvisioningEnabledSpecified = (value != null);
                 _callFilteringProvisioningEnabled = value;
             }
         }

@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _authenticationUserName;
             set
             {
-                AuthenticationUserNameSpecified = true;
+                AuthenticationUserNameSpecified = (value != null);
                 _authenticationUserName = value;
             }
         }

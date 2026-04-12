@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.DirectRouteOutgoingDTGPolicy _outgoingDTGPolicy;
+        protected BroadWorksConnector.Ocip.Models.DirectRouteOutgoingDTGPolicy? _outgoingDTGPolicy;
 
         [XmlElement(ElementName = "outgoingDTGPolicy", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"448c1807ef39a1a06e7d8d4d16ecaa31:75")]
-        public BroadWorksConnector.Ocip.Models.DirectRouteOutgoingDTGPolicy OutgoingDTGPolicy
+        public BroadWorksConnector.Ocip.Models.DirectRouteOutgoingDTGPolicy? OutgoingDTGPolicy
         {
             get => _outgoingDTGPolicy;
             set
             {
-                OutgoingDTGPolicySpecified = true;
+                OutgoingDTGPolicySpecified = (value != null);
                 _outgoingDTGPolicy = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OutgoingDTGPolicySpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.DirectRouteOutgoingTrunkIdentityPolicy _outgoingTrunkIdentityPolicy;
+        protected BroadWorksConnector.Ocip.Models.DirectRouteOutgoingTrunkIdentityPolicy? _outgoingTrunkIdentityPolicy;
 
         [XmlElement(ElementName = "outgoingTrunkIdentityPolicy", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"448c1807ef39a1a06e7d8d4d16ecaa31:75")]
-        public BroadWorksConnector.Ocip.Models.DirectRouteOutgoingTrunkIdentityPolicy OutgoingTrunkIdentityPolicy
+        public BroadWorksConnector.Ocip.Models.DirectRouteOutgoingTrunkIdentityPolicy? OutgoingTrunkIdentityPolicy
         {
             get => _outgoingTrunkIdentityPolicy;
             set
             {
-                OutgoingTrunkIdentityPolicySpecified = true;
+                OutgoingTrunkIdentityPolicySpecified = (value != null);
                 _outgoingTrunkIdentityPolicy = value;
             }
         }

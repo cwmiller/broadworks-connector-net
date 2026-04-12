@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _endDate;
             set
             {
-                EndDateSpecified = true;
+                EndDateSpecified = (value != null);
                 _endDate = value;
             }
         }

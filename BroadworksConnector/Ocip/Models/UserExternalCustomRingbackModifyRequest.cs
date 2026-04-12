@@ -43,17 +43,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"2c9f194a3272e429f2e5215dd988b94a:139")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -61,17 +61,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExternalCustomRingbackSettingLevel _useSettingLevel;
+        protected BroadWorksConnector.Ocip.Models.ExternalCustomRingbackSettingLevel? _useSettingLevel;
 
         [XmlElement(ElementName = "useSettingLevel", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"2c9f194a3272e429f2e5215dd988b94a:139")]
-        public BroadWorksConnector.Ocip.Models.ExternalCustomRingbackSettingLevel UseSettingLevel
+        public BroadWorksConnector.Ocip.Models.ExternalCustomRingbackSettingLevel? UseSettingLevel
         {
             get => _useSettingLevel;
             set
             {
-                UseSettingLevelSpecified = true;
+                UseSettingLevelSpecified = (value != null);
                 _useSettingLevel = value;
             }
         }

@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _activateCallForwarding;
             set
             {
-                ActivateCallForwardingSpecified = true;
+                ActivateCallForwardingSpecified = (value != null);
                 _activateCallForwarding = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deactivateCallForwarding;
             set
             {
-                DeactivateCallForwardingSpecified = true;
+                DeactivateCallForwardingSpecified = (value != null);
                 _deactivateCallForwarding = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _changeCallForwardingDestination;
             set
             {
-                ChangeCallForwardingDestinationSpecified = true;
+                ChangeCallForwardingDestinationSpecified = (value != null);
                 _changeCallForwardingDestination = value;
             }
         }
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _listenToCallForwardingStatus;
             set
             {
-                ListenToCallForwardingStatusSpecified = true;
+                ListenToCallForwardingStatusSpecified = (value != null);
                 _listenToCallForwardingStatus = value;
             }
         }
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _repeatMenu;
             set
             {
-                RepeatMenuSpecified = true;
+                RepeatMenuSpecified = (value != null);
                 _repeatMenu = value;
             }
         }

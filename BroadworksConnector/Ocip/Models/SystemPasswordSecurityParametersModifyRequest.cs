@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemPasswordSecurityParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _useExistingHashing;
+        protected bool? _useExistingHashing;
 
         [XmlElement(ElementName = "useExistingHashing", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14441")]
-        public bool UseExistingHashing
+        public bool? UseExistingHashing
         {
             get => _useExistingHashing;
             set
             {
-                UseExistingHashingSpecified = true;
+                UseExistingHashingSpecified = (value != null);
                 _useExistingHashing = value;
             }
         }
@@ -37,17 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseExistingHashingSpecified { get; set; }
 
-        protected bool _enforcePasswordChangeOnExpiry;
+        protected bool? _enforcePasswordChangeOnExpiry;
 
         [XmlElement(ElementName = "enforcePasswordChangeOnExpiry", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14441")]
-        public bool EnforcePasswordChangeOnExpiry
+        public bool? EnforcePasswordChangeOnExpiry
         {
             get => _enforcePasswordChangeOnExpiry;
             set
             {
-                EnforcePasswordChangeOnExpirySpecified = true;
+                EnforcePasswordChangeOnExpirySpecified = (value != null);
                 _enforcePasswordChangeOnExpiry = value;
             }
         }

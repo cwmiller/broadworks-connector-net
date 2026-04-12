@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _changeCurrentReply;
             set
             {
-                ChangeCurrentReplySpecified = true;
+                ChangeCurrentReplySpecified = (value != null);
                 _changeCurrentReply = value;
             }
         }
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _listenToCurrentReply;
             set
             {
-                ListenToCurrentReplySpecified = true;
+                ListenToCurrentReplySpecified = (value != null);
                 _listenToCurrentReply = value;
             }
         }
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _setOrClearUrgentIndicator;
             set
             {
-                SetOrClearUrgentIndicatorSpecified = true;
+                SetOrClearUrgentIndicatorSpecified = (value != null);
                 _setOrClearUrgentIndicator = value;
             }
         }
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _setOrClearConfidentialIndicator;
             set
             {
-                SetOrClearConfidentialIndicatorSpecified = true;
+                SetOrClearConfidentialIndicatorSpecified = (value != null);
                 _setOrClearConfidentialIndicator = value;
             }
         }
@@ -146,7 +146,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _repeatMenu;
             set
             {
-                RepeatMenuSpecified = true;
+                RepeatMenuSpecified = (value != null);
                 _repeatMenu = value;
             }
         }

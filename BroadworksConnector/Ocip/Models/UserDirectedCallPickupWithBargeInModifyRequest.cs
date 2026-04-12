@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _enableBargeInWarningTone;
+        protected bool? _enableBargeInWarningTone;
 
         [XmlElement(ElementName = "enableBargeInWarningTone", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"629ec0086c245a4408ed537aa86aab18:76")]
-        public bool EnableBargeInWarningTone
+        public bool? EnableBargeInWarningTone
         {
             get => _enableBargeInWarningTone;
             set
             {
-                EnableBargeInWarningToneSpecified = true;
+                EnableBargeInWarningToneSpecified = (value != null);
                 _enableBargeInWarningTone = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableBargeInWarningToneSpecified { get; set; }
 
-        protected bool _enableAutomaticTargetSelection;
+        protected bool? _enableAutomaticTargetSelection;
 
         [XmlElement(ElementName = "enableAutomaticTargetSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"629ec0086c245a4408ed537aa86aab18:76")]
-        public bool EnableAutomaticTargetSelection
+        public bool? EnableAutomaticTargetSelection
         {
             get => _enableAutomaticTargetSelection;
             set
             {
-                EnableAutomaticTargetSelectionSpecified = true;
+                EnableAutomaticTargetSelectionSpecified = (value != null);
                 _enableAutomaticTargetSelection = value;
             }
         }

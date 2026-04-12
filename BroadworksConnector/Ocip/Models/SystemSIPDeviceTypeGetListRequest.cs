@@ -29,18 +29,18 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSIPDeviceTypeGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemSIPDeviceTypeGetListResponse>
     {
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:17348")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaDeviceType;
             set
             {
-                SearchCriteriaDeviceTypeSpecified = true;
+                SearchCriteriaDeviceTypeSpecified = (value != null);
                 _searchCriteriaDeviceType = value;
             }
         }
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactSignalingAddressType;
             set
             {
-                SearchCriteriaExactSignalingAddressTypeSpecified = true;
+                SearchCriteriaExactSignalingAddressTypeSpecified = (value != null);
                 _searchCriteriaExactSignalingAddressType = value;
             }
         }
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaResellerId;
             set
             {
-                SearchCriteriaResellerIdSpecified = true;
+                SearchCriteriaResellerIdSpecified = (value != null);
                 _searchCriteriaResellerId = value;
             }
         }
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaDeviceConfigurationOptions;
             set
             {
-                SearchCriteriaDeviceConfigurationOptionsSpecified = true;
+                SearchCriteriaDeviceConfigurationOptionsSpecified = (value != null);
                 _searchCriteriaDeviceConfigurationOptions = value;
             }
         }
@@ -120,17 +120,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaDeviceConfigurationOptionsSpecified { get; set; }
 
-        protected bool _includeSystemLevel;
+        protected bool? _includeSystemLevel;
 
         [XmlElement(ElementName = "includeSystemLevel", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:17348")]
-        public bool IncludeSystemLevel
+        public bool? IncludeSystemLevel
         {
             get => _includeSystemLevel;
             set
             {
-                IncludeSystemLevelSpecified = true;
+                IncludeSystemLevelSpecified = (value != null);
                 _includeSystemLevel = value;
             }
         }

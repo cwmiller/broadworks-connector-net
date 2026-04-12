@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _firstName;
             set
             {
-                FirstNameSpecified = true;
+                FirstNameSpecified = (value != null);
                 _firstName = value;
             }
         }
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _lastName;
             set
             {
-                LastNameSpecified = true;
+                LastNameSpecified = (value != null);
                 _lastName = value;
             }
         }

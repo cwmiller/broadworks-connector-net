@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _tagValue;
             set
             {
-                TagValueSpecified = true;
+                TagValueSpecified = (value != null);
                 _tagValue = value;
             }
         }
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _tagValueToEncrypt;
             set
             {
-                TagValueToEncryptSpecified = true;
+                TagValueToEncryptSpecified = (value != null);
                 _tagValueToEncrypt = value;
             }
         }

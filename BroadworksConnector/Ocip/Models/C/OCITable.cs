@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models.C
             get => _row;
             set
             {
-                RowSpecified = true;
+                RowSpecified = (value != null);
                 _row = value;
             }
         }

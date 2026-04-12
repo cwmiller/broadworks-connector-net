@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _profile;
             set
             {
-                ProfileSpecified = true;
+                ProfileSpecified = (value != null);
                 _profile = value;
             }
         }

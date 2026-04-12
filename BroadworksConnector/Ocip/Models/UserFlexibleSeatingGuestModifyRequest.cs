@@ -45,17 +45,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:43652")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -63,17 +63,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected bool _enableAssociationLimit;
+        protected bool? _enableAssociationLimit;
 
         [XmlElement(ElementName = "enableAssociationLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:43652")]
-        public bool EnableAssociationLimit
+        public bool? EnableAssociationLimit
         {
             get => _enableAssociationLimit;
             set
             {
-                EnableAssociationLimitSpecified = true;
+                EnableAssociationLimitSpecified = (value != null);
                 _enableAssociationLimit = value;
             }
         }
@@ -81,19 +81,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableAssociationLimitSpecified { get; set; }
 
-        protected int _associationLimitHours;
+        protected int? _associationLimitHours;
 
         [XmlElement(ElementName = "associationLimitHours", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:43652")]
         [MinInclusive(1)]
         [MaxInclusive(999)]
-        public int AssociationLimitHours
+        public int? AssociationLimitHours
         {
             get => _associationLimitHours;
             set
             {
-                AssociationLimitHoursSpecified = true;
+                AssociationLimitHoursSpecified = (value != null);
                 _associationLimitHours = value;
             }
         }

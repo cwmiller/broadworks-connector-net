@@ -52,19 +52,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ActionSpecified { get; set; }
 
-        protected int _callTimeoutSeconds;
+        protected int? _callTimeoutSeconds;
 
         [XmlElement(ElementName = "callTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:1501")]
         [MinInclusive(60)]
         [MaxInclusive(86400)]
-        public int CallTimeoutSeconds
+        public int? CallTimeoutSeconds
         {
             get => _callTimeoutSeconds;
             set
             {
-                CallTimeoutSecondsSpecified = true;
+                CallTimeoutSecondsSpecified = (value != null);
                 _callTimeoutSeconds = value;
             }
         }
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeSchedule;
             set
             {
-                TimeScheduleSpecified = true;
+                TimeScheduleSpecified = (value != null);
                 _timeSchedule = value;
             }
         }
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holidaySchedule;
             set
             {
-                HolidayScheduleSpecified = true;
+                HolidayScheduleSpecified = (value != null);
                 _holidaySchedule = value;
             }
         }

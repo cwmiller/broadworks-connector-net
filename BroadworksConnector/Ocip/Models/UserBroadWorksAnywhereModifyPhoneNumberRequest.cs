@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newPhoneNumber;
             set
             {
-                NewPhoneNumberSpecified = true;
+                NewPhoneNumberSpecified = (value != null);
                 _newPhoneNumber = value;
             }
         }
@@ -100,17 +100,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DescriptionSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"f39163d0e42e05c4a1692a62f625df9f:559")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -138,17 +138,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OutboundAlternateNumberSpecified { get; set; }
 
-        protected bool _broadworksCallControl;
+        protected bool? _broadworksCallControl;
 
         [XmlElement(ElementName = "broadworksCallControl", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"f39163d0e42e05c4a1692a62f625df9f:559")]
-        public bool BroadworksCallControl
+        public bool? BroadworksCallControl
         {
             get => _broadworksCallControl;
             set
             {
-                BroadworksCallControlSpecified = true;
+                BroadworksCallControlSpecified = (value != null);
                 _broadworksCallControl = value;
             }
         }
@@ -156,17 +156,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BroadworksCallControlSpecified { get; set; }
 
-        protected bool _useDiversionInhibitor;
+        protected bool? _useDiversionInhibitor;
 
         [XmlElement(ElementName = "useDiversionInhibitor", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"f39163d0e42e05c4a1692a62f625df9f:559")]
-        public bool UseDiversionInhibitor
+        public bool? UseDiversionInhibitor
         {
             get => _useDiversionInhibitor;
             set
             {
-                UseDiversionInhibitorSpecified = true;
+                UseDiversionInhibitorSpecified = (value != null);
                 _useDiversionInhibitor = value;
             }
         }
@@ -174,17 +174,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseDiversionInhibitorSpecified { get; set; }
 
-        protected bool _answerConfirmationRequired;
+        protected bool? _answerConfirmationRequired;
 
         [XmlElement(ElementName = "answerConfirmationRequired", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"f39163d0e42e05c4a1692a62f625df9f:559")]
-        public bool AnswerConfirmationRequired
+        public bool? AnswerConfirmationRequired
         {
             get => _answerConfirmationRequired;
             set
             {
-                AnswerConfirmationRequiredSpecified = true;
+                AnswerConfirmationRequiredSpecified = (value != null);
                 _answerConfirmationRequired = value;
             }
         }
@@ -202,7 +202,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _criteriaActivation;
             set
             {
-                CriteriaActivationSpecified = true;
+                CriteriaActivationSpecified = (value != null);
                 _criteriaActivation = value;
             }
         }

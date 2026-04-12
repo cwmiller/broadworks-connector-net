@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deviceNameList;
             set
             {
-                DeviceNameListSpecified = true;
+                DeviceNameListSpecified = (value != null);
                 _deviceNameList = value;
             }
         }

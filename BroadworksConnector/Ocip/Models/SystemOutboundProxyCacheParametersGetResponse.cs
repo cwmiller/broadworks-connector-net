@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _dnsTypeDefaultValue;
             set
             {
-                DnsTypeDefaultValueSpecified = true;
+                DnsTypeDefaultValueSpecified = (value != null);
                 _dnsTypeDefaultValue = value;
             }
         }
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _useDnsSrvDefaultValue;
             set
             {
-                UseDnsSrvDefaultValueSpecified = true;
+                UseDnsSrvDefaultValueSpecified = (value != null);
                 _useDnsSrvDefaultValue = value;
             }
         }
@@ -145,7 +145,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _srvPrefixDefaultValue;
             set
             {
-                SrvPrefixDefaultValueSpecified = true;
+                SrvPrefixDefaultValueSpecified = (value != null);
                 _srvPrefixDefaultValue = value;
             }
         }
@@ -165,7 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _outboundProxyDefaultValue;
             set
             {
-                OutboundProxyDefaultValueSpecified = true;
+                OutboundProxyDefaultValueSpecified = (value != null);
                 _outboundProxyDefaultValue = value;
             }
         }
@@ -185,7 +185,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _transportTypeDefaultValue;
             set
             {
-                TransportTypeDefaultValueSpecified = true;
+                TransportTypeDefaultValueSpecified = (value != null);
                 _transportTypeDefaultValue = value;
             }
         }
@@ -205,7 +205,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _secureRtpDefaultValue;
             set
             {
-                SecureRtpDefaultValueSpecified = true;
+                SecureRtpDefaultValueSpecified = (value != null);
                 _secureRtpDefaultValue = value;
             }
         }

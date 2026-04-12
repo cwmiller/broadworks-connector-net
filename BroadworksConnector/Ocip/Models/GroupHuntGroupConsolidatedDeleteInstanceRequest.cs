@@ -45,17 +45,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel _unassignPhoneNumbers;
+        protected BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel? _unassignPhoneNumbers;
 
         [XmlElement(ElementName = "unassignPhoneNumbers", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"781bbab86d937537938d4fe917029d5c:159")]
-        public BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel UnassignPhoneNumbers
+        public BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel? UnassignPhoneNumbers
         {
             get => _unassignPhoneNumbers;
             set
             {
-                UnassignPhoneNumbersSpecified = true;
+                UnassignPhoneNumbersSpecified = (value != null);
                 _unassignPhoneNumbers = value;
             }
         }

@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _configurationFileName;
             set
             {
-                ConfigurationFileNameSpecified = true;
+                ConfigurationFileNameSpecified = (value != null);
                 _configurationFileName = value;
             }
         }
@@ -189,7 +189,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _macFormatInNonRequestURI;
             set
             {
-                MacFormatInNonRequestURISpecified = true;
+                MacFormatInNonRequestURISpecified = (value != null);
                 _macFormatInNonRequestURI = value;
             }
         }
@@ -228,7 +228,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _repositoryUrl;
             set
             {
-                RepositoryUrlSpecified = true;
+                RepositoryUrlSpecified = (value != null);
                 _repositoryUrl = value;
             }
         }
@@ -248,7 +248,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _templateUrl;
             set
             {
-                TemplateUrlSpecified = true;
+                TemplateUrlSpecified = (value != null);
                 _templateUrl = value;
             }
         }

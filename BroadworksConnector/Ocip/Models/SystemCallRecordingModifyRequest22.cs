@@ -27,17 +27,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallRecordingModifyRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _continueCallAfterRecordingFailure;
+        protected bool? _continueCallAfterRecordingFailure;
 
         [XmlElement(ElementName = "continueCallAfterRecordingFailure", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"0731150ec7515df8cd710f04d8f62f66:416")]
-        public bool ContinueCallAfterRecordingFailure
+        public bool? ContinueCallAfterRecordingFailure
         {
             get => _continueCallAfterRecordingFailure;
             set
             {
-                ContinueCallAfterRecordingFailureSpecified = true;
+                ContinueCallAfterRecordingFailureSpecified = (value != null);
                 _continueCallAfterRecordingFailure = value;
             }
         }
@@ -45,19 +45,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ContinueCallAfterRecordingFailureSpecified { get; set; }
 
-        protected int _maxResponseWaitTimeMilliseconds;
+        protected int? _maxResponseWaitTimeMilliseconds;
 
         [XmlElement(ElementName = "maxResponseWaitTimeMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"0731150ec7515df8cd710f04d8f62f66:416")]
         [MinInclusive(50)]
         [MaxInclusive(10000)]
-        public int MaxResponseWaitTimeMilliseconds
+        public int? MaxResponseWaitTimeMilliseconds
         {
             get => _maxResponseWaitTimeMilliseconds;
             set
             {
-                MaxResponseWaitTimeMillisecondsSpecified = true;
+                MaxResponseWaitTimeMillisecondsSpecified = (value != null);
                 _maxResponseWaitTimeMilliseconds = value;
             }
         }
@@ -65,17 +65,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxResponseWaitTimeMillisecondsSpecified { get; set; }
 
-        protected bool _continueCallAfterVideoRecordingFailure;
+        protected bool? _continueCallAfterVideoRecordingFailure;
 
         [XmlElement(ElementName = "continueCallAfterVideoRecordingFailure", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"0731150ec7515df8cd710f04d8f62f66:416")]
-        public bool ContinueCallAfterVideoRecordingFailure
+        public bool? ContinueCallAfterVideoRecordingFailure
         {
             get => _continueCallAfterVideoRecordingFailure;
             set
             {
-                ContinueCallAfterVideoRecordingFailureSpecified = true;
+                ContinueCallAfterVideoRecordingFailureSpecified = (value != null);
                 _continueCallAfterVideoRecordingFailure = value;
             }
         }
@@ -83,17 +83,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ContinueCallAfterVideoRecordingFailureSpecified { get; set; }
 
-        protected bool _useContinueCallAfterRecordingFailureForOnDemandMode;
+        protected bool? _useContinueCallAfterRecordingFailureForOnDemandMode;
 
         [XmlElement(ElementName = "useContinueCallAfterRecordingFailureForOnDemandMode", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"0731150ec7515df8cd710f04d8f62f66:416")]
-        public bool UseContinueCallAfterRecordingFailureForOnDemandMode
+        public bool? UseContinueCallAfterRecordingFailureForOnDemandMode
         {
             get => _useContinueCallAfterRecordingFailureForOnDemandMode;
             set
             {
-                UseContinueCallAfterRecordingFailureForOnDemandModeSpecified = true;
+                UseContinueCallAfterRecordingFailureForOnDemandModeSpecified = (value != null);
                 _useContinueCallAfterRecordingFailureForOnDemandMode = value;
             }
         }
@@ -101,17 +101,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseContinueCallAfterRecordingFailureForOnDemandModeSpecified { get; set; }
 
-        protected bool _useContinueCallAfterRecordingFailureForOnDemandUserInitiatedStartMode;
+        protected bool? _useContinueCallAfterRecordingFailureForOnDemandUserInitiatedStartMode;
 
         [XmlElement(ElementName = "useContinueCallAfterRecordingFailureForOnDemandUserInitiatedStartMode", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"0731150ec7515df8cd710f04d8f62f66:416")]
-        public bool UseContinueCallAfterRecordingFailureForOnDemandUserInitiatedStartMode
+        public bool? UseContinueCallAfterRecordingFailureForOnDemandUserInitiatedStartMode
         {
             get => _useContinueCallAfterRecordingFailureForOnDemandUserInitiatedStartMode;
             set
             {
-                UseContinueCallAfterRecordingFailureForOnDemandUserInitiatedStartModeSpecified = true;
+                UseContinueCallAfterRecordingFailureForOnDemandUserInitiatedStartModeSpecified = (value != null);
                 _useContinueCallAfterRecordingFailureForOnDemandUserInitiatedStartMode = value;
             }
         }
@@ -119,17 +119,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseContinueCallAfterRecordingFailureForOnDemandUserInitiatedStartModeSpecified { get; set; }
 
-        protected bool _restrictCallRecordingProvisioningAccess;
+        protected bool? _restrictCallRecordingProvisioningAccess;
 
         [XmlElement(ElementName = "restrictCallRecordingProvisioningAccess", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"0731150ec7515df8cd710f04d8f62f66:416")]
-        public bool RestrictCallRecordingProvisioningAccess
+        public bool? RestrictCallRecordingProvisioningAccess
         {
             get => _restrictCallRecordingProvisioningAccess;
             set
             {
-                RestrictCallRecordingProvisioningAccessSpecified = true;
+                RestrictCallRecordingProvisioningAccessSpecified = (value != null);
                 _restrictCallRecordingProvisioningAccess = value;
             }
         }

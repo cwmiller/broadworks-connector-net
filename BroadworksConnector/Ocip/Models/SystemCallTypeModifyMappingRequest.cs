@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DigitMapSpecified { get; set; }
 
-        protected bool _ignoreASEmergencyRoute;
+        protected bool? _ignoreASEmergencyRoute;
 
         [XmlElement(ElementName = "ignoreASEmergencyRoute", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5358")]
-        public bool IgnoreASEmergencyRoute
+        public bool? IgnoreASEmergencyRoute
         {
             get => _ignoreASEmergencyRoute;
             set
             {
-                IgnoreASEmergencyRouteSpecified = true;
+                IgnoreASEmergencyRouteSpecified = (value != null);
                 _ignoreASEmergencyRoute = value;
             }
         }

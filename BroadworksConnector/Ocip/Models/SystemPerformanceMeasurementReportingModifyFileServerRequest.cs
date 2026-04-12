@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FtpHostNetAddressSpecified { get; set; }
 
-        protected bool _passiveFTP;
+        protected bool? _passiveFTP;
 
         [XmlElement(ElementName = "passiveFTP", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:28919")]
-        public bool PassiveFTP
+        public bool? PassiveFTP
         {
             get => _passiveFTP;
             set
             {
-                PassiveFTPSpecified = true;
+                PassiveFTPSpecified = (value != null);
                 _passiveFTP = value;
             }
         }

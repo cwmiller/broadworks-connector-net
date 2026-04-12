@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        protected bool _processCbcCarrierSelection;
+        protected bool? _processCbcCarrierSelection;
 
         [XmlElement(ElementName = "processCbcCarrierSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:4727")]
-        public bool ProcessCbcCarrierSelection
+        public bool? ProcessCbcCarrierSelection
         {
             get => _processCbcCarrierSelection;
             set
             {
-                ProcessCbcCarrierSelectionSpecified = true;
+                ProcessCbcCarrierSelectionSpecified = (value != null);
                 _processCbcCarrierSelection = value;
             }
         }

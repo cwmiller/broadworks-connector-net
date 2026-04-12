@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newEntryName;
             set
             {
-                NewEntryNameSpecified = true;
+                NewEntryNameSpecified = (value != null);
                 _newEntryName = value;
             }
         }
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _phoneNumber;
             set
             {
-                PhoneNumberSpecified = true;
+                PhoneNumberSpecified = (value != null);
                 _phoneNumber = value;
             }
         }

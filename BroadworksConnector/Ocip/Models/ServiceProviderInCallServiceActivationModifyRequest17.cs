@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _flashActivationDigits;
             set
             {
-                FlashActivationDigitsSpecified = true;
+                FlashActivationDigitsSpecified = (value != null);
                 _flashActivationDigits = value;
             }
         }
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callTransferActivationDigits;
             set
             {
-                CallTransferActivationDigitsSpecified = true;
+                CallTransferActivationDigitsSpecified = (value != null);
                 _callTransferActivationDigits = value;
             }
         }

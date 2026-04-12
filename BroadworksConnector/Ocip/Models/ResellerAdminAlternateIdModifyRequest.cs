@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newAlternateUserId;
             set
             {
-                NewAlternateUserIdSpecified = true;
+                NewAlternateUserIdSpecified = (value != null);
                 _newAlternateUserId = value;
             }
         }

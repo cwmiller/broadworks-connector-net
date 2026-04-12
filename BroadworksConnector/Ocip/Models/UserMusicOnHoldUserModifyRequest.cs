@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _source;
             set
             {
-                SourceSpecified = true;
+                SourceSpecified = (value != null);
                 _source = value;
             }
         }
@@ -59,17 +59,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SourceSpecified { get; set; }
 
-        protected bool _useAlternateSourceForInternalCalls;
+        protected bool? _useAlternateSourceForInternalCalls;
 
         [XmlElement(ElementName = "useAlternateSourceForInternalCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:46196")]
-        public bool UseAlternateSourceForInternalCalls
+        public bool? UseAlternateSourceForInternalCalls
         {
             get => _useAlternateSourceForInternalCalls;
             set
             {
-                UseAlternateSourceForInternalCallsSpecified = true;
+                UseAlternateSourceForInternalCallsSpecified = (value != null);
                 _useAlternateSourceForInternalCalls = value;
             }
         }
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _internalSource;
             set
             {
-                InternalSourceSpecified = true;
+                InternalSourceSpecified = (value != null);
                 _internalSource = value;
             }
         }

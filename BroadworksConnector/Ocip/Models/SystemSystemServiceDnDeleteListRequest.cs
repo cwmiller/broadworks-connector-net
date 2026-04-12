@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _phoneNumber;
             set
             {
-                PhoneNumberSpecified = true;
+                PhoneNumberSpecified = (value != null);
                 _phoneNumber = value;
             }
         }
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _dnRange;
             set
             {
-                DnRangeSpecified = true;
+                DnRangeSpecified = (value != null);
                 _dnRange = value;
             }
         }

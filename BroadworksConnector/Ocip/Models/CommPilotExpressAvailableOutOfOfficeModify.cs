@@ -26,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _incomingCalls;
             set
             {
-                IncomingCallsSpecified = true;
+                IncomingCallsSpecified = (value != null);
                 _incomingCalls = value;
             }
         }
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _incomingCallNotify;
             set
             {
-                IncomingCallNotifySpecified = true;
+                IncomingCallNotifySpecified = (value != null);
                 _incomingCallNotify = value;
             }
         }

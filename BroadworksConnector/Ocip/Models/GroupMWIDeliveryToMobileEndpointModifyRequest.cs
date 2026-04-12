@@ -59,17 +59,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointGroupSettingLevel _useSettingLevel;
+        protected BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointGroupSettingLevel? _useSettingLevel;
 
         [XmlElement(ElementName = "useSettingLevel", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:191")]
-        public BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointGroupSettingLevel UseSettingLevel
+        public BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointGroupSettingLevel? UseSettingLevel
         {
             get => _useSettingLevel;
             set
             {
-                UseSettingLevelSpecified = true;
+                UseSettingLevelSpecified = (value != null);
                 _useSettingLevel = value;
             }
         }
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _templateActivation;
             set
             {
-                TemplateActivationSpecified = true;
+                TemplateActivationSpecified = (value != null);
                 _templateActivation = value;
             }
         }

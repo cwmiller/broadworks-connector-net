@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _finishEnteringNewDestinationNumber;
             set
             {
-                FinishEnteringNewDestinationNumberSpecified = true;
+                FinishEnteringNewDestinationNumberSpecified = (value != null);
                 _finishEnteringNewDestinationNumber = value;
             }
         }

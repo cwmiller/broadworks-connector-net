@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupServer;
             set
             {
-                GroupServerSpecified = true;
+                GroupServerSpecified = (value != null);
                 _groupServer = value;
             }
         }

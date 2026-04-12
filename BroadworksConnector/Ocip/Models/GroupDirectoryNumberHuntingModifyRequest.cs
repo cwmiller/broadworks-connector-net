@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AgentUserIdListSpecified { get; set; }
 
-        protected bool _useTerminateCallToAgentFirst;
+        protected bool? _useTerminateCallToAgentFirst;
 
         [XmlElement(ElementName = "useTerminateCallToAgentFirst", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"98227cfa4fa3d2af84e4bff7d8508ae7:119")]
-        public bool UseTerminateCallToAgentFirst
+        public bool? UseTerminateCallToAgentFirst
         {
             get => _useTerminateCallToAgentFirst;
             set
             {
-                UseTerminateCallToAgentFirstSpecified = true;
+                UseTerminateCallToAgentFirstSpecified = (value != null);
                 _useTerminateCallToAgentFirst = value;
             }
         }
@@ -74,17 +74,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseTerminateCallToAgentFirstSpecified { get; set; }
 
-        protected bool _useOriginalAgentServicesForBusyAndNoAnswerCalls;
+        protected bool? _useOriginalAgentServicesForBusyAndNoAnswerCalls;
 
         [XmlElement(ElementName = "useOriginalAgentServicesForBusyAndNoAnswerCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"98227cfa4fa3d2af84e4bff7d8508ae7:119")]
-        public bool UseOriginalAgentServicesForBusyAndNoAnswerCalls
+        public bool? UseOriginalAgentServicesForBusyAndNoAnswerCalls
         {
             get => _useOriginalAgentServicesForBusyAndNoAnswerCalls;
             set
             {
-                UseOriginalAgentServicesForBusyAndNoAnswerCallsSpecified = true;
+                UseOriginalAgentServicesForBusyAndNoAnswerCallsSpecified = (value != null);
                 _useOriginalAgentServicesForBusyAndNoAnswerCalls = value;
             }
         }

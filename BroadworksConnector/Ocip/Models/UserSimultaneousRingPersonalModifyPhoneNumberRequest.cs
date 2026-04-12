@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PhoneNumberSpecified { get; set; }
 
-        protected bool _answerConfirmationRequired;
+        protected bool? _answerConfirmationRequired;
 
         [XmlElement(ElementName = "answerConfirmationRequired", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:47450")]
-        public bool AnswerConfirmationRequired
+        public bool? AnswerConfirmationRequired
         {
             get => _answerConfirmationRequired;
             set
             {
-                AnswerConfirmationRequiredSpecified = true;
+                AnswerConfirmationRequiredSpecified = (value != null);
                 _answerConfirmationRequired = value;
             }
         }

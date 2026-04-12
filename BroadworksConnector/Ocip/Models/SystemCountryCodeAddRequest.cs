@@ -64,19 +64,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CountryNameSpecified { get; set; }
 
-        protected int _ringPeriodMilliseconds;
+        protected int? _ringPeriodMilliseconds;
 
         [XmlElement(ElementName = "ringPeriodMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6971")]
         [MinInclusive(1)]
         [MaxInclusive(12000)]
-        public int RingPeriodMilliseconds
+        public int? RingPeriodMilliseconds
         {
             get => _ringPeriodMilliseconds;
             set
             {
-                RingPeriodMillisecondsSpecified = true;
+                RingPeriodMillisecondsSpecified = (value != null);
                 _ringPeriodMilliseconds = value;
             }
         }
@@ -84,19 +84,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RingPeriodMillisecondsSpecified { get; set; }
 
-        protected int _offHookWarningTimerSeconds;
+        protected int? _offHookWarningTimerSeconds;
 
         [XmlElement(ElementName = "offHookWarningTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6971")]
         [MinInclusive(1)]
         [MaxInclusive(360)]
-        public int OffHookWarningTimerSeconds
+        public int? OffHookWarningTimerSeconds
         {
             get => _offHookWarningTimerSeconds;
             set
             {
-                OffHookWarningTimerSecondsSpecified = true;
+                OffHookWarningTimerSecondsSpecified = (value != null);
                 _offHookWarningTimerSeconds = value;
             }
         }
@@ -104,17 +104,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OffHookWarningTimerSecondsSpecified { get; set; }
 
-        protected bool _enableNationalPrefix;
+        protected bool? _enableNationalPrefix;
 
         [XmlElement(ElementName = "enableNationalPrefix", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6971")]
-        public bool EnableNationalPrefix
+        public bool? EnableNationalPrefix
         {
             get => _enableNationalPrefix;
             set
             {
-                EnableNationalPrefixSpecified = true;
+                EnableNationalPrefixSpecified = (value != null);
                 _enableNationalPrefix = value;
             }
         }
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _nationalPrefix;
             set
             {
-                NationalPrefixSpecified = true;
+                NationalPrefixSpecified = (value != null);
                 _nationalPrefix = value;
             }
         }
@@ -142,19 +142,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NationalPrefixSpecified { get; set; }
 
-        protected int _maxCallWaitingTones;
+        protected int? _maxCallWaitingTones;
 
         [XmlElement(ElementName = "maxCallWaitingTones", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6971")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
-        public int MaxCallWaitingTones
+        public int? MaxCallWaitingTones
         {
             get => _maxCallWaitingTones;
             set
             {
-                MaxCallWaitingTonesSpecified = true;
+                MaxCallWaitingTonesSpecified = (value != null);
                 _maxCallWaitingTones = value;
             }
         }
@@ -162,19 +162,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxCallWaitingTonesSpecified { get; set; }
 
-        protected int _timeBetweenCallWaitingTonesMilliseconds;
+        protected int? _timeBetweenCallWaitingTonesMilliseconds;
 
         [XmlElement(ElementName = "timeBetweenCallWaitingTonesMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6971")]
         [MinInclusive(0)]
         [MaxInclusive(120000)]
-        public int TimeBetweenCallWaitingTonesMilliseconds
+        public int? TimeBetweenCallWaitingTonesMilliseconds
         {
             get => _timeBetweenCallWaitingTonesMilliseconds;
             set
             {
-                TimeBetweenCallWaitingTonesMillisecondsSpecified = true;
+                TimeBetweenCallWaitingTonesMillisecondsSpecified = (value != null);
                 _timeBetweenCallWaitingTonesMilliseconds = value;
             }
         }
@@ -182,17 +182,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TimeBetweenCallWaitingTonesMillisecondsSpecified { get; set; }
 
-        protected bool _disableNationalPrefixForOffNetCalls;
+        protected bool? _disableNationalPrefixForOffNetCalls;
 
         [XmlElement(ElementName = "disableNationalPrefixForOffNetCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6971")]
-        public bool DisableNationalPrefixForOffNetCalls
+        public bool? DisableNationalPrefixForOffNetCalls
         {
             get => _disableNationalPrefixForOffNetCalls;
             set
             {
-                DisableNationalPrefixForOffNetCallsSpecified = true;
+                DisableNationalPrefixForOffNetCallsSpecified = (value != null);
                 _disableNationalPrefixForOffNetCalls = value;
             }
         }

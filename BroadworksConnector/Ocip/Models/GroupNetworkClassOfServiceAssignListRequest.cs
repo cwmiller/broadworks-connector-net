@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkClassOfService;
             set
             {
-                NetworkClassOfServiceSpecified = true;
+                NetworkClassOfServiceSpecified = (value != null);
                 _networkClassOfService = value;
             }
         }
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultNetworkClassOfService;
             set
             {
-                DefaultNetworkClassOfServiceSpecified = true;
+                DefaultNetworkClassOfServiceSpecified = (value != null);
                 _defaultNetworkClassOfService = value;
             }
         }

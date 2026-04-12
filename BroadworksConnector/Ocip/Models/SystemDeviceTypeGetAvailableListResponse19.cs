@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deviceType;
             set
             {
-                DeviceTypeSpecified = true;
+                DeviceTypeSpecified = (value != null);
                 _deviceType = value;
             }
         }
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _typeInfo;
             set
             {
-                TypeInfoSpecified = true;
+                TypeInfoSpecified = (value != null);
                 _typeInfo = value;
             }
         }

@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _transferNumbers;
             set
             {
-                TransferNumbersSpecified = true;
+                TransferNumbersSpecified = (value != null);
                 _transferNumbers = value;
             }
         }

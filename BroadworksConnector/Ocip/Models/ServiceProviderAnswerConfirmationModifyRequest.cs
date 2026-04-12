@@ -40,17 +40,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AnswerConfirmationAnnouncementSelection _announcementMessageSelection;
+        protected BroadWorksConnector.Ocip.Models.AnswerConfirmationAnnouncementSelection? _announcementMessageSelection;
 
         [XmlElement(ElementName = "announcementMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:17797")]
-        public BroadWorksConnector.Ocip.Models.AnswerConfirmationAnnouncementSelection AnnouncementMessageSelection
+        public BroadWorksConnector.Ocip.Models.AnswerConfirmationAnnouncementSelection? AnnouncementMessageSelection
         {
             get => _announcementMessageSelection;
             set
             {
-                AnnouncementMessageSelectionSpecified = true;
+                AnnouncementMessageSelectionSpecified = (value != null);
                 _announcementMessageSelection = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _confirmationMessageAudioFile;
             set
             {
-                ConfirmationMessageAudioFileSpecified = true;
+                ConfirmationMessageAudioFileSpecified = (value != null);
                 _confirmationMessageAudioFile = value;
             }
         }
@@ -76,19 +76,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConfirmationMessageAudioFileSpecified { get; set; }
 
-        protected int _confirmationTimoutSeconds;
+        protected int? _confirmationTimoutSeconds;
 
         [XmlElement(ElementName = "confirmationTimoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:17797")]
         [MinInclusive(2)]
         [MaxInclusive(30)]
-        public int ConfirmationTimoutSeconds
+        public int? ConfirmationTimoutSeconds
         {
             get => _confirmationTimoutSeconds;
             set
             {
-                ConfirmationTimoutSecondsSpecified = true;
+                ConfirmationTimoutSecondsSpecified = (value != null);
                 _confirmationTimoutSeconds = value;
             }
         }

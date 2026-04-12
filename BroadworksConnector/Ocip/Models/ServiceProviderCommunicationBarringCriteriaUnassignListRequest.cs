@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _criteriaName;
             set
             {
-                CriteriaNameSpecified = true;
+                CriteriaNameSpecified = (value != null);
                 _criteriaName = value;
             }
         }

@@ -78,18 +78,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnterpriseTrunkNameSpecified { get; set; }
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:867")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaUserLastName;
             set
             {
-                SearchCriteriaUserLastNameSpecified = true;
+                SearchCriteriaUserLastNameSpecified = (value != null);
                 _searchCriteriaUserLastName = value;
             }
         }
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaUserFirstName;
             set
             {
-                SearchCriteriaUserFirstNameSpecified = true;
+                SearchCriteriaUserFirstNameSpecified = (value != null);
                 _searchCriteriaUserFirstName = value;
             }
         }
@@ -143,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaDn;
             set
             {
-                SearchCriteriaDnSpecified = true;
+                SearchCriteriaDnSpecified = (value != null);
                 _searchCriteriaDn = value;
             }
         }
@@ -161,7 +161,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaUserId;
             set
             {
-                SearchCriteriaUserIdSpecified = true;
+                SearchCriteriaUserIdSpecified = (value != null);
                 _searchCriteriaUserId = value;
             }
         }
@@ -179,7 +179,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaGroupId;
             set
             {
-                SearchCriteriaGroupIdSpecified = true;
+                SearchCriteriaGroupIdSpecified = (value != null);
                 _searchCriteriaGroupId = value;
             }
         }
@@ -197,7 +197,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaAlternateTrunkIdentity;
             set
             {
-                SearchCriteriaAlternateTrunkIdentitySpecified = true;
+                SearchCriteriaAlternateTrunkIdentitySpecified = (value != null);
                 _searchCriteriaAlternateTrunkIdentity = value;
             }
         }
@@ -215,7 +215,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaAlternateTrunkIdentityDomain;
             set
             {
-                SearchCriteriaAlternateTrunkIdentityDomainSpecified = true;
+                SearchCriteriaAlternateTrunkIdentityDomainSpecified = (value != null);
                 _searchCriteriaAlternateTrunkIdentityDomain = value;
             }
         }
@@ -233,7 +233,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExtension;
             set
             {
-                SearchCriteriaExtensionSpecified = true;
+                SearchCriteriaExtensionSpecified = (value != null);
                 _searchCriteriaExtension = value;
             }
         }
@@ -251,7 +251,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactUserDepartment;
             set
             {
-                SearchCriteriaExactUserDepartmentSpecified = true;
+                SearchCriteriaExactUserDepartmentSpecified = (value != null);
                 _searchCriteriaExactUserDepartment = value;
             }
         }
@@ -269,7 +269,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactUserRouteListAssigned;
             set
             {
-                SearchCriteriaExactUserRouteListAssignedSpecified = true;
+                SearchCriteriaExactUserRouteListAssignedSpecified = (value != null);
                 _searchCriteriaExactUserRouteListAssigned = value;
             }
         }

@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _pushNotificationEventParameters;
             set
             {
-                PushNotificationEventParametersSpecified = true;
+                PushNotificationEventParametersSpecified = (value != null);
                 _pushNotificationEventParameters = value;
             }
         }
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _mobileNumber;
             set
             {
-                MobileNumberSpecified = true;
+                MobileNumberSpecified = (value != null);
                 _mobileNumber = value;
             }
         }

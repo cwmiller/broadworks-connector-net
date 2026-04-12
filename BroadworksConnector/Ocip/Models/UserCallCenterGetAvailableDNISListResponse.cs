@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _availableDNIS;
             set
             {
-                AvailableDNISSpecified = true;
+                AvailableDNISSpecified = (value != null);
                 _availableDNIS = value;
             }
         }

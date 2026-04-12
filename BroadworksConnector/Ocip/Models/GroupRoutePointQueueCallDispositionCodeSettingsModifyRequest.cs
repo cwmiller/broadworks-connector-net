@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        protected bool _enableCallDispositionCodes;
+        protected bool? _enableCallDispositionCodes;
 
         [XmlElement(ElementName = "enableCallDispositionCodes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e474d11df9a1d1d1041e589793e40de8:1196")]
-        public bool EnableCallDispositionCodes
+        public bool? EnableCallDispositionCodes
         {
             get => _enableCallDispositionCodes;
             set
             {
-                EnableCallDispositionCodesSpecified = true;
+                EnableCallDispositionCodesSpecified = (value != null);
                 _enableCallDispositionCodes = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableCallDispositionCodesSpecified { get; set; }
 
-        protected bool _includeOrganizationCodes;
+        protected bool? _includeOrganizationCodes;
 
         [XmlElement(ElementName = "includeOrganizationCodes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e474d11df9a1d1d1041e589793e40de8:1196")]
-        public bool IncludeOrganizationCodes
+        public bool? IncludeOrganizationCodes
         {
             get => _includeOrganizationCodes;
             set
             {
-                IncludeOrganizationCodesSpecified = true;
+                IncludeOrganizationCodesSpecified = (value != null);
                 _includeOrganizationCodes = value;
             }
         }
@@ -74,17 +74,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeOrganizationCodesSpecified { get; set; }
 
-        protected bool _forceUseOfCallDispositionCodes;
+        protected bool? _forceUseOfCallDispositionCodes;
 
         [XmlElement(ElementName = "forceUseOfCallDispositionCodes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e474d11df9a1d1d1041e589793e40de8:1196")]
-        public bool ForceUseOfCallDispositionCodes
+        public bool? ForceUseOfCallDispositionCodes
         {
             get => _forceUseOfCallDispositionCodes;
             set
             {
-                ForceUseOfCallDispositionCodesSpecified = true;
+                ForceUseOfCallDispositionCodesSpecified = (value != null);
                 _forceUseOfCallDispositionCodes = value;
             }
         }
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callDispositionCodeActivation;
             set
             {
-                CallDispositionCodeActivationSpecified = true;
+                CallDispositionCodeActivationSpecified = (value != null);
                 _callDispositionCodeActivation = value;
             }
         }

@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _description;
             set
             {
-                DescriptionSpecified = true;
+                DescriptionSpecified = (value != null);
                 _description = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _phoneNumber;
             set
             {
-                PhoneNumberSpecified = true;
+                PhoneNumberSpecified = (value != null);
                 _phoneNumber = value;
             }
         }
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _audioFile;
             set
             {
-                AudioFileSpecified = true;
+                AudioFileSpecified = (value != null);
                 _audioFile = value;
             }
         }
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _videoFile;
             set
             {
-                VideoFileSpecified = true;
+                VideoFileSpecified = (value != null);
                 _videoFile = value;
             }
         }

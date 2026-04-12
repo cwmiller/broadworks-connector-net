@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemVoiceMessageSummaryUpdateModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _sendSavedAndUrgentMWIOnNotification;
+        protected bool? _sendSavedAndUrgentMWIOnNotification;
 
         [XmlElement(ElementName = "sendSavedAndUrgentMWIOnNotification", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:568")]
-        public bool SendSavedAndUrgentMWIOnNotification
+        public bool? SendSavedAndUrgentMWIOnNotification
         {
             get => _sendSavedAndUrgentMWIOnNotification;
             set
             {
-                SendSavedAndUrgentMWIOnNotificationSpecified = true;
+                SendSavedAndUrgentMWIOnNotificationSpecified = (value != null);
                 _sendSavedAndUrgentMWIOnNotification = value;
             }
         }
@@ -37,17 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SendSavedAndUrgentMWIOnNotificationSpecified { get; set; }
 
-        protected bool _sendMessageSummaryUpdateOnRegister;
+        protected bool? _sendMessageSummaryUpdateOnRegister;
 
         [XmlElement(ElementName = "sendMessageSummaryUpdateOnRegister", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:568")]
-        public bool SendMessageSummaryUpdateOnRegister
+        public bool? SendMessageSummaryUpdateOnRegister
         {
             get => _sendMessageSummaryUpdateOnRegister;
             set
             {
-                SendMessageSummaryUpdateOnRegisterSpecified = true;
+                SendMessageSummaryUpdateOnRegisterSpecified = (value != null);
                 _sendMessageSummaryUpdateOnRegister = value;
             }
         }
@@ -55,19 +55,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SendMessageSummaryUpdateOnRegisterSpecified { get; set; }
 
-        protected int _minTimeBetweenMWIOnRegister;
+        protected int? _minTimeBetweenMWIOnRegister;
 
         [XmlElement(ElementName = "minTimeBetweenMWIOnRegister", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:568")]
         [MinInclusive(0)]
         [MaxInclusive(86400)]
-        public int MinTimeBetweenMWIOnRegister
+        public int? MinTimeBetweenMWIOnRegister
         {
             get => _minTimeBetweenMWIOnRegister;
             set
             {
-                MinTimeBetweenMWIOnRegisterSpecified = true;
+                MinTimeBetweenMWIOnRegisterSpecified = (value != null);
                 _minTimeBetweenMWIOnRegister = value;
             }
         }
@@ -75,17 +75,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MinTimeBetweenMWIOnRegisterSpecified { get; set; }
 
-        protected bool _allowMultipleUsersPerAccount;
+        protected bool? _allowMultipleUsersPerAccount;
 
         [XmlElement(ElementName = "allowMultipleUsersPerAccount", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:568")]
-        public bool AllowMultipleUsersPerAccount
+        public bool? AllowMultipleUsersPerAccount
         {
             get => _allowMultipleUsersPerAccount;
             set
             {
-                AllowMultipleUsersPerAccountSpecified = true;
+                AllowMultipleUsersPerAccountSpecified = (value != null);
                 _allowMultipleUsersPerAccount = value;
             }
         }

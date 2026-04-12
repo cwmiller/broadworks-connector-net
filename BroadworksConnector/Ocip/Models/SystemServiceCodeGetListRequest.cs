@@ -21,18 +21,18 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemServiceCodeGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemServiceCodeGetListResponse>
     {
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:16323")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaServiceCode;
             set
             {
-                SearchCriteriaServiceCodeSpecified = true;
+                SearchCriteriaServiceCodeSpecified = (value != null);
                 _searchCriteriaServiceCode = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaServiceCodeDescription;
             set
             {
-                SearchCriteriaServiceCodeDescriptionSpecified = true;
+                SearchCriteriaServiceCodeDescriptionSpecified = (value != null);
                 _searchCriteriaServiceCodeDescription = value;
             }
         }

@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupDepartmentName;
             set
             {
-                GroupDepartmentNameSpecified = true;
+                GroupDepartmentNameSpecified = (value != null);
                 _groupDepartmentName = value;
             }
         }
@@ -79,18 +79,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupDepartmentNameSpecified { get; set; }
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e474d11df9a1d1d1041e589793e40de8:564")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaRoutePointName;
             set
             {
-                SearchCriteriaRoutePointNameSpecified = true;
+                SearchCriteriaRoutePointNameSpecified = (value != null);
                 _searchCriteriaRoutePointName = value;
             }
         }

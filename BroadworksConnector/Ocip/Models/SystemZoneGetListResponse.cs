@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _zoneName;
             set
             {
-                ZoneNameSpecified = true;
+                ZoneNameSpecified = (value != null);
                 _zoneName = value;
             }
         }

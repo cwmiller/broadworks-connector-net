@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _routePointExternalSystem;
             set
             {
-                RoutePointExternalSystemSpecified = true;
+                RoutePointExternalSystemSpecified = (value != null);
                 _routePointExternalSystem = value;
             }
         }

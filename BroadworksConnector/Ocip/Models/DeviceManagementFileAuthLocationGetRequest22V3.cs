@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _accessDeviceUserName;
             set
             {
-                AccessDeviceUserNameSpecified = true;
+                AccessDeviceUserNameSpecified = (value != null);
                 _accessDeviceUserName = value;
             }
         }
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _accessDeviceUserPassword;
             set
             {
-                AccessDeviceUserPasswordSpecified = true;
+                AccessDeviceUserPasswordSpecified = (value != null);
                 _accessDeviceUserPassword = value;
             }
         }
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deviceToken;
             set
             {
-                DeviceTokenSpecified = true;
+                DeviceTokenSpecified = (value != null);
                 _deviceToken = value;
             }
         }
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _signedPassword;
             set
             {
-                SignedPasswordSpecified = true;
+                SignedPasswordSpecified = (value != null);
                 _signedPassword = value;
             }
         }
@@ -170,7 +170,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _macAddress;
             set
             {
-                MacAddressSpecified = true;
+                MacAddressSpecified = (value != null);
                 _macAddress = value;
             }
         }
@@ -190,7 +190,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _realmName;
             set
             {
-                RealmNameSpecified = true;
+                RealmNameSpecified = (value != null);
                 _realmName = value;
             }
         }
@@ -210,7 +210,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _digestHa1Complement;
             set
             {
-                DigestHa1ComplementSpecified = true;
+                DigestHa1ComplementSpecified = (value != null);
                 _digestHa1Complement = value;
             }
         }
@@ -230,7 +230,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _digestResponse;
             set
             {
-                DigestResponseSpecified = true;
+                DigestResponseSpecified = (value != null);
                 _digestResponse = value;
             }
         }
@@ -238,17 +238,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DigestResponseSpecified { get; set; }
 
-        protected bool _fileNameLookup;
+        protected bool? _fileNameLookup;
 
         [XmlElement(ElementName = "fileNameLookup", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:1665")]
-        public bool FileNameLookup
+        public bool? FileNameLookup
         {
             get => _fileNameLookup;
             set
             {
-                FileNameLookupSpecified = true;
+                FileNameLookupSpecified = (value != null);
                 _fileNameLookup = value;
             }
         }
@@ -268,7 +268,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _fileNameOnDisk;
             set
             {
-                FileNameOnDiskSpecified = true;
+                FileNameOnDiskSpecified = (value != null);
                 _fileNameOnDisk = value;
             }
         }

@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _scfSignalingNetAddress;
             set
             {
-                ScfSignalingNetAddressSpecified = true;
+                ScfSignalingNetAddressSpecified = (value != null);
                 _scfSignalingNetAddress = value;
             }
         }
@@ -37,19 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ScfSignalingNetAddressSpecified { get; set; }
 
-        protected int _scfSignalingPort;
+        protected int? _scfSignalingPort;
 
         [XmlElement(ElementName = "scfSignalingPort", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1154")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
-        public int ScfSignalingPort
+        public int? ScfSignalingPort
         {
             get => _scfSignalingPort;
             set
             {
-                ScfSignalingPortSpecified = true;
+                ScfSignalingPortSpecified = (value != null);
                 _scfSignalingPort = value;
             }
         }
@@ -143,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceAccessCodeListName;
             set
             {
-                ServiceAccessCodeListNameSpecified = true;
+                ServiceAccessCodeListNameSpecified = (value != null);
                 _serviceAccessCodeListName = value;
             }
         }

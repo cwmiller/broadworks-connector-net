@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _transferPhoneNumber;
             set
             {
-                TransferPhoneNumberSpecified = true;
+                TransferPhoneNumberSpecified = (value != null);
                 _transferPhoneNumber = value;
             }
         }
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _audioUrlList;
             set
             {
-                AudioUrlListSpecified = true;
+                AudioUrlListSpecified = (value != null);
                 _audioUrlList = value;
             }
         }
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _audioFileList;
             set
             {
-                AudioFileListSpecified = true;
+                AudioFileListSpecified = (value != null);
                 _audioFileList = value;
             }
         }
@@ -170,7 +170,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _audioMediaTypeList;
             set
             {
-                AudioMediaTypeListSpecified = true;
+                AudioMediaTypeListSpecified = (value != null);
                 _audioMediaTypeList = value;
             }
         }
@@ -178,17 +178,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioMediaTypeListSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoMessageSelection;
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? _videoMessageSelection;
 
         [XmlElement(ElementName = "videoMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:2224")]
-        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection VideoMessageSelection
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? VideoMessageSelection
         {
             get => _videoMessageSelection;
             set
             {
-                VideoMessageSelectionSpecified = true;
+                VideoMessageSelectionSpecified = (value != null);
                 _videoMessageSelection = value;
             }
         }
@@ -206,7 +206,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _videoUrlList;
             set
             {
-                VideoUrlListSpecified = true;
+                VideoUrlListSpecified = (value != null);
                 _videoUrlList = value;
             }
         }
@@ -224,7 +224,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _videoFileList;
             set
             {
-                VideoFileListSpecified = true;
+                VideoFileListSpecified = (value != null);
                 _videoFileList = value;
             }
         }
@@ -242,7 +242,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _videoMediaTypeList;
             set
             {
-                VideoMediaTypeListSpecified = true;
+                VideoMediaTypeListSpecified = (value != null);
                 _videoMediaTypeList = value;
             }
         }

@@ -41,19 +41,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        protected int _maximumTargetUsers;
+        protected int? _maximumTargetUsers;
 
         [XmlElement(ElementName = "maximumTargetUsers", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:6895")]
         [MinInclusive(1)]
         [MaxInclusive(149)]
-        public int MaximumTargetUsers
+        public int? MaximumTargetUsers
         {
             get => _maximumTargetUsers;
             set
             {
-                MaximumTargetUsersSpecified = true;
+                MaximumTargetUsersSpecified = (value != null);
                 _maximumTargetUsers = value;
             }
         }

@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callingLineIdPhoneNumber;
             set
             {
-                CallingLineIdPhoneNumberSpecified = true;
+                CallingLineIdPhoneNumberSpecified = (value != null);
                 _callingLineIdPhoneNumber = value;
             }
         }
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callingLineIdName;
             set
             {
-                CallingLineIdNameSpecified = true;
+                CallingLineIdNameSpecified = (value != null);
                 _callingLineIdName = value;
             }
         }

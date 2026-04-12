@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice19 _reportingServer;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice19? _reportingServer;
 
         [XmlElement(ElementName = "reportingServer", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:3406")]
-        public BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice19 ReportingServer
+        public BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice19? ReportingServer
         {
             get => _reportingServer;
             set
             {
-                ReportingServerSpecified = true;
+                ReportingServerSpecified = (value != null);
                 _reportingServer = value;
             }
         }

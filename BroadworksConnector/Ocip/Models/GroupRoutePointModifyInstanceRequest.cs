@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceInstanceProfile;
             set
             {
-                ServiceInstanceProfileSpecified = true;
+                ServiceInstanceProfileSpecified = (value != null);
                 _serviceInstanceProfile = value;
             }
         }
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkClassOfService;
             set
             {
-                NetworkClassOfServiceSpecified = true;
+                NetworkClassOfServiceSpecified = (value != null);
                 _networkClassOfService = value;
             }
         }
@@ -78,17 +78,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetworkClassOfServiceSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AudioFileCodec _externalPreferredAudioCodec;
+        protected BroadWorksConnector.Ocip.Models.AudioFileCodec? _externalPreferredAudioCodec;
 
         [XmlElement(ElementName = "externalPreferredAudioCodec", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:4481")]
-        public BroadWorksConnector.Ocip.Models.AudioFileCodec ExternalPreferredAudioCodec
+        public BroadWorksConnector.Ocip.Models.AudioFileCodec? ExternalPreferredAudioCodec
         {
             get => _externalPreferredAudioCodec;
             set
             {
-                ExternalPreferredAudioCodecSpecified = true;
+                ExternalPreferredAudioCodecSpecified = (value != null);
                 _externalPreferredAudioCodec = value;
             }
         }
@@ -96,17 +96,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExternalPreferredAudioCodecSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AudioFileCodec _internalPreferredAudioCodec;
+        protected BroadWorksConnector.Ocip.Models.AudioFileCodec? _internalPreferredAudioCodec;
 
         [XmlElement(ElementName = "internalPreferredAudioCodec", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:4481")]
-        public BroadWorksConnector.Ocip.Models.AudioFileCodec InternalPreferredAudioCodec
+        public BroadWorksConnector.Ocip.Models.AudioFileCodec? InternalPreferredAudioCodec
         {
             get => _internalPreferredAudioCodec;
             set
             {
-                InternalPreferredAudioCodecSpecified = true;
+                InternalPreferredAudioCodecSpecified = (value != null);
                 _internalPreferredAudioCodec = value;
             }
         }
@@ -114,19 +114,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool InternalPreferredAudioCodecSpecified { get; set; }
 
-        protected int _queueLength;
+        protected int? _queueLength;
 
         [XmlElement(ElementName = "queueLength", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:4481")]
         [MinInclusive(0)]
         [MaxInclusive(525)]
-        public int QueueLength
+        public int? QueueLength
         {
             get => _queueLength;
             set
             {
-                QueueLengthSpecified = true;
+                QueueLengthSpecified = (value != null);
                 _queueLength = value;
             }
         }
@@ -134,19 +134,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool QueueLengthSpecified { get; set; }
 
-        protected int _noAnswerTimeoutRings;
+        protected int? _noAnswerTimeoutRings;
 
         [XmlElement(ElementName = "noAnswerTimeoutRings", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:4481")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
-        public int NoAnswerTimeoutRings
+        public int? NoAnswerTimeoutRings
         {
             get => _noAnswerTimeoutRings;
             set
             {
-                NoAnswerTimeoutRingsSpecified = true;
+                NoAnswerTimeoutRingsSpecified = (value != null);
                 _noAnswerTimeoutRings = value;
             }
         }
@@ -154,17 +154,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NoAnswerTimeoutRingsSpecified { get; set; }
 
-        protected bool _enableVideo;
+        protected bool? _enableVideo;
 
         [XmlElement(ElementName = "enableVideo", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:4481")]
-        public bool EnableVideo
+        public bool? EnableVideo
         {
             get => _enableVideo;
             set
             {
-                EnableVideoSpecified = true;
+                EnableVideoSpecified = (value != null);
                 _enableVideo = value;
             }
         }
@@ -172,17 +172,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableVideoSpecified { get; set; }
 
-        protected bool _playRingingWhenOfferingCall;
+        protected bool? _playRingingWhenOfferingCall;
 
         [XmlElement(ElementName = "playRingingWhenOfferingCall", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:4481")]
-        public bool PlayRingingWhenOfferingCall
+        public bool? PlayRingingWhenOfferingCall
         {
             get => _playRingingWhenOfferingCall;
             set
             {
-                PlayRingingWhenOfferingCallSpecified = true;
+                PlayRingingWhenOfferingCallSpecified = (value != null);
                 _playRingingWhenOfferingCall = value;
             }
         }
@@ -190,17 +190,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PlayRingingWhenOfferingCallSpecified { get; set; }
 
-        protected bool _overrideAgentWrapUpTime;
+        protected bool? _overrideAgentWrapUpTime;
 
         [XmlElement(ElementName = "overrideAgentWrapUpTime", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:4481")]
-        public bool OverrideAgentWrapUpTime
+        public bool? OverrideAgentWrapUpTime
         {
             get => _overrideAgentWrapUpTime;
             set
             {
-                OverrideAgentWrapUpTimeSpecified = true;
+                OverrideAgentWrapUpTimeSpecified = (value != null);
                 _overrideAgentWrapUpTime = value;
             }
         }
@@ -228,17 +228,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool WrapUpSecondsSpecified { get; set; }
 
-        protected bool _enableAutomaticStateChangeForAgents;
+        protected bool? _enableAutomaticStateChangeForAgents;
 
         [XmlElement(ElementName = "enableAutomaticStateChangeForAgents", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:4481")]
-        public bool EnableAutomaticStateChangeForAgents
+        public bool? EnableAutomaticStateChangeForAgents
         {
             get => _enableAutomaticStateChangeForAgents;
             set
             {
-                EnableAutomaticStateChangeForAgentsSpecified = true;
+                EnableAutomaticStateChangeForAgentsSpecified = (value != null);
                 _enableAutomaticStateChangeForAgents = value;
             }
         }
@@ -246,17 +246,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableAutomaticStateChangeForAgentsSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AgentACDAutomaticState _agentStateAfterCall;
+        protected BroadWorksConnector.Ocip.Models.AgentACDAutomaticState? _agentStateAfterCall;
 
         [XmlElement(ElementName = "agentStateAfterCall", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:4481")]
-        public BroadWorksConnector.Ocip.Models.AgentACDAutomaticState AgentStateAfterCall
+        public BroadWorksConnector.Ocip.Models.AgentACDAutomaticState? AgentStateAfterCall
         {
             get => _agentStateAfterCall;
             set
             {
-                AgentStateAfterCallSpecified = true;
+                AgentStateAfterCallSpecified = (value != null);
                 _agentStateAfterCall = value;
             }
         }
@@ -284,17 +284,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AgentUnavailableCodeSpecified { get; set; }
 
-        protected bool _forceDeliveryOfCalls;
+        protected bool? _forceDeliveryOfCalls;
 
         [XmlElement(ElementName = "forceDeliveryOfCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:4481")]
-        public bool ForceDeliveryOfCalls
+        public bool? ForceDeliveryOfCalls
         {
             get => _forceDeliveryOfCalls;
             set
             {
-                ForceDeliveryOfCallsSpecified = true;
+                ForceDeliveryOfCallsSpecified = (value != null);
                 _forceDeliveryOfCalls = value;
             }
         }

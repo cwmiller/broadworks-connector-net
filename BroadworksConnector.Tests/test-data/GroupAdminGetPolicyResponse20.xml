@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<BroadsoftDocument protocol="OCI" xmlns="C" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<sessionId xmlns="">helloworld</sessionId>
+	<command echo="" xsi:type="GroupAdminGetPolicyResponse20" xmlns="">
+		<profileAccess>Full</profileAccess>
+		<userAccess>Full</userAccess>
+		<adminAccess>Full</adminAccess>
+		<departmentAccess>Full</departmentAccess>
+		<accessDeviceAccess>Full</accessDeviceAccess>
+		<enhancedServiceInstanceAccess>Full</enhancedServiceInstanceAccess>
+		<featureAccessCodeAccess>Full</featureAccessCodeAccess>
+		<phoneNumberExtensionAccess>Full</phoneNumberExtensionAccess>
+		<callingLineIdNumberAccess>Full</callingLineIdNumberAccess>
+		<serviceAccess>Full</serviceAccess>
+		<trunkGroupAccess>Full</trunkGroupAccess>
+		<sessionAdmissionControlAccess>Read-Only</sessionAdmissionControlAccess>
+		<officeZoneAccess>Read-Only</officeZoneAccess>
+		<numberActivationAccess>None</numberActivationAccess>
+		<dialableCallerIDAccess>Full</dialableCallerIDAccess>
+		<verifyTranslationAndRoutingAccess>None</verifyTranslationAndRoutingAccess>
+		<communicationBarringUserProfileAccess xsi:nil="true"/>
+	</command>
+</BroadsoftDocument>

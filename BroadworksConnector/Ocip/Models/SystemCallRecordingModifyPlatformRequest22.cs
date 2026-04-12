@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _netAddress;
             set
             {
-                NetAddressSpecified = true;
+                NetAddressSpecified = (value != null);
                 _netAddress = value;
             }
         }
@@ -82,17 +82,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PortSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MediaStream _mediaStream;
+        protected BroadWorksConnector.Ocip.Models.MediaStream? _mediaStream;
 
         [XmlElement(ElementName = "mediaStream", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"0731150ec7515df8cd710f04d8f62f66:381")]
-        public BroadWorksConnector.Ocip.Models.MediaStream MediaStream
+        public BroadWorksConnector.Ocip.Models.MediaStream? MediaStream
         {
             get => _mediaStream;
             set
             {
-                MediaStreamSpecified = true;
+                MediaStreamSpecified = (value != null);
                 _mediaStream = value;
             }
         }
@@ -100,17 +100,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MediaStreamSpecified { get; set; }
 
-        protected bool _becomeSystemDefault;
+        protected bool? _becomeSystemDefault;
 
         [XmlElement(ElementName = "becomeSystemDefault", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"0731150ec7515df8cd710f04d8f62f66:386")]
-        public bool BecomeSystemDefault
+        public bool? BecomeSystemDefault
         {
             get => _becomeSystemDefault;
             set
             {
-                BecomeSystemDefaultSpecified = true;
+                BecomeSystemDefaultSpecified = (value != null);
                 _becomeSystemDefault = value;
             }
         }
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _becomeResellerDefault;
             set
             {
-                BecomeResellerDefaultSpecified = true;
+                BecomeResellerDefaultSpecified = (value != null);
                 _becomeResellerDefault = value;
             }
         }
@@ -138,17 +138,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BecomeResellerDefaultSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol _transportType;
+        protected BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol? _transportType;
 
         [XmlElement(ElementName = "transportType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"0731150ec7515df8cd710f04d8f62f66:381")]
-        public BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol TransportType
+        public BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol? TransportType
         {
             get => _transportType;
             set
             {
-                TransportTypeSpecified = true;
+                TransportTypeSpecified = (value != null);
                 _transportType = value;
             }
         }
@@ -176,17 +176,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DescriptionSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallRecordingPlatformSchemaVersion _schemaVersion;
+        protected BroadWorksConnector.Ocip.Models.CallRecordingPlatformSchemaVersion? _schemaVersion;
 
         [XmlElement(ElementName = "schemaVersion", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"0731150ec7515df8cd710f04d8f62f66:381")]
-        public BroadWorksConnector.Ocip.Models.CallRecordingPlatformSchemaVersion SchemaVersion
+        public BroadWorksConnector.Ocip.Models.CallRecordingPlatformSchemaVersion? SchemaVersion
         {
             get => _schemaVersion;
             set
             {
-                SchemaVersionSpecified = true;
+                SchemaVersionSpecified = (value != null);
                 _schemaVersion = value;
             }
         }
@@ -194,17 +194,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SchemaVersionSpecified { get; set; }
 
-        protected bool _supportVideoRecording;
+        protected bool? _supportVideoRecording;
 
         [XmlElement(ElementName = "supportVideoRecording", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"0731150ec7515df8cd710f04d8f62f66:381")]
-        public bool SupportVideoRecording
+        public bool? SupportVideoRecording
         {
             get => _supportVideoRecording;
             set
             {
-                SupportVideoRecordingSpecified = true;
+                SupportVideoRecordingSpecified = (value != null);
                 _supportVideoRecording = value;
             }
         }

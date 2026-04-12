@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _cpeFileDirectory;
             set
             {
-                CpeFileDirectorySpecified = true;
+                CpeFileDirectorySpecified = (value != null);
                 _cpeFileDirectory = value;
             }
         }
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _extendedCaptureFileRepositoryName;
             set
             {
-                ExtendedCaptureFileRepositoryNameSpecified = true;
+                ExtendedCaptureFileRepositoryNameSpecified = (value != null);
                 _extendedCaptureFileRepositoryName = value;
             }
         }

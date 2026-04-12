@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _endRecording;
             set
             {
-                EndRecordingSpecified = true;
+                EndRecordingSpecified = (value != null);
                 _endRecording = value;
             }
         }

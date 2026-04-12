@@ -26,17 +26,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemGetAvailableLeafDeviceListRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemGetAvailableLeafDeviceListResponse22>
     {
 
-        protected BroadWorksConnector.Ocip.Models.LeafDeviceCategory _leafDeviceCategory;
+        protected BroadWorksConnector.Ocip.Models.LeafDeviceCategory? _leafDeviceCategory;
 
         [XmlElement(ElementName = "leafDeviceCategory", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:10761")]
-        public BroadWorksConnector.Ocip.Models.LeafDeviceCategory LeafDeviceCategory
+        public BroadWorksConnector.Ocip.Models.LeafDeviceCategory? LeafDeviceCategory
         {
             get => _leafDeviceCategory;
             set
             {
-                LeafDeviceCategorySpecified = true;
+                LeafDeviceCategorySpecified = (value != null);
                 _leafDeviceCategory = value;
             }
         }

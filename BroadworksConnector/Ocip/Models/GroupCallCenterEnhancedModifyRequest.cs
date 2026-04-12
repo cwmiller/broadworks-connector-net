@@ -42,17 +42,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        protected bool _overrideAgentWrapUpTime;
+        protected bool? _overrideAgentWrapUpTime;
 
         [XmlElement(ElementName = "overrideAgentWrapUpTime", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:4987")]
-        public bool OverrideAgentWrapUpTime
+        public bool? OverrideAgentWrapUpTime
         {
             get => _overrideAgentWrapUpTime;
             set
             {
-                OverrideAgentWrapUpTimeSpecified = true;
+                OverrideAgentWrapUpTimeSpecified = (value != null);
                 _overrideAgentWrapUpTime = value;
             }
         }

@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _webDisplayKey;
             set
             {
-                WebDisplayKeySpecified = true;
+                WebDisplayKeySpecified = (value != null);
                 _webDisplayKey = value;
             }
         }

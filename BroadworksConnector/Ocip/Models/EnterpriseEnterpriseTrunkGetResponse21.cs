@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _routeExhaustionForwardAddress;
             set
             {
-                RouteExhaustionForwardAddressSpecified = true;
+                RouteExhaustionForwardAddressSpecified = (value != null);
                 _routeExhaustionForwardAddress = value;
             }
         }
@@ -124,18 +124,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableCapacityManagementSpecified { get; set; }
 
-        protected int _maxActiveCalls;
+        protected int? _maxActiveCalls;
 
         [XmlElement(ElementName = "maxActiveCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:2438")]
         [MinInclusive(1)]
-        public int MaxActiveCalls
+        public int? MaxActiveCalls
         {
             get => _maxActiveCalls;
             set
             {
-                MaxActiveCallsSpecified = true;
+                MaxActiveCallsSpecified = (value != null);
                 _maxActiveCalls = value;
             }
         }
@@ -143,18 +143,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxActiveCallsSpecified { get; set; }
 
-        protected int _capacityExceededTrapInitialCalls;
+        protected int? _capacityExceededTrapInitialCalls;
 
         [XmlElement(ElementName = "capacityExceededTrapInitialCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:2438")]
         [MinInclusive(0)]
-        public int CapacityExceededTrapInitialCalls
+        public int? CapacityExceededTrapInitialCalls
         {
             get => _capacityExceededTrapInitialCalls;
             set
             {
-                CapacityExceededTrapInitialCallsSpecified = true;
+                CapacityExceededTrapInitialCallsSpecified = (value != null);
                 _capacityExceededTrapInitialCalls = value;
             }
         }
@@ -162,18 +162,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CapacityExceededTrapInitialCallsSpecified { get; set; }
 
-        protected int _capacityExceededTrapOffsetCalls;
+        protected int? _capacityExceededTrapOffsetCalls;
 
         [XmlElement(ElementName = "capacityExceededTrapOffsetCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:2438")]
         [MinInclusive(0)]
-        public int CapacityExceededTrapOffsetCalls
+        public int? CapacityExceededTrapOffsetCalls
         {
             get => _capacityExceededTrapOffsetCalls;
             set
             {
-                CapacityExceededTrapOffsetCallsSpecified = true;
+                CapacityExceededTrapOffsetCallsSpecified = (value != null);
                 _capacityExceededTrapOffsetCalls = value;
             }
         }

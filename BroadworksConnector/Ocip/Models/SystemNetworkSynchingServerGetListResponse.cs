@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _preferredNetworkServerNetAddress;
             set
             {
-                PreferredNetworkServerNetAddressSpecified = true;
+                PreferredNetworkServerNetAddressSpecified = (value != null);
                 _preferredNetworkServerNetAddress = value;
             }
         }

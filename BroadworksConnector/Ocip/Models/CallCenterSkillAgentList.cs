@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _agent;
             set
             {
-                AgentSpecified = true;
+                AgentSpecified = (value != null);
                 _agent = value;
             }
         }

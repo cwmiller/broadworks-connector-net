@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _checkHostStatus;
             set
             {
-                CheckHostStatusSpecified = true;
+                CheckHostStatusSpecified = (value != null);
                 _checkHostStatus = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _associateWithHost;
             set
             {
-                AssociateWithHostSpecified = true;
+                AssociateWithHostSpecified = (value != null);
                 _associateWithHost = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _disassociateFromHost;
             set
             {
-                DisassociateFromHostSpecified = true;
+                DisassociateFromHostSpecified = (value != null);
                 _disassociateFromHost = value;
             }
         }
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _repeatMenu;
             set
             {
-                RepeatMenuSpecified = true;
+                RepeatMenuSpecified = (value != null);
                 _repeatMenu = value;
             }
         }

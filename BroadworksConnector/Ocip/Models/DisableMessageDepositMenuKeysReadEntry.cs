@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _disconnectAfterGreeting;
             set
             {
-                DisconnectAfterGreetingSpecified = true;
+                DisconnectAfterGreetingSpecified = (value != null);
                 _disconnectAfterGreeting = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _forwardAfterGreeting;
             set
             {
-                ForwardAfterGreetingSpecified = true;
+                ForwardAfterGreetingSpecified = (value != null);
                 _forwardAfterGreeting = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _changeForwardingDestination;
             set
             {
-                ChangeForwardingDestinationSpecified = true;
+                ChangeForwardingDestinationSpecified = (value != null);
                 _changeForwardingDestination = value;
             }
         }
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _repeatMenu;
             set
             {
-                RepeatMenuSpecified = true;
+                RepeatMenuSpecified = (value != null);
                 _repeatMenu = value;
             }
         }

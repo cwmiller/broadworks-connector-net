@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _firstName;
             set
             {
-                FirstNameSpecified = true;
+                FirstNameSpecified = (value != null);
                 _firstName = value;
             }
         }
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _lastName;
             set
             {
-                LastNameSpecified = true;
+                LastNameSpecified = (value != null);
                 _lastName = value;
             }
         }
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _password;
             set
             {
-                PasswordSpecified = true;
+                PasswordSpecified = (value != null);
                 _password = value;
             }
         }
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _language;
             set
             {
-                LanguageSpecified = true;
+                LanguageSpecified = (value != null);
                 _language = value;
             }
         }

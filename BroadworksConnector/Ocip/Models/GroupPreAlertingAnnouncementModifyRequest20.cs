@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.PreAlertingAnnouncementInterrupt _announcementInterruption;
+        protected BroadWorksConnector.Ocip.Models.PreAlertingAnnouncementInterrupt? _announcementInterruption;
 
         [XmlElement(ElementName = "announcementInterruption", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"89722c6a28e608e15bce28b0cd73fa11:153")]
-        public BroadWorksConnector.Ocip.Models.PreAlertingAnnouncementInterrupt AnnouncementInterruption
+        public BroadWorksConnector.Ocip.Models.PreAlertingAnnouncementInterrupt? AnnouncementInterruption
         {
             get => _announcementInterruption;
             set
             {
-                AnnouncementInterruptionSpecified = true;
+                AnnouncementInterruptionSpecified = (value != null);
                 _announcementInterruption = value;
             }
         }
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _interruptionDigitSequence;
             set
             {
-                InterruptionDigitSequenceSpecified = true;
+                InterruptionDigitSequenceSpecified = (value != null);
                 _interruptionDigitSequence = value;
             }
         }
@@ -95,17 +95,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool InterruptionDigitSequenceSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioSelection;
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? _audioSelection;
 
         [XmlElement(ElementName = "audioSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"89722c6a28e608e15bce28b0cd73fa11:153")]
-        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection AudioSelection
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? AudioSelection
         {
             get => _audioSelection;
             set
             {
-                AudioSelectionSpecified = true;
+                AudioSelectionSpecified = (value != null);
                 _audioSelection = value;
             }
         }
@@ -123,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _audioFile;
             set
             {
-                AudioFileSpecified = true;
+                AudioFileSpecified = (value != null);
                 _audioFile = value;
             }
         }
@@ -131,17 +131,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioFileSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoSelection;
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? _videoSelection;
 
         [XmlElement(ElementName = "videoSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"89722c6a28e608e15bce28b0cd73fa11:153")]
-        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection VideoSelection
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? VideoSelection
         {
             get => _videoSelection;
             set
             {
-                VideoSelectionSpecified = true;
+                VideoSelectionSpecified = (value != null);
                 _videoSelection = value;
             }
         }
@@ -159,7 +159,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _videoFile;
             set
             {
-                VideoFileSpecified = true;
+                VideoFileSpecified = (value != null);
                 _videoFile = value;
             }
         }

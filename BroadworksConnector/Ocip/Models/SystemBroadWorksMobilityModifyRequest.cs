@@ -22,17 +22,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemBroadWorksMobilityModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _enableLocationServices;
+        protected bool? _enableLocationServices;
 
         [XmlElement(ElementName = "enableLocationServices", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:21156")]
-        public bool EnableLocationServices
+        public bool? EnableLocationServices
         {
             get => _enableLocationServices;
             set
             {
-                EnableLocationServicesSpecified = true;
+                EnableLocationServicesSpecified = (value != null);
                 _enableLocationServices = value;
             }
         }
@@ -40,17 +40,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableLocationServicesSpecified { get; set; }
 
-        protected bool _enableMSRNLookup;
+        protected bool? _enableMSRNLookup;
 
         [XmlElement(ElementName = "enableMSRNLookup", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:21156")]
-        public bool EnableMSRNLookup
+        public bool? EnableMSRNLookup
         {
             get => _enableMSRNLookup;
             set
             {
-                EnableMSRNLookupSpecified = true;
+                EnableMSRNLookupSpecified = (value != null);
                 _enableMSRNLookup = value;
             }
         }
@@ -58,17 +58,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableMSRNLookupSpecified { get; set; }
 
-        protected bool _enableMobileStateChecking;
+        protected bool? _enableMobileStateChecking;
 
         [XmlElement(ElementName = "enableMobileStateChecking", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:21156")]
-        public bool EnableMobileStateChecking
+        public bool? EnableMobileStateChecking
         {
             get => _enableMobileStateChecking;
             set
             {
-                EnableMobileStateCheckingSpecified = true;
+                EnableMobileStateCheckingSpecified = (value != null);
                 _enableMobileStateChecking = value;
             }
         }
@@ -76,17 +76,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableMobileStateCheckingSpecified { get; set; }
 
-        protected bool _denyCallOriginations;
+        protected bool? _denyCallOriginations;
 
         [XmlElement(ElementName = "denyCallOriginations", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:21156")]
-        public bool DenyCallOriginations
+        public bool? DenyCallOriginations
         {
             get => _denyCallOriginations;
             set
             {
-                DenyCallOriginationsSpecified = true;
+                DenyCallOriginationsSpecified = (value != null);
                 _denyCallOriginations = value;
             }
         }
@@ -94,17 +94,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DenyCallOriginationsSpecified { get; set; }
 
-        protected bool _denyCallTerminations;
+        protected bool? _denyCallTerminations;
 
         [XmlElement(ElementName = "denyCallTerminations", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:21156")]
-        public bool DenyCallTerminations
+        public bool? DenyCallTerminations
         {
             get => _denyCallTerminations;
             set
             {
-                DenyCallTerminationsSpecified = true;
+                DenyCallTerminationsSpecified = (value != null);
                 _denyCallTerminations = value;
             }
         }
@@ -112,19 +112,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DenyCallTerminationsSpecified { get; set; }
 
-        protected int _imrnTimeoutMilliseconds;
+        protected int? _imrnTimeoutMilliseconds;
 
         [XmlElement(ElementName = "imrnTimeoutMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:21156")]
         [MinInclusive(100)]
         [MaxInclusive(60000)]
-        public int ImrnTimeoutMilliseconds
+        public int? ImrnTimeoutMilliseconds
         {
             get => _imrnTimeoutMilliseconds;
             set
             {
-                ImrnTimeoutMillisecondsSpecified = true;
+                ImrnTimeoutMillisecondsSpecified = (value != null);
                 _imrnTimeoutMilliseconds = value;
             }
         }

@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultFromAddress;
             set
             {
-                DefaultFromAddressSpecified = true;
+                DefaultFromAddressSpecified = (value != null);
                 _defaultFromAddress = value;
             }
         }
@@ -99,17 +99,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultSubjectSpecified { get; set; }
 
-        protected bool _supportDNSSRVForMailServerAccess;
+        protected bool? _supportDNSSRVForMailServerAccess;
 
         [XmlElement(ElementName = "supportDNSSRVForMailServerAccess", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:11740")]
-        public bool SupportDNSSRVForMailServerAccess
+        public bool? SupportDNSSRVForMailServerAccess
         {
             get => _supportDNSSRVForMailServerAccess;
             set
             {
-                SupportDNSSRVForMailServerAccessSpecified = true;
+                SupportDNSSRVForMailServerAccessSpecified = (value != null);
                 _supportDNSSRVForMailServerAccess = value;
             }
         }
@@ -117,17 +117,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SupportDNSSRVForMailServerAccessSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.SMTPSecureMode _secureMode;
+        protected BroadWorksConnector.Ocip.Models.SMTPSecureMode? _secureMode;
 
         [XmlElement(ElementName = "secureMode", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:11740")]
-        public BroadWorksConnector.Ocip.Models.SMTPSecureMode SecureMode
+        public BroadWorksConnector.Ocip.Models.SMTPSecureMode? SecureMode
         {
             get => _secureMode;
             set
             {
-                SecureModeSpecified = true;
+                SecureModeSpecified = (value != null);
                 _secureMode = value;
             }
         }

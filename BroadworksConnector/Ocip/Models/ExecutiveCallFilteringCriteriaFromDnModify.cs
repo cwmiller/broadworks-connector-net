@@ -16,17 +16,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class ExecutiveCallFilteringCriteriaFromDnModify
     {
 
-        protected BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringCriteriaDnSelection _fromDnCriteriaSelection;
+        protected BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringCriteriaDnSelection? _fromDnCriteriaSelection;
 
         [XmlElement(ElementName = "fromDnCriteriaSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:460")]
-        public BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringCriteriaDnSelection FromDnCriteriaSelection
+        public BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringCriteriaDnSelection? FromDnCriteriaSelection
         {
             get => _fromDnCriteriaSelection;
             set
             {
-                FromDnCriteriaSelectionSpecified = true;
+                FromDnCriteriaSelectionSpecified = (value != null);
                 _fromDnCriteriaSelection = value;
             }
         }
@@ -34,17 +34,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FromDnCriteriaSelectionSpecified { get; set; }
 
-        protected bool _includeAnonymousCallers;
+        protected bool? _includeAnonymousCallers;
 
         [XmlElement(ElementName = "includeAnonymousCallers", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:460")]
-        public bool IncludeAnonymousCallers
+        public bool? IncludeAnonymousCallers
         {
             get => _includeAnonymousCallers;
             set
             {
-                IncludeAnonymousCallersSpecified = true;
+                IncludeAnonymousCallersSpecified = (value != null);
                 _includeAnonymousCallers = value;
             }
         }
@@ -52,17 +52,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeAnonymousCallersSpecified { get; set; }
 
-        protected bool _includeUnavailableCallers;
+        protected bool? _includeUnavailableCallers;
 
         [XmlElement(ElementName = "includeUnavailableCallers", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:460")]
-        public bool IncludeUnavailableCallers
+        public bool? IncludeUnavailableCallers
         {
             get => _includeUnavailableCallers;
             set
             {
-                IncludeUnavailableCallersSpecified = true;
+                IncludeUnavailableCallersSpecified = (value != null);
                 _includeUnavailableCallers = value;
             }
         }

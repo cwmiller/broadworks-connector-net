@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _extension;
             set
             {
-                ExtensionSpecified = true;
+                ExtensionSpecified = (value != null);
                 _extension = value;
             }
         }
@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _extensionRange;
             set
             {
-                ExtensionRangeSpecified = true;
+                ExtensionRangeSpecified = (value != null);
                 _extensionRange = value;
             }
         }

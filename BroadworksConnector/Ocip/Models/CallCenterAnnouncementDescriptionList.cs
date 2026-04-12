@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _fileDescription1;
             set
             {
-                FileDescription1Specified = true;
+                FileDescription1Specified = (value != null);
                 _fileDescription1 = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _fileDescription2;
             set
             {
-                FileDescription2Specified = true;
+                FileDescription2Specified = (value != null);
                 _fileDescription2 = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _fileDescription3;
             set
             {
-                FileDescription3Specified = true;
+                FileDescription3Specified = (value != null);
                 _fileDescription3 = value;
             }
         }
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _fileDescription4;
             set
             {
-                FileDescription4Specified = true;
+                FileDescription4Specified = (value != null);
                 _fileDescription4 = value;
             }
         }

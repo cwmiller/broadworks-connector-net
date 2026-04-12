@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _cancelSendingToDistributionList;
             set
             {
-                CancelSendingToDistributionListSpecified = true;
+                CancelSendingToDistributionListSpecified = (value != null);
                 _cancelSendingToDistributionList = value;
             }
         }

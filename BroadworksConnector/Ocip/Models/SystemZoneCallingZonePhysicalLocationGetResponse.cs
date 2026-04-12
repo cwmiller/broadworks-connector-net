@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _physicalLocation;
             set
             {
-                PhysicalLocationSpecified = true;
+                PhysicalLocationSpecified = (value != null);
                 _physicalLocation = value;
             }
         }

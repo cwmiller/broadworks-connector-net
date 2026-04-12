@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceProviderId;
             set
             {
-                ServiceProviderIdSpecified = true;
+                ServiceProviderIdSpecified = (value != null);
                 _serviceProviderId = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupId;
             set
             {
-                GroupIdSpecified = true;
+                GroupIdSpecified = (value != null);
                 _groupId = value;
             }
         }

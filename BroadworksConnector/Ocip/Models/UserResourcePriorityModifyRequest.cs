@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _useDefaultResourcePriority;
+        protected bool? _useDefaultResourcePriority;
 
         [XmlElement(ElementName = "useDefaultResourcePriority", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1eceb69ac1f6f751a3ee0dce729e5cc2:181")]
-        public bool UseDefaultResourcePriority
+        public bool? UseDefaultResourcePriority
         {
             get => _useDefaultResourcePriority;
             set
             {
-                UseDefaultResourcePrioritySpecified = true;
+                UseDefaultResourcePrioritySpecified = (value != null);
                 _useDefaultResourcePriority = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseDefaultResourcePrioritySpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ResourcePriorityValue _userResourcePriority;
+        protected BroadWorksConnector.Ocip.Models.ResourcePriorityValue? _userResourcePriority;
 
         [XmlElement(ElementName = "userResourcePriority", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1eceb69ac1f6f751a3ee0dce729e5cc2:181")]
-        public BroadWorksConnector.Ocip.Models.ResourcePriorityValue UserResourcePriority
+        public BroadWorksConnector.Ocip.Models.ResourcePriorityValue? UserResourcePriority
         {
             get => _userResourcePriority;
             set
             {
-                UserResourcePrioritySpecified = true;
+                UserResourcePrioritySpecified = (value != null);
                 _userResourcePriority = value;
             }
         }

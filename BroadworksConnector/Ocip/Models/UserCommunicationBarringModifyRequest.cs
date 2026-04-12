@@ -39,17 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _useGroupSetting;
+        protected bool? _useGroupSetting;
 
         [XmlElement(ElementName = "useGroupSetting", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1250")]
-        public bool UseGroupSetting
+        public bool? UseGroupSetting
         {
             get => _useGroupSetting;
             set
             {
-                UseGroupSettingSpecified = true;
+                UseGroupSettingSpecified = (value != null);
                 _useGroupSetting = value;
             }
         }

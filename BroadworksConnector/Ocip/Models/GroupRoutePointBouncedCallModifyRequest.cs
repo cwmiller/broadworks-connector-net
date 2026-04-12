@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e474d11df9a1d1d1041e589793e40de8:185")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -56,19 +56,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected int _numberOfRingsBeforeBouncingCall;
+        protected int? _numberOfRingsBeforeBouncingCall;
 
         [XmlElement(ElementName = "numberOfRingsBeforeBouncingCall", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e474d11df9a1d1d1041e589793e40de8:185")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
-        public int NumberOfRingsBeforeBouncingCall
+        public int? NumberOfRingsBeforeBouncingCall
         {
             get => _numberOfRingsBeforeBouncingCall;
             set
             {
-                NumberOfRingsBeforeBouncingCallSpecified = true;
+                NumberOfRingsBeforeBouncingCallSpecified = (value != null);
                 _numberOfRingsBeforeBouncingCall = value;
             }
         }
@@ -76,17 +76,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberOfRingsBeforeBouncingCallSpecified { get; set; }
 
-        protected bool _enableTransfer;
+        protected bool? _enableTransfer;
 
         [XmlElement(ElementName = "enableTransfer", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e474d11df9a1d1d1041e589793e40de8:185")]
-        public bool EnableTransfer
+        public bool? EnableTransfer
         {
             get => _enableTransfer;
             set
             {
-                EnableTransferSpecified = true;
+                EnableTransferSpecified = (value != null);
                 _enableTransfer = value;
             }
         }
@@ -114,17 +114,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TransferPhoneNumberSpecified { get; set; }
 
-        protected bool _bounceCallWhenAgentUnavailable;
+        protected bool? _bounceCallWhenAgentUnavailable;
 
         [XmlElement(ElementName = "bounceCallWhenAgentUnavailable", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e474d11df9a1d1d1041e589793e40de8:185")]
-        public bool BounceCallWhenAgentUnavailable
+        public bool? BounceCallWhenAgentUnavailable
         {
             get => _bounceCallWhenAgentUnavailable;
             set
             {
-                BounceCallWhenAgentUnavailableSpecified = true;
+                BounceCallWhenAgentUnavailableSpecified = (value != null);
                 _bounceCallWhenAgentUnavailable = value;
             }
         }

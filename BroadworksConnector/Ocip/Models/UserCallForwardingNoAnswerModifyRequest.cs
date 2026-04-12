@@ -39,17 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"2ff622bc00c4bb36e12eeb68ca8af579:78")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -77,17 +77,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ForwardToPhoneNumberSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallForwardingNoAnswerNumberOfRings _numberOfRings;
+        protected BroadWorksConnector.Ocip.Models.CallForwardingNoAnswerNumberOfRings? _numberOfRings;
 
         [XmlElement(ElementName = "numberOfRings", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"2ff622bc00c4bb36e12eeb68ca8af579:78")]
-        public BroadWorksConnector.Ocip.Models.CallForwardingNoAnswerNumberOfRings NumberOfRings
+        public BroadWorksConnector.Ocip.Models.CallForwardingNoAnswerNumberOfRings? NumberOfRings
         {
             get => _numberOfRings;
             set
             {
-                NumberOfRingsSpecified = true;
+                NumberOfRingsSpecified = (value != null);
                 _numberOfRings = value;
             }
         }

@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _webBasedConfigURL;
             set
             {
-                WebBasedConfigURLSpecified = true;
+                WebBasedConfigURLSpecified = (value != null);
                 _webBasedConfigURL = value;
             }
         }
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _cpeDeviceOptions;
             set
             {
-                CpeDeviceOptionsSpecified = true;
+                CpeDeviceOptionsSpecified = (value != null);
                 _cpeDeviceOptions = value;
             }
         }
@@ -179,17 +179,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsMobilityManagerDeviceSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType _deviceTypeConfigurationOption;
+        protected BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType? _deviceTypeConfigurationOption;
 
         [XmlElement(ElementName = "deviceTypeConfigurationOption", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:8903")]
-        public BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType DeviceTypeConfigurationOption
+        public BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType? DeviceTypeConfigurationOption
         {
             get => _deviceTypeConfigurationOption;
             set
             {
-                DeviceTypeConfigurationOptionSpecified = true;
+                DeviceTypeConfigurationOptionSpecified = (value != null);
                 _deviceTypeConfigurationOption = value;
             }
         }
@@ -197,17 +197,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceTypeConfigurationOptionSpecified { get; set; }
 
-        protected bool _staticLineOrdering;
+        protected bool? _staticLineOrdering;
 
         [XmlElement(ElementName = "staticLineOrdering", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:8903")]
-        public bool StaticLineOrdering
+        public bool? StaticLineOrdering
         {
             get => _staticLineOrdering;
             set
             {
-                StaticLineOrderingSpecified = true;
+                StaticLineOrderingSpecified = (value != null);
                 _staticLineOrdering = value;
             }
         }
@@ -227,7 +227,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerId;
             set
             {
-                ResellerIdSpecified = true;
+                ResellerIdSpecified = (value != null);
                 _resellerId = value;
             }
         }

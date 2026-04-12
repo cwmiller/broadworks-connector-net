@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        protected bool _enableAgentUnavailableCodes;
+        protected bool? _enableAgentUnavailableCodes;
 
         [XmlElement(ElementName = "enableAgentUnavailableCodes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:898")]
-        public bool EnableAgentUnavailableCodes
+        public bool? EnableAgentUnavailableCodes
         {
             get => _enableAgentUnavailableCodes;
             set
             {
-                EnableAgentUnavailableCodesSpecified = true;
+                EnableAgentUnavailableCodesSpecified = (value != null);
                 _enableAgentUnavailableCodes = value;
             }
         }
@@ -136,17 +136,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultAgentUnavailableCodeOnNotReachableSpecified { get; set; }
 
-        protected bool _forceUseOfAgentUnavailableCodes;
+        protected bool? _forceUseOfAgentUnavailableCodes;
 
         [XmlElement(ElementName = "forceUseOfAgentUnavailableCodes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:898")]
-        public bool ForceUseOfAgentUnavailableCodes
+        public bool? ForceUseOfAgentUnavailableCodes
         {
             get => _forceUseOfAgentUnavailableCodes;
             set
             {
-                ForceUseOfAgentUnavailableCodesSpecified = true;
+                ForceUseOfAgentUnavailableCodesSpecified = (value != null);
                 _forceUseOfAgentUnavailableCodes = value;
             }
         }
@@ -184,7 +184,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _codeStateList;
             set
             {
-                CodeStateListSpecified = true;
+                CodeStateListSpecified = (value != null);
                 _codeStateList = value;
             }
         }

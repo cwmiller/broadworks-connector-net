@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _mediaNameList;
             set
             {
-                MediaNameListSpecified = true;
+                MediaNameListSpecified = (value != null);
                 _mediaNameList = value;
             }
         }

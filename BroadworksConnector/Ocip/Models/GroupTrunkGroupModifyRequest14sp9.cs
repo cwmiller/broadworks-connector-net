@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected int _maxActiveCalls;
+        protected int? _maxActiveCalls;
 
         [XmlElement(ElementName = "maxActiveCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1432")]
-        public int MaxActiveCalls
+        public int? MaxActiveCalls
         {
             get => _maxActiveCalls;
             set
             {
-                MaxActiveCallsSpecified = true;
+                MaxActiveCallsSpecified = (value != null);
                 _maxActiveCalls = value;
             }
         }
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _burstingMaxActiveCalls;
             set
             {
-                BurstingMaxActiveCallsSpecified = true;
+                BurstingMaxActiveCallsSpecified = (value != null);
                 _burstingMaxActiveCalls = value;
             }
         }
@@ -93,17 +93,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BurstingMaxActiveCallsSpecified { get; set; }
 
-        protected int _numberOfBurstingBTLUs;
+        protected int? _numberOfBurstingBTLUs;
 
         [XmlElement(ElementName = "numberOfBurstingBTLUs", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1432")]
-        public int NumberOfBurstingBTLUs
+        public int? NumberOfBurstingBTLUs
         {
             get => _numberOfBurstingBTLUs;
             set
             {
-                NumberOfBurstingBTLUsSpecified = true;
+                NumberOfBurstingBTLUsSpecified = (value != null);
                 _numberOfBurstingBTLUs = value;
             }
         }

@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _languageMapping;
             set
             {
-                LanguageMappingSpecified = true;
+                LanguageMappingSpecified = (value != null);
                 _languageMapping = value;
             }
         }

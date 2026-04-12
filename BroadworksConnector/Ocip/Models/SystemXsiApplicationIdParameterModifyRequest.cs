@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemXsiApplicationIdParameterModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _screenXsiApplicationId;
+        protected bool? _screenXsiApplicationId;
 
         [XmlElement(ElementName = "screenXsiApplicationId", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:19739")]
-        public bool ScreenXsiApplicationId
+        public bool? ScreenXsiApplicationId
         {
             get => _screenXsiApplicationId;
             set
             {
-                ScreenXsiApplicationIdSpecified = true;
+                ScreenXsiApplicationIdSpecified = (value != null);
                 _screenXsiApplicationId = value;
             }
         }

@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultFromAddress;
             set
             {
-                DefaultFromAddressSpecified = true;
+                DefaultFromAddressSpecified = (value != null);
                 _defaultFromAddress = value;
             }
         }
@@ -39,17 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultFromAddressSpecified { get; set; }
 
-        protected bool _useShortSubjectLine;
+        protected bool? _useShortSubjectLine;
 
         [XmlElement(ElementName = "useShortSubjectLine", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ec1be3ca6e990aac87b6fcf39d5e3445:130")]
-        public bool UseShortSubjectLine
+        public bool? UseShortSubjectLine
         {
             get => _useShortSubjectLine;
             set
             {
-                UseShortSubjectLineSpecified = true;
+                UseShortSubjectLineSpecified = (value != null);
                 _useShortSubjectLine = value;
             }
         }
@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseShortSubjectLineSpecified { get; set; }
 
-        protected bool _useDnInMailBody;
+        protected bool? _useDnInMailBody;
 
         [XmlElement(ElementName = "useDnInMailBody", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ec1be3ca6e990aac87b6fcf39d5e3445:130")]
-        public bool UseDnInMailBody
+        public bool? UseDnInMailBody
         {
             get => _useDnInMailBody;
             set
             {
-                UseDnInMailBodySpecified = true;
+                UseDnInMailBodySpecified = (value != null);
                 _useDnInMailBody = value;
             }
         }

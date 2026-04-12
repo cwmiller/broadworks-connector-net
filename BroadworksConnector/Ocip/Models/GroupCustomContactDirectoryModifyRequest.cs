@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newName;
             set
             {
-                NewNameSpecified = true;
+                NewNameSpecified = (value != null);
                 _newName = value;
             }
         }

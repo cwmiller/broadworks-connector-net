@@ -47,18 +47,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:116")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }
@@ -66,17 +66,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResponseSizeLimitSpecified { get; set; }
 
-        protected bool _searchCriteriaModeOr;
+        protected bool? _searchCriteriaModeOr;
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:116")]
-        public bool SearchCriteriaModeOr
+        public bool? SearchCriteriaModeOr
         {
             get => _searchCriteriaModeOr;
             set
             {
-                SearchCriteriaModeOrSpecified = true;
+                SearchCriteriaModeOrSpecified = (value != null);
                 _searchCriteriaModeOr = value;
             }
         }
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaEnterpriseCommonPhoneListName;
             set
             {
-                SearchCriteriaEnterpriseCommonPhoneListNameSpecified = true;
+                SearchCriteriaEnterpriseCommonPhoneListNameSpecified = (value != null);
                 _searchCriteriaEnterpriseCommonPhoneListName = value;
             }
         }
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaEnterpriseCommonPhoneListNumber;
             set
             {
-                SearchCriteriaEnterpriseCommonPhoneListNumberSpecified = true;
+                SearchCriteriaEnterpriseCommonPhoneListNumberSpecified = (value != null);
                 _searchCriteriaEnterpriseCommonPhoneListNumber = value;
             }
         }

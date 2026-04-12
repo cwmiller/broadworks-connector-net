@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _securityClassification;
             set
             {
-                SecurityClassificationSpecified = true;
+                SecurityClassificationSpecified = (value != null);
                 _securityClassification = value;
             }
         }
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _customizedSecurityClassification;
             set
             {
-                CustomizedSecurityClassificationSpecified = true;
+                CustomizedSecurityClassificationSpecified = (value != null);
                 _customizedSecurityClassification = value;
             }
         }

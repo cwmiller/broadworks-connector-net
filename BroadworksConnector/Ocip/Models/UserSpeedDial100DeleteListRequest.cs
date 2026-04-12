@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _speedCode;
             set
             {
-                SpeedCodeSpecified = true;
+                SpeedCodeSpecified = (value != null);
                 _speedCode = value;
             }
         }

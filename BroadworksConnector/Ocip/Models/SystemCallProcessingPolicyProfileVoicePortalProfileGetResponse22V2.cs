@@ -453,17 +453,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseUserPhoneNumberForEnterpriseCallsWhenInternalCLIDUnavailableSpecified { get; set; }
 
-        protected bool _useMaxCallsPerSecond;
+        protected bool? _useMaxCallsPerSecond;
 
         [XmlElement(ElementName = "useMaxCallsPerSecond", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5038")]
-        public bool UseMaxCallsPerSecond
+        public bool? UseMaxCallsPerSecond
         {
             get => _useMaxCallsPerSecond;
             set
             {
-                UseMaxCallsPerSecondSpecified = true;
+                UseMaxCallsPerSecondSpecified = (value != null);
                 _useMaxCallsPerSecond = value;
             }
         }
@@ -471,19 +471,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseMaxCallsPerSecondSpecified { get; set; }
 
-        protected int _maxCallsPerSecond;
+        protected int? _maxCallsPerSecond;
 
         [XmlElement(ElementName = "maxCallsPerSecond", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5038")]
         [MinInclusive(1)]
         [MaxInclusive(100)]
-        public int MaxCallsPerSecond
+        public int? MaxCallsPerSecond
         {
             get => _maxCallsPerSecond;
             set
             {
-                MaxCallsPerSecondSpecified = true;
+                MaxCallsPerSecondSpecified = (value != null);
                 _maxCallsPerSecond = value;
             }
         }

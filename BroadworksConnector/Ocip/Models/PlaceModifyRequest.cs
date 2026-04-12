@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _webExSIPAddress;
             set
             {
-                WebExSIPAddressSpecified = true;
+                WebExSIPAddressSpecified = (value != null);
                 _webExSIPAddress = value;
             }
         }

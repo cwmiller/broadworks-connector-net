@@ -19,18 +19,18 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemRoamingNetworkGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemRoamingNetworkGetListResponse>
     {
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:15190")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaRoamingMscAddress;
             set
             {
-                SearchCriteriaRoamingMscAddressSpecified = true;
+                SearchCriteriaRoamingMscAddressSpecified = (value != null);
                 _searchCriteriaRoamingMscAddress = value;
             }
         }

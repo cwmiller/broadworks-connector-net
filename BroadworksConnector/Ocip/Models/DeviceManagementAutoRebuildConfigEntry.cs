@@ -35,17 +35,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OciRequestPrefixSpecified { get; set; }
 
-        protected bool _autoRebuildEnabled;
+        protected bool? _autoRebuildEnabled;
 
         [XmlElement(ElementName = "autoRebuildEnabled", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:20168")]
-        public bool AutoRebuildEnabled
+        public bool? AutoRebuildEnabled
         {
             get => _autoRebuildEnabled;
             set
             {
-                AutoRebuildEnabledSpecified = true;
+                AutoRebuildEnabledSpecified = (value != null);
                 _autoRebuildEnabled = value;
             }
         }

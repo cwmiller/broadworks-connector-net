@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _authorizedQuantity;
             set
             {
-                AuthorizedQuantitySpecified = true;
+                AuthorizedQuantitySpecified = (value != null);
                 _authorizedQuantity = value;
             }
         }

@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callLog;
             set
             {
-                CallLogSpecified = true;
+                CallLogSpecified = (value != null);
                 _callLog = value;
             }
         }

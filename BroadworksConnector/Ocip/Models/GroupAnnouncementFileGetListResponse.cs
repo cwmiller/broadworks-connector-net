@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _announcementTable;
             set
             {
-                AnnouncementTableSpecified = true;
+                AnnouncementTableSpecified = (value != null);
                 _announcementTable = value;
             }
         }

@@ -57,19 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetAddressSpecified { get; set; }
 
-        protected int _port;
+        protected int? _port;
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:15474")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
-        public int Port
+        public int? Port
         {
             get => _port;
             set
             {
-                PortSpecified = true;
+                PortSpecified = (value != null);
                 _port = value;
             }
         }

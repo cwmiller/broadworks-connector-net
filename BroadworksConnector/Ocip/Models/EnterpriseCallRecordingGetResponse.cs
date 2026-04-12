@@ -35,17 +35,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseCloudPBXSpecified { get; set; }
 
-        protected bool _useEnterpriseSetting;
+        protected bool? _useEnterpriseSetting;
 
         [XmlElement(ElementName = "useEnterpriseSetting", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"0731150ec7515df8cd710f04d8f62f66:70")]
-        public bool UseEnterpriseSetting
+        public bool? UseEnterpriseSetting
         {
             get => _useEnterpriseSetting;
             set
             {
-                UseEnterpriseSettingSpecified = true;
+                UseEnterpriseSettingSpecified = (value != null);
                 _useEnterpriseSetting = value;
             }
         }
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _fQDN;
             set
             {
-                FQDNSpecified = true;
+                FQDNSpecified = (value != null);
                 _fQDN = value;
             }
         }

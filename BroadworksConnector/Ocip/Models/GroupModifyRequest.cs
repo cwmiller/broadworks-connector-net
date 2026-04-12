@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultDomain;
             set
             {
-                DefaultDomainSpecified = true;
+                DefaultDomainSpecified = (value != null);
                 _defaultDomain = value;
             }
         }
@@ -94,19 +94,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultDomainSpecified { get; set; }
 
-        protected int _userLimit;
+        protected int? _userLimit;
 
         [XmlElement(ElementName = "userLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:6171")]
         [MinInclusive(1)]
         [MaxInclusive(999999)]
-        public int UserLimit
+        public int? UserLimit
         {
             get => _userLimit;
             set
             {
-                UserLimitSpecified = true;
+                UserLimitSpecified = (value != null);
                 _userLimit = value;
             }
         }
@@ -186,7 +186,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeZone;
             set
             {
-                TimeZoneSpecified = true;
+                TimeZoneSpecified = (value != null);
                 _timeZone = value;
             }
         }
@@ -224,7 +224,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _contact;
             set
             {
-                ContactSpecified = true;
+                ContactSpecified = (value != null);
                 _contact = value;
             }
         }
@@ -242,7 +242,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _address;
             set
             {
-                AddressSpecified = true;
+                AddressSpecified = (value != null);
                 _address = value;
             }
         }
@@ -380,7 +380,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _extensionLengthSettings;
             set
             {
-                ExtensionLengthSettingsSpecified = true;
+                ExtensionLengthSettingsSpecified = (value != null);
                 _extensionLengthSettings = value;
             }
         }
@@ -416,7 +416,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _dialPlanPolicy;
             set
             {
-                DialPlanPolicySpecified = true;
+                DialPlanPolicySpecified = (value != null);
                 _dialPlanPolicy = value;
             }
         }

@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection _entranceMessageSelection;
+        protected BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection? _entranceMessageSelection;
 
         [XmlElement(ElementName = "entranceMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:6617")]
-        public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection EntranceMessageSelection
+        public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection? EntranceMessageSelection
         {
             get => _entranceMessageSelection;
             set
             {
-                EntranceMessageSelectionSpecified = true;
+                EntranceMessageSelectionSpecified = (value != null);
                 _entranceMessageSelection = value;
             }
         }
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _entranceMessageAudioFile;
             set
             {
-                EntranceMessageAudioFileSpecified = true;
+                EntranceMessageAudioFileSpecified = (value != null);
                 _entranceMessageAudioFile = value;
             }
         }
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _entranceMessageVideoFile;
             set
             {
-                EntranceMessageVideoFileSpecified = true;
+                EntranceMessageVideoFileSpecified = (value != null);
                 _entranceMessageVideoFile = value;
             }
         }
@@ -92,17 +92,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EntranceMessageVideoFileSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection _periodicComfortMessageSelection;
+        protected BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection? _periodicComfortMessageSelection;
 
         [XmlElement(ElementName = "periodicComfortMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:6617")]
-        public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection PeriodicComfortMessageSelection
+        public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection? PeriodicComfortMessageSelection
         {
             get => _periodicComfortMessageSelection;
             set
             {
-                PeriodicComfortMessageSelectionSpecified = true;
+                PeriodicComfortMessageSelectionSpecified = (value != null);
                 _periodicComfortMessageSelection = value;
             }
         }
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _periodicComfortMessageAudioFile;
             set
             {
-                PeriodicComfortMessageAudioFileSpecified = true;
+                PeriodicComfortMessageAudioFileSpecified = (value != null);
                 _periodicComfortMessageAudioFile = value;
             }
         }
@@ -138,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _periodicComfortMessageVideoFile;
             set
             {
-                PeriodicComfortMessageVideoFileSpecified = true;
+                PeriodicComfortMessageVideoFileSpecified = (value != null);
                 _periodicComfortMessageVideoFile = value;
             }
         }
@@ -146,17 +146,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PeriodicComfortMessageVideoFileSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection _onHoldMessageSelection;
+        protected BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection? _onHoldMessageSelection;
 
         [XmlElement(ElementName = "onHoldMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:6617")]
-        public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection OnHoldMessageSelection
+        public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection? OnHoldMessageSelection
         {
             get => _onHoldMessageSelection;
             set
             {
-                OnHoldMessageSelectionSpecified = true;
+                OnHoldMessageSelectionSpecified = (value != null);
                 _onHoldMessageSelection = value;
             }
         }
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _onHoldMessageAudioFile;
             set
             {
-                OnHoldMessageAudioFileSpecified = true;
+                OnHoldMessageAudioFileSpecified = (value != null);
                 _onHoldMessageAudioFile = value;
             }
         }
@@ -192,7 +192,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _onHoldMessageVideoFile;
             set
             {
-                OnHoldMessageVideoFileSpecified = true;
+                OnHoldMessageVideoFileSpecified = (value != null);
                 _onHoldMessageVideoFile = value;
             }
         }

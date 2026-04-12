@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeSchedule;
             set
             {
-                TimeScheduleSpecified = true;
+                TimeScheduleSpecified = (value != null);
                 _timeSchedule = value;
             }
         }

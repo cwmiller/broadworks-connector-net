@@ -294,7 +294,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _webBasedConfigURL;
             set
             {
-                WebBasedConfigURLSpecified = true;
+                WebBasedConfigURLSpecified = (value != null);
                 _webBasedConfigURL = value;
             }
         }
@@ -363,7 +363,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _cpeDeviceOptions;
             set
             {
-                CpeDeviceOptionsSpecified = true;
+                CpeDeviceOptionsSpecified = (value != null);
                 _cpeDeviceOptions = value;
             }
         }
@@ -543,17 +543,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AdviceOfChargeCapableSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AccessDeviceResetEvent _resetEvent;
+        protected BroadWorksConnector.Ocip.Models.AccessDeviceResetEvent? _resetEvent;
 
         [XmlElement(ElementName = "resetEvent", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:14528")]
-        public BroadWorksConnector.Ocip.Models.AccessDeviceResetEvent ResetEvent
+        public BroadWorksConnector.Ocip.Models.AccessDeviceResetEvent? ResetEvent
         {
             get => _resetEvent;
             set
             {
-                ResetEventSpecified = true;
+                ResetEventSpecified = (value != null);
                 _resetEvent = value;
             }
         }
@@ -896,7 +896,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerId;
             set
             {
-                ResellerIdSpecified = true;
+                ResellerIdSpecified = (value != null);
                 _resellerId = value;
             }
         }
@@ -955,17 +955,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SupportCallingPartyCategoryInOutboundFromHeaderSpecified { get; set; }
 
-        protected bool _supportVisualDeviceManagementAPI;
+        protected bool? _supportVisualDeviceManagementAPI;
 
         [XmlElement(ElementName = "supportVisualDeviceManagementAPI", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:14528")]
-        public bool SupportVisualDeviceManagementAPI
+        public bool? SupportVisualDeviceManagementAPI
         {
             get => _supportVisualDeviceManagementAPI;
             set
             {
-                SupportVisualDeviceManagementAPISpecified = true;
+                SupportVisualDeviceManagementAPISpecified = (value != null);
                 _supportVisualDeviceManagementAPI = value;
             }
         }
@@ -973,17 +973,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SupportVisualDeviceManagementAPISpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.DeviceCategory _deviceCategory;
+        protected BroadWorksConnector.Ocip.Models.DeviceCategory? _deviceCategory;
 
         [XmlElement(ElementName = "deviceCategory", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:14528")]
-        public BroadWorksConnector.Ocip.Models.DeviceCategory DeviceCategory
+        public BroadWorksConnector.Ocip.Models.DeviceCategory? DeviceCategory
         {
             get => _deviceCategory;
             set
             {
-                DeviceCategorySpecified = true;
+                DeviceCategorySpecified = (value != null);
                 _deviceCategory = value;
             }
         }
@@ -1003,7 +1003,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deviceFamily;
             set
             {
-                DeviceFamilySpecified = true;
+                DeviceFamilySpecified = (value != null);
                 _deviceFamily = value;
             }
         }
@@ -1011,17 +1011,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceFamilySpecified { get; set; }
 
-        protected bool _verstatInPAIHeader;
+        protected bool? _verstatInPAIHeader;
 
         [XmlElement(ElementName = "verstatInPAIHeader", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:14528")]
-        public bool VerstatInPAIHeader
+        public bool? VerstatInPAIHeader
         {
             get => _verstatInPAIHeader;
             set
             {
-                VerstatInPAIHeaderSpecified = true;
+                VerstatInPAIHeaderSpecified = (value != null);
                 _verstatInPAIHeader = value;
             }
         }
@@ -1029,17 +1029,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VerstatInPAIHeaderSpecified { get; set; }
 
-        protected bool _verstatInFromHeader;
+        protected bool? _verstatInFromHeader;
 
         [XmlElement(ElementName = "verstatInFromHeader", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:14528")]
-        public bool VerstatInFromHeader
+        public bool? VerstatInFromHeader
         {
             get => _verstatInFromHeader;
             set
             {
-                VerstatInFromHeaderSpecified = true;
+                VerstatInFromHeaderSpecified = (value != null);
                 _verstatInFromHeader = value;
             }
         }

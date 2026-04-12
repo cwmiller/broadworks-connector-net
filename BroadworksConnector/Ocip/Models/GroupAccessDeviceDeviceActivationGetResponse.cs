@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _activationCode;
             set
             {
-                ActivationCodeSpecified = true;
+                ActivationCodeSpecified = (value != null);
                 _activationCode = value;
             }
         }
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _expiryTime;
             set
             {
-                ExpiryTimeSpecified = true;
+                ExpiryTimeSpecified = (value != null);
                 _expiryTime = value;
             }
         }

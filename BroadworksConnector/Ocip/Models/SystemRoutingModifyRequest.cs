@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemRoutingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _isRouteRoundRobin;
+        protected bool? _isRouteRoundRobin;
 
         [XmlElement(ElementName = "isRouteRoundRobin", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:15649")]
-        public bool IsRouteRoundRobin
+        public bool? IsRouteRoundRobin
         {
             get => _isRouteRoundRobin;
             set
             {
-                IsRouteRoundRobinSpecified = true;
+                IsRouteRoundRobinSpecified = (value != null);
                 _isRouteRoundRobin = value;
             }
         }
@@ -37,19 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsRouteRoundRobinSpecified { get; set; }
 
-        protected int _routeTimerSeconds;
+        protected int? _routeTimerSeconds;
 
         [XmlElement(ElementName = "routeTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:15649")]
         [MinInclusive(1)]
         [MaxInclusive(25)]
-        public int RouteTimerSeconds
+        public int? RouteTimerSeconds
         {
             get => _routeTimerSeconds;
             set
             {
-                RouteTimerSecondsSpecified = true;
+                RouteTimerSecondsSpecified = (value != null);
                 _routeTimerSeconds = value;
             }
         }
@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RouteTimerSecondsSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.RoutingDNSResolvedAddressSelectionPolicy _dnsResolvedAddressSelectionPolicy;
+        protected BroadWorksConnector.Ocip.Models.RoutingDNSResolvedAddressSelectionPolicy? _dnsResolvedAddressSelectionPolicy;
 
         [XmlElement(ElementName = "dnsResolvedAddressSelectionPolicy", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:15649")]
-        public BroadWorksConnector.Ocip.Models.RoutingDNSResolvedAddressSelectionPolicy DnsResolvedAddressSelectionPolicy
+        public BroadWorksConnector.Ocip.Models.RoutingDNSResolvedAddressSelectionPolicy? DnsResolvedAddressSelectionPolicy
         {
             get => _dnsResolvedAddressSelectionPolicy;
             set
             {
-                DnsResolvedAddressSelectionPolicySpecified = true;
+                DnsResolvedAddressSelectionPolicySpecified = (value != null);
                 _dnsResolvedAddressSelectionPolicy = value;
             }
         }
@@ -75,19 +75,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DnsResolvedAddressSelectionPolicySpecified { get; set; }
 
-        protected int _statefulExpirationMinutes;
+        protected int? _statefulExpirationMinutes;
 
         [XmlElement(ElementName = "statefulExpirationMinutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:15649")]
         [MinInclusive(0)]
         [MaxInclusive(1440)]
-        public int StatefulExpirationMinutes
+        public int? StatefulExpirationMinutes
         {
             get => _statefulExpirationMinutes;
             set
             {
-                StatefulExpirationMinutesSpecified = true;
+                StatefulExpirationMinutesSpecified = (value != null);
                 _statefulExpirationMinutes = value;
             }
         }
@@ -95,19 +95,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StatefulExpirationMinutesSpecified { get; set; }
 
-        protected int _maxAddressesPerHostname;
+        protected int? _maxAddressesPerHostname;
 
         [XmlElement(ElementName = "maxAddressesPerHostname", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:15649")]
         [MinInclusive(1)]
         [MaxInclusive(50)]
-        public int MaxAddressesPerHostname
+        public int? MaxAddressesPerHostname
         {
             get => _maxAddressesPerHostname;
             set
             {
-                MaxAddressesPerHostnameSpecified = true;
+                MaxAddressesPerHostnameSpecified = (value != null);
                 _maxAddressesPerHostname = value;
             }
         }
@@ -115,19 +115,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxAddressesPerHostnameSpecified { get; set; }
 
-        protected int _maxAddressesDuringSetup;
+        protected int? _maxAddressesDuringSetup;
 
         [XmlElement(ElementName = "maxAddressesDuringSetup", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:15649")]
         [MinInclusive(1)]
         [MaxInclusive(50)]
-        public int MaxAddressesDuringSetup
+        public int? MaxAddressesDuringSetup
         {
             get => _maxAddressesDuringSetup;
             set
             {
-                MaxAddressesDuringSetupSpecified = true;
+                MaxAddressesDuringSetupSpecified = (value != null);
                 _maxAddressesDuringSetup = value;
             }
         }

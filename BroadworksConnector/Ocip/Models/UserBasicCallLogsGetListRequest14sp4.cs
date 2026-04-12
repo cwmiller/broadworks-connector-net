@@ -39,17 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallLogsType _callLogType;
+        protected BroadWorksConnector.Ocip.Models.CallLogsType? _callLogType;
 
         [XmlElement(ElementName = "callLogType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"cc2c4e50d2e0f1ccbe7f5a9642204822:41")]
-        public BroadWorksConnector.Ocip.Models.CallLogsType CallLogType
+        public BroadWorksConnector.Ocip.Models.CallLogsType? CallLogType
         {
             get => _callLogType;
             set
             {
-                CallLogTypeSpecified = true;
+                CallLogTypeSpecified = (value != null);
                 _callLogType = value;
             }
         }
@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallLogTypeSpecified { get; set; }
 
-        protected bool _formatNameAndNumber;
+        protected bool? _formatNameAndNumber;
 
         [XmlElement(ElementName = "formatNameAndNumber", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"cc2c4e50d2e0f1ccbe7f5a9642204822:41")]
-        public bool FormatNameAndNumber
+        public bool? FormatNameAndNumber
         {
             get => _formatNameAndNumber;
             set
             {
-                FormatNameAndNumberSpecified = true;
+                FormatNameAndNumberSpecified = (value != null);
                 _formatNameAndNumber = value;
             }
         }

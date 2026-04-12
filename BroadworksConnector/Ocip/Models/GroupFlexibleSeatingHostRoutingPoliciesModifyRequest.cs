@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        protected bool _allowEmergencyCalls;
+        protected bool? _allowEmergencyCalls;
 
         [XmlElement(ElementName = "allowEmergencyCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1d4e390f8cd01ca6f92589024d74dac6:345")]
-        public bool AllowEmergencyCalls
+        public bool? AllowEmergencyCalls
         {
             get => _allowEmergencyCalls;
             set
             {
-                AllowEmergencyCallsSpecified = true;
+                AllowEmergencyCallsSpecified = (value != null);
                 _allowEmergencyCalls = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowEmergencyCallsSpecified { get; set; }
 
-        protected bool _allowCallsToVoicePortal;
+        protected bool? _allowCallsToVoicePortal;
 
         [XmlElement(ElementName = "allowCallsToVoicePortal", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1d4e390f8cd01ca6f92589024d74dac6:345")]
-        public bool AllowCallsToVoicePortal
+        public bool? AllowCallsToVoicePortal
         {
             get => _allowCallsToVoicePortal;
             set
             {
-                AllowCallsToVoicePortalSpecified = true;
+                AllowCallsToVoicePortalSpecified = (value != null);
                 _allowCallsToVoicePortal = value;
             }
         }

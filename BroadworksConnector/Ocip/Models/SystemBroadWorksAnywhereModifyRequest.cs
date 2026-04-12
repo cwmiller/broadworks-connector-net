@@ -25,17 +25,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemBroadWorksAnywhereModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _enableTransferNotification;
+        protected bool? _enableTransferNotification;
 
         [XmlElement(ElementName = "enableTransferNotification", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"f39163d0e42e05c4a1692a62f625df9f:254")]
-        public bool EnableTransferNotification
+        public bool? EnableTransferNotification
         {
             get => _enableTransferNotification;
             set
             {
-                EnableTransferNotificationSpecified = true;
+                EnableTransferNotificationSpecified = (value != null);
                 _enableTransferNotification = value;
             }
         }
@@ -43,17 +43,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableTransferNotificationSpecified { get; set; }
 
-        protected bool _blockProvisioningOfDNAsBALocation;
+        protected bool? _blockProvisioningOfDNAsBALocation;
 
         [XmlElement(ElementName = "blockProvisioningOfDNAsBALocation", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"f39163d0e42e05c4a1692a62f625df9f:254")]
-        public bool BlockProvisioningOfDNAsBALocation
+        public bool? BlockProvisioningOfDNAsBALocation
         {
             get => _blockProvisioningOfDNAsBALocation;
             set
             {
-                BlockProvisioningOfDNAsBALocationSpecified = true;
+                BlockProvisioningOfDNAsBALocationSpecified = (value != null);
                 _blockProvisioningOfDNAsBALocation = value;
             }
         }

@@ -171,7 +171,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _recurrence;
             set
             {
-                RecurrenceSpecified = true;
+                RecurrenceSpecified = (value != null);
                 _recurrence = value;
             }
         }

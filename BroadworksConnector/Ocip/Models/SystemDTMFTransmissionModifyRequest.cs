@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDTMFTransmissionModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected BroadWorksConnector.Ocip.Models.DTMFTransmissionMethod _transmissionMethod;
+        protected BroadWorksConnector.Ocip.Models.DTMFTransmissionMethod? _transmissionMethod;
 
         [XmlElement(ElementName = "transmissionMethod", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:9745")]
-        public BroadWorksConnector.Ocip.Models.DTMFTransmissionMethod TransmissionMethod
+        public BroadWorksConnector.Ocip.Models.DTMFTransmissionMethod? TransmissionMethod
         {
             get => _transmissionMethod;
             set
             {
-                TransmissionMethodSpecified = true;
+                TransmissionMethodSpecified = (value != null);
                 _transmissionMethod = value;
             }
         }
@@ -37,17 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TransmissionMethodSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.DtmfTransmissionSignalingContentType _signalingContentType;
+        protected BroadWorksConnector.Ocip.Models.DtmfTransmissionSignalingContentType? _signalingContentType;
 
         [XmlElement(ElementName = "signalingContentType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:9745")]
-        public BroadWorksConnector.Ocip.Models.DtmfTransmissionSignalingContentType SignalingContentType
+        public BroadWorksConnector.Ocip.Models.DtmfTransmissionSignalingContentType? SignalingContentType
         {
             get => _signalingContentType;
             set
             {
-                SignalingContentTypeSpecified = true;
+                SignalingContentTypeSpecified = (value != null);
                 _signalingContentType = value;
             }
         }

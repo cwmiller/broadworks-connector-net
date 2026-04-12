@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newAlertingGroupName;
             set
             {
-                NewAlertingGroupNameSpecified = true;
+                NewAlertingGroupNameSpecified = (value != null);
                 _newAlertingGroupName = value;
             }
         }
@@ -97,17 +97,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlertingGroupDescriptionSpecified { get; set; }
 
-        protected bool _useDiversionInhibitor;
+        protected bool? _useDiversionInhibitor;
 
         [XmlElement(ElementName = "useDiversionInhibitor", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"146ca46a7097f08aed7a73ab65f17df8:444")]
-        public bool UseDiversionInhibitor
+        public bool? UseDiversionInhibitor
         {
             get => _useDiversionInhibitor;
             set
             {
-                UseDiversionInhibitorSpecified = true;
+                UseDiversionInhibitorSpecified = (value != null);
                 _useDiversionInhibitor = value;
             }
         }
@@ -115,17 +115,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseDiversionInhibitorSpecified { get; set; }
 
-        protected bool _answerConfirmationRequired;
+        protected bool? _answerConfirmationRequired;
 
         [XmlElement(ElementName = "answerConfirmationRequired", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"146ca46a7097f08aed7a73ab65f17df8:444")]
-        public bool AnswerConfirmationRequired
+        public bool? AnswerConfirmationRequired
         {
             get => _answerConfirmationRequired;
             set
             {
-                AnswerConfirmationRequiredSpecified = true;
+                AnswerConfirmationRequiredSpecified = (value != null);
                 _answerConfirmationRequired = value;
             }
         }
@@ -133,19 +133,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AnswerConfirmationRequiredSpecified { get; set; }
 
-        protected int _numberOfRings;
+        protected int? _numberOfRings;
 
         [XmlElement(ElementName = "numberOfRings", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"146ca46a7097f08aed7a73ab65f17df8:444")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
-        public int NumberOfRings
+        public int? NumberOfRings
         {
             get => _numberOfRings;
             set
             {
-                NumberOfRingsSpecified = true;
+                NumberOfRingsSpecified = (value != null);
                 _numberOfRings = value;
             }
         }
@@ -181,7 +181,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _criteriaActivation;
             set
             {
-                CriteriaActivationSpecified = true;
+                CriteriaActivationSpecified = (value != null);
                 _criteriaActivation = value;
             }
         }

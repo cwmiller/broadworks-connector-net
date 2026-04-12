@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _ipAddress;
             set
             {
-                IpAddressSpecified = true;
+                IpAddressSpecified = (value != null);
                 _ipAddress = value;
             }
         }

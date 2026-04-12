@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _messageDeskNumber;
             set
             {
-                MessageDeskNumberSpecified = true;
+                MessageDeskNumberSpecified = (value != null);
                 _messageDeskNumber = value;
             }
         }

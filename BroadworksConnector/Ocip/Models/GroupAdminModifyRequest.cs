@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _language;
             set
             {
-                LanguageSpecified = true;
+                LanguageSpecified = (value != null);
                 _language = value;
             }
         }
@@ -123,17 +123,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LanguageSpecified { get; set; }
 
-        protected bool _accountDisabled;
+        protected bool? _accountDisabled;
 
         [XmlElement(ElementName = "accountDisabled", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:1827")]
-        public bool AccountDisabled
+        public bool? AccountDisabled
         {
             get => _accountDisabled;
             set
             {
-                AccountDisabledSpecified = true;
+                AccountDisabledSpecified = (value != null);
                 _accountDisabled = value;
             }
         }

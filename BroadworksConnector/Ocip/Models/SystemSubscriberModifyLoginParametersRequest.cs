@@ -19,19 +19,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSubscriberModifyLoginParametersRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected int _maxFailedLoginAttempts;
+        protected int? _maxFailedLoginAttempts;
 
         [XmlElement(ElementName = "maxFailedLoginAttempts", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18341")]
         [MinInclusive(1)]
         [MaxInclusive(1000)]
-        public int MaxFailedLoginAttempts
+        public int? MaxFailedLoginAttempts
         {
             get => _maxFailedLoginAttempts;
             set
             {
-                MaxFailedLoginAttemptsSpecified = true;
+                MaxFailedLoginAttemptsSpecified = (value != null);
                 _maxFailedLoginAttempts = value;
             }
         }
@@ -39,19 +39,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxFailedLoginAttemptsSpecified { get; set; }
 
-        protected int _minLoginIdLength;
+        protected int? _minLoginIdLength;
 
         [XmlElement(ElementName = "minLoginIdLength", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18341")]
         [MinInclusive(2)]
         [MaxInclusive(80)]
-        public int MinLoginIdLength
+        public int? MinLoginIdLength
         {
             get => _minLoginIdLength;
             set
             {
-                MinLoginIdLengthSpecified = true;
+                MinLoginIdLengthSpecified = (value != null);
                 _minLoginIdLength = value;
             }
         }

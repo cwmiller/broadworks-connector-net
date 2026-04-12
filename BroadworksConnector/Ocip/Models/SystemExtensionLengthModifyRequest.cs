@@ -19,19 +19,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemExtensionLengthModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected int _minExtensionLength;
+        protected int? _minExtensionLength;
 
         [XmlElement(ElementName = "minExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:10129")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
-        public int MinExtensionLength
+        public int? MinExtensionLength
         {
             get => _minExtensionLength;
             set
             {
-                MinExtensionLengthSpecified = true;
+                MinExtensionLengthSpecified = (value != null);
                 _minExtensionLength = value;
             }
         }
@@ -39,19 +39,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MinExtensionLengthSpecified { get; set; }
 
-        protected int _maxExtensionLength;
+        protected int? _maxExtensionLength;
 
         [XmlElement(ElementName = "maxExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:10129")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
-        public int MaxExtensionLength
+        public int? MaxExtensionLength
         {
             get => _maxExtensionLength;
             set
             {
-                MaxExtensionLengthSpecified = true;
+                MaxExtensionLengthSpecified = (value != null);
                 _maxExtensionLength = value;
             }
         }

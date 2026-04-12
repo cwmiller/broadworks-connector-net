@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _messageNameStartsWith;
             set
             {
-                MessageNameStartsWithSpecified = true;
+                MessageNameStartsWithSpecified = (value != null);
                 _messageNameStartsWith = value;
             }
         }

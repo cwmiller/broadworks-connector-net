@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _tagSet;
             set
             {
-                TagSetSpecified = true;
+                TagSetSpecified = (value != null);
                 _tagSet = value;
             }
         }
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deviceAccessNetAddress;
             set
             {
-                DeviceAccessNetAddressSpecified = true;
+                DeviceAccessNetAddressSpecified = (value != null);
                 _deviceAccessNetAddress = value;
             }
         }
@@ -141,19 +141,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceAccessNetAddressSpecified { get; set; }
 
-        protected int _deviceAccessPort;
+        protected int? _deviceAccessPort;
 
         [XmlElement(ElementName = "deviceAccessPort", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:49144")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
-        public int DeviceAccessPort
+        public int? DeviceAccessPort
         {
             get => _deviceAccessPort;
             set
             {
-                DeviceAccessPortSpecified = true;
+                DeviceAccessPortSpecified = (value != null);
                 _deviceAccessPort = value;
             }
         }
@@ -173,7 +173,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deviceAccessContext;
             set
             {
-                DeviceAccessContextSpecified = true;
+                DeviceAccessContextSpecified = (value != null);
                 _deviceAccessContext = value;
             }
         }
@@ -193,7 +193,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deviceAccessURI;
             set
             {
-                DeviceAccessURISpecified = true;
+                DeviceAccessURISpecified = (value != null);
                 _deviceAccessURI = value;
             }
         }
@@ -213,7 +213,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultDeviceLanguage;
             set
             {
-                DefaultDeviceLanguageSpecified = true;
+                DefaultDeviceLanguageSpecified = (value != null);
                 _defaultDeviceLanguage = value;
             }
         }
@@ -233,7 +233,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultDeviceEncoding;
             set
             {
-                DefaultDeviceEncodingSpecified = true;
+                DefaultDeviceEncodingSpecified = (value != null);
                 _defaultDeviceEncoding = value;
             }
         }
@@ -253,7 +253,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _accessDeviceCredentials;
             set
             {
-                AccessDeviceCredentialsSpecified = true;
+                AccessDeviceCredentialsSpecified = (value != null);
                 _accessDeviceCredentials = value;
             }
         }
@@ -341,7 +341,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _macFormatInNonRequestURI;
             set
             {
-                MacFormatInNonRequestURISpecified = true;
+                MacFormatInNonRequestURISpecified = (value != null);
                 _macFormatInNonRequestURI = value;
             }
         }

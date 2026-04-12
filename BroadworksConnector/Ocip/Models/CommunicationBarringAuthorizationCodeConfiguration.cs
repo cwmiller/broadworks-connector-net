@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _description;
             set
             {
-                DescriptionSpecified = true;
+                DescriptionSpecified = (value != null);
                 _description = value;
             }
         }
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkClassOfService;
             set
             {
-                NetworkClassOfServiceSpecified = true;
+                NetworkClassOfServiceSpecified = (value != null);
                 _networkClassOfService = value;
             }
         }

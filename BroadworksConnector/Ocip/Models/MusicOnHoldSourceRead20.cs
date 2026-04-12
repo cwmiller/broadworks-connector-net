@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _customSource;
             set
             {
-                CustomSourceSpecified = true;
+                CustomSourceSpecified = (value != null);
                 _customSource = value;
             }
         }
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _externalSource;
             set
             {
-                ExternalSourceSpecified = true;
+                ExternalSourceSpecified = (value != null);
                 _externalSource = value;
             }
         }

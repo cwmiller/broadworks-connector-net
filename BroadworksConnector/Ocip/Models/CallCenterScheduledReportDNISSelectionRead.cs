@@ -35,17 +35,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        protected bool _deleted;
+        protected bool? _deleted;
 
         [XmlElement(ElementName = "deleted", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:7651")]
-        public bool Deleted
+        public bool? Deleted
         {
             get => _deleted;
             set
             {
-                DeletedSpecified = true;
+                DeletedSpecified = (value != null);
                 _deleted = value;
             }
         }
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _currentName;
             set
             {
-                CurrentNameSpecified = true;
+                CurrentNameSpecified = (value != null);
                 _currentName = value;
             }
         }
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _pastName;
             set
             {
-                PastNameSpecified = true;
+                PastNameSpecified = (value != null);
                 _pastName = value;
             }
         }

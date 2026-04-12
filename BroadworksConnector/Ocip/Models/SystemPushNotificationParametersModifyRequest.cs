@@ -20,17 +20,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemPushNotificationParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _enforceAllowedApplicationList;
+        protected bool? _enforceAllowedApplicationList;
 
         [XmlElement(ElementName = "enforceAllowedApplicationList", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:15089")]
-        public bool EnforceAllowedApplicationList
+        public bool? EnforceAllowedApplicationList
         {
             get => _enforceAllowedApplicationList;
             set
             {
-                EnforceAllowedApplicationListSpecified = true;
+                EnforceAllowedApplicationListSpecified = (value != null);
                 _enforceAllowedApplicationList = value;
             }
         }
@@ -38,19 +38,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnforceAllowedApplicationListSpecified { get; set; }
 
-        protected int _maximumRegistrationsPerUser;
+        protected int? _maximumRegistrationsPerUser;
 
         [XmlElement(ElementName = "maximumRegistrationsPerUser", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:15089")]
         [MinInclusive(1)]
         [MaxInclusive(100)]
-        public int MaximumRegistrationsPerUser
+        public int? MaximumRegistrationsPerUser
         {
             get => _maximumRegistrationsPerUser;
             set
             {
-                MaximumRegistrationsPerUserSpecified = true;
+                MaximumRegistrationsPerUserSpecified = (value != null);
                 _maximumRegistrationsPerUser = value;
             }
         }
@@ -58,19 +58,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaximumRegistrationsPerUserSpecified { get; set; }
 
-        protected int _maximumRegistrationAgeDays;
+        protected int? _maximumRegistrationAgeDays;
 
         [XmlElement(ElementName = "maximumRegistrationAgeDays", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:15089")]
         [MinInclusive(30)]
         [MaxInclusive(120)]
-        public int MaximumRegistrationAgeDays
+        public int? MaximumRegistrationAgeDays
         {
             get => _maximumRegistrationAgeDays;
             set
             {
-                MaximumRegistrationAgeDaysSpecified = true;
+                MaximumRegistrationAgeDaysSpecified = (value != null);
                 _maximumRegistrationAgeDays = value;
             }
         }
@@ -78,19 +78,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaximumRegistrationAgeDaysSpecified { get; set; }
 
-        protected int _newCallTimeout;
+        protected int? _newCallTimeout;
 
         [XmlElement(ElementName = "newCallTimeout", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:15089")]
         [MinInclusive(30)]
         [MaxInclusive(600)]
-        public int NewCallTimeout
+        public int? NewCallTimeout
         {
             get => _newCallTimeout;
             set
             {
-                NewCallTimeoutSpecified = true;
+                NewCallTimeoutSpecified = (value != null);
                 _newCallTimeout = value;
             }
         }
@@ -98,19 +98,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewCallTimeoutSpecified { get; set; }
 
-        protected int _subscriptionEventsPerSecond;
+        protected int? _subscriptionEventsPerSecond;
 
         [XmlElement(ElementName = "subscriptionEventsPerSecond", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:15089")]
         [MinInclusive(1)]
         [MaxInclusive(5000)]
-        public int SubscriptionEventsPerSecond
+        public int? SubscriptionEventsPerSecond
         {
             get => _subscriptionEventsPerSecond;
             set
             {
-                SubscriptionEventsPerSecondSpecified = true;
+                SubscriptionEventsPerSecondSpecified = (value != null);
                 _subscriptionEventsPerSecond = value;
             }
         }

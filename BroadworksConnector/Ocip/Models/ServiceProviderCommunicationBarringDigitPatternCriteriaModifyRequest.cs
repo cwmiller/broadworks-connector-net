@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newName;
             set
             {
-                NewNameSpecified = true;
+                NewNameSpecified = (value != null);
                 _newName = value;
             }
         }
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _addMatchDigitPattern;
             set
             {
-                AddMatchDigitPatternSpecified = true;
+                AddMatchDigitPatternSpecified = (value != null);
                 _addMatchDigitPattern = value;
             }
         }
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deleteMatchDigitPattern;
             set
             {
-                DeleteMatchDigitPatternSpecified = true;
+                DeleteMatchDigitPatternSpecified = (value != null);
                 _deleteMatchDigitPattern = value;
             }
         }

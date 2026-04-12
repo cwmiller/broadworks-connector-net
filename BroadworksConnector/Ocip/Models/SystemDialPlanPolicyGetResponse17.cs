@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _privateDigitMap;
             set
             {
-                PrivateDigitMapSpecified = true;
+                PrivateDigitMapSpecified = (value != null);
                 _privateDigitMap = value;
             }
         }

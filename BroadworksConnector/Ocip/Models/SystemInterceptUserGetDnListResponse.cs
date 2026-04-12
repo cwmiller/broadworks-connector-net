@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _interceptUserList;
             set
             {
-                InterceptUserListSpecified = true;
+                InterceptUserListSpecified = (value != null);
                 _interceptUserList = value;
             }
         }

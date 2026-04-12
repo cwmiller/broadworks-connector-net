@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceProviderId;
             set
             {
-                ServiceProviderIdSpecified = true;
+                ServiceProviderIdSpecified = (value != null);
                 _serviceProviderId = value;
             }
         }
@@ -121,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceProviderExternalId;
             set
             {
-                ServiceProviderExternalIdSpecified = true;
+                ServiceProviderExternalIdSpecified = (value != null);
                 _serviceProviderExternalId = value;
             }
         }
@@ -160,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceProviderName;
             set
             {
-                ServiceProviderNameSpecified = true;
+                ServiceProviderNameSpecified = (value != null);
                 _serviceProviderName = value;
             }
         }
@@ -180,7 +180,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _supportEmail;
             set
             {
-                SupportEmailSpecified = true;
+                SupportEmailSpecified = (value != null);
                 _supportEmail = value;
             }
         }
@@ -198,7 +198,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _contact;
             set
             {
-                ContactSpecified = true;
+                ContactSpecified = (value != null);
                 _contact = value;
             }
         }
@@ -216,7 +216,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _address;
             set
             {
-                AddressSpecified = true;
+                AddressSpecified = (value != null);
                 _address = value;
             }
         }
@@ -236,7 +236,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _servicePolicy;
             set
             {
-                ServicePolicySpecified = true;
+                ServicePolicySpecified = (value != null);
                 _servicePolicy = value;
             }
         }
@@ -256,7 +256,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callProcessingSliceId;
             set
             {
-                CallProcessingSliceIdSpecified = true;
+                CallProcessingSliceIdSpecified = (value != null);
                 _callProcessingSliceId = value;
             }
         }
@@ -276,7 +276,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _provisioningSliceId;
             set
             {
-                ProvisioningSliceIdSpecified = true;
+                ProvisioningSliceIdSpecified = (value != null);
                 _provisioningSliceId = value;
             }
         }
@@ -296,7 +296,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _subscriberPartition;
             set
             {
-                SubscriberPartitionSpecified = true;
+                SubscriberPartitionSpecified = (value != null);
                 _subscriberPartition = value;
             }
         }
@@ -316,7 +316,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _preferredDataCenter;
             set
             {
-                PreferredDataCenterSpecified = true;
+                PreferredDataCenterSpecified = (value != null);
                 _preferredDataCenter = value;
             }
         }
@@ -336,7 +336,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerId;
             set
             {
-                ResellerIdSpecified = true;
+                ResellerIdSpecified = (value != null);
                 _resellerId = value;
             }
         }
@@ -356,7 +356,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerName;
             set
             {
-                ResellerNameSpecified = true;
+                ResellerNameSpecified = (value != null);
                 _resellerName = value;
             }
         }
@@ -376,7 +376,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _domain;
             set
             {
-                DomainSpecified = true;
+                DomainSpecified = (value != null);
                 _domain = value;
             }
         }
@@ -394,7 +394,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _admin;
             set
             {
-                AdminSpecified = true;
+                AdminSpecified = (value != null);
                 _admin = value;
             }
         }
@@ -412,7 +412,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupServiceAuthorization;
             set
             {
-                GroupServiceAuthorizationSpecified = true;
+                GroupServiceAuthorizationSpecified = (value != null);
                 _groupServiceAuthorization = value;
             }
         }
@@ -430,7 +430,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userServiceAuthorization;
             set
             {
-                UserServiceAuthorizationSpecified = true;
+                UserServiceAuthorizationSpecified = (value != null);
                 _userServiceAuthorization = value;
             }
         }
@@ -448,7 +448,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _servicePack;
             set
             {
-                ServicePackSpecified = true;
+                ServicePackSpecified = (value != null);
                 _servicePack = value;
             }
         }
@@ -468,7 +468,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _phoneNumber;
             set
             {
-                PhoneNumberSpecified = true;
+                PhoneNumberSpecified = (value != null);
                 _phoneNumber = value;
             }
         }
@@ -486,7 +486,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _dnRange;
             set
             {
-                DnRangeSpecified = true;
+                DnRangeSpecified = (value != null);
                 _dnRange = value;
             }
         }
@@ -524,7 +524,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _meetMeConferencingAllocatedPorts;
             set
             {
-                MeetMeConferencingAllocatedPortsSpecified = true;
+                MeetMeConferencingAllocatedPortsSpecified = (value != null);
                 _meetMeConferencingAllocatedPorts = value;
             }
         }
@@ -542,7 +542,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _trunkGroupMaxActiveCalls;
             set
             {
-                TrunkGroupMaxActiveCallsSpecified = true;
+                TrunkGroupMaxActiveCallsSpecified = (value != null);
                 _trunkGroupMaxActiveCalls = value;
             }
         }
@@ -560,7 +560,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _trunkGroupBurstingMaxActiveCalls;
             set
             {
-                TrunkGroupBurstingMaxActiveCallsSpecified = true;
+                TrunkGroupBurstingMaxActiveCallsSpecified = (value != null);
                 _trunkGroupBurstingMaxActiveCalls = value;
             }
         }
@@ -578,7 +578,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _voiceMessagingGroupSettings;
             set
             {
-                VoiceMessagingGroupSettingsSpecified = true;
+                VoiceMessagingGroupSettingsSpecified = (value != null);
                 _voiceMessagingGroupSettings = value;
             }
         }
@@ -586,17 +586,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VoiceMessagingGroupSettingsSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ServiceProviderVoicePortalScope _voiceMessagingGroupVoicePortalScope;
+        protected BroadWorksConnector.Ocip.Models.ServiceProviderVoicePortalScope? _voiceMessagingGroupVoicePortalScope;
 
         [XmlElement(ElementName = "voiceMessagingGroupVoicePortalScope", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:2726")]
-        public BroadWorksConnector.Ocip.Models.ServiceProviderVoicePortalScope VoiceMessagingGroupVoicePortalScope
+        public BroadWorksConnector.Ocip.Models.ServiceProviderVoicePortalScope? VoiceMessagingGroupVoicePortalScope
         {
             get => _voiceMessagingGroupVoicePortalScope;
             set
             {
-                VoiceMessagingGroupVoicePortalScopeSpecified = true;
+                VoiceMessagingGroupVoicePortalScopeSpecified = (value != null);
                 _voiceMessagingGroupVoicePortalScope = value;
             }
         }

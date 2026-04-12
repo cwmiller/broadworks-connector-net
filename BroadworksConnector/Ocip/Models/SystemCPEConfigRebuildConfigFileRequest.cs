@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deviceType;
             set
             {
-                DeviceTypeSpecified = true;
+                DeviceTypeSpecified = (value != null);
                 _deviceType = value;
             }
         }
@@ -40,17 +40,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceTypeSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CPEDeviceConfigRebuildType _rebuildType;
+        protected BroadWorksConnector.Ocip.Models.CPEDeviceConfigRebuildType? _rebuildType;
 
         [XmlElement(ElementName = "rebuildType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:7242")]
-        public BroadWorksConnector.Ocip.Models.CPEDeviceConfigRebuildType RebuildType
+        public BroadWorksConnector.Ocip.Models.CPEDeviceConfigRebuildType? RebuildType
         {
             get => _rebuildType;
             set
             {
-                RebuildTypeSpecified = true;
+                RebuildTypeSpecified = (value != null);
                 _rebuildType = value;
             }
         }
@@ -58,17 +58,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RebuildTypeSpecified { get; set; }
 
-        protected bool _force;
+        protected bool? _force;
 
         [XmlElement(ElementName = "force", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:7242")]
-        public bool Force
+        public bool? Force
         {
             get => _force;
             set
             {
-                ForceSpecified = true;
+                ForceSpecified = (value != null);
                 _force = value;
             }
         }

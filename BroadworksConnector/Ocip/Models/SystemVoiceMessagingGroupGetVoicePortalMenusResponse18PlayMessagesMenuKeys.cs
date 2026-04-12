@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _saveMessage;
             set
             {
-                SaveMessageSpecified = true;
+                SaveMessageSpecified = (value != null);
                 _saveMessage = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deleteMessage;
             set
             {
-                DeleteMessageSpecified = true;
+                DeleteMessageSpecified = (value != null);
                 _deleteMessage = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _playMessage;
             set
             {
-                PlayMessageSpecified = true;
+                PlayMessageSpecified = (value != null);
                 _playMessage = value;
             }
         }
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _previousMessage;
             set
             {
-                PreviousMessageSpecified = true;
+                PreviousMessageSpecified = (value != null);
                 _previousMessage = value;
             }
         }
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _playEnvelope;
             set
             {
-                PlayEnvelopeSpecified = true;
+                PlayEnvelopeSpecified = (value != null);
                 _playEnvelope = value;
             }
         }
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _nextMessage;
             set
             {
-                NextMessageSpecified = true;
+                NextMessageSpecified = (value != null);
                 _nextMessage = value;
             }
         }
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callbackCaller;
             set
             {
-                CallbackCallerSpecified = true;
+                CallbackCallerSpecified = (value != null);
                 _callbackCaller = value;
             }
         }
@@ -168,7 +168,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _composeMessage;
             set
             {
-                ComposeMessageSpecified = true;
+                ComposeMessageSpecified = (value != null);
                 _composeMessage = value;
             }
         }
@@ -188,7 +188,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _replyMessage;
             set
             {
-                ReplyMessageSpecified = true;
+                ReplyMessageSpecified = (value != null);
                 _replyMessage = value;
             }
         }
@@ -208,7 +208,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _forwardMessage;
             set
             {
-                ForwardMessageSpecified = true;
+                ForwardMessageSpecified = (value != null);
                 _forwardMessage = value;
             }
         }
@@ -228,7 +228,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _additionalMessageOptions;
             set
             {
-                AdditionalMessageOptionsSpecified = true;
+                AdditionalMessageOptionsSpecified = (value != null);
                 _additionalMessageOptions = value;
             }
         }
@@ -248,7 +248,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _personalizedName;
             set
             {
-                PersonalizedNameSpecified = true;
+                PersonalizedNameSpecified = (value != null);
                 _personalizedName = value;
             }
         }
@@ -268,7 +268,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _passcode;
             set
             {
-                PasscodeSpecified = true;
+                PasscodeSpecified = (value != null);
                 _passcode = value;
             }
         }
@@ -307,7 +307,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _repeatMenu;
             set
             {
-                RepeatMenuSpecified = true;
+                RepeatMenuSpecified = (value != null);
                 _repeatMenu = value;
             }
         }

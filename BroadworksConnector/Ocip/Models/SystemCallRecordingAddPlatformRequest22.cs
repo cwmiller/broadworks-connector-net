@@ -60,19 +60,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetAddressSpecified { get; set; }
 
-        protected int _port;
+        protected int? _port;
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"0731150ec7515df8cd710f04d8f62f66:213")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
-        public int Port
+        public int? Port
         {
             get => _port;
             set
             {
-                PortSpecified = true;
+                PortSpecified = (value != null);
                 _port = value;
             }
         }
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _description;
             set
             {
-                DescriptionSpecified = true;
+                DescriptionSpecified = (value != null);
                 _description = value;
             }
         }
@@ -180,7 +180,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerId;
             set
             {
-                ResellerIdSpecified = true;
+                ResellerIdSpecified = (value != null);
                 _resellerId = value;
             }
         }
@@ -200,7 +200,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _route;
             set
             {
-                RouteSpecified = true;
+                RouteSpecified = (value != null);
                 _route = value;
             }
         }

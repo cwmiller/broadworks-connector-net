@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _url1;
             set
             {
-                Url1Specified = true;
+                Url1Specified = (value != null);
                 _url1 = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _url2;
             set
             {
-                Url2Specified = true;
+                Url2Specified = (value != null);
                 _url2 = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _url3;
             set
             {
-                Url3Specified = true;
+                Url3Specified = (value != null);
                 _url3 = value;
             }
         }
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _url4;
             set
             {
-                Url4Specified = true;
+                Url4Specified = (value != null);
                 _url4 = value;
             }
         }

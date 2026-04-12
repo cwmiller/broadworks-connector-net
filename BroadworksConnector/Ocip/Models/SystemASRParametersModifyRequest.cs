@@ -19,19 +19,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemASRParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected int _maxTransmissions;
+        protected int? _maxTransmissions;
 
         [XmlElement(ElementName = "maxTransmissions", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:20591")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
-        public int MaxTransmissions
+        public int? MaxTransmissions
         {
             get => _maxTransmissions;
             set
             {
-                MaxTransmissionsSpecified = true;
+                MaxTransmissionsSpecified = (value != null);
                 _maxTransmissions = value;
             }
         }
@@ -39,19 +39,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxTransmissionsSpecified { get; set; }
 
-        protected int _retransmissionDelayMilliSeconds;
+        protected int? _retransmissionDelayMilliSeconds;
 
         [XmlElement(ElementName = "retransmissionDelayMilliSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:20591")]
         [MinInclusive(100)]
         [MaxInclusive(2000)]
-        public int RetransmissionDelayMilliSeconds
+        public int? RetransmissionDelayMilliSeconds
         {
             get => _retransmissionDelayMilliSeconds;
             set
             {
-                RetransmissionDelayMilliSecondsSpecified = true;
+                RetransmissionDelayMilliSecondsSpecified = (value != null);
                 _retransmissionDelayMilliSeconds = value;
             }
         }
@@ -59,19 +59,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RetransmissionDelayMilliSecondsSpecified { get; set; }
 
-        protected int _listeningPort;
+        protected int? _listeningPort;
 
         [XmlElement(ElementName = "listeningPort", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:20591")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
-        public int ListeningPort
+        public int? ListeningPort
         {
             get => _listeningPort;
             set
             {
-                ListeningPortSpecified = true;
+                ListeningPortSpecified = (value != null);
                 _listeningPort = value;
             }
         }

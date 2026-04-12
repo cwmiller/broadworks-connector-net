@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _applicationController;
             set
             {
-                ApplicationControllerSpecified = true;
+                ApplicationControllerSpecified = (value != null);
                 _applicationController = value;
             }
         }

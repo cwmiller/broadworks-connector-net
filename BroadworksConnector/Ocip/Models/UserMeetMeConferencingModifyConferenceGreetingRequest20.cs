@@ -55,17 +55,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConferenceKeySpecified { get; set; }
 
-        protected bool _playEntranceGreeting;
+        protected bool? _playEntranceGreeting;
 
         [XmlElement(ElementName = "playEntranceGreeting", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:887")]
-        public bool PlayEntranceGreeting
+        public bool? PlayEntranceGreeting
         {
             get => _playEntranceGreeting;
             set
             {
-                PlayEntranceGreetingSpecified = true;
+                PlayEntranceGreetingSpecified = (value != null);
                 _playEntranceGreeting = value;
             }
         }

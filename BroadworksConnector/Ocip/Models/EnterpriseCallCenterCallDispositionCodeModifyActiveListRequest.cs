@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callDispositionCodeActivation;
             set
             {
-                CallDispositionCodeActivationSpecified = true;
+                CallDispositionCodeActivationSpecified = (value != null);
                 _callDispositionCodeActivation = value;
             }
         }

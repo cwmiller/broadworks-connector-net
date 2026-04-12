@@ -57,19 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxActiveCallsAllowedSpecified { get; set; }
 
-        protected int _maxIncomingActiveCallsAllowed;
+        protected int? _maxIncomingActiveCallsAllowed;
 
         [XmlElement(ElementName = "maxIncomingActiveCallsAllowed", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"f7e3b48428e45d35b1edd744adc90f9b:225")]
         [MinInclusive(0)]
         [MaxInclusive(99999)]
-        public int MaxIncomingActiveCallsAllowed
+        public int? MaxIncomingActiveCallsAllowed
         {
             get => _maxIncomingActiveCallsAllowed;
             set
             {
-                MaxIncomingActiveCallsAllowedSpecified = true;
+                MaxIncomingActiveCallsAllowedSpecified = (value != null);
                 _maxIncomingActiveCallsAllowed = value;
             }
         }
@@ -77,19 +77,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxIncomingActiveCallsAllowedSpecified { get; set; }
 
-        protected int _maxOutgoingActiveCallsAllowed;
+        protected int? _maxOutgoingActiveCallsAllowed;
 
         [XmlElement(ElementName = "maxOutgoingActiveCallsAllowed", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"f7e3b48428e45d35b1edd744adc90f9b:225")]
         [MinInclusive(0)]
         [MaxInclusive(99999)]
-        public int MaxOutgoingActiveCallsAllowed
+        public int? MaxOutgoingActiveCallsAllowed
         {
             get => _maxOutgoingActiveCallsAllowed;
             set
             {
-                MaxOutgoingActiveCallsAllowedSpecified = true;
+                MaxOutgoingActiveCallsAllowedSpecified = (value != null);
                 _maxOutgoingActiveCallsAllowed = value;
             }
         }

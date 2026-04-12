@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallingPartyCategorySelection _category;
+        protected BroadWorksConnector.Ocip.Models.CallingPartyCategorySelection? _category;
 
         [XmlElement(ElementName = "category", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:41493")]
-        public BroadWorksConnector.Ocip.Models.CallingPartyCategorySelection Category
+        public BroadWorksConnector.Ocip.Models.CallingPartyCategorySelection? Category
         {
             get => _category;
             set
             {
-                CategorySpecified = true;
+                CategorySpecified = (value != null);
                 _category = value;
             }
         }

@@ -22,17 +22,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallRecordingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _continueCallAfterRecordingFailure;
+        protected bool? _continueCallAfterRecordingFailure;
 
         [XmlElement(ElementName = "continueCallAfterRecordingFailure", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:9351")]
-        public bool ContinueCallAfterRecordingFailure
+        public bool? ContinueCallAfterRecordingFailure
         {
             get => _continueCallAfterRecordingFailure;
             set
             {
-                ContinueCallAfterRecordingFailureSpecified = true;
+                ContinueCallAfterRecordingFailureSpecified = (value != null);
                 _continueCallAfterRecordingFailure = value;
             }
         }
@@ -40,19 +40,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ContinueCallAfterRecordingFailureSpecified { get; set; }
 
-        protected int _refreshPeriodSeconds;
+        protected int? _refreshPeriodSeconds;
 
         [XmlElement(ElementName = "refreshPeriodSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:9351")]
         [MinInclusive(10)]
         [MaxInclusive(300)]
-        public int RefreshPeriodSeconds
+        public int? RefreshPeriodSeconds
         {
             get => _refreshPeriodSeconds;
             set
             {
-                RefreshPeriodSecondsSpecified = true;
+                RefreshPeriodSecondsSpecified = (value != null);
                 _refreshPeriodSeconds = value;
             }
         }
@@ -60,19 +60,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RefreshPeriodSecondsSpecified { get; set; }
 
-        protected int _maxConsecutiveFailures;
+        protected int? _maxConsecutiveFailures;
 
         [XmlElement(ElementName = "maxConsecutiveFailures", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:9351")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
-        public int MaxConsecutiveFailures
+        public int? MaxConsecutiveFailures
         {
             get => _maxConsecutiveFailures;
             set
             {
-                MaxConsecutiveFailuresSpecified = true;
+                MaxConsecutiveFailuresSpecified = (value != null);
                 _maxConsecutiveFailures = value;
             }
         }
@@ -80,19 +80,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxConsecutiveFailuresSpecified { get; set; }
 
-        protected int _maxResponseWaitTimeMilliseconds;
+        protected int? _maxResponseWaitTimeMilliseconds;
 
         [XmlElement(ElementName = "maxResponseWaitTimeMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:9351")]
         [MinInclusive(50)]
         [MaxInclusive(10000)]
-        public int MaxResponseWaitTimeMilliseconds
+        public int? MaxResponseWaitTimeMilliseconds
         {
             get => _maxResponseWaitTimeMilliseconds;
             set
             {
-                MaxResponseWaitTimeMillisecondsSpecified = true;
+                MaxResponseWaitTimeMillisecondsSpecified = (value != null);
                 _maxResponseWaitTimeMilliseconds = value;
             }
         }
@@ -100,17 +100,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxResponseWaitTimeMillisecondsSpecified { get; set; }
 
-        protected bool _continueCallAfterVideoRecordingFailure;
+        protected bool? _continueCallAfterVideoRecordingFailure;
 
         [XmlElement(ElementName = "continueCallAfterVideoRecordingFailure", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:9351")]
-        public bool ContinueCallAfterVideoRecordingFailure
+        public bool? ContinueCallAfterVideoRecordingFailure
         {
             get => _continueCallAfterVideoRecordingFailure;
             set
             {
-                ContinueCallAfterVideoRecordingFailureSpecified = true;
+                ContinueCallAfterVideoRecordingFailureSpecified = (value != null);
                 _continueCallAfterVideoRecordingFailure = value;
             }
         }

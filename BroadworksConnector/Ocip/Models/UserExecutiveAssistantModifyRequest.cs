@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _enableDivert;
+        protected bool? _enableDivert;
 
         [XmlElement(ElementName = "enableDivert", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d531efc7ebfdf83cc344962728505dd5:80")]
-        public bool EnableDivert
+        public bool? EnableDivert
         {
             get => _enableDivert;
             set
             {
-                EnableDivertSpecified = true;
+                EnableDivertSpecified = (value != null);
                 _enableDivert = value;
             }
         }
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _optInStatus;
             set
             {
-                OptInStatusSpecified = true;
+                OptInStatusSpecified = (value != null);
                 _optInStatus = value;
             }
         }

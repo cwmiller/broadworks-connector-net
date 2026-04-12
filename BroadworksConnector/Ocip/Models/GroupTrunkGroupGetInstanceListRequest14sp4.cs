@@ -94,17 +94,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeEnterpriseTrunkGroupsSpecified { get; set; }
 
-        protected bool _onlyTrunkGroupsWithDevice;
+        protected bool? _onlyTrunkGroupsWithDevice;
 
         [XmlElement(ElementName = "onlyTrunkGroupsWithDevice", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1110")]
-        public bool OnlyTrunkGroupsWithDevice
+        public bool? OnlyTrunkGroupsWithDevice
         {
             get => _onlyTrunkGroupsWithDevice;
             set
             {
-                OnlyTrunkGroupsWithDeviceSpecified = true;
+                OnlyTrunkGroupsWithDeviceSpecified = (value != null);
                 _onlyTrunkGroupsWithDevice = value;
             }
         }

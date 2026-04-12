@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _applicationServerSetName;
             set
             {
-                ApplicationServerSetNameSpecified = true;
+                ApplicationServerSetNameSpecified = (value != null);
                 _applicationServerSetName = value;
             }
         }

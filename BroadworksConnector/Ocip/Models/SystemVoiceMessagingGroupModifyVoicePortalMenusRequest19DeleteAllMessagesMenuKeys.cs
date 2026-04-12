@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _confirmDeletion;
             set
             {
-                ConfirmDeletionSpecified = true;
+                ConfirmDeletionSpecified = (value != null);
                 _confirmDeletion = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _cancelDeletion;
             set
             {
-                CancelDeletionSpecified = true;
+                CancelDeletionSpecified = (value != null);
                 _cancelDeletion = value;
             }
         }

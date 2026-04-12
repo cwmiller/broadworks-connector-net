@@ -63,17 +63,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected bool _useServiceProviderSetting;
+        protected bool? _useServiceProviderSetting;
 
         [XmlElement(ElementName = "useServiceProviderSetting", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"37cec25308bcc82fe5a80bf541c42c89:101")]
-        public bool UseServiceProviderSetting
+        public bool? UseServiceProviderSetting
         {
             get => _useServiceProviderSetting;
             set
             {
-                UseServiceProviderSettingSpecified = true;
+                UseServiceProviderSettingSpecified = (value != null);
                 _useServiceProviderSetting = value;
             }
         }
@@ -101,17 +101,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceDomainSpecified { get; set; }
 
-        protected bool _useServiceProviderMessagingServer;
+        protected bool? _useServiceProviderMessagingServer;
 
         [XmlElement(ElementName = "useServiceProviderMessagingServer", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"37cec25308bcc82fe5a80bf541c42c89:101")]
-        public bool UseServiceProviderMessagingServer
+        public bool? UseServiceProviderMessagingServer
         {
             get => _useServiceProviderMessagingServer;
             set
             {
-                UseServiceProviderMessagingServerSpecified = true;
+                UseServiceProviderMessagingServerSpecified = (value != null);
                 _useServiceProviderMessagingServer = value;
             }
         }

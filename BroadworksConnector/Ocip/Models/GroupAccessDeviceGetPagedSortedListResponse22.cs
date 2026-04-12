@@ -20,17 +20,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupAccessDeviceGetPagedSortedListResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        protected int _totalNumberOfRows;
+        protected int? _totalNumberOfRows;
 
         [XmlElement(ElementName = "totalNumberOfRows", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:1080")]
-        public int TotalNumberOfRows
+        public int? TotalNumberOfRows
         {
             get => _totalNumberOfRows;
             set
             {
-                TotalNumberOfRowsSpecified = true;
+                TotalNumberOfRowsSpecified = (value != null);
                 _totalNumberOfRows = value;
             }
         }

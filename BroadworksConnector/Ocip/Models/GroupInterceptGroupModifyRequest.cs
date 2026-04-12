@@ -59,17 +59,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:11177")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -77,17 +77,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AnnouncementSelection _announcementSelection;
+        protected BroadWorksConnector.Ocip.Models.AnnouncementSelection? _announcementSelection;
 
         [XmlElement(ElementName = "announcementSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:11177")]
-        public BroadWorksConnector.Ocip.Models.AnnouncementSelection AnnouncementSelection
+        public BroadWorksConnector.Ocip.Models.AnnouncementSelection? AnnouncementSelection
         {
             get => _announcementSelection;
             set
             {
-                AnnouncementSelectionSpecified = true;
+                AnnouncementSelectionSpecified = (value != null);
                 _announcementSelection = value;
             }
         }
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _audioFile;
             set
             {
-                AudioFileSpecified = true;
+                AudioFileSpecified = (value != null);
                 _audioFile = value;
             }
         }
@@ -123,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _videoFile;
             set
             {
-                VideoFileSpecified = true;
+                VideoFileSpecified = (value != null);
                 _videoFile = value;
             }
         }
@@ -131,17 +131,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VideoFileSpecified { get; set; }
 
-        protected bool _playNewPhoneNumber;
+        protected bool? _playNewPhoneNumber;
 
         [XmlElement(ElementName = "playNewPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:11177")]
-        public bool PlayNewPhoneNumber
+        public bool? PlayNewPhoneNumber
         {
             get => _playNewPhoneNumber;
             set
             {
-                PlayNewPhoneNumberSpecified = true;
+                PlayNewPhoneNumberSpecified = (value != null);
                 _playNewPhoneNumber = value;
             }
         }
@@ -169,17 +169,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewPhoneNumberSpecified { get; set; }
 
-        protected bool _transferOnZeroToPhoneNumber;
+        protected bool? _transferOnZeroToPhoneNumber;
 
         [XmlElement(ElementName = "transferOnZeroToPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:11177")]
-        public bool TransferOnZeroToPhoneNumber
+        public bool? TransferOnZeroToPhoneNumber
         {
             get => _transferOnZeroToPhoneNumber;
             set
             {
-                TransferOnZeroToPhoneNumberSpecified = true;
+                TransferOnZeroToPhoneNumberSpecified = (value != null);
                 _transferOnZeroToPhoneNumber = value;
             }
         }

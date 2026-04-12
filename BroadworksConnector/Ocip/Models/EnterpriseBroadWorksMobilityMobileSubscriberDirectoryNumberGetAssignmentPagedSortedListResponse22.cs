@@ -35,17 +35,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class EnterpriseBroadWorksMobilityMobileSubscriberDirectoryNumberGetAssignmentPagedSortedListResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        protected int _totalNumberOfRows;
+        protected int? _totalNumberOfRows;
 
         [XmlElement(ElementName = "totalNumberOfRows", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:202")]
-        public int TotalNumberOfRows
+        public int? TotalNumberOfRows
         {
             get => _totalNumberOfRows;
             set
             {
-                TotalNumberOfRowsSpecified = true;
+                TotalNumberOfRowsSpecified = (value != null);
                 _totalNumberOfRows = value;
             }
         }

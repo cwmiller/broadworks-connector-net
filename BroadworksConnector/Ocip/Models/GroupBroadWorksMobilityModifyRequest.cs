@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.BroadWorksMobilityGroupSettingLevel _useSettingLevel;
+        protected BroadWorksConnector.Ocip.Models.BroadWorksMobilityGroupSettingLevel? _useSettingLevel;
 
         [XmlElement(ElementName = "useSettingLevel", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:467")]
-        public BroadWorksConnector.Ocip.Models.BroadWorksMobilityGroupSettingLevel UseSettingLevel
+        public BroadWorksConnector.Ocip.Models.BroadWorksMobilityGroupSettingLevel? UseSettingLevel
         {
             get => _useSettingLevel;
             set
             {
-                UseSettingLevelSpecified = true;
+                UseSettingLevelSpecified = (value != null);
                 _useSettingLevel = value;
             }
         }
@@ -75,17 +75,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseSettingLevelSpecified { get; set; }
 
-        protected bool _enableLocationServices;
+        protected bool? _enableLocationServices;
 
         [XmlElement(ElementName = "enableLocationServices", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:467")]
-        public bool EnableLocationServices
+        public bool? EnableLocationServices
         {
             get => _enableLocationServices;
             set
             {
-                EnableLocationServicesSpecified = true;
+                EnableLocationServicesSpecified = (value != null);
                 _enableLocationServices = value;
             }
         }
@@ -93,17 +93,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableLocationServicesSpecified { get; set; }
 
-        protected bool _enableMSRNLookup;
+        protected bool? _enableMSRNLookup;
 
         [XmlElement(ElementName = "enableMSRNLookup", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:467")]
-        public bool EnableMSRNLookup
+        public bool? EnableMSRNLookup
         {
             get => _enableMSRNLookup;
             set
             {
-                EnableMSRNLookupSpecified = true;
+                EnableMSRNLookupSpecified = (value != null);
                 _enableMSRNLookup = value;
             }
         }
@@ -111,17 +111,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableMSRNLookupSpecified { get; set; }
 
-        protected bool _enableMobileStateChecking;
+        protected bool? _enableMobileStateChecking;
 
         [XmlElement(ElementName = "enableMobileStateChecking", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:467")]
-        public bool EnableMobileStateChecking
+        public bool? EnableMobileStateChecking
         {
             get => _enableMobileStateChecking;
             set
             {
-                EnableMobileStateCheckingSpecified = true;
+                EnableMobileStateCheckingSpecified = (value != null);
                 _enableMobileStateChecking = value;
             }
         }
@@ -129,17 +129,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableMobileStateCheckingSpecified { get; set; }
 
-        protected bool _denyCallOriginations;
+        protected bool? _denyCallOriginations;
 
         [XmlElement(ElementName = "denyCallOriginations", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:467")]
-        public bool DenyCallOriginations
+        public bool? DenyCallOriginations
         {
             get => _denyCallOriginations;
             set
             {
-                DenyCallOriginationsSpecified = true;
+                DenyCallOriginationsSpecified = (value != null);
                 _denyCallOriginations = value;
             }
         }
@@ -147,17 +147,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DenyCallOriginationsSpecified { get; set; }
 
-        protected bool _denyCallTerminations;
+        protected bool? _denyCallTerminations;
 
         [XmlElement(ElementName = "denyCallTerminations", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:467")]
-        public bool DenyCallTerminations
+        public bool? DenyCallTerminations
         {
             get => _denyCallTerminations;
             set
             {
-                DenyCallTerminationsSpecified = true;
+                DenyCallTerminationsSpecified = (value != null);
                 _denyCallTerminations = value;
             }
         }
@@ -165,17 +165,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DenyCallTerminationsSpecified { get; set; }
 
-        protected bool _enableAnnouncementSuppression;
+        protected bool? _enableAnnouncementSuppression;
 
         [XmlElement(ElementName = "enableAnnouncementSuppression", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:467")]
-        public bool EnableAnnouncementSuppression
+        public bool? EnableAnnouncementSuppression
         {
             get => _enableAnnouncementSuppression;
             set
             {
-                EnableAnnouncementSuppressionSpecified = true;
+                EnableAnnouncementSuppressionSpecified = (value != null);
                 _enableAnnouncementSuppression = value;
             }
         }
@@ -183,17 +183,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableAnnouncementSuppressionSpecified { get; set; }
 
-        protected bool _enableInternalCLIDDelivery;
+        protected bool? _enableInternalCLIDDelivery;
 
         [XmlElement(ElementName = "enableInternalCLIDDelivery", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:467")]
-        public bool EnableInternalCLIDDelivery
+        public bool? EnableInternalCLIDDelivery
         {
             get => _enableInternalCLIDDelivery;
             set
             {
-                EnableInternalCLIDDeliverySpecified = true;
+                EnableInternalCLIDDeliverySpecified = (value != null);
                 _enableInternalCLIDDelivery = value;
             }
         }
@@ -201,17 +201,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableInternalCLIDDeliverySpecified { get; set; }
 
-        protected bool _enableInternalCLIDDeliveryAccessLocations;
+        protected bool? _enableInternalCLIDDeliveryAccessLocations;
 
         [XmlElement(ElementName = "enableInternalCLIDDeliveryAccessLocations", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:467")]
-        public bool EnableInternalCLIDDeliveryAccessLocations
+        public bool? EnableInternalCLIDDeliveryAccessLocations
         {
             get => _enableInternalCLIDDeliveryAccessLocations;
             set
             {
-                EnableInternalCLIDDeliveryAccessLocationsSpecified = true;
+                EnableInternalCLIDDeliveryAccessLocationsSpecified = (value != null);
                 _enableInternalCLIDDeliveryAccessLocations = value;
             }
         }
@@ -219,17 +219,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableInternalCLIDDeliveryAccessLocationsSpecified { get; set; }
 
-        protected bool _enableEnhancedUnreachableStateChecking;
+        protected bool? _enableEnhancedUnreachableStateChecking;
 
         [XmlElement(ElementName = "enableEnhancedUnreachableStateChecking", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:467")]
-        public bool EnableEnhancedUnreachableStateChecking
+        public bool? EnableEnhancedUnreachableStateChecking
         {
             get => _enableEnhancedUnreachableStateChecking;
             set
             {
-                EnableEnhancedUnreachableStateCheckingSpecified = true;
+                EnableEnhancedUnreachableStateCheckingSpecified = (value != null);
                 _enableEnhancedUnreachableStateChecking = value;
             }
         }
@@ -237,17 +237,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableEnhancedUnreachableStateCheckingSpecified { get; set; }
 
-        protected bool _enableNetworkCallBarringStatusCheck;
+        protected bool? _enableNetworkCallBarringStatusCheck;
 
         [XmlElement(ElementName = "enableNetworkCallBarringStatusCheck", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:467")]
-        public bool EnableNetworkCallBarringStatusCheck
+        public bool? EnableNetworkCallBarringStatusCheck
         {
             get => _enableNetworkCallBarringStatusCheck;
             set
             {
-                EnableNetworkCallBarringStatusCheckSpecified = true;
+                EnableNetworkCallBarringStatusCheckSpecified = (value != null);
                 _enableNetworkCallBarringStatusCheck = value;
             }
         }
@@ -275,17 +275,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetworkTranslationIndexSpecified { get; set; }
 
-        protected bool _enablePBXRoutePolicy;
+        protected bool? _enablePBXRoutePolicy;
 
         [XmlElement(ElementName = "enablePBXRoutePolicy", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:467")]
-        public bool EnablePBXRoutePolicy
+        public bool? EnablePBXRoutePolicy
         {
             get => _enablePBXRoutePolicy;
             set
             {
-                EnablePBXRoutePolicySpecified = true;
+                EnablePBXRoutePolicySpecified = (value != null);
                 _enablePBXRoutePolicy = value;
             }
         }

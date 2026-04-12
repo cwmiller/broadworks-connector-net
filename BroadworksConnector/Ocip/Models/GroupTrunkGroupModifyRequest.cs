@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _maxActiveCalls;
             set
             {
-                MaxActiveCallsSpecified = true;
+                MaxActiveCallsSpecified = (value != null);
                 _maxActiveCalls = value;
             }
         }
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _burstingMaxActiveCalls;
             set
             {
-                BurstingMaxActiveCallsSpecified = true;
+                BurstingMaxActiveCallsSpecified = (value != null);
                 _burstingMaxActiveCalls = value;
             }
         }

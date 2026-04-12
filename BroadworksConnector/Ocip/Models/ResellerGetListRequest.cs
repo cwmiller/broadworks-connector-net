@@ -21,18 +21,18 @@ namespace BroadWorksConnector.Ocip.Models
     public class ResellerGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ResellerGetListResponse>
     {
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d45e381d6dbac771631649063122a42e:552")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaResellerId;
             set
             {
-                SearchCriteriaResellerIdSpecified = true;
+                SearchCriteriaResellerIdSpecified = (value != null);
                 _searchCriteriaResellerId = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaResellerName;
             set
             {
-                SearchCriteriaResellerNameSpecified = true;
+                SearchCriteriaResellerNameSpecified = (value != null);
                 _searchCriteriaResellerName = value;
             }
         }

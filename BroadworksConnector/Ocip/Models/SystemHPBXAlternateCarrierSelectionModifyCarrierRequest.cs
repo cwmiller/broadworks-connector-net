@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newName;
             set
             {
-                NewNameSpecified = true;
+                NewNameSpecified = (value != null);
                 _newName = value;
             }
         }
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _prefix;
             set
             {
-                PrefixSpecified = true;
+                PrefixSpecified = (value != null);
                 _prefix = value;
             }
         }
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _domain;
             set
             {
-                DomainSpecified = true;
+                DomainSpecified = (value != null);
                 _domain = value;
             }
         }
@@ -98,17 +98,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DomainSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.HPBXAlternateCarrierType _type;
+        protected BroadWorksConnector.Ocip.Models.HPBXAlternateCarrierType? _type;
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:11465")]
-        public BroadWorksConnector.Ocip.Models.HPBXAlternateCarrierType Type
+        public BroadWorksConnector.Ocip.Models.HPBXAlternateCarrierType? Type
         {
             get => _type;
             set
             {
-                TypeSpecified = true;
+                TypeSpecified = (value != null);
                 _type = value;
             }
         }

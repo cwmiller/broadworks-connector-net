@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userId;
             set
             {
-                UserIdSpecified = true;
+                UserIdSpecified = (value != null);
                 _userId = value;
             }
         }
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _recallAlternateUserId;
             set
             {
-                RecallAlternateUserIdSpecified = true;
+                RecallAlternateUserIdSpecified = (value != null);
                 _recallAlternateUserId = value;
             }
         }

@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _authorizedQuantity;
             set
             {
-                AuthorizedQuantitySpecified = true;
+                AuthorizedQuantitySpecified = (value != null);
                 _authorizedQuantity = value;
             }
         }
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _usedQuantity;
             set
             {
-                UsedQuantitySpecified = true;
+                UsedQuantitySpecified = (value != null);
                 _usedQuantity = value;
             }
         }
@@ -74,17 +74,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UsedQuantitySpecified { get; set; }
 
-        protected bool _authorizable;
+        protected bool? _authorizable;
 
         [XmlElement(ElementName = "authorizable", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6050")]
-        public bool Authorizable
+        public bool? Authorizable
         {
             get => _authorizable;
             set
             {
-                AuthorizableSpecified = true;
+                AuthorizableSpecified = (value != null);
                 _authorizable = value;
             }
         }

@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _useVoicePortalCustomization;
+        protected bool? _useVoicePortalCustomization;
 
         [XmlElement(ElementName = "useVoicePortalCustomization", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39498")]
-        public bool UseVoicePortalCustomization
+        public bool? UseVoicePortalCustomization
         {
             get => _useVoicePortalCustomization;
             set
             {
-                UseVoicePortalCustomizationSpecified = true;
+                UseVoicePortalCustomizationSpecified = (value != null);
                 _useVoicePortalCustomization = value;
             }
         }
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _voicePortalMainMenuKeys;
             set
             {
-                VoicePortalMainMenuKeysSpecified = true;
+                VoicePortalMainMenuKeysSpecified = (value != null);
                 _voicePortalMainMenuKeys = value;
             }
         }
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _voiceMessagingMenuKeys;
             set
             {
-                VoiceMessagingMenuKeysSpecified = true;
+                VoiceMessagingMenuKeysSpecified = (value != null);
                 _voiceMessagingMenuKeys = value;
             }
         }
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _playGreetingMenuKeys;
             set
             {
-                PlayGreetingMenuKeysSpecified = true;
+                PlayGreetingMenuKeysSpecified = (value != null);
                 _playGreetingMenuKeys = value;
             }
         }
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _changeBusyOrNoAnswerGreetingMenuKeys;
             set
             {
-                ChangeBusyOrNoAnswerGreetingMenuKeysSpecified = true;
+                ChangeBusyOrNoAnswerGreetingMenuKeysSpecified = (value != null);
                 _changeBusyOrNoAnswerGreetingMenuKeys = value;
             }
         }
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _changeExtendedAwayGreetingMenuKeys;
             set
             {
-                ChangeExtendedAwayGreetingMenuKeysSpecified = true;
+                ChangeExtendedAwayGreetingMenuKeysSpecified = (value != null);
                 _changeExtendedAwayGreetingMenuKeys = value;
             }
         }
@@ -137,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _recordNewGreetingOrPersonalizedNameMenuKeys;
             set
             {
-                RecordNewGreetingOrPersonalizedNameMenuKeysSpecified = true;
+                RecordNewGreetingOrPersonalizedNameMenuKeysSpecified = (value != null);
                 _recordNewGreetingOrPersonalizedNameMenuKeys = value;
             }
         }
@@ -155,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deleteAllMessagesMenuKeys;
             set
             {
-                DeleteAllMessagesMenuKeysSpecified = true;
+                DeleteAllMessagesMenuKeysSpecified = (value != null);
                 _deleteAllMessagesMenuKeys = value;
             }
         }
@@ -173,7 +173,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _commPilotExpressProfileMenuKeys;
             set
             {
-                CommPilotExpressProfileMenuKeysSpecified = true;
+                CommPilotExpressProfileMenuKeysSpecified = (value != null);
                 _commPilotExpressProfileMenuKeys = value;
             }
         }
@@ -191,7 +191,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _personalizedNameMenuKeys;
             set
             {
-                PersonalizedNameMenuKeysSpecified = true;
+                PersonalizedNameMenuKeysSpecified = (value != null);
                 _personalizedNameMenuKeys = value;
             }
         }
@@ -209,7 +209,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callForwardingOptionsMenuKeys;
             set
             {
-                CallForwardingOptionsMenuKeysSpecified = true;
+                CallForwardingOptionsMenuKeysSpecified = (value != null);
                 _callForwardingOptionsMenuKeys = value;
             }
         }
@@ -227,7 +227,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _changeCallForwardingDestinationMenuKeys;
             set
             {
-                ChangeCallForwardingDestinationMenuKeysSpecified = true;
+                ChangeCallForwardingDestinationMenuKeysSpecified = (value != null);
                 _changeCallForwardingDestinationMenuKeys = value;
             }
         }
@@ -245,7 +245,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _voicePortalCallingMenuKeys;
             set
             {
-                VoicePortalCallingMenuKeysSpecified = true;
+                VoicePortalCallingMenuKeysSpecified = (value != null);
                 _voicePortalCallingMenuKeys = value;
             }
         }
@@ -263,7 +263,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hotelingMenuKeys;
             set
             {
-                HotelingMenuKeysSpecified = true;
+                HotelingMenuKeysSpecified = (value != null);
                 _hotelingMenuKeys = value;
             }
         }
@@ -281,7 +281,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _passcodeMenuKeys;
             set
             {
-                PasscodeMenuKeysSpecified = true;
+                PasscodeMenuKeysSpecified = (value != null);
                 _passcodeMenuKeys = value;
             }
         }
@@ -299,7 +299,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _playMessagesMenuKeys;
             set
             {
-                PlayMessagesMenuKeysSpecified = true;
+                PlayMessagesMenuKeysSpecified = (value != null);
                 _playMessagesMenuKeys = value;
             }
         }
@@ -317,7 +317,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _playMessageMenuKeys;
             set
             {
-                PlayMessageMenuKeysSpecified = true;
+                PlayMessageMenuKeysSpecified = (value != null);
                 _playMessageMenuKeys = value;
             }
         }
@@ -335,7 +335,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _additionalMessageOptionsMenuKeys;
             set
             {
-                AdditionalMessageOptionsMenuKeysSpecified = true;
+                AdditionalMessageOptionsMenuKeysSpecified = (value != null);
                 _additionalMessageOptionsMenuKeys = value;
             }
         }
@@ -353,7 +353,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _forwardOrComposeMessageMenuKeys;
             set
             {
-                ForwardOrComposeMessageMenuKeysSpecified = true;
+                ForwardOrComposeMessageMenuKeysSpecified = (value != null);
                 _forwardOrComposeMessageMenuKeys = value;
             }
         }
@@ -371,7 +371,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _replyMessageMenuKeys;
             set
             {
-                ReplyMessageMenuKeysSpecified = true;
+                ReplyMessageMenuKeysSpecified = (value != null);
                 _replyMessageMenuKeys = value;
             }
         }
@@ -389,7 +389,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _sendToDistributionListMenuKeys;
             set
             {
-                SendToDistributionListMenuKeysSpecified = true;
+                SendToDistributionListMenuKeysSpecified = (value != null);
                 _sendToDistributionListMenuKeys = value;
             }
         }
@@ -407,7 +407,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _selectDistributionListMenuKeys;
             set
             {
-                SelectDistributionListMenuKeysSpecified = true;
+                SelectDistributionListMenuKeysSpecified = (value != null);
                 _selectDistributionListMenuKeys = value;
             }
         }
@@ -425,7 +425,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _reviewSelectedDistributionListMenuKeys;
             set
             {
-                ReviewSelectedDistributionListMenuKeysSpecified = true;
+                ReviewSelectedDistributionListMenuKeysSpecified = (value != null);
                 _reviewSelectedDistributionListMenuKeys = value;
             }
         }
@@ -443,7 +443,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _sendMessageToSelectedDistributionListMenuKeys;
             set
             {
-                SendMessageToSelectedDistributionListMenuKeysSpecified = true;
+                SendMessageToSelectedDistributionListMenuKeysSpecified = (value != null);
                 _sendMessageToSelectedDistributionListMenuKeys = value;
             }
         }
@@ -461,7 +461,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _sendToAllGroupMembersMenuKeys;
             set
             {
-                SendToAllGroupMembersMenuKeysSpecified = true;
+                SendToAllGroupMembersMenuKeysSpecified = (value != null);
                 _sendToAllGroupMembersMenuKeys = value;
             }
         }
@@ -479,7 +479,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _sendToPersonMenuKeys;
             set
             {
-                SendToPersonMenuKeysSpecified = true;
+                SendToPersonMenuKeysSpecified = (value != null);
                 _sendToPersonMenuKeys = value;
             }
         }
@@ -497,7 +497,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _changeCurrentIntroductionOrMessageOrReplyMenuKeys;
             set
             {
-                ChangeCurrentIntroductionOrMessageOrReplyMenuKeysSpecified = true;
+                ChangeCurrentIntroductionOrMessageOrReplyMenuKeysSpecified = (value != null);
                 _changeCurrentIntroductionOrMessageOrReplyMenuKeys = value;
             }
         }
@@ -515,7 +515,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _voicePortalLoginMenuKeys;
             set
             {
-                VoicePortalLoginMenuKeysSpecified = true;
+                VoicePortalLoginMenuKeysSpecified = (value != null);
                 _voicePortalLoginMenuKeys = value;
             }
         }
@@ -533,7 +533,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _faxMessagingMenuKeys;
             set
             {
-                FaxMessagingMenuKeysSpecified = true;
+                FaxMessagingMenuKeysSpecified = (value != null);
                 _faxMessagingMenuKeys = value;
             }
         }
@@ -551,7 +551,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _messageDepositMenuKeys;
             set
             {
-                MessageDepositMenuKeysSpecified = true;
+                MessageDepositMenuKeysSpecified = (value != null);
                 _messageDepositMenuKeys = value;
             }
         }
@@ -569,7 +569,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _disableMessageDepositMenuKeys;
             set
             {
-                DisableMessageDepositMenuKeysSpecified = true;
+                DisableMessageDepositMenuKeysSpecified = (value != null);
                 _disableMessageDepositMenuKeys = value;
             }
         }

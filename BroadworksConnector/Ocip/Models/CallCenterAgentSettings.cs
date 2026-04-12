@@ -36,17 +36,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        protected bool _available;
+        protected bool? _available;
 
         [XmlElement(ElementName = "available", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:264")]
-        public bool Available
+        public bool? Available
         {
             get => _available;
             set
             {
-                AvailableSpecified = true;
+                AvailableSpecified = (value != null);
                 _available = value;
             }
         }
@@ -54,19 +54,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AvailableSpecified { get; set; }
 
-        protected int _skillLevel;
+        protected int? _skillLevel;
 
         [XmlElement(ElementName = "skillLevel", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:264")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
-        public int SkillLevel
+        public int? SkillLevel
         {
             get => _skillLevel;
             set
             {
-                SkillLevelSpecified = true;
+                SkillLevelSpecified = (value != null);
                 _skillLevel = value;
             }
         }

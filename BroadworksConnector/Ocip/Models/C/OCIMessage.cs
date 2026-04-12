@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models.C
             get => _trackingId;
             set
             {
-                TrackingIdSpecified = true;
+                TrackingIdSpecified = (value != null);
                 _trackingId = value;
             }
         }

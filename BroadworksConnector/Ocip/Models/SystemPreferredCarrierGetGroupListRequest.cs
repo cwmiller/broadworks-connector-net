@@ -40,18 +40,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CarrierSpecified { get; set; }
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:359")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaGroupId;
             set
             {
-                SearchCriteriaGroupIdSpecified = true;
+                SearchCriteriaGroupIdSpecified = (value != null);
                 _searchCriteriaGroupId = value;
             }
         }
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaGroupName;
             set
             {
-                SearchCriteriaGroupNameSpecified = true;
+                SearchCriteriaGroupNameSpecified = (value != null);
                 _searchCriteriaGroupName = value;
             }
         }
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactServiceProvider;
             set
             {
-                SearchCriteriaExactServiceProviderSpecified = true;
+                SearchCriteriaExactServiceProviderSpecified = (value != null);
                 _searchCriteriaExactServiceProvider = value;
             }
         }
@@ -123,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaServiceProviderId;
             set
             {
-                SearchCriteriaServiceProviderIdSpecified = true;
+                SearchCriteriaServiceProviderIdSpecified = (value != null);
                 _searchCriteriaServiceProviderId = value;
             }
         }

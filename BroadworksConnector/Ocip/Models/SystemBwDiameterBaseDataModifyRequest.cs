@@ -39,19 +39,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool XsRealmSpecified { get; set; }
 
-        protected int _xsListeningPort;
+        protected int? _xsListeningPort;
 
         [XmlElement(ElementName = "xsListeningPort", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2721")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
-        public int XsListeningPort
+        public int? XsListeningPort
         {
             get => _xsListeningPort;
             set
             {
-                XsListeningPortSpecified = true;
+                XsListeningPortSpecified = (value != null);
                 _xsListeningPort = value;
             }
         }
@@ -59,17 +59,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool XsListeningPortSpecified { get; set; }
 
-        protected bool _xsListeningPortEnabled;
+        protected bool? _xsListeningPortEnabled;
 
         [XmlElement(ElementName = "xsListeningPortEnabled", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2721")]
-        public bool XsListeningPortEnabled
+        public bool? XsListeningPortEnabled
         {
             get => _xsListeningPortEnabled;
             set
             {
-                XsListeningPortEnabledSpecified = true;
+                XsListeningPortEnabledSpecified = (value != null);
                 _xsListeningPortEnabled = value;
             }
         }
@@ -77,19 +77,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool XsListeningPortEnabledSpecified { get; set; }
 
-        protected int _xsListeningSecurePort;
+        protected int? _xsListeningSecurePort;
 
         [XmlElement(ElementName = "xsListeningSecurePort", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2721")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
-        public int XsListeningSecurePort
+        public int? XsListeningSecurePort
         {
             get => _xsListeningSecurePort;
             set
             {
-                XsListeningSecurePortSpecified = true;
+                XsListeningSecurePortSpecified = (value != null);
                 _xsListeningSecurePort = value;
             }
         }
@@ -97,17 +97,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool XsListeningSecurePortSpecified { get; set; }
 
-        protected bool _xsListeningSecurePortEnabled;
+        protected bool? _xsListeningSecurePortEnabled;
 
         [XmlElement(ElementName = "xsListeningSecurePortEnabled", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2721")]
-        public bool XsListeningSecurePortEnabled
+        public bool? XsListeningSecurePortEnabled
         {
             get => _xsListeningSecurePortEnabled;
             set
             {
-                XsListeningSecurePortEnabledSpecified = true;
+                XsListeningSecurePortEnabledSpecified = (value != null);
                 _xsListeningSecurePortEnabled = value;
             }
         }
@@ -135,19 +135,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PsRealmSpecified { get; set; }
 
-        protected int _psListeningPort;
+        protected int? _psListeningPort;
 
         [XmlElement(ElementName = "psListeningPort", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2721")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
-        public int PsListeningPort
+        public int? PsListeningPort
         {
             get => _psListeningPort;
             set
             {
-                PsListeningPortSpecified = true;
+                PsListeningPortSpecified = (value != null);
                 _psListeningPort = value;
             }
         }
@@ -155,17 +155,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PsListeningPortSpecified { get; set; }
 
-        protected bool _psListeningPortEnabled;
+        protected bool? _psListeningPortEnabled;
 
         [XmlElement(ElementName = "psListeningPortEnabled", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2721")]
-        public bool PsListeningPortEnabled
+        public bool? PsListeningPortEnabled
         {
             get => _psListeningPortEnabled;
             set
             {
-                PsListeningPortEnabledSpecified = true;
+                PsListeningPortEnabledSpecified = (value != null);
                 _psListeningPortEnabled = value;
             }
         }
@@ -173,19 +173,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PsListeningPortEnabledSpecified { get; set; }
 
-        protected int _psListeningSecurePort;
+        protected int? _psListeningSecurePort;
 
         [XmlElement(ElementName = "psListeningSecurePort", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2721")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
-        public int PsListeningSecurePort
+        public int? PsListeningSecurePort
         {
             get => _psListeningSecurePort;
             set
             {
-                PsListeningSecurePortSpecified = true;
+                PsListeningSecurePortSpecified = (value != null);
                 _psListeningSecurePort = value;
             }
         }
@@ -193,17 +193,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PsListeningSecurePortSpecified { get; set; }
 
-        protected bool _psListeningSecurePortEnabled;
+        protected bool? _psListeningSecurePortEnabled;
 
         [XmlElement(ElementName = "psListeningSecurePortEnabled", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2721")]
-        public bool PsListeningSecurePortEnabled
+        public bool? PsListeningSecurePortEnabled
         {
             get => _psListeningSecurePortEnabled;
             set
             {
-                PsListeningSecurePortEnabledSpecified = true;
+                PsListeningSecurePortEnabledSpecified = (value != null);
                 _psListeningSecurePortEnabled = value;
             }
         }
@@ -211,17 +211,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PsListeningSecurePortEnabledSpecified { get; set; }
 
-        protected bool _psRelayThroughXs;
+        protected bool? _psRelayThroughXs;
 
         [XmlElement(ElementName = "psRelayThroughXs", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2721")]
-        public bool PsRelayThroughXs
+        public bool? PsRelayThroughXs
         {
             get => _psRelayThroughXs;
             set
             {
-                PsRelayThroughXsSpecified = true;
+                PsRelayThroughXsSpecified = (value != null);
                 _psRelayThroughXs = value;
             }
         }
@@ -229,19 +229,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PsRelayThroughXsSpecified { get; set; }
 
-        protected int _xsRelayListeningPort;
+        protected int? _xsRelayListeningPort;
 
         [XmlElement(ElementName = "xsRelayListeningPort", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2721")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
-        public int XsRelayListeningPort
+        public int? XsRelayListeningPort
         {
             get => _xsRelayListeningPort;
             set
             {
-                XsRelayListeningPortSpecified = true;
+                XsRelayListeningPortSpecified = (value != null);
                 _xsRelayListeningPort = value;
             }
         }
@@ -249,19 +249,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool XsRelayListeningPortSpecified { get; set; }
 
-        protected int _tcTimerSeconds;
+        protected int? _tcTimerSeconds;
 
         [XmlElement(ElementName = "tcTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2721")]
         [MinInclusive(1)]
         [MaxInclusive(3600)]
-        public int TcTimerSeconds
+        public int? TcTimerSeconds
         {
             get => _tcTimerSeconds;
             set
             {
-                TcTimerSecondsSpecified = true;
+                TcTimerSecondsSpecified = (value != null);
                 _tcTimerSeconds = value;
             }
         }
@@ -269,19 +269,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TcTimerSecondsSpecified { get; set; }
 
-        protected int _twTimerSeconds;
+        protected int? _twTimerSeconds;
 
         [XmlElement(ElementName = "twTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2721")]
         [MinInclusive(6)]
         [MaxInclusive(60)]
-        public int TwTimerSeconds
+        public int? TwTimerSeconds
         {
             get => _twTimerSeconds;
             set
             {
-                TwTimerSecondsSpecified = true;
+                TwTimerSecondsSpecified = (value != null);
                 _twTimerSeconds = value;
             }
         }
@@ -289,19 +289,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TwTimerSecondsSpecified { get; set; }
 
-        protected int _requestTimerSeconds;
+        protected int? _requestTimerSeconds;
 
         [XmlElement(ElementName = "requestTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2721")]
         [MinInclusive(1)]
         [MaxInclusive(600)]
-        public int RequestTimerSeconds
+        public int? RequestTimerSeconds
         {
             get => _requestTimerSeconds;
             set
             {
-                RequestTimerSecondsSpecified = true;
+                RequestTimerSecondsSpecified = (value != null);
                 _requestTimerSeconds = value;
             }
         }
@@ -309,19 +309,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RequestTimerSecondsSpecified { get; set; }
 
-        protected int _busyPeerDetectionOutstandingTxnCount;
+        protected int? _busyPeerDetectionOutstandingTxnCount;
 
         [XmlElement(ElementName = "busyPeerDetectionOutstandingTxnCount", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2721")]
         [MinInclusive(1)]
         [MaxInclusive(1000000)]
-        public int BusyPeerDetectionOutstandingTxnCount
+        public int? BusyPeerDetectionOutstandingTxnCount
         {
             get => _busyPeerDetectionOutstandingTxnCount;
             set
             {
-                BusyPeerDetectionOutstandingTxnCountSpecified = true;
+                BusyPeerDetectionOutstandingTxnCountSpecified = (value != null);
                 _busyPeerDetectionOutstandingTxnCount = value;
             }
         }
@@ -329,19 +329,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BusyPeerDetectionOutstandingTxnCountSpecified { get; set; }
 
-        protected int _busyPeerRestoreOutstandingTxnCount;
+        protected int? _busyPeerRestoreOutstandingTxnCount;
 
         [XmlElement(ElementName = "busyPeerRestoreOutstandingTxnCount", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2721")]
         [MinInclusive(1)]
         [MaxInclusive(1000000)]
-        public int BusyPeerRestoreOutstandingTxnCount
+        public int? BusyPeerRestoreOutstandingTxnCount
         {
             get => _busyPeerRestoreOutstandingTxnCount;
             set
             {
-                BusyPeerRestoreOutstandingTxnCountSpecified = true;
+                BusyPeerRestoreOutstandingTxnCountSpecified = (value != null);
                 _busyPeerRestoreOutstandingTxnCount = value;
             }
         }
@@ -349,19 +349,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BusyPeerRestoreOutstandingTxnCountSpecified { get; set; }
 
-        protected int _dynamicEntryInactivityTimerHours;
+        protected int? _dynamicEntryInactivityTimerHours;
 
         [XmlElement(ElementName = "dynamicEntryInactivityTimerHours", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2721")]
         [MinInclusive(1)]
         [MaxInclusive(168)]
-        public int DynamicEntryInactivityTimerHours
+        public int? DynamicEntryInactivityTimerHours
         {
             get => _dynamicEntryInactivityTimerHours;
             set
             {
-                DynamicEntryInactivityTimerHoursSpecified = true;
+                DynamicEntryInactivityTimerHoursSpecified = (value != null);
                 _dynamicEntryInactivityTimerHours = value;
             }
         }
@@ -369,17 +369,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DynamicEntryInactivityTimerHoursSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication _advertisedOfflineBillingApplication;
+        protected BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication? _advertisedOfflineBillingApplication;
 
         [XmlElement(ElementName = "advertisedOfflineBillingApplication", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2721")]
-        public BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication AdvertisedOfflineBillingApplication
+        public BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication? AdvertisedOfflineBillingApplication
         {
             get => _advertisedOfflineBillingApplication;
             set
             {
-                AdvertisedOfflineBillingApplicationSpecified = true;
+                AdvertisedOfflineBillingApplicationSpecified = (value != null);
                 _advertisedOfflineBillingApplication = value;
             }
         }
@@ -387,17 +387,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AdvertisedOfflineBillingApplicationSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication _advertisedOnlineBillingApplication;
+        protected BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication? _advertisedOnlineBillingApplication;
 
         [XmlElement(ElementName = "advertisedOnlineBillingApplication", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2721")]
-        public BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication AdvertisedOnlineBillingApplication
+        public BroadWorksConnector.Ocip.Models.BwDiameterAdvertisedApplication? AdvertisedOnlineBillingApplication
         {
             get => _advertisedOnlineBillingApplication;
             set
             {
-                AdvertisedOnlineBillingApplicationSpecified = true;
+                AdvertisedOnlineBillingApplicationSpecified = (value != null);
                 _advertisedOnlineBillingApplication = value;
             }
         }
@@ -405,19 +405,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AdvertisedOnlineBillingApplicationSpecified { get; set; }
 
-        protected int _defaultPort;
+        protected int? _defaultPort;
 
         [XmlElement(ElementName = "defaultPort", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2721")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
-        public int DefaultPort
+        public int? DefaultPort
         {
             get => _defaultPort;
             set
             {
-                DefaultPortSpecified = true;
+                DefaultPortSpecified = (value != null);
                 _defaultPort = value;
             }
         }
@@ -425,19 +425,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultPortSpecified { get; set; }
 
-        protected int _defaultSecurePort;
+        protected int? _defaultSecurePort;
 
         [XmlElement(ElementName = "defaultSecurePort", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2721")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
-        public int DefaultSecurePort
+        public int? DefaultSecurePort
         {
             get => _defaultSecurePort;
             set
             {
-                DefaultSecurePortSpecified = true;
+                DefaultSecurePortSpecified = (value != null);
                 _defaultSecurePort = value;
             }
         }
@@ -445,17 +445,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultSecurePortSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.DiameterPeerDiscoveryMode _peerDiscoveryMode;
+        protected BroadWorksConnector.Ocip.Models.DiameterPeerDiscoveryMode? _peerDiscoveryMode;
 
         [XmlElement(ElementName = "peerDiscoveryMode", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2721")]
-        public BroadWorksConnector.Ocip.Models.DiameterPeerDiscoveryMode PeerDiscoveryMode
+        public BroadWorksConnector.Ocip.Models.DiameterPeerDiscoveryMode? PeerDiscoveryMode
         {
             get => _peerDiscoveryMode;
             set
             {
-                PeerDiscoveryModeSpecified = true;
+                PeerDiscoveryModeSpecified = (value != null);
                 _peerDiscoveryMode = value;
             }
         }

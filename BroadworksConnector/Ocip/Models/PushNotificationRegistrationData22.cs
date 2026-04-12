@@ -159,7 +159,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _pushNotificationTokenData;
             set
             {
-                PushNotificationTokenDataSpecified = true;
+                PushNotificationTokenDataSpecified = (value != null);
                 _pushNotificationTokenData = value;
             }
         }
@@ -179,7 +179,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _encryptionKeyIdentifier;
             set
             {
-                EncryptionKeyIdentifierSpecified = true;
+                EncryptionKeyIdentifierSpecified = (value != null);
                 _encryptionKeyIdentifier = value;
             }
         }
@@ -199,7 +199,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _encryptionAlgorithm;
             set
             {
-                EncryptionAlgorithmSpecified = true;
+                EncryptionAlgorithmSpecified = (value != null);
                 _encryptionAlgorithm = value;
             }
         }
@@ -219,7 +219,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _channel;
             set
             {
-                ChannelSpecified = true;
+                ChannelSpecified = (value != null);
                 _channel = value;
             }
         }

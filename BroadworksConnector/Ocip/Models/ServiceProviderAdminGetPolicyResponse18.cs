@@ -262,17 +262,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CommunicationBarringAccessSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.EnterpriseAdminNetworkPolicyAccess _networkPolicyAccess;
+        protected BroadWorksConnector.Ocip.Models.EnterpriseAdminNetworkPolicyAccess? _networkPolicyAccess;
 
         [XmlElement(ElementName = "networkPolicyAccess", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:5974")]
-        public BroadWorksConnector.Ocip.Models.EnterpriseAdminNetworkPolicyAccess NetworkPolicyAccess
+        public BroadWorksConnector.Ocip.Models.EnterpriseAdminNetworkPolicyAccess? NetworkPolicyAccess
         {
             get => _networkPolicyAccess;
             set
             {
-                NetworkPolicyAccessSpecified = true;
+                NetworkPolicyAccessSpecified = (value != null);
                 _networkPolicyAccess = value;
             }
         }
@@ -280,17 +280,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetworkPolicyAccessSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.EnterpriseAdminNumberActivationAccess _numberActivationAccess;
+        protected BroadWorksConnector.Ocip.Models.EnterpriseAdminNumberActivationAccess? _numberActivationAccess;
 
         [XmlElement(ElementName = "numberActivationAccess", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:5974")]
-        public BroadWorksConnector.Ocip.Models.EnterpriseAdminNumberActivationAccess NumberActivationAccess
+        public BroadWorksConnector.Ocip.Models.EnterpriseAdminNumberActivationAccess? NumberActivationAccess
         {
             get => _numberActivationAccess;
             set
             {
-                NumberActivationAccessSpecified = true;
+                NumberActivationAccessSpecified = (value != null);
                 _numberActivationAccess = value;
             }
         }

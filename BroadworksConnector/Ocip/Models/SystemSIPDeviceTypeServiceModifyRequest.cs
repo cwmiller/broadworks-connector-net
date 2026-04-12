@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceTypeSpecified { get; set; }
 
-        protected bool _supportsPolycomPhoneServices;
+        protected bool? _supportsPolycomPhoneServices;
 
         [XmlElement(ElementName = "supportsPolycomPhoneServices", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:17688")]
-        public bool SupportsPolycomPhoneServices
+        public bool? SupportsPolycomPhoneServices
         {
             get => _supportsPolycomPhoneServices;
             set
             {
-                SupportsPolycomPhoneServicesSpecified = true;
+                SupportsPolycomPhoneServicesSpecified = (value != null);
                 _supportsPolycomPhoneServices = value;
             }
         }

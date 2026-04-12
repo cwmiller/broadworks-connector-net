@@ -8,24 +8,26 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to GroupAnnouncementFileLocationGetRequest.
-        /// <see cref="GroupAnnouncementFileLocationGetRequest"/>
-        /// </summary>
+    /// <see cref="GroupAnnouncementFileLocationGetRequest"/>
+    /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
-     
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2bd2e9c0ba9fd02c495cbd673527444f:69""}]")]
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""cee4eaafa48c4778c702750c877cb92d:69""}]")]
     public class GroupAnnouncementFileLocationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
-        
+
         protected string _fileLocation;
 
         [XmlElement(ElementName = "fileLocation", IsNullable = false, Namespace = "")]
-        [Group(@"2bd2e9c0ba9fd02c495cbd673527444f:69")]
-[MinLength(1)]
-[MaxLength(256)]
-        public string FileLocation {
+        [Group(@"cee4eaafa48c4778c702750c877cb92d:69")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string FileLocation
+        {
             get => _fileLocation;
-            set {
+            set
+            {
                 FileLocationSpecified = true;
                 _fileLocation = value;
             }
@@ -33,6 +35,6 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool FileLocationSpecified { get; set; }
-        
+
     }
 }

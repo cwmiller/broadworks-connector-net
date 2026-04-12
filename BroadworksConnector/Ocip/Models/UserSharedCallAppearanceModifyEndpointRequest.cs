@@ -60,17 +60,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessDeviceEndpointSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4e9808afa6161bba01df39d17a849c79:183")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -78,17 +78,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected bool _allowOrigination;
+        protected bool? _allowOrigination;
 
         [XmlElement(ElementName = "allowOrigination", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4e9808afa6161bba01df39d17a849c79:183")]
-        public bool AllowOrigination
+        public bool? AllowOrigination
         {
             get => _allowOrigination;
             set
             {
-                AllowOriginationSpecified = true;
+                AllowOriginationSpecified = (value != null);
                 _allowOrigination = value;
             }
         }
@@ -96,17 +96,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowOriginationSpecified { get; set; }
 
-        protected bool _allowTermination;
+        protected bool? _allowTermination;
 
         [XmlElement(ElementName = "allowTermination", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4e9808afa6161bba01df39d17a849c79:183")]
-        public bool AllowTermination
+        public bool? AllowTermination
         {
             get => _allowTermination;
             set
             {
-                AllowTerminationSpecified = true;
+                AllowTerminationSpecified = (value != null);
                 _allowTermination = value;
             }
         }
@@ -114,17 +114,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowTerminationSpecified { get; set; }
 
-        protected bool _useHotline;
+        protected bool? _useHotline;
 
         [XmlElement(ElementName = "useHotline", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4e9808afa6161bba01df39d17a849c79:183")]
-        public bool UseHotline
+        public bool? UseHotline
         {
             get => _useHotline;
             set
             {
-                UseHotlineSpecified = true;
+                UseHotlineSpecified = (value != null);
                 _useHotline = value;
             }
         }

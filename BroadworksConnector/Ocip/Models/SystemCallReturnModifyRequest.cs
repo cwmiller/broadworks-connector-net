@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallReturnModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _twoLevelActivation;
+        protected bool? _twoLevelActivation;
 
         [XmlElement(ElementName = "twoLevelActivation", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"00df0beea0b5305e1c9d56717c27f995:76")]
-        public bool TwoLevelActivation
+        public bool? TwoLevelActivation
         {
             get => _twoLevelActivation;
             set
             {
-                TwoLevelActivationSpecified = true;
+                TwoLevelActivationSpecified = (value != null);
                 _twoLevelActivation = value;
             }
         }
@@ -37,17 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TwoLevelActivationSpecified { get; set; }
 
-        protected bool _provideDate;
+        protected bool? _provideDate;
 
         [XmlElement(ElementName = "provideDate", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"00df0beea0b5305e1c9d56717c27f995:76")]
-        public bool ProvideDate
+        public bool? ProvideDate
         {
             get => _provideDate;
             set
             {
-                ProvideDateSpecified = true;
+                ProvideDateSpecified = (value != null);
                 _provideDate = value;
             }
         }
@@ -55,17 +55,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProvideDateSpecified { get; set; }
 
-        protected bool _lastUnansweredCallOnly;
+        protected bool? _lastUnansweredCallOnly;
 
         [XmlElement(ElementName = "lastUnansweredCallOnly", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"00df0beea0b5305e1c9d56717c27f995:76")]
-        public bool LastUnansweredCallOnly
+        public bool? LastUnansweredCallOnly
         {
             get => _lastUnansweredCallOnly;
             set
             {
-                LastUnansweredCallOnlySpecified = true;
+                LastUnansweredCallOnlySpecified = (value != null);
                 _lastUnansweredCallOnly = value;
             }
         }
@@ -93,17 +93,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConfirmationKeySpecified { get; set; }
 
-        protected bool _allowRestrictedNumber;
+        protected bool? _allowRestrictedNumber;
 
         [XmlElement(ElementName = "allowRestrictedNumber", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"00df0beea0b5305e1c9d56717c27f995:76")]
-        public bool AllowRestrictedNumber
+        public bool? AllowRestrictedNumber
         {
             get => _allowRestrictedNumber;
             set
             {
-                AllowRestrictedNumberSpecified = true;
+                AllowRestrictedNumberSpecified = (value != null);
                 _allowRestrictedNumber = value;
             }
         }
@@ -111,17 +111,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowRestrictedNumberSpecified { get; set; }
 
-        protected bool _deleteNumberAfterAnsweredCallReturn;
+        protected bool? _deleteNumberAfterAnsweredCallReturn;
 
         [XmlElement(ElementName = "deleteNumberAfterAnsweredCallReturn", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"00df0beea0b5305e1c9d56717c27f995:76")]
-        public bool DeleteNumberAfterAnsweredCallReturn
+        public bool? DeleteNumberAfterAnsweredCallReturn
         {
             get => _deleteNumberAfterAnsweredCallReturn;
             set
             {
-                DeleteNumberAfterAnsweredCallReturnSpecified = true;
+                DeleteNumberAfterAnsweredCallReturnSpecified = (value != null);
                 _deleteNumberAfterAnsweredCallReturn = value;
             }
         }

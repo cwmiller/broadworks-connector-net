@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallCenterEnhancedReportingBrandingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterEnhancedReportingSystemBrandingChoice _brandingChoice;
+        protected BroadWorksConnector.Ocip.Models.CallCenterEnhancedReportingSystemBrandingChoice? _brandingChoice;
 
         [XmlElement(ElementName = "brandingChoice", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5999")]
-        public BroadWorksConnector.Ocip.Models.CallCenterEnhancedReportingSystemBrandingChoice BrandingChoice
+        public BroadWorksConnector.Ocip.Models.CallCenterEnhancedReportingSystemBrandingChoice? BrandingChoice
         {
             get => _brandingChoice;
             set
             {
-                BrandingChoiceSpecified = true;
+                BrandingChoiceSpecified = (value != null);
                 _brandingChoice = value;
             }
         }
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _customBrandingFile;
             set
             {
-                CustomBrandingFileSpecified = true;
+                CustomBrandingFileSpecified = (value != null);
                 _customBrandingFile = value;
             }
         }

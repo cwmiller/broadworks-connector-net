@@ -17,17 +17,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCommPilotExpressGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        protected BroadWorksConnector.Ocip.Models.CommPilotExpressProfile _profile;
+        protected BroadWorksConnector.Ocip.Models.CommPilotExpressProfile? _profile;
 
         [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"de7795e1833d459a7eb89116d772fd78:56")]
-        public BroadWorksConnector.Ocip.Models.CommPilotExpressProfile Profile
+        public BroadWorksConnector.Ocip.Models.CommPilotExpressProfile? Profile
         {
             get => _profile;
             set
             {
-                ProfileSpecified = true;
+                ProfileSpecified = (value != null);
                 _profile = value;
             }
         }

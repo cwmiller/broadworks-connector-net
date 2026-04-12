@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        protected bool _enableQueueStatusNotification;
+        protected bool? _enableQueueStatusNotification;
 
         [XmlElement(ElementName = "enableQueueStatusNotification", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5697")]
-        public bool EnableQueueStatusNotification
+        public bool? EnableQueueStatusNotification
         {
             get => _enableQueueStatusNotification;
             set
             {
-                EnableQueueStatusNotificationSpecified = true;
+                EnableQueueStatusNotificationSpecified = (value != null);
                 _enableQueueStatusNotification = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableQueueStatusNotificationSpecified { get; set; }
 
-        protected bool _enableQueueDepthThreshold;
+        protected bool? _enableQueueDepthThreshold;
 
         [XmlElement(ElementName = "enableQueueDepthThreshold", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5697")]
-        public bool EnableQueueDepthThreshold
+        public bool? EnableQueueDepthThreshold
         {
             get => _enableQueueDepthThreshold;
             set
             {
-                EnableQueueDepthThresholdSpecified = true;
+                EnableQueueDepthThresholdSpecified = (value != null);
                 _enableQueueDepthThreshold = value;
             }
         }
@@ -74,17 +74,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableQueueDepthThresholdSpecified { get; set; }
 
-        protected bool _enableWaitingTimeThreshold;
+        protected bool? _enableWaitingTimeThreshold;
 
         [XmlElement(ElementName = "enableWaitingTimeThreshold", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5697")]
-        public bool EnableWaitingTimeThreshold
+        public bool? EnableWaitingTimeThreshold
         {
             get => _enableWaitingTimeThreshold;
             set
             {
-                EnableWaitingTimeThresholdSpecified = true;
+                EnableWaitingTimeThresholdSpecified = (value != null);
                 _enableWaitingTimeThreshold = value;
             }
         }
@@ -92,19 +92,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableWaitingTimeThresholdSpecified { get; set; }
 
-        protected int _numberOfCallsThreshold;
+        protected int? _numberOfCallsThreshold;
 
         [XmlElement(ElementName = "numberOfCallsThreshold", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5697")]
         [MinInclusive(1)]
         [MaxInclusive(525)]
-        public int NumberOfCallsThreshold
+        public int? NumberOfCallsThreshold
         {
             get => _numberOfCallsThreshold;
             set
             {
-                NumberOfCallsThresholdSpecified = true;
+                NumberOfCallsThresholdSpecified = (value != null);
                 _numberOfCallsThreshold = value;
             }
         }
@@ -112,19 +112,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberOfCallsThresholdSpecified { get; set; }
 
-        protected int _waitingTimeOfCallsThreshold;
+        protected int? _waitingTimeOfCallsThreshold;
 
         [XmlElement(ElementName = "waitingTimeOfCallsThreshold", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5697")]
         [MinInclusive(1)]
         [MaxInclusive(7200)]
-        public int WaitingTimeOfCallsThreshold
+        public int? WaitingTimeOfCallsThreshold
         {
             get => _waitingTimeOfCallsThreshold;
             set
             {
-                WaitingTimeOfCallsThresholdSpecified = true;
+                WaitingTimeOfCallsThresholdSpecified = (value != null);
                 _waitingTimeOfCallsThreshold = value;
             }
         }

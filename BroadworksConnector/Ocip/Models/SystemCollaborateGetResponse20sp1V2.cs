@@ -192,7 +192,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _collaborateFromAddress;
             set
             {
-                CollaborateFromAddressSpecified = true;
+                CollaborateFromAddressSpecified = (value != null);
                 _collaborateFromAddress = value;
             }
         }

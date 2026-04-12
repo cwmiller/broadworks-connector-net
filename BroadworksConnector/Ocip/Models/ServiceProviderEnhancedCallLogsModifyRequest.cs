@@ -40,19 +40,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        protected int _maxLoggedCalls;
+        protected int? _maxLoggedCalls;
 
         [XmlElement(ElementName = "maxLoggedCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:137")]
         [MinInclusive(1)]
         [MaxInclusive(99000)]
-        public int MaxLoggedCalls
+        public int? MaxLoggedCalls
         {
             get => _maxLoggedCalls;
             set
             {
-                MaxLoggedCallsSpecified = true;
+                MaxLoggedCallsSpecified = (value != null);
                 _maxLoggedCalls = value;
             }
         }
@@ -60,19 +60,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxLoggedCallsSpecified { get; set; }
 
-        protected int _callExpirationDays;
+        protected int? _callExpirationDays;
 
         [XmlElement(ElementName = "callExpirationDays", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:137")]
         [MinInclusive(1)]
         [MaxInclusive(1000)]
-        public int CallExpirationDays
+        public int? CallExpirationDays
         {
             get => _callExpirationDays;
             set
             {
-                CallExpirationDaysSpecified = true;
+                CallExpirationDaysSpecified = (value != null);
                 _callExpirationDays = value;
             }
         }

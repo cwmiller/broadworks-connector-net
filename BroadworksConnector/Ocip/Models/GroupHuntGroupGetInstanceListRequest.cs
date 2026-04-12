@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupDepartmentName;
             set
             {
-                GroupDepartmentNameSpecified = true;
+                GroupDepartmentNameSpecified = (value != null);
                 _groupDepartmentName = value;
             }
         }

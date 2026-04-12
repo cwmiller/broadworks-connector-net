@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _mobileSubscriberDirectoryNumber;
             set
             {
-                MobileSubscriberDirectoryNumberSpecified = true;
+                MobileSubscriberDirectoryNumberSpecified = (value != null);
                 _mobileSubscriberDirectoryNumber = value;
             }
         }

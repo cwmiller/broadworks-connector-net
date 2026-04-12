@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _reportDeliveryEmailAddress;
             set
             {
-                ReportDeliveryEmailAddressSpecified = true;
+                ReportDeliveryEmailAddressSpecified = (value != null);
                 _reportDeliveryEmailAddress = value;
             }
         }
@@ -150,18 +150,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AbortOnErrorSpecified { get; set; }
 
-        protected int _abortErrorThreshold;
+        protected int? _abortErrorThreshold;
 
         [XmlElement(ElementName = "abortErrorThreshold", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:7233")]
         [MinInclusive(1)]
-        public int AbortErrorThreshold
+        public int? AbortErrorThreshold
         {
             get => _abortErrorThreshold;
             set
             {
-                AbortErrorThresholdSpecified = true;
+                AbortErrorThresholdSpecified = (value != null);
                 _abortErrorThreshold = value;
             }
         }

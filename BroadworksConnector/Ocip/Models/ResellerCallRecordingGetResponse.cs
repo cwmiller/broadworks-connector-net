@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _fQDN;
             set
             {
-                FQDNSpecified = true;
+                FQDNSpecified = (value != null);
                 _fQDN = value;
             }
         }

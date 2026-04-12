@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userInterlockCode;
             set
             {
-                UserInterlockCodeSpecified = true;
+                UserInterlockCodeSpecified = (value != null);
                 _userInterlockCode = value;
             }
         }

@@ -55,17 +55,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DescriptionSpecified { get; set; }
 
-        protected bool _isPrimary;
+        protected bool? _isPrimary;
 
         [XmlElement(ElementName = "isPrimary", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1909")]
-        public bool IsPrimary
+        public bool? IsPrimary
         {
             get => _isPrimary;
             set
             {
-                IsPrimarySpecified = true;
+                IsPrimarySpecified = (value != null);
                 _isPrimary = value;
             }
         }
@@ -73,17 +73,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsPrimarySpecified { get; set; }
 
-        protected bool _enableAlerting;
+        protected bool? _enableAlerting;
 
         [XmlElement(ElementName = "enableAlerting", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1909")]
-        public bool EnableAlerting
+        public bool? EnableAlerting
         {
             get => _enableAlerting;
             set
             {
-                EnableAlertingSpecified = true;
+                EnableAlertingSpecified = (value != null);
                 _enableAlerting = value;
             }
         }

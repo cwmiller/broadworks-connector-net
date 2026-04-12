@@ -19,19 +19,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemBroadWorksReceptionistEnterpriseModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected int _maxMonitoredUsers;
+        protected int? _maxMonitoredUsers;
 
         [XmlElement(ElementName = "maxMonitoredUsers", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"44477d346d2631b033071e12af214ac8:81")]
         [MinInclusive(1)]
         [MaxInclusive(1000)]
-        public int MaxMonitoredUsers
+        public int? MaxMonitoredUsers
         {
             get => _maxMonitoredUsers;
             set
             {
-                MaxMonitoredUsersSpecified = true;
+                MaxMonitoredUsersSpecified = (value != null);
                 _maxMonitoredUsers = value;
             }
         }

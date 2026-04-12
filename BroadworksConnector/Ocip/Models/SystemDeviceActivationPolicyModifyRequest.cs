@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDeviceActivationPolicyModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _allowActivationCodeRequestByUser;
+        protected bool? _allowActivationCodeRequestByUser;
 
         [XmlElement(ElementName = "allowActivationCodeRequestByUser", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:7434")]
-        public bool AllowActivationCodeRequestByUser
+        public bool? AllowActivationCodeRequestByUser
         {
             get => _allowActivationCodeRequestByUser;
             set
             {
-                AllowActivationCodeRequestByUserSpecified = true;
+                AllowActivationCodeRequestByUserSpecified = (value != null);
                 _allowActivationCodeRequestByUser = value;
             }
         }
@@ -37,17 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowActivationCodeRequestByUserSpecified { get; set; }
 
-        protected bool _sendActivationCodeInEmail;
+        protected bool? _sendActivationCodeInEmail;
 
         [XmlElement(ElementName = "sendActivationCodeInEmail", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:7434")]
-        public bool SendActivationCodeInEmail
+        public bool? SendActivationCodeInEmail
         {
             get => _sendActivationCodeInEmail;
             set
             {
-                SendActivationCodeInEmailSpecified = true;
+                SendActivationCodeInEmailSpecified = (value != null);
                 _sendActivationCodeInEmail = value;
             }
         }

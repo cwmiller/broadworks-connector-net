@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:19082")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.VoiceMessagingMessageProcessing _processing;
+        protected BroadWorksConnector.Ocip.Models.VoiceMessagingMessageProcessing? _processing;
 
         [XmlElement(ElementName = "processing", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:19082")]
-        public BroadWorksConnector.Ocip.Models.VoiceMessagingMessageProcessing Processing
+        public BroadWorksConnector.Ocip.Models.VoiceMessagingMessageProcessing? Processing
         {
             get => _processing;
             set
             {
-                ProcessingSpecified = true;
+                ProcessingSpecified = (value != null);
                 _processing = value;
             }
         }
@@ -94,17 +94,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VoiceMessageDeliveryEmailAddressSpecified { get; set; }
 
-        protected bool _usePhoneMessageWaitingIndicator;
+        protected bool? _usePhoneMessageWaitingIndicator;
 
         [XmlElement(ElementName = "usePhoneMessageWaitingIndicator", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:19082")]
-        public bool UsePhoneMessageWaitingIndicator
+        public bool? UsePhoneMessageWaitingIndicator
         {
             get => _usePhoneMessageWaitingIndicator;
             set
             {
-                UsePhoneMessageWaitingIndicatorSpecified = true;
+                UsePhoneMessageWaitingIndicatorSpecified = (value != null);
                 _usePhoneMessageWaitingIndicator = value;
             }
         }
@@ -112,17 +112,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UsePhoneMessageWaitingIndicatorSpecified { get; set; }
 
-        protected bool _sendVoiceMessageNotifyEmail;
+        protected bool? _sendVoiceMessageNotifyEmail;
 
         [XmlElement(ElementName = "sendVoiceMessageNotifyEmail", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:19082")]
-        public bool SendVoiceMessageNotifyEmail
+        public bool? SendVoiceMessageNotifyEmail
         {
             get => _sendVoiceMessageNotifyEmail;
             set
             {
-                SendVoiceMessageNotifyEmailSpecified = true;
+                SendVoiceMessageNotifyEmailSpecified = (value != null);
                 _sendVoiceMessageNotifyEmail = value;
             }
         }
@@ -150,17 +150,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VoiceMessageNotifyEmailAddressSpecified { get; set; }
 
-        protected bool _sendCarbonCopyVoiceMessage;
+        protected bool? _sendCarbonCopyVoiceMessage;
 
         [XmlElement(ElementName = "sendCarbonCopyVoiceMessage", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:19082")]
-        public bool SendCarbonCopyVoiceMessage
+        public bool? SendCarbonCopyVoiceMessage
         {
             get => _sendCarbonCopyVoiceMessage;
             set
             {
-                SendCarbonCopyVoiceMessageSpecified = true;
+                SendCarbonCopyVoiceMessageSpecified = (value != null);
                 _sendCarbonCopyVoiceMessage = value;
             }
         }
@@ -188,17 +188,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VoiceMessageCarbonCopyEmailAddressSpecified { get; set; }
 
-        protected bool _transferOnZeroToPhoneNumber;
+        protected bool? _transferOnZeroToPhoneNumber;
 
         [XmlElement(ElementName = "transferOnZeroToPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:19082")]
-        public bool TransferOnZeroToPhoneNumber
+        public bool? TransferOnZeroToPhoneNumber
         {
             get => _transferOnZeroToPhoneNumber;
             set
             {
-                TransferOnZeroToPhoneNumberSpecified = true;
+                TransferOnZeroToPhoneNumberSpecified = (value != null);
                 _transferOnZeroToPhoneNumber = value;
             }
         }
@@ -226,17 +226,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TransferPhoneNumberSpecified { get; set; }
 
-        protected bool _alwaysRedirectToVoiceMail;
+        protected bool? _alwaysRedirectToVoiceMail;
 
         [XmlElement(ElementName = "alwaysRedirectToVoiceMail", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:19082")]
-        public bool AlwaysRedirectToVoiceMail
+        public bool? AlwaysRedirectToVoiceMail
         {
             get => _alwaysRedirectToVoiceMail;
             set
             {
-                AlwaysRedirectToVoiceMailSpecified = true;
+                AlwaysRedirectToVoiceMailSpecified = (value != null);
                 _alwaysRedirectToVoiceMail = value;
             }
         }
@@ -244,17 +244,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlwaysRedirectToVoiceMailSpecified { get; set; }
 
-        protected bool _busyRedirectToVoiceMail;
+        protected bool? _busyRedirectToVoiceMail;
 
         [XmlElement(ElementName = "busyRedirectToVoiceMail", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:19082")]
-        public bool BusyRedirectToVoiceMail
+        public bool? BusyRedirectToVoiceMail
         {
             get => _busyRedirectToVoiceMail;
             set
             {
-                BusyRedirectToVoiceMailSpecified = true;
+                BusyRedirectToVoiceMailSpecified = (value != null);
                 _busyRedirectToVoiceMail = value;
             }
         }
@@ -262,17 +262,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BusyRedirectToVoiceMailSpecified { get; set; }
 
-        protected bool _noAnswerRedirectToVoiceMail;
+        protected bool? _noAnswerRedirectToVoiceMail;
 
         [XmlElement(ElementName = "noAnswerRedirectToVoiceMail", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:19082")]
-        public bool NoAnswerRedirectToVoiceMail
+        public bool? NoAnswerRedirectToVoiceMail
         {
             get => _noAnswerRedirectToVoiceMail;
             set
             {
-                NoAnswerRedirectToVoiceMailSpecified = true;
+                NoAnswerRedirectToVoiceMailSpecified = (value != null);
                 _noAnswerRedirectToVoiceMail = value;
             }
         }
@@ -280,17 +280,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NoAnswerRedirectToVoiceMailSpecified { get; set; }
 
-        protected bool _outOfPrimaryZoneRedirectToVoiceMail;
+        protected bool? _outOfPrimaryZoneRedirectToVoiceMail;
 
         [XmlElement(ElementName = "outOfPrimaryZoneRedirectToVoiceMail", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:19082")]
-        public bool OutOfPrimaryZoneRedirectToVoiceMail
+        public bool? OutOfPrimaryZoneRedirectToVoiceMail
         {
             get => _outOfPrimaryZoneRedirectToVoiceMail;
             set
             {
-                OutOfPrimaryZoneRedirectToVoiceMailSpecified = true;
+                OutOfPrimaryZoneRedirectToVoiceMailSpecified = (value != null);
                 _outOfPrimaryZoneRedirectToVoiceMail = value;
             }
         }

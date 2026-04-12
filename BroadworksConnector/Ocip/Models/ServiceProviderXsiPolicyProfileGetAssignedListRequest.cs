@@ -39,17 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.XsiPolicyProfileLevel _level;
+        protected BroadWorksConnector.Ocip.Models.XsiPolicyProfileLevel? _level;
 
         [XmlElement(ElementName = "level", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:7182")]
-        public BroadWorksConnector.Ocip.Models.XsiPolicyProfileLevel Level
+        public BroadWorksConnector.Ocip.Models.XsiPolicyProfileLevel? Level
         {
             get => _level;
             set
             {
-                LevelSpecified = true;
+                LevelSpecified = (value != null);
                 _level = value;
             }
         }

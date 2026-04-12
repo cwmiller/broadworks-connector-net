@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _startTimestamp;
             set
             {
-                StartTimestampSpecified = true;
+                StartTimestampSpecified = (value != null);
                 _startTimestamp = value;
             }
         }
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _reportDeliveryEmailAddress;
             set
             {
-                ReportDeliveryEmailAddressSpecified = true;
+                ReportDeliveryEmailAddressSpecified = (value != null);
                 _reportDeliveryEmailAddress = value;
             }
         }
@@ -130,18 +130,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AbortOnErrorSpecified { get; set; }
 
-        protected int _abortErrorThreshold;
+        protected int? _abortErrorThreshold;
 
         [XmlElement(ElementName = "abortErrorThreshold", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:19705")]
         [MinInclusive(1)]
-        public int AbortErrorThreshold
+        public int? AbortErrorThreshold
         {
             get => _abortErrorThreshold;
             set
             {
-                AbortErrorThresholdSpecified = true;
+                AbortErrorThresholdSpecified = (value != null);
                 _abortErrorThreshold = value;
             }
         }
@@ -349,7 +349,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userSelectionServicePackName;
             set
             {
-                UserSelectionServicePackNameSpecified = true;
+                UserSelectionServicePackNameSpecified = (value != null);
                 _userSelectionServicePackName = value;
             }
         }
@@ -367,7 +367,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userSelectionServiceName;
             set
             {
-                UserSelectionServiceNameSpecified = true;
+                UserSelectionServiceNameSpecified = (value != null);
                 _userSelectionServiceName = value;
             }
         }
@@ -387,7 +387,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _removeServicePackName;
             set
             {
-                RemoveServicePackNameSpecified = true;
+                RemoveServicePackNameSpecified = (value != null);
                 _removeServicePackName = value;
             }
         }
@@ -405,7 +405,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _removeServiceName;
             set
             {
-                RemoveServiceNameSpecified = true;
+                RemoveServiceNameSpecified = (value != null);
                 _removeServiceName = value;
             }
         }
@@ -425,7 +425,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _assignServicePackName;
             set
             {
-                AssignServicePackNameSpecified = true;
+                AssignServicePackNameSpecified = (value != null);
                 _assignServicePackName = value;
             }
         }
@@ -443,7 +443,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _assignServiceName;
             set
             {
-                AssignServiceNameSpecified = true;
+                AssignServiceNameSpecified = (value != null);
                 _assignServiceName = value;
             }
         }

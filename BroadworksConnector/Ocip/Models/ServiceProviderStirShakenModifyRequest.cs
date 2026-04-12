@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        protected bool _useParentLevelSettings;
+        protected bool? _useParentLevelSettings;
 
         [XmlElement(ElementName = "useParentLevelSettings", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6963")]
-        public bool UseParentLevelSettings
+        public bool? UseParentLevelSettings
         {
             get => _useParentLevelSettings;
             set
             {
-                UseParentLevelSettingsSpecified = true;
+                UseParentLevelSettingsSpecified = (value != null);
                 _useParentLevelSettings = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseParentLevelSettingsSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.StirShakenSigningPolicy _signingPolicy;
+        protected BroadWorksConnector.Ocip.Models.StirShakenSigningPolicy? _signingPolicy;
 
         [XmlElement(ElementName = "signingPolicy", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6963")]
-        public BroadWorksConnector.Ocip.Models.StirShakenSigningPolicy SigningPolicy
+        public BroadWorksConnector.Ocip.Models.StirShakenSigningPolicy? SigningPolicy
         {
             get => _signingPolicy;
             set
             {
-                SigningPolicySpecified = true;
+                SigningPolicySpecified = (value != null);
                 _signingPolicy = value;
             }
         }
@@ -74,17 +74,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SigningPolicySpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.StirShakenTaggingPolicy _taggingPolicy;
+        protected BroadWorksConnector.Ocip.Models.StirShakenTaggingPolicy? _taggingPolicy;
 
         [XmlElement(ElementName = "taggingPolicy", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6963")]
-        public BroadWorksConnector.Ocip.Models.StirShakenTaggingPolicy TaggingPolicy
+        public BroadWorksConnector.Ocip.Models.StirShakenTaggingPolicy? TaggingPolicy
         {
             get => _taggingPolicy;
             set
             {
-                TaggingPolicySpecified = true;
+                TaggingPolicySpecified = (value != null);
                 _taggingPolicy = value;
             }
         }
@@ -112,17 +112,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SigningServiceURLSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.StirShakenTagFromOrPAI _tagFromOrPAI;
+        protected BroadWorksConnector.Ocip.Models.StirShakenTagFromOrPAI? _tagFromOrPAI;
 
         [XmlElement(ElementName = "tagFromOrPAI", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6963")]
-        public BroadWorksConnector.Ocip.Models.StirShakenTagFromOrPAI TagFromOrPAI
+        public BroadWorksConnector.Ocip.Models.StirShakenTagFromOrPAI? TagFromOrPAI
         {
             get => _tagFromOrPAI;
             set
             {
-                TagFromOrPAISpecified = true;
+                TagFromOrPAISpecified = (value != null);
                 _tagFromOrPAI = value;
             }
         }
@@ -130,17 +130,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TagFromOrPAISpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.StirShakenVerstatTag _verstatTag;
+        protected BroadWorksConnector.Ocip.Models.StirShakenVerstatTag? _verstatTag;
 
         [XmlElement(ElementName = "verstatTag", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6963")]
-        public BroadWorksConnector.Ocip.Models.StirShakenVerstatTag VerstatTag
+        public BroadWorksConnector.Ocip.Models.StirShakenVerstatTag? VerstatTag
         {
             get => _verstatTag;
             set
             {
-                VerstatTagSpecified = true;
+                VerstatTagSpecified = (value != null);
                 _verstatTag = value;
             }
         }
@@ -148,17 +148,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VerstatTagSpecified { get; set; }
 
-        protected bool _useOSValueForOrigId;
+        protected bool? _useOSValueForOrigId;
 
         [XmlElement(ElementName = "useOSValueForOrigId", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6963")]
-        public bool UseOSValueForOrigId
+        public bool? UseOSValueForOrigId
         {
             get => _useOSValueForOrigId;
             set
             {
-                UseOSValueForOrigIdSpecified = true;
+                UseOSValueForOrigIdSpecified = (value != null);
                 _useOSValueForOrigId = value;
             }
         }
@@ -185,17 +185,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OrigUUIDSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.StirShakenAttestationLevel _attestationLevel;
+        protected BroadWorksConnector.Ocip.Models.StirShakenAttestationLevel? _attestationLevel;
 
         [XmlElement(ElementName = "attestationLevel", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6963")]
-        public BroadWorksConnector.Ocip.Models.StirShakenAttestationLevel AttestationLevel
+        public BroadWorksConnector.Ocip.Models.StirShakenAttestationLevel? AttestationLevel
         {
             get => _attestationLevel;
             set
             {
-                AttestationLevelSpecified = true;
+                AttestationLevelSpecified = (value != null);
                 _attestationLevel = value;
             }
         }
@@ -203,17 +203,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AttestationLevelSpecified { get; set; }
 
-        protected bool _enableVerification;
+        protected bool? _enableVerification;
 
         [XmlElement(ElementName = "enableVerification", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6963")]
-        public bool EnableVerification
+        public bool? EnableVerification
         {
             get => _enableVerification;
             set
             {
-                EnableVerificationSpecified = true;
+                EnableVerificationSpecified = (value != null);
                 _enableVerification = value;
             }
         }
@@ -241,17 +241,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VerificationServiceURLSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.StirShakenVerificationErrorHandling _verificationErrorHandling;
+        protected BroadWorksConnector.Ocip.Models.StirShakenVerificationErrorHandling? _verificationErrorHandling;
 
         [XmlElement(ElementName = "verificationErrorHandling", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6963")]
-        public BroadWorksConnector.Ocip.Models.StirShakenVerificationErrorHandling VerificationErrorHandling
+        public BroadWorksConnector.Ocip.Models.StirShakenVerificationErrorHandling? VerificationErrorHandling
         {
             get => _verificationErrorHandling;
             set
             {
-                VerificationErrorHandlingSpecified = true;
+                VerificationErrorHandlingSpecified = (value != null);
                 _verificationErrorHandling = value;
             }
         }
@@ -259,17 +259,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VerificationErrorHandlingSpecified { get; set; }
 
-        protected bool _proxyVerstatToCNAMSubscribe;
+        protected bool? _proxyVerstatToCNAMSubscribe;
 
         [XmlElement(ElementName = "proxyVerstatToCNAMSubscribe", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6963")]
-        public bool ProxyVerstatToCNAMSubscribe
+        public bool? ProxyVerstatToCNAMSubscribe
         {
             get => _proxyVerstatToCNAMSubscribe;
             set
             {
-                ProxyVerstatToCNAMSubscribeSpecified = true;
+                ProxyVerstatToCNAMSubscribeSpecified = (value != null);
                 _proxyVerstatToCNAMSubscribe = value;
             }
         }
@@ -277,17 +277,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProxyVerstatToCNAMSubscribeSpecified { get; set; }
 
-        protected bool _useUnknownHeadersFromCNAMNotify;
+        protected bool? _useUnknownHeadersFromCNAMNotify;
 
         [XmlElement(ElementName = "useUnknownHeadersFromCNAMNotify", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6963")]
-        public bool UseUnknownHeadersFromCNAMNotify
+        public bool? UseUnknownHeadersFromCNAMNotify
         {
             get => _useUnknownHeadersFromCNAMNotify;
             set
             {
-                UseUnknownHeadersFromCNAMNotifySpecified = true;
+                UseUnknownHeadersFromCNAMNotifySpecified = (value != null);
                 _useUnknownHeadersFromCNAMNotify = value;
             }
         }
@@ -295,17 +295,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseUnknownHeadersFromCNAMNotifySpecified { get; set; }
 
-        protected bool _enableSigningForUnscreenedTrunkGroupOriginations;
+        protected bool? _enableSigningForUnscreenedTrunkGroupOriginations;
 
         [XmlElement(ElementName = "enableSigningForUnscreenedTrunkGroupOriginations", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6963")]
-        public bool EnableSigningForUnscreenedTrunkGroupOriginations
+        public bool? EnableSigningForUnscreenedTrunkGroupOriginations
         {
             get => _enableSigningForUnscreenedTrunkGroupOriginations;
             set
             {
-                EnableSigningForUnscreenedTrunkGroupOriginationsSpecified = true;
+                EnableSigningForUnscreenedTrunkGroupOriginationsSpecified = (value != null);
                 _enableSigningForUnscreenedTrunkGroupOriginations = value;
             }
         }
@@ -313,17 +313,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableSigningForUnscreenedTrunkGroupOriginationsSpecified { get; set; }
 
-        protected bool _enableTaggingForUnscreenedTrunkGroupOriginations;
+        protected bool? _enableTaggingForUnscreenedTrunkGroupOriginations;
 
         [XmlElement(ElementName = "enableTaggingForUnscreenedTrunkGroupOriginations", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6963")]
-        public bool EnableTaggingForUnscreenedTrunkGroupOriginations
+        public bool? EnableTaggingForUnscreenedTrunkGroupOriginations
         {
             get => _enableTaggingForUnscreenedTrunkGroupOriginations;
             set
             {
-                EnableTaggingForUnscreenedTrunkGroupOriginationsSpecified = true;
+                EnableTaggingForUnscreenedTrunkGroupOriginationsSpecified = (value != null);
                 _enableTaggingForUnscreenedTrunkGroupOriginations = value;
             }
         }
@@ -331,17 +331,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableTaggingForUnscreenedTrunkGroupOriginationsSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.StirShakenUnscreenedTrunkGroupOriginationAttestationLevel _unscreenedTrunkGroupOriginationAttestationLevel;
+        protected BroadWorksConnector.Ocip.Models.StirShakenUnscreenedTrunkGroupOriginationAttestationLevel? _unscreenedTrunkGroupOriginationAttestationLevel;
 
         [XmlElement(ElementName = "unscreenedTrunkGroupOriginationAttestationLevel", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6963")]
-        public BroadWorksConnector.Ocip.Models.StirShakenUnscreenedTrunkGroupOriginationAttestationLevel UnscreenedTrunkGroupOriginationAttestationLevel
+        public BroadWorksConnector.Ocip.Models.StirShakenUnscreenedTrunkGroupOriginationAttestationLevel? UnscreenedTrunkGroupOriginationAttestationLevel
         {
             get => _unscreenedTrunkGroupOriginationAttestationLevel;
             set
             {
-                UnscreenedTrunkGroupOriginationAttestationLevelSpecified = true;
+                UnscreenedTrunkGroupOriginationAttestationLevelSpecified = (value != null);
                 _unscreenedTrunkGroupOriginationAttestationLevel = value;
             }
         }
@@ -349,17 +349,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UnscreenedTrunkGroupOriginationAttestationLevelSpecified { get; set; }
 
-        protected bool _includeTaggedHeadersToAccessSide;
+        protected bool? _includeTaggedHeadersToAccessSide;
 
         [XmlElement(ElementName = "includeTaggedHeadersToAccessSide", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6963")]
-        public bool IncludeTaggedHeadersToAccessSide
+        public bool? IncludeTaggedHeadersToAccessSide
         {
             get => _includeTaggedHeadersToAccessSide;
             set
             {
-                IncludeTaggedHeadersToAccessSideSpecified = true;
+                IncludeTaggedHeadersToAccessSideSpecified = (value != null);
                 _includeTaggedHeadersToAccessSide = value;
             }
         }
@@ -367,17 +367,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeTaggedHeadersToAccessSideSpecified { get; set; }
 
-        protected bool _proxyIdentityHeaderToAccessSide;
+        protected bool? _proxyIdentityHeaderToAccessSide;
 
         [XmlElement(ElementName = "proxyIdentityHeaderToAccessSide", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6963")]
-        public bool ProxyIdentityHeaderToAccessSide
+        public bool? ProxyIdentityHeaderToAccessSide
         {
             get => _proxyIdentityHeaderToAccessSide;
             set
             {
-                ProxyIdentityHeaderToAccessSideSpecified = true;
+                ProxyIdentityHeaderToAccessSideSpecified = (value != null);
                 _proxyIdentityHeaderToAccessSide = value;
             }
         }
@@ -385,17 +385,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProxyIdentityHeaderToAccessSideSpecified { get; set; }
 
-        protected bool _checkDirectoryNumbersForAttestation;
+        protected bool? _checkDirectoryNumbersForAttestation;
 
         [XmlElement(ElementName = "checkDirectoryNumbersForAttestation", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6963")]
-        public bool CheckDirectoryNumbersForAttestation
+        public bool? CheckDirectoryNumbersForAttestation
         {
             get => _checkDirectoryNumbersForAttestation;
             set
             {
-                CheckDirectoryNumbersForAttestationSpecified = true;
+                CheckDirectoryNumbersForAttestationSpecified = (value != null);
                 _checkDirectoryNumbersForAttestation = value;
             }
         }
@@ -403,17 +403,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CheckDirectoryNumbersForAttestationSpecified { get; set; }
 
-        protected bool _matchUnassignedNumbersOnly;
+        protected bool? _matchUnassignedNumbersOnly;
 
         [XmlElement(ElementName = "matchUnassignedNumbersOnly", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6963")]
-        public bool MatchUnassignedNumbersOnly
+        public bool? MatchUnassignedNumbersOnly
         {
             get => _matchUnassignedNumbersOnly;
             set
             {
-                MatchUnassignedNumbersOnlySpecified = true;
+                MatchUnassignedNumbersOnlySpecified = (value != null);
                 _matchUnassignedNumbersOnly = value;
             }
         }

@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newStatusName;
             set
             {
-                NewStatusNameSpecified = true;
+                NewStatusNameSpecified = (value != null);
                 _newStatusName = value;
             }
         }

@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _entry;
             set
             {
-                EntrySpecified = true;
+                EntrySpecified = (value != null);
                 _entry = value;
             }
         }

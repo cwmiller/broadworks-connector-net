@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected bool _enableSupervisorCoaching;
+        protected bool? _enableSupervisorCoaching;
 
         [XmlElement(ElementName = "enableSupervisorCoaching", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"b5e86c5d60603bdb61de308d278500d9:131")]
-        public bool EnableSupervisorCoaching
+        public bool? EnableSupervisorCoaching
         {
             get => _enableSupervisorCoaching;
             set
             {
-                EnableSupervisorCoachingSpecified = true;
+                EnableSupervisorCoachingSpecified = (value != null);
                 _enableSupervisorCoaching = value;
             }
         }

@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceDomain;
             set
             {
-                ServiceDomainSpecified = true;
+                ServiceDomainSpecified = (value != null);
                 _serviceDomain = value;
             }
         }
@@ -55,19 +55,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceDomainSpecified { get; set; }
 
-        protected int _servicePort;
+        protected int? _servicePort;
 
         [XmlElement(ElementName = "servicePort", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"37cec25308bcc82fe5a80bf541c42c89:140")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
-        public int ServicePort
+        public int? ServicePort
         {
             get => _servicePort;
             set
             {
-                ServicePortSpecified = true;
+                ServicePortSpecified = (value != null);
                 _servicePort = value;
             }
         }
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _provisioningUrl;
             set
             {
-                ProvisioningUrlSpecified = true;
+                ProvisioningUrlSpecified = (value != null);
                 _provisioningUrl = value;
             }
         }
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _provisioningUserId;
             set
             {
-                ProvisioningUserIdSpecified = true;
+                ProvisioningUserIdSpecified = (value != null);
                 _provisioningUserId = value;
             }
         }
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _boshURL;
             set
             {
-                BoshURLSpecified = true;
+                BoshURLSpecified = (value != null);
                 _boshURL = value;
             }
         }

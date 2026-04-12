@@ -17,17 +17,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class IncomingCallingPlanPermissionsModify
     {
 
-        protected bool _allowFromWithinGroup;
+        protected bool? _allowFromWithinGroup;
 
         [XmlElement(ElementName = "allowFromWithinGroup", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"22e19489d2787693c01f531be4452169:211")]
-        public bool AllowFromWithinGroup
+        public bool? AllowFromWithinGroup
         {
             get => _allowFromWithinGroup;
             set
             {
-                AllowFromWithinGroupSpecified = true;
+                AllowFromWithinGroupSpecified = (value != null);
                 _allowFromWithinGroup = value;
             }
         }
@@ -35,17 +35,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowFromWithinGroupSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.IncomingCallingPlanOutsideCallPermission _allowFromOutsideGroup;
+        protected BroadWorksConnector.Ocip.Models.IncomingCallingPlanOutsideCallPermission? _allowFromOutsideGroup;
 
         [XmlElement(ElementName = "allowFromOutsideGroup", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"22e19489d2787693c01f531be4452169:211")]
-        public BroadWorksConnector.Ocip.Models.IncomingCallingPlanOutsideCallPermission AllowFromOutsideGroup
+        public BroadWorksConnector.Ocip.Models.IncomingCallingPlanOutsideCallPermission? AllowFromOutsideGroup
         {
             get => _allowFromOutsideGroup;
             set
             {
-                AllowFromOutsideGroupSpecified = true;
+                AllowFromOutsideGroupSpecified = (value != null);
                 _allowFromOutsideGroup = value;
             }
         }
@@ -53,17 +53,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowFromOutsideGroupSpecified { get; set; }
 
-        protected bool _allowCollectCalls;
+        protected bool? _allowCollectCalls;
 
         [XmlElement(ElementName = "allowCollectCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"22e19489d2787693c01f531be4452169:211")]
-        public bool AllowCollectCalls
+        public bool? AllowCollectCalls
         {
             get => _allowCollectCalls;
             set
             {
-                AllowCollectCallsSpecified = true;
+                AllowCollectCallsSpecified = (value != null);
                 _allowCollectCalls = value;
             }
         }
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _digitPatternPermission;
             set
             {
-                DigitPatternPermissionSpecified = true;
+                DigitPatternPermissionSpecified = (value != null);
                 _digitPatternPermission = value;
             }
         }

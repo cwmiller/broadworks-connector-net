@@ -27,7 +27,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _file;
             set
             {
-                FileSpecified = true;
+                FileSpecified = (value != null);
                 _file = value;
             }
         }

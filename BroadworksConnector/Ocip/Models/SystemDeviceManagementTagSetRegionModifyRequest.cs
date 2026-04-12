@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newRegionName;
             set
             {
-                NewRegionNameSpecified = true;
+                NewRegionNameSpecified = (value != null);
                 _newRegionName = value;
             }
         }

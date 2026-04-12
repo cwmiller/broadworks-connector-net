@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _homeZoneIpAddressList;
             set
             {
-                HomeZoneIpAddressListSpecified = true;
+                HomeZoneIpAddressListSpecified = (value != null);
                 _homeZoneIpAddressList = value;
             }
         }
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _homeZoneIpAddressRangeList;
             set
             {
-                HomeZoneIpAddressRangeListSpecified = true;
+                HomeZoneIpAddressRangeListSpecified = (value != null);
                 _homeZoneIpAddressRangeList = value;
             }
         }

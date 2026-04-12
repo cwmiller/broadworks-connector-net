@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _activationDigits;
             set
             {
-                ActivationDigitsSpecified = true;
+                ActivationDigitsSpecified = (value != null);
                 _activationDigits = value;
             }
         }

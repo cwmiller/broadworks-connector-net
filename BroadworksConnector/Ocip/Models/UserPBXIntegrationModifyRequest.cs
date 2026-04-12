@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _proxyToHeaderFromNetwork;
+        protected bool? _proxyToHeaderFromNetwork;
 
         [XmlElement(ElementName = "proxyToHeaderFromNetwork", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2776")]
-        public bool ProxyToHeaderFromNetwork
+        public bool? ProxyToHeaderFromNetwork
         {
             get => _proxyToHeaderFromNetwork;
             set
             {
-                ProxyToHeaderFromNetworkSpecified = true;
+                ProxyToHeaderFromNetworkSpecified = (value != null);
                 _proxyToHeaderFromNetwork = value;
             }
         }

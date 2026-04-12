@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceDomain;
             set
             {
-                ServiceDomainSpecified = true;
+                ServiceDomainSpecified = (value != null);
                 _serviceDomain = value;
             }
         }
@@ -41,19 +41,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceDomainSpecified { get; set; }
 
-        protected int _servicePort;
+        protected int? _servicePort;
 
         [XmlElement(ElementName = "servicePort", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:27844")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
-        public int ServicePort
+        public int? ServicePort
         {
             get => _servicePort;
             set
             {
-                ServicePortSpecified = true;
+                ServicePortSpecified = (value != null);
                 _servicePort = value;
             }
         }

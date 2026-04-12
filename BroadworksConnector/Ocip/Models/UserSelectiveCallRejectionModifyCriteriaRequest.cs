@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newCriteriaName;
             set
             {
-                NewCriteriaNameSpecified = true;
+                NewCriteriaNameSpecified = (value != null);
                 _newCriteriaName = value;
             }
         }
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _fromDnCriteria;
             set
             {
-                FromDnCriteriaSpecified = true;
+                FromDnCriteriaSpecified = (value != null);
                 _fromDnCriteria = value;
             }
         }

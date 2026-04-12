@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _bridgeId;
             set
             {
-                BridgeIdSpecified = true;
+                BridgeIdSpecified = (value != null);
                 _bridgeId = value;
             }
         }

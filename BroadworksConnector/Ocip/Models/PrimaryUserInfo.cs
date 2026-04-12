@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userId;
             set
             {
-                UserIdSpecified = true;
+                UserIdSpecified = (value != null);
                 _userId = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceProviderId;
             set
             {
-                ServiceProviderIdSpecified = true;
+                ServiceProviderIdSpecified = (value != null);
                 _serviceProviderId = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupId;
             set
             {
-                GroupIdSpecified = true;
+                GroupIdSpecified = (value != null);
                 _groupId = value;
             }
         }
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userFirstName;
             set
             {
-                UserFirstNameSpecified = true;
+                UserFirstNameSpecified = (value != null);
                 _userFirstName = value;
             }
         }
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userLastName;
             set
             {
-                UserLastNameSpecified = true;
+                UserLastNameSpecified = (value != null);
                 _userLastName = value;
             }
         }
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userPhoneNumber;
             set
             {
-                UserPhoneNumberSpecified = true;
+                UserPhoneNumberSpecified = (value != null);
                 _userPhoneNumber = value;
             }
         }
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userExtension;
             set
             {
-                UserExtensionSpecified = true;
+                UserExtensionSpecified = (value != null);
                 _userExtension = value;
             }
         }
@@ -156,17 +156,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserExtensionSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.EndpointType21sp1 _endPointType;
+        protected BroadWorksConnector.Ocip.Models.EndpointType21sp1? _endPointType;
 
         [XmlElement(ElementName = "endPointType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:3976")]
-        public BroadWorksConnector.Ocip.Models.EndpointType21sp1 EndPointType
+        public BroadWorksConnector.Ocip.Models.EndpointType21sp1? EndPointType
         {
             get => _endPointType;
             set
             {
-                EndPointTypeSpecified = true;
+                EndPointTypeSpecified = (value != null);
                 _endPointType = value;
             }
         }

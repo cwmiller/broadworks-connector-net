@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _mscAddress;
             set
             {
-                MscAddressSpecified = true;
+                MscAddressSpecified = (value != null);
                 _mscAddress = value;
             }
         }

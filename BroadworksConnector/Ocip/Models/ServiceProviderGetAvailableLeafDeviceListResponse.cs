@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _leafDeviceKey;
             set
             {
-                LeafDeviceKeySpecified = true;
+                LeafDeviceKeySpecified = (value != null);
                 _leafDeviceKey = value;
             }
         }

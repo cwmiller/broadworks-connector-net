@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _allocatedPorts;
             set
             {
-                AllocatedPortsSpecified = true;
+                AllocatedPortsSpecified = (value != null);
                 _allocatedPorts = value;
             }
         }

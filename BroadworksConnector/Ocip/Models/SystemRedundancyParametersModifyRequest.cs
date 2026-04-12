@@ -19,19 +19,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemRedundancyParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected int _rollBackTimerMinutes;
+        protected int? _rollBackTimerMinutes;
 
         [XmlElement(ElementName = "rollBackTimerMinutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:15140")]
         [MinInclusive(0)]
         [MaxInclusive(3600)]
-        public int RollBackTimerMinutes
+        public int? RollBackTimerMinutes
         {
             get => _rollBackTimerMinutes;
             set
             {
-                RollBackTimerMinutesSpecified = true;
+                RollBackTimerMinutesSpecified = (value != null);
                 _rollBackTimerMinutes = value;
             }
         }
@@ -39,17 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RollBackTimerMinutesSpecified { get; set; }
 
-        protected bool _sendSipOptionMessageUponMigration;
+        protected bool? _sendSipOptionMessageUponMigration;
 
         [XmlElement(ElementName = "sendSipOptionMessageUponMigration", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:15140")]
-        public bool SendSipOptionMessageUponMigration
+        public bool? SendSipOptionMessageUponMigration
         {
             get => _sendSipOptionMessageUponMigration;
             set
             {
-                SendSipOptionMessageUponMigrationSpecified = true;
+                SendSipOptionMessageUponMigrationSpecified = (value != null);
                 _sendSipOptionMessageUponMigration = value;
             }
         }

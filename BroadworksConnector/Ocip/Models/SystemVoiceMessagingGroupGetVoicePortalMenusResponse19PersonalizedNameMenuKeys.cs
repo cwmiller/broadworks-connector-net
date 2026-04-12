@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _recordNewPersonalizedName;
             set
             {
-                RecordNewPersonalizedNameSpecified = true;
+                RecordNewPersonalizedNameSpecified = (value != null);
                 _recordNewPersonalizedName = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _listenToCurrentPersonalizedName;
             set
             {
-                ListenToCurrentPersonalizedNameSpecified = true;
+                ListenToCurrentPersonalizedNameSpecified = (value != null);
                 _listenToCurrentPersonalizedName = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deletePersonalizedName;
             set
             {
-                DeletePersonalizedNameSpecified = true;
+                DeletePersonalizedNameSpecified = (value != null);
                 _deletePersonalizedName = value;
             }
         }
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _repeatMenu;
             set
             {
-                RepeatMenuSpecified = true;
+                RepeatMenuSpecified = (value != null);
                 _repeatMenu = value;
             }
         }

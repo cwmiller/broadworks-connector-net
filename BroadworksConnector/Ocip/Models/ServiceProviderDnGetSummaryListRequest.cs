@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaGroupId;
             set
             {
-                SearchCriteriaGroupIdSpecified = true;
+                SearchCriteriaGroupIdSpecified = (value != null);
                 _searchCriteriaGroupId = value;
             }
         }
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaDn;
             set
             {
-                SearchCriteriaDnSpecified = true;
+                SearchCriteriaDnSpecified = (value != null);
                 _searchCriteriaDn = value;
             }
         }

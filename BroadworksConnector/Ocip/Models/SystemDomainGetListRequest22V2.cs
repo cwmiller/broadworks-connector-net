@@ -31,17 +31,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDomainGetListRequest22V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemDomainGetListResponse22V2>
     {
 
-        protected bool _excludeReseller;
+        protected bool? _excludeReseller;
 
         [XmlElement(ElementName = "excludeReseller", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:9620")]
-        public bool ExcludeReseller
+        public bool? ExcludeReseller
         {
             get => _excludeReseller;
             set
             {
-                ExcludeResellerSpecified = true;
+                ExcludeResellerSpecified = (value != null);
                 _excludeReseller = value;
             }
         }
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerId;
             set
             {
-                ResellerIdSpecified = true;
+                ResellerIdSpecified = (value != null);
                 _resellerId = value;
             }
         }
@@ -69,18 +69,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResellerIdSpecified { get; set; }
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:9619")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaDomainName;
             set
             {
-                SearchCriteriaDomainNameSpecified = true;
+                SearchCriteriaDomainNameSpecified = (value != null);
                 _searchCriteriaDomainName = value;
             }
         }
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaResellerId;
             set
             {
-                SearchCriteriaResellerIdSpecified = true;
+                SearchCriteriaResellerIdSpecified = (value != null);
                 _searchCriteriaResellerId = value;
             }
         }
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactDomainLevel;
             set
             {
-                SearchCriteriaExactDomainLevelSpecified = true;
+                SearchCriteriaExactDomainLevelSpecified = (value != null);
                 _searchCriteriaExactDomainLevel = value;
             }
         }

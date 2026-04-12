@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newEventName;
             set
             {
-                NewEventNameSpecified = true;
+                NewEventNameSpecified = (value != null);
                 _newEventName = value;
             }
         }
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _startDate;
             set
             {
-                StartDateSpecified = true;
+                StartDateSpecified = (value != null);
                 _startDate = value;
             }
         }
@@ -194,7 +194,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _endDate;
             set
             {
-                EndDateSpecified = true;
+                EndDateSpecified = (value != null);
                 _endDate = value;
             }
         }

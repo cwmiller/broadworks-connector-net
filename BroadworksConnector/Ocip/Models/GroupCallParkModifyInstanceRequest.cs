@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newName;
             set
             {
-                NewNameSpecified = true;
+                NewNameSpecified = (value != null);
                 _newName = value;
             }
         }
@@ -135,17 +135,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecallAlternateUserIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallParkRecallTo _recallTo;
+        protected BroadWorksConnector.Ocip.Models.CallParkRecallTo? _recallTo;
 
         [XmlElement(ElementName = "recallTo", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:497")]
-        public BroadWorksConnector.Ocip.Models.CallParkRecallTo RecallTo
+        public BroadWorksConnector.Ocip.Models.CallParkRecallTo? RecallTo
         {
             get => _recallTo;
             set
             {
-                RecallToSpecified = true;
+                RecallToSpecified = (value != null);
                 _recallTo = value;
             }
         }

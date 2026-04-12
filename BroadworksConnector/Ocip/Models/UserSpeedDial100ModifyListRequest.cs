@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _speedDialEntry;
             set
             {
-                SpeedDialEntrySpecified = true;
+                SpeedDialEntrySpecified = (value != null);
                 _speedDialEntry = value;
             }
         }

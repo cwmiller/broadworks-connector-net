@@ -139,7 +139,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _uploadFile;
             set
             {
-                UploadFileSpecified = true;
+                UploadFileSpecified = (value != null);
                 _uploadFile = value;
             }
         }
@@ -227,7 +227,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _macFormatInNonRequestURI;
             set
             {
-                MacFormatInNonRequestURISpecified = true;
+                MacFormatInNonRequestURISpecified = (value != null);
                 _macFormatInNonRequestURI = value;
             }
         }

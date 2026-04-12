@@ -19,19 +19,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAuthenticationLockoutSettingsModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected int _counterResetIntervalDays;
+        protected int? _counterResetIntervalDays;
 
         [XmlElement(ElementName = "counterResetIntervalDays", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2540")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
-        public int CounterResetIntervalDays
+        public int? CounterResetIntervalDays
         {
             get => _counterResetIntervalDays;
             set
             {
-                CounterResetIntervalDaysSpecified = true;
+                CounterResetIntervalDaysSpecified = (value != null);
                 _counterResetIntervalDays = value;
             }
         }
@@ -39,19 +39,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CounterResetIntervalDaysSpecified { get; set; }
 
-        protected int _counterResetHour;
+        protected int? _counterResetHour;
 
         [XmlElement(ElementName = "counterResetHour", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2540")]
         [MinInclusive(0)]
         [MaxInclusive(23)]
-        public int CounterResetHour
+        public int? CounterResetHour
         {
             get => _counterResetHour;
             set
             {
-                CounterResetHourSpecified = true;
+                CounterResetHourSpecified = (value != null);
                 _counterResetHour = value;
             }
         }
@@ -59,19 +59,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CounterResetHourSpecified { get; set; }
 
-        protected int _counterResetMinute;
+        protected int? _counterResetMinute;
 
         [XmlElement(ElementName = "counterResetMinute", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2540")]
         [MinInclusive(0)]
         [MaxInclusive(59)]
-        public int CounterResetMinute
+        public int? CounterResetMinute
         {
             get => _counterResetMinute;
             set
             {
-                CounterResetMinuteSpecified = true;
+                CounterResetMinuteSpecified = (value != null);
                 _counterResetMinute = value;
             }
         }
@@ -79,17 +79,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CounterResetMinuteSpecified { get; set; }
 
-        protected bool _emergencySIPBypassAllowed;
+        protected bool? _emergencySIPBypassAllowed;
 
         [XmlElement(ElementName = "emergencySIPBypassAllowed", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2540")]
-        public bool EmergencySIPBypassAllowed
+        public bool? EmergencySIPBypassAllowed
         {
             get => _emergencySIPBypassAllowed;
             set
             {
-                EmergencySIPBypassAllowedSpecified = true;
+                EmergencySIPBypassAllowedSpecified = (value != null);
                 _emergencySIPBypassAllowed = value;
             }
         }

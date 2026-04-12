@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newTagSetName;
             set
             {
-                NewTagSetNameSpecified = true;
+                NewTagSetNameSpecified = (value != null);
                 _newTagSetName = value;
             }
         }

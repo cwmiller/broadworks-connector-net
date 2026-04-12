@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _placed;
             set
             {
-                PlacedSpecified = true;
+                PlacedSpecified = (value != null);
                 _placed = value;
             }
         }
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _received;
             set
             {
-                ReceivedSpecified = true;
+                ReceivedSpecified = (value != null);
                 _received = value;
             }
         }
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _missed;
             set
             {
-                MissedSpecified = true;
+                MissedSpecified = (value != null);
                 _missed = value;
             }
         }

@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaUserLastName;
             set
             {
-                SearchCriteriaUserLastNameSpecified = true;
+                SearchCriteriaUserLastNameSpecified = (value != null);
                 _searchCriteriaUserLastName = value;
             }
         }
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaUserFirstName;
             set
             {
-                SearchCriteriaUserFirstNameSpecified = true;
+                SearchCriteriaUserFirstNameSpecified = (value != null);
                 _searchCriteriaUserFirstName = value;
             }
         }
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaDn;
             set
             {
-                SearchCriteriaDnSpecified = true;
+                SearchCriteriaDnSpecified = (value != null);
                 _searchCriteriaDn = value;
             }
         }
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaGroupLocationCode;
             set
             {
-                SearchCriteriaGroupLocationCodeSpecified = true;
+                SearchCriteriaGroupLocationCodeSpecified = (value != null);
                 _searchCriteriaGroupLocationCode = value;
             }
         }
@@ -160,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExtension;
             set
             {
-                SearchCriteriaExtensionSpecified = true;
+                SearchCriteriaExtensionSpecified = (value != null);
                 _searchCriteriaExtension = value;
             }
         }
@@ -178,7 +178,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaMobilePhoneNumber;
             set
             {
-                SearchCriteriaMobilePhoneNumberSpecified = true;
+                SearchCriteriaMobilePhoneNumberSpecified = (value != null);
                 _searchCriteriaMobilePhoneNumber = value;
             }
         }
@@ -196,7 +196,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaEmailAddress;
             set
             {
-                SearchCriteriaEmailAddressSpecified = true;
+                SearchCriteriaEmailAddressSpecified = (value != null);
                 _searchCriteriaEmailAddress = value;
             }
         }
@@ -214,7 +214,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaYahooId;
             set
             {
-                SearchCriteriaYahooIdSpecified = true;
+                SearchCriteriaYahooIdSpecified = (value != null);
                 _searchCriteriaYahooId = value;
             }
         }
@@ -232,7 +232,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactUserGroup;
             set
             {
-                SearchCriteriaExactUserGroupSpecified = true;
+                SearchCriteriaExactUserGroupSpecified = (value != null);
                 _searchCriteriaExactUserGroup = value;
             }
         }
@@ -250,7 +250,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactUserDepartment;
             set
             {
-                SearchCriteriaExactUserDepartmentSpecified = true;
+                SearchCriteriaExactUserDepartmentSpecified = (value != null);
                 _searchCriteriaExactUserDepartment = value;
             }
         }
@@ -268,7 +268,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaUserId;
             set
             {
-                SearchCriteriaUserIdSpecified = true;
+                SearchCriteriaUserIdSpecified = (value != null);
                 _searchCriteriaUserId = value;
             }
         }
@@ -286,7 +286,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaImpId;
             set
             {
-                SearchCriteriaImpIdSpecified = true;
+                SearchCriteriaImpIdSpecified = (value != null);
                 _searchCriteriaImpId = value;
             }
         }

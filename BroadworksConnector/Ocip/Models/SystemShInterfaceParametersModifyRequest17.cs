@@ -39,19 +39,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HssRealmSpecified { get; set; }
 
-        protected int _publicIdentityRefreshDelaySeconds;
+        protected int? _publicIdentityRefreshDelaySeconds;
 
         [XmlElement(ElementName = "publicIdentityRefreshDelaySeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:16642")]
         [MinInclusive(0)]
         [MaxInclusive(30)]
-        public int PublicIdentityRefreshDelaySeconds
+        public int? PublicIdentityRefreshDelaySeconds
         {
             get => _publicIdentityRefreshDelaySeconds;
             set
             {
-                PublicIdentityRefreshDelaySecondsSpecified = true;
+                PublicIdentityRefreshDelaySecondsSpecified = (value != null);
                 _publicIdentityRefreshDelaySeconds = value;
             }
         }

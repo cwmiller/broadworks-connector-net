@@ -296,17 +296,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VerifyTranslationAndRoutingAccessSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.GroupAdminCommunicationBarringUserProfileAccess _communicationBarringUserProfileAccess;
+        protected BroadWorksConnector.Ocip.Models.GroupAdminCommunicationBarringUserProfileAccess? _communicationBarringUserProfileAccess;
 
         [XmlElement(ElementName = "communicationBarringUserProfileAccess", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:1649")]
-        public BroadWorksConnector.Ocip.Models.GroupAdminCommunicationBarringUserProfileAccess CommunicationBarringUserProfileAccess
+        public BroadWorksConnector.Ocip.Models.GroupAdminCommunicationBarringUserProfileAccess? CommunicationBarringUserProfileAccess
         {
             get => _communicationBarringUserProfileAccess;
             set
             {
-                CommunicationBarringUserProfileAccessSpecified = true;
+                CommunicationBarringUserProfileAccessSpecified = (value != null);
                 _communicationBarringUserProfileAccess = value;
             }
         }

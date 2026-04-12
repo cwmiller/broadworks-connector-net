@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _description;
             set
             {
-                DescriptionSpecified = true;
+                DescriptionSpecified = (value != null);
                 _description = value;
             }
         }
@@ -57,19 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ChargeIndicatorSpecified { get; set; }
 
-        protected int _accessSIPStatusCode;
+        protected int? _accessSIPStatusCode;
 
         [XmlElement(ElementName = "accessSIPStatusCode", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:25723")]
         [MinInclusive(400)]
         [MaxInclusive(699)]
-        public int AccessSIPStatusCode
+        public int? AccessSIPStatusCode
         {
             get => _accessSIPStatusCode;
             set
             {
-                AccessSIPStatusCodeSpecified = true;
+                AccessSIPStatusCodeSpecified = (value != null);
                 _accessSIPStatusCode = value;
             }
         }
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _accessSIPStatusMessage;
             set
             {
-                AccessSIPStatusMessageSpecified = true;
+                AccessSIPStatusMessageSpecified = (value != null);
                 _accessSIPStatusMessage = value;
             }
         }
@@ -97,19 +97,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessSIPStatusMessageSpecified { get; set; }
 
-        protected int _networkSIPStatusCode;
+        protected int? _networkSIPStatusCode;
 
         [XmlElement(ElementName = "networkSIPStatusCode", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:25723")]
         [MinInclusive(400)]
         [MaxInclusive(699)]
-        public int NetworkSIPStatusCode
+        public int? NetworkSIPStatusCode
         {
             get => _networkSIPStatusCode;
             set
             {
-                NetworkSIPStatusCodeSpecified = true;
+                NetworkSIPStatusCodeSpecified = (value != null);
                 _networkSIPStatusCode = value;
             }
         }
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkSIPStatusMessage;
             set
             {
-                NetworkSIPStatusMessageSpecified = true;
+                NetworkSIPStatusMessageSpecified = (value != null);
                 _networkSIPStatusMessage = value;
             }
         }
@@ -137,19 +137,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetworkSIPStatusMessageSpecified { get; set; }
 
-        protected int _q850CauseValue;
+        protected int? _q850CauseValue;
 
         [XmlElement(ElementName = "q850CauseValue", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:25723")]
         [MinInclusive(1)]
         [MaxInclusive(256)]
-        public int Q850CauseValue
+        public int? Q850CauseValue
         {
             get => _q850CauseValue;
             set
             {
-                Q850CauseValueSpecified = true;
+                Q850CauseValueSpecified = (value != null);
                 _q850CauseValue = value;
             }
         }
@@ -169,7 +169,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _q850Text;
             set
             {
-                Q850TextSpecified = true;
+                Q850TextSpecified = (value != null);
                 _q850Text = value;
             }
         }
@@ -189,7 +189,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _accessTreatmentAudioFile;
             set
             {
-                AccessTreatmentAudioFileSpecified = true;
+                AccessTreatmentAudioFileSpecified = (value != null);
                 _accessTreatmentAudioFile = value;
             }
         }
@@ -209,7 +209,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _accessTreatmentVideoFile;
             set
             {
-                AccessTreatmentVideoFileSpecified = true;
+                AccessTreatmentVideoFileSpecified = (value != null);
                 _accessTreatmentVideoFile = value;
             }
         }
@@ -229,7 +229,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkTreatmentAudioFile;
             set
             {
-                NetworkTreatmentAudioFileSpecified = true;
+                NetworkTreatmentAudioFileSpecified = (value != null);
                 _networkTreatmentAudioFile = value;
             }
         }
@@ -249,7 +249,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkTreatmentVideoFile;
             set
             {
-                NetworkTreatmentVideoFileSpecified = true;
+                NetworkTreatmentVideoFileSpecified = (value != null);
                 _networkTreatmentVideoFile = value;
             }
         }
@@ -269,7 +269,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _cdrTerminationCause;
             set
             {
-                CdrTerminationCauseSpecified = true;
+                CdrTerminationCauseSpecified = (value != null);
                 _cdrTerminationCause = value;
             }
         }
@@ -294,17 +294,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RouteAdvanceSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.InternalReleaseCause _internalReleaseCause;
+        protected BroadWorksConnector.Ocip.Models.InternalReleaseCause? _internalReleaseCause;
 
         [XmlElement(ElementName = "internalReleaseCause", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:25723")]
-        public BroadWorksConnector.Ocip.Models.InternalReleaseCause InternalReleaseCause
+        public BroadWorksConnector.Ocip.Models.InternalReleaseCause? InternalReleaseCause
         {
             get => _internalReleaseCause;
             set
             {
-                InternalReleaseCauseSpecified = true;
+                InternalReleaseCauseSpecified = (value != null);
                 _internalReleaseCause = value;
             }
         }

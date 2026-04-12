@@ -24,17 +24,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDeviceManagementTagSetGetListRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemDeviceManagementTagSetGetListResponse22>
     {
 
-        protected bool _excludeReseller;
+        protected bool? _excludeReseller;
 
         [XmlElement(ElementName = "excludeReseller", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:8330")]
-        public bool ExcludeReseller
+        public bool? ExcludeReseller
         {
             get => _excludeReseller;
             set
             {
-                ExcludeResellerSpecified = true;
+                ExcludeResellerSpecified = (value != null);
                 _excludeReseller = value;
             }
         }
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerId;
             set
             {
-                ResellerIdSpecified = true;
+                ResellerIdSpecified = (value != null);
                 _resellerId = value;
             }
         }

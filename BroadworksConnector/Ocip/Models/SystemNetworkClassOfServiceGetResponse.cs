@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _description;
             set
             {
-                DescriptionSpecified = true;
+                DescriptionSpecified = (value != null);
                 _description = value;
             }
         }
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _communicationBarringProfile0;
             set
             {
-                CommunicationBarringProfile0Specified = true;
+                CommunicationBarringProfile0Specified = (value != null);
                 _communicationBarringProfile0 = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _communicationBarringProfile1;
             set
             {
-                CommunicationBarringProfile1Specified = true;
+                CommunicationBarringProfile1Specified = (value != null);
                 _communicationBarringProfile1 = value;
             }
         }
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _communicationBarringProfile2;
             set
             {
-                CommunicationBarringProfile2Specified = true;
+                CommunicationBarringProfile2Specified = (value != null);
                 _communicationBarringProfile2 = value;
             }
         }
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _communicationBarringProfile3;
             set
             {
-                CommunicationBarringProfile3Specified = true;
+                CommunicationBarringProfile3Specified = (value != null);
                 _communicationBarringProfile3 = value;
             }
         }
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _communicationBarringProfile4;
             set
             {
-                CommunicationBarringProfile4Specified = true;
+                CommunicationBarringProfile4Specified = (value != null);
                 _communicationBarringProfile4 = value;
             }
         }
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _communicationBarringProfile5;
             set
             {
-                CommunicationBarringProfile5Specified = true;
+                CommunicationBarringProfile5Specified = (value != null);
                 _communicationBarringProfile5 = value;
             }
         }
@@ -158,7 +158,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _communicationBarringProfile6;
             set
             {
-                CommunicationBarringProfile6Specified = true;
+                CommunicationBarringProfile6Specified = (value != null);
                 _communicationBarringProfile6 = value;
             }
         }
@@ -176,7 +176,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _communicationBarringProfile7;
             set
             {
-                CommunicationBarringProfile7Specified = true;
+                CommunicationBarringProfile7Specified = (value != null);
                 _communicationBarringProfile7 = value;
             }
         }
@@ -194,7 +194,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _communicationBarringProfile8;
             set
             {
-                CommunicationBarringProfile8Specified = true;
+                CommunicationBarringProfile8Specified = (value != null);
                 _communicationBarringProfile8 = value;
             }
         }
@@ -212,7 +212,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _communicationBarringProfile9;
             set
             {
-                CommunicationBarringProfile9Specified = true;
+                CommunicationBarringProfile9Specified = (value != null);
                 _communicationBarringProfile9 = value;
             }
         }

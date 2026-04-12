@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _maxAvailableNumberOfBurstingBTLUs;
 
-        [XmlElement(ElementName = "maxAvailableNumberOfBurstingBTLUs", IsNullable = false, Namespace = "")]
+        [XmlElement(ElementName = "maxAvailableNumberOfBurstingBTLUs ", IsNullable = false, Namespace = "")]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1319")]
         public BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt MaxAvailableNumberOfBurstingBTLUs
         {
@@ -103,23 +103,23 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxAvailableNumberOfBurstingBTLUsSpecified { get; set; }
 
-    protected int _numberOfBurstingBTLUs;
+        protected int? _numberOfBurstingBTLUs;
 
-    [XmlElement(ElementName = "numberOfBurstingBTLUs", IsNullable = false, Namespace = "")]
-    [Optional]
-    [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1319")]
-    public int NumberOfBurstingBTLUs
-    {
-        get => _numberOfBurstingBTLUs;
-        set
+        [XmlElement(ElementName = "numberOfBurstingBTLUs", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1319")]
+        public int? NumberOfBurstingBTLUs
         {
-            NumberOfBurstingBTLUsSpecified = true;
-            _numberOfBurstingBTLUs = value;
+            get => _numberOfBurstingBTLUs;
+            set
+            {
+                NumberOfBurstingBTLUsSpecified = (value != null);
+                _numberOfBurstingBTLUs = value;
+            }
         }
+
+        [XmlIgnore]
+        protected bool NumberOfBurstingBTLUsSpecified { get; set; }
+
     }
-
-    [XmlIgnore]
-    protected bool NumberOfBurstingBTLUsSpecified { get; set; }
-
-}
 }

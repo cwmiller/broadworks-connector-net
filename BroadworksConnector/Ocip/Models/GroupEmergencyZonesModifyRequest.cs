@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"993492ea5726d0f3ec8743f5cef40e23:190")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -75,17 +75,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.EmergencyZonesProhibition _emergencyZonesProhibition;
+        protected BroadWorksConnector.Ocip.Models.EmergencyZonesProhibition? _emergencyZonesProhibition;
 
         [XmlElement(ElementName = "emergencyZonesProhibition", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"993492ea5726d0f3ec8743f5cef40e23:190")]
-        public BroadWorksConnector.Ocip.Models.EmergencyZonesProhibition EmergencyZonesProhibition
+        public BroadWorksConnector.Ocip.Models.EmergencyZonesProhibition? EmergencyZonesProhibition
         {
             get => _emergencyZonesProhibition;
             set
             {
-                EmergencyZonesProhibitionSpecified = true;
+                EmergencyZonesProhibitionSpecified = (value != null);
                 _emergencyZonesProhibition = value;
             }
         }
@@ -93,17 +93,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EmergencyZonesProhibitionSpecified { get; set; }
 
-        protected bool _sendEmergencyCallNotifyEmail;
+        protected bool? _sendEmergencyCallNotifyEmail;
 
         [XmlElement(ElementName = "sendEmergencyCallNotifyEmail", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"993492ea5726d0f3ec8743f5cef40e23:190")]
-        public bool SendEmergencyCallNotifyEmail
+        public bool? SendEmergencyCallNotifyEmail
         {
             get => _sendEmergencyCallNotifyEmail;
             set
             {
-                SendEmergencyCallNotifyEmailSpecified = true;
+                SendEmergencyCallNotifyEmailSpecified = (value != null);
                 _sendEmergencyCallNotifyEmail = value;
             }
         }

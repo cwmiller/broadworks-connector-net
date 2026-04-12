@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _virtualOnNetCallTypeCdrValue;
             set
             {
-                VirtualOnNetCallTypeCdrValueSpecified = true;
+                VirtualOnNetCallTypeCdrValueSpecified = (value != null);
                 _virtualOnNetCallTypeCdrValue = value;
             }
         }

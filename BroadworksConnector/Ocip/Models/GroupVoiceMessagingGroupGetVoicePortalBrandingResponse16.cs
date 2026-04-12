@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _voicePortalGreetingFileDescription;
             set
             {
-                VoicePortalGreetingFileDescriptionSpecified = true;
+                VoicePortalGreetingFileDescriptionSpecified = (value != null);
                 _voicePortalGreetingFileDescription = value;
             }
         }
@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VoicePortalGreetingFileDescriptionSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MediaFileType _voicePortalGreetingMediaType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType? _voicePortalGreetingMediaType;
 
         [XmlElement(ElementName = "voicePortalGreetingMediaType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:4570")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType VoicePortalGreetingMediaType
+        public BroadWorksConnector.Ocip.Models.MediaFileType? VoicePortalGreetingMediaType
         {
             get => _voicePortalGreetingMediaType;
             set
             {
-                VoicePortalGreetingMediaTypeSpecified = true;
+                VoicePortalGreetingMediaTypeSpecified = (value != null);
                 _voicePortalGreetingMediaType = value;
             }
         }
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _voiceMessagingGreetingFileDescription;
             set
             {
-                VoiceMessagingGreetingFileDescriptionSpecified = true;
+                VoiceMessagingGreetingFileDescriptionSpecified = (value != null);
                 _voiceMessagingGreetingFileDescription = value;
             }
         }
@@ -112,17 +112,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VoiceMessagingGreetingFileDescriptionSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MediaFileType _voiceMessagingGreetingMediaType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType? _voiceMessagingGreetingMediaType;
 
         [XmlElement(ElementName = "voiceMessagingGreetingMediaType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:4570")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType VoiceMessagingGreetingMediaType
+        public BroadWorksConnector.Ocip.Models.MediaFileType? VoiceMessagingGreetingMediaType
         {
             get => _voiceMessagingGreetingMediaType;
             set
             {
-                VoiceMessagingGreetingMediaTypeSpecified = true;
+                VoiceMessagingGreetingMediaTypeSpecified = (value != null);
                 _voiceMessagingGreetingMediaType = value;
             }
         }

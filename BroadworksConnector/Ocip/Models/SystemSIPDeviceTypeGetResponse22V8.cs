@@ -287,7 +287,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _webBasedConfigURL;
             set
             {
-                WebBasedConfigURLSpecified = true;
+                WebBasedConfigURLSpecified = (value != null);
                 _webBasedConfigURL = value;
             }
         }
@@ -356,7 +356,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _cpeDeviceOptions;
             set
             {
-                CpeDeviceOptionsSpecified = true;
+                CpeDeviceOptionsSpecified = (value != null);
                 _cpeDeviceOptions = value;
             }
         }
@@ -536,17 +536,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AdviceOfChargeCapableSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AccessDeviceResetEvent _resetEvent;
+        protected BroadWorksConnector.Ocip.Models.AccessDeviceResetEvent? _resetEvent;
 
         [XmlElement(ElementName = "resetEvent", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:34763")]
-        public BroadWorksConnector.Ocip.Models.AccessDeviceResetEvent ResetEvent
+        public BroadWorksConnector.Ocip.Models.AccessDeviceResetEvent? ResetEvent
         {
             get => _resetEvent;
             set
             {
-                ResetEventSpecified = true;
+                ResetEventSpecified = (value != null);
                 _resetEvent = value;
             }
         }
@@ -889,7 +889,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerId;
             set
             {
-                ResellerIdSpecified = true;
+                ResellerIdSpecified = (value != null);
                 _resellerId = value;
             }
         }
@@ -931,17 +931,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RoamingModeSpecified { get; set; }
 
-        protected bool _supportVisualDeviceManagementAPI;
+        protected bool? _supportVisualDeviceManagementAPI;
 
         [XmlElement(ElementName = "supportVisualDeviceManagementAPI", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:34763")]
-        public bool SupportVisualDeviceManagementAPI
+        public bool? SupportVisualDeviceManagementAPI
         {
             get => _supportVisualDeviceManagementAPI;
             set
             {
-                SupportVisualDeviceManagementAPISpecified = true;
+                SupportVisualDeviceManagementAPISpecified = (value != null);
                 _supportVisualDeviceManagementAPI = value;
             }
         }

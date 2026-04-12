@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _externalSystem;
             set
             {
-                ExternalSystemSpecified = true;
+                ExternalSystemSpecified = (value != null);
                 _externalSystem = value;
             }
         }
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _failoverPhoneNumber;
             set
             {
-                FailoverPhoneNumberSpecified = true;
+                FailoverPhoneNumberSpecified = (value != null);
                 _failoverPhoneNumber = value;
             }
         }
@@ -158,7 +158,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _perCallFailoverPhoneNumber;
             set
             {
-                PerCallFailoverPhoneNumberSpecified = true;
+                PerCallFailoverPhoneNumberSpecified = (value != null);
                 _perCallFailoverPhoneNumber = value;
             }
         }

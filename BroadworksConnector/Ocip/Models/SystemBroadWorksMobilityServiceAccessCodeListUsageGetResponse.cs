@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _mobileNetworkName;
             set
             {
-                MobileNetworkNameSpecified = true;
+                MobileNetworkNameSpecified = (value != null);
                 _mobileNetworkName = value;
             }
         }

@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemNetworkProgressionModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:12850")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -37,19 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected int _waitPeriodSeconds;
+        protected int? _waitPeriodSeconds;
 
         [XmlElement(ElementName = "waitPeriodSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:12850")]
         [MinInclusive(1)]
         [MaxInclusive(15)]
-        public int WaitPeriodSeconds
+        public int? WaitPeriodSeconds
         {
             get => _waitPeriodSeconds;
             set
             {
-                WaitPeriodSecondsSpecified = true;
+                WaitPeriodSecondsSpecified = (value != null);
                 _waitPeriodSeconds = value;
             }
         }

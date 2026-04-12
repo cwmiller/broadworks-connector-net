@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _numberRange;
             set
             {
-                NumberRangeSpecified = true;
+                NumberRangeSpecified = (value != null);
                 _numberRange = value;
             }
         }

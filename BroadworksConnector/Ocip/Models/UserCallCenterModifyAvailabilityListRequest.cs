@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callCenterAvailability;
             set
             {
-                CallCenterAvailabilitySpecified = true;
+                CallCenterAvailabilitySpecified = (value != null);
                 _callCenterAvailability = value;
             }
         }

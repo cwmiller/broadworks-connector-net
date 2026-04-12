@@ -30,17 +30,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDomainGetListRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemDomainGetListResponse22>
     {
 
-        protected bool _excludeReseller;
+        protected bool? _excludeReseller;
 
         [XmlElement(ElementName = "excludeReseller", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:26817")]
-        public bool ExcludeReseller
+        public bool? ExcludeReseller
         {
             get => _excludeReseller;
             set
             {
-                ExcludeResellerSpecified = true;
+                ExcludeResellerSpecified = (value != null);
                 _excludeReseller = value;
             }
         }
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerId;
             set
             {
-                ResellerIdSpecified = true;
+                ResellerIdSpecified = (value != null);
                 _resellerId = value;
             }
         }

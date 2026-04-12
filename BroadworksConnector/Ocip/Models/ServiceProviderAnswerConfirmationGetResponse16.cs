@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _confirmationMessageAudioFileDescription;
             set
             {
-                ConfirmationMessageAudioFileDescriptionSpecified = true;
+                ConfirmationMessageAudioFileDescriptionSpecified = (value != null);
                 _confirmationMessageAudioFileDescription = value;
             }
         }
@@ -54,17 +54,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConfirmationMessageAudioFileDescriptionSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MediaFileType _confirmationMessageMediaType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType? _confirmationMessageMediaType;
 
         [XmlElement(ElementName = "confirmationMessageMediaType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:1761")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType ConfirmationMessageMediaType
+        public BroadWorksConnector.Ocip.Models.MediaFileType? ConfirmationMessageMediaType
         {
             get => _confirmationMessageMediaType;
             set
             {
-                ConfirmationMessageMediaTypeSpecified = true;
+                ConfirmationMessageMediaTypeSpecified = (value != null);
                 _confirmationMessageMediaType = value;
             }
         }

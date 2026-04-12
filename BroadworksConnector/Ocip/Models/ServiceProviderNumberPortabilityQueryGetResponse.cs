@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _digitPattern;
             set
             {
-                DigitPatternSpecified = true;
+                DigitPatternSpecified = (value != null);
                 _digitPattern = value;
             }
         }

@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _reportingEmailAddress1;
             set
             {
-                ReportingEmailAddress1Specified = true;
+                ReportingEmailAddress1Specified = (value != null);
                 _reportingEmailAddress1 = value;
             }
         }
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _reportingEmailAddress2;
             set
             {
-                ReportingEmailAddress2Specified = true;
+                ReportingEmailAddress2Specified = (value != null);
                 _reportingEmailAddress2 = value;
             }
         }

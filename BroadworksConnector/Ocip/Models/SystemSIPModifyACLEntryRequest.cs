@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetAddressSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.SIPACLTransportProtocol _transportProtocol;
+        protected BroadWorksConnector.Ocip.Models.SIPACLTransportProtocol? _transportProtocol;
 
         [XmlElement(ElementName = "transportProtocol", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:35440")]
-        public BroadWorksConnector.Ocip.Models.SIPACLTransportProtocol TransportProtocol
+        public BroadWorksConnector.Ocip.Models.SIPACLTransportProtocol? TransportProtocol
         {
             get => _transportProtocol;
             set
             {
-                TransportProtocolSpecified = true;
+                TransportProtocolSpecified = (value != null);
                 _transportProtocol = value;
             }
         }

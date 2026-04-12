@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _xsiPolicyProfile;
             set
             {
-                XsiPolicyProfileSpecified = true;
+                XsiPolicyProfileSpecified = (value != null);
                 _xsiPolicyProfile = value;
             }
         }

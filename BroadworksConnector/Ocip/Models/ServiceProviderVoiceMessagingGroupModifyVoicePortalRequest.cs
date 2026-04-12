@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ServiceProviderVoicePortalScope _voicePortalScope;
+        protected BroadWorksConnector.Ocip.Models.ServiceProviderVoicePortalScope? _voicePortalScope;
 
         [XmlElement(ElementName = "voicePortalScope", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:519")]
-        public BroadWorksConnector.Ocip.Models.ServiceProviderVoicePortalScope VoicePortalScope
+        public BroadWorksConnector.Ocip.Models.ServiceProviderVoicePortalScope? VoicePortalScope
         {
             get => _voicePortalScope;
             set
             {
-                VoicePortalScopeSpecified = true;
+                VoicePortalScopeSpecified = (value != null);
                 _voicePortalScope = value;
             }
         }

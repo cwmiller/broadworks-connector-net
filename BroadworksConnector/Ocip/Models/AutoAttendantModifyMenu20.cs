@@ -18,17 +18,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class AutoAttendantModifyMenu20
     {
 
-        protected BroadWorksConnector.Ocip.Models.AnnouncementSelection _announcementSelection;
+        protected BroadWorksConnector.Ocip.Models.AnnouncementSelection? _announcementSelection;
 
         [XmlElement(ElementName = "announcementSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:882")]
-        public BroadWorksConnector.Ocip.Models.AnnouncementSelection AnnouncementSelection
+        public BroadWorksConnector.Ocip.Models.AnnouncementSelection? AnnouncementSelection
         {
             get => _announcementSelection;
             set
             {
-                AnnouncementSelectionSpecified = true;
+                AnnouncementSelectionSpecified = (value != null);
                 _announcementSelection = value;
             }
         }
@@ -72,17 +72,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VideoFileSpecified { get; set; }
 
-        protected bool _enableFirstMenuLevelExtensionDialing;
+        protected bool? _enableFirstMenuLevelExtensionDialing;
 
         [XmlElement(ElementName = "enableFirstMenuLevelExtensionDialing", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:882")]
-        public bool EnableFirstMenuLevelExtensionDialing
+        public bool? EnableFirstMenuLevelExtensionDialing
         {
             get => _enableFirstMenuLevelExtensionDialing;
             set
             {
-                EnableFirstMenuLevelExtensionDialingSpecified = true;
+                EnableFirstMenuLevelExtensionDialingSpecified = (value != null);
                 _enableFirstMenuLevelExtensionDialing = value;
             }
         }
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _keyConfiguration;
             set
             {
-                KeyConfigurationSpecified = true;
+                KeyConfigurationSpecified = (value != null);
                 _keyConfiguration = value;
             }
         }

@@ -21,19 +21,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemOutboundProxyCacheParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected int _evictionTimeoutMinutes;
+        protected int? _evictionTimeoutMinutes;
 
         [XmlElement(ElementName = "evictionTimeoutMinutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14268")]
         [MinInclusive(0)]
         [MaxInclusive(525600)]
-        public int EvictionTimeoutMinutes
+        public int? EvictionTimeoutMinutes
         {
             get => _evictionTimeoutMinutes;
             set
             {
-                EvictionTimeoutMinutesSpecified = true;
+                EvictionTimeoutMinutesSpecified = (value != null);
                 _evictionTimeoutMinutes = value;
             }
         }
@@ -41,19 +41,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EvictionTimeoutMinutesSpecified { get; set; }
 
-        protected int _refreshTimeoutMinutes;
+        protected int? _refreshTimeoutMinutes;
 
         [XmlElement(ElementName = "refreshTimeoutMinutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14268")]
         [MinInclusive(0)]
         [MaxInclusive(525600)]
-        public int RefreshTimeoutMinutes
+        public int? RefreshTimeoutMinutes
         {
             get => _refreshTimeoutMinutes;
             set
             {
-                RefreshTimeoutMinutesSpecified = true;
+                RefreshTimeoutMinutesSpecified = (value != null);
                 _refreshTimeoutMinutes = value;
             }
         }
@@ -61,19 +61,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RefreshTimeoutMinutesSpecified { get; set; }
 
-        protected int _auditIntervalMinutes;
+        protected int? _auditIntervalMinutes;
 
         [XmlElement(ElementName = "auditIntervalMinutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14268")]
         [MinInclusive(0)]
         [MaxInclusive(525600)]
-        public int AuditIntervalMinutes
+        public int? AuditIntervalMinutes
         {
             get => _auditIntervalMinutes;
             set
             {
-                AuditIntervalMinutesSpecified = true;
+                AuditIntervalMinutesSpecified = (value != null);
                 _auditIntervalMinutes = value;
             }
         }
@@ -81,18 +81,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AuditIntervalMinutesSpecified { get; set; }
 
-        protected int _maximumCacheSize;
+        protected int? _maximumCacheSize;
 
         [XmlElement(ElementName = "maximumCacheSize", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14268")]
         [MinInclusive(0)]
-        public int MaximumCacheSize
+        public int? MaximumCacheSize
         {
             get => _maximumCacheSize;
             set
             {
-                MaximumCacheSizeSpecified = true;
+                MaximumCacheSizeSpecified = (value != null);
                 _maximumCacheSize = value;
             }
         }

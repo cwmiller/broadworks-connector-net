@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceInstanceProfile;
             set
             {
-                ServiceInstanceProfileSpecified = true;
+                ServiceInstanceProfileSpecified = (value != null);
                 _serviceInstanceProfile = value;
             }
         }
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkClassOfService;
             set
             {
-                NetworkClassOfServiceSpecified = true;
+                NetworkClassOfServiceSpecified = (value != null);
                 _networkClassOfService = value;
             }
         }

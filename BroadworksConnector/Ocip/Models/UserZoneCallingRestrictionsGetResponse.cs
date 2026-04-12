@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _homeZoneName;
             set
             {
-                HomeZoneNameSpecified = true;
+                HomeZoneNameSpecified = (value != null);
                 _homeZoneName = value;
             }
         }

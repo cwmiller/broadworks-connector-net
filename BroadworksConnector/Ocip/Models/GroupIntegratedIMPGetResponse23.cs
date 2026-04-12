@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceDomain;
             set
             {
-                ServiceDomainSpecified = true;
+                ServiceDomainSpecified = (value != null);
                 _serviceDomain = value;
             }
         }
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _effectiveServiceDomain;
             set
             {
-                EffectiveServiceDomainSpecified = true;
+                EffectiveServiceDomainSpecified = (value != null);
                 _effectiveServiceDomain = value;
             }
         }
@@ -114,17 +114,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultImpIdTypeSpecified { get; set; }
 
-        protected bool _useServiceProviderMessagingServer;
+        protected bool? _useServiceProviderMessagingServer;
 
         [XmlElement(ElementName = "useServiceProviderMessagingServer", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"37cec25308bcc82fe5a80bf541c42c89:72")]
-        public bool UseServiceProviderMessagingServer
+        public bool? UseServiceProviderMessagingServer
         {
             get => _useServiceProviderMessagingServer;
             set
             {
-                UseServiceProviderMessagingServerSpecified = true;
+                UseServiceProviderMessagingServerSpecified = (value != null);
                 _useServiceProviderMessagingServer = value;
             }
         }
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _provisioningUrl;
             set
             {
-                ProvisioningUrlSpecified = true;
+                ProvisioningUrlSpecified = (value != null);
                 _provisioningUrl = value;
             }
         }
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _provisioningUserId;
             set
             {
-                ProvisioningUserIdSpecified = true;
+                ProvisioningUserIdSpecified = (value != null);
                 _provisioningUserId = value;
             }
         }

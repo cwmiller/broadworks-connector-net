@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _accessDeviceUserName;
             set
             {
-                AccessDeviceUserNameSpecified = true;
+                AccessDeviceUserNameSpecified = (value != null);
                 _accessDeviceUserName = value;
             }
         }
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _accessDeviceUserPassword;
             set
             {
-                AccessDeviceUserPasswordSpecified = true;
+                AccessDeviceUserPasswordSpecified = (value != null);
                 _accessDeviceUserPassword = value;
             }
         }
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _signedPassword;
             set
             {
-                SignedPasswordSpecified = true;
+                SignedPasswordSpecified = (value != null);
                 _signedPassword = value;
             }
         }
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _macAddress;
             set
             {
-                MacAddressSpecified = true;
+                MacAddressSpecified = (value != null);
                 _macAddress = value;
             }
         }
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _realmName;
             set
             {
-                RealmNameSpecified = true;
+                RealmNameSpecified = (value != null);
                 _realmName = value;
             }
         }
@@ -184,7 +184,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _digestHa1Complement;
             set
             {
-                DigestHa1ComplementSpecified = true;
+                DigestHa1ComplementSpecified = (value != null);
                 _digestHa1Complement = value;
             }
         }
@@ -204,7 +204,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _digestResponse;
             set
             {
-                DigestResponseSpecified = true;
+                DigestResponseSpecified = (value != null);
                 _digestResponse = value;
             }
         }

@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _addMatchDigitPattern;
             set
             {
-                AddMatchDigitPatternSpecified = true;
+                AddMatchDigitPatternSpecified = (value != null);
                 _addMatchDigitPattern = value;
             }
         }
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deleteMatchDigitPattern;
             set
             {
-                DeleteMatchDigitPatternSpecified = true;
+                DeleteMatchDigitPatternSpecified = (value != null);
                 _deleteMatchDigitPattern = value;
             }
         }
@@ -79,17 +79,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeleteMatchDigitPatternSpecified { get; set; }
 
-        protected bool _enableWhiteList;
+        protected bool? _enableWhiteList;
 
         [XmlElement(ElementName = "enableWhiteList", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6796")]
-        public bool EnableWhiteList
+        public bool? EnableWhiteList
         {
             get => _enableWhiteList;
             set
             {
-                EnableWhiteListSpecified = true;
+                EnableWhiteListSpecified = (value != null);
                 _enableWhiteList = value;
             }
         }

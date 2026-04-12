@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _businessHours;
             set
             {
-                BusinessHoursSpecified = true;
+                BusinessHoursSpecified = (value != null);
                 _businessHours = value;
             }
         }
@@ -166,7 +166,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holidaySchedule;
             set
             {
-                HolidayScheduleSpecified = true;
+                HolidayScheduleSpecified = (value != null);
                 _holidaySchedule = value;
             }
         }
@@ -235,7 +235,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _businessHoursMenu;
             set
             {
-                BusinessHoursMenuSpecified = true;
+                BusinessHoursMenuSpecified = (value != null);
                 _businessHoursMenu = value;
             }
         }
@@ -253,7 +253,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _afterHoursMenu;
             set
             {
-                AfterHoursMenuSpecified = true;
+                AfterHoursMenuSpecified = (value != null);
                 _afterHoursMenu = value;
             }
         }
@@ -271,7 +271,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holidayMenu;
             set
             {
-                HolidayMenuSpecified = true;
+                HolidayMenuSpecified = (value != null);
                 _holidayMenu = value;
             }
         }
@@ -291,7 +291,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkClassOfService;
             set
             {
-                NetworkClassOfServiceSpecified = true;
+                NetworkClassOfServiceSpecified = (value != null);
                 _networkClassOfService = value;
             }
         }

@@ -16,17 +16,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallMeNowToDnCriteriaModify
     {
 
-        protected BroadWorksConnector.Ocip.Models.CriteriaDnSelection _toDnCriteriaSelection;
+        protected BroadWorksConnector.Ocip.Models.CriteriaDnSelection? _toDnCriteriaSelection;
 
         [XmlElement(ElementName = "toDnCriteriaSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf9583170c1dc9ec6c152ba1238437a:259")]
-        public BroadWorksConnector.Ocip.Models.CriteriaDnSelection ToDnCriteriaSelection
+        public BroadWorksConnector.Ocip.Models.CriteriaDnSelection? ToDnCriteriaSelection
         {
             get => _toDnCriteriaSelection;
             set
             {
-                ToDnCriteriaSelectionSpecified = true;
+                ToDnCriteriaSelectionSpecified = (value != null);
                 _toDnCriteriaSelection = value;
             }
         }

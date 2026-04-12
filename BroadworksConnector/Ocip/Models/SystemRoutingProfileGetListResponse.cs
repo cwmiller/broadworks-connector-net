@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _routingProfile;
             set
             {
-                RoutingProfileSpecified = true;
+                RoutingProfileSpecified = (value != null);
                 _routingProfile = value;
             }
         }

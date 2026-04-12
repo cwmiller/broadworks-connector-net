@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newEnterpriseTrunkName;
             set
             {
-                NewEnterpriseTrunkNameSpecified = true;
+                NewEnterpriseTrunkNameSpecified = (value != null);
                 _newEnterpriseTrunkName = value;
             }
         }
@@ -96,19 +96,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewEnterpriseTrunkNameSpecified { get; set; }
 
-        protected int _maximumRerouteAttempts;
+        protected int? _maximumRerouteAttempts;
 
         [XmlElement(ElementName = "maximumRerouteAttempts", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:913")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
-        public int MaximumRerouteAttempts
+        public int? MaximumRerouteAttempts
         {
             get => _maximumRerouteAttempts;
             set
             {
-                MaximumRerouteAttemptsSpecified = true;
+                MaximumRerouteAttemptsSpecified = (value != null);
                 _maximumRerouteAttempts = value;
             }
         }
@@ -116,17 +116,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaximumRerouteAttemptsSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.EnterpriseTrunkRouteExhaustionAction _routeExhaustionAction;
+        protected BroadWorksConnector.Ocip.Models.EnterpriseTrunkRouteExhaustionAction? _routeExhaustionAction;
 
         [XmlElement(ElementName = "routeExhaustionAction", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:913")]
-        public BroadWorksConnector.Ocip.Models.EnterpriseTrunkRouteExhaustionAction RouteExhaustionAction
+        public BroadWorksConnector.Ocip.Models.EnterpriseTrunkRouteExhaustionAction? RouteExhaustionAction
         {
             get => _routeExhaustionAction;
             set
             {
-                RouteExhaustionActionSpecified = true;
+                RouteExhaustionActionSpecified = (value != null);
                 _routeExhaustionAction = value;
             }
         }
@@ -188,17 +188,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PriorityWeightedRoutingSpecified { get; set; }
 
-        protected bool _enableCapacityManagement;
+        protected bool? _enableCapacityManagement;
 
         [XmlElement(ElementName = "enableCapacityManagement", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:913")]
-        public bool EnableCapacityManagement
+        public bool? EnableCapacityManagement
         {
             get => _enableCapacityManagement;
             set
             {
-                EnableCapacityManagementSpecified = true;
+                EnableCapacityManagementSpecified = (value != null);
                 _enableCapacityManagement = value;
             }
         }

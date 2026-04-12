@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newCriteriaName;
             set
             {
-                NewCriteriaNameSpecified = true;
+                NewCriteriaNameSpecified = (value != null);
                 _newCriteriaName = value;
             }
         }
@@ -117,17 +117,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HolidayScheduleSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallForwardingSelectiveNumberSelection16 _forwardToNumberSelection;
+        protected BroadWorksConnector.Ocip.Models.CallForwardingSelectiveNumberSelection16? _forwardToNumberSelection;
 
         [XmlElement(ElementName = "forwardToNumberSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"a80d284dc33fadcf5b323133519ad1a8:181")]
-        public BroadWorksConnector.Ocip.Models.CallForwardingSelectiveNumberSelection16 ForwardToNumberSelection
+        public BroadWorksConnector.Ocip.Models.CallForwardingSelectiveNumberSelection16? ForwardToNumberSelection
         {
             get => _forwardToNumberSelection;
             set
             {
-                ForwardToNumberSelectionSpecified = true;
+                ForwardToNumberSelectionSpecified = (value != null);
                 _forwardToNumberSelection = value;
             }
         }
@@ -165,7 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _fromDnCriteria;
             set
             {
-                FromDnCriteriaSpecified = true;
+                FromDnCriteriaSpecified = (value != null);
                 _fromDnCriteria = value;
             }
         }

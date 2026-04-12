@@ -34,17 +34,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TrunkGroupListSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.EnterpriseTrunkOrderingAlgorithm _orderingAlgorithm;
+        protected BroadWorksConnector.Ocip.Models.EnterpriseTrunkOrderingAlgorithm? _orderingAlgorithm;
 
         [XmlElement(ElementName = "orderingAlgorithm", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:925")]
-        public BroadWorksConnector.Ocip.Models.EnterpriseTrunkOrderingAlgorithm OrderingAlgorithm
+        public BroadWorksConnector.Ocip.Models.EnterpriseTrunkOrderingAlgorithm? OrderingAlgorithm
         {
             get => _orderingAlgorithm;
             set
             {
-                OrderingAlgorithmSpecified = true;
+                OrderingAlgorithmSpecified = (value != null);
                 _orderingAlgorithm = value;
             }
         }

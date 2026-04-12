@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _redirectType;
             set
             {
-                RedirectTypeSpecified = true;
+                RedirectTypeSpecified = (value != null);
                 _redirectType = value;
             }
         }

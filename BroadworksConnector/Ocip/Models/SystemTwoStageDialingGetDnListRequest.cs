@@ -20,18 +20,18 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemTwoStageDialingGetDnListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemTwoStageDialingGetDnListResponse>
     {
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"103e8fba76512e5a1abfb373758f36e2:80")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaSystemServiceDn;
             set
             {
-                SearchCriteriaSystemServiceDnSpecified = true;
+                SearchCriteriaSystemServiceDnSpecified = (value != null);
                 _searchCriteriaSystemServiceDn = value;
             }
         }

@@ -80,17 +80,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LanguageSpecified { get; set; }
 
-        protected bool _applyToUsers;
+        protected bool? _applyToUsers;
 
         [XmlElement(ElementName = "applyToUsers", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:8574")]
-        public bool ApplyToUsers
+        public bool? ApplyToUsers
         {
             get => _applyToUsers;
             set
             {
-                ApplyToUsersSpecified = true;
+                ApplyToUsersSpecified = (value != null);
                 _applyToUsers = value;
             }
         }
@@ -98,17 +98,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ApplyToUsersSpecified { get; set; }
 
-        protected bool _applyToServiceInstances;
+        protected bool? _applyToServiceInstances;
 
         [XmlElement(ElementName = "applyToServiceInstances", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:8574")]
-        public bool ApplyToServiceInstances
+        public bool? ApplyToServiceInstances
         {
             get => _applyToServiceInstances;
             set
             {
-                ApplyToServiceInstancesSpecified = true;
+                ApplyToServiceInstancesSpecified = (value != null);
                 _applyToServiceInstances = value;
             }
         }

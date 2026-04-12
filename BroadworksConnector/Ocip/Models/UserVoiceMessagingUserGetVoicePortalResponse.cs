@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _personalizedNameAudioFileDescription;
             set
             {
-                PersonalizedNameAudioFileDescriptionSpecified = true;
+                PersonalizedNameAudioFileDescriptionSpecified = (value != null);
                 _personalizedNameAudioFileDescription = value;
             }
         }

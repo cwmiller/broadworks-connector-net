@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _sCSCFName;
             set
             {
-                SCSCFNameSpecified = true;
+                SCSCFNameSpecified = (value != null);
                 _sCSCFName = value;
             }
         }

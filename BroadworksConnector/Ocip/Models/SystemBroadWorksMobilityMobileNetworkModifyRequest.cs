@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newName;
             set
             {
-                NewNameSpecified = true;
+                NewNameSpecified = (value != null);
                 _newName = value;
             }
         }
@@ -98,19 +98,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ScfSignalingPortSpecified { get; set; }
 
-        protected int _refreshPeriodSeconds;
+        protected int? _refreshPeriodSeconds;
 
         [XmlElement(ElementName = "refreshPeriodSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1176")]
         [MinInclusive(10)]
         [MaxInclusive(1800)]
-        public int RefreshPeriodSeconds
+        public int? RefreshPeriodSeconds
         {
             get => _refreshPeriodSeconds;
             set
             {
-                RefreshPeriodSecondsSpecified = true;
+                RefreshPeriodSecondsSpecified = (value != null);
                 _refreshPeriodSeconds = value;
             }
         }
@@ -118,19 +118,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RefreshPeriodSecondsSpecified { get; set; }
 
-        protected int _maxConsecutiveFailures;
+        protected int? _maxConsecutiveFailures;
 
         [XmlElement(ElementName = "maxConsecutiveFailures", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1176")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
-        public int MaxConsecutiveFailures
+        public int? MaxConsecutiveFailures
         {
             get => _maxConsecutiveFailures;
             set
             {
-                MaxConsecutiveFailuresSpecified = true;
+                MaxConsecutiveFailuresSpecified = (value != null);
                 _maxConsecutiveFailures = value;
             }
         }
@@ -138,19 +138,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxConsecutiveFailuresSpecified { get; set; }
 
-        protected int _maxResponseWaitTimeMilliseconds;
+        protected int? _maxResponseWaitTimeMilliseconds;
 
         [XmlElement(ElementName = "maxResponseWaitTimeMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1176")]
         [MinInclusive(100)]
         [MaxInclusive(10000)]
-        public int MaxResponseWaitTimeMilliseconds
+        public int? MaxResponseWaitTimeMilliseconds
         {
             get => _maxResponseWaitTimeMilliseconds;
             set
             {
-                MaxResponseWaitTimeMillisecondsSpecified = true;
+                MaxResponseWaitTimeMillisecondsSpecified = (value != null);
                 _maxResponseWaitTimeMilliseconds = value;
             }
         }
@@ -158,17 +158,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxResponseWaitTimeMillisecondsSpecified { get; set; }
 
-        protected bool _enableAnnouncementSuppression;
+        protected bool? _enableAnnouncementSuppression;
 
         [XmlElement(ElementName = "enableAnnouncementSuppression", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1176")]
-        public bool EnableAnnouncementSuppression
+        public bool? EnableAnnouncementSuppression
         {
             get => _enableAnnouncementSuppression;
             set
             {
-                EnableAnnouncementSuppressionSpecified = true;
+                EnableAnnouncementSuppressionSpecified = (value != null);
                 _enableAnnouncementSuppression = value;
             }
         }

@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected bool _useGroupLevelAoCSettings;
+        protected bool? _useGroupLevelAoCSettings;
 
         [XmlElement(ElementName = "useGroupLevelAoCSettings", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9975efc7f5883a0595f811ee72ba4df5:85")]
-        public bool UseGroupLevelAoCSettings
+        public bool? UseGroupLevelAoCSettings
         {
             get => _useGroupLevelAoCSettings;
             set
             {
-                UseGroupLevelAoCSettingsSpecified = true;
+                UseGroupLevelAoCSettingsSpecified = (value != null);
                 _useGroupLevelAoCSettings = value;
             }
         }
@@ -75,19 +75,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseGroupLevelAoCSettingsSpecified { get; set; }
 
-        protected int _delayBetweenNotificationSeconds;
+        protected int? _delayBetweenNotificationSeconds;
 
         [XmlElement(ElementName = "delayBetweenNotificationSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9975efc7f5883a0595f811ee72ba4df5:85")]
         [MinInclusive(5)]
         [MaxInclusive(1800)]
-        public int DelayBetweenNotificationSeconds
+        public int? DelayBetweenNotificationSeconds
         {
             get => _delayBetweenNotificationSeconds;
             set
             {
-                DelayBetweenNotificationSecondsSpecified = true;
+                DelayBetweenNotificationSecondsSpecified = (value != null);
                 _delayBetweenNotificationSeconds = value;
             }
         }

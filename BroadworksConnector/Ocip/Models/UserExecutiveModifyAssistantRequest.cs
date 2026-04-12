@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _allowOptInOut;
+        protected bool? _allowOptInOut;
 
         [XmlElement(ElementName = "allowOptInOut", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:357")]
-        public bool AllowOptInOut
+        public bool? AllowOptInOut
         {
             get => _allowOptInOut;
             set
             {
-                AllowOptInOutSpecified = true;
+                AllowOptInOutSpecified = (value != null);
                 _allowOptInOut = value;
             }
         }

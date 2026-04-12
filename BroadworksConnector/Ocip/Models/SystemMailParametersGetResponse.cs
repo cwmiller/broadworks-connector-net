@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _primaryServerNetAddress;
             set
             {
-                PrimaryServerNetAddressSpecified = true;
+                PrimaryServerNetAddressSpecified = (value != null);
                 _primaryServerNetAddress = value;
             }
         }
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _secondaryServerNetAddress;
             set
             {
-                SecondaryServerNetAddressSpecified = true;
+                SecondaryServerNetAddressSpecified = (value != null);
                 _secondaryServerNetAddress = value;
             }
         }
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultSubject;
             set
             {
-                DefaultSubjectSpecified = true;
+                DefaultSubjectSpecified = (value != null);
                 _defaultSubject = value;
             }
         }

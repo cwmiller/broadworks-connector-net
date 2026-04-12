@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _emergencyCallNotifyEmailAddress;
             set
             {
-                EmergencyCallNotifyEmailAddressSpecified = true;
+                EmergencyCallNotifyEmailAddressSpecified = (value != null);
                 _emergencyCallNotifyEmailAddress = value;
             }
         }

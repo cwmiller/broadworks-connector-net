@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _sourceAddress;
             set
             {
-                SourceAddressSpecified = true;
+                SourceAddressSpecified = (value != null);
                 _sourceAddress = value;
             }
         }

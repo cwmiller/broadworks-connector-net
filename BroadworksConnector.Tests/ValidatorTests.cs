@@ -20,6 +20,19 @@ namespace BroadWorksConnector.Tests
         }
 
         [Fact]
+        public void TestRequirementExplicitlySetNull()
+        {
+            var request = new LoginRequest14sp4()
+            {
+                UserId = null
+            };
+            var results = Validator.Validate(request);
+
+            Assert.False(results.Success);
+            Assert.IsType<FieldNotSetError>(results.Errors.Single());
+        }
+
+        [Fact]
         public void TestRequirementMet()
         {
             var request = new LoginRequest14sp4()

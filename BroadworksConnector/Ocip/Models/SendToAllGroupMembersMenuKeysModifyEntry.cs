@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _confirmSendingToEntireGroup;
             set
             {
-                ConfirmSendingToEntireGroupSpecified = true;
+                ConfirmSendingToEntireGroupSpecified = (value != null);
                 _confirmSendingToEntireGroup = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _cancelSendingToEntireGroup;
             set
             {
-                CancelSendingToEntireGroupSpecified = true;
+                CancelSendingToEntireGroupSpecified = (value != null);
                 _cancelSendingToEntireGroup = value;
             }
         }

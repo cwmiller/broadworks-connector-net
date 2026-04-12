@@ -105,17 +105,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BlockCallingNameForExternalCallsSpecified { get; set; }
 
-        protected bool _allowConfigurableCLIDForRedirectingIdentity;
+        protected bool? _allowConfigurableCLIDForRedirectingIdentity;
 
         [XmlElement(ElementName = "allowConfigurableCLIDForRedirectingIdentity", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:3893")]
-        public bool AllowConfigurableCLIDForRedirectingIdentity
+        public bool? AllowConfigurableCLIDForRedirectingIdentity
         {
             get => _allowConfigurableCLIDForRedirectingIdentity;
             set
             {
-                AllowConfigurableCLIDForRedirectingIdentitySpecified = true;
+                AllowConfigurableCLIDForRedirectingIdentitySpecified = (value != null);
                 _allowConfigurableCLIDForRedirectingIdentity = value;
             }
         }

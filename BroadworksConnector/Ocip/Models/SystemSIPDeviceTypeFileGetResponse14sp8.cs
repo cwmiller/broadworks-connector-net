@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _configurationFileName;
             set
             {
-                ConfigurationFileNameSpecified = true;
+                ConfigurationFileNameSpecified = (value != null);
                 _configurationFileName = value;
             }
         }
@@ -187,7 +187,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _macFormatInNonRequestURI;
             set
             {
-                MacFormatInNonRequestURISpecified = true;
+                MacFormatInNonRequestURISpecified = (value != null);
                 _macFormatInNonRequestURI = value;
             }
         }

@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _configurationFileName;
             set
             {
-                ConfigurationFileNameSpecified = true;
+                ConfigurationFileNameSpecified = (value != null);
                 _configurationFileName = value;
             }
         }
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _repositoryUrl;
             set
             {
-                RepositoryUrlSpecified = true;
+                RepositoryUrlSpecified = (value != null);
                 _repositoryUrl = value;
             }
         }
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _templateUrl;
             set
             {
-                TemplateUrlSpecified = true;
+                TemplateUrlSpecified = (value != null);
                 _templateUrl = value;
             }
         }
@@ -113,17 +113,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TemplateUrlSpecified { get; set; }
 
-        protected bool _extendedCaptureEnabled;
+        protected bool? _extendedCaptureEnabled;
 
         [XmlElement(ElementName = "extendedCaptureEnabled", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:567")]
-        public bool ExtendedCaptureEnabled
+        public bool? ExtendedCaptureEnabled
         {
             get => _extendedCaptureEnabled;
             set
             {
-                ExtendedCaptureEnabledSpecified = true;
+                ExtendedCaptureEnabledSpecified = (value != null);
                 _extendedCaptureEnabled = value;
             }
         }
@@ -143,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _extendedCaptureURL;
             set
             {
-                ExtendedCaptureURLSpecified = true;
+                ExtendedCaptureURLSpecified = (value != null);
                 _extendedCaptureURL = value;
             }
         }
@@ -151,17 +151,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExtendedCaptureURLSpecified { get; set; }
 
-        protected bool _allowUploadFromDevice;
+        protected bool? _allowUploadFromDevice;
 
         [XmlElement(ElementName = "allowUploadFromDevice", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:567")]
-        public bool AllowUploadFromDevice
+        public bool? AllowUploadFromDevice
         {
             get => _allowUploadFromDevice;
             set
             {
-                AllowUploadFromDeviceSpecified = true;
+                AllowUploadFromDeviceSpecified = (value != null);
                 _allowUploadFromDevice = value;
             }
         }

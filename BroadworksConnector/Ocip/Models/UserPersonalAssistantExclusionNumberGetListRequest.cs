@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaPersonalAssistantExclusionNumber;
             set
             {
-                SearchCriteriaPersonalAssistantExclusionNumberSpecified = true;
+                SearchCriteriaPersonalAssistantExclusionNumberSpecified = (value != null);
                 _searchCriteriaPersonalAssistantExclusionNumber = value;
             }
         }
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaPersonalAssistantExclusionNumberDescription;
             set
             {
-                SearchCriteriaPersonalAssistantExclusionNumberDescriptionSpecified = true;
+                SearchCriteriaPersonalAssistantExclusionNumberDescriptionSpecified = (value != null);
                 _searchCriteriaPersonalAssistantExclusionNumberDescription = value;
             }
         }
@@ -74,18 +74,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaPersonalAssistantExclusionNumberDescriptionSpecified { get; set; }
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:267")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }

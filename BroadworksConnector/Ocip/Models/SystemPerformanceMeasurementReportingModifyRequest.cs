@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemPerformanceMeasurementReportingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14590")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -37,19 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected int _reportingInterval;
+        protected int? _reportingInterval;
 
         [XmlElement(ElementName = "reportingInterval", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14590")]
         [MinInclusive(5)]
         [MaxInclusive(45000)]
-        public int ReportingInterval
+        public int? ReportingInterval
         {
             get => _reportingInterval;
             set
             {
-                ReportingIntervalSpecified = true;
+                ReportingIntervalSpecified = (value != null);
                 _reportingInterval = value;
             }
         }
@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReportingIntervalSpecified { get; set; }
 
-        protected bool _resetMeasurementsAfterEachReport;
+        protected bool? _resetMeasurementsAfterEachReport;
 
         [XmlElement(ElementName = "resetMeasurementsAfterEachReport", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14590")]
-        public bool ResetMeasurementsAfterEachReport
+        public bool? ResetMeasurementsAfterEachReport
         {
             get => _resetMeasurementsAfterEachReport;
             set
             {
-                ResetMeasurementsAfterEachReportSpecified = true;
+                ResetMeasurementsAfterEachReportSpecified = (value != null);
                 _resetMeasurementsAfterEachReport = value;
             }
         }
@@ -75,17 +75,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResetMeasurementsAfterEachReportSpecified { get; set; }
 
-        protected bool _reportEnterprise;
+        protected bool? _reportEnterprise;
 
         [XmlElement(ElementName = "reportEnterprise", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14590")]
-        public bool ReportEnterprise
+        public bool? ReportEnterprise
         {
             get => _reportEnterprise;
             set
             {
-                ReportEnterpriseSpecified = true;
+                ReportEnterpriseSpecified = (value != null);
                 _reportEnterprise = value;
             }
         }
@@ -93,17 +93,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReportEnterpriseSpecified { get; set; }
 
-        protected bool _reportServiceProvider;
+        protected bool? _reportServiceProvider;
 
         [XmlElement(ElementName = "reportServiceProvider", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14590")]
-        public bool ReportServiceProvider
+        public bool? ReportServiceProvider
         {
             get => _reportServiceProvider;
             set
             {
-                ReportServiceProviderSpecified = true;
+                ReportServiceProviderSpecified = (value != null);
                 _reportServiceProvider = value;
             }
         }
@@ -111,17 +111,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReportServiceProviderSpecified { get; set; }
 
-        protected bool _reportDevice;
+        protected bool? _reportDevice;
 
         [XmlElement(ElementName = "reportDevice", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14590")]
-        public bool ReportDevice
+        public bool? ReportDevice
         {
             get => _reportDevice;
             set
             {
-                ReportDeviceSpecified = true;
+                ReportDeviceSpecified = (value != null);
                 _reportDevice = value;
             }
         }
@@ -129,17 +129,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReportDeviceSpecified { get; set; }
 
-        protected bool _reportTable;
+        protected bool? _reportTable;
 
         [XmlElement(ElementName = "reportTable", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14590")]
-        public bool ReportTable
+        public bool? ReportTable
         {
             get => _reportTable;
             set
             {
-                ReportTableSpecified = true;
+                ReportTableSpecified = (value != null);
                 _reportTable = value;
             }
         }
@@ -147,17 +147,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReportTableSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.PerformanceMeasurementReportingEncoding _reportEncoding;
+        protected BroadWorksConnector.Ocip.Models.PerformanceMeasurementReportingEncoding? _reportEncoding;
 
         [XmlElement(ElementName = "reportEncoding", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14590")]
-        public BroadWorksConnector.Ocip.Models.PerformanceMeasurementReportingEncoding ReportEncoding
+        public BroadWorksConnector.Ocip.Models.PerformanceMeasurementReportingEncoding? ReportEncoding
         {
             get => _reportEncoding;
             set
             {
-                ReportEncodingSpecified = true;
+                ReportEncodingSpecified = (value != null);
                 _reportEncoding = value;
             }
         }

@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected bool _useGroupSettings;
+        protected bool? _useGroupSettings;
 
         [XmlElement(ElementName = "useGroupSettings", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:3807")]
-        public bool UseGroupSettings
+        public bool? UseGroupSettings
         {
             get => _useGroupSettings;
             set
             {
-                UseGroupSettingsSpecified = true;
+                UseGroupSettingsSpecified = (value != null);
                 _useGroupSettings = value;
             }
         }
@@ -75,17 +75,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseGroupSettingsSpecified { get; set; }
 
-        protected bool _allowActivationCodeRequestByUser;
+        protected bool? _allowActivationCodeRequestByUser;
 
         [XmlElement(ElementName = "allowActivationCodeRequestByUser", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:3807")]
-        public bool AllowActivationCodeRequestByUser
+        public bool? AllowActivationCodeRequestByUser
         {
             get => _allowActivationCodeRequestByUser;
             set
             {
-                AllowActivationCodeRequestByUserSpecified = true;
+                AllowActivationCodeRequestByUserSpecified = (value != null);
                 _allowActivationCodeRequestByUser = value;
             }
         }
@@ -93,17 +93,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowActivationCodeRequestByUserSpecified { get; set; }
 
-        protected bool _sendActivationCodeInEmail;
+        protected bool? _sendActivationCodeInEmail;
 
         [XmlElement(ElementName = "sendActivationCodeInEmail", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:3807")]
-        public bool SendActivationCodeInEmail
+        public bool? SendActivationCodeInEmail
         {
             get => _sendActivationCodeInEmail;
             set
             {
-                SendActivationCodeInEmailSpecified = true;
+                SendActivationCodeInEmailSpecified = (value != null);
                 _sendActivationCodeInEmail = value;
             }
         }

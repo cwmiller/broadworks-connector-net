@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _criteriaPriorityOrder;
             set
             {
-                CriteriaPriorityOrderSpecified = true;
+                CriteriaPriorityOrderSpecified = (value != null);
                 _criteriaPriorityOrder = value;
             }
         }

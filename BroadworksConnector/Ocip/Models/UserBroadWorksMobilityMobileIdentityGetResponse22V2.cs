@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _description;
             set
             {
-                DescriptionSpecified = true;
+                DescriptionSpecified = (value != null);
                 _description = value;
             }
         }
@@ -442,7 +442,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeSchedule;
             set
             {
-                TimeScheduleSpecified = true;
+                TimeScheduleSpecified = (value != null);
                 _timeSchedule = value;
             }
         }
@@ -460,7 +460,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holidaySchedule;
             set
             {
-                HolidayScheduleSpecified = true;
+                HolidayScheduleSpecified = (value != null);
                 _holidaySchedule = value;
             }
         }
@@ -478,7 +478,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _accessDeviceEndpoint;
             set
             {
-                AccessDeviceEndpointSpecified = true;
+                AccessDeviceEndpointSpecified = (value != null);
                 _accessDeviceEndpoint = value;
             }
         }
@@ -498,7 +498,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _outboundAlternateNumber;
             set
             {
-                OutboundAlternateNumberSpecified = true;
+                OutboundAlternateNumberSpecified = (value != null);
                 _outboundAlternateNumber = value;
             }
         }
@@ -569,7 +569,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkTranslationIndex;
             set
             {
-                NetworkTranslationIndexSpecified = true;
+                NetworkTranslationIndexSpecified = (value != null);
                 _networkTranslationIndex = value;
             }
         }

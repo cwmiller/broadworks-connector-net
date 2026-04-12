@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newAnnouncementFileName;
             set
             {
-                NewAnnouncementFileNameSpecified = true;
+                NewAnnouncementFileNameSpecified = (value != null);
                 _newAnnouncementFileName = value;
             }
         }
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _announcementFile;
             set
             {
-                AnnouncementFileSpecified = true;
+                AnnouncementFileSpecified = (value != null);
                 _announcementFile = value;
             }
         }

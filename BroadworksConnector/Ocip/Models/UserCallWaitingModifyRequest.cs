@@ -41,17 +41,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"08ee5b5ec09321975436b908fd540e7f:128")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -59,17 +59,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected bool _disableCallingLineIdDelivery;
+        protected bool? _disableCallingLineIdDelivery;
 
         [XmlElement(ElementName = "disableCallingLineIdDelivery", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"08ee5b5ec09321975436b908fd540e7f:128")]
-        public bool DisableCallingLineIdDelivery
+        public bool? DisableCallingLineIdDelivery
         {
             get => _disableCallingLineIdDelivery;
             set
             {
-                DisableCallingLineIdDeliverySpecified = true;
+                DisableCallingLineIdDeliverySpecified = (value != null);
                 _disableCallingLineIdDelivery = value;
             }
         }

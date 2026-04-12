@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupMailServerEmailAddress;
             set
             {
-                GroupMailServerEmailAddressSpecified = true;
+                GroupMailServerEmailAddressSpecified = (value != null);
                 _groupMailServerEmailAddress = value;
             }
         }
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupMailServerUserId;
             set
             {
-                GroupMailServerUserIdSpecified = true;
+                GroupMailServerUserIdSpecified = (value != null);
                 _groupMailServerUserId = value;
             }
         }
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _personalMailServerNetAddress;
             set
             {
-                PersonalMailServerNetAddressSpecified = true;
+                PersonalMailServerNetAddressSpecified = (value != null);
                 _personalMailServerNetAddress = value;
             }
         }
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _personalMailServerEmailAddress;
             set
             {
-                PersonalMailServerEmailAddressSpecified = true;
+                PersonalMailServerEmailAddressSpecified = (value != null);
                 _personalMailServerEmailAddress = value;
             }
         }
@@ -194,7 +194,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _personalMailServerUserId;
             set
             {
-                PersonalMailServerUserIdSpecified = true;
+                PersonalMailServerUserIdSpecified = (value != null);
                 _personalMailServerUserId = value;
             }
         }

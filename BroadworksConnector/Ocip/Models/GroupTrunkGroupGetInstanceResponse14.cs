@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _accessDeviceEndpoint;
             set
             {
-                AccessDeviceEndpointSpecified = true;
+                AccessDeviceEndpointSpecified = (value != null);
                 _accessDeviceEndpoint = value;
             }
         }
@@ -72,19 +72,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxActiveCallsSpecified { get; set; }
 
-        protected int _maxIncomingCalls;
+        protected int? _maxIncomingCalls;
 
         [XmlElement(ElementName = "maxIncomingCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:14793")]
         [MinInclusive(1)]
         [MaxInclusive(999999)]
-        public int MaxIncomingCalls
+        public int? MaxIncomingCalls
         {
             get => _maxIncomingCalls;
             set
             {
-                MaxIncomingCallsSpecified = true;
+                MaxIncomingCallsSpecified = (value != null);
                 _maxIncomingCalls = value;
             }
         }
@@ -92,19 +92,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxIncomingCallsSpecified { get; set; }
 
-        protected int _maxOutgoingCalls;
+        protected int? _maxOutgoingCalls;
 
         [XmlElement(ElementName = "maxOutgoingCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:14793")]
         [MinInclusive(1)]
         [MaxInclusive(999999)]
-        public int MaxOutgoingCalls
+        public int? MaxOutgoingCalls
         {
             get => _maxOutgoingCalls;
             set
             {
-                MaxOutgoingCallsSpecified = true;
+                MaxOutgoingCallsSpecified = (value != null);
                 _maxOutgoingCalls = value;
             }
         }
@@ -141,7 +141,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _sipAuthenticationUserName;
             set
             {
-                SipAuthenticationUserNameSpecified = true;
+                SipAuthenticationUserNameSpecified = (value != null);
                 _sipAuthenticationUserName = value;
             }
         }

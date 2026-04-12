@@ -86,17 +86,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceNameSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.LeafDeviceCategory _leafDeviceCategory;
+        protected BroadWorksConnector.Ocip.Models.LeafDeviceCategory? _leafDeviceCategory;
 
         [XmlElement(ElementName = "leafDeviceCategory", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:875")]
-        public BroadWorksConnector.Ocip.Models.LeafDeviceCategory LeafDeviceCategory
+        public BroadWorksConnector.Ocip.Models.LeafDeviceCategory? LeafDeviceCategory
         {
             get => _leafDeviceCategory;
             set
             {
-                LeafDeviceCategorySpecified = true;
+                LeafDeviceCategorySpecified = (value != null);
                 _leafDeviceCategory = value;
             }
         }

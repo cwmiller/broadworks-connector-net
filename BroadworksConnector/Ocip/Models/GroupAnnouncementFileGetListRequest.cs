@@ -79,17 +79,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupExternalIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AnnouncementFileType _announcementFileType;
+        protected BroadWorksConnector.Ocip.Models.AnnouncementFileType? _announcementFileType;
 
         [XmlElement(ElementName = "announcementFileType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:1953")]
-        public BroadWorksConnector.Ocip.Models.AnnouncementFileType AnnouncementFileType
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileType? AnnouncementFileType
         {
             get => _announcementFileType;
             set
             {
-                AnnouncementFileTypeSpecified = true;
+                AnnouncementFileTypeSpecified = (value != null);
                 _announcementFileType = value;
             }
         }
@@ -114,18 +114,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeAnnouncementTableSpecified { get; set; }
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:1953")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }
@@ -143,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaAnnouncementFileName;
             set
             {
-                SearchCriteriaAnnouncementFileNameSpecified = true;
+                SearchCriteriaAnnouncementFileNameSpecified = (value != null);
                 _searchCriteriaAnnouncementFileName = value;
             }
         }

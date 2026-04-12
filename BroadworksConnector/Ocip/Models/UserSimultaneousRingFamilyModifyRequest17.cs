@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"7829cd70c5c6e02768e0a59a5de29efe:177")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected bool _doNotRingIfOnCall;
+        protected bool? _doNotRingIfOnCall;
 
         [XmlElement(ElementName = "doNotRingIfOnCall", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"7829cd70c5c6e02768e0a59a5de29efe:177")]
-        public bool DoNotRingIfOnCall
+        public bool? DoNotRingIfOnCall
         {
             get => _doNotRingIfOnCall;
             set
             {
-                DoNotRingIfOnCallSpecified = true;
+                DoNotRingIfOnCallSpecified = (value != null);
                 _doNotRingIfOnCall = value;
             }
         }
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _criteriaActivation;
             set
             {
-                CriteriaActivationSpecified = true;
+                CriteriaActivationSpecified = (value != null);
                 _criteriaActivation = value;
             }
         }

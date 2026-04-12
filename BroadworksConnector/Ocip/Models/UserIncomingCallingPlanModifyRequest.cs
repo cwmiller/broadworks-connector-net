@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _useCustomSettings;
+        protected bool? _useCustomSettings;
 
         [XmlElement(ElementName = "useCustomSettings", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"22e19489d2787693c01f531be4452169:129")]
-        public bool UseCustomSettings
+        public bool? UseCustomSettings
         {
             get => _useCustomSettings;
             set
             {
-                UseCustomSettingsSpecified = true;
+                UseCustomSettingsSpecified = (value != null);
                 _useCustomSettings = value;
             }
         }
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userPermissions;
             set
             {
-                UserPermissionsSpecified = true;
+                UserPermissionsSpecified = (value != null);
                 _userPermissions = value;
             }
         }

@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _routingPrefix;
             set
             {
-                RoutingPrefixSpecified = true;
+                RoutingPrefixSpecified = (value != null);
                 _routingPrefix = value;
             }
         }

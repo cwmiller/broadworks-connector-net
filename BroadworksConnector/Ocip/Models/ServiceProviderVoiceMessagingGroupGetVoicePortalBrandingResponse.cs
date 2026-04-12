@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _voicePortalGreetingFileDescription;
             set
             {
-                VoicePortalGreetingFileDescriptionSpecified = true;
+                VoicePortalGreetingFileDescriptionSpecified = (value != null);
                 _voicePortalGreetingFileDescription = value;
             }
         }
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _voiceMessagingGreetingFileDescription;
             set
             {
-                VoiceMessagingGreetingFileDescriptionSpecified = true;
+                VoiceMessagingGreetingFileDescriptionSpecified = (value != null);
                 _voiceMessagingGreetingFileDescription = value;
             }
         }

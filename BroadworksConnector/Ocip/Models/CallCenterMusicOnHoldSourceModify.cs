@@ -16,17 +16,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallCenterMusicOnHoldSourceModify
     {
 
-        protected BroadWorksConnector.Ocip.Models.AudioFileCodec _audioFilePreferredCodec;
+        protected BroadWorksConnector.Ocip.Models.AudioFileCodec? _audioFilePreferredCodec;
 
         [XmlElement(ElementName = "audioFilePreferredCodec", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:48617")]
-        public BroadWorksConnector.Ocip.Models.AudioFileCodec AudioFilePreferredCodec
+        public BroadWorksConnector.Ocip.Models.AudioFileCodec? AudioFilePreferredCodec
         {
             get => _audioFilePreferredCodec;
             set
             {
-                AudioFilePreferredCodecSpecified = true;
+                AudioFilePreferredCodecSpecified = (value != null);
                 _audioFilePreferredCodec = value;
             }
         }
@@ -34,17 +34,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioFilePreferredCodecSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection _messageSourceSelection;
+        protected BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection? _messageSourceSelection;
 
         [XmlElement(ElementName = "messageSourceSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:48617")]
-        public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection MessageSourceSelection
+        public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementSelection? MessageSourceSelection
         {
             get => _messageSourceSelection;
             set
             {
-                MessageSourceSelectionSpecified = true;
+                MessageSourceSelectionSpecified = (value != null);
                 _messageSourceSelection = value;
             }
         }
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _customSource;
             set
             {
-                CustomSourceSpecified = true;
+                CustomSourceSpecified = (value != null);
                 _customSource = value;
             }
         }

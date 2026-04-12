@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _value;
             set
             {
-                ValueSpecified = true;
+                ValueSpecified = (value != null);
                 _value = value;
             }
         }

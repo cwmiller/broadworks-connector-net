@@ -34,17 +34,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsRunningSpecified { get; set; }
 
-        protected int _numberPublicIdentityRefreshesStarted;
+        protected int? _numberPublicIdentityRefreshesStarted;
 
         [XmlElement(ElementName = "numberPublicIdentityRefreshesStarted", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:16672")]
-        public int NumberPublicIdentityRefreshesStarted
+        public int? NumberPublicIdentityRefreshesStarted
         {
             get => _numberPublicIdentityRefreshesStarted;
             set
             {
-                NumberPublicIdentityRefreshesStartedSpecified = true;
+                NumberPublicIdentityRefreshesStartedSpecified = (value != null);
                 _numberPublicIdentityRefreshesStarted = value;
             }
         }
@@ -52,17 +52,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberPublicIdentityRefreshesStartedSpecified { get; set; }
 
-        protected int _numberPublicIdentities;
+        protected int? _numberPublicIdentities;
 
         [XmlElement(ElementName = "numberPublicIdentities", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:16672")]
-        public int NumberPublicIdentities
+        public int? NumberPublicIdentities
         {
             get => _numberPublicIdentities;
             set
             {
-                NumberPublicIdentitiesSpecified = true;
+                NumberPublicIdentitiesSpecified = (value != null);
                 _numberPublicIdentities = value;
             }
         }

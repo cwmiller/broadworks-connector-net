@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _contact;
             set
             {
-                ContactSpecified = true;
+                ContactSpecified = (value != null);
                 _contact = value;
             }
         }
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _diversion;
             set
             {
-                DiversionSpecified = true;
+                DiversionSpecified = (value != null);
                 _diversion = value;
             }
         }
@@ -103,17 +103,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DiversionSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.IMSCallType _imsCallType;
+        protected BroadWorksConnector.Ocip.Models.IMSCallType? _imsCallType;
 
         [XmlElement(ElementName = "imsCallType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:5778")]
-        public BroadWorksConnector.Ocip.Models.IMSCallType ImsCallType
+        public BroadWorksConnector.Ocip.Models.IMSCallType? ImsCallType
         {
             get => _imsCallType;
             set
             {
-                ImsCallTypeSpecified = true;
+                ImsCallTypeSpecified = (value != null);
                 _imsCallType = value;
             }
         }
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _sipInstance;
             set
             {
-                SipInstanceSpecified = true;
+                SipInstanceSpecified = (value != null);
                 _sipInstance = value;
             }
         }
@@ -153,7 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _viaAddress;
             set
             {
-                ViaAddressSpecified = true;
+                ViaAddressSpecified = (value != null);
                 _viaAddress = value;
             }
         }

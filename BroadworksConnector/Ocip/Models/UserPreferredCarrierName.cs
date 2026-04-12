@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _carrier;
             set
             {
-                CarrierSpecified = true;
+                CarrierSpecified = (value != null);
                 _carrier = value;
             }
         }

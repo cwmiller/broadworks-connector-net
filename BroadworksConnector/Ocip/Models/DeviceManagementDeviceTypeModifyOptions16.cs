@@ -16,17 +16,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class DeviceManagementDeviceTypeModifyOptions16
     {
 
-        protected BroadWorksConnector.Ocip.Models.DeviceAccessProtocol16 _deviceAccessProtocol;
+        protected BroadWorksConnector.Ocip.Models.DeviceAccessProtocol16? _deviceAccessProtocol;
 
         [XmlElement(ElementName = "deviceAccessProtocol", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:48978")]
-        public BroadWorksConnector.Ocip.Models.DeviceAccessProtocol16 DeviceAccessProtocol
+        public BroadWorksConnector.Ocip.Models.DeviceAccessProtocol16? DeviceAccessProtocol
         {
             get => _deviceAccessProtocol;
             set
             {
-                DeviceAccessProtocolSpecified = true;
+                DeviceAccessProtocolSpecified = (value != null);
                 _deviceAccessProtocol = value;
             }
         }
@@ -34,17 +34,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceAccessProtocolSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.DeviceManagementTagMode _tagMode;
+        protected BroadWorksConnector.Ocip.Models.DeviceManagementTagMode? _tagMode;
 
         [XmlElement(ElementName = "tagMode", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:48978")]
-        public BroadWorksConnector.Ocip.Models.DeviceManagementTagMode TagMode
+        public BroadWorksConnector.Ocip.Models.DeviceManagementTagMode? TagMode
         {
             get => _tagMode;
             set
             {
-                TagModeSpecified = true;
+                TagModeSpecified = (value != null);
                 _tagMode = value;
             }
         }
@@ -72,17 +72,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TagSetSpecified { get; set; }
 
-        protected bool _allowDeviceProfileCustomTagSet;
+        protected bool? _allowDeviceProfileCustomTagSet;
 
         [XmlElement(ElementName = "allowDeviceProfileCustomTagSet", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:48978")]
-        public bool AllowDeviceProfileCustomTagSet
+        public bool? AllowDeviceProfileCustomTagSet
         {
             get => _allowDeviceProfileCustomTagSet;
             set
             {
-                AllowDeviceProfileCustomTagSetSpecified = true;
+                AllowDeviceProfileCustomTagSetSpecified = (value != null);
                 _allowDeviceProfileCustomTagSet = value;
             }
         }
@@ -90,17 +90,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowDeviceProfileCustomTagSetSpecified { get; set; }
 
-        protected bool _allowGroupCustomTagSet;
+        protected bool? _allowGroupCustomTagSet;
 
         [XmlElement(ElementName = "allowGroupCustomTagSet", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:48978")]
-        public bool AllowGroupCustomTagSet
+        public bool? AllowGroupCustomTagSet
         {
             get => _allowGroupCustomTagSet;
             set
             {
-                AllowGroupCustomTagSetSpecified = true;
+                AllowGroupCustomTagSetSpecified = (value != null);
                 _allowGroupCustomTagSet = value;
             }
         }
@@ -108,17 +108,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowGroupCustomTagSetSpecified { get; set; }
 
-        protected bool _allowSpCustomTagSet;
+        protected bool? _allowSpCustomTagSet;
 
         [XmlElement(ElementName = "allowSpCustomTagSet", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:48978")]
-        public bool AllowSpCustomTagSet
+        public bool? AllowSpCustomTagSet
         {
             get => _allowSpCustomTagSet;
             set
             {
-                AllowSpCustomTagSetSpecified = true;
+                AllowSpCustomTagSetSpecified = (value != null);
                 _allowSpCustomTagSet = value;
             }
         }
@@ -126,17 +126,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowSpCustomTagSetSpecified { get; set; }
 
-        protected bool _sendEmailUponResetFailure;
+        protected bool? _sendEmailUponResetFailure;
 
         [XmlElement(ElementName = "sendEmailUponResetFailure", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:48978")]
-        public bool SendEmailUponResetFailure
+        public bool? SendEmailUponResetFailure
         {
             get => _sendEmailUponResetFailure;
             set
             {
-                SendEmailUponResetFailureSpecified = true;
+                SendEmailUponResetFailureSpecified = (value != null);
                 _sendEmailUponResetFailure = value;
             }
         }
@@ -262,17 +262,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessDeviceCredentialsSpecified { get; set; }
 
-        protected bool _useHttpDigestAuthentication;
+        protected bool? _useHttpDigestAuthentication;
 
         [XmlElement(ElementName = "useHttpDigestAuthentication", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:48978")]
-        public bool UseHttpDigestAuthentication
+        public bool? UseHttpDigestAuthentication
         {
             get => _useHttpDigestAuthentication;
             set
             {
-                UseHttpDigestAuthenticationSpecified = true;
+                UseHttpDigestAuthenticationSpecified = (value != null);
                 _useHttpDigestAuthentication = value;
             }
         }
@@ -280,17 +280,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseHttpDigestAuthenticationSpecified { get; set; }
 
-        protected bool _macBasedFileAuthentication;
+        protected bool? _macBasedFileAuthentication;
 
         [XmlElement(ElementName = "macBasedFileAuthentication", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:48978")]
-        public bool MacBasedFileAuthentication
+        public bool? MacBasedFileAuthentication
         {
             get => _macBasedFileAuthentication;
             set
             {
-                MacBasedFileAuthenticationSpecified = true;
+                MacBasedFileAuthenticationSpecified = (value != null);
                 _macBasedFileAuthentication = value;
             }
         }
@@ -298,17 +298,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MacBasedFileAuthenticationSpecified { get; set; }
 
-        protected bool _userNamePasswordFileAuthentication;
+        protected bool? _userNamePasswordFileAuthentication;
 
         [XmlElement(ElementName = "userNamePasswordFileAuthentication", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:48978")]
-        public bool UserNamePasswordFileAuthentication
+        public bool? UserNamePasswordFileAuthentication
         {
             get => _userNamePasswordFileAuthentication;
             set
             {
-                UserNamePasswordFileAuthenticationSpecified = true;
+                UserNamePasswordFileAuthenticationSpecified = (value != null);
                 _userNamePasswordFileAuthentication = value;
             }
         }
@@ -316,17 +316,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserNamePasswordFileAuthenticationSpecified { get; set; }
 
-        protected bool _macInNonRequestURI;
+        protected bool? _macInNonRequestURI;
 
         [XmlElement(ElementName = "macInNonRequestURI", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:48978")]
-        public bool MacInNonRequestURI
+        public bool? MacInNonRequestURI
         {
             get => _macInNonRequestURI;
             set
             {
-                MacInNonRequestURISpecified = true;
+                MacInNonRequestURISpecified = (value != null);
                 _macInNonRequestURI = value;
             }
         }
@@ -334,17 +334,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MacInNonRequestURISpecified { get; set; }
 
-        protected bool _macInCert;
+        protected bool? _macInCert;
 
         [XmlElement(ElementName = "macInCert", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:48978")]
-        public bool MacInCert
+        public bool? MacInCert
         {
             get => _macInCert;
             set
             {
-                MacInCertSpecified = true;
+                MacInCertSpecified = (value != null);
                 _macInCert = value;
             }
         }

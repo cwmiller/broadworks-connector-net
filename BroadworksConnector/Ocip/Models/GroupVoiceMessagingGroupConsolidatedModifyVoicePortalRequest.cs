@@ -62,17 +62,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel _unassignPhoneNumbers;
+        protected BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel? _unassignPhoneNumbers;
 
         [XmlElement(ElementName = "unassignPhoneNumbers", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:80")]
-        public BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel UnassignPhoneNumbers
+        public BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel? UnassignPhoneNumbers
         {
             get => _unassignPhoneNumbers;
             set
             {
-                UnassignPhoneNumbersSpecified = true;
+                UnassignPhoneNumbersSpecified = (value != null);
                 _unassignPhoneNumbers = value;
             }
         }
@@ -80,17 +80,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UnassignPhoneNumbersSpecified { get; set; }
 
-        protected bool _addPhoneNumberToGroup;
+        protected bool? _addPhoneNumberToGroup;
 
         [XmlElement(ElementName = "addPhoneNumberToGroup", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:80")]
-        public bool AddPhoneNumberToGroup
+        public bool? AddPhoneNumberToGroup
         {
             get => _addPhoneNumberToGroup;
             set
             {
-                AddPhoneNumberToGroupSpecified = true;
+                AddPhoneNumberToGroupSpecified = (value != null);
                 _addPhoneNumberToGroup = value;
             }
         }
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceInstanceProfile;
             set
             {
-                ServiceInstanceProfileSpecified = true;
+                ServiceInstanceProfileSpecified = (value != null);
                 _serviceInstanceProfile = value;
             }
         }
@@ -116,17 +116,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceInstanceProfileSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:80")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -134,17 +134,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected bool _enableExtendedScope;
+        protected bool? _enableExtendedScope;
 
         [XmlElement(ElementName = "enableExtendedScope", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:80")]
-        public bool EnableExtendedScope
+        public bool? EnableExtendedScope
         {
             get => _enableExtendedScope;
             set
             {
-                EnableExtendedScopeSpecified = true;
+                EnableExtendedScopeSpecified = (value != null);
                 _enableExtendedScope = value;
             }
         }
@@ -152,17 +152,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableExtendedScopeSpecified { get; set; }
 
-        protected bool _allowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin;
+        protected bool? _allowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin;
 
         [XmlElement(ElementName = "allowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:80")]
-        public bool AllowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin
+        public bool? AllowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin
         {
             get => _allowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin;
             set
             {
-                AllowIdentificationByPhoneNumberOrVoiceMailAliasesOnLoginSpecified = true;
+                AllowIdentificationByPhoneNumberOrVoiceMailAliasesOnLoginSpecified = (value != null);
                 _allowIdentificationByPhoneNumberOrVoiceMailAliasesOnLogin = value;
             }
         }
@@ -170,17 +170,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowIdentificationByPhoneNumberOrVoiceMailAliasesOnLoginSpecified { get; set; }
 
-        protected bool _useVoicePortalWizard;
+        protected bool? _useVoicePortalWizard;
 
         [XmlElement(ElementName = "useVoicePortalWizard", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:80")]
-        public bool UseVoicePortalWizard
+        public bool? UseVoicePortalWizard
         {
             get => _useVoicePortalWizard;
             set
             {
-                UseVoicePortalWizardSpecified = true;
+                UseVoicePortalWizardSpecified = (value != null);
                 _useVoicePortalWizard = value;
             }
         }
@@ -188,17 +188,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseVoicePortalWizardSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.VoicePortalExternalRoutingScope _voicePortalExternalRoutingScope;
+        protected BroadWorksConnector.Ocip.Models.VoicePortalExternalRoutingScope? _voicePortalExternalRoutingScope;
 
         [XmlElement(ElementName = "voicePortalExternalRoutingScope", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:80")]
-        public BroadWorksConnector.Ocip.Models.VoicePortalExternalRoutingScope VoicePortalExternalRoutingScope
+        public BroadWorksConnector.Ocip.Models.VoicePortalExternalRoutingScope? VoicePortalExternalRoutingScope
         {
             get => _voicePortalExternalRoutingScope;
             set
             {
-                VoicePortalExternalRoutingScopeSpecified = true;
+                VoicePortalExternalRoutingScopeSpecified = (value != null);
                 _voicePortalExternalRoutingScope = value;
             }
         }
@@ -206,17 +206,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VoicePortalExternalRoutingScopeSpecified { get; set; }
 
-        protected bool _useExternalRouting;
+        protected bool? _useExternalRouting;
 
         [XmlElement(ElementName = "useExternalRouting", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:80")]
-        public bool UseExternalRouting
+        public bool? UseExternalRouting
         {
             get => _useExternalRouting;
             set
             {
-                UseExternalRoutingSpecified = true;
+                UseExternalRoutingSpecified = (value != null);
                 _useExternalRouting = value;
             }
         }
@@ -276,7 +276,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkClassOfService;
             set
             {
-                NetworkClassOfServiceSpecified = true;
+                NetworkClassOfServiceSpecified = (value != null);
                 _networkClassOfService = value;
             }
         }
@@ -284,17 +284,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetworkClassOfServiceSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection _voicePortalGreetingSelection;
+        protected BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection? _voicePortalGreetingSelection;
 
         [XmlElement(ElementName = "voicePortalGreetingSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:80")]
-        public BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection VoicePortalGreetingSelection
+        public BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection? VoicePortalGreetingSelection
         {
             get => _voicePortalGreetingSelection;
             set
             {
-                VoicePortalGreetingSelectionSpecified = true;
+                VoicePortalGreetingSelectionSpecified = (value != null);
                 _voicePortalGreetingSelection = value;
             }
         }
@@ -320,17 +320,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VoicePortalGreetingFileSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection _voiceMessagingGreetingSelection;
+        protected BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection? _voiceMessagingGreetingSelection;
 
         [XmlElement(ElementName = "voiceMessagingGreetingSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:80")]
-        public BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection VoiceMessagingGreetingSelection
+        public BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection? VoiceMessagingGreetingSelection
         {
             get => _voiceMessagingGreetingSelection;
             set
             {
-                VoiceMessagingGreetingSelectionSpecified = true;
+                VoiceMessagingGreetingSelectionSpecified = (value != null);
                 _voiceMessagingGreetingSelection = value;
             }
         }

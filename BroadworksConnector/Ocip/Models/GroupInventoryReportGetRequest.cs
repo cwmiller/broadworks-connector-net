@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _reportDeliveryEmailAddress;
             set
             {
-                ReportDeliveryEmailAddressSpecified = true;
+                ReportDeliveryEmailAddressSpecified = (value != null);
                 _reportDeliveryEmailAddress = value;
             }
         }

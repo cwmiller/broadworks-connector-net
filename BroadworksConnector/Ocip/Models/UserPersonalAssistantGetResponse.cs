@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _attendantNumber;
             set
             {
-                AttendantNumberSpecified = true;
+                AttendantNumberSpecified = (value != null);
                 _attendantNumber = value;
             }
         }
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _expirationTime;
             set
             {
-                ExpirationTimeSpecified = true;
+                ExpirationTimeSpecified = (value != null);
                 _expirationTime = value;
             }
         }

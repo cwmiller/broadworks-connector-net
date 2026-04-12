@@ -20,17 +20,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserCallCenterGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        protected BroadWorksConnector.Ocip.Models.AgentACDState _agentACDState;
+        protected BroadWorksConnector.Ocip.Models.AgentACDState? _agentACDState;
 
         [XmlElement(ElementName = "agentACDState", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:41140")]
-        public BroadWorksConnector.Ocip.Models.AgentACDState AgentACDState
+        public BroadWorksConnector.Ocip.Models.AgentACDState? AgentACDState
         {
             get => _agentACDState;
             set
             {
-                AgentACDStateSpecified = true;
+                AgentACDStateSpecified = (value != null);
                 _agentACDState = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userTable;
             set
             {
-                UserTableSpecified = true;
+                UserTableSpecified = (value != null);
                 _userTable = value;
             }
         }

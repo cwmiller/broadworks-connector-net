@@ -285,7 +285,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _webBasedConfigURL;
             set
             {
-                WebBasedConfigURLSpecified = true;
+                WebBasedConfigURLSpecified = (value != null);
                 _webBasedConfigURL = value;
             }
         }
@@ -354,7 +354,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _cpeDeviceOptions;
             set
             {
-                CpeDeviceOptionsSpecified = true;
+                CpeDeviceOptionsSpecified = (value != null);
                 _cpeDeviceOptions = value;
             }
         }
@@ -534,17 +534,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AdviceOfChargeCapableSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AccessDeviceResetEvent _resetEvent;
+        protected BroadWorksConnector.Ocip.Models.AccessDeviceResetEvent? _resetEvent;
 
         [XmlElement(ElementName = "resetEvent", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:14163")]
-        public BroadWorksConnector.Ocip.Models.AccessDeviceResetEvent ResetEvent
+        public BroadWorksConnector.Ocip.Models.AccessDeviceResetEvent? ResetEvent
         {
             get => _resetEvent;
             set
             {
-                ResetEventSpecified = true;
+                ResetEventSpecified = (value != null);
                 _resetEvent = value;
             }
         }
@@ -887,7 +887,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerId;
             set
             {
-                ResellerIdSpecified = true;
+                ResellerIdSpecified = (value != null);
                 _resellerId = value;
             }
         }

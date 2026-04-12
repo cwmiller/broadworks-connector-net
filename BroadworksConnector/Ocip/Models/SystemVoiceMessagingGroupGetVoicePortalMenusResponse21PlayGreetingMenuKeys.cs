@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _skipBackward;
             set
             {
-                SkipBackwardSpecified = true;
+                SkipBackwardSpecified = (value != null);
                 _skipBackward = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _pauseOrResume;
             set
             {
-                PauseOrResumeSpecified = true;
+                PauseOrResumeSpecified = (value != null);
                 _pauseOrResume = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _skipForward;
             set
             {
-                SkipForwardSpecified = true;
+                SkipForwardSpecified = (value != null);
                 _skipForward = value;
             }
         }
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _jumpToBegin;
             set
             {
-                JumpToBeginSpecified = true;
+                JumpToBeginSpecified = (value != null);
                 _jumpToBegin = value;
             }
         }
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _jumpToEnd;
             set
             {
-                JumpToEndSpecified = true;
+                JumpToEndSpecified = (value != null);
                 _jumpToEnd = value;
             }
         }

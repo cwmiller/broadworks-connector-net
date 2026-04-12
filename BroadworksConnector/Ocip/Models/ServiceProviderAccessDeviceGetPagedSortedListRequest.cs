@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _responsePagingControl;
             set
             {
-                ResponsePagingControlSpecified = true;
+                ResponsePagingControlSpecified = (value != null);
                 _responsePagingControl = value;
             }
         }
@@ -145,7 +145,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaDeviceName;
             set
             {
-                SearchCriteriaDeviceNameSpecified = true;
+                SearchCriteriaDeviceNameSpecified = (value != null);
                 _searchCriteriaDeviceName = value;
             }
         }
@@ -163,7 +163,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaDeviceMACAddress;
             set
             {
-                SearchCriteriaDeviceMACAddressSpecified = true;
+                SearchCriteriaDeviceMACAddressSpecified = (value != null);
                 _searchCriteriaDeviceMACAddress = value;
             }
         }
@@ -181,7 +181,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaDeviceNetAddress;
             set
             {
-                SearchCriteriaDeviceNetAddressSpecified = true;
+                SearchCriteriaDeviceNetAddressSpecified = (value != null);
                 _searchCriteriaDeviceNetAddress = value;
             }
         }
@@ -199,7 +199,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactDeviceType;
             set
             {
-                SearchCriteriaExactDeviceTypeSpecified = true;
+                SearchCriteriaExactDeviceTypeSpecified = (value != null);
                 _searchCriteriaExactDeviceType = value;
             }
         }
@@ -217,7 +217,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaAccessDeviceVersion;
             set
             {
-                SearchCriteriaAccessDeviceVersionSpecified = true;
+                SearchCriteriaAccessDeviceVersionSpecified = (value != null);
                 _searchCriteriaAccessDeviceVersion = value;
             }
         }
@@ -225,17 +225,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaAccessDeviceVersionSpecified { get; set; }
 
-        protected bool _searchCriteriaModeOr;
+        protected bool? _searchCriteriaModeOr;
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:920")]
-        public bool SearchCriteriaModeOr
+        public bool? SearchCriteriaModeOr
         {
             get => _searchCriteriaModeOr;
             set
             {
-                SearchCriteriaModeOrSpecified = true;
+                SearchCriteriaModeOrSpecified = (value != null);
                 _searchCriteriaModeOr = value;
             }
         }
@@ -243,17 +243,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaModeOrSpecified { get; set; }
 
-        protected bool _getVisualDeviceManagementAPIDevicesOnly;
+        protected bool? _getVisualDeviceManagementAPIDevicesOnly;
 
         [XmlElement(ElementName = "getVisualDeviceManagementAPIDevicesOnly", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:920")]
-        public bool GetVisualDeviceManagementAPIDevicesOnly
+        public bool? GetVisualDeviceManagementAPIDevicesOnly
         {
             get => _getVisualDeviceManagementAPIDevicesOnly;
             set
             {
-                GetVisualDeviceManagementAPIDevicesOnlySpecified = true;
+                GetVisualDeviceManagementAPIDevicesOnlySpecified = (value != null);
                 _getVisualDeviceManagementAPIDevicesOnly = value;
             }
         }

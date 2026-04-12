@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _webServerClusterPublicFQDN;
             set
             {
-                WebServerClusterPublicFQDNSpecified = true;
+                WebServerClusterPublicFQDNSpecified = (value != null);
                 _webServerClusterPublicFQDN = value;
             }
         }
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _applicationServerClusterPrimaryPublicFQDN;
             set
             {
-                ApplicationServerClusterPrimaryPublicFQDNSpecified = true;
+                ApplicationServerClusterPrimaryPublicFQDNSpecified = (value != null);
                 _applicationServerClusterPrimaryPublicFQDN = value;
             }
         }
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _applicationServerClusterSecondaryPublicFQDN;
             set
             {
-                ApplicationServerClusterSecondaryPublicFQDNSpecified = true;
+                ApplicationServerClusterSecondaryPublicFQDNSpecified = (value != null);
                 _applicationServerClusterSecondaryPublicFQDN = value;
             }
         }
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _applicationServerClusterPrimaryPrivateFQDN;
             set
             {
-                ApplicationServerClusterPrimaryPrivateFQDNSpecified = true;
+                ApplicationServerClusterPrimaryPrivateFQDNSpecified = (value != null);
                 _applicationServerClusterPrimaryPrivateFQDN = value;
             }
         }
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _applicationServerClusterSecondaryPrivateFQDN;
             set
             {
-                ApplicationServerClusterSecondaryPrivateFQDNSpecified = true;
+                ApplicationServerClusterSecondaryPrivateFQDNSpecified = (value != null);
                 _applicationServerClusterSecondaryPrivateFQDN = value;
             }
         }

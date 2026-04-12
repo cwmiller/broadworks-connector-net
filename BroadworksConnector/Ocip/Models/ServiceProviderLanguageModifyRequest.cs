@@ -59,17 +59,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LanguageSpecified { get; set; }
 
-        protected bool _becomeDefaultLanguage;
+        protected bool? _becomeDefaultLanguage;
 
         [XmlElement(ElementName = "becomeDefaultLanguage", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:4918")]
-        public bool BecomeDefaultLanguage
+        public bool? BecomeDefaultLanguage
         {
             get => _becomeDefaultLanguage;
             set
             {
-                BecomeDefaultLanguageSpecified = true;
+                BecomeDefaultLanguageSpecified = (value != null);
                 _becomeDefaultLanguage = value;
             }
         }

@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _selectDistributionList;
             set
             {
-                SelectDistributionListSpecified = true;
+                SelectDistributionListSpecified = (value != null);
                 _selectDistributionList = value;
             }
         }
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _reviewSelectedDistributionList;
             set
             {
-                ReviewSelectedDistributionListSpecified = true;
+                ReviewSelectedDistributionListSpecified = (value != null);
                 _reviewSelectedDistributionList = value;
             }
         }
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _repeatMenu;
             set
             {
-                RepeatMenuSpecified = true;
+                RepeatMenuSpecified = (value != null);
                 _repeatMenu = value;
             }
         }

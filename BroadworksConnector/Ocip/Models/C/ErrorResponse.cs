@@ -17,17 +17,17 @@ namespace BroadWorksConnector.Ocip.Models.C
     public class ErrorResponse : BroadWorksConnector.Ocip.Models.C.OCIResponse
     {
 
-        protected int _errorCode;
+        protected int? _errorCode;
 
         [XmlElement(ElementName = "errorCode", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"5a0dbb6ff453924acebff71a89ec0dc8:201")]
-        public int ErrorCode
+        public int? ErrorCode
         {
             get => _errorCode;
             set
             {
-                ErrorCodeSpecified = true;
+                ErrorCodeSpecified = (value != null);
                 _errorCode = value;
             }
         }
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models.C
             get => _detail;
             set
             {
-                DetailSpecified = true;
+                DetailSpecified = (value != null);
                 _detail = value;
             }
         }

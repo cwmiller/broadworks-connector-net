@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _language;
             set
             {
-                LanguageSpecified = true;
+                LanguageSpecified = (value != null);
                 _language = value;
             }
         }
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultLanguage;
             set
             {
-                DefaultLanguageSpecified = true;
+                DefaultLanguageSpecified = (value != null);
                 _defaultLanguage = value;
             }
         }

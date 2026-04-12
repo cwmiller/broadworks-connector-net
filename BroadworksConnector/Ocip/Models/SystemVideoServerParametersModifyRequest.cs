@@ -19,19 +19,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemVideoServerParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected int _videoServerResponseTimerMilliseconds;
+        protected int? _videoServerResponseTimerMilliseconds;
 
         [XmlElement(ElementName = "videoServerResponseTimerMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:19495")]
         [MinInclusive(600)]
         [MaxInclusive(120000)]
-        public int VideoServerResponseTimerMilliseconds
+        public int? VideoServerResponseTimerMilliseconds
         {
             get => _videoServerResponseTimerMilliseconds;
             set
             {
-                VideoServerResponseTimerMillisecondsSpecified = true;
+                VideoServerResponseTimerMillisecondsSpecified = (value != null);
                 _videoServerResponseTimerMilliseconds = value;
             }
         }
@@ -39,19 +39,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VideoServerResponseTimerMillisecondsSpecified { get; set; }
 
-        protected int _videoServerSelectionRouteTimerMilliseconds;
+        protected int? _videoServerSelectionRouteTimerMilliseconds;
 
         [XmlElement(ElementName = "videoServerSelectionRouteTimerMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:19495")]
         [MinInclusive(500)]
         [MaxInclusive(120000)]
-        public int VideoServerSelectionRouteTimerMilliseconds
+        public int? VideoServerSelectionRouteTimerMilliseconds
         {
             get => _videoServerSelectionRouteTimerMilliseconds;
             set
             {
-                VideoServerSelectionRouteTimerMillisecondsSpecified = true;
+                VideoServerSelectionRouteTimerMillisecondsSpecified = (value != null);
                 _videoServerSelectionRouteTimerMilliseconds = value;
             }
         }
@@ -59,17 +59,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VideoServerSelectionRouteTimerMillisecondsSpecified { get; set; }
 
-        protected bool _useStaticVideoServerDevice;
+        protected bool? _useStaticVideoServerDevice;
 
         [XmlElement(ElementName = "useStaticVideoServerDevice", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:19495")]
-        public bool UseStaticVideoServerDevice
+        public bool? UseStaticVideoServerDevice
         {
             get => _useStaticVideoServerDevice;
             set
             {
-                UseStaticVideoServerDeviceSpecified = true;
+                UseStaticVideoServerDeviceSpecified = (value != null);
                 _useStaticVideoServerDevice = value;
             }
         }

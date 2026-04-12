@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _responsePagingControl;
             set
             {
-                ResponsePagingControlSpecified = true;
+                ResponsePagingControlSpecified = (value != null);
                 _responsePagingControl = value;
             }
         }
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaLocation;
             set
             {
-                SearchCriteriaLocationSpecified = true;
+                SearchCriteriaLocationSpecified = (value != null);
                 _searchCriteriaLocation = value;
             }
         }
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactLocationEnabled;
             set
             {
-                SearchCriteriaExactLocationEnabledSpecified = true;
+                SearchCriteriaExactLocationEnabledSpecified = (value != null);
                 _searchCriteriaExactLocationEnabled = value;
             }
         }

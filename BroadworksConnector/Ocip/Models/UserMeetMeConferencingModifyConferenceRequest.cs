@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _title;
             set
             {
-                TitleSpecified = true;
+                TitleSpecified = (value != null);
                 _title = value;
             }
         }
@@ -153,17 +153,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccountCodeSpecified { get; set; }
 
-        protected bool _muteAllAttendeesOnEntry;
+        protected bool? _muteAllAttendeesOnEntry;
 
         [XmlElement(ElementName = "muteAllAttendeesOnEntry", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:908")]
-        public bool MuteAllAttendeesOnEntry
+        public bool? MuteAllAttendeesOnEntry
         {
             get => _muteAllAttendeesOnEntry;
             set
             {
-                MuteAllAttendeesOnEntrySpecified = true;
+                MuteAllAttendeesOnEntrySpecified = (value != null);
                 _muteAllAttendeesOnEntry = value;
             }
         }
@@ -171,17 +171,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MuteAllAttendeesOnEntrySpecified { get; set; }
 
-        protected bool _endConferenceOnModeratorExit;
+        protected bool? _endConferenceOnModeratorExit;
 
         [XmlElement(ElementName = "endConferenceOnModeratorExit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:908")]
-        public bool EndConferenceOnModeratorExit
+        public bool? EndConferenceOnModeratorExit
         {
             get => _endConferenceOnModeratorExit;
             set
             {
-                EndConferenceOnModeratorExitSpecified = true;
+                EndConferenceOnModeratorExitSpecified = (value != null);
                 _endConferenceOnModeratorExit = value;
             }
         }
@@ -189,17 +189,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EndConferenceOnModeratorExitSpecified { get; set; }
 
-        protected bool _moderatorRequired;
+        protected bool? _moderatorRequired;
 
         [XmlElement(ElementName = "moderatorRequired", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:908")]
-        public bool ModeratorRequired
+        public bool? ModeratorRequired
         {
             get => _moderatorRequired;
             set
             {
-                ModeratorRequiredSpecified = true;
+                ModeratorRequiredSpecified = (value != null);
                 _moderatorRequired = value;
             }
         }
@@ -207,17 +207,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ModeratorRequiredSpecified { get; set; }
 
-        protected bool _requireSecurityPin;
+        protected bool? _requireSecurityPin;
 
         [XmlElement(ElementName = "requireSecurityPin", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:908")]
-        public bool RequireSecurityPin
+        public bool? RequireSecurityPin
         {
             get => _requireSecurityPin;
             set
             {
-                RequireSecurityPinSpecified = true;
+                RequireSecurityPinSpecified = (value != null);
                 _requireSecurityPin = value;
             }
         }
@@ -225,17 +225,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RequireSecurityPinSpecified { get; set; }
 
-        protected bool _allowUniqueIdentifier;
+        protected bool? _allowUniqueIdentifier;
 
         [XmlElement(ElementName = "allowUniqueIdentifier", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:908")]
-        public bool AllowUniqueIdentifier
+        public bool? AllowUniqueIdentifier
         {
             get => _allowUniqueIdentifier;
             set
             {
-                AllowUniqueIdentifierSpecified = true;
+                AllowUniqueIdentifierSpecified = (value != null);
                 _allowUniqueIdentifier = value;
             }
         }
@@ -243,17 +243,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowUniqueIdentifierSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceAttendeeNotification _attendeeNotification;
+        protected BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceAttendeeNotification? _attendeeNotification;
 
         [XmlElement(ElementName = "attendeeNotification", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:908")]
-        public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceAttendeeNotification AttendeeNotification
+        public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceAttendeeNotification? AttendeeNotification
         {
             get => _attendeeNotification;
             set
             {
-                AttendeeNotificationSpecified = true;
+                AttendeeNotificationSpecified = (value != null);
                 _attendeeNotification = value;
             }
         }
@@ -271,7 +271,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _conferenceSchedule;
             set
             {
-                ConferenceScheduleSpecified = true;
+                ConferenceScheduleSpecified = (value != null);
                 _conferenceSchedule = value;
             }
         }
@@ -279,17 +279,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConferenceScheduleSpecified { get; set; }
 
-        protected bool _allowParticipantUnmuteInAutoLectureMode;
+        protected bool? _allowParticipantUnmuteInAutoLectureMode;
 
         [XmlElement(ElementName = "allowParticipantUnmuteInAutoLectureMode", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:908")]
-        public bool AllowParticipantUnmuteInAutoLectureMode
+        public bool? AllowParticipantUnmuteInAutoLectureMode
         {
             get => _allowParticipantUnmuteInAutoLectureMode;
             set
             {
-                AllowParticipantUnmuteInAutoLectureModeSpecified = true;
+                AllowParticipantUnmuteInAutoLectureModeSpecified = (value != null);
                 _allowParticipantUnmuteInAutoLectureMode = value;
             }
         }

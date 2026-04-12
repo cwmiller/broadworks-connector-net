@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _departmentKey;
             set
             {
-                DepartmentKeySpecified = true;
+                DepartmentKeySpecified = (value != null);
                 _departmentKey = value;
             }
         }
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _fullPathName;
             set
             {
-                FullPathNameSpecified = true;
+                FullPathNameSpecified = (value != null);
                 _fullPathName = value;
             }
         }

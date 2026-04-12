@@ -54,19 +54,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxConcurrentNetworkSessionsSpecified { get; set; }
 
-        protected int _maxConcurrentNetworkSessionsThreshold;
+        protected int? _maxConcurrentNetworkSessionsThreshold;
 
         [XmlElement(ElementName = "maxConcurrentNetworkSessionsThreshold", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d45e381d6dbac771631649063122a42e:329")]
         [MinInclusive(1)]
         [MaxInclusive(2147483647)]
-        public int MaxConcurrentNetworkSessionsThreshold
+        public int? MaxConcurrentNetworkSessionsThreshold
         {
             get => _maxConcurrentNetworkSessionsThreshold;
             set
             {
-                MaxConcurrentNetworkSessionsThresholdSpecified = true;
+                MaxConcurrentNetworkSessionsThresholdSpecified = (value != null);
                 _maxConcurrentNetworkSessionsThreshold = value;
             }
         }
@@ -93,19 +93,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxNetworkCallsPerSecondSpecified { get; set; }
 
-        protected int _maxNetworkCallsPerSecondThreshold;
+        protected int? _maxNetworkCallsPerSecondThreshold;
 
         [XmlElement(ElementName = "maxNetworkCallsPerSecondThreshold", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d45e381d6dbac771631649063122a42e:329")]
         [MinInclusive(1)]
         [MaxInclusive(2147483647)]
-        public int MaxNetworkCallsPerSecondThreshold
+        public int? MaxNetworkCallsPerSecondThreshold
         {
             get => _maxNetworkCallsPerSecondThreshold;
             set
             {
-                MaxNetworkCallsPerSecondThresholdSpecified = true;
+                MaxNetworkCallsPerSecondThresholdSpecified = (value != null);
                 _maxNetworkCallsPerSecondThreshold = value;
             }
         }
@@ -132,19 +132,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxConcurrentExternalSIPRECSessionsSpecified { get; set; }
 
-        protected int _maxConcurrentExternalSIPRECSessionsThreshold;
+        protected int? _maxConcurrentExternalSIPRECSessionsThreshold;
 
         [XmlElement(ElementName = "maxConcurrentExternalSIPRECSessionsThreshold", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d45e381d6dbac771631649063122a42e:329")]
         [MinInclusive(1)]
         [MaxInclusive(2147483647)]
-        public int MaxConcurrentExternalSIPRECSessionsThreshold
+        public int? MaxConcurrentExternalSIPRECSessionsThreshold
         {
             get => _maxConcurrentExternalSIPRECSessionsThreshold;
             set
             {
-                MaxConcurrentExternalSIPRECSessionsThresholdSpecified = true;
+                MaxConcurrentExternalSIPRECSessionsThresholdSpecified = (value != null);
                 _maxConcurrentExternalSIPRECSessionsThreshold = value;
             }
         }

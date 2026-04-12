@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _alertingGroupName;
             set
             {
-                AlertingGroupNameSpecified = true;
+                AlertingGroupNameSpecified = (value != null);
                 _alertingGroupName = value;
             }
         }

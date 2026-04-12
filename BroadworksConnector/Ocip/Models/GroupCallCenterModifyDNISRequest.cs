@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newDNISName;
             set
             {
-                NewDNISNameSpecified = true;
+                NewDNISNameSpecified = (value != null);
                 _newDNISName = value;
             }
         }
@@ -96,17 +96,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExtensionSpecified { get; set; }
 
-        protected bool _useCustomCLIDSettings;
+        protected bool? _useCustomCLIDSettings;
 
         [XmlElement(ElementName = "useCustomCLIDSettings", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5140")]
-        public bool UseCustomCLIDSettings
+        public bool? UseCustomCLIDSettings
         {
             get => _useCustomCLIDSettings;
             set
             {
-                UseCustomCLIDSettingsSpecified = true;
+                UseCustomCLIDSettingsSpecified = (value != null);
                 _useCustomCLIDSettings = value;
             }
         }
@@ -174,17 +174,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallingLineIdFirstNameSpecified { get; set; }
 
-        protected bool _useCustomDnisAnnouncementSettings;
+        protected bool? _useCustomDnisAnnouncementSettings;
 
         [XmlElement(ElementName = "useCustomDnisAnnouncementSettings", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5140")]
-        public bool UseCustomDnisAnnouncementSettings
+        public bool? UseCustomDnisAnnouncementSettings
         {
             get => _useCustomDnisAnnouncementSettings;
             set
             {
-                UseCustomDnisAnnouncementSettingsSpecified = true;
+                UseCustomDnisAnnouncementSettingsSpecified = (value != null);
                 _useCustomDnisAnnouncementSettings = value;
             }
         }
@@ -192,17 +192,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseCustomDnisAnnouncementSettingsSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.DNISPriority _priority;
+        protected BroadWorksConnector.Ocip.Models.DNISPriority? _priority;
 
         [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5140")]
-        public BroadWorksConnector.Ocip.Models.DNISPriority Priority
+        public BroadWorksConnector.Ocip.Models.DNISPriority? Priority
         {
             get => _priority;
             set
             {
-                PrioritySpecified = true;
+                PrioritySpecified = (value != null);
                 _priority = value;
             }
         }
@@ -210,17 +210,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PrioritySpecified { get; set; }
 
-        protected bool _allowOutgoingACDCall;
+        protected bool? _allowOutgoingACDCall;
 
         [XmlElement(ElementName = "allowOutgoingACDCall", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5140")]
-        public bool AllowOutgoingACDCall
+        public bool? AllowOutgoingACDCall
         {
             get => _allowOutgoingACDCall;
             set
             {
-                AllowOutgoingACDCallSpecified = true;
+                AllowOutgoingACDCallSpecified = (value != null);
                 _allowOutgoingACDCall = value;
             }
         }

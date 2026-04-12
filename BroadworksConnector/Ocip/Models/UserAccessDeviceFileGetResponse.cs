@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _templateUrl;
             set
             {
-                TemplateUrlSpecified = true;
+                TemplateUrlSpecified = (value != null);
                 _templateUrl = value;
             }
         }

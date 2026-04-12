@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AddressSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ChargingFunctionElementServerType _type;
+        protected BroadWorksConnector.Ocip.Models.ChargingFunctionElementServerType? _type;
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2057")]
-        public BroadWorksConnector.Ocip.Models.ChargingFunctionElementServerType Type
+        public BroadWorksConnector.Ocip.Models.ChargingFunctionElementServerType? Type
         {
             get => _type;
             set
             {
-                TypeSpecified = true;
+                TypeSpecified = (value != null);
                 _type = value;
             }
         }

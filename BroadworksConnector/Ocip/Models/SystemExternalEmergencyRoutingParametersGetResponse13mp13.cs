@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceURI;
             set
             {
-                ServiceURISpecified = true;
+                ServiceURISpecified = (value != null);
                 _serviceURI = value;
             }
         }
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultEmergencyNumber;
             set
             {
-                DefaultEmergencyNumberSpecified = true;
+                DefaultEmergencyNumberSpecified = (value != null);
                 _defaultEmergencyNumber = value;
             }
         }

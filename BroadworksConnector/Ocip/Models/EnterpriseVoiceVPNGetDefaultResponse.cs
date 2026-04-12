@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _routeGroupId;
             set
             {
-                RouteGroupIdSpecified = true;
+                RouteGroupIdSpecified = (value != null);
                 _routeGroupId = value;
             }
         }
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _treatment;
             set
             {
-                TreatmentSpecified = true;
+                TreatmentSpecified = (value != null);
                 _treatment = value;
             }
         }

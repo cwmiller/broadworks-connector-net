@@ -149,7 +149,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _alertingCustomCallingLineIdName;
             set
             {
-                AlertingCustomCallingLineIdNameSpecified = true;
+                AlertingCustomCallingLineIdNameSpecified = (value != null);
                 _alertingCustomCallingLineIdName = value;
             }
         }
@@ -169,7 +169,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _unicodeAlertingCustomCallingLineIdName;
             set
             {
-                UnicodeAlertingCustomCallingLineIdNameSpecified = true;
+                UnicodeAlertingCustomCallingLineIdNameSpecified = (value != null);
                 _unicodeAlertingCustomCallingLineIdName = value;
             }
         }
@@ -206,7 +206,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _alertingCustomCallingLineIdPhoneNumber;
             set
             {
-                AlertingCustomCallingLineIdPhoneNumberSpecified = true;
+                AlertingCustomCallingLineIdPhoneNumberSpecified = (value != null);
                 _alertingCustomCallingLineIdPhoneNumber = value;
             }
         }
@@ -269,19 +269,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableRolloverSpecified { get; set; }
 
-        protected int _rolloverWaitTimeSeconds;
+        protected int? _rolloverWaitTimeSeconds;
 
         [XmlElement(ElementName = "rolloverWaitTimeSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:325")]
         [MinInclusive(0)]
         [MaxInclusive(7200)]
-        public int RolloverWaitTimeSeconds
+        public int? RolloverWaitTimeSeconds
         {
             get => _rolloverWaitTimeSeconds;
             set
             {
-                RolloverWaitTimeSecondsSpecified = true;
+                RolloverWaitTimeSecondsSpecified = (value != null);
                 _rolloverWaitTimeSeconds = value;
             }
         }
@@ -318,7 +318,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _rolloverForwardToPhoneNumber;
             set
             {
-                RolloverForwardToPhoneNumberSpecified = true;
+                RolloverForwardToPhoneNumberSpecified = (value != null);
                 _rolloverForwardToPhoneNumber = value;
             }
         }

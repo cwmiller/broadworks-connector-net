@@ -58,17 +58,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.XsiPolicyProfileLevel _level;
+        protected BroadWorksConnector.Ocip.Models.XsiPolicyProfileLevel? _level;
 
         [XmlElement(ElementName = "level", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:8651")]
-        public BroadWorksConnector.Ocip.Models.XsiPolicyProfileLevel Level
+        public BroadWorksConnector.Ocip.Models.XsiPolicyProfileLevel? Level
         {
             get => _level;
             set
             {
-                LevelSpecified = true;
+                LevelSpecified = (value != null);
                 _level = value;
             }
         }

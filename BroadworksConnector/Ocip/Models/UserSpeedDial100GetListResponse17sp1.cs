@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _prefix;
             set
             {
-                PrefixSpecified = true;
+                PrefixSpecified = (value != null);
                 _prefix = value;
             }
         }
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _speedDialEntry;
             set
             {
-                SpeedDialEntrySpecified = true;
+                SpeedDialEntrySpecified = (value != null);
                 _speedDialEntry = value;
             }
         }

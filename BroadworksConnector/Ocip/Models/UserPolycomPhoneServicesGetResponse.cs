@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupCustomContactDirectory;
             set
             {
-                GroupCustomContactDirectorySpecified = true;
+                GroupCustomContactDirectorySpecified = (value != null);
                 _groupCustomContactDirectory = value;
             }
         }

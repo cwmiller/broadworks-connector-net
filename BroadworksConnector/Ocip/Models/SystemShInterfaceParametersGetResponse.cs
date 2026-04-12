@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hssRealm;
             set
             {
-                HssRealmSpecified = true;
+                HssRealmSpecified = (value != null);
                 _hssRealm = value;
             }
         }

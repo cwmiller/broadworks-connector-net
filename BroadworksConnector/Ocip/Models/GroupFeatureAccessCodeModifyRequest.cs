@@ -62,17 +62,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.GroupFeatureAccessCodeLevel _useFeatureAccessCodeLevel;
+        protected BroadWorksConnector.Ocip.Models.GroupFeatureAccessCodeLevel? _useFeatureAccessCodeLevel;
 
         [XmlElement(ElementName = "useFeatureAccessCodeLevel", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:2935")]
-        public BroadWorksConnector.Ocip.Models.GroupFeatureAccessCodeLevel UseFeatureAccessCodeLevel
+        public BroadWorksConnector.Ocip.Models.GroupFeatureAccessCodeLevel? UseFeatureAccessCodeLevel
         {
             get => _useFeatureAccessCodeLevel;
             set
             {
-                UseFeatureAccessCodeLevelSpecified = true;
+                UseFeatureAccessCodeLevelSpecified = (value != null);
                 _useFeatureAccessCodeLevel = value;
             }
         }
@@ -80,17 +80,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseFeatureAccessCodeLevelSpecified { get; set; }
 
-        protected bool _restoreDefaultCodes;
+        protected bool? _restoreDefaultCodes;
 
         [XmlElement(ElementName = "restoreDefaultCodes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:2939")]
-        public bool RestoreDefaultCodes
+        public bool? RestoreDefaultCodes
         {
             get => _restoreDefaultCodes;
             set
             {
-                RestoreDefaultCodesSpecified = true;
+                RestoreDefaultCodesSpecified = (value != null);
                 _restoreDefaultCodes = value;
             }
         }
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _featureAccessCode;
             set
             {
-                FeatureAccessCodeSpecified = true;
+                FeatureAccessCodeSpecified = (value != null);
                 _featureAccessCode = value;
             }
         }

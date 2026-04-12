@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _sipRequestURI;
             set
             {
-                SipRequestURISpecified = true;
+                SipRequestURISpecified = (value != null);
                 _sipRequestURI = value;
             }
         }

@@ -2,6 +2,7 @@
 using BroadWorksConnector.Ocip.Models;
 using BroadWorksConnector.Ocip.Models.C;
 using Org.XmlUnit.Builder;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -250,7 +251,7 @@ namespace BroadWorksConnector.Tests
         }
 
         [Fact]
-        public void TestNillableProperty()
+        public void TestSerializeNillableProperty()
         {
             var request = new UserModifyRequest22()
             {
@@ -276,7 +277,47 @@ namespace BroadWorksConnector.Tests
         }
 
         [Fact]
-        public void TestNillableAbstractProperty()
+        public void TestSerializeNonNillablePropertySetToNull()
+        {
+            var request = new UserModifyRequest22()
+            {
+                UserId = "test@test.com",
+                Extension = "999",
+                PhoneNumber = null,
+                Address = null
+            };
+
+            var document = new BroadsoftDocument<UserModifyRequest22>()
+            {
+                SessionId = "636956952081463406",
+                Protocol = "OCI",
+                Command = [request]
+            };
+
+            var xml = _serializer.Serialize(document);
+
+            var diff =
+                DiffBuilder.Compare(Input.FromFile(@"test-data/UserModifyRequest22.xml"))
+                .WithTest(xml).Build();
+
+            Assert.False(diff.HasDifferences());
+        }
+
+        [Fact]
+        public void TestDeserializeNillableProperty()
+        {
+            var xmlData = File.ReadAllBytes(@"test-data/GroupAdminGetPolicyResponse20.xml");
+            var xml = Encoding.UTF8.GetString(xmlData);
+
+            var document = _serializer.Deserialize<GroupAdminGetPolicyResponse20>(xml);
+
+            Assert.Null(document.Command.First().CommunicationBarringUserProfileAccess);
+
+            Console.WriteLine(document);
+        }
+
+        [Fact]
+        public void TestSerializeNillableAbstractProperty()
         {
             var request = new UserModifyRequest22()
             {

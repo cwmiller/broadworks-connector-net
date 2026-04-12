@@ -39,17 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"c6e8b321b24b0bc38cc20e79ffb96700:78")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -77,17 +77,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ForwardToPhoneNumberSpecified { get; set; }
 
-        protected bool _isRingSplashActive;
+        protected bool? _isRingSplashActive;
 
         [XmlElement(ElementName = "isRingSplashActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"c6e8b321b24b0bc38cc20e79ffb96700:78")]
-        public bool IsRingSplashActive
+        public bool? IsRingSplashActive
         {
             get => _isRingSplashActive;
             set
             {
-                IsRingSplashActiveSpecified = true;
+                IsRingSplashActiveSpecified = (value != null);
                 _isRingSplashActive = value;
             }
         }

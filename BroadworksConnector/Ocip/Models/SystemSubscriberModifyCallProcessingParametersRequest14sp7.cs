@@ -32,17 +32,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSubscriberModifyCallProcessingParametersRequest14sp7 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _isExtendedCallingLineIdActive;
+        protected bool? _isExtendedCallingLineIdActive;
 
         [XmlElement(ElementName = "isExtendedCallingLineIdActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18316")]
-        public bool IsExtendedCallingLineIdActive
+        public bool? IsExtendedCallingLineIdActive
         {
             get => _isExtendedCallingLineIdActive;
             set
             {
-                IsExtendedCallingLineIdActiveSpecified = true;
+                IsExtendedCallingLineIdActiveSpecified = (value != null);
                 _isExtendedCallingLineIdActive = value;
             }
         }
@@ -50,17 +50,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsExtendedCallingLineIdActiveSpecified { get; set; }
 
-        protected bool _isRingTimeOutActive;
+        protected bool? _isRingTimeOutActive;
 
         [XmlElement(ElementName = "isRingTimeOutActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18316")]
-        public bool IsRingTimeOutActive
+        public bool? IsRingTimeOutActive
         {
             get => _isRingTimeOutActive;
             set
             {
-                IsRingTimeOutActiveSpecified = true;
+                IsRingTimeOutActiveSpecified = (value != null);
                 _isRingTimeOutActive = value;
             }
         }
@@ -68,19 +68,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsRingTimeOutActiveSpecified { get; set; }
 
-        protected int _ringTimeoutSeconds;
+        protected int? _ringTimeoutSeconds;
 
         [XmlElement(ElementName = "ringTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18316")]
         [MinInclusive(1)]
         [MaxInclusive(180)]
-        public int RingTimeoutSeconds
+        public int? RingTimeoutSeconds
         {
             get => _ringTimeoutSeconds;
             set
             {
-                RingTimeoutSecondsSpecified = true;
+                RingTimeoutSecondsSpecified = (value != null);
                 _ringTimeoutSeconds = value;
             }
         }
@@ -88,17 +88,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RingTimeoutSecondsSpecified { get; set; }
 
-        protected bool _allowEmergencyRemoteOfficeOriginations;
+        protected bool? _allowEmergencyRemoteOfficeOriginations;
 
         [XmlElement(ElementName = "allowEmergencyRemoteOfficeOriginations", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18316")]
-        public bool AllowEmergencyRemoteOfficeOriginations
+        public bool? AllowEmergencyRemoteOfficeOriginations
         {
             get => _allowEmergencyRemoteOfficeOriginations;
             set
             {
-                AllowEmergencyRemoteOfficeOriginationsSpecified = true;
+                AllowEmergencyRemoteOfficeOriginationsSpecified = (value != null);
                 _allowEmergencyRemoteOfficeOriginations = value;
             }
         }
@@ -106,19 +106,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowEmergencyRemoteOfficeOriginationsSpecified { get; set; }
 
-        protected int _maxNoAnswerNumberOfRings;
+        protected int? _maxNoAnswerNumberOfRings;
 
         [XmlElement(ElementName = "maxNoAnswerNumberOfRings", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18316")]
         [MinInclusive(6)]
         [MaxInclusive(20)]
-        public int MaxNoAnswerNumberOfRings
+        public int? MaxNoAnswerNumberOfRings
         {
             get => _maxNoAnswerNumberOfRings;
             set
             {
-                MaxNoAnswerNumberOfRingsSpecified = true;
+                MaxNoAnswerNumberOfRingsSpecified = (value != null);
                 _maxNoAnswerNumberOfRings = value;
             }
         }
@@ -126,19 +126,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxNoAnswerNumberOfRingsSpecified { get; set; }
 
-        protected int _minNoAnswerNumberOfRings;
+        protected int? _minNoAnswerNumberOfRings;
 
         [XmlElement(ElementName = "minNoAnswerNumberOfRings", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18316")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
-        public int MinNoAnswerNumberOfRings
+        public int? MinNoAnswerNumberOfRings
         {
             get => _minNoAnswerNumberOfRings;
             set
             {
-                MinNoAnswerNumberOfRingsSpecified = true;
+                MinNoAnswerNumberOfRingsSpecified = (value != null);
                 _minNoAnswerNumberOfRings = value;
             }
         }
@@ -146,17 +146,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MinNoAnswerNumberOfRingsSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.IncomingCallToUserAliasMode _incomingCallToUserAliasMode;
+        protected BroadWorksConnector.Ocip.Models.IncomingCallToUserAliasMode? _incomingCallToUserAliasMode;
 
         [XmlElement(ElementName = "incomingCallToUserAliasMode", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18316")]
-        public BroadWorksConnector.Ocip.Models.IncomingCallToUserAliasMode IncomingCallToUserAliasMode
+        public BroadWorksConnector.Ocip.Models.IncomingCallToUserAliasMode? IncomingCallToUserAliasMode
         {
             get => _incomingCallToUserAliasMode;
             set
             {
-                IncomingCallToUserAliasModeSpecified = true;
+                IncomingCallToUserAliasModeSpecified = (value != null);
                 _incomingCallToUserAliasMode = value;
             }
         }
@@ -164,17 +164,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncomingCallToUserAliasModeSpecified { get; set; }
 
-        protected bool _bypassTerminationLoopDetection;
+        protected bool? _bypassTerminationLoopDetection;
 
         [XmlElement(ElementName = "bypassTerminationLoopDetection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18316")]
-        public bool BypassTerminationLoopDetection
+        public bool? BypassTerminationLoopDetection
         {
             get => _bypassTerminationLoopDetection;
             set
             {
-                BypassTerminationLoopDetectionSpecified = true;
+                BypassTerminationLoopDetectionSpecified = (value != null);
                 _bypassTerminationLoopDetection = value;
             }
         }
@@ -182,17 +182,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BypassTerminationLoopDetectionSpecified { get; set; }
 
-        protected bool _honorCLIDBlockingForEmergencyCalls;
+        protected bool? _honorCLIDBlockingForEmergencyCalls;
 
         [XmlElement(ElementName = "honorCLIDBlockingForEmergencyCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18316")]
-        public bool HonorCLIDBlockingForEmergencyCalls
+        public bool? HonorCLIDBlockingForEmergencyCalls
         {
             get => _honorCLIDBlockingForEmergencyCalls;
             set
             {
-                HonorCLIDBlockingForEmergencyCallsSpecified = true;
+                HonorCLIDBlockingForEmergencyCallsSpecified = (value != null);
                 _honorCLIDBlockingForEmergencyCalls = value;
             }
         }
@@ -200,17 +200,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HonorCLIDBlockingForEmergencyCallsSpecified { get; set; }
 
-        protected bool _useUnicodeIdentityName;
+        protected bool? _useUnicodeIdentityName;
 
         [XmlElement(ElementName = "useUnicodeIdentityName", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18316")]
-        public bool UseUnicodeIdentityName
+        public bool? UseUnicodeIdentityName
         {
             get => _useUnicodeIdentityName;
             set
             {
-                UseUnicodeIdentityNameSpecified = true;
+                UseUnicodeIdentityNameSpecified = (value != null);
                 _useUnicodeIdentityName = value;
             }
         }

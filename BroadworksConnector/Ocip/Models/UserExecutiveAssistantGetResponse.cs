@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _divertToPhoneNumber;
             set
             {
-                DivertToPhoneNumberSpecified = true;
+                DivertToPhoneNumberSpecified = (value != null);
                 _divertToPhoneNumber = value;
             }
         }

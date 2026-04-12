@@ -35,18 +35,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RestrictAggregateSessionsSpecified { get; set; }
 
-        protected int _maxSessions;
+        protected int? _maxSessions;
 
         [XmlElement(ElementName = "maxSessions", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:7763")]
         [MinInclusive(0)]
-        public int MaxSessions
+        public int? MaxSessions
         {
             get => _maxSessions;
             set
             {
-                MaxSessionsSpecified = true;
+                MaxSessionsSpecified = (value != null);
                 _maxSessions = value;
             }
         }
@@ -54,18 +54,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxSessionsSpecified { get; set; }
 
-        protected int _maxUserOriginatingSessions;
+        protected int? _maxUserOriginatingSessions;
 
         [XmlElement(ElementName = "maxUserOriginatingSessions", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:7763")]
         [MinInclusive(0)]
-        public int MaxUserOriginatingSessions
+        public int? MaxUserOriginatingSessions
         {
             get => _maxUserOriginatingSessions;
             set
             {
-                MaxUserOriginatingSessionsSpecified = true;
+                MaxUserOriginatingSessionsSpecified = (value != null);
                 _maxUserOriginatingSessions = value;
             }
         }
@@ -73,18 +73,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxUserOriginatingSessionsSpecified { get; set; }
 
-        protected int _maxUserTerminatingSessions;
+        protected int? _maxUserTerminatingSessions;
 
         [XmlElement(ElementName = "maxUserTerminatingSessions", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:7763")]
         [MinInclusive(0)]
-        public int MaxUserTerminatingSessions
+        public int? MaxUserTerminatingSessions
         {
             get => _maxUserTerminatingSessions;
             set
             {
-                MaxUserTerminatingSessionsSpecified = true;
+                MaxUserTerminatingSessionsSpecified = (value != null);
                 _maxUserTerminatingSessions = value;
             }
         }

@@ -98,19 +98,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServerPortSpecified { get; set; }
 
-        protected int _timeoutSeconds;
+        protected int? _timeoutSeconds;
 
         [XmlElement(ElementName = "timeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"2c9f194a3272e429f2e5215dd988b94a:80")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
-        public int TimeoutSeconds
+        public int? TimeoutSeconds
         {
             get => _timeoutSeconds;
             set
             {
-                TimeoutSecondsSpecified = true;
+                TimeoutSecondsSpecified = (value != null);
                 _timeoutSeconds = value;
             }
         }

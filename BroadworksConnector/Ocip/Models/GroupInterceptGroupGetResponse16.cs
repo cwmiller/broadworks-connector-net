@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _audioFileDescription;
             set
             {
-                AudioFileDescriptionSpecified = true;
+                AudioFileDescriptionSpecified = (value != null);
                 _audioFileDescription = value;
             }
         }
@@ -73,17 +73,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioFileDescriptionSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MediaFileType _audioMediaType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType? _audioMediaType;
 
         [XmlElement(ElementName = "audioMediaType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:11151")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType AudioMediaType
+        public BroadWorksConnector.Ocip.Models.MediaFileType? AudioMediaType
         {
             get => _audioMediaType;
             set
             {
-                AudioMediaTypeSpecified = true;
+                AudioMediaTypeSpecified = (value != null);
                 _audioMediaType = value;
             }
         }
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _videoFileDescription;
             set
             {
-                VideoFileDescriptionSpecified = true;
+                VideoFileDescriptionSpecified = (value != null);
                 _videoFileDescription = value;
             }
         }
@@ -111,17 +111,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VideoFileDescriptionSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MediaFileType _videoMediaType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType? _videoMediaType;
 
         [XmlElement(ElementName = "videoMediaType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:11151")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType VideoMediaType
+        public BroadWorksConnector.Ocip.Models.MediaFileType? VideoMediaType
         {
             get => _videoMediaType;
             set
             {
-                VideoMediaTypeSpecified = true;
+                VideoMediaTypeSpecified = (value != null);
                 _videoMediaType = value;
             }
         }
@@ -158,7 +158,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newPhoneNumber;
             set
             {
-                NewPhoneNumberSpecified = true;
+                NewPhoneNumberSpecified = (value != null);
                 _newPhoneNumber = value;
             }
         }
@@ -195,7 +195,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _transferPhoneNumber;
             set
             {
-                TransferPhoneNumberSpecified = true;
+                TransferPhoneNumberSpecified = (value != null);
                 _transferPhoneNumber = value;
             }
         }

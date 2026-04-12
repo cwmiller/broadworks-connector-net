@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _mainCode;
             set
             {
-                MainCodeSpecified = true;
+                MainCodeSpecified = (value != null);
                 _mainCode = value;
             }
         }

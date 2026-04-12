@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _setPresenceToNone;
             set
             {
-                SetPresenceToNoneSpecified = true;
+                SetPresenceToNoneSpecified = (value != null);
                 _setPresenceToNone = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _setPresenceToBusinessTrip;
             set
             {
-                SetPresenceToBusinessTripSpecified = true;
+                SetPresenceToBusinessTripSpecified = (value != null);
                 _setPresenceToBusinessTrip = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _setPresenceToGoneForTheDay;
             set
             {
-                SetPresenceToGoneForTheDaySpecified = true;
+                SetPresenceToGoneForTheDaySpecified = (value != null);
                 _setPresenceToGoneForTheDay = value;
             }
         }
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _setPresenceToLunch;
             set
             {
-                SetPresenceToLunchSpecified = true;
+                SetPresenceToLunchSpecified = (value != null);
                 _setPresenceToLunch = value;
             }
         }
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _setPresenceToMeeting;
             set
             {
-                SetPresenceToMeetingSpecified = true;
+                SetPresenceToMeetingSpecified = (value != null);
                 _setPresenceToMeeting = value;
             }
         }
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _setPresenceToOutOfOffice;
             set
             {
-                SetPresenceToOutOfOfficeSpecified = true;
+                SetPresenceToOutOfOfficeSpecified = (value != null);
                 _setPresenceToOutOfOffice = value;
             }
         }
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _setPresenceToTemporarilyOut;
             set
             {
-                SetPresenceToTemporarilyOutSpecified = true;
+                SetPresenceToTemporarilyOutSpecified = (value != null);
                 _setPresenceToTemporarilyOut = value;
             }
         }
@@ -168,7 +168,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _setPresenceToTraining;
             set
             {
-                SetPresenceToTrainingSpecified = true;
+                SetPresenceToTrainingSpecified = (value != null);
                 _setPresenceToTraining = value;
             }
         }
@@ -188,7 +188,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _setPresenceToUnavailable;
             set
             {
-                SetPresenceToUnavailableSpecified = true;
+                SetPresenceToUnavailableSpecified = (value != null);
                 _setPresenceToUnavailable = value;
             }
         }
@@ -208,7 +208,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _setPresenceToVacation;
             set
             {
-                SetPresenceToVacationSpecified = true;
+                SetPresenceToVacationSpecified = (value != null);
                 _setPresenceToVacation = value;
             }
         }
@@ -247,7 +247,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _repeatMenu;
             set
             {
-                RepeatMenuSpecified = true;
+                RepeatMenuSpecified = (value != null);
                 _repeatMenu = value;
             }
         }

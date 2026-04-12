@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _emailAddress;
             set
             {
-                EmailAddressSpecified = true;
+                EmailAddressSpecified = (value != null);
                 _emailAddress = value;
             }
         }

@@ -22,19 +22,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallingNameRetrievalModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected int _queryTimerMilliSeconds;
+        protected int? _queryTimerMilliSeconds;
 
         [XmlElement(ElementName = "queryTimerMilliSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:21935")]
         [MinInclusive(500)]
         [MaxInclusive(5000)]
-        public int QueryTimerMilliSeconds
+        public int? QueryTimerMilliSeconds
         {
             get => _queryTimerMilliSeconds;
             set
             {
-                QueryTimerMilliSecondsSpecified = true;
+                QueryTimerMilliSecondsSpecified = (value != null);
                 _queryTimerMilliSeconds = value;
             }
         }
@@ -82,17 +82,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServerPortSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.TransportProtocol _serverTransportProtocol;
+        protected BroadWorksConnector.Ocip.Models.TransportProtocol? _serverTransportProtocol;
 
         [XmlElement(ElementName = "serverTransportProtocol", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:21935")]
-        public BroadWorksConnector.Ocip.Models.TransportProtocol ServerTransportProtocol
+        public BroadWorksConnector.Ocip.Models.TransportProtocol? ServerTransportProtocol
         {
             get => _serverTransportProtocol;
             set
             {
-                ServerTransportProtocolSpecified = true;
+                ServerTransportProtocolSpecified = (value != null);
                 _serverTransportProtocol = value;
             }
         }

@@ -19,19 +19,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemEnhancedCallLogsModifyRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected int _maxNonPagedResponseSize;
+        protected int? _maxNonPagedResponseSize;
 
         [XmlElement(ElementName = "maxNonPagedResponseSize", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:268")]
         [MinInclusive(100)]
         [MaxInclusive(1000)]
-        public int MaxNonPagedResponseSize
+        public int? MaxNonPagedResponseSize
         {
             get => _maxNonPagedResponseSize;
             set
             {
-                MaxNonPagedResponseSizeSpecified = true;
+                MaxNonPagedResponseSizeSpecified = (value != null);
                 _maxNonPagedResponseSize = value;
             }
         }

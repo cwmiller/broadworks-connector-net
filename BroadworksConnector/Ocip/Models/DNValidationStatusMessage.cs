@@ -52,17 +52,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StatusSpecified { get; set; }
 
-        protected int _messageCode;
+        protected int? _messageCode;
 
         [XmlElement(ElementName = "messageCode", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:2954")]
-        public int MessageCode
+        public int? MessageCode
         {
             get => _messageCode;
             set
             {
-                MessageCodeSpecified = true;
+                MessageCodeSpecified = (value != null);
                 _messageCode = value;
             }
         }
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _summary;
             set
             {
-                SummarySpecified = true;
+                SummarySpecified = (value != null);
                 _summary = value;
             }
         }
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _summaryEnglish;
             set
             {
-                SummaryEnglishSpecified = true;
+                SummaryEnglishSpecified = (value != null);
                 _summaryEnglish = value;
             }
         }

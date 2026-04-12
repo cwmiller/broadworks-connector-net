@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _signingServiceURL;
             set
             {
-                SigningServiceURLSpecified = true;
+                SigningServiceURLSpecified = (value != null);
                 _signingServiceURL = value;
             }
         }
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _origUUID;
             set
             {
-                OrigUUIDSpecified = true;
+                OrigUUIDSpecified = (value != null);
                 _origUUID = value;
             }
         }
@@ -204,7 +204,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _verificationServiceURL;
             set
             {
-                VerificationServiceURLSpecified = true;
+                VerificationServiceURLSpecified = (value != null);
                 _verificationServiceURL = value;
             }
         }

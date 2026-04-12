@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _configurationServerURL;
             set
             {
-                ConfigurationServerURLSpecified = true;
+                ConfigurationServerURLSpecified = (value != null);
                 _configurationServerURL = value;
             }
         }

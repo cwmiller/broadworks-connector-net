@@ -62,17 +62,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberOfRingsBeforeBouncingCallSpecified { get; set; }
 
-        protected bool _enableTransfer;
+        protected bool? _enableTransfer;
 
         [XmlElement(ElementName = "enableTransfer", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:2739")]
-        public bool EnableTransfer
+        public bool? EnableTransfer
         {
             get => _enableTransfer;
             set
             {
-                EnableTransferSpecified = true;
+                EnableTransferSpecified = (value != null);
                 _enableTransfer = value;
             }
         }
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _transferPhoneNumber;
             set
             {
-                TransferPhoneNumberSpecified = true;
+                TransferPhoneNumberSpecified = (value != null);
                 _transferPhoneNumber = value;
             }
         }
@@ -100,17 +100,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TransferPhoneNumberSpecified { get; set; }
 
-        protected bool _bounceCallWhenAgentUnavailable;
+        protected bool? _bounceCallWhenAgentUnavailable;
 
         [XmlElement(ElementName = "bounceCallWhenAgentUnavailable", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:2739")]
-        public bool BounceCallWhenAgentUnavailable
+        public bool? BounceCallWhenAgentUnavailable
         {
             get => _bounceCallWhenAgentUnavailable;
             set
             {
-                BounceCallWhenAgentUnavailableSpecified = true;
+                BounceCallWhenAgentUnavailableSpecified = (value != null);
                 _bounceCallWhenAgentUnavailable = value;
             }
         }
@@ -118,17 +118,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BounceCallWhenAgentUnavailableSpecified { get; set; }
 
-        protected bool _alertCallCenterCallOnHold;
+        protected bool? _alertCallCenterCallOnHold;
 
         [XmlElement(ElementName = "alertCallCenterCallOnHold", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:2739")]
-        public bool AlertCallCenterCallOnHold
+        public bool? AlertCallCenterCallOnHold
         {
             get => _alertCallCenterCallOnHold;
             set
             {
-                AlertCallCenterCallOnHoldSpecified = true;
+                AlertCallCenterCallOnHoldSpecified = (value != null);
                 _alertCallCenterCallOnHold = value;
             }
         }
@@ -136,19 +136,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlertCallCenterCallOnHoldSpecified { get; set; }
 
-        protected int _alertCallCenterCallOnHoldSeconds;
+        protected int? _alertCallCenterCallOnHoldSeconds;
 
         [XmlElement(ElementName = "alertCallCenterCallOnHoldSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:2739")]
         [MinInclusive(30)]
         [MaxInclusive(600)]
-        public int AlertCallCenterCallOnHoldSeconds
+        public int? AlertCallCenterCallOnHoldSeconds
         {
             get => _alertCallCenterCallOnHoldSeconds;
             set
             {
-                AlertCallCenterCallOnHoldSecondsSpecified = true;
+                AlertCallCenterCallOnHoldSecondsSpecified = (value != null);
                 _alertCallCenterCallOnHoldSeconds = value;
             }
         }
@@ -156,17 +156,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlertCallCenterCallOnHoldSecondsSpecified { get; set; }
 
-        protected bool _bounceCallCenterCallOnHold;
+        protected bool? _bounceCallCenterCallOnHold;
 
         [XmlElement(ElementName = "bounceCallCenterCallOnHold", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:2739")]
-        public bool BounceCallCenterCallOnHold
+        public bool? BounceCallCenterCallOnHold
         {
             get => _bounceCallCenterCallOnHold;
             set
             {
-                BounceCallCenterCallOnHoldSpecified = true;
+                BounceCallCenterCallOnHoldSpecified = (value != null);
                 _bounceCallCenterCallOnHold = value;
             }
         }
@@ -174,19 +174,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BounceCallCenterCallOnHoldSpecified { get; set; }
 
-        protected int _bounceCallCenterCallOnHoldSeconds;
+        protected int? _bounceCallCenterCallOnHoldSeconds;
 
         [XmlElement(ElementName = "bounceCallCenterCallOnHoldSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:2739")]
         [MinInclusive(30)]
         [MaxInclusive(600)]
-        public int BounceCallCenterCallOnHoldSeconds
+        public int? BounceCallCenterCallOnHoldSeconds
         {
             get => _bounceCallCenterCallOnHoldSeconds;
             set
             {
-                BounceCallCenterCallOnHoldSecondsSpecified = true;
+                BounceCallCenterCallOnHoldSecondsSpecified = (value != null);
                 _bounceCallCenterCallOnHoldSeconds = value;
             }
         }

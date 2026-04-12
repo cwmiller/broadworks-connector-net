@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _end;
             set
             {
-                EndSpecified = true;
+                EndSpecified = (value != null);
                 _end = value;
             }
         }

@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _responsePagingControl;
             set
             {
-                ResponsePagingControlSpecified = true;
+                ResponsePagingControlSpecified = (value != null);
                 _responsePagingControl = value;
             }
         }
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _sortByTrunkGroupName;
             set
             {
-                SortByTrunkGroupNameSpecified = true;
+                SortByTrunkGroupNameSpecified = (value != null);
                 _sortByTrunkGroupName = value;
             }
         }
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaTrunkGroupName;
             set
             {
-                SearchCriteriaTrunkGroupNameSpecified = true;
+                SearchCriteriaTrunkGroupNameSpecified = (value != null);
                 _searchCriteriaTrunkGroupName = value;
             }
         }
@@ -99,17 +99,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaTrunkGroupNameSpecified { get; set; }
 
-        protected bool _searchCriteriaModeOr;
+        protected bool? _searchCriteriaModeOr;
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:484")]
-        public bool SearchCriteriaModeOr
+        public bool? SearchCriteriaModeOr
         {
             get => _searchCriteriaModeOr;
             set
             {
-                SearchCriteriaModeOrSpecified = true;
+                SearchCriteriaModeOrSpecified = (value != null);
                 _searchCriteriaModeOr = value;
             }
         }

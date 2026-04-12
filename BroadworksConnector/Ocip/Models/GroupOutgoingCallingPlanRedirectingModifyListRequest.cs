@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupPermissions;
             set
             {
-                GroupPermissionsSpecified = true;
+                GroupPermissionsSpecified = (value != null);
                 _groupPermissions = value;
             }
         }
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _departmentPermissions;
             set
             {
-                DepartmentPermissionsSpecified = true;
+                DepartmentPermissionsSpecified = (value != null);
                 _departmentPermissions = value;
             }
         }

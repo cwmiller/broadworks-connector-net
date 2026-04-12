@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _internalSource;
             set
             {
-                InternalSourceSpecified = true;
+                InternalSourceSpecified = (value != null);
                 _internalSource = value;
             }
         }

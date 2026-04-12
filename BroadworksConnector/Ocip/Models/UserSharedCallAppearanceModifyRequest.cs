@@ -44,17 +44,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _alertAllAppearancesForClickToDialCalls;
+        protected bool? _alertAllAppearancesForClickToDialCalls;
 
         [XmlElement(ElementName = "alertAllAppearancesForClickToDialCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4e9808afa6161bba01df39d17a849c79:211")]
-        public bool AlertAllAppearancesForClickToDialCalls
+        public bool? AlertAllAppearancesForClickToDialCalls
         {
             get => _alertAllAppearancesForClickToDialCalls;
             set
             {
-                AlertAllAppearancesForClickToDialCallsSpecified = true;
+                AlertAllAppearancesForClickToDialCallsSpecified = (value != null);
                 _alertAllAppearancesForClickToDialCalls = value;
             }
         }
@@ -62,17 +62,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlertAllAppearancesForClickToDialCallsSpecified { get; set; }
 
-        protected bool _alertAllAppearancesForGroupPagingCalls;
+        protected bool? _alertAllAppearancesForGroupPagingCalls;
 
         [XmlElement(ElementName = "alertAllAppearancesForGroupPagingCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4e9808afa6161bba01df39d17a849c79:211")]
-        public bool AlertAllAppearancesForGroupPagingCalls
+        public bool? AlertAllAppearancesForGroupPagingCalls
         {
             get => _alertAllAppearancesForGroupPagingCalls;
             set
             {
-                AlertAllAppearancesForGroupPagingCallsSpecified = true;
+                AlertAllAppearancesForGroupPagingCallsSpecified = (value != null);
                 _alertAllAppearancesForGroupPagingCalls = value;
             }
         }
@@ -80,17 +80,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlertAllAppearancesForGroupPagingCallsSpecified { get; set; }
 
-        protected bool _allowSCACallRetrieve;
+        protected bool? _allowSCACallRetrieve;
 
         [XmlElement(ElementName = "allowSCACallRetrieve", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4e9808afa6161bba01df39d17a849c79:211")]
-        public bool AllowSCACallRetrieve
+        public bool? AllowSCACallRetrieve
         {
             get => _allowSCACallRetrieve;
             set
             {
-                AllowSCACallRetrieveSpecified = true;
+                AllowSCACallRetrieveSpecified = (value != null);
                 _allowSCACallRetrieve = value;
             }
         }
@@ -98,17 +98,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowSCACallRetrieveSpecified { get; set; }
 
-        protected bool _multipleCallArrangementIsActive;
+        protected bool? _multipleCallArrangementIsActive;
 
         [XmlElement(ElementName = "multipleCallArrangementIsActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4e9808afa6161bba01df39d17a849c79:211")]
-        public bool MultipleCallArrangementIsActive
+        public bool? MultipleCallArrangementIsActive
         {
             get => _multipleCallArrangementIsActive;
             set
             {
-                MultipleCallArrangementIsActiveSpecified = true;
+                MultipleCallArrangementIsActiveSpecified = (value != null);
                 _multipleCallArrangementIsActive = value;
             }
         }
@@ -116,17 +116,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MultipleCallArrangementIsActiveSpecified { get; set; }
 
-        protected bool _allowBridgingBetweenLocations;
+        protected bool? _allowBridgingBetweenLocations;
 
         [XmlElement(ElementName = "allowBridgingBetweenLocations", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4e9808afa6161bba01df39d17a849c79:211")]
-        public bool AllowBridgingBetweenLocations
+        public bool? AllowBridgingBetweenLocations
         {
             get => _allowBridgingBetweenLocations;
             set
             {
-                AllowBridgingBetweenLocationsSpecified = true;
+                AllowBridgingBetweenLocationsSpecified = (value != null);
                 _allowBridgingBetweenLocations = value;
             }
         }
@@ -134,17 +134,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowBridgingBetweenLocationsSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone _bridgeWarningTone;
+        protected BroadWorksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone? _bridgeWarningTone;
 
         [XmlElement(ElementName = "bridgeWarningTone", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4e9808afa6161bba01df39d17a849c79:211")]
-        public BroadWorksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone BridgeWarningTone
+        public BroadWorksConnector.Ocip.Models.SharedCallAppearanceBridgeWarningTone? BridgeWarningTone
         {
             get => _bridgeWarningTone;
             set
             {
-                BridgeWarningToneSpecified = true;
+                BridgeWarningToneSpecified = (value != null);
                 _bridgeWarningTone = value;
             }
         }
@@ -152,17 +152,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BridgeWarningToneSpecified { get; set; }
 
-        protected bool _enableCallParkNotification;
+        protected bool? _enableCallParkNotification;
 
         [XmlElement(ElementName = "enableCallParkNotification", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4e9808afa6161bba01df39d17a849c79:211")]
-        public bool EnableCallParkNotification
+        public bool? EnableCallParkNotification
         {
             get => _enableCallParkNotification;
             set
             {
-                EnableCallParkNotificationSpecified = true;
+                EnableCallParkNotificationSpecified = (value != null);
                 _enableCallParkNotification = value;
             }
         }
@@ -170,17 +170,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableCallParkNotificationSpecified { get; set; }
 
-        protected bool _useUserPrimaryWithAlternateCallsSetting;
+        protected bool? _useUserPrimaryWithAlternateCallsSetting;
 
         [XmlElement(ElementName = "useUserPrimaryWithAlternateCallsSetting", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4e9808afa6161bba01df39d17a849c79:211")]
-        public bool UseUserPrimaryWithAlternateCallsSetting
+        public bool? UseUserPrimaryWithAlternateCallsSetting
         {
             get => _useUserPrimaryWithAlternateCallsSetting;
             set
             {
-                UseUserPrimaryWithAlternateCallsSettingSpecified = true;
+                UseUserPrimaryWithAlternateCallsSettingSpecified = (value != null);
                 _useUserPrimaryWithAlternateCallsSetting = value;
             }
         }
@@ -188,17 +188,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseUserPrimaryWithAlternateCallsSettingSpecified { get; set; }
 
-        protected bool _allowSimultaneousPrimaryAndAlternateCalls;
+        protected bool? _allowSimultaneousPrimaryAndAlternateCalls;
 
         [XmlElement(ElementName = "allowSimultaneousPrimaryAndAlternateCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4e9808afa6161bba01df39d17a849c79:211")]
-        public bool AllowSimultaneousPrimaryAndAlternateCalls
+        public bool? AllowSimultaneousPrimaryAndAlternateCalls
         {
             get => _allowSimultaneousPrimaryAndAlternateCalls;
             set
             {
-                AllowSimultaneousPrimaryAndAlternateCallsSpecified = true;
+                AllowSimultaneousPrimaryAndAlternateCallsSpecified = (value != null);
                 _allowSimultaneousPrimaryAndAlternateCalls = value;
             }
         }
@@ -206,17 +206,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowSimultaneousPrimaryAndAlternateCallsSpecified { get; set; }
 
-        protected bool _restrictCallRetrieveOfPrimaryCall;
+        protected bool? _restrictCallRetrieveOfPrimaryCall;
 
         [XmlElement(ElementName = "restrictCallRetrieveOfPrimaryCall", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4e9808afa6161bba01df39d17a849c79:211")]
-        public bool RestrictCallRetrieveOfPrimaryCall
+        public bool? RestrictCallRetrieveOfPrimaryCall
         {
             get => _restrictCallRetrieveOfPrimaryCall;
             set
             {
-                RestrictCallRetrieveOfPrimaryCallSpecified = true;
+                RestrictCallRetrieveOfPrimaryCallSpecified = (value != null);
                 _restrictCallRetrieveOfPrimaryCall = value;
             }
         }
@@ -224,17 +224,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RestrictCallRetrieveOfPrimaryCallSpecified { get; set; }
 
-        protected bool _restrictCallBridgingOfPrimaryCall;
+        protected bool? _restrictCallBridgingOfPrimaryCall;
 
         [XmlElement(ElementName = "restrictCallBridgingOfPrimaryCall", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4e9808afa6161bba01df39d17a849c79:211")]
-        public bool RestrictCallBridgingOfPrimaryCall
+        public bool? RestrictCallBridgingOfPrimaryCall
         {
             get => _restrictCallBridgingOfPrimaryCall;
             set
             {
-                RestrictCallBridgingOfPrimaryCallSpecified = true;
+                RestrictCallBridgingOfPrimaryCallSpecified = (value != null);
                 _restrictCallBridgingOfPrimaryCall = value;
             }
         }

@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _numberRangeStart;
             set
             {
-                NumberRangeStartSpecified = true;
+                NumberRangeStartSpecified = (value != null);
                 _numberRangeStart = value;
             }
         }

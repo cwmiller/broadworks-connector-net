@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _phoneNumber;
             set
             {
-                PhoneNumberSpecified = true;
+                PhoneNumberSpecified = (value != null);
                 _phoneNumber = value;
             }
         }
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _extension;
             set
             {
-                ExtensionSpecified = true;
+                ExtensionSpecified = (value != null);
                 _extension = value;
             }
         }
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _alternateNumberEntry;
             set
             {
-                AlternateNumberEntrySpecified = true;
+                AlternateNumberEntrySpecified = (value != null);
                 _alternateNumberEntry = value;
             }
         }

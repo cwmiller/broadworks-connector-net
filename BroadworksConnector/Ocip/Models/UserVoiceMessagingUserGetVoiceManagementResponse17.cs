@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _voiceMessageDeliveryEmailAddress;
             set
             {
-                VoiceMessageDeliveryEmailAddressSpecified = true;
+                VoiceMessageDeliveryEmailAddressSpecified = (value != null);
                 _voiceMessageDeliveryEmailAddress = value;
             }
         }
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _voiceMessageNotifyEmailAddress;
             set
             {
-                VoiceMessageNotifyEmailAddressSpecified = true;
+                VoiceMessageNotifyEmailAddressSpecified = (value != null);
                 _voiceMessageNotifyEmailAddress = value;
             }
         }
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _voiceMessageCarbonCopyEmailAddress;
             set
             {
-                VoiceMessageCarbonCopyEmailAddressSpecified = true;
+                VoiceMessageCarbonCopyEmailAddressSpecified = (value != null);
                 _voiceMessageCarbonCopyEmailAddress = value;
             }
         }
@@ -191,7 +191,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _transferPhoneNumber;
             set
             {
-                TransferPhoneNumberSpecified = true;
+                TransferPhoneNumberSpecified = (value != null);
                 _transferPhoneNumber = value;
             }
         }

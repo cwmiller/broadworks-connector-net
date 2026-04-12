@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _entranceAudioFileUrl;
             set
             {
-                EntranceAudioFileUrlSpecified = true;
+                EntranceAudioFileUrlSpecified = (value != null);
                 _entranceAudioFileUrl = value;
             }
         }
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _entranceMessageAudioFileDescription;
             set
             {
-                EntranceMessageAudioFileDescriptionSpecified = true;
+                EntranceMessageAudioFileDescriptionSpecified = (value != null);
                 _entranceMessageAudioFileDescription = value;
             }
         }
@@ -108,17 +108,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EntranceMessageAudioFileDescriptionSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MediaFileType _entranceAudioFileMediaType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType? _entranceAudioFileMediaType;
 
         [XmlElement(ElementName = "entranceAudioFileMediaType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:5302")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType EntranceAudioFileMediaType
+        public BroadWorksConnector.Ocip.Models.MediaFileType? EntranceAudioFileMediaType
         {
             get => _entranceAudioFileMediaType;
             set
             {
-                EntranceAudioFileMediaTypeSpecified = true;
+                EntranceAudioFileMediaTypeSpecified = (value != null);
                 _entranceAudioFileMediaType = value;
             }
         }
@@ -126,17 +126,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EntranceAudioFileMediaTypeSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _entranceVideoMessageSelection;
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? _entranceVideoMessageSelection;
 
         [XmlElement(ElementName = "entranceVideoMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:5302")]
-        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection EntranceVideoMessageSelection
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? EntranceVideoMessageSelection
         {
             get => _entranceVideoMessageSelection;
             set
             {
-                EntranceVideoMessageSelectionSpecified = true;
+                EntranceVideoMessageSelectionSpecified = (value != null);
                 _entranceVideoMessageSelection = value;
             }
         }
@@ -156,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _entranceVideoFileUrl;
             set
             {
-                EntranceVideoFileUrlSpecified = true;
+                EntranceVideoFileUrlSpecified = (value != null);
                 _entranceVideoFileUrl = value;
             }
         }
@@ -176,7 +176,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _entranceMessageVideoFileDescription;
             set
             {
-                EntranceMessageVideoFileDescriptionSpecified = true;
+                EntranceMessageVideoFileDescriptionSpecified = (value != null);
                 _entranceMessageVideoFileDescription = value;
             }
         }
@@ -184,17 +184,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EntranceMessageVideoFileDescriptionSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MediaFileType _entranceVideoFileMediaType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType? _entranceVideoFileMediaType;
 
         [XmlElement(ElementName = "entranceVideoFileMediaType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:5302")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType EntranceVideoFileMediaType
+        public BroadWorksConnector.Ocip.Models.MediaFileType? EntranceVideoFileMediaType
         {
             get => _entranceVideoFileMediaType;
             set
             {
-                EntranceVideoFileMediaTypeSpecified = true;
+                EntranceVideoFileMediaTypeSpecified = (value != null);
                 _entranceVideoFileMediaType = value;
             }
         }
@@ -267,7 +267,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _periodicComfortAudioFileUrl;
             set
             {
-                PeriodicComfortAudioFileUrlSpecified = true;
+                PeriodicComfortAudioFileUrlSpecified = (value != null);
                 _periodicComfortAudioFileUrl = value;
             }
         }
@@ -287,7 +287,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _periodicComfortMessageAudioFileDescription;
             set
             {
-                PeriodicComfortMessageAudioFileDescriptionSpecified = true;
+                PeriodicComfortMessageAudioFileDescriptionSpecified = (value != null);
                 _periodicComfortMessageAudioFileDescription = value;
             }
         }
@@ -295,17 +295,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PeriodicComfortMessageAudioFileDescriptionSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MediaFileType _periodicComfortAudioFileMediaType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType? _periodicComfortAudioFileMediaType;
 
         [XmlElement(ElementName = "periodicComfortAudioFileMediaType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:5302")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType PeriodicComfortAudioFileMediaType
+        public BroadWorksConnector.Ocip.Models.MediaFileType? PeriodicComfortAudioFileMediaType
         {
             get => _periodicComfortAudioFileMediaType;
             set
             {
-                PeriodicComfortAudioFileMediaTypeSpecified = true;
+                PeriodicComfortAudioFileMediaTypeSpecified = (value != null);
                 _periodicComfortAudioFileMediaType = value;
             }
         }
@@ -313,17 +313,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PeriodicComfortAudioFileMediaTypeSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _periodicComfortVideoMessageSelection;
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? _periodicComfortVideoMessageSelection;
 
         [XmlElement(ElementName = "periodicComfortVideoMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:5302")]
-        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection PeriodicComfortVideoMessageSelection
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? PeriodicComfortVideoMessageSelection
         {
             get => _periodicComfortVideoMessageSelection;
             set
             {
-                PeriodicComfortVideoMessageSelectionSpecified = true;
+                PeriodicComfortVideoMessageSelectionSpecified = (value != null);
                 _periodicComfortVideoMessageSelection = value;
             }
         }
@@ -343,7 +343,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _periodicComfortVideoFileUrl;
             set
             {
-                PeriodicComfortVideoFileUrlSpecified = true;
+                PeriodicComfortVideoFileUrlSpecified = (value != null);
                 _periodicComfortVideoFileUrl = value;
             }
         }
@@ -363,7 +363,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _periodicComfortMessageVideoFileDescription;
             set
             {
-                PeriodicComfortMessageVideoFileDescriptionSpecified = true;
+                PeriodicComfortMessageVideoFileDescriptionSpecified = (value != null);
                 _periodicComfortMessageVideoFileDescription = value;
             }
         }
@@ -371,17 +371,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PeriodicComfortMessageVideoFileDescriptionSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MediaFileType _periodicComfortVideoFileMediaType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType? _periodicComfortVideoFileMediaType;
 
         [XmlElement(ElementName = "periodicComfortVideoFileMediaType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:5302")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType PeriodicComfortVideoFileMediaType
+        public BroadWorksConnector.Ocip.Models.MediaFileType? PeriodicComfortVideoFileMediaType
         {
             get => _periodicComfortVideoFileMediaType;
             set
             {
-                PeriodicComfortVideoFileMediaTypeSpecified = true;
+                PeriodicComfortVideoFileMediaTypeSpecified = (value != null);
                 _periodicComfortVideoFileMediaType = value;
             }
         }
@@ -423,17 +423,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MediaOnHoldSourceSpecified { get; set; }
 
-        protected bool _mediaOnHoldUseAlternateSourceForInternalCalls;
+        protected bool? _mediaOnHoldUseAlternateSourceForInternalCalls;
 
         [XmlElement(ElementName = "mediaOnHoldUseAlternateSourceForInternalCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:5302")]
-        public bool MediaOnHoldUseAlternateSourceForInternalCalls
+        public bool? MediaOnHoldUseAlternateSourceForInternalCalls
         {
             get => _mediaOnHoldUseAlternateSourceForInternalCalls;
             set
             {
-                MediaOnHoldUseAlternateSourceForInternalCallsSpecified = true;
+                MediaOnHoldUseAlternateSourceForInternalCallsSpecified = (value != null);
                 _mediaOnHoldUseAlternateSourceForInternalCalls = value;
             }
         }
@@ -451,7 +451,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _mediaOnHoldInternalSource;
             set
             {
-                MediaOnHoldInternalSourceSpecified = true;
+                MediaOnHoldInternalSourceSpecified = (value != null);
                 _mediaOnHoldInternalSource = value;
             }
         }

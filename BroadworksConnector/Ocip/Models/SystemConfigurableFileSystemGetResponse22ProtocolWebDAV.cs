@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userName;
             set
             {
-                UserNameSpecified = true;
+                UserNameSpecified = (value != null);
                 _userName = value;
             }
         }
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _password;
             set
             {
-                PasswordSpecified = true;
+                PasswordSpecified = (value != null);
                 _password = value;
             }
         }

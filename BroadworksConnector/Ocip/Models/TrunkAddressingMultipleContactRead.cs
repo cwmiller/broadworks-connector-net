@@ -27,7 +27,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _trunkGroupDeviceEndpoint;
             set
             {
-                TrunkGroupDeviceEndpointSpecified = true;
+                TrunkGroupDeviceEndpointSpecified = (value != null);
                 _trunkGroupDeviceEndpoint = value;
             }
         }
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _enterpriseTrunkName;
             set
             {
-                EnterpriseTrunkNameSpecified = true;
+                EnterpriseTrunkNameSpecified = (value != null);
                 _enterpriseTrunkName = value;
             }
         }
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _alternateTrunkIdentity;
             set
             {
-                AlternateTrunkIdentitySpecified = true;
+                AlternateTrunkIdentitySpecified = (value != null);
                 _alternateTrunkIdentity = value;
             }
         }

@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _extension;
             set
             {
-                ExtensionSpecified = true;
+                ExtensionSpecified = (value != null);
                 _extension = value;
             }
         }
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _firstName;
             set
             {
-                FirstNameSpecified = true;
+                FirstNameSpecified = (value != null);
                 _firstName = value;
             }
         }
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _lastName;
             set
             {
-                LastNameSpecified = true;
+                LastNameSpecified = (value != null);
                 _lastName = value;
             }
         }
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callingLineIdFirstName;
             set
             {
-                CallingLineIdFirstNameSpecified = true;
+                CallingLineIdFirstNameSpecified = (value != null);
                 _callingLineIdFirstName = value;
             }
         }
@@ -170,7 +170,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callingLineIdLastName;
             set
             {
-                CallingLineIdLastNameSpecified = true;
+                CallingLineIdLastNameSpecified = (value != null);
                 _callingLineIdLastName = value;
             }
         }
@@ -190,7 +190,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _virtualOnNetCallTypeName;
             set
             {
-                VirtualOnNetCallTypeNameSpecified = true;
+                VirtualOnNetCallTypeNameSpecified = (value != null);
                 _virtualOnNetCallTypeName = value;
             }
         }

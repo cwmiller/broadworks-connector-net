@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _server1NetAddress;
             set
             {
-                Server1NetAddressSpecified = true;
+                Server1NetAddressSpecified = (value != null);
                 _server1NetAddress = value;
             }
         }
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _server2NetAddress;
             set
             {
-                Server2NetAddressSpecified = true;
+                Server2NetAddressSpecified = (value != null);
                 _server2NetAddress = value;
             }
         }
@@ -178,7 +178,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _sharedSecret;
             set
             {
-                SharedSecretSpecified = true;
+                SharedSecretSpecified = (value != null);
                 _sharedSecret = value;
             }
         }

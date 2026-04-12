@@ -20,19 +20,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSecurityClassificationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected int _meetMeAnncThreshold;
+        protected int? _meetMeAnncThreshold;
 
         [XmlElement(ElementName = "meetMeAnncThreshold", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"435c279b3e6710f4ada60ed66a93d278:294")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
-        public int MeetMeAnncThreshold
+        public int? MeetMeAnncThreshold
         {
             get => _meetMeAnncThreshold;
             set
             {
-                MeetMeAnncThresholdSpecified = true;
+                MeetMeAnncThresholdSpecified = (value != null);
                 _meetMeAnncThreshold = value;
             }
         }
@@ -40,17 +40,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MeetMeAnncThresholdSpecified { get; set; }
 
-        protected bool _playTrunkUserSecurityClassificationAnnouncement;
+        protected bool? _playTrunkUserSecurityClassificationAnnouncement;
 
         [XmlElement(ElementName = "playTrunkUserSecurityClassificationAnnouncement", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"435c279b3e6710f4ada60ed66a93d278:294")]
-        public bool PlayTrunkUserSecurityClassificationAnnouncement
+        public bool? PlayTrunkUserSecurityClassificationAnnouncement
         {
             get => _playTrunkUserSecurityClassificationAnnouncement;
             set
             {
-                PlayTrunkUserSecurityClassificationAnnouncementSpecified = true;
+                PlayTrunkUserSecurityClassificationAnnouncementSpecified = (value != null);
                 _playTrunkUserSecurityClassificationAnnouncement = value;
             }
         }
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _securityClassificationName;
             set
             {
-                SecurityClassificationNameSpecified = true;
+                SecurityClassificationNameSpecified = (value != null);
                 _securityClassificationName = value;
             }
         }

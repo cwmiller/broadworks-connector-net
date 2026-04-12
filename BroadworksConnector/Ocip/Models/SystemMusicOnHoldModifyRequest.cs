@@ -19,19 +19,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemMusicOnHoldModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected int _delayMilliseconds;
+        protected int? _delayMilliseconds;
 
         [XmlElement(ElementName = "delayMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"3a0309eb8d406fefc891f554ef114669:229")]
         [MinInclusive(0)]
         [MaxInclusive(5000)]
-        public int DelayMilliseconds
+        public int? DelayMilliseconds
         {
             get => _delayMilliseconds;
             set
             {
-                DelayMillisecondsSpecified = true;
+                DelayMillisecondsSpecified = (value != null);
                 _delayMilliseconds = value;
             }
         }

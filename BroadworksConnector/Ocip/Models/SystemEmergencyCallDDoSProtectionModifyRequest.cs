@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemEmergencyCallDDoSProtectionModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _enabled;
+        protected bool? _enabled;
 
         [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:9794")]
-        public bool Enabled
+        public bool? Enabled
         {
             get => _enabled;
             set
             {
-                EnabledSpecified = true;
+                EnabledSpecified = (value != null);
                 _enabled = value;
             }
         }
@@ -37,19 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnabledSpecified { get; set; }
 
-        protected int _sampleIntervalSeconds;
+        protected int? _sampleIntervalSeconds;
 
         [XmlElement(ElementName = "sampleIntervalSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:9794")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
-        public int SampleIntervalSeconds
+        public int? SampleIntervalSeconds
         {
             get => _sampleIntervalSeconds;
             set
             {
-                SampleIntervalSecondsSpecified = true;
+                SampleIntervalSecondsSpecified = (value != null);
                 _sampleIntervalSeconds = value;
             }
         }
@@ -77,17 +77,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProtectionRateSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ProtectionAction _protectionAction;
+        protected BroadWorksConnector.Ocip.Models.ProtectionAction? _protectionAction;
 
         [XmlElement(ElementName = "protectionAction", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:9794")]
-        public BroadWorksConnector.Ocip.Models.ProtectionAction ProtectionAction
+        public BroadWorksConnector.Ocip.Models.ProtectionAction? ProtectionAction
         {
             get => _protectionAction;
             set
             {
-                ProtectionActionSpecified = true;
+                ProtectionActionSpecified = (value != null);
                 _protectionAction = value;
             }
         }

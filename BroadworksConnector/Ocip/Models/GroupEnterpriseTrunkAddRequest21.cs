@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _routeExhaustionForwardAddress;
             set
             {
-                RouteExhaustionForwardAddressSpecified = true;
+                RouteExhaustionForwardAddressSpecified = (value != null);
                 _routeExhaustionForwardAddress = value;
             }
         }
@@ -183,18 +183,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableCapacityManagementSpecified { get; set; }
 
-        protected int _maxActiveCalls;
+        protected int? _maxActiveCalls;
 
         [XmlElement(ElementName = "maxActiveCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:564")]
         [MinInclusive(1)]
-        public int MaxActiveCalls
+        public int? MaxActiveCalls
         {
             get => _maxActiveCalls;
             set
             {
-                MaxActiveCallsSpecified = true;
+                MaxActiveCallsSpecified = (value != null);
                 _maxActiveCalls = value;
             }
         }
@@ -202,18 +202,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxActiveCallsSpecified { get; set; }
 
-        protected int _capacityExceededTrapInitialCalls;
+        protected int? _capacityExceededTrapInitialCalls;
 
         [XmlElement(ElementName = "capacityExceededTrapInitialCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:564")]
         [MinInclusive(0)]
-        public int CapacityExceededTrapInitialCalls
+        public int? CapacityExceededTrapInitialCalls
         {
             get => _capacityExceededTrapInitialCalls;
             set
             {
-                CapacityExceededTrapInitialCallsSpecified = true;
+                CapacityExceededTrapInitialCallsSpecified = (value != null);
                 _capacityExceededTrapInitialCalls = value;
             }
         }
@@ -221,18 +221,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CapacityExceededTrapInitialCallsSpecified { get; set; }
 
-        protected int _capacityExceededTrapOffsetCalls;
+        protected int? _capacityExceededTrapOffsetCalls;
 
         [XmlElement(ElementName = "capacityExceededTrapOffsetCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:564")]
         [MinInclusive(0)]
-        public int CapacityExceededTrapOffsetCalls
+        public int? CapacityExceededTrapOffsetCalls
         {
             get => _capacityExceededTrapOffsetCalls;
             set
             {
-                CapacityExceededTrapOffsetCallsSpecified = true;
+                CapacityExceededTrapOffsetCallsSpecified = (value != null);
                 _capacityExceededTrapOffsetCalls = value;
             }
         }
@@ -240,18 +240,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CapacityExceededTrapOffsetCallsSpecified { get; set; }
 
-        protected int _maximumActiveIncomingCallsAllowed;
+        protected int? _maximumActiveIncomingCallsAllowed;
 
         [XmlElement(ElementName = "maximumActiveIncomingCallsAllowed", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:564")]
         [MinInclusive(0)]
-        public int MaximumActiveIncomingCallsAllowed
+        public int? MaximumActiveIncomingCallsAllowed
         {
             get => _maximumActiveIncomingCallsAllowed;
             set
             {
-                MaximumActiveIncomingCallsAllowedSpecified = true;
+                MaximumActiveIncomingCallsAllowedSpecified = (value != null);
                 _maximumActiveIncomingCallsAllowed = value;
             }
         }
@@ -259,18 +259,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaximumActiveIncomingCallsAllowedSpecified { get; set; }
 
-        protected int _maximumActiveOutgoingCallsAllowed;
+        protected int? _maximumActiveOutgoingCallsAllowed;
 
         [XmlElement(ElementName = "maximumActiveOutgoingCallsAllowed", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:564")]
         [MinInclusive(0)]
-        public int MaximumActiveOutgoingCallsAllowed
+        public int? MaximumActiveOutgoingCallsAllowed
         {
             get => _maximumActiveOutgoingCallsAllowed;
             set
             {
-                MaximumActiveOutgoingCallsAllowedSpecified = true;
+                MaximumActiveOutgoingCallsAllowedSpecified = (value != null);
                 _maximumActiveOutgoingCallsAllowed = value;
             }
         }
@@ -278,18 +278,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaximumActiveOutgoingCallsAllowedSpecified { get; set; }
 
-        protected int _minimumActiveCallsReserved;
+        protected int? _minimumActiveCallsReserved;
 
         [XmlElement(ElementName = "minimumActiveCallsReserved", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:564")]
         [MinInclusive(0)]
-        public int MinimumActiveCallsReserved
+        public int? MinimumActiveCallsReserved
         {
             get => _minimumActiveCallsReserved;
             set
             {
-                MinimumActiveCallsReservedSpecified = true;
+                MinimumActiveCallsReservedSpecified = (value != null);
                 _minimumActiveCallsReserved = value;
             }
         }

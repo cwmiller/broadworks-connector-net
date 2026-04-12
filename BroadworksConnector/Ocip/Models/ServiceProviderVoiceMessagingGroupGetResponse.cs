@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deliveryFromAddress;
             set
             {
-                DeliveryFromAddressSpecified = true;
+                DeliveryFromAddressSpecified = (value != null);
                 _deliveryFromAddress = value;
             }
         }
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _notificationFromAddress;
             set
             {
-                NotificationFromAddressSpecified = true;
+                NotificationFromAddressSpecified = (value != null);
                 _notificationFromAddress = value;
             }
         }
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _voicePortalLockoutFromAddress;
             set
             {
-                VoicePortalLockoutFromAddressSpecified = true;
+                VoicePortalLockoutFromAddressSpecified = (value != null);
                 _voicePortalLockoutFromAddress = value;
             }
         }

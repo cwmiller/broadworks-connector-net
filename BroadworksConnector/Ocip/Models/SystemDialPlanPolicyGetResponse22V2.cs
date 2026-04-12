@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _privateDigitMap;
             set
             {
-                PrivateDigitMapSpecified = true;
+                PrivateDigitMapSpecified = (value != null);
                 _privateDigitMap = value;
             }
         }
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deviceDigitMap;
             set
             {
-                DeviceDigitMapSpecified = true;
+                DeviceDigitMapSpecified = (value != null);
                 _deviceDigitMap = value;
             }
         }
@@ -150,17 +150,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceDigitMapSpecified { get; set; }
 
-        protected bool _performInternalTranslationsWithOAC;
+        protected bool? _performInternalTranslationsWithOAC;
 
         [XmlElement(ElementName = "performInternalTranslationsWithOAC", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:9281")]
-        public bool PerformInternalTranslationsWithOAC
+        public bool? PerformInternalTranslationsWithOAC
         {
             get => _performInternalTranslationsWithOAC;
             set
             {
-                PerformInternalTranslationsWithOACSpecified = true;
+                PerformInternalTranslationsWithOACSpecified = (value != null);
                 _performInternalTranslationsWithOAC = value;
             }
         }
@@ -168,17 +168,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PerformInternalTranslationsWithOACSpecified { get; set; }
 
-        protected bool _permissiveOACDialing;
+        protected bool? _permissiveOACDialing;
 
         [XmlElement(ElementName = "permissiveOACDialing", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:9281")]
-        public bool PermissiveOACDialing
+        public bool? PermissiveOACDialing
         {
             get => _permissiveOACDialing;
             set
             {
-                PermissiveOACDialingSpecified = true;
+                PermissiveOACDialingSpecified = (value != null);
                 _permissiveOACDialing = value;
             }
         }

@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _description;
             set
             {
-                DescriptionSpecified = true;
+                DescriptionSpecified = (value != null);
                 _description = value;
             }
         }
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _routeGroupId;
             set
             {
-                RouteGroupIdSpecified = true;
+                RouteGroupIdSpecified = (value != null);
                 _routeGroupId = value;
             }
         }
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _digitManipulation;
             set
             {
-                DigitManipulationSpecified = true;
+                DigitManipulationSpecified = (value != null);
                 _digitManipulation = value;
             }
         }
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _treatmentId;
             set
             {
-                TreatmentIdSpecified = true;
+                TreatmentIdSpecified = (value != null);
                 _treatmentId = value;
             }
         }

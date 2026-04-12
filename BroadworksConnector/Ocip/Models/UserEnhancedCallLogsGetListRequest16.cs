@@ -43,17 +43,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallLogsType _callLogType;
+        protected BroadWorksConnector.Ocip.Models.CallLogsType? _callLogType;
 
         [XmlElement(ElementName = "callLogType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:43010")]
-        public BroadWorksConnector.Ocip.Models.CallLogsType CallLogType
+        public BroadWorksConnector.Ocip.Models.CallLogsType? CallLogType
         {
             get => _callLogType;
             set
             {
-                CallLogTypeSpecified = true;
+                CallLogTypeSpecified = (value != null);
                 _callLogType = value;
             }
         }
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _responsePagingControl;
             set
             {
-                ResponsePagingControlSpecified = true;
+                ResponsePagingControlSpecified = (value != null);
                 _responsePagingControl = value;
             }
         }

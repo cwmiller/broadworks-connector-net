@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _macAddress;
             set
             {
-                MacAddressSpecified = true;
+                MacAddressSpecified = (value != null);
                 _macAddress = value;
             }
         }
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _primaryUser;
             set
             {
-                PrimaryUserSpecified = true;
+                PrimaryUserSpecified = (value != null);
                 _primaryUser = value;
             }
         }

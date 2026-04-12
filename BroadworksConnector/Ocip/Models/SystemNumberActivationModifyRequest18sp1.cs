@@ -23,17 +23,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemNumberActivationModifyRequest18sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected BroadWorksConnector.Ocip.Models.NumberActivationMode _numberActivationMode;
+        protected BroadWorksConnector.Ocip.Models.NumberActivationMode? _numberActivationMode;
 
         [XmlElement(ElementName = "numberActivationMode", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:13148")]
-        public BroadWorksConnector.Ocip.Models.NumberActivationMode NumberActivationMode
+        public BroadWorksConnector.Ocip.Models.NumberActivationMode? NumberActivationMode
         {
             get => _numberActivationMode;
             set
             {
-                NumberActivationModeSpecified = true;
+                NumberActivationModeSpecified = (value != null);
                 _numberActivationMode = value;
             }
         }
@@ -41,17 +41,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberActivationModeSpecified { get; set; }
 
-        protected bool _enableEnterpriseTrunkNumberRangeActivation;
+        protected bool? _enableEnterpriseTrunkNumberRangeActivation;
 
         [XmlElement(ElementName = "enableEnterpriseTrunkNumberRangeActivation", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:13148")]
-        public bool EnableEnterpriseTrunkNumberRangeActivation
+        public bool? EnableEnterpriseTrunkNumberRangeActivation
         {
             get => _enableEnterpriseTrunkNumberRangeActivation;
             set
             {
-                EnableEnterpriseTrunkNumberRangeActivationSpecified = true;
+                EnableEnterpriseTrunkNumberRangeActivationSpecified = (value != null);
                 _enableEnterpriseTrunkNumberRangeActivation = value;
             }
         }

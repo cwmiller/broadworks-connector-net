@@ -39,17 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _enableFiltering;
+        protected bool? _enableFiltering;
 
         [XmlElement(ElementName = "enableFiltering", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:376")]
-        public bool EnableFiltering
+        public bool? EnableFiltering
         {
             get => _enableFiltering;
             set
             {
-                EnableFilteringSpecified = true;
+                EnableFilteringSpecified = (value != null);
                 _enableFiltering = value;
             }
         }
@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableFilteringSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringMode _filteringMode;
+        protected BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringMode? _filteringMode;
 
         [XmlElement(ElementName = "filteringMode", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:376")]
-        public BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringMode FilteringMode
+        public BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringMode? FilteringMode
         {
             get => _filteringMode;
             set
             {
-                FilteringModeSpecified = true;
+                FilteringModeSpecified = (value != null);
                 _filteringMode = value;
             }
         }
@@ -75,17 +75,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FilteringModeSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringSimpleFilterType _simpleFilterType;
+        protected BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringSimpleFilterType? _simpleFilterType;
 
         [XmlElement(ElementName = "simpleFilterType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:376")]
-        public BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringSimpleFilterType SimpleFilterType
+        public BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringSimpleFilterType? SimpleFilterType
         {
             get => _simpleFilterType;
             set
             {
-                SimpleFilterTypeSpecified = true;
+                SimpleFilterTypeSpecified = (value != null);
                 _simpleFilterType = value;
             }
         }
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _criteriaActivation;
             set
             {
-                CriteriaActivationSpecified = true;
+                CriteriaActivationSpecified = (value != null);
                 _criteriaActivation = value;
             }
         }

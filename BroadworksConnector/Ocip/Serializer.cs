@@ -344,6 +344,7 @@ namespace BroadWorksConnector.Ocip
                 var elementAttr = AttributeUtil.Get<XmlElementAttribute>(property);
                 var attributeAttr = AttributeUtil.Get<XmlAttributeAttribute>(property);
 
+
                 // Handle when property is for an XML element
                 if (elementAttr != null)
                 {
@@ -355,26 +356,37 @@ namespace BroadWorksConnector.Ocip
                         // Get elements from the XML for the property
                         var childElements = element.Elements(elementAttr.ElementName);
 
-                        if (childElements.Count() > 0)
+                        if (childElements.Count() == 0)
                         {
-                            var list = Activator.CreateInstance(propertyType) as IList;
-
-                            foreach (var childElement in childElements)
-                            {
-                                list.Add(DeserializeElement(childElement, individualType));
-                            }
-
-                            property.SetValue(obj, list);
+                            continue;
                         }
+
+                        var list = Activator.CreateInstance(propertyType) as IList;
+
+                        foreach (var childElement in childElements)
+                        {
+                            list.Add(DeserializeElement(childElement, individualType));
+                        }
+
+                        property.SetValue(obj, list);
+
                     }
                     else
                     {
                         var childElement = element.Element(elementAttr.ElementName);
-
-                        if (childElement != null)
+                        if (childElement == null)
                         {
-                            property.SetValue(obj, DeserializeElement(childElement, propertyType));
+                            continue;
                         }
+
+                        // Discard setting value if marked as nil
+                        var nilAttribute = childElement.Attribute(xsiNamespace + "nil");
+                        if (nilAttribute != null && nilAttribute.Value == "true")
+                        {
+                            continue;
+                        }
+
+                        property.SetValue(obj, DeserializeElement(childElement, propertyType));
                     }
                 }
                 // Handle when property is for an XML attribute
@@ -405,17 +417,17 @@ namespace BroadWorksConnector.Ocip
                 throw new ArgumentException($"Type {targetType.Name} is not a value type", nameof(targetType));
             }
 
-            if (targetType.Equals(typeof(bool)))
+            if (targetType.Equals(typeof(bool)) || targetType.Equals(typeof(bool?)))
             {
                 return value == "true";
             }
 
-            if (targetType.Equals(typeof(int)))
+            if (targetType.Equals(typeof(int)) || targetType.Equals(typeof(int?)))
             {
                 return int.Parse(value);
             }
 
-            if (targetType.Equals(typeof(decimal)))
+            if (targetType.Equals(typeof(decimal)) || targetType.Equals(typeof(decimal?)))
             {
                 return decimal.Parse(value);
             }
@@ -436,9 +448,13 @@ namespace BroadWorksConnector.Ocip
         private bool IsValueType(Type targetType)
         {
             return targetType.Equals(typeof(bool))
+                || targetType.Equals(typeof(bool?))
                 || targetType.Equals(typeof(int))
+                || targetType.Equals(typeof(int?))
                 || targetType.Equals(typeof(decimal))
+                || targetType.Equals(typeof(decimal?))
                 || targetType.Equals(typeof(float))
+                || targetType.Equals(typeof(float?))
                 || targetType.Equals(typeof(string))
                 || targetType.IsEnum;
         }

@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _applicationId;
             set
             {
-                ApplicationIdSpecified = true;
+                ApplicationIdSpecified = (value != null);
                 _applicationId = value;
             }
         }

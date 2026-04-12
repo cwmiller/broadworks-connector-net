@@ -149,17 +149,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LinePortSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AccessDeviceLevel _deviceLevel;
+        protected BroadWorksConnector.Ocip.Models.AccessDeviceLevel? _deviceLevel;
 
         [XmlElement(ElementName = "deviceLevel", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:10843")]
-        public BroadWorksConnector.Ocip.Models.AccessDeviceLevel DeviceLevel
+        public BroadWorksConnector.Ocip.Models.AccessDeviceLevel? DeviceLevel
         {
             get => _deviceLevel;
             set
             {
-                DeviceLevelSpecified = true;
+                DeviceLevelSpecified = (value != null);
                 _deviceLevel = value;
             }
         }
@@ -179,7 +179,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deviceName;
             set
             {
-                DeviceNameSpecified = true;
+                DeviceNameSpecified = (value != null);
                 _deviceName = value;
             }
         }
@@ -199,7 +199,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deviceType;
             set
             {
-                DeviceTypeSpecified = true;
+                DeviceTypeSpecified = (value != null);
                 _deviceType = value;
             }
         }
@@ -217,7 +217,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaRegistrationURI;
             set
             {
-                SearchCriteriaRegistrationURISpecified = true;
+                SearchCriteriaRegistrationURISpecified = (value != null);
                 _searchCriteriaRegistrationURI = value;
             }
         }
@@ -235,7 +235,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaSIPContact;
             set
             {
-                SearchCriteriaSIPContactSpecified = true;
+                SearchCriteriaSIPContactSpecified = (value != null);
                 _searchCriteriaSIPContact = value;
             }
         }
@@ -243,17 +243,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaSIPContactSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.RegistrationEndpointType21sp1 _endpointType;
+        protected BroadWorksConnector.Ocip.Models.RegistrationEndpointType21sp1? _endpointType;
 
         [XmlElement(ElementName = "endpointType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:10843")]
-        public BroadWorksConnector.Ocip.Models.RegistrationEndpointType21sp1 EndpointType
+        public BroadWorksConnector.Ocip.Models.RegistrationEndpointType21sp1? EndpointType
         {
             get => _endpointType;
             set
             {
-                EndpointTypeSpecified = true;
+                EndpointTypeSpecified = (value != null);
                 _endpointType = value;
             }
         }
@@ -261,17 +261,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EndpointTypeSpecified { get; set; }
 
-        protected bool _expired;
+        protected bool? _expired;
 
         [XmlElement(ElementName = "expired", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:10843")]
-        public bool Expired
+        public bool? Expired
         {
             get => _expired;
             set
             {
-                ExpiredSpecified = true;
+                ExpiredSpecified = (value != null);
                 _expired = value;
             }
         }

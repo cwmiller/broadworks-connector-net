@@ -66,18 +66,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:2561")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }
@@ -85,17 +85,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResponseSizeLimitSpecified { get; set; }
 
-        protected bool _searchCriteriaModeOr;
+        protected bool? _searchCriteriaModeOr;
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:2561")]
-        public bool SearchCriteriaModeOr
+        public bool? SearchCriteriaModeOr
         {
             get => _searchCriteriaModeOr;
             set
             {
-                SearchCriteriaModeOrSpecified = true;
+                SearchCriteriaModeOrSpecified = (value != null);
                 _searchCriteriaModeOr = value;
             }
         }
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaGroupCommonPhoneListName;
             set
             {
-                SearchCriteriaGroupCommonPhoneListNameSpecified = true;
+                SearchCriteriaGroupCommonPhoneListNameSpecified = (value != null);
                 _searchCriteriaGroupCommonPhoneListName = value;
             }
         }
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaGroupCommonPhoneListNumber;
             set
             {
-                SearchCriteriaGroupCommonPhoneListNumberSpecified = true;
+                SearchCriteriaGroupCommonPhoneListNumberSpecified = (value != null);
                 _searchCriteriaGroupCommonPhoneListNumber = value;
             }
         }

@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _oldPasscode;
             set
             {
-                OldPasscodeSpecified = true;
+                OldPasscodeSpecified = (value != null);
                 _oldPasscode = value;
             }
         }
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newPasscode;
             set
             {
-                NewPasscodeSpecified = true;
+                NewPasscodeSpecified = (value != null);
                 _newPasscode = value;
             }
         }
@@ -101,17 +101,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewPasscodeSpecified { get; set; }
 
-        protected bool _resetLockout;
+        protected bool? _resetLockout;
 
         [XmlElement(ElementName = "resetLockout", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6844af6fc359ada5d958622d62cbd13f:134")]
-        public bool ResetLockout
+        public bool? ResetLockout
         {
             get => _resetLockout;
             set
             {
-                ResetLockoutSpecified = true;
+                ResetLockoutSpecified = (value != null);
                 _resetLockout = value;
             }
         }

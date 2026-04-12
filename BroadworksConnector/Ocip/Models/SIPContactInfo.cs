@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _pathHeader;
             set
             {
-                PathHeaderSpecified = true;
+                PathHeaderSpecified = (value != null);
                 _pathHeader = value;
             }
         }

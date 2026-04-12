@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _administratorId;
             set
             {
-                AdministratorIdSpecified = true;
+                AdministratorIdSpecified = (value != null);
                 _administratorId = value;
             }
         }

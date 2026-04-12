@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _agentStatistics;
             set
             {
-                AgentStatisticsSpecified = true;
+                AgentStatisticsSpecified = (value != null);
                 _agentStatistics = value;
             }
         }

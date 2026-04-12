@@ -40,18 +40,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:1085")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaGroupLocationCode;
             set
             {
-                SearchCriteriaGroupLocationCodeSpecified = true;
+                SearchCriteriaGroupLocationCodeSpecified = (value != null);
                 _searchCriteriaGroupLocationCode = value;
             }
         }
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactPolicySelection;
             set
             {
-                SearchCriteriaExactPolicySelectionSpecified = true;
+                SearchCriteriaExactPolicySelectionSpecified = (value != null);
                 _searchCriteriaExactPolicySelection = value;
             }
         }

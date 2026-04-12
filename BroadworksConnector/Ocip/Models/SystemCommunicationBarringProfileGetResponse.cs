@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _description;
             set
             {
-                DescriptionSpecified = true;
+                DescriptionSpecified = (value != null);
                 _description = value;
             }
         }
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _originatingDefaultTreatmentId;
             set
             {
-                OriginatingDefaultTreatmentIdSpecified = true;
+                OriginatingDefaultTreatmentIdSpecified = (value != null);
                 _originatingDefaultTreatmentId = value;
             }
         }
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _originatingDefaultTransferNumber;
             set
             {
-                OriginatingDefaultTransferNumberSpecified = true;
+                OriginatingDefaultTransferNumberSpecified = (value != null);
                 _originatingDefaultTransferNumber = value;
             }
         }
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _originatingRule;
             set
             {
-                OriginatingRuleSpecified = true;
+                OriginatingRuleSpecified = (value != null);
                 _originatingRule = value;
             }
         }
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _redirectingRule;
             set
             {
-                RedirectingRuleSpecified = true;
+                RedirectingRuleSpecified = (value != null);
                 _redirectingRule = value;
             }
         }

@@ -54,17 +54,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DistinctiveRingingRingPatternForCallCenterSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.RingPattern _distinctiveRingingForceDeliveryRingPattern;
+        protected BroadWorksConnector.Ocip.Models.RingPattern? _distinctiveRingingForceDeliveryRingPattern;
 
         [XmlElement(ElementName = "distinctiveRingingForceDeliveryRingPattern", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:3237")]
-        public BroadWorksConnector.Ocip.Models.RingPattern DistinctiveRingingForceDeliveryRingPattern
+        public BroadWorksConnector.Ocip.Models.RingPattern? DistinctiveRingingForceDeliveryRingPattern
         {
             get => _distinctiveRingingForceDeliveryRingPattern;
             set
             {
-                DistinctiveRingingForceDeliveryRingPatternSpecified = true;
+                DistinctiveRingingForceDeliveryRingPatternSpecified = (value != null);
                 _distinctiveRingingForceDeliveryRingPattern = value;
             }
         }

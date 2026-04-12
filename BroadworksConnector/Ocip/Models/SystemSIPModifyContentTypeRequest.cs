@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ContentTypeSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.SystemSIPSupportedInterface _interface;
+        protected BroadWorksConnector.Ocip.Models.SystemSIPSupportedInterface? _interface;
 
         [XmlElement(ElementName = "interface", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:17832")]
-        public BroadWorksConnector.Ocip.Models.SystemSIPSupportedInterface Interface
+        public BroadWorksConnector.Ocip.Models.SystemSIPSupportedInterface? Interface
         {
             get => _interface;
             set
             {
-                InterfaceSpecified = true;
+                InterfaceSpecified = (value != null);
                 _interface = value;
             }
         }

@@ -88,19 +88,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SyncTrunkGroupsSpecified { get; set; }
 
-        protected int _syncConnectionTimeoutSeconds;
+        protected int? _syncConnectionTimeoutSeconds;
 
         [XmlElement(ElementName = "syncConnectionTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:12969")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
-        public int SyncConnectionTimeoutSeconds
+        public int? SyncConnectionTimeoutSeconds
         {
             get => _syncConnectionTimeoutSeconds;
             set
             {
-                SyncConnectionTimeoutSecondsSpecified = true;
+                SyncConnectionTimeoutSecondsSpecified = (value != null);
                 _syncConnectionTimeoutSeconds = value;
             }
         }

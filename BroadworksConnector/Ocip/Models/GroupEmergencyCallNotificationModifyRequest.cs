@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected bool _sendEmergencyCallNotificationEmail;
+        protected bool? _sendEmergencyCallNotificationEmail;
 
         [XmlElement(ElementName = "sendEmergencyCallNotificationEmail", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:5310")]
-        public bool SendEmergencyCallNotificationEmail
+        public bool? SendEmergencyCallNotificationEmail
         {
             get => _sendEmergencyCallNotificationEmail;
             set
             {
-                SendEmergencyCallNotificationEmailSpecified = true;
+                SendEmergencyCallNotificationEmailSpecified = (value != null);
                 _sendEmergencyCallNotificationEmail = value;
             }
         }

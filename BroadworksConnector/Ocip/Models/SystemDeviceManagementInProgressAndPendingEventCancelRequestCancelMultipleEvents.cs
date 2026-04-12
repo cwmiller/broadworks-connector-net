@@ -16,17 +16,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDeviceManagementInProgressAndPendingEventCancelRequestCancelMultipleEvents
     {
 
-        protected BroadWorksConnector.Ocip.Models.DeviceManagementEventStatusForCancel _dmEventStatusForCancel;
+        protected BroadWorksConnector.Ocip.Models.DeviceManagementEventStatusForCancel? _dmEventStatusForCancel;
 
         [XmlElement(ElementName = "dmEventStatusForCancel", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:7990")]
-        public BroadWorksConnector.Ocip.Models.DeviceManagementEventStatusForCancel DmEventStatusForCancel
+        public BroadWorksConnector.Ocip.Models.DeviceManagementEventStatusForCancel? DmEventStatusForCancel
         {
             get => _dmEventStatusForCancel;
             set
             {
-                DmEventStatusForCancelSpecified = true;
+                DmEventStatusForCancelSpecified = (value != null);
                 _dmEventStatusForCancel = value;
             }
         }
@@ -34,17 +34,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DmEventStatusForCancelSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.DeviceManagementEventAction _dmEventAction;
+        protected BroadWorksConnector.Ocip.Models.DeviceManagementEventAction? _dmEventAction;
 
         [XmlElement(ElementName = "dmEventAction", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:7990")]
-        public BroadWorksConnector.Ocip.Models.DeviceManagementEventAction DmEventAction
+        public BroadWorksConnector.Ocip.Models.DeviceManagementEventAction? DmEventAction
         {
             get => _dmEventAction;
             set
             {
-                DmEventActionSpecified = true;
+                DmEventActionSpecified = (value != null);
                 _dmEventAction = value;
             }
         }
@@ -52,17 +52,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DmEventActionSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.DeviceManagementEventLevel _dmEventLevel;
+        protected BroadWorksConnector.Ocip.Models.DeviceManagementEventLevel? _dmEventLevel;
 
         [XmlElement(ElementName = "dmEventLevel", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:7990")]
-        public BroadWorksConnector.Ocip.Models.DeviceManagementEventLevel DmEventLevel
+        public BroadWorksConnector.Ocip.Models.DeviceManagementEventLevel? DmEventLevel
         {
             get => _dmEventLevel;
             set
             {
-                DmEventLevelSpecified = true;
+                DmEventLevelSpecified = (value != null);
                 _dmEventLevel = value;
             }
         }
@@ -70,17 +70,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DmEventLevelSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.DeviceManagementEventType _dmEventType;
+        protected BroadWorksConnector.Ocip.Models.DeviceManagementEventType? _dmEventType;
 
         [XmlElement(ElementName = "dmEventType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:7990")]
-        public BroadWorksConnector.Ocip.Models.DeviceManagementEventType DmEventType
+        public BroadWorksConnector.Ocip.Models.DeviceManagementEventType? DmEventType
         {
             get => _dmEventType;
             set
             {
-                DmEventTypeSpecified = true;
+                DmEventTypeSpecified = (value != null);
                 _dmEventType = value;
             }
         }

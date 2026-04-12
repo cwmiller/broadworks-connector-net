@@ -27,7 +27,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _prefix;
             set
             {
-                PrefixSpecified = true;
+                PrefixSpecified = (value != null);
                 _prefix = value;
             }
         }

@@ -61,17 +61,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceTypeSpecified { get; set; }
 
-        protected bool _countOnlyResetSupportedDevice;
+        protected bool? _countOnlyResetSupportedDevice;
 
         [XmlElement(ElementName = "countOnlyResetSupportedDevice", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:3047")]
-        public bool CountOnlyResetSupportedDevice
+        public bool? CountOnlyResetSupportedDevice
         {
             get => _countOnlyResetSupportedDevice;
             set
             {
-                CountOnlyResetSupportedDeviceSpecified = true;
+                CountOnlyResetSupportedDeviceSpecified = (value != null);
                 _countOnlyResetSupportedDevice = value;
             }
         }
@@ -79,17 +79,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CountOnlyResetSupportedDeviceSpecified { get; set; }
 
-        protected bool _allowUnmanagedDeviceType;
+        protected bool? _allowUnmanagedDeviceType;
 
         [XmlElement(ElementName = "allowUnmanagedDeviceType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:3047")]
-        public bool AllowUnmanagedDeviceType
+        public bool? AllowUnmanagedDeviceType
         {
             get => _allowUnmanagedDeviceType;
             set
             {
-                AllowUnmanagedDeviceTypeSpecified = true;
+                AllowUnmanagedDeviceTypeSpecified = (value != null);
                 _allowUnmanagedDeviceType = value;
             }
         }

@@ -57,19 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected int _extensionLength;
+        protected int? _extensionLength;
 
         [XmlElement(ElementName = "extensionLength", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:9784")]
         [MinInclusive(2)]
         [MaxInclusive(6)]
-        public int ExtensionLength
+        public int? ExtensionLength
         {
             get => _extensionLength;
             set
             {
-                ExtensionLengthSpecified = true;
+                ExtensionLengthSpecified = (value != null);
                 _extensionLength = value;
             }
         }

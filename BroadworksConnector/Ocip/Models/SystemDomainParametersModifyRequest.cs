@@ -22,17 +22,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDomainParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _useAliasForDomain;
+        protected bool? _useAliasForDomain;
 
         [XmlElement(ElementName = "useAliasForDomain", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:9698")]
-        public bool UseAliasForDomain
+        public bool? UseAliasForDomain
         {
             get => _useAliasForDomain;
             set
             {
-                UseAliasForDomainSpecified = true;
+                UseAliasForDomainSpecified = (value != null);
                 _useAliasForDomain = value;
             }
         }
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultDomain;
             set
             {
-                DefaultDomainSpecified = true;
+                DefaultDomainSpecified = (value != null);
                 _defaultDomain = value;
             }
         }

@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemNumberActivationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _useNumberActivation;
+        protected bool? _useNumberActivation;
 
         [XmlElement(ElementName = "useNumberActivation", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:28536")]
-        public bool UseNumberActivation
+        public bool? UseNumberActivation
         {
             get => _useNumberActivation;
             set
             {
-                UseNumberActivationSpecified = true;
+                UseNumberActivationSpecified = (value != null);
                 _useNumberActivation = value;
             }
         }

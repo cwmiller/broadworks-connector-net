@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _confirmationKey;
             set
             {
-                ConfirmationKeySpecified = true;
+                ConfirmationKeySpecified = (value != null);
                 _confirmationKey = value;
             }
         }

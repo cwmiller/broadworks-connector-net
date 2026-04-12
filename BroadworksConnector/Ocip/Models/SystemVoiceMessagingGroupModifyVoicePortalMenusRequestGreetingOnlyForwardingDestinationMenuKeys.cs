@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _greetingOnlyForwardingDestination;
             set
             {
-                GreetingOnlyForwardingDestinationSpecified = true;
+                GreetingOnlyForwardingDestinationSpecified = (value != null);
                 _greetingOnlyForwardingDestination = value;
             }
         }

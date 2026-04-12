@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newName;
             set
             {
-                NewNameSpecified = true;
+                NewNameSpecified = (value != null);
                 _newName = value;
             }
         }
@@ -58,17 +58,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewNameSpecified { get; set; }
 
-        protected bool _isDefault;
+        protected bool? _isDefault;
 
         [XmlElement(ElementName = "isDefault", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:880")]
-        public bool IsDefault
+        public bool? IsDefault
         {
             get => _isDefault;
             set
             {
-                IsDefaultSpecified = true;
+                IsDefaultSpecified = (value != null);
                 _isDefault = value;
             }
         }

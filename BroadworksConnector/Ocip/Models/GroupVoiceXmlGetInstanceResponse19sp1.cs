@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkClassOfService;
             set
             {
-                NetworkClassOfServiceSpecified = true;
+                NetworkClassOfServiceSpecified = (value != null);
                 _networkClassOfService = value;
             }
         }
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _accessDeviceEndpoint;
             set
             {
-                AccessDeviceEndpointSpecified = true;
+                AccessDeviceEndpointSpecified = (value != null);
                 _accessDeviceEndpoint = value;
             }
         }

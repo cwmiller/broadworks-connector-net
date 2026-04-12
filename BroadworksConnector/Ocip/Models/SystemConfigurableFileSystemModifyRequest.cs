@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _mediaDirectory;
             set
             {
-                MediaDirectorySpecified = true;
+                MediaDirectorySpecified = (value != null);
                 _mediaDirectory = value;
             }
         }

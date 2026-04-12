@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCommunicationBarringUserControlModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _enableLockout;
+        protected bool? _enableLockout;
 
         [XmlElement(ElementName = "enableLockout", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6844af6fc359ada5d958622d62cbd13f:77")]
-        public bool EnableLockout
+        public bool? EnableLockout
         {
             get => _enableLockout;
             set
             {
-                EnableLockoutSpecified = true;
+                EnableLockoutSpecified = (value != null);
                 _enableLockout = value;
             }
         }
@@ -37,19 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableLockoutSpecified { get; set; }
 
-        protected int _maxNumberOfFailedAttempts;
+        protected int? _maxNumberOfFailedAttempts;
 
         [XmlElement(ElementName = "maxNumberOfFailedAttempts", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6844af6fc359ada5d958622d62cbd13f:77")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
-        public int MaxNumberOfFailedAttempts
+        public int? MaxNumberOfFailedAttempts
         {
             get => _maxNumberOfFailedAttempts;
             set
             {
-                MaxNumberOfFailedAttemptsSpecified = true;
+                MaxNumberOfFailedAttemptsSpecified = (value != null);
                 _maxNumberOfFailedAttempts = value;
             }
         }
@@ -57,19 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxNumberOfFailedAttemptsSpecified { get; set; }
 
-        protected int _lockoutMinutes;
+        protected int? _lockoutMinutes;
 
         [XmlElement(ElementName = "lockoutMinutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6844af6fc359ada5d958622d62cbd13f:77")]
         [MinInclusive(1)]
         [MaxInclusive(600)]
-        public int LockoutMinutes
+        public int? LockoutMinutes
         {
             get => _lockoutMinutes;
             set
             {
-                LockoutMinutesSpecified = true;
+                LockoutMinutesSpecified = (value != null);
                 _lockoutMinutes = value;
             }
         }

@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _signedPassword;
             set
             {
-                SignedPasswordSpecified = true;
+                SignedPasswordSpecified = (value != null);
                 _signedPassword = value;
             }
         }
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _plainTextPassword;
             set
             {
-                PlainTextPasswordSpecified = true;
+                PlainTextPasswordSpecified = (value != null);
                 _plainTextPassword = value;
             }
         }

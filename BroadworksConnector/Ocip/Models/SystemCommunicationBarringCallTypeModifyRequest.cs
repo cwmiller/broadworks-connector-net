@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkServerCallType;
             set
             {
-                NetworkServerCallTypeSpecified = true;
+                NetworkServerCallTypeSpecified = (value != null);
                 _networkServerCallType = value;
             }
         }

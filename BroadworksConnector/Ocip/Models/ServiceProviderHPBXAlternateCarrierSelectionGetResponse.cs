@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _preselectedLocalCarrier;
             set
             {
-                PreselectedLocalCarrierSpecified = true;
+                PreselectedLocalCarrierSpecified = (value != null);
                 _preselectedLocalCarrier = value;
             }
         }
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _preselectedDistantCarrier;
             set
             {
-                PreselectedDistantCarrierSpecified = true;
+                PreselectedDistantCarrierSpecified = (value != null);
                 _preselectedDistantCarrier = value;
             }
         }

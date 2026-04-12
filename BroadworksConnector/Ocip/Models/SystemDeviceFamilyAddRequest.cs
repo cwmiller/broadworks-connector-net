@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerId;
             set
             {
-                ResellerIdSpecified = true;
+                ResellerIdSpecified = (value != null);
                 _resellerId = value;
             }
         }
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _assignDeviceType;
             set
             {
-                AssignDeviceTypeSpecified = true;
+                AssignDeviceTypeSpecified = (value != null);
                 _assignDeviceType = value;
             }
         }
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _assignTagSet;
             set
             {
-                AssignTagSetSpecified = true;
+                AssignTagSetSpecified = (value != null);
                 _assignTagSet = value;
             }
         }

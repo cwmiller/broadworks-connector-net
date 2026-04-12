@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9975efc7f5883a0595f811ee72ba4df5:321")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AdviceOfChargeType _aocType;
+        protected BroadWorksConnector.Ocip.Models.AdviceOfChargeType? _aocType;
 
         [XmlElement(ElementName = "aocType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9975efc7f5883a0595f811ee72ba4df5:321")]
-        public BroadWorksConnector.Ocip.Models.AdviceOfChargeType AocType
+        public BroadWorksConnector.Ocip.Models.AdviceOfChargeType? AocType
         {
             get => _aocType;
             set
             {
-                AocTypeSpecified = true;
+                AocTypeSpecified = (value != null);
                 _aocType = value;
             }
         }

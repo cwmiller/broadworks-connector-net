@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip
 
         public bool IsEnterprise { get; set; }
 
-        public int PasswordExpiresDays { get; set; }
+        public int? PasswordExpiresDays { get; set; }
 
         public string UserDomain { get; set; }
 

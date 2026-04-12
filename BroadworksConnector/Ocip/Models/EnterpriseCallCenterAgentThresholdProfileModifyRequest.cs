@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newProfileName;
             set
             {
-                NewProfileNameSpecified = true;
+                NewProfileNameSpecified = (value != null);
                 _newProfileName = value;
             }
         }
@@ -337,17 +337,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdAverageWrapUpTimeRedSpecified { get; set; }
 
-        protected bool _enableNotificationEmail;
+        protected bool? _enableNotificationEmail;
 
         [XmlElement(ElementName = "enableNotificationEmail", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:706")]
-        public bool EnableNotificationEmail
+        public bool? EnableNotificationEmail
         {
             get => _enableNotificationEmail;
             set
             {
-                EnableNotificationEmailSpecified = true;
+                EnableNotificationEmailSpecified = (value != null);
                 _enableNotificationEmail = value;
             }
         }

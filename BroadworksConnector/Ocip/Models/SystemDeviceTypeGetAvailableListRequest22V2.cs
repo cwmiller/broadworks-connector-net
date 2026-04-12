@@ -123,17 +123,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OnlyOptionalIpAddressSpecified { get; set; }
 
-        protected bool _excludeReseller;
+        protected bool? _excludeReseller;
 
         [XmlElement(ElementName = "excludeReseller", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:8827")]
-        public bool ExcludeReseller
+        public bool? ExcludeReseller
         {
             get => _excludeReseller;
             set
             {
-                ExcludeResellerSpecified = true;
+                ExcludeResellerSpecified = (value != null);
                 _excludeReseller = value;
             }
         }
@@ -153,7 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerId;
             set
             {
-                ResellerIdSpecified = true;
+                ResellerIdSpecified = (value != null);
                 _resellerId = value;
             }
         }
@@ -161,17 +161,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResellerIdSpecified { get; set; }
 
-        protected bool _excludeLeafDeviceTypes;
+        protected bool? _excludeLeafDeviceTypes;
 
         [XmlElement(ElementName = "excludeLeafDeviceTypes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:8821")]
-        public bool ExcludeLeafDeviceTypes
+        public bool? ExcludeLeafDeviceTypes
         {
             get => _excludeLeafDeviceTypes;
             set
             {
-                ExcludeLeafDeviceTypesSpecified = true;
+                ExcludeLeafDeviceTypesSpecified = (value != null);
                 _excludeLeafDeviceTypes = value;
             }
         }
@@ -179,17 +179,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExcludeLeafDeviceTypesSpecified { get; set; }
 
-        protected bool _onlyTreeDeviceTypes;
+        protected bool? _onlyTreeDeviceTypes;
 
         [XmlElement(ElementName = "onlyTreeDeviceTypes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:8821")]
-        public bool OnlyTreeDeviceTypes
+        public bool? OnlyTreeDeviceTypes
         {
             get => _onlyTreeDeviceTypes;
             set
             {
-                OnlyTreeDeviceTypesSpecified = true;
+                OnlyTreeDeviceTypesSpecified = (value != null);
                 _onlyTreeDeviceTypes = value;
             }
         }

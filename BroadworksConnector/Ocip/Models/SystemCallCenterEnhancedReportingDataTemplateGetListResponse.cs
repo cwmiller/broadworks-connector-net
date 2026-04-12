@@ -27,7 +27,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _info;
             set
             {
-                InfoSpecified = true;
+                InfoSpecified = (value != null);
                 _info = value;
             }
         }

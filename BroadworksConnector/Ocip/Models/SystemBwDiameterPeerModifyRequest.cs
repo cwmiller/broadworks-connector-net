@@ -75,19 +75,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IpAddressSpecified { get; set; }
 
-        protected int _port;
+        protected int? _port;
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2826")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
-        public int Port
+        public int? Port
         {
             get => _port;
             set
             {
-                PortSpecified = true;
+                PortSpecified = (value != null);
                 _port = value;
             }
         }
@@ -95,17 +95,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PortSpecified { get; set; }
 
-        protected bool _enabled;
+        protected bool? _enabled;
 
         [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2826")]
-        public bool Enabled
+        public bool? Enabled
         {
             get => _enabled;
             set
             {
-                EnabledSpecified = true;
+                EnabledSpecified = (value != null);
                 _enabled = value;
             }
         }
@@ -113,17 +113,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnabledSpecified { get; set; }
 
-        protected bool _secure;
+        protected bool? _secure;
 
         [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2826")]
-        public bool Secure
+        public bool? Secure
         {
             get => _secure;
             set
             {
-                SecureSpecified = true;
+                SecureSpecified = (value != null);
                 _secure = value;
             }
         }

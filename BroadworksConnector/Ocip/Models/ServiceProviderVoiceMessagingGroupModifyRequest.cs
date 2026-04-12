@@ -98,17 +98,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VoicePortalLockoutFromAddressSpecified { get; set; }
 
-        protected bool _useSystemDefaultDeliveryFromAddress;
+        protected bool? _useSystemDefaultDeliveryFromAddress;
 
         [XmlElement(ElementName = "useSystemDefaultDeliveryFromAddress", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:477")]
-        public bool UseSystemDefaultDeliveryFromAddress
+        public bool? UseSystemDefaultDeliveryFromAddress
         {
             get => _useSystemDefaultDeliveryFromAddress;
             set
             {
-                UseSystemDefaultDeliveryFromAddressSpecified = true;
+                UseSystemDefaultDeliveryFromAddressSpecified = (value != null);
                 _useSystemDefaultDeliveryFromAddress = value;
             }
         }
@@ -116,17 +116,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseSystemDefaultDeliveryFromAddressSpecified { get; set; }
 
-        protected bool _useSystemDefaultNotificationFromAddress;
+        protected bool? _useSystemDefaultNotificationFromAddress;
 
         [XmlElement(ElementName = "useSystemDefaultNotificationFromAddress", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:477")]
-        public bool UseSystemDefaultNotificationFromAddress
+        public bool? UseSystemDefaultNotificationFromAddress
         {
             get => _useSystemDefaultNotificationFromAddress;
             set
             {
-                UseSystemDefaultNotificationFromAddressSpecified = true;
+                UseSystemDefaultNotificationFromAddressSpecified = (value != null);
                 _useSystemDefaultNotificationFromAddress = value;
             }
         }
@@ -134,17 +134,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseSystemDefaultNotificationFromAddressSpecified { get; set; }
 
-        protected bool _useSystemDefaultVoicePortalLockoutFromAddress;
+        protected bool? _useSystemDefaultVoicePortalLockoutFromAddress;
 
         [XmlElement(ElementName = "useSystemDefaultVoicePortalLockoutFromAddress", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:477")]
-        public bool UseSystemDefaultVoicePortalLockoutFromAddress
+        public bool? UseSystemDefaultVoicePortalLockoutFromAddress
         {
             get => _useSystemDefaultVoicePortalLockoutFromAddress;
             set
             {
-                UseSystemDefaultVoicePortalLockoutFromAddressSpecified = true;
+                UseSystemDefaultVoicePortalLockoutFromAddressSpecified = (value != null);
                 _useSystemDefaultVoicePortalLockoutFromAddress = value;
             }
         }

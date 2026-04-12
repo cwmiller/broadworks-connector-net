@@ -137,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _recordingWebAppURL;
             set
             {
-                RecordingWebAppURLSpecified = true;
+                RecordingWebAppURLSpecified = (value != null);
                 _recordingWebAppURL = value;
             }
         }

@@ -91,19 +91,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IdentitySpecified { get; set; }
 
-        protected int _priority;
+        protected int? _priority;
 
         [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2915")]
         [MinInclusive(0)]
         [MaxInclusive(65535)]
-        public int Priority
+        public int? Priority
         {
             get => _priority;
             set
             {
-                PrioritySpecified = true;
+                PrioritySpecified = (value != null);
                 _priority = value;
             }
         }
@@ -111,19 +111,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PrioritySpecified { get; set; }
 
-        protected int _weight;
+        protected int? _weight;
 
         [XmlElement(ElementName = "weight", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2915")]
         [MinInclusive(0)]
         [MaxInclusive(65535)]
-        public int Weight
+        public int? Weight
         {
             get => _weight;
             set
             {
-                WeightSpecified = true;
+                WeightSpecified = (value != null);
                 _weight = value;
             }
         }

@@ -39,17 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        protected bool _enforceAssociationLimit;
+        protected bool? _enforceAssociationLimit;
 
         [XmlElement(ElementName = "enforceAssociationLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1d4e390f8cd01ca6f92589024d74dac6:258")]
-        public bool EnforceAssociationLimit
+        public bool? EnforceAssociationLimit
         {
             get => _enforceAssociationLimit;
             set
             {
-                EnforceAssociationLimitSpecified = true;
+                EnforceAssociationLimitSpecified = (value != null);
                 _enforceAssociationLimit = value;
             }
         }
@@ -57,19 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnforceAssociationLimitSpecified { get; set; }
 
-        protected int _associationLimitHours;
+        protected int? _associationLimitHours;
 
         [XmlElement(ElementName = "associationLimitHours", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1d4e390f8cd01ca6f92589024d74dac6:258")]
         [MinInclusive(1)]
         [MaxInclusive(999)]
-        public int AssociationLimitHours
+        public int? AssociationLimitHours
         {
             get => _associationLimitHours;
             set
             {
-                AssociationLimitHoursSpecified = true;
+                AssociationLimitHoursSpecified = (value != null);
                 _associationLimitHours = value;
             }
         }
@@ -77,17 +77,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AssociationLimitHoursSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.FlexibleSeatingHostAccessLevel _accessLevel;
+        protected BroadWorksConnector.Ocip.Models.FlexibleSeatingHostAccessLevel? _accessLevel;
 
         [XmlElement(ElementName = "accessLevel", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1d4e390f8cd01ca6f92589024d74dac6:258")]
-        public BroadWorksConnector.Ocip.Models.FlexibleSeatingHostAccessLevel AccessLevel
+        public BroadWorksConnector.Ocip.Models.FlexibleSeatingHostAccessLevel? AccessLevel
         {
             get => _accessLevel;
             set
             {
-                AccessLevelSpecified = true;
+                AccessLevelSpecified = (value != null);
                 _accessLevel = value;
             }
         }
@@ -95,17 +95,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessLevelSpecified { get; set; }
 
-        protected bool _removeGuestAssociation;
+        protected bool? _removeGuestAssociation;
 
         [XmlElement(ElementName = "removeGuestAssociation", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1d4e390f8cd01ca6f92589024d74dac6:258")]
-        public bool RemoveGuestAssociation
+        public bool? RemoveGuestAssociation
         {
             get => _removeGuestAssociation;
             set
             {
-                RemoveGuestAssociationSpecified = true;
+                RemoveGuestAssociationSpecified = (value != null);
                 _removeGuestAssociation = value;
             }
         }

@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _servicePackName;
             set
             {
-                ServicePackNameSpecified = true;
+                ServicePackNameSpecified = (value != null);
                 _servicePackName = value;
             }
         }

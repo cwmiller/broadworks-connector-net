@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected bool _useGroupCriteria;
+        protected bool? _useGroupCriteria;
 
         [XmlElement(ElementName = "useGroupCriteria", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:4389")]
-        public bool UseGroupCriteria
+        public bool? UseGroupCriteria
         {
             get => _useGroupCriteria;
             set
             {
-                UseGroupCriteriaSpecified = true;
+                UseGroupCriteriaSpecified = (value != null);
                 _useGroupCriteria = value;
             }
         }
@@ -75,17 +75,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseGroupCriteriaSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.NsScreeningFailurePolicy _nsScreeningFailurePolicy;
+        protected BroadWorksConnector.Ocip.Models.NsScreeningFailurePolicy? _nsScreeningFailurePolicy;
 
         [XmlElement(ElementName = "nsScreeningFailurePolicy", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:4389")]
-        public BroadWorksConnector.Ocip.Models.NsScreeningFailurePolicy NsScreeningFailurePolicy
+        public BroadWorksConnector.Ocip.Models.NsScreeningFailurePolicy? NsScreeningFailurePolicy
         {
             get => _nsScreeningFailurePolicy;
             set
             {
-                NsScreeningFailurePolicySpecified = true;
+                NsScreeningFailurePolicySpecified = (value != null);
                 _nsScreeningFailurePolicy = value;
             }
         }
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _criteriaPriorityOrder;
             set
             {
-                CriteriaPriorityOrderSpecified = true;
+                CriteriaPriorityOrderSpecified = (value != null);
                 _criteriaPriorityOrder = value;
             }
         }

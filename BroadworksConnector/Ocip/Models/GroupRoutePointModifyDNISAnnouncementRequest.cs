@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _mediaOnHoldSource;
             set
             {
-                MediaOnHoldSourceSpecified = true;
+                MediaOnHoldSourceSpecified = (value != null);
                 _mediaOnHoldSource = value;
             }
         }

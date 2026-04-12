@@ -49,17 +49,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.EnhancedCallLogsCallLogsRequestType _callLogType;
+        protected BroadWorksConnector.Ocip.Models.EnhancedCallLogsCallLogsRequestType? _callLogType;
 
         [XmlElement(ElementName = "callLogType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:43070")]
-        public BroadWorksConnector.Ocip.Models.EnhancedCallLogsCallLogsRequestType CallLogType
+        public BroadWorksConnector.Ocip.Models.EnhancedCallLogsCallLogsRequestType? CallLogType
         {
             get => _callLogType;
             set
             {
-                CallLogTypeSpecified = true;
+                CallLogTypeSpecified = (value != null);
                 _callLogType = value;
             }
         }
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _numberFilter;
             set
             {
-                NumberFilterSpecified = true;
+                NumberFilterSpecified = (value != null);
                 _numberFilter = value;
             }
         }
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _redirectedNumberFilter;
             set
             {
-                RedirectedNumberFilterSpecified = true;
+                RedirectedNumberFilterSpecified = (value != null);
                 _redirectedNumberFilter = value;
             }
         }
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _accountAuthorizationCodeFilter;
             set
             {
-                AccountAuthorizationCodeFilterSpecified = true;
+                AccountAuthorizationCodeFilterSpecified = (value != null);
                 _accountAuthorizationCodeFilter = value;
             }
         }
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callAuthorizationCodeFilter;
             set
             {
-                CallAuthorizationCodeFilterSpecified = true;
+                CallAuthorizationCodeFilterSpecified = (value != null);
                 _callAuthorizationCodeFilter = value;
             }
         }
@@ -156,17 +156,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallAuthorizationCodeFilterSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.EnhancedCallLogsSubscriberType _subscriberType;
+        protected BroadWorksConnector.Ocip.Models.EnhancedCallLogsSubscriberType? _subscriberType;
 
         [XmlElement(ElementName = "subscriberType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:43070")]
-        public BroadWorksConnector.Ocip.Models.EnhancedCallLogsSubscriberType SubscriberType
+        public BroadWorksConnector.Ocip.Models.EnhancedCallLogsSubscriberType? SubscriberType
         {
             get => _subscriberType;
             set
             {
-                SubscriberTypeSpecified = true;
+                SubscriberTypeSpecified = (value != null);
                 _subscriberType = value;
             }
         }
@@ -184,7 +184,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _responsePagingControl;
             set
             {
-                ResponsePagingControlSpecified = true;
+                ResponsePagingControlSpecified = (value != null);
                 _responsePagingControl = value;
             }
         }

@@ -47,18 +47,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2834")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }
@@ -66,17 +66,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResponseSizeLimitSpecified { get; set; }
 
-        protected bool _searchCriteriaModeOr;
+        protected bool? _searchCriteriaModeOr;
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2834")]
-        public bool SearchCriteriaModeOr
+        public bool? SearchCriteriaModeOr
         {
             get => _searchCriteriaModeOr;
             set
             {
-                SearchCriteriaModeOrSpecified = true;
+                SearchCriteriaModeOrSpecified = (value != null);
                 _searchCriteriaModeOr = value;
             }
         }
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaUserPersonalPhoneListName;
             set
             {
-                SearchCriteriaUserPersonalPhoneListNameSpecified = true;
+                SearchCriteriaUserPersonalPhoneListNameSpecified = (value != null);
                 _searchCriteriaUserPersonalPhoneListName = value;
             }
         }
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaUserPersonalPhoneListNumber;
             set
             {
-                SearchCriteriaUserPersonalPhoneListNumberSpecified = true;
+                SearchCriteriaUserPersonalPhoneListNumberSpecified = (value != null);
                 _searchCriteriaUserPersonalPhoneListNumber = value;
             }
         }

@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _accessDeviceEndpoint;
             set
             {
-                AccessDeviceEndpointSpecified = true;
+                AccessDeviceEndpointSpecified = (value != null);
                 _accessDeviceEndpoint = value;
             }
         }
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _audioFileDescription;
             set
             {
-                AudioFileDescriptionSpecified = true;
+                AudioFileDescriptionSpecified = (value != null);
                 _audioFileDescription = value;
             }
         }
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _videoFileDescription;
             set
             {
-                VideoFileDescriptionSpecified = true;
+                VideoFileDescriptionSpecified = (value != null);
                 _videoFileDescription = value;
             }
         }

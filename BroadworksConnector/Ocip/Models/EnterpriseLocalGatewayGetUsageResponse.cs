@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _gatewayGroupName;
             set
             {
-                GatewayGroupNameSpecified = true;
+                GatewayGroupNameSpecified = (value != null);
                 _gatewayGroupName = value;
             }
         }

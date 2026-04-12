@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _error;
             set
             {
-                ErrorSpecified = true;
+                ErrorSpecified = (value != null);
                 _error = value;
             }
         }
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _impact;
             set
             {
-                ImpactSpecified = true;
+                ImpactSpecified = (value != null);
                 _impact = value;
             }
         }

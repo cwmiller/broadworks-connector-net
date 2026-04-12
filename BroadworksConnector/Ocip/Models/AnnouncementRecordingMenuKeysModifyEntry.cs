@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _acceptRecording;
             set
             {
-                AcceptRecordingSpecified = true;
+                AcceptRecordingSpecified = (value != null);
                 _acceptRecording = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _rejectRerecord;
             set
             {
-                RejectRerecordSpecified = true;
+                RejectRerecordSpecified = (value != null);
                 _rejectRerecord = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _returnToPreviousMenu;
             set
             {
-                ReturnToPreviousMenuSpecified = true;
+                ReturnToPreviousMenuSpecified = (value != null);
                 _returnToPreviousMenu = value;
             }
         }
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _end;
             set
             {
-                EndSpecified = true;
+                EndSpecified = (value != null);
                 _end = value;
             }
         }

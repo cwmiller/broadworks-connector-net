@@ -16,17 +16,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallCenterScheduledReportServiceLevelInclusionsModify
     {
 
-        protected bool _includeOverflowTimeTransferedInServiceLevel;
+        protected bool? _includeOverflowTimeTransferedInServiceLevel;
 
         [XmlElement(ElementName = "includeOverflowTimeTransferedInServiceLevel", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:7684")]
-        public bool IncludeOverflowTimeTransferedInServiceLevel
+        public bool? IncludeOverflowTimeTransferedInServiceLevel
         {
             get => _includeOverflowTimeTransferedInServiceLevel;
             set
             {
-                IncludeOverflowTimeTransferedInServiceLevelSpecified = true;
+                IncludeOverflowTimeTransferedInServiceLevelSpecified = (value != null);
                 _includeOverflowTimeTransferedInServiceLevel = value;
             }
         }
@@ -34,17 +34,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeOverflowTimeTransferedInServiceLevelSpecified { get; set; }
 
-        protected bool _includeOtherTransfersInServiceLevel;
+        protected bool? _includeOtherTransfersInServiceLevel;
 
         [XmlElement(ElementName = "includeOtherTransfersInServiceLevel", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:7684")]
-        public bool IncludeOtherTransfersInServiceLevel
+        public bool? IncludeOtherTransfersInServiceLevel
         {
             get => _includeOtherTransfersInServiceLevel;
             set
             {
-                IncludeOtherTransfersInServiceLevelSpecified = true;
+                IncludeOtherTransfersInServiceLevelSpecified = (value != null);
                 _includeOtherTransfersInServiceLevel = value;
             }
         }
@@ -52,17 +52,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeOtherTransfersInServiceLevelSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterReportAbadonedCallsInServiceLevel _abandonedCallsInServiceLevel;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportAbadonedCallsInServiceLevel? _abandonedCallsInServiceLevel;
 
         [XmlElement(ElementName = "abandonedCallsInServiceLevel", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:7684")]
-        public BroadWorksConnector.Ocip.Models.CallCenterReportAbadonedCallsInServiceLevel AbandonedCallsInServiceLevel
+        public BroadWorksConnector.Ocip.Models.CallCenterReportAbadonedCallsInServiceLevel? AbandonedCallsInServiceLevel
         {
             get => _abandonedCallsInServiceLevel;
             set
             {
-                AbandonedCallsInServiceLevelSpecified = true;
+                AbandonedCallsInServiceLevelSpecified = (value != null);
                 _abandonedCallsInServiceLevel = value;
             }
         }

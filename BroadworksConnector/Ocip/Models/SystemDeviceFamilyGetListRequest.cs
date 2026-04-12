@@ -23,17 +23,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemDeviceFamilyGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemDeviceFamilyGetListResponse>
     {
 
-        protected bool _includeSystemLevel;
+        protected bool? _includeSystemLevel;
 
         [XmlElement(ElementName = "includeSystemLevel", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:7563")]
-        public bool IncludeSystemLevel
+        public bool? IncludeSystemLevel
         {
             get => _includeSystemLevel;
             set
             {
-                IncludeSystemLevelSpecified = true;
+                IncludeSystemLevelSpecified = (value != null);
                 _includeSystemLevel = value;
             }
         }
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaResellerId;
             set
             {
-                SearchCriteriaResellerIdSpecified = true;
+                SearchCriteriaResellerIdSpecified = (value != null);
                 _searchCriteriaResellerId = value;
             }
         }

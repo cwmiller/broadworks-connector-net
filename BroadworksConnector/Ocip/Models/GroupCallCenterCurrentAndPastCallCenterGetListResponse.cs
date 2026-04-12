@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceUserId;
             set
             {
-                ServiceUserIdSpecified = true;
+                ServiceUserIdSpecified = (value != null);
                 _serviceUserId = value;
             }
         }
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deletedServiceUserId;
             set
             {
-                DeletedServiceUserIdSpecified = true;
+                DeletedServiceUserIdSpecified = (value != null);
                 _deletedServiceUserId = value;
             }
         }

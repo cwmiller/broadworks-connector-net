@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _alertAllLocationsForClickToDialCalls;
+        protected bool? _alertAllLocationsForClickToDialCalls;
 
         [XmlElement(ElementName = "alertAllLocationsForClickToDialCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"f39163d0e42e05c4a1692a62f625df9f:584")]
-        public bool AlertAllLocationsForClickToDialCalls
+        public bool? AlertAllLocationsForClickToDialCalls
         {
             get => _alertAllLocationsForClickToDialCalls;
             set
             {
-                AlertAllLocationsForClickToDialCallsSpecified = true;
+                AlertAllLocationsForClickToDialCallsSpecified = (value != null);
                 _alertAllLocationsForClickToDialCalls = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlertAllLocationsForClickToDialCallsSpecified { get; set; }
 
-        protected bool _alertAllLocationsForGroupPagingCalls;
+        protected bool? _alertAllLocationsForGroupPagingCalls;
 
         [XmlElement(ElementName = "alertAllLocationsForGroupPagingCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"f39163d0e42e05c4a1692a62f625df9f:584")]
-        public bool AlertAllLocationsForGroupPagingCalls
+        public bool? AlertAllLocationsForGroupPagingCalls
         {
             get => _alertAllLocationsForGroupPagingCalls;
             set
             {
-                AlertAllLocationsForGroupPagingCallsSpecified = true;
+                AlertAllLocationsForGroupPagingCallsSpecified = (value != null);
                 _alertAllLocationsForGroupPagingCalls = value;
             }
         }

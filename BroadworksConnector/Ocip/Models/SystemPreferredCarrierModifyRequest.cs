@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _cic;
             set
             {
-                CicSpecified = true;
+                CicSpecified = (value != null);
                 _cic = value;
             }
         }
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _countryCode;
             set
             {
-                CountryCodeSpecified = true;
+                CountryCodeSpecified = (value != null);
                 _countryCode = value;
             }
         }
@@ -84,17 +84,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CountryCodeSpecified { get; set; }
 
-        protected bool _isIntraLata;
+        protected bool? _isIntraLata;
 
         [XmlElement(ElementName = "isIntraLata", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:515")]
-        public bool IsIntraLata
+        public bool? IsIntraLata
         {
             get => _isIntraLata;
             set
             {
-                IsIntraLataSpecified = true;
+                IsIntraLataSpecified = (value != null);
                 _isIntraLata = value;
             }
         }
@@ -102,17 +102,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsIntraLataSpecified { get; set; }
 
-        protected bool _isInterLata;
+        protected bool? _isInterLata;
 
         [XmlElement(ElementName = "isInterLata", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:515")]
-        public bool IsInterLata
+        public bool? IsInterLata
         {
             get => _isInterLata;
             set
             {
-                IsInterLataSpecified = true;
+                IsInterLataSpecified = (value != null);
                 _isInterLata = value;
             }
         }
@@ -120,17 +120,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsInterLataSpecified { get; set; }
 
-        protected bool _isInternational;
+        protected bool? _isInternational;
 
         [XmlElement(ElementName = "isInternational", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:515")]
-        public bool IsInternational
+        public bool? IsInternational
         {
             get => _isInternational;
             set
             {
-                IsInternationalSpecified = true;
+                IsInternationalSpecified = (value != null);
                 _isInternational = value;
             }
         }

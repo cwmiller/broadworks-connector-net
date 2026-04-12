@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _playMessages;
             set
             {
-                PlayMessagesSpecified = true;
+                PlayMessagesSpecified = (value != null);
                 _playMessages = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _changeBusyGreeting;
             set
             {
-                ChangeBusyGreetingSpecified = true;
+                ChangeBusyGreetingSpecified = (value != null);
                 _changeBusyGreeting = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _changeNoAnswerGreeting;
             set
             {
-                ChangeNoAnswerGreetingSpecified = true;
+                ChangeNoAnswerGreetingSpecified = (value != null);
                 _changeNoAnswerGreeting = value;
             }
         }
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _composeMessage;
             set
             {
-                ComposeMessageSpecified = true;
+                ComposeMessageSpecified = (value != null);
                 _composeMessage = value;
             }
         }
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deleteAllMessages;
             set
             {
-                DeleteAllMessagesSpecified = true;
+                DeleteAllMessagesSpecified = (value != null);
                 _deleteAllMessages = value;
             }
         }
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _passcode;
             set
             {
-                PasscodeSpecified = true;
+                PasscodeSpecified = (value != null);
                 _passcode = value;
             }
         }
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _personalizedName;
             set
             {
-                PersonalizedNameSpecified = true;
+                PersonalizedNameSpecified = (value != null);
                 _personalizedName = value;
             }
         }
@@ -168,7 +168,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _messageDeposit;
             set
             {
-                MessageDepositSpecified = true;
+                MessageDepositSpecified = (value != null);
                 _messageDeposit = value;
             }
         }
@@ -207,7 +207,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _repeatMenu;
             set
             {
-                RepeatMenuSpecified = true;
+                RepeatMenuSpecified = (value != null);
                 _repeatMenu = value;
             }
         }

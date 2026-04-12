@@ -50,17 +50,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _deleteExistingDevices;
+        protected bool? _deleteExistingDevices;
 
         [XmlElement(ElementName = "deleteExistingDevices", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1409")]
-        public bool DeleteExistingDevices
+        public bool? DeleteExistingDevices
         {
             get => _deleteExistingDevices;
             set
             {
-                DeleteExistingDevicesSpecified = true;
+                DeleteExistingDevicesSpecified = (value != null);
                 _deleteExistingDevices = value;
             }
         }
@@ -68,17 +68,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeleteExistingDevicesSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel _unassignPhoneNumbers;
+        protected BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel? _unassignPhoneNumbers;
 
         [XmlElement(ElementName = "unassignPhoneNumbers", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1409")]
-        public BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel UnassignPhoneNumbers
+        public BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel? UnassignPhoneNumbers
         {
             get => _unassignPhoneNumbers;
             set
             {
-                UnassignPhoneNumbersSpecified = true;
+                UnassignPhoneNumbersSpecified = (value != null);
                 _unassignPhoneNumbers = value;
             }
         }

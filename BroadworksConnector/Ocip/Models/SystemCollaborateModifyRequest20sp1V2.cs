@@ -19,19 +19,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCollaborateModifyRequest20sp1V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected int _collaborateRoomIdLength;
+        protected int? _collaborateRoomIdLength;
 
         [XmlElement(ElementName = "collaborateRoomIdLength", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"bc805893b9cc7e3e01eec64e9ad62768:549")]
         [MinInclusive(4)]
         [MaxInclusive(15)]
-        public int CollaborateRoomIdLength
+        public int? CollaborateRoomIdLength
         {
             get => _collaborateRoomIdLength;
             set
             {
-                CollaborateRoomIdLengthSpecified = true;
+                CollaborateRoomIdLengthSpecified = (value != null);
                 _collaborateRoomIdLength = value;
             }
         }
@@ -39,19 +39,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CollaborateRoomIdLengthSpecified { get; set; }
 
-        protected int _instantRoomIdleTimeoutSeconds;
+        protected int? _instantRoomIdleTimeoutSeconds;
 
         [XmlElement(ElementName = "instantRoomIdleTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"bc805893b9cc7e3e01eec64e9ad62768:549")]
         [MinInclusive(60)]
         [MaxInclusive(18000)]
-        public int InstantRoomIdleTimeoutSeconds
+        public int? InstantRoomIdleTimeoutSeconds
         {
             get => _instantRoomIdleTimeoutSeconds;
             set
             {
-                InstantRoomIdleTimeoutSecondsSpecified = true;
+                InstantRoomIdleTimeoutSecondsSpecified = (value != null);
                 _instantRoomIdleTimeoutSeconds = value;
             }
         }
@@ -59,19 +59,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool InstantRoomIdleTimeoutSecondsSpecified { get; set; }
 
-        protected int _collaborateRoomMaximumDurationMinutes;
+        protected int? _collaborateRoomMaximumDurationMinutes;
 
         [XmlElement(ElementName = "collaborateRoomMaximumDurationMinutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"bc805893b9cc7e3e01eec64e9ad62768:549")]
         [MinInclusive(1)]
         [MaxInclusive(7200)]
-        public int CollaborateRoomMaximumDurationMinutes
+        public int? CollaborateRoomMaximumDurationMinutes
         {
             get => _collaborateRoomMaximumDurationMinutes;
             set
             {
-                CollaborateRoomMaximumDurationMinutesSpecified = true;
+                CollaborateRoomMaximumDurationMinutesSpecified = (value != null);
                 _collaborateRoomMaximumDurationMinutes = value;
             }
         }
@@ -79,17 +79,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CollaborateRoomMaximumDurationMinutesSpecified { get; set; }
 
-        protected bool _supportOutdial;
+        protected bool? _supportOutdial;
 
         [XmlElement(ElementName = "supportOutdial", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"bc805893b9cc7e3e01eec64e9ad62768:549")]
-        public bool SupportOutdial
+        public bool? SupportOutdial
         {
             get => _supportOutdial;
             set
             {
-                SupportOutdialSpecified = true;
+                SupportOutdialSpecified = (value != null);
                 _supportOutdial = value;
             }
         }
@@ -97,19 +97,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SupportOutdialSpecified { get; set; }
 
-        protected int _maxCollaborateRoomParticipants;
+        protected int? _maxCollaborateRoomParticipants;
 
         [XmlElement(ElementName = "maxCollaborateRoomParticipants", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"bc805893b9cc7e3e01eec64e9ad62768:549")]
         [MinInclusive(3)]
         [MaxInclusive(145)]
-        public int MaxCollaborateRoomParticipants
+        public int? MaxCollaborateRoomParticipants
         {
             get => _maxCollaborateRoomParticipants;
             set
             {
-                MaxCollaborateRoomParticipantsSpecified = true;
+                MaxCollaborateRoomParticipantsSpecified = (value != null);
                 _maxCollaborateRoomParticipants = value;
             }
         }
@@ -117,19 +117,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxCollaborateRoomParticipantsSpecified { get; set; }
 
-        protected int _collaborateActiveTalkerRefreshIntervalSeconds;
+        protected int? _collaborateActiveTalkerRefreshIntervalSeconds;
 
         [XmlElement(ElementName = "collaborateActiveTalkerRefreshIntervalSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"bc805893b9cc7e3e01eec64e9ad62768:549")]
         [MinInclusive(1)]
         [MaxInclusive(5)]
-        public int CollaborateActiveTalkerRefreshIntervalSeconds
+        public int? CollaborateActiveTalkerRefreshIntervalSeconds
         {
             get => _collaborateActiveTalkerRefreshIntervalSeconds;
             set
             {
-                CollaborateActiveTalkerRefreshIntervalSecondsSpecified = true;
+                CollaborateActiveTalkerRefreshIntervalSecondsSpecified = (value != null);
                 _collaborateActiveTalkerRefreshIntervalSeconds = value;
             }
         }
@@ -137,17 +137,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CollaborateActiveTalkerRefreshIntervalSecondsSpecified { get; set; }
 
-        protected bool _terminateCollaborateAfterGracePeriod;
+        protected bool? _terminateCollaborateAfterGracePeriod;
 
         [XmlElement(ElementName = "terminateCollaborateAfterGracePeriod", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"bc805893b9cc7e3e01eec64e9ad62768:549")]
-        public bool TerminateCollaborateAfterGracePeriod
+        public bool? TerminateCollaborateAfterGracePeriod
         {
             get => _terminateCollaborateAfterGracePeriod;
             set
             {
-                TerminateCollaborateAfterGracePeriodSpecified = true;
+                TerminateCollaborateAfterGracePeriodSpecified = (value != null);
                 _terminateCollaborateAfterGracePeriod = value;
             }
         }
@@ -165,7 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _collaborateGracePeriod;
             set
             {
-                CollaborateGracePeriodSpecified = true;
+                CollaborateGracePeriodSpecified = (value != null);
                 _collaborateGracePeriod = value;
             }
         }
@@ -173,17 +173,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CollaborateGracePeriodSpecified { get; set; }
 
-        protected bool _enableActiveCollaborateNotification;
+        protected bool? _enableActiveCollaborateNotification;
 
         [XmlElement(ElementName = "enableActiveCollaborateNotification", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"bc805893b9cc7e3e01eec64e9ad62768:549")]
-        public bool EnableActiveCollaborateNotification
+        public bool? EnableActiveCollaborateNotification
         {
             get => _enableActiveCollaborateNotification;
             set
             {
-                EnableActiveCollaborateNotificationSpecified = true;
+                EnableActiveCollaborateNotificationSpecified = (value != null);
                 _enableActiveCollaborateNotification = value;
             }
         }

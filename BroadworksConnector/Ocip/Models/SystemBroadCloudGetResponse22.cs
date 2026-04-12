@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _provisioningUrl;
             set
             {
-                ProvisioningUrlSpecified = true;
+                ProvisioningUrlSpecified = (value != null);
                 _provisioningUrl = value;
             }
         }
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _provisioningUserId;
             set
             {
-                ProvisioningUserIdSpecified = true;
+                ProvisioningUserIdSpecified = (value != null);
                 _provisioningUserId = value;
             }
         }
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _proxyHost;
             set
             {
-                ProxyHostSpecified = true;
+                ProxyHostSpecified = (value != null);
                 _proxyHost = value;
             }
         }

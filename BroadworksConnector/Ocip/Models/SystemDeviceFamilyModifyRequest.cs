@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newDeviceFamilyName;
             set
             {
-                NewDeviceFamilyNameSpecified = true;
+                NewDeviceFamilyNameSpecified = (value != null);
                 _newDeviceFamilyName = value;
             }
         }

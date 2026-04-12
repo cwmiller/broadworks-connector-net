@@ -34,19 +34,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected int _thresholdCurrentCallsInQueueYellow;
+        protected int? _thresholdCurrentCallsInQueueYellow;
 
         [XmlElement(ElementName = "thresholdCurrentCallsInQueueYellow", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5733")]
         [MinInclusive(1)]
         [MaxInclusive(525)]
-        public int ThresholdCurrentCallsInQueueYellow
+        public int? ThresholdCurrentCallsInQueueYellow
         {
             get => _thresholdCurrentCallsInQueueYellow;
             set
             {
-                ThresholdCurrentCallsInQueueYellowSpecified = true;
+                ThresholdCurrentCallsInQueueYellowSpecified = (value != null);
                 _thresholdCurrentCallsInQueueYellow = value;
             }
         }
@@ -54,19 +54,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdCurrentCallsInQueueYellowSpecified { get; set; }
 
-        protected int _thresholdCurrentCallsInQueueRed;
+        protected int? _thresholdCurrentCallsInQueueRed;
 
         [XmlElement(ElementName = "thresholdCurrentCallsInQueueRed", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5733")]
         [MinInclusive(1)]
         [MaxInclusive(525)]
-        public int ThresholdCurrentCallsInQueueRed
+        public int? ThresholdCurrentCallsInQueueRed
         {
             get => _thresholdCurrentCallsInQueueRed;
             set
             {
-                ThresholdCurrentCallsInQueueRedSpecified = true;
+                ThresholdCurrentCallsInQueueRedSpecified = (value != null);
                 _thresholdCurrentCallsInQueueRed = value;
             }
         }
@@ -74,19 +74,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdCurrentCallsInQueueRedSpecified { get; set; }
 
-        protected int _thresholdCurrentLongestWaitingCallYellow;
+        protected int? _thresholdCurrentLongestWaitingCallYellow;
 
         [XmlElement(ElementName = "thresholdCurrentLongestWaitingCallYellow", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5733")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
-        public int ThresholdCurrentLongestWaitingCallYellow
+        public int? ThresholdCurrentLongestWaitingCallYellow
         {
             get => _thresholdCurrentLongestWaitingCallYellow;
             set
             {
-                ThresholdCurrentLongestWaitingCallYellowSpecified = true;
+                ThresholdCurrentLongestWaitingCallYellowSpecified = (value != null);
                 _thresholdCurrentLongestWaitingCallYellow = value;
             }
         }
@@ -94,19 +94,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdCurrentLongestWaitingCallYellowSpecified { get; set; }
 
-        protected int _thresholdCurrentLongestWaitingCallRed;
+        protected int? _thresholdCurrentLongestWaitingCallRed;
 
         [XmlElement(ElementName = "thresholdCurrentLongestWaitingCallRed", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5733")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
-        public int ThresholdCurrentLongestWaitingCallRed
+        public int? ThresholdCurrentLongestWaitingCallRed
         {
             get => _thresholdCurrentLongestWaitingCallRed;
             set
             {
-                ThresholdCurrentLongestWaitingCallRedSpecified = true;
+                ThresholdCurrentLongestWaitingCallRedSpecified = (value != null);
                 _thresholdCurrentLongestWaitingCallRed = value;
             }
         }
@@ -114,19 +114,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdCurrentLongestWaitingCallRedSpecified { get; set; }
 
-        protected int _thresholdAverageEstimatedWaitTimeYellow;
+        protected int? _thresholdAverageEstimatedWaitTimeYellow;
 
         [XmlElement(ElementName = "thresholdAverageEstimatedWaitTimeYellow", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5733")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
-        public int ThresholdAverageEstimatedWaitTimeYellow
+        public int? ThresholdAverageEstimatedWaitTimeYellow
         {
             get => _thresholdAverageEstimatedWaitTimeYellow;
             set
             {
-                ThresholdAverageEstimatedWaitTimeYellowSpecified = true;
+                ThresholdAverageEstimatedWaitTimeYellowSpecified = (value != null);
                 _thresholdAverageEstimatedWaitTimeYellow = value;
             }
         }
@@ -134,19 +134,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdAverageEstimatedWaitTimeYellowSpecified { get; set; }
 
-        protected int _thresholdAverageEstimatedWaitTimeRed;
+        protected int? _thresholdAverageEstimatedWaitTimeRed;
 
         [XmlElement(ElementName = "thresholdAverageEstimatedWaitTimeRed", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5733")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
-        public int ThresholdAverageEstimatedWaitTimeRed
+        public int? ThresholdAverageEstimatedWaitTimeRed
         {
             get => _thresholdAverageEstimatedWaitTimeRed;
             set
             {
-                ThresholdAverageEstimatedWaitTimeRedSpecified = true;
+                ThresholdAverageEstimatedWaitTimeRedSpecified = (value != null);
                 _thresholdAverageEstimatedWaitTimeRed = value;
             }
         }
@@ -154,19 +154,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdAverageEstimatedWaitTimeRedSpecified { get; set; }
 
-        protected int _thresholdAverageHandlingTimeYellow;
+        protected int? _thresholdAverageHandlingTimeYellow;
 
         [XmlElement(ElementName = "thresholdAverageHandlingTimeYellow", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5733")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
-        public int ThresholdAverageHandlingTimeYellow
+        public int? ThresholdAverageHandlingTimeYellow
         {
             get => _thresholdAverageHandlingTimeYellow;
             set
             {
-                ThresholdAverageHandlingTimeYellowSpecified = true;
+                ThresholdAverageHandlingTimeYellowSpecified = (value != null);
                 _thresholdAverageHandlingTimeYellow = value;
             }
         }
@@ -174,19 +174,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdAverageHandlingTimeYellowSpecified { get; set; }
 
-        protected int _thresholdAverageHandlingTimeRed;
+        protected int? _thresholdAverageHandlingTimeRed;
 
         [XmlElement(ElementName = "thresholdAverageHandlingTimeRed", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5733")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
-        public int ThresholdAverageHandlingTimeRed
+        public int? ThresholdAverageHandlingTimeRed
         {
             get => _thresholdAverageHandlingTimeRed;
             set
             {
-                ThresholdAverageHandlingTimeRedSpecified = true;
+                ThresholdAverageHandlingTimeRedSpecified = (value != null);
                 _thresholdAverageHandlingTimeRed = value;
             }
         }
@@ -194,19 +194,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdAverageHandlingTimeRedSpecified { get; set; }
 
-        protected int _thresholdAverageSpeedOfAnswerYellow;
+        protected int? _thresholdAverageSpeedOfAnswerYellow;
 
         [XmlElement(ElementName = "thresholdAverageSpeedOfAnswerYellow", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5733")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
-        public int ThresholdAverageSpeedOfAnswerYellow
+        public int? ThresholdAverageSpeedOfAnswerYellow
         {
             get => _thresholdAverageSpeedOfAnswerYellow;
             set
             {
-                ThresholdAverageSpeedOfAnswerYellowSpecified = true;
+                ThresholdAverageSpeedOfAnswerYellowSpecified = (value != null);
                 _thresholdAverageSpeedOfAnswerYellow = value;
             }
         }
@@ -214,19 +214,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdAverageSpeedOfAnswerYellowSpecified { get; set; }
 
-        protected int _thresholdAverageSpeedOfAnswerRed;
+        protected int? _thresholdAverageSpeedOfAnswerRed;
 
         [XmlElement(ElementName = "thresholdAverageSpeedOfAnswerRed", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5733")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
-        public int ThresholdAverageSpeedOfAnswerRed
+        public int? ThresholdAverageSpeedOfAnswerRed
         {
             get => _thresholdAverageSpeedOfAnswerRed;
             set
             {
-                ThresholdAverageSpeedOfAnswerRedSpecified = true;
+                ThresholdAverageSpeedOfAnswerRedSpecified = (value != null);
                 _thresholdAverageSpeedOfAnswerRed = value;
             }
         }
@@ -263,7 +263,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _notificationEmailAddress;
             set
             {
-                NotificationEmailAddressSpecified = true;
+                NotificationEmailAddressSpecified = (value != null);
                 _notificationEmailAddress = value;
             }
         }

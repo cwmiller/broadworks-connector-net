@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _countryCode;
             set
             {
-                CountryCodeSpecified = true;
+                CountryCodeSpecified = (value != null);
                 _countryCode = value;
             }
         }

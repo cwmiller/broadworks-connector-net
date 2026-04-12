@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _accessUsingOtherMailboxId;
             set
             {
-                AccessUsingOtherMailboxIdSpecified = true;
+                AccessUsingOtherMailboxIdSpecified = (value != null);
                 _accessUsingOtherMailboxId = value;
             }
         }

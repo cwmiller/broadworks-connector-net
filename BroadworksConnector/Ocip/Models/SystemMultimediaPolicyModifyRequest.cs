@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemMultimediaPolicyModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _restrictNonAudioVideoMediaTypes;
+        protected bool? _restrictNonAudioVideoMediaTypes;
 
         [XmlElement(ElementName = "restrictNonAudioVideoMediaTypes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:12441")]
-        public bool RestrictNonAudioVideoMediaTypes
+        public bool? RestrictNonAudioVideoMediaTypes
         {
             get => _restrictNonAudioVideoMediaTypes;
             set
             {
-                RestrictNonAudioVideoMediaTypesSpecified = true;
+                RestrictNonAudioVideoMediaTypesSpecified = (value != null);
                 _restrictNonAudioVideoMediaTypes = value;
             }
         }

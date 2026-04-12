@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _uploadFile;
             set
             {
-                UploadFileSpecified = true;
+                UploadFileSpecified = (value != null);
                 _uploadFile = value;
             }
         }
@@ -266,7 +266,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _macFormatInNonRequestURI;
             set
             {
-                MacFormatInNonRequestURISpecified = true;
+                MacFormatInNonRequestURISpecified = (value != null);
                 _macFormatInNonRequestURI = value;
             }
         }
@@ -359,17 +359,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowUploadFromDeviceSpecified { get; set; }
 
-        protected bool _defaultExtendedFileCaptureMode;
+        protected bool? _defaultExtendedFileCaptureMode;
 
         [XmlElement(ElementName = "defaultExtendedFileCaptureMode", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:17148")]
-        public bool DefaultExtendedFileCaptureMode
+        public bool? DefaultExtendedFileCaptureMode
         {
             get => _defaultExtendedFileCaptureMode;
             set
             {
-                DefaultExtendedFileCaptureModeSpecified = true;
+                DefaultExtendedFileCaptureModeSpecified = (value != null);
                 _defaultExtendedFileCaptureMode = value;
             }
         }

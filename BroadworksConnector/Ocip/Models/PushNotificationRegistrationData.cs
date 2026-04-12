@@ -157,7 +157,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _pushNotificationTokenData;
             set
             {
-                PushNotificationTokenDataSpecified = true;
+                PushNotificationTokenDataSpecified = (value != null);
                 _pushNotificationTokenData = value;
             }
         }

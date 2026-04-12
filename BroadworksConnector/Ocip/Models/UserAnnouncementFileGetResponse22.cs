@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _announcementFileExternalId;
             set
             {
-                AnnouncementFileExternalIdSpecified = true;
+                AnnouncementFileExternalIdSpecified = (value != null);
                 _announcementFileExternalId = value;
             }
         }

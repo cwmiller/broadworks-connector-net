@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        protected bool _displayDNISNumber;
+        protected bool? _displayDNISNumber;
 
         [XmlElement(ElementName = "displayDNISNumber", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e474d11df9a1d1d1041e589793e40de8:786")]
-        public bool DisplayDNISNumber
+        public bool? DisplayDNISNumber
         {
             get => _displayDNISNumber;
             set
             {
-                DisplayDNISNumberSpecified = true;
+                DisplayDNISNumberSpecified = (value != null);
                 _displayDNISNumber = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisplayDNISNumberSpecified { get; set; }
 
-        protected bool _displayDNISName;
+        protected bool? _displayDNISName;
 
         [XmlElement(ElementName = "displayDNISName", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e474d11df9a1d1d1041e589793e40de8:786")]
-        public bool DisplayDNISName
+        public bool? DisplayDNISName
         {
             get => _displayDNISName;
             set
             {
-                DisplayDNISNameSpecified = true;
+                DisplayDNISNameSpecified = (value != null);
                 _displayDNISName = value;
             }
         }

@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _costInformationSource;
             set
             {
-                CostInformationSourceSpecified = true;
+                CostInformationSourceSpecified = (value != null);
                 _costInformationSource = value;
             }
         }

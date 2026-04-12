@@ -19,19 +19,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallMeNowModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected int _passcodeLength;
+        protected int? _passcodeLength;
 
         [XmlElement(ElementName = "passcodeLength", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf9583170c1dc9ec6c152ba1238437a:77")]
         [MinInclusive(2)]
         [MaxInclusive(30)]
-        public int PasscodeLength
+        public int? PasscodeLength
         {
             get => _passcodeLength;
             set
             {
-                PasscodeLengthSpecified = true;
+                PasscodeLengthSpecified = (value != null);
                 _passcodeLength = value;
             }
         }
@@ -39,19 +39,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PasscodeLengthSpecified { get; set; }
 
-        protected int _passcodeTimeoutSeconds;
+        protected int? _passcodeTimeoutSeconds;
 
         [XmlElement(ElementName = "passcodeTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf9583170c1dc9ec6c152ba1238437a:77")]
         [MinInclusive(30)]
         [MaxInclusive(180)]
-        public int PasscodeTimeoutSeconds
+        public int? PasscodeTimeoutSeconds
         {
             get => _passcodeTimeoutSeconds;
             set
             {
-                PasscodeTimeoutSecondsSpecified = true;
+                PasscodeTimeoutSecondsSpecified = (value != null);
                 _passcodeTimeoutSeconds = value;
             }
         }

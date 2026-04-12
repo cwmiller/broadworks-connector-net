@@ -50,17 +50,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StaticRegistrationCapableSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 _configType;
+        protected BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14? _configType;
 
         [XmlElement(ElementName = "configType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:26294")]
-        public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 ConfigType
+        public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14? ConfigType
         {
             get => _configType;
             set
             {
-                ConfigTypeSpecified = true;
+                ConfigTypeSpecified = (value != null);
                 _configType = value;
             }
         }

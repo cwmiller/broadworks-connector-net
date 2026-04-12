@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _sendMessageToSelectedDistributionList;
             set
             {
-                SendMessageToSelectedDistributionListSpecified = true;
+                SendMessageToSelectedDistributionListSpecified = (value != null);
                 _sendMessageToSelectedDistributionList = value;
             }
         }
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _returnToPreviousMenu;
             set
             {
-                ReturnToPreviousMenuSpecified = true;
+                ReturnToPreviousMenuSpecified = (value != null);
                 _returnToPreviousMenu = value;
             }
         }

@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _alertingGroupDescription;
             set
             {
-                AlertingGroupDescriptionSpecified = true;
+                AlertingGroupDescriptionSpecified = (value != null);
                 _alertingGroupDescription = value;
             }
         }
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _phoneNumber;
             set
             {
-                PhoneNumberSpecified = true;
+                PhoneNumberSpecified = (value != null);
                 _phoneNumber = value;
             }
         }

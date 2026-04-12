@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _externalRoutingAddress;
             set
             {
-                ExternalRoutingAddressSpecified = true;
+                ExternalRoutingAddressSpecified = (value != null);
                 _externalRoutingAddress = value;
             }
         }
@@ -170,7 +170,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _homeZoneName;
             set
             {
-                HomeZoneNameSpecified = true;
+                HomeZoneNameSpecified = (value != null);
                 _homeZoneName = value;
             }
         }

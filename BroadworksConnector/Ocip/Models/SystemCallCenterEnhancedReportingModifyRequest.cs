@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallCenterEnhancedReportingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _archiveReports;
+        protected bool? _archiveReports;
 
         [XmlElement(ElementName = "archiveReports", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:6076")]
-        public bool ArchiveReports
+        public bool? ArchiveReports
         {
             get => _archiveReports;
             set
             {
-                ArchiveReportsSpecified = true;
+                ArchiveReportsSpecified = (value != null);
                 _archiveReports = value;
             }
         }

@@ -36,17 +36,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DnisKeySpecified { get; set; }
 
-        protected bool _playEntranceMessage;
+        protected bool? _playEntranceMessage;
 
         [XmlElement(ElementName = "playEntranceMessage", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5074")]
-        public bool PlayEntranceMessage
+        public bool? PlayEntranceMessage
         {
             get => _playEntranceMessage;
             set
             {
-                PlayEntranceMessageSpecified = true;
+                PlayEntranceMessageSpecified = (value != null);
                 _playEntranceMessage = value;
             }
         }
@@ -54,17 +54,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PlayEntranceMessageSpecified { get; set; }
 
-        protected bool _mandatoryEntranceMessage;
+        protected bool? _mandatoryEntranceMessage;
 
         [XmlElement(ElementName = "mandatoryEntranceMessage", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5074")]
-        public bool MandatoryEntranceMessage
+        public bool? MandatoryEntranceMessage
         {
             get => _mandatoryEntranceMessage;
             set
             {
-                MandatoryEntranceMessageSpecified = true;
+                MandatoryEntranceMessageSpecified = (value != null);
                 _mandatoryEntranceMessage = value;
             }
         }
@@ -72,17 +72,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MandatoryEntranceMessageSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _entranceAudioMessageSelection;
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? _entranceAudioMessageSelection;
 
         [XmlElement(ElementName = "entranceAudioMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5074")]
-        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection EntranceAudioMessageSelection
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? EntranceAudioMessageSelection
         {
             get => _entranceAudioMessageSelection;
             set
             {
-                EntranceAudioMessageSelectionSpecified = true;
+                EntranceAudioMessageSelectionSpecified = (value != null);
                 _entranceAudioMessageSelection = value;
             }
         }
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _entranceMessageAudioUrlList;
             set
             {
-                EntranceMessageAudioUrlListSpecified = true;
+                EntranceMessageAudioUrlListSpecified = (value != null);
                 _entranceMessageAudioUrlList = value;
             }
         }
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _entranceMessageAudioFileList;
             set
             {
-                EntranceMessageAudioFileListSpecified = true;
+                EntranceMessageAudioFileListSpecified = (value != null);
                 _entranceMessageAudioFileList = value;
             }
         }
@@ -126,17 +126,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EntranceMessageAudioFileListSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _entranceVideoMessageSelection;
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? _entranceVideoMessageSelection;
 
         [XmlElement(ElementName = "entranceVideoMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5074")]
-        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection EntranceVideoMessageSelection
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? EntranceVideoMessageSelection
         {
             get => _entranceVideoMessageSelection;
             set
             {
-                EntranceVideoMessageSelectionSpecified = true;
+                EntranceVideoMessageSelectionSpecified = (value != null);
                 _entranceVideoMessageSelection = value;
             }
         }
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _entranceMessageVideoUrlList;
             set
             {
-                EntranceMessageVideoUrlListSpecified = true;
+                EntranceMessageVideoUrlListSpecified = (value != null);
                 _entranceMessageVideoUrlList = value;
             }
         }
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _entranceMessageVideoFileList;
             set
             {
-                EntranceMessageVideoFileListSpecified = true;
+                EntranceMessageVideoFileListSpecified = (value != null);
                 _entranceMessageVideoFileList = value;
             }
         }
@@ -180,17 +180,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EntranceMessageVideoFileListSpecified { get; set; }
 
-        protected bool _playPeriodicComfortMessage;
+        protected bool? _playPeriodicComfortMessage;
 
         [XmlElement(ElementName = "playPeriodicComfortMessage", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5074")]
-        public bool PlayPeriodicComfortMessage
+        public bool? PlayPeriodicComfortMessage
         {
             get => _playPeriodicComfortMessage;
             set
             {
-                PlayPeriodicComfortMessageSpecified = true;
+                PlayPeriodicComfortMessageSpecified = (value != null);
                 _playPeriodicComfortMessage = value;
             }
         }
@@ -198,19 +198,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PlayPeriodicComfortMessageSpecified { get; set; }
 
-        protected int _timeBetweenComfortMessagesSeconds;
+        protected int? _timeBetweenComfortMessagesSeconds;
 
         [XmlElement(ElementName = "timeBetweenComfortMessagesSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5074")]
         [MinInclusive(10)]
         [MaxInclusive(600)]
-        public int TimeBetweenComfortMessagesSeconds
+        public int? TimeBetweenComfortMessagesSeconds
         {
             get => _timeBetweenComfortMessagesSeconds;
             set
             {
-                TimeBetweenComfortMessagesSecondsSpecified = true;
+                TimeBetweenComfortMessagesSecondsSpecified = (value != null);
                 _timeBetweenComfortMessagesSeconds = value;
             }
         }
@@ -218,17 +218,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TimeBetweenComfortMessagesSecondsSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _periodicComfortAudioMessageSelection;
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? _periodicComfortAudioMessageSelection;
 
         [XmlElement(ElementName = "periodicComfortAudioMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5074")]
-        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection PeriodicComfortAudioMessageSelection
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? PeriodicComfortAudioMessageSelection
         {
             get => _periodicComfortAudioMessageSelection;
             set
             {
-                PeriodicComfortAudioMessageSelectionSpecified = true;
+                PeriodicComfortAudioMessageSelectionSpecified = (value != null);
                 _periodicComfortAudioMessageSelection = value;
             }
         }
@@ -246,7 +246,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _periodicComfortMessageAudioUrlList;
             set
             {
-                PeriodicComfortMessageAudioUrlListSpecified = true;
+                PeriodicComfortMessageAudioUrlListSpecified = (value != null);
                 _periodicComfortMessageAudioUrlList = value;
             }
         }
@@ -264,7 +264,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _periodicComfortMessageAudioFileList;
             set
             {
-                PeriodicComfortMessageAudioFileListSpecified = true;
+                PeriodicComfortMessageAudioFileListSpecified = (value != null);
                 _periodicComfortMessageAudioFileList = value;
             }
         }
@@ -272,17 +272,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PeriodicComfortMessageAudioFileListSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _periodicComfortVideoMessageSelection;
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? _periodicComfortVideoMessageSelection;
 
         [XmlElement(ElementName = "periodicComfortVideoMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5074")]
-        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection PeriodicComfortVideoMessageSelection
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? PeriodicComfortVideoMessageSelection
         {
             get => _periodicComfortVideoMessageSelection;
             set
             {
-                PeriodicComfortVideoMessageSelectionSpecified = true;
+                PeriodicComfortVideoMessageSelectionSpecified = (value != null);
                 _periodicComfortVideoMessageSelection = value;
             }
         }
@@ -300,7 +300,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _periodicComfortMessageVideoUrlList;
             set
             {
-                PeriodicComfortMessageVideoUrlListSpecified = true;
+                PeriodicComfortMessageVideoUrlListSpecified = (value != null);
                 _periodicComfortMessageVideoUrlList = value;
             }
         }
@@ -318,7 +318,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _periodicComfortMessageVideoFileList;
             set
             {
-                PeriodicComfortMessageVideoFileListSpecified = true;
+                PeriodicComfortMessageVideoFileListSpecified = (value != null);
                 _periodicComfortMessageVideoFileList = value;
             }
         }
@@ -326,17 +326,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PeriodicComfortMessageVideoFileListSpecified { get; set; }
 
-        protected bool _enableMediaOnHoldForQueuedCalls;
+        protected bool? _enableMediaOnHoldForQueuedCalls;
 
         [XmlElement(ElementName = "enableMediaOnHoldForQueuedCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5074")]
-        public bool EnableMediaOnHoldForQueuedCalls
+        public bool? EnableMediaOnHoldForQueuedCalls
         {
             get => _enableMediaOnHoldForQueuedCalls;
             set
             {
-                EnableMediaOnHoldForQueuedCallsSpecified = true;
+                EnableMediaOnHoldForQueuedCallsSpecified = (value != null);
                 _enableMediaOnHoldForQueuedCalls = value;
             }
         }
@@ -354,7 +354,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _mediaOnHoldSource;
             set
             {
-                MediaOnHoldSourceSpecified = true;
+                MediaOnHoldSourceSpecified = (value != null);
                 _mediaOnHoldSource = value;
             }
         }
@@ -362,17 +362,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MediaOnHoldSourceSpecified { get; set; }
 
-        protected bool _playWhisperMessage;
+        protected bool? _playWhisperMessage;
 
         [XmlElement(ElementName = "playWhisperMessage", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5074")]
-        public bool PlayWhisperMessage
+        public bool? PlayWhisperMessage
         {
             get => _playWhisperMessage;
             set
             {
-                PlayWhisperMessageSpecified = true;
+                PlayWhisperMessageSpecified = (value != null);
                 _playWhisperMessage = value;
             }
         }
@@ -380,17 +380,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PlayWhisperMessageSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _whisperAudioMessageSelection;
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? _whisperAudioMessageSelection;
 
         [XmlElement(ElementName = "whisperAudioMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5074")]
-        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection WhisperAudioMessageSelection
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? WhisperAudioMessageSelection
         {
             get => _whisperAudioMessageSelection;
             set
             {
-                WhisperAudioMessageSelectionSpecified = true;
+                WhisperAudioMessageSelectionSpecified = (value != null);
                 _whisperAudioMessageSelection = value;
             }
         }
@@ -408,7 +408,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _whisperMessageAudioUrlList;
             set
             {
-                WhisperMessageAudioUrlListSpecified = true;
+                WhisperMessageAudioUrlListSpecified = (value != null);
                 _whisperMessageAudioUrlList = value;
             }
         }
@@ -426,7 +426,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _whisperMessageAudioFileList;
             set
             {
-                WhisperMessageAudioFileListSpecified = true;
+                WhisperMessageAudioFileListSpecified = (value != null);
                 _whisperMessageAudioFileList = value;
             }
         }
@@ -434,17 +434,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool WhisperMessageAudioFileListSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _whisperVideoMessageSelection;
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? _whisperVideoMessageSelection;
 
         [XmlElement(ElementName = "whisperVideoMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5074")]
-        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection WhisperVideoMessageSelection
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? WhisperVideoMessageSelection
         {
             get => _whisperVideoMessageSelection;
             set
             {
-                WhisperVideoMessageSelectionSpecified = true;
+                WhisperVideoMessageSelectionSpecified = (value != null);
                 _whisperVideoMessageSelection = value;
             }
         }
@@ -462,7 +462,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _whisperMessageVideoUrlList;
             set
             {
-                WhisperMessageVideoUrlListSpecified = true;
+                WhisperMessageVideoUrlListSpecified = (value != null);
                 _whisperMessageVideoUrlList = value;
             }
         }
@@ -480,7 +480,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _whisperMessageVideoFileList;
             set
             {
-                WhisperMessageVideoFileListSpecified = true;
+                WhisperMessageVideoFileListSpecified = (value != null);
                 _whisperMessageVideoFileList = value;
             }
         }
@@ -498,7 +498,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _estimatedWaitMessageOptionsModify;
             set
             {
-                EstimatedWaitMessageOptionsModifySpecified = true;
+                EstimatedWaitMessageOptionsModifySpecified = (value != null);
                 _estimatedWaitMessageOptionsModify = value;
             }
         }

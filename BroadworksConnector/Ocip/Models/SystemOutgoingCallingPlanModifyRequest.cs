@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemOutgoingCallingPlanModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _directTransferScreening;
+        protected bool? _directTransferScreening;
 
         [XmlElement(ElementName = "directTransferScreening", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"a63afa661ee5c74f4700e562e88c66d0:1001")]
-        public bool DirectTransferScreening
+        public bool? DirectTransferScreening
         {
             get => _directTransferScreening;
             set
             {
-                DirectTransferScreeningSpecified = true;
+                DirectTransferScreeningSpecified = (value != null);
                 _directTransferScreening = value;
             }
         }
@@ -37,17 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DirectTransferScreeningSpecified { get; set; }
 
-        protected bool _enableEnhancedTollCallTyping;
+        protected bool? _enableEnhancedTollCallTyping;
 
         [XmlElement(ElementName = "enableEnhancedTollCallTyping", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"a63afa661ee5c74f4700e562e88c66d0:1001")]
-        public bool EnableEnhancedTollCallTyping
+        public bool? EnableEnhancedTollCallTyping
         {
             get => _enableEnhancedTollCallTyping;
             set
             {
-                EnableEnhancedTollCallTypingSpecified = true;
+                EnableEnhancedTollCallTypingSpecified = (value != null);
                 _enableEnhancedTollCallTyping = value;
             }
         }

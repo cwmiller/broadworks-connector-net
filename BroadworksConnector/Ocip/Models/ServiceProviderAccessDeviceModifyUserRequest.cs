@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _privateIdentity;
             set
             {
-                PrivateIdentitySpecified = true;
+                PrivateIdentitySpecified = (value != null);
                 _privateIdentity = value;
             }
         }
@@ -98,17 +98,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PrivateIdentitySpecified { get; set; }
 
-        protected bool _isPrimaryLinePort;
+        protected bool? _isPrimaryLinePort;
 
         [XmlElement(ElementName = "isPrimaryLinePort", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:1169")]
-        public bool IsPrimaryLinePort
+        public bool? IsPrimaryLinePort
         {
             get => _isPrimaryLinePort;
             set
             {
-                IsPrimaryLinePortSpecified = true;
+                IsPrimaryLinePortSpecified = (value != null);
                 _isPrimaryLinePort = value;
             }
         }

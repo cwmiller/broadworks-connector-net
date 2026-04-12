@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _isActiveForExternalCalls;
+        protected bool? _isActiveForExternalCalls;
 
         [XmlElement(ElementName = "isActiveForExternalCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"06a92852394dc03f09084365420b7b9e:75")]
-        public bool IsActiveForExternalCalls
+        public bool? IsActiveForExternalCalls
         {
             get => _isActiveForExternalCalls;
             set
             {
-                IsActiveForExternalCallsSpecified = true;
+                IsActiveForExternalCallsSpecified = (value != null);
                 _isActiveForExternalCalls = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveForExternalCallsSpecified { get; set; }
 
-        protected bool _isActiveForInternalCalls;
+        protected bool? _isActiveForInternalCalls;
 
         [XmlElement(ElementName = "isActiveForInternalCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"06a92852394dc03f09084365420b7b9e:75")]
-        public bool IsActiveForInternalCalls
+        public bool? IsActiveForInternalCalls
         {
             get => _isActiveForInternalCalls;
             set
             {
-                IsActiveForInternalCallsSpecified = true;
+                IsActiveForInternalCallsSpecified = (value != null);
                 _isActiveForInternalCalls = value;
             }
         }

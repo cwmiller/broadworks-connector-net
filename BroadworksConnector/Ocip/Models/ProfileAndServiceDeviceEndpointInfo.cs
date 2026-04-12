@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _privateIdentity;
             set
             {
-                PrivateIdentitySpecified = true;
+                PrivateIdentitySpecified = (value != null);
                 _privateIdentity = value;
             }
         }
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _accessDeviceMacAddress;
             set
             {
-                AccessDeviceMacAddressSpecified = true;
+                AccessDeviceMacAddressSpecified = (value != null);
                 _accessDeviceMacAddress = value;
             }
         }

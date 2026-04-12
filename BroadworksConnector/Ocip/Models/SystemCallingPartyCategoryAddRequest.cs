@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _cpcValue;
             set
             {
-                CpcValueSpecified = true;
+                CpcValueSpecified = (value != null);
                 _cpcValue = value;
             }
         }
@@ -58,19 +58,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CpcValueSpecified { get; set; }
 
-        protected int _isupOliValue;
+        protected int? _isupOliValue;
 
         [XmlElement(ElementName = "isupOliValue", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d0efd2493d3062b292fd31759011925e:48")]
         [MinInclusive(0)]
         [MaxInclusive(255)]
-        public int IsupOliValue
+        public int? IsupOliValue
         {
             get => _isupOliValue;
             set
             {
-                IsupOliValueSpecified = true;
+                IsupOliValueSpecified = (value != null);
                 _isupOliValue = value;
             }
         }
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _gtdOliValue;
             set
             {
-                GtdOliValueSpecified = true;
+                GtdOliValueSpecified = (value != null);
                 _gtdOliValue = value;
             }
         }
@@ -195,7 +195,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _webDisplayKey;
             set
             {
-                WebDisplayKeySpecified = true;
+                WebDisplayKeySpecified = (value != null);
                 _webDisplayKey = value;
             }
         }

@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceUserId;
             set
             {
-                ServiceUserIdSpecified = true;
+                ServiceUserIdSpecified = (value != null);
                 _serviceUserId = value;
             }
         }

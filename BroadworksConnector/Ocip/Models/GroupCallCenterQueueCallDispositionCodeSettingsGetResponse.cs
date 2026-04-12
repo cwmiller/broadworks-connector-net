@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultCallDispositionCode;
             set
             {
-                DefaultCallDispositionCodeSpecified = true;
+                DefaultCallDispositionCodeSpecified = (value != null);
                 _defaultCallDispositionCode = value;
             }
         }

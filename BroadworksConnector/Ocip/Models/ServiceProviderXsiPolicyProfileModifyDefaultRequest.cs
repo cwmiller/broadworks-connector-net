@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupDefaultXsiPolicyProfile;
             set
             {
-                GroupDefaultXsiPolicyProfileSpecified = true;
+                GroupDefaultXsiPolicyProfileSpecified = (value != null);
                 _groupDefaultXsiPolicyProfile = value;
             }
         }
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userDefaultXsiPolicyProfile;
             set
             {
-                UserDefaultXsiPolicyProfileSpecified = true;
+                UserDefaultXsiPolicyProfileSpecified = (value != null);
                 _userDefaultXsiPolicyProfile = value;
             }
         }

@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceInstanceProfile;
             set
             {
-                ServiceInstanceProfileSpecified = true;
+                ServiceInstanceProfileSpecified = (value != null);
                 _serviceInstanceProfile = value;
             }
         }
@@ -59,19 +59,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceInstanceProfileSpecified { get; set; }
 
-        protected int _confirmationToneTimeoutSeconds;
+        protected int? _confirmationToneTimeoutSeconds;
 
         [XmlElement(ElementName = "confirmationToneTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"8ede928f2a9c1318573ba9c7a105655c:422")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
-        public int ConfirmationToneTimeoutSeconds
+        public int? ConfirmationToneTimeoutSeconds
         {
             get => _confirmationToneTimeoutSeconds;
             set
             {
-                ConfirmationToneTimeoutSecondsSpecified = true;
+                ConfirmationToneTimeoutSecondsSpecified = (value != null);
                 _confirmationToneTimeoutSeconds = value;
             }
         }
@@ -79,17 +79,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConfirmationToneTimeoutSecondsSpecified { get; set; }
 
-        protected bool _deliverOriginatorCLIDInstead;
+        protected bool? _deliverOriginatorCLIDInstead;
 
         [XmlElement(ElementName = "deliverOriginatorCLIDInstead", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"8ede928f2a9c1318573ba9c7a105655c:422")]
-        public bool DeliverOriginatorCLIDInstead
+        public bool? DeliverOriginatorCLIDInstead
         {
             get => _deliverOriginatorCLIDInstead;
             set
             {
-                DeliverOriginatorCLIDInsteadSpecified = true;
+                DeliverOriginatorCLIDInsteadSpecified = (value != null);
                 _deliverOriginatorCLIDInstead = value;
             }
         }
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkClassOfService;
             set
             {
-                NetworkClassOfServiceSpecified = true;
+                NetworkClassOfServiceSpecified = (value != null);
                 _networkClassOfService = value;
             }
         }

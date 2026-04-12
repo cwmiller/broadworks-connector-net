@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected bool _includeGroupCommonPhoneListInDirectory;
+        protected bool? _includeGroupCommonPhoneListInDirectory;
 
         [XmlElement(ElementName = "includeGroupCommonPhoneListInDirectory", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:80")]
-        public bool IncludeGroupCommonPhoneListInDirectory
+        public bool? IncludeGroupCommonPhoneListInDirectory
         {
             get => _includeGroupCommonPhoneListInDirectory;
             set
             {
-                IncludeGroupCommonPhoneListInDirectorySpecified = true;
+                IncludeGroupCommonPhoneListInDirectorySpecified = (value != null);
                 _includeGroupCommonPhoneListInDirectory = value;
             }
         }
@@ -75,17 +75,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeGroupCommonPhoneListInDirectorySpecified { get; set; }
 
-        protected bool _includeGroupCustomContactDirectoryInDirectory;
+        protected bool? _includeGroupCustomContactDirectoryInDirectory;
 
         [XmlElement(ElementName = "includeGroupCustomContactDirectoryInDirectory", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:80")]
-        public bool IncludeGroupCustomContactDirectoryInDirectory
+        public bool? IncludeGroupCustomContactDirectoryInDirectory
         {
             get => _includeGroupCustomContactDirectoryInDirectory;
             set
             {
-                IncludeGroupCustomContactDirectoryInDirectorySpecified = true;
+                IncludeGroupCustomContactDirectoryInDirectorySpecified = (value != null);
                 _includeGroupCustomContactDirectoryInDirectory = value;
             }
         }

@@ -43,17 +43,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        protected bool _includeTotalNumberOfRows;
+        protected bool? _includeTotalNumberOfRows;
 
         [XmlElement(ElementName = "includeTotalNumberOfRows", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:259")]
-        public bool IncludeTotalNumberOfRows
+        public bool? IncludeTotalNumberOfRows
         {
             get => _includeTotalNumberOfRows;
             set
             {
-                IncludeTotalNumberOfRowsSpecified = true;
+                IncludeTotalNumberOfRowsSpecified = (value != null);
                 _includeTotalNumberOfRows = value;
             }
         }
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _responsePagingControl;
             set
             {
-                ResponsePagingControlSpecified = true;
+                ResponsePagingControlSpecified = (value != null);
                 _responsePagingControl = value;
             }
         }
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _sortByMobileDirectoryNumber;
             set
             {
-                SortByMobileDirectoryNumberSpecified = true;
+                SortByMobileDirectoryNumberSpecified = (value != null);
                 _sortByMobileDirectoryNumber = value;
             }
         }
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaMobileSubscriberDirectoryNumber;
             set
             {
-                SearchCriteriaMobileSubscriberDirectoryNumberSpecified = true;
+                SearchCriteriaMobileSubscriberDirectoryNumberSpecified = (value != null);
                 _searchCriteriaMobileSubscriberDirectoryNumber = value;
             }
         }
@@ -115,17 +115,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaMobileSubscriberDirectoryNumberSpecified { get; set; }
 
-        protected bool _searchCriteriaModeOr;
+        protected bool? _searchCriteriaModeOr;
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:259")]
-        public bool SearchCriteriaModeOr
+        public bool? SearchCriteriaModeOr
         {
             get => _searchCriteriaModeOr;
             set
             {
-                SearchCriteriaModeOrSpecified = true;
+                SearchCriteriaModeOrSpecified = (value != null);
                 _searchCriteriaModeOr = value;
             }
         }

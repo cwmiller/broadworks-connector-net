@@ -57,18 +57,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NameSpecified { get; set; }
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:2188")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaDigitPattern;
             set
             {
-                SearchCriteriaDigitPatternSpecified = true;
+                SearchCriteriaDigitPatternSpecified = (value != null);
                 _searchCriteriaDigitPattern = value;
             }
         }

@@ -334,7 +334,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _loginDisabledNotifyEmailAddress;
             set
             {
-                LoginDisabledNotifyEmailAddressSpecified = true;
+                LoginDisabledNotifyEmailAddressSpecified = (value != null);
                 _loginDisabledNotifyEmailAddress = value;
             }
         }
@@ -412,17 +412,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ForcePasswordChangeAfterResetSpecified { get; set; }
 
-        protected bool _enforceExternalAuthForRoutePoint;
+        protected bool? _enforceExternalAuthForRoutePoint;
 
         [XmlElement(ElementName = "enforceExternalAuthForRoutePoint", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:11045")]
-        public bool EnforceExternalAuthForRoutePoint
+        public bool? EnforceExternalAuthForRoutePoint
         {
             get => _enforceExternalAuthForRoutePoint;
             set
             {
-                EnforceExternalAuthForRoutePointSpecified = true;
+                EnforceExternalAuthForRoutePointSpecified = (value != null);
                 _enforceExternalAuthForRoutePoint = value;
             }
         }

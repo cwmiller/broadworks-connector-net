@@ -48,17 +48,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemVoiceMessagingGroupModifyRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _realDeleteForImap;
+        protected bool? _realDeleteForImap;
 
         [XmlElement(ElementName = "realDeleteForImap", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1170")]
-        public bool RealDeleteForImap
+        public bool? RealDeleteForImap
         {
             get => _realDeleteForImap;
             set
             {
-                RealDeleteForImapSpecified = true;
+                RealDeleteForImapSpecified = (value != null);
                 _realDeleteForImap = value;
             }
         }
@@ -66,17 +66,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RealDeleteForImapSpecified { get; set; }
 
-        protected bool _useDnInMailBody;
+        protected bool? _useDnInMailBody;
 
         [XmlElement(ElementName = "useDnInMailBody", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1170")]
-        public bool UseDnInMailBody
+        public bool? UseDnInMailBody
         {
             get => _useDnInMailBody;
             set
             {
-                UseDnInMailBodySpecified = true;
+                UseDnInMailBodySpecified = (value != null);
                 _useDnInMailBody = value;
             }
         }
@@ -84,17 +84,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseDnInMailBodySpecified { get; set; }
 
-        protected bool _useShortSubjectLine;
+        protected bool? _useShortSubjectLine;
 
         [XmlElement(ElementName = "useShortSubjectLine", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1170")]
-        public bool UseShortSubjectLine
+        public bool? UseShortSubjectLine
         {
             get => _useShortSubjectLine;
             set
             {
-                UseShortSubjectLineSpecified = true;
+                UseShortSubjectLineSpecified = (value != null);
                 _useShortSubjectLine = value;
             }
         }
@@ -102,19 +102,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseShortSubjectLineSpecified { get; set; }
 
-        protected int _maxMessageLengthMinutes;
+        protected int? _maxMessageLengthMinutes;
 
         [XmlElement(ElementName = "maxMessageLengthMinutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1170")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
-        public int MaxMessageLengthMinutes
+        public int? MaxMessageLengthMinutes
         {
             get => _maxMessageLengthMinutes;
             set
             {
-                MaxMessageLengthMinutesSpecified = true;
+                MaxMessageLengthMinutesSpecified = (value != null);
                 _maxMessageLengthMinutes = value;
             }
         }
@@ -122,17 +122,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxMessageLengthMinutesSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.VoiceMessagingMailboxLengthMinutes _maxMailboxLengthMinutes;
+        protected BroadWorksConnector.Ocip.Models.VoiceMessagingMailboxLengthMinutes? _maxMailboxLengthMinutes;
 
         [XmlElement(ElementName = "maxMailboxLengthMinutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1170")]
-        public BroadWorksConnector.Ocip.Models.VoiceMessagingMailboxLengthMinutes MaxMailboxLengthMinutes
+        public BroadWorksConnector.Ocip.Models.VoiceMessagingMailboxLengthMinutes? MaxMailboxLengthMinutes
         {
             get => _maxMailboxLengthMinutes;
             set
             {
-                MaxMailboxLengthMinutesSpecified = true;
+                MaxMailboxLengthMinutesSpecified = (value != null);
                 _maxMailboxLengthMinutes = value;
             }
         }
@@ -140,17 +140,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxMailboxLengthMinutesSpecified { get; set; }
 
-        protected bool _doesMessageAge;
+        protected bool? _doesMessageAge;
 
         [XmlElement(ElementName = "doesMessageAge", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1170")]
-        public bool DoesMessageAge
+        public bool? DoesMessageAge
         {
             get => _doesMessageAge;
             set
             {
-                DoesMessageAgeSpecified = true;
+                DoesMessageAgeSpecified = (value != null);
                 _doesMessageAge = value;
             }
         }
@@ -158,17 +158,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DoesMessageAgeSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.VoiceMessagingHoldPeriodDays _holdPeriodDays;
+        protected BroadWorksConnector.Ocip.Models.VoiceMessagingHoldPeriodDays? _holdPeriodDays;
 
         [XmlElement(ElementName = "holdPeriodDays", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1170")]
-        public BroadWorksConnector.Ocip.Models.VoiceMessagingHoldPeriodDays HoldPeriodDays
+        public BroadWorksConnector.Ocip.Models.VoiceMessagingHoldPeriodDays? HoldPeriodDays
         {
             get => _holdPeriodDays;
             set
             {
-                HoldPeriodDaysSpecified = true;
+                HoldPeriodDaysSpecified = (value != null);
                 _holdPeriodDays = value;
             }
         }
@@ -196,17 +196,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MailServerNetAddressSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.VoiceMessagingMailServerProtocol _mailServerProtocol;
+        protected BroadWorksConnector.Ocip.Models.VoiceMessagingMailServerProtocol? _mailServerProtocol;
 
         [XmlElement(ElementName = "mailServerProtocol", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1170")]
-        public BroadWorksConnector.Ocip.Models.VoiceMessagingMailServerProtocol MailServerProtocol
+        public BroadWorksConnector.Ocip.Models.VoiceMessagingMailServerProtocol? MailServerProtocol
         {
             get => _mailServerProtocol;
             set
             {
-                MailServerProtocolSpecified = true;
+                MailServerProtocolSpecified = (value != null);
                 _mailServerProtocol = value;
             }
         }
@@ -226,7 +226,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultDeliveryFromAddress;
             set
             {
-                DefaultDeliveryFromAddressSpecified = true;
+                DefaultDeliveryFromAddressSpecified = (value != null);
                 _defaultDeliveryFromAddress = value;
             }
         }
@@ -246,7 +246,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultNotificationFromAddress;
             set
             {
-                DefaultNotificationFromAddressSpecified = true;
+                DefaultNotificationFromAddressSpecified = (value != null);
                 _defaultNotificationFromAddress = value;
             }
         }
@@ -266,7 +266,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultVoicePortalLockoutFromAddress;
             set
             {
-                DefaultVoicePortalLockoutFromAddressSpecified = true;
+                DefaultVoicePortalLockoutFromAddressSpecified = (value != null);
                 _defaultVoicePortalLockoutFromAddress = value;
             }
         }
@@ -274,17 +274,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultVoicePortalLockoutFromAddressSpecified { get; set; }
 
-        protected bool _useOutgoingMWIOnSMDI;
+        protected bool? _useOutgoingMWIOnSMDI;
 
         [XmlElement(ElementName = "useOutgoingMWIOnSMDI", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1170")]
-        public bool UseOutgoingMWIOnSMDI
+        public bool? UseOutgoingMWIOnSMDI
         {
             get => _useOutgoingMWIOnSMDI;
             set
             {
-                UseOutgoingMWIOnSMDISpecified = true;
+                UseOutgoingMWIOnSMDISpecified = (value != null);
                 _useOutgoingMWIOnSMDI = value;
             }
         }
@@ -292,19 +292,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseOutgoingMWIOnSMDISpecified { get; set; }
 
-        protected int _mwiDelayInSeconds;
+        protected int? _mwiDelayInSeconds;
 
         [XmlElement(ElementName = "mwiDelayInSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1170")]
         [MinInclusive(0)]
         [MaxInclusive(300)]
-        public int MwiDelayInSeconds
+        public int? MwiDelayInSeconds
         {
             get => _mwiDelayInSeconds;
             set
             {
-                MwiDelayInSecondsSpecified = true;
+                MwiDelayInSecondsSpecified = (value != null);
                 _mwiDelayInSeconds = value;
             }
         }
@@ -312,17 +312,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MwiDelayInSecondsSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.SystemVoicePortalScope _voicePortalScope;
+        protected BroadWorksConnector.Ocip.Models.SystemVoicePortalScope? _voicePortalScope;
 
         [XmlElement(ElementName = "voicePortalScope", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1170")]
-        public BroadWorksConnector.Ocip.Models.SystemVoicePortalScope VoicePortalScope
+        public BroadWorksConnector.Ocip.Models.SystemVoicePortalScope? VoicePortalScope
         {
             get => _voicePortalScope;
             set
             {
-                VoicePortalScopeSpecified = true;
+                VoicePortalScopeSpecified = (value != null);
                 _voicePortalScope = value;
             }
         }
@@ -330,17 +330,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VoicePortalScopeSpecified { get; set; }
 
-        protected bool _networkWideMessaging;
+        protected bool? _networkWideMessaging;
 
         [XmlElement(ElementName = "networkWideMessaging", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1170")]
-        public bool NetworkWideMessaging
+        public bool? NetworkWideMessaging
         {
             get => _networkWideMessaging;
             set
             {
-                NetworkWideMessagingSpecified = true;
+                NetworkWideMessagingSpecified = (value != null);
                 _networkWideMessaging = value;
             }
         }
@@ -348,17 +348,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetworkWideMessagingSpecified { get; set; }
 
-        protected bool _useExternalRouting;
+        protected bool? _useExternalRouting;
 
         [XmlElement(ElementName = "useExternalRouting", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1170")]
-        public bool UseExternalRouting
+        public bool? UseExternalRouting
         {
             get => _useExternalRouting;
             set
             {
-                UseExternalRoutingSpecified = true;
+                UseExternalRoutingSpecified = (value != null);
                 _useExternalRouting = value;
             }
         }
@@ -386,17 +386,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultExternalRoutingAddressSpecified { get; set; }
 
-        protected bool _vmOnlySystem;
+        protected bool? _vmOnlySystem;
 
         [XmlElement(ElementName = "vmOnlySystem", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1170")]
-        public bool VmOnlySystem
+        public bool? VmOnlySystem
         {
             get => _vmOnlySystem;
             set
             {
-                VmOnlySystemSpecified = true;
+                VmOnlySystemSpecified = (value != null);
                 _vmOnlySystem = value;
             }
         }
@@ -404,19 +404,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VmOnlySystemSpecified { get; set; }
 
-        protected int _clientInitiatedMailServerSessionTimeoutMinutes;
+        protected int? _clientInitiatedMailServerSessionTimeoutMinutes;
 
         [XmlElement(ElementName = "clientInitiatedMailServerSessionTimeoutMinutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1170")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
-        public int ClientInitiatedMailServerSessionTimeoutMinutes
+        public int? ClientInitiatedMailServerSessionTimeoutMinutes
         {
             get => _clientInitiatedMailServerSessionTimeoutMinutes;
             set
             {
-                ClientInitiatedMailServerSessionTimeoutMinutesSpecified = true;
+                ClientInitiatedMailServerSessionTimeoutMinutesSpecified = (value != null);
                 _clientInitiatedMailServerSessionTimeoutMinutes = value;
             }
         }
@@ -424,17 +424,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ClientInitiatedMailServerSessionTimeoutMinutesSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.VoiceMessagingRecordingAudioFileFormat _recordingAudioFileFormat;
+        protected BroadWorksConnector.Ocip.Models.VoiceMessagingRecordingAudioFileFormat? _recordingAudioFileFormat;
 
         [XmlElement(ElementName = "recordingAudioFileFormat", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1170")]
-        public BroadWorksConnector.Ocip.Models.VoiceMessagingRecordingAudioFileFormat RecordingAudioFileFormat
+        public BroadWorksConnector.Ocip.Models.VoiceMessagingRecordingAudioFileFormat? RecordingAudioFileFormat
         {
             get => _recordingAudioFileFormat;
             set
             {
-                RecordingAudioFileFormatSpecified = true;
+                RecordingAudioFileFormatSpecified = (value != null);
                 _recordingAudioFileFormat = value;
             }
         }
@@ -442,17 +442,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecordingAudioFileFormatSpecified { get; set; }
 
-        protected bool _allowVoicePortalAccessFromVMDepositMenu;
+        protected bool? _allowVoicePortalAccessFromVMDepositMenu;
 
         [XmlElement(ElementName = "allowVoicePortalAccessFromVMDepositMenu", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1170")]
-        public bool AllowVoicePortalAccessFromVMDepositMenu
+        public bool? AllowVoicePortalAccessFromVMDepositMenu
         {
             get => _allowVoicePortalAccessFromVMDepositMenu;
             set
             {
-                AllowVoicePortalAccessFromVMDepositMenuSpecified = true;
+                AllowVoicePortalAccessFromVMDepositMenuSpecified = (value != null);
                 _allowVoicePortalAccessFromVMDepositMenu = value;
             }
         }
@@ -460,17 +460,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowVoicePortalAccessFromVMDepositMenuSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.VoiceMessagingStorageMode _storageSelection;
+        protected BroadWorksConnector.Ocip.Models.VoiceMessagingStorageMode? _storageSelection;
 
         [XmlElement(ElementName = "storageSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1170")]
-        public BroadWorksConnector.Ocip.Models.VoiceMessagingStorageMode StorageSelection
+        public BroadWorksConnector.Ocip.Models.VoiceMessagingStorageMode? StorageSelection
         {
             get => _storageSelection;
             set
             {
-                StorageSelectionSpecified = true;
+                StorageSelectionSpecified = (value != null);
                 _storageSelection = value;
             }
         }
@@ -498,17 +498,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VmBucketNameSpecified { get; set; }
 
-        protected bool _allowVoicePortalAutoLoginForMobileDevicesOnly;
+        protected bool? _allowVoicePortalAutoLoginForMobileDevicesOnly;
 
         [XmlElement(ElementName = "allowVoicePortalAutoLoginForMobileDevicesOnly", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1170")]
-        public bool AllowVoicePortalAutoLoginForMobileDevicesOnly
+        public bool? AllowVoicePortalAutoLoginForMobileDevicesOnly
         {
             get => _allowVoicePortalAutoLoginForMobileDevicesOnly;
             set
             {
-                AllowVoicePortalAutoLoginForMobileDevicesOnlySpecified = true;
+                AllowVoicePortalAutoLoginForMobileDevicesOnlySpecified = (value != null);
                 _allowVoicePortalAutoLoginForMobileDevicesOnly = value;
             }
         }

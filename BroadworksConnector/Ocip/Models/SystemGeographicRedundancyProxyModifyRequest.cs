@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemGeographicRedundancyProxyModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _enabled;
+        protected bool? _enabled;
 
         [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:10703")]
-        public bool Enabled
+        public bool? Enabled
         {
             get => _enabled;
             set
             {
-                EnabledSpecified = true;
+                EnabledSpecified = (value != null);
                 _enabled = value;
             }
         }

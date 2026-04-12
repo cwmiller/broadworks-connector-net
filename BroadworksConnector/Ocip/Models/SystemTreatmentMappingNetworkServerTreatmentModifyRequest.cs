@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _treatmentId;
             set
             {
-                TreatmentIdSpecified = true;
+                TreatmentIdSpecified = (value != null);
                 _treatmentId = value;
             }
         }

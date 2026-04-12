@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _voiceMessaging;
             set
             {
-                VoiceMessagingSpecified = true;
+                VoiceMessagingSpecified = (value != null);
                 _voiceMessaging = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _commPilotExpressProfile;
             set
             {
-                CommPilotExpressProfileSpecified = true;
+                CommPilotExpressProfileSpecified = (value != null);
                 _commPilotExpressProfile = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _personalizedName;
             set
             {
-                PersonalizedNameSpecified = true;
+                PersonalizedNameSpecified = (value != null);
                 _personalizedName = value;
             }
         }
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callForwardingOptions;
             set
             {
-                CallForwardingOptionsSpecified = true;
+                CallForwardingOptionsSpecified = (value != null);
                 _callForwardingOptions = value;
             }
         }
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _voicePortalCalling;
             set
             {
-                VoicePortalCallingSpecified = true;
+                VoicePortalCallingSpecified = (value != null);
                 _voicePortalCalling = value;
             }
         }
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hoteling;
             set
             {
-                HotelingSpecified = true;
+                HotelingSpecified = (value != null);
                 _hoteling = value;
             }
         }
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _passcode;
             set
             {
-                PasscodeSpecified = true;
+                PasscodeSpecified = (value != null);
                 _passcode = value;
             }
         }
@@ -168,7 +168,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _exitVoicePortal;
             set
             {
-                ExitVoicePortalSpecified = true;
+                ExitVoicePortalSpecified = (value != null);
                 _exitVoicePortal = value;
             }
         }
@@ -188,7 +188,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _repeatMenu;
             set
             {
-                RepeatMenuSpecified = true;
+                RepeatMenuSpecified = (value != null);
                 _repeatMenu = value;
             }
         }
@@ -208,7 +208,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _externalRouting;
             set
             {
-                ExternalRoutingSpecified = true;
+                ExternalRoutingSpecified = (value != null);
                 _externalRouting = value;
             }
         }

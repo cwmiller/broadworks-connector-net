@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkServerAlternateCallIndicator;
             set
             {
-                NetworkServerAlternateCallIndicatorSpecified = true;
+                NetworkServerAlternateCallIndicatorSpecified = (value != null);
                 _networkServerAlternateCallIndicator = value;
             }
         }

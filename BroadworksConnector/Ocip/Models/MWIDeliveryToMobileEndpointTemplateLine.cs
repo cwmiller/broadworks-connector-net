@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _prefix;
             set
             {
-                PrefixSpecified = true;
+                PrefixSpecified = (value != null);
                 _prefix = value;
             }
         }
@@ -36,17 +36,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PrefixSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateTag _tag;
+        protected BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateTag? _tag;
 
         [XmlElement(ElementName = "tag", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:431")]
-        public BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateTag Tag
+        public BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateTag? Tag
         {
             get => _tag;
             set
             {
-                TagSpecified = true;
+                TagSpecified = (value != null);
                 _tag = value;
             }
         }
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _postfix;
             set
             {
-                PostfixSpecified = true;
+                PostfixSpecified = (value != null);
                 _postfix = value;
             }
         }

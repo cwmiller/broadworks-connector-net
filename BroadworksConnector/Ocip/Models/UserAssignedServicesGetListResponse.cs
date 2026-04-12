@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupServiceEntry;
             set
             {
-                GroupServiceEntrySpecified = true;
+                GroupServiceEntrySpecified = (value != null);
                 _groupServiceEntry = value;
             }
         }
@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userServiceEntry;
             set
             {
-                UserServiceEntrySpecified = true;
+                UserServiceEntrySpecified = (value != null);
                 _userServiceEntry = value;
             }
         }

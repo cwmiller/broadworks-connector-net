@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _roomName;
             set
             {
-                RoomNameSpecified = true;
+                RoomNameSpecified = (value != null);
                 _roomName = value;
             }
         }
@@ -78,17 +78,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RoomNameSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CollaborateRoomAttendeeNotification _attendeeNotification;
+        protected BroadWorksConnector.Ocip.Models.CollaborateRoomAttendeeNotification? _attendeeNotification;
 
         [XmlElement(ElementName = "attendeeNotification", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"bc805893b9cc7e3e01eec64e9ad62768:886")]
-        public BroadWorksConnector.Ocip.Models.CollaborateRoomAttendeeNotification AttendeeNotification
+        public BroadWorksConnector.Ocip.Models.CollaborateRoomAttendeeNotification? AttendeeNotification
         {
             get => _attendeeNotification;
             set
             {
-                AttendeeNotificationSpecified = true;
+                AttendeeNotificationSpecified = (value != null);
                 _attendeeNotification = value;
             }
         }
@@ -96,17 +96,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AttendeeNotificationSpecified { get; set; }
 
-        protected bool _endCollaborateRoomSessionOnOwnerExit;
+        protected bool? _endCollaborateRoomSessionOnOwnerExit;
 
         [XmlElement(ElementName = "endCollaborateRoomSessionOnOwnerExit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"bc805893b9cc7e3e01eec64e9ad62768:886")]
-        public bool EndCollaborateRoomSessionOnOwnerExit
+        public bool? EndCollaborateRoomSessionOnOwnerExit
         {
             get => _endCollaborateRoomSessionOnOwnerExit;
             set
             {
-                EndCollaborateRoomSessionOnOwnerExitSpecified = true;
+                EndCollaborateRoomSessionOnOwnerExitSpecified = (value != null);
                 _endCollaborateRoomSessionOnOwnerExit = value;
             }
         }
@@ -114,17 +114,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EndCollaborateRoomSessionOnOwnerExitSpecified { get; set; }
 
-        protected bool _ownerRequired;
+        protected bool? _ownerRequired;
 
         [XmlElement(ElementName = "ownerRequired", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"bc805893b9cc7e3e01eec64e9ad62768:886")]
-        public bool OwnerRequired
+        public bool? OwnerRequired
         {
             get => _ownerRequired;
             set
             {
-                OwnerRequiredSpecified = true;
+                OwnerRequiredSpecified = (value != null);
                 _ownerRequired = value;
             }
         }
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _roomSchedule;
             set
             {
-                RoomScheduleSpecified = true;
+                RoomScheduleSpecified = (value != null);
                 _roomSchedule = value;
             }
         }

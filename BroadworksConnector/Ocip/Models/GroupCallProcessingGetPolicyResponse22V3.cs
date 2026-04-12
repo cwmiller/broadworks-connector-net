@@ -312,7 +312,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _supportedMediaSetName;
             set
             {
-                SupportedMediaSetNameSpecified = true;
+                SupportedMediaSetNameSpecified = (value != null);
                 _supportedMediaSetName = value;
             }
         }
@@ -388,17 +388,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowEnterpriseGroupCallTypingForPublicDialingPlanSpecified { get; set; }
 
-        protected bool _overrideCLIDRestrictionForPrivateCallCategory;
+        protected bool? _overrideCLIDRestrictionForPrivateCallCategory;
 
         [XmlElement(ElementName = "overrideCLIDRestrictionForPrivateCallCategory", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:2329")]
-        public bool OverrideCLIDRestrictionForPrivateCallCategory
+        public bool? OverrideCLIDRestrictionForPrivateCallCategory
         {
             get => _overrideCLIDRestrictionForPrivateCallCategory;
             set
             {
-                OverrideCLIDRestrictionForPrivateCallCategorySpecified = true;
+                OverrideCLIDRestrictionForPrivateCallCategorySpecified = (value != null);
                 _overrideCLIDRestrictionForPrivateCallCategory = value;
             }
         }
@@ -406,17 +406,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OverrideCLIDRestrictionForPrivateCallCategorySpecified { get; set; }
 
-        protected bool _useEnterpriseCLIDForPrivateCallCategory;
+        protected bool? _useEnterpriseCLIDForPrivateCallCategory;
 
         [XmlElement(ElementName = "useEnterpriseCLIDForPrivateCallCategory", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:2329")]
-        public bool UseEnterpriseCLIDForPrivateCallCategory
+        public bool? UseEnterpriseCLIDForPrivateCallCategory
         {
             get => _useEnterpriseCLIDForPrivateCallCategory;
             set
             {
-                UseEnterpriseCLIDForPrivateCallCategorySpecified = true;
+                UseEnterpriseCLIDForPrivateCallCategorySpecified = (value != null);
                 _useEnterpriseCLIDForPrivateCallCategory = value;
             }
         }
@@ -871,7 +871,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _routeOverrideDomain;
             set
             {
-                RouteOverrideDomainSpecified = true;
+                RouteOverrideDomainSpecified = (value != null);
                 _routeOverrideDomain = value;
             }
         }
@@ -891,7 +891,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _routeOverridePrefix;
             set
             {
-                RouteOverridePrefixSpecified = true;
+                RouteOverridePrefixSpecified = (value != null);
                 _routeOverridePrefix = value;
             }
         }
@@ -916,17 +916,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowMobileDNForRedirectingIdentitySpecified { get; set; }
 
-        protected bool _enableGatewayRoutePolicy;
+        protected bool? _enableGatewayRoutePolicy;
 
         [XmlElement(ElementName = "enableGatewayRoutePolicy", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:2329")]
-        public bool EnableGatewayRoutePolicy
+        public bool? EnableGatewayRoutePolicy
         {
             get => _enableGatewayRoutePolicy;
             set
             {
-                EnableGatewayRoutePolicySpecified = true;
+                EnableGatewayRoutePolicySpecified = (value != null);
                 _enableGatewayRoutePolicy = value;
             }
         }
@@ -946,7 +946,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkCallsGatewayRouteIdentity;
             set
             {
-                NetworkCallsGatewayRouteIdentitySpecified = true;
+                NetworkCallsGatewayRouteIdentitySpecified = (value != null);
                 _networkCallsGatewayRouteIdentity = value;
             }
         }
@@ -966,7 +966,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkURLCallsGatewayRouteIdentity;
             set
             {
-                NetworkURLCallsGatewayRouteIdentitySpecified = true;
+                NetworkURLCallsGatewayRouteIdentitySpecified = (value != null);
                 _networkURLCallsGatewayRouteIdentity = value;
             }
         }
@@ -986,7 +986,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _emergencyCallsGatewayRouteIdentity;
             set
             {
-                EmergencyCallsGatewayRouteIdentitySpecified = true;
+                EmergencyCallsGatewayRouteIdentitySpecified = (value != null);
                 _emergencyCallsGatewayRouteIdentity = value;
             }
         }
@@ -1006,7 +1006,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _repairCallsGatewayRouteIdentity;
             set
             {
-                RepairCallsGatewayRouteIdentitySpecified = true;
+                RepairCallsGatewayRouteIdentitySpecified = (value != null);
                 _repairCallsGatewayRouteIdentity = value;
             }
         }
@@ -1026,7 +1026,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callTypingErrorsGatewayRouteIdentity;
             set
             {
-                CallTypingErrorsGatewayRouteIdentitySpecified = true;
+                CallTypingErrorsGatewayRouteIdentitySpecified = (value != null);
                 _callTypingErrorsGatewayRouteIdentity = value;
             }
         }

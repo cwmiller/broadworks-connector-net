@@ -95,17 +95,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FileFormatSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode _fileSource;
+        protected BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode? _fileSource;
 
         [XmlElement(ElementName = "fileSource", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:4158")]
-        public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode FileSource
+        public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode? FileSource
         {
             get => _fileSource;
             set
             {
-                FileSourceSpecified = true;
+                FileSourceSpecified = (value != null);
                 _fileSource = value;
             }
         }
@@ -123,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _uploadFile;
             set
             {
-                UploadFileSpecified = true;
+                UploadFileSpecified = (value != null);
                 _uploadFile = value;
             }
         }

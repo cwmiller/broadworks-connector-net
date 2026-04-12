@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newCriteriaName;
             set
             {
-                NewCriteriaNameSpecified = true;
+                NewCriteriaNameSpecified = (value != null);
                 _newCriteriaName = value;
             }
         }
@@ -115,17 +115,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HolidayScheduleSpecified { get; set; }
 
-        protected bool _filter;
+        protected bool? _filter;
 
         [XmlElement(ElementName = "filter", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:398")]
-        public bool Filter
+        public bool? Filter
         {
             get => _filter;
             set
             {
-                FilterSpecified = true;
+                FilterSpecified = (value != null);
                 _filter = value;
             }
         }
@@ -143,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _fromDnCriteria;
             set
             {
-                FromDnCriteriaSpecified = true;
+                FromDnCriteriaSpecified = (value != null);
                 _fromDnCriteria = value;
             }
         }

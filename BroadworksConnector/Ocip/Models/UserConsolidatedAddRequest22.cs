@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupProperties;
             set
             {
-                GroupPropertiesSpecified = true;
+                GroupPropertiesSpecified = (value != null);
                 _groupProperties = value;
             }
         }
@@ -188,7 +188,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userExternalId;
             set
             {
-                UserExternalIdSpecified = true;
+                UserExternalIdSpecified = (value != null);
                 _userExternalId = value;
             }
         }
@@ -196,17 +196,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserExternalIdSpecified { get; set; }
 
-        protected bool _addPhoneNumberToGroup;
+        protected bool? _addPhoneNumberToGroup;
 
         [XmlElement(ElementName = "addPhoneNumberToGroup", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1334")]
-        public bool AddPhoneNumberToGroup
+        public bool? AddPhoneNumberToGroup
         {
             get => _addPhoneNumberToGroup;
             set
             {
-                AddPhoneNumberToGroupSpecified = true;
+                AddPhoneNumberToGroupSpecified = (value != null);
                 _addPhoneNumberToGroup = value;
             }
         }
@@ -300,7 +300,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _nameDialingName;
             set
             {
-                NameDialingNameSpecified = true;
+                NameDialingNameSpecified = (value != null);
                 _nameDialingName = value;
             }
         }
@@ -320,7 +320,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hiraganaLastName;
             set
             {
-                HiraganaLastNameSpecified = true;
+                HiraganaLastNameSpecified = (value != null);
                 _hiraganaLastName = value;
             }
         }
@@ -340,7 +340,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hiraganaFirstName;
             set
             {
-                HiraganaFirstNameSpecified = true;
+                HiraganaFirstNameSpecified = (value != null);
                 _hiraganaFirstName = value;
             }
         }
@@ -360,7 +360,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _phoneNumber;
             set
             {
-                PhoneNumberSpecified = true;
+                PhoneNumberSpecified = (value != null);
                 _phoneNumber = value;
             }
         }
@@ -378,7 +378,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _alternateUserId;
             set
             {
-                AlternateUserIdSpecified = true;
+                AlternateUserIdSpecified = (value != null);
                 _alternateUserId = value;
             }
         }
@@ -398,7 +398,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _extension;
             set
             {
-                ExtensionSpecified = true;
+                ExtensionSpecified = (value != null);
                 _extension = value;
             }
         }
@@ -418,7 +418,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callingLineIdPhoneNumber;
             set
             {
-                CallingLineIdPhoneNumberSpecified = true;
+                CallingLineIdPhoneNumberSpecified = (value != null);
                 _callingLineIdPhoneNumber = value;
             }
         }
@@ -438,7 +438,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _password;
             set
             {
-                PasswordSpecified = true;
+                PasswordSpecified = (value != null);
                 _password = value;
             }
         }
@@ -458,7 +458,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _passcode;
             set
             {
-                PasscodeSpecified = true;
+                PasscodeSpecified = (value != null);
                 _passcode = value;
             }
         }
@@ -476,7 +476,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _department;
             set
             {
-                DepartmentSpecified = true;
+                DepartmentSpecified = (value != null);
                 _department = value;
             }
         }
@@ -496,7 +496,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _language;
             set
             {
-                LanguageSpecified = true;
+                LanguageSpecified = (value != null);
                 _language = value;
             }
         }
@@ -516,7 +516,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeZone;
             set
             {
-                TimeZoneSpecified = true;
+                TimeZoneSpecified = (value != null);
                 _timeZone = value;
             }
         }
@@ -536,7 +536,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _alias;
             set
             {
-                AliasSpecified = true;
+                AliasSpecified = (value != null);
                 _alias = value;
             }
         }
@@ -554,7 +554,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _accessDeviceEndpoint;
             set
             {
-                AccessDeviceEndpointSpecified = true;
+                AccessDeviceEndpointSpecified = (value != null);
                 _accessDeviceEndpoint = value;
             }
         }
@@ -572,7 +572,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _trunkAddressing;
             set
             {
-                TrunkAddressingSpecified = true;
+                TrunkAddressingSpecified = (value != null);
                 _trunkAddressing = value;
             }
         }
@@ -590,7 +590,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _sharedCallAppearanceAccessDeviceEndpoint;
             set
             {
-                SharedCallAppearanceAccessDeviceEndpointSpecified = true;
+                SharedCallAppearanceAccessDeviceEndpointSpecified = (value != null);
                 _sharedCallAppearanceAccessDeviceEndpoint = value;
             }
         }
@@ -610,7 +610,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _title;
             set
             {
-                TitleSpecified = true;
+                TitleSpecified = (value != null);
                 _title = value;
             }
         }
@@ -630,7 +630,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _pagerPhoneNumber;
             set
             {
-                PagerPhoneNumberSpecified = true;
+                PagerPhoneNumberSpecified = (value != null);
                 _pagerPhoneNumber = value;
             }
         }
@@ -650,7 +650,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _mobilePhoneNumber;
             set
             {
-                MobilePhoneNumberSpecified = true;
+                MobilePhoneNumberSpecified = (value != null);
                 _mobilePhoneNumber = value;
             }
         }
@@ -670,7 +670,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _emailAddress;
             set
             {
-                EmailAddressSpecified = true;
+                EmailAddressSpecified = (value != null);
                 _emailAddress = value;
             }
         }
@@ -690,7 +690,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _yahooId;
             set
             {
-                YahooIdSpecified = true;
+                YahooIdSpecified = (value != null);
                 _yahooId = value;
             }
         }
@@ -710,7 +710,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _addressLocation;
             set
             {
-                AddressLocationSpecified = true;
+                AddressLocationSpecified = (value != null);
                 _addressLocation = value;
             }
         }
@@ -728,7 +728,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _address;
             set
             {
-                AddressSpecified = true;
+                AddressSpecified = (value != null);
                 _address = value;
             }
         }
@@ -748,7 +748,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkClassOfService;
             set
             {
-                NetworkClassOfServiceSpecified = true;
+                NetworkClassOfServiceSpecified = (value != null);
                 _networkClassOfService = value;
             }
         }
@@ -766,7 +766,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userService;
             set
             {
-                UserServiceSpecified = true;
+                UserServiceSpecified = (value != null);
                 _userService = value;
             }
         }
@@ -784,7 +784,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _servicePack;
             set
             {
-                ServicePackSpecified = true;
+                ServicePackSpecified = (value != null);
                 _servicePack = value;
             }
         }
@@ -792,17 +792,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServicePackSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportServerSelection _thirdPartyVoiceMailServerSelection;
+        protected BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportServerSelection? _thirdPartyVoiceMailServerSelection;
 
         [XmlElement(ElementName = "thirdPartyVoiceMailServerSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1334")]
-        public BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportServerSelection ThirdPartyVoiceMailServerSelection
+        public BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportServerSelection? ThirdPartyVoiceMailServerSelection
         {
             get => _thirdPartyVoiceMailServerSelection;
             set
             {
-                ThirdPartyVoiceMailServerSelectionSpecified = true;
+                ThirdPartyVoiceMailServerSelectionSpecified = (value != null);
                 _thirdPartyVoiceMailServerSelection = value;
             }
         }
@@ -830,17 +830,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThirdPartyVoiceMailServerUserServerSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportMailboxIdType _thirdPartyVoiceMailServerMailboxIdType;
+        protected BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportMailboxIdType? _thirdPartyVoiceMailServerMailboxIdType;
 
         [XmlElement(ElementName = "thirdPartyVoiceMailServerMailboxIdType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1334")]
-        public BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportMailboxIdType ThirdPartyVoiceMailServerMailboxIdType
+        public BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportMailboxIdType? ThirdPartyVoiceMailServerMailboxIdType
         {
             get => _thirdPartyVoiceMailServerMailboxIdType;
             set
             {
-                ThirdPartyVoiceMailServerMailboxIdTypeSpecified = true;
+                ThirdPartyVoiceMailServerMailboxIdTypeSpecified = (value != null);
                 _thirdPartyVoiceMailServerMailboxIdType = value;
             }
         }
@@ -878,7 +878,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _sipAuthenticationData;
             set
             {
-                SipAuthenticationDataSpecified = true;
+                SipAuthenticationDataSpecified = (value != null);
                 _sipAuthenticationData = value;
             }
         }
@@ -886,17 +886,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SipAuthenticationDataSpecified { get; set; }
 
-        protected bool _isPlace;
+        protected bool? _isPlace;
 
         [XmlElement(ElementName = "isPlace", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1334")]
-        public bool IsPlace
+        public bool? IsPlace
         {
             get => _isPlace;
             set
             {
-                IsPlaceSpecified = true;
+                IsPlaceSpecified = (value != null);
                 _isPlace = value;
             }
         }

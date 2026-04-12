@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userId;
             set
             {
-                UserIdSpecified = true;
+                UserIdSpecified = (value != null);
                 _userId = value;
             }
         }
@@ -39,17 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected int _totalNumberOfMigratedUsers;
+        protected int? _totalNumberOfMigratedUsers;
 
         [XmlElement(ElementName = "totalNumberOfMigratedUsers", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:12394")]
-        public int TotalNumberOfMigratedUsers
+        public int? TotalNumberOfMigratedUsers
         {
             get => _totalNumberOfMigratedUsers;
             set
             {
-                TotalNumberOfMigratedUsersSpecified = true;
+                TotalNumberOfMigratedUsersSpecified = (value != null);
                 _totalNumberOfMigratedUsers = value;
             }
         }

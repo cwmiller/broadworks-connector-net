@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _responsePagingControl;
             set
             {
-                ResponsePagingControlSpecified = true;
+                ResponsePagingControlSpecified = (value != null);
                 _responsePagingControl = value;
             }
         }
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _sortOrder;
             set
             {
-                SortOrderSpecified = true;
+                SortOrderSpecified = (value != null);
                 _sortOrder = value;
             }
         }
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaUserId;
             set
             {
-                SearchCriteriaUserIdSpecified = true;
+                SearchCriteriaUserIdSpecified = (value != null);
                 _searchCriteriaUserId = value;
             }
         }
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaUserLastName;
             set
             {
-                SearchCriteriaUserLastNameSpecified = true;
+                SearchCriteriaUserLastNameSpecified = (value != null);
                 _searchCriteriaUserLastName = value;
             }
         }
@@ -170,7 +170,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaUserFirstName;
             set
             {
-                SearchCriteriaUserFirstNameSpecified = true;
+                SearchCriteriaUserFirstNameSpecified = (value != null);
                 _searchCriteriaUserFirstName = value;
             }
         }
@@ -188,7 +188,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaDn;
             set
             {
-                SearchCriteriaDnSpecified = true;
+                SearchCriteriaDnSpecified = (value != null);
                 _searchCriteriaDn = value;
             }
         }
@@ -206,7 +206,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExtension;
             set
             {
-                SearchCriteriaExtensionSpecified = true;
+                SearchCriteriaExtensionSpecified = (value != null);
                 _searchCriteriaExtension = value;
             }
         }
@@ -224,7 +224,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaDepartmentName;
             set
             {
-                SearchCriteriaDepartmentNameSpecified = true;
+                SearchCriteriaDepartmentNameSpecified = (value != null);
                 _searchCriteriaDepartmentName = value;
             }
         }
@@ -242,7 +242,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaEmailAddress;
             set
             {
-                SearchCriteriaEmailAddressSpecified = true;
+                SearchCriteriaEmailAddressSpecified = (value != null);
                 _searchCriteriaEmailAddress = value;
             }
         }
@@ -260,7 +260,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactUserGroup;
             set
             {
-                SearchCriteriaExactUserGroupSpecified = true;
+                SearchCriteriaExactUserGroupSpecified = (value != null);
                 _searchCriteriaExactUserGroup = value;
             }
         }
@@ -268,17 +268,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaExactUserGroupSpecified { get; set; }
 
-        protected bool _searchCriteriaModeOr;
+        protected bool? _searchCriteriaModeOr;
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:4184")]
-        public bool SearchCriteriaModeOr
+        public bool? SearchCriteriaModeOr
         {
             get => _searchCriteriaModeOr;
             set
             {
-                SearchCriteriaModeOrSpecified = true;
+                SearchCriteriaModeOrSpecified = (value != null);
                 _searchCriteriaModeOr = value;
             }
         }

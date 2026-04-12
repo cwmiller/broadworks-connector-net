@@ -27,7 +27,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceOffering;
             set
             {
-                ServiceOfferingSpecified = true;
+                ServiceOfferingSpecified = (value != null);
                 _serviceOffering = value;
             }
         }

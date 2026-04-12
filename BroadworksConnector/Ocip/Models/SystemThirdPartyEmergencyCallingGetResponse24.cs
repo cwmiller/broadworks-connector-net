@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _primaryHELDServerURL;
             set
             {
-                PrimaryHELDServerURLSpecified = true;
+                PrimaryHELDServerURLSpecified = (value != null);
                 _primaryHELDServerURL = value;
             }
         }
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _secondaryHELDServerURL;
             set
             {
-                SecondaryHELDServerURLSpecified = true;
+                SecondaryHELDServerURLSpecified = (value != null);
                 _secondaryHELDServerURL = value;
             }
         }
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _emergencyRouteNetAddress;
             set
             {
-                EmergencyRouteNetAddressSpecified = true;
+                EmergencyRouteNetAddressSpecified = (value != null);
                 _emergencyRouteNetAddress = value;
             }
         }
@@ -78,19 +78,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EmergencyRouteNetAddressSpecified { get; set; }
 
-        protected int _emergencyRoutePort;
+        protected int? _emergencyRoutePort;
 
         [XmlElement(ElementName = "emergencyRoutePort", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18776")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
-        public int EmergencyRoutePort
+        public int? EmergencyRoutePort
         {
             get => _emergencyRoutePort;
             set
             {
-                EmergencyRoutePortSpecified = true;
+                EmergencyRoutePortSpecified = (value != null);
                 _emergencyRoutePort = value;
             }
         }
@@ -98,17 +98,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EmergencyRoutePortSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol _emergencyRouteTransport;
+        protected BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol? _emergencyRouteTransport;
 
         [XmlElement(ElementName = "emergencyRouteTransport", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18776")]
-        public BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol EmergencyRouteTransport
+        public BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol? EmergencyRouteTransport
         {
             get => _emergencyRouteTransport;
             set
             {
-                EmergencyRouteTransportSpecified = true;
+                EmergencyRouteTransportSpecified = (value != null);
                 _emergencyRouteTransport = value;
             }
         }

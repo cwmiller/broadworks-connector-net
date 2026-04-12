@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _agentWeight;
             set
             {
-                AgentWeightSpecified = true;
+                AgentWeightSpecified = (value != null);
                 _agentWeight = value;
             }
         }

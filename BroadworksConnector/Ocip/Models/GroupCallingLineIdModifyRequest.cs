@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected bool _useGroupNumber;
+        protected bool? _useGroupNumber;
 
         [XmlElement(ElementName = "useGroupNumber", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:7498")]
-        public bool UseGroupNumber
+        public bool? UseGroupNumber
         {
             get => _useGroupNumber;
             set
             {
-                UseGroupNumberSpecified = true;
+                UseGroupNumberSpecified = (value != null);
                 _useGroupNumber = value;
             }
         }
@@ -75,17 +75,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseGroupNumberSpecified { get; set; }
 
-        protected bool _useGroupName;
+        protected bool? _useGroupName;
 
         [XmlElement(ElementName = "useGroupName", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:7498")]
-        public bool UseGroupName
+        public bool? UseGroupName
         {
             get => _useGroupName;
             set
             {
-                UseGroupNameSpecified = true;
+                UseGroupNameSpecified = (value != null);
                 _useGroupName = value;
             }
         }

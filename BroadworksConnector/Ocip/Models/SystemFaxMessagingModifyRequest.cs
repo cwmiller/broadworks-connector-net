@@ -22,19 +22,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemFaxMessagingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected int _statusDurationHours;
+        protected int? _statusDurationHours;
 
         [XmlElement(ElementName = "statusDurationHours", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"b2249333b9e085ee149c29960c00214e:81")]
         [MinInclusive(1)]
         [MaxInclusive(24)]
-        public int StatusDurationHours
+        public int? StatusDurationHours
         {
             get => _statusDurationHours;
             set
             {
-                StatusDurationHoursSpecified = true;
+                StatusDurationHoursSpecified = (value != null);
                 _statusDurationHours = value;
             }
         }
@@ -42,19 +42,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StatusDurationHoursSpecified { get; set; }
 
-        protected int _statusAuditIntervalHours;
+        protected int? _statusAuditIntervalHours;
 
         [XmlElement(ElementName = "statusAuditIntervalHours", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"b2249333b9e085ee149c29960c00214e:81")]
         [MinInclusive(1)]
         [MaxInclusive(24)]
-        public int StatusAuditIntervalHours
+        public int? StatusAuditIntervalHours
         {
             get => _statusAuditIntervalHours;
             set
             {
-                StatusAuditIntervalHoursSpecified = true;
+                StatusAuditIntervalHoursSpecified = (value != null);
                 _statusAuditIntervalHours = value;
             }
         }
@@ -62,19 +62,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StatusAuditIntervalHoursSpecified { get; set; }
 
-        protected int _maximumConcurrentFaxesPerUser;
+        protected int? _maximumConcurrentFaxesPerUser;
 
         [XmlElement(ElementName = "maximumConcurrentFaxesPerUser", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"b2249333b9e085ee149c29960c00214e:81")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
-        public int MaximumConcurrentFaxesPerUser
+        public int? MaximumConcurrentFaxesPerUser
         {
             get => _maximumConcurrentFaxesPerUser;
             set
             {
-                MaximumConcurrentFaxesPerUserSpecified = true;
+                MaximumConcurrentFaxesPerUserSpecified = (value != null);
                 _maximumConcurrentFaxesPerUser = value;
             }
         }

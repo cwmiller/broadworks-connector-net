@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeSchedule;
             set
             {
-                TimeScheduleSpecified = true;
+                TimeScheduleSpecified = (value != null);
                 _timeSchedule = value;
             }
         }
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holidaySchedule;
             set
             {
-                HolidayScheduleSpecified = true;
+                HolidayScheduleSpecified = (value != null);
                 _holidaySchedule = value;
             }
         }
@@ -139,7 +139,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callToNumber;
             set
             {
-                CallToNumberSpecified = true;
+                CallToNumberSpecified = (value != null);
                 _callToNumber = value;
             }
         }

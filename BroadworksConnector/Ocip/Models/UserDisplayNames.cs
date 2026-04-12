@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hiraganaLastName;
             set
             {
-                HiraganaLastNameSpecified = true;
+                HiraganaLastNameSpecified = (value != null);
                 _hiraganaLastName = value;
             }
         }
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hiraganaFirstName;
             set
             {
-                HiraganaFirstNameSpecified = true;
+                HiraganaFirstNameSpecified = (value != null);
                 _hiraganaFirstName = value;
             }
         }

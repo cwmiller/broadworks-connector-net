@@ -39,19 +39,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PrimarySMPPServerNetAddressSpecified { get; set; }
 
-        protected int _primarySMPPPort;
+        protected int? _primarySMPPPort;
 
         [XmlElement(ElementName = "primarySMPPPort", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
-        public int PrimarySMPPPort
+        public int? PrimarySMPPPort
         {
             get => _primarySMPPPort;
             set
             {
-                PrimarySMPPPortSpecified = true;
+                PrimarySMPPPortSpecified = (value != null);
                 _primarySMPPPort = value;
             }
         }
@@ -79,19 +79,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SecondarySMPPServerNetAddressSpecified { get; set; }
 
-        protected int _secondarySMPPPort;
+        protected int? _secondarySMPPPort;
 
         [XmlElement(ElementName = "secondarySMPPPort", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
-        public int SecondarySMPPPort
+        public int? SecondarySMPPPort
         {
             get => _secondarySMPPPort;
             set
             {
-                SecondarySMPPPortSpecified = true;
+                SecondarySMPPPortSpecified = (value != null);
                 _secondarySMPPPort = value;
             }
         }
@@ -139,17 +139,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PasswordSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.SMPPVersion _version;
+        protected BroadWorksConnector.Ocip.Models.SMPPVersion? _version;
 
         [XmlElement(ElementName = "version", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
-        public BroadWorksConnector.Ocip.Models.SMPPVersion Version
+        public BroadWorksConnector.Ocip.Models.SMPPVersion? Version
         {
             get => _version;
             set
             {
-                VersionSpecified = true;
+                VersionSpecified = (value != null);
                 _version = value;
             }
         }
@@ -177,17 +177,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SystemTypeSpecified { get; set; }
 
-        protected bool _enableMWICustomizedMessage;
+        protected bool? _enableMWICustomizedMessage;
 
         [XmlElement(ElementName = "enableMWICustomizedMessage", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
-        public bool EnableMWICustomizedMessage
+        public bool? EnableMWICustomizedMessage
         {
             get => _enableMWICustomizedMessage;
             set
             {
-                EnableMWICustomizedMessageSpecified = true;
+                EnableMWICustomizedMessageSpecified = (value != null);
                 _enableMWICustomizedMessage = value;
             }
         }
@@ -195,17 +195,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableMWICustomizedMessageSpecified { get; set; }
 
-        protected bool _supportMessagePayload;
+        protected bool? _supportMessagePayload;
 
         [XmlElement(ElementName = "supportMessagePayload", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
-        public bool SupportMessagePayload
+        public bool? SupportMessagePayload
         {
             get => _supportMessagePayload;
             set
             {
-                SupportMessagePayloadSpecified = true;
+                SupportMessagePayloadSpecified = (value != null);
                 _supportMessagePayload = value;
             }
         }
@@ -213,19 +213,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SupportMessagePayloadSpecified { get; set; }
 
-        protected int _maxShortMessageLength;
+        protected int? _maxShortMessageLength;
 
         [XmlElement(ElementName = "maxShortMessageLength", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
         [MinInclusive(1)]
         [MaxInclusive(70)]
-        public int MaxShortMessageLength
+        public int? MaxShortMessageLength
         {
             get => _maxShortMessageLength;
             set
             {
-                MaxShortMessageLengthSpecified = true;
+                MaxShortMessageLengthSpecified = (value != null);
                 _maxShortMessageLength = value;
             }
         }
@@ -233,17 +233,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxShortMessageLengthSpecified { get; set; }
 
-        protected bool _useGsmMwiUcs2Encoding;
+        protected bool? _useGsmMwiUcs2Encoding;
 
         [XmlElement(ElementName = "useGsmMwiUcs2Encoding", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
-        public bool UseGsmMwiUcs2Encoding
+        public bool? UseGsmMwiUcs2Encoding
         {
             get => _useGsmMwiUcs2Encoding;
             set
             {
-                UseGsmMwiUcs2EncodingSpecified = true;
+                UseGsmMwiUcs2EncodingSpecified = (value != null);
                 _useGsmMwiUcs2Encoding = value;
             }
         }
@@ -251,17 +251,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseGsmMwiUcs2EncodingSpecified { get; set; }
 
-        protected bool _includeOnlyNewMessageCount;
+        protected bool? _includeOnlyNewMessageCount;
 
         [XmlElement(ElementName = "includeOnlyNewMessageCount", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
-        public bool IncludeOnlyNewMessageCount
+        public bool? IncludeOnlyNewMessageCount
         {
             get => _includeOnlyNewMessageCount;
             set
             {
-                IncludeOnlyNewMessageCountSpecified = true;
+                IncludeOnlyNewMessageCountSpecified = (value != null);
                 _includeOnlyNewMessageCount = value;
             }
         }

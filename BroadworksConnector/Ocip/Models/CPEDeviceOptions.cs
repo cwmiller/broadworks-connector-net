@@ -34,17 +34,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableMonitoringSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CPEDeviceResetEventType _resetEvent;
+        protected BroadWorksConnector.Ocip.Models.CPEDeviceResetEventType? _resetEvent;
 
         [XmlElement(ElementName = "resetEvent", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:48755")]
-        public BroadWorksConnector.Ocip.Models.CPEDeviceResetEventType ResetEvent
+        public BroadWorksConnector.Ocip.Models.CPEDeviceResetEventType? ResetEvent
         {
             get => _resetEvent;
             set
             {
-                ResetEventSpecified = true;
+                ResetEventSpecified = (value != null);
                 _resetEvent = value;
             }
         }

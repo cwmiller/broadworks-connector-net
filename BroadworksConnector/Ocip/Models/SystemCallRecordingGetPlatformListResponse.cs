@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _systemDefault;
             set
             {
-                SystemDefaultSpecified = true;
+                SystemDefaultSpecified = (value != null);
                 _systemDefault = value;
             }
         }

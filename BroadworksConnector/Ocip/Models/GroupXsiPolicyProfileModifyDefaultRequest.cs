@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userDefaultXsiPolicyProfile;
             set
             {
-                UserDefaultXsiPolicyProfileSpecified = true;
+                UserDefaultXsiPolicyProfileSpecified = (value != null);
                 _userDefaultXsiPolicyProfile = value;
             }
         }

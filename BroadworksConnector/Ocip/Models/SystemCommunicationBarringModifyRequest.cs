@@ -22,17 +22,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCommunicationBarringModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _directTransferScreening;
+        protected bool? _directTransferScreening;
 
         [XmlElement(ElementName = "directTransferScreening", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6313")]
-        public bool DirectTransferScreening
+        public bool? DirectTransferScreening
         {
             get => _directTransferScreening;
             set
             {
-                DirectTransferScreeningSpecified = true;
+                DirectTransferScreeningSpecified = (value != null);
                 _directTransferScreening = value;
             }
         }
@@ -40,17 +40,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DirectTransferScreeningSpecified { get; set; }
 
-        protected bool _vmCallbackScreening;
+        protected bool? _vmCallbackScreening;
 
         [XmlElement(ElementName = "vmCallbackScreening", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6313")]
-        public bool VmCallbackScreening
+        public bool? VmCallbackScreening
         {
             get => _vmCallbackScreening;
             set
             {
-                VmCallbackScreeningSpecified = true;
+                VmCallbackScreeningSpecified = (value != null);
                 _vmCallbackScreening = value;
             }
         }

@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _exchangeURL;
             set
             {
-                ExchangeURLSpecified = true;
+                ExchangeURLSpecified = (value != null);
                 _exchangeURL = value;
             }
         }
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _exchangeUserName;
             set
             {
-                ExchangeUserNameSpecified = true;
+                ExchangeUserNameSpecified = (value != null);
                 _exchangeUserName = value;
             }
         }

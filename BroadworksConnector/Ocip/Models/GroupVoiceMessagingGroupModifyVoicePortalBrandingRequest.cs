@@ -59,17 +59,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection _voicePortalGreetingSelection;
+        protected BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection? _voicePortalGreetingSelection;
 
         [XmlElement(ElementName = "voicePortalGreetingSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16786")]
-        public BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection VoicePortalGreetingSelection
+        public BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection? VoicePortalGreetingSelection
         {
             get => _voicePortalGreetingSelection;
             set
             {
-                VoicePortalGreetingSelectionSpecified = true;
+                VoicePortalGreetingSelectionSpecified = (value != null);
                 _voicePortalGreetingSelection = value;
             }
         }
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _voicePortalGreetingFile;
             set
             {
-                VoicePortalGreetingFileSpecified = true;
+                VoicePortalGreetingFileSpecified = (value != null);
                 _voicePortalGreetingFile = value;
             }
         }
@@ -95,17 +95,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VoicePortalGreetingFileSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection _voiceMessagingGreetingSelection;
+        protected BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection? _voiceMessagingGreetingSelection;
 
         [XmlElement(ElementName = "voiceMessagingGreetingSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16786")]
-        public BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection VoiceMessagingGreetingSelection
+        public BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection? VoiceMessagingGreetingSelection
         {
             get => _voiceMessagingGreetingSelection;
             set
             {
-                VoiceMessagingGreetingSelectionSpecified = true;
+                VoiceMessagingGreetingSelectionSpecified = (value != null);
                 _voiceMessagingGreetingSelection = value;
             }
         }
@@ -123,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _voiceMessagingGreetingFile;
             set
             {
-                VoiceMessagingGreetingFileSpecified = true;
+                VoiceMessagingGreetingFileSpecified = (value != null);
                 _voiceMessagingGreetingFile = value;
             }
         }

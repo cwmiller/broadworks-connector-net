@@ -46,17 +46,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.LoginRole _loginRole;
+        protected BroadWorksConnector.Ocip.Models.LoginRole? _loginRole;
 
         [XmlElement(ElementName = "loginRole", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:43784")]
-        public BroadWorksConnector.Ocip.Models.LoginRole LoginRole
+        public BroadWorksConnector.Ocip.Models.LoginRole? LoginRole
         {
             get => _loginRole;
             set
             {
-                LoginRoleSpecified = true;
+                LoginRoleSpecified = (value != null);
                 _loginRole = value;
             }
         }

@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultAgentUnavailableCodeOnDND;
             set
             {
-                DefaultAgentUnavailableCodeOnDNDSpecified = true;
+                DefaultAgentUnavailableCodeOnDNDSpecified = (value != null);
                 _defaultAgentUnavailableCodeOnDND = value;
             }
         }
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultAgentUnavailableCodeOnPersonalCalls;
             set
             {
-                DefaultAgentUnavailableCodeOnPersonalCallsSpecified = true;
+                DefaultAgentUnavailableCodeOnPersonalCallsSpecified = (value != null);
                 _defaultAgentUnavailableCodeOnPersonalCalls = value;
             }
         }
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultAgentUnavailableCodeOnConsecutiveBounces;
             set
             {
-                DefaultAgentUnavailableCodeOnConsecutiveBouncesSpecified = true;
+                DefaultAgentUnavailableCodeOnConsecutiveBouncesSpecified = (value != null);
                 _defaultAgentUnavailableCodeOnConsecutiveBounces = value;
             }
         }
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultAgentUnavailableCode;
             set
             {
-                DefaultAgentUnavailableCodeSpecified = true;
+                DefaultAgentUnavailableCodeSpecified = (value != null);
                 _defaultAgentUnavailableCode = value;
             }
         }

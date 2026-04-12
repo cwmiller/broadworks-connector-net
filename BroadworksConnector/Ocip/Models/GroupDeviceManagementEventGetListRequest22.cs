@@ -61,17 +61,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.DeviceManagementEventQueueType _eventQueueType;
+        protected BroadWorksConnector.Ocip.Models.DeviceManagementEventQueueType? _eventQueueType;
 
         [XmlElement(ElementName = "eventQueueType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:3831")]
-        public BroadWorksConnector.Ocip.Models.DeviceManagementEventQueueType EventQueueType
+        public BroadWorksConnector.Ocip.Models.DeviceManagementEventQueueType? EventQueueType
         {
             get => _eventQueueType;
             set
             {
-                EventQueueTypeSpecified = true;
+                EventQueueTypeSpecified = (value != null);
                 _eventQueueType = value;
             }
         }
@@ -79,18 +79,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EventQueueTypeSpecified { get; set; }
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:3831")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactDeviceManagementEventStatusInProgressOrPending;
             set
             {
-                SearchCriteriaExactDeviceManagementEventStatusInProgressOrPendingSpecified = true;
+                SearchCriteriaExactDeviceManagementEventStatusInProgressOrPendingSpecified = (value != null);
                 _searchCriteriaExactDeviceManagementEventStatusInProgressOrPending = value;
             }
         }
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactDeviceManagementEventStatusCompleted;
             set
             {
-                SearchCriteriaExactDeviceManagementEventStatusCompletedSpecified = true;
+                SearchCriteriaExactDeviceManagementEventStatusCompletedSpecified = (value != null);
                 _searchCriteriaExactDeviceManagementEventStatusCompleted = value;
             }
         }
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactDeviceManagementEventAction;
             set
             {
-                SearchCriteriaExactDeviceManagementEventActionSpecified = true;
+                SearchCriteriaExactDeviceManagementEventActionSpecified = (value != null);
                 _searchCriteriaExactDeviceManagementEventAction = value;
             }
         }
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactDeviceManagementEventLevel;
             set
             {
-                SearchCriteriaExactDeviceManagementEventLevelSpecified = true;
+                SearchCriteriaExactDeviceManagementEventLevelSpecified = (value != null);
                 _searchCriteriaExactDeviceManagementEventLevel = value;
             }
         }
@@ -180,7 +180,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactDeviceManagementEventType;
             set
             {
-                SearchCriteriaExactDeviceManagementEventTypeSpecified = true;
+                SearchCriteriaExactDeviceManagementEventTypeSpecified = (value != null);
                 _searchCriteriaExactDeviceManagementEventType = value;
             }
         }
@@ -198,7 +198,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaDeviceManagementEventAdditionalInfo;
             set
             {
-                SearchCriteriaDeviceManagementEventAdditionalInfoSpecified = true;
+                SearchCriteriaDeviceManagementEventAdditionalInfoSpecified = (value != null);
                 _searchCriteriaDeviceManagementEventAdditionalInfo = value;
             }
         }
@@ -216,7 +216,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaDeviceManagementEventLoginId;
             set
             {
-                SearchCriteriaDeviceManagementEventLoginIdSpecified = true;
+                SearchCriteriaDeviceManagementEventLoginIdSpecified = (value != null);
                 _searchCriteriaDeviceManagementEventLoginId = value;
             }
         }
@@ -234,7 +234,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaDeviceManagementEventRequest;
             set
             {
-                SearchCriteriaDeviceManagementEventRequestSpecified = true;
+                SearchCriteriaDeviceManagementEventRequestSpecified = (value != null);
                 _searchCriteriaDeviceManagementEventRequest = value;
             }
         }
@@ -252,7 +252,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaDeviceManagementEventRequestTrackingId;
             set
             {
-                SearchCriteriaDeviceManagementEventRequestTrackingIdSpecified = true;
+                SearchCriteriaDeviceManagementEventRequestTrackingIdSpecified = (value != null);
                 _searchCriteriaDeviceManagementEventRequestTrackingId = value;
             }
         }

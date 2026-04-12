@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _endCurrentCallAndGoBackToPreviousMenu;
             set
             {
-                EndCurrentCallAndGoBackToPreviousMenuSpecified = true;
+                EndCurrentCallAndGoBackToPreviousMenuSpecified = (value != null);
                 _endCurrentCallAndGoBackToPreviousMenu = value;
             }
         }
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _returnToPreviousMenu;
             set
             {
-                ReturnToPreviousMenuSpecified = true;
+                ReturnToPreviousMenuSpecified = (value != null);
                 _returnToPreviousMenu = value;
             }
         }

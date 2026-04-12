@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userPermissions;
             set
             {
-                UserPermissionsSpecified = true;
+                UserPermissionsSpecified = (value != null);
                 _userPermissions = value;
             }
         }

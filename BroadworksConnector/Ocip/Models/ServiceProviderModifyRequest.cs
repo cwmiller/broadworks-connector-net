@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultDomain;
             set
             {
-                DefaultDomainSpecified = true;
+                DefaultDomainSpecified = (value != null);
                 _defaultDomain = value;
             }
         }
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _contact;
             set
             {
-                ContactSpecified = true;
+                ContactSpecified = (value != null);
                 _contact = value;
             }
         }
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _address;
             set
             {
-                AddressSpecified = true;
+                AddressSpecified = (value != null);
                 _address = value;
             }
         }
@@ -156,17 +156,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AddressSpecified { get; set; }
 
-        protected bool _useServiceProviderLanguages;
+        protected bool? _useServiceProviderLanguages;
 
         [XmlElement(ElementName = "useServiceProviderLanguages", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:4959")]
-        public bool UseServiceProviderLanguages
+        public bool? UseServiceProviderLanguages
         {
             get => _useServiceProviderLanguages;
             set
             {
-                UseServiceProviderLanguagesSpecified = true;
+                UseServiceProviderLanguagesSpecified = (value != null);
                 _useServiceProviderLanguages = value;
             }
         }
@@ -346,7 +346,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerId;
             set
             {
-                ResellerIdSpecified = true;
+                ResellerIdSpecified = (value != null);
                 _resellerId = value;
             }
         }
@@ -366,7 +366,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerName;
             set
             {
-                ResellerNameSpecified = true;
+                ResellerNameSpecified = (value != null);
                 _resellerName = value;
             }
         }

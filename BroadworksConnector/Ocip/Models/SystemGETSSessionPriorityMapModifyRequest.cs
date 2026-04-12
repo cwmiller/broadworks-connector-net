@@ -38,19 +38,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PriorityLevelSpecified { get; set; }
 
-        protected int _sessionPriority;
+        protected int? _sessionPriority;
 
         [XmlElement(ElementName = "sessionPriority", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:11319")]
         [MinInclusive(0)]
         [MaxInclusive(4)]
-        public int SessionPriority
+        public int? SessionPriority
         {
             get => _sessionPriority;
             set
             {
-                SessionPrioritySpecified = true;
+                SessionPrioritySpecified = (value != null);
                 _sessionPriority = value;
             }
         }

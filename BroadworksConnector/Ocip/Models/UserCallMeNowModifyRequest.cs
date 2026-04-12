@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf9583170c1dc9ec6c152ba1238437a:223")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallMeNowAnswerConfirmation _answerConfirmation;
+        protected BroadWorksConnector.Ocip.Models.CallMeNowAnswerConfirmation? _answerConfirmation;
 
         [XmlElement(ElementName = "answerConfirmation", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf9583170c1dc9ec6c152ba1238437a:223")]
-        public BroadWorksConnector.Ocip.Models.CallMeNowAnswerConfirmation AnswerConfirmation
+        public BroadWorksConnector.Ocip.Models.CallMeNowAnswerConfirmation? AnswerConfirmation
         {
             get => _answerConfirmation;
             set
             {
-                AnswerConfirmationSpecified = true;
+                AnswerConfirmationSpecified = (value != null);
                 _answerConfirmation = value;
             }
         }
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _criteriaActivation;
             set
             {
-                CriteriaActivationSpecified = true;
+                CriteriaActivationSpecified = (value != null);
                 _criteriaActivation = value;
             }
         }

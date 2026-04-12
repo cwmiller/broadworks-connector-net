@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _activateConfGreeting;
             set
             {
-                ActivateConfGreetingSpecified = true;
+                ActivateConfGreetingSpecified = (value != null);
                 _activateConfGreeting = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deactivateConfGreeting;
             set
             {
-                DeactivateConfGreetingSpecified = true;
+                DeactivateConfGreetingSpecified = (value != null);
                 _deactivateConfGreeting = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _recordNewConfGreeting;
             set
             {
-                RecordNewConfGreetingSpecified = true;
+                RecordNewConfGreetingSpecified = (value != null);
                 _recordNewConfGreeting = value;
             }
         }
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _listenToCurrentConfGreeting;
             set
             {
-                ListenToCurrentConfGreetingSpecified = true;
+                ListenToCurrentConfGreetingSpecified = (value != null);
                 _listenToCurrentConfGreeting = value;
             }
         }
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _repeatMenu;
             set
             {
-                RepeatMenuSpecified = true;
+                RepeatMenuSpecified = (value != null);
                 _repeatMenu = value;
             }
         }

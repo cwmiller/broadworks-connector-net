@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _rootDirectory;
             set
             {
-                RootDirectorySpecified = true;
+                RootDirectorySpecified = (value != null);
                 _rootDirectory = value;
             }
         }
@@ -58,19 +58,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RootDirectorySpecified { get; set; }
 
-        protected int _port;
+        protected int? _port;
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:10368")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
-        public int Port
+        public int? Port
         {
             get => _port;
             set
             {
-                PortSpecified = true;
+                PortSpecified = (value != null);
                 _port = value;
             }
         }

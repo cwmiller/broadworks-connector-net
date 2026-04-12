@@ -57,19 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CodecNameSpecified { get; set; }
 
-        protected int _codecWeight;
+        protected int? _codecWeight;
 
         [XmlElement(ElementName = "codecWeight", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:11913")]
         [MinInclusive(1)]
         [MaxInclusive(1000)]
-        public int CodecWeight
+        public int? CodecWeight
         {
             get => _codecWeight;
             set
             {
-                CodecWeightSpecified = true;
+                CodecWeightSpecified = (value != null);
                 _codecWeight = value;
             }
         }

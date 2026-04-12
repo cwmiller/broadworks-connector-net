@@ -37,17 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UnreachableFromPrimaryUserTableSpecified { get; set; }
 
-        protected int _totalNumberOfUnreachableFromPrimaryUsers;
+        protected int? _totalNumberOfUnreachableFromPrimaryUsers;
 
         [XmlElement(ElementName = "totalNumberOfUnreachableFromPrimaryUsers", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:10737")]
-        public int TotalNumberOfUnreachableFromPrimaryUsers
+        public int? TotalNumberOfUnreachableFromPrimaryUsers
         {
             get => _totalNumberOfUnreachableFromPrimaryUsers;
             set
             {
-                TotalNumberOfUnreachableFromPrimaryUsersSpecified = true;
+                TotalNumberOfUnreachableFromPrimaryUsersSpecified = (value != null);
                 _totalNumberOfUnreachableFromPrimaryUsers = value;
             }
         }

@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultSecurityClassification;
             set
             {
-                DefaultSecurityClassificationSpecified = true;
+                DefaultSecurityClassificationSpecified = (value != null);
                 _defaultSecurityClassification = value;
             }
         }

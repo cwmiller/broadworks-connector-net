@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.GroupDigitCollectionSettingLevel _useSetting;
+        protected BroadWorksConnector.Ocip.Models.GroupDigitCollectionSettingLevel? _useSetting;
 
         [XmlElement(ElementName = "useSetting", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:4648")]
-        public BroadWorksConnector.Ocip.Models.GroupDigitCollectionSettingLevel UseSetting
+        public BroadWorksConnector.Ocip.Models.GroupDigitCollectionSettingLevel? UseSetting
         {
             get => _useSetting;
             set
             {
-                UseSettingSpecified = true;
+                UseSettingSpecified = (value != null);
                 _useSetting = value;
             }
         }

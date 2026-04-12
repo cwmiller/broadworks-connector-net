@@ -40,17 +40,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.LogoutRequestReason _reason;
+        protected BroadWorksConnector.Ocip.Models.LogoutRequestReason? _reason;
 
         [XmlElement(ElementName = "reason", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ef3c4f453d01f7ce750331de83ebc765:345")]
-        public BroadWorksConnector.Ocip.Models.LogoutRequestReason Reason
+        public BroadWorksConnector.Ocip.Models.LogoutRequestReason? Reason
         {
             get => _reason;
             set
             {
-                ReasonSpecified = true;
+                ReasonSpecified = (value != null);
                 _reason = value;
             }
         }

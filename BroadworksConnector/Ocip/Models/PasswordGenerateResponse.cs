@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _systemAdministratorPassword;
             set
             {
-                SystemAdministratorPasswordSpecified = true;
+                SystemAdministratorPasswordSpecified = (value != null);
                 _systemAdministratorPassword = value;
             }
         }
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceProviderAdministratorPassword;
             set
             {
-                ServiceProviderAdministratorPasswordSpecified = true;
+                ServiceProviderAdministratorPasswordSpecified = (value != null);
                 _serviceProviderAdministratorPassword = value;
             }
         }
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupAdministratorPassword;
             set
             {
-                GroupAdministratorPasswordSpecified = true;
+                GroupAdministratorPasswordSpecified = (value != null);
                 _groupAdministratorPassword = value;
             }
         }
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userPassword;
             set
             {
-                UserPasswordSpecified = true;
+                UserPasswordSpecified = (value != null);
                 _userPassword = value;
             }
         }
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userPasscode;
             set
             {
-                UserPasscodeSpecified = true;
+                UserPasscodeSpecified = (value != null);
                 _userPasscode = value;
             }
         }
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userSIPAuthenticationPassword;
             set
             {
-                UserSIPAuthenticationPasswordSpecified = true;
+                UserSIPAuthenticationPasswordSpecified = (value != null);
                 _userSIPAuthenticationPassword = value;
             }
         }
@@ -150,7 +150,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _accessDeviceAuthenticationPassword;
             set
             {
-                AccessDeviceAuthenticationPasswordSpecified = true;
+                AccessDeviceAuthenticationPasswordSpecified = (value != null);
                 _accessDeviceAuthenticationPassword = value;
             }
         }
@@ -170,7 +170,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _trunkGroupAuthenticationPassword;
             set
             {
-                TrunkGroupAuthenticationPasswordSpecified = true;
+                TrunkGroupAuthenticationPasswordSpecified = (value != null);
                 _trunkGroupAuthenticationPassword = value;
             }
         }

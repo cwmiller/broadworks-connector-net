@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holidayScheduleName;
             set
             {
-                HolidayScheduleNameSpecified = true;
+                HolidayScheduleNameSpecified = (value != null);
                 _holidayScheduleName = value;
             }
         }

@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holidaySchedule;
             set
             {
-                HolidayScheduleSpecified = true;
+                HolidayScheduleSpecified = (value != null);
                 _holidaySchedule = value;
             }
         }
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _transferPhoneNumber;
             set
             {
-                TransferPhoneNumberSpecified = true;
+                TransferPhoneNumberSpecified = (value != null);
                 _transferPhoneNumber = value;
             }
         }
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _audioUrlList;
             set
             {
-                AudioUrlListSpecified = true;
+                AudioUrlListSpecified = (value != null);
                 _audioUrlList = value;
             }
         }
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _audioFileList;
             set
             {
-                AudioFileListSpecified = true;
+                AudioFileListSpecified = (value != null);
                 _audioFileList = value;
             }
         }
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _audioMediaTypeList;
             set
             {
-                AudioMediaTypeListSpecified = true;
+                AudioMediaTypeListSpecified = (value != null);
                 _audioMediaTypeList = value;
             }
         }
@@ -189,7 +189,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _videoUrlList;
             set
             {
-                VideoUrlListSpecified = true;
+                VideoUrlListSpecified = (value != null);
                 _videoUrlList = value;
             }
         }
@@ -207,7 +207,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _videoFileList;
             set
             {
-                VideoFileListSpecified = true;
+                VideoFileListSpecified = (value != null);
                 _videoFileList = value;
             }
         }
@@ -225,7 +225,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _videoMediaTypeList;
             set
             {
-                VideoMediaTypeListSpecified = true;
+                VideoMediaTypeListSpecified = (value != null);
                 _videoMediaTypeList = value;
             }
         }

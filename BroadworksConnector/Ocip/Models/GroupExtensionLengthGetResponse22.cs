@@ -77,17 +77,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultExtensionLengthSpecified { get; set; }
 
-        protected bool _useEnterpriseExtensionLengthSetting;
+        protected bool? _useEnterpriseExtensionLengthSetting;
 
         [XmlElement(ElementName = "useEnterpriseExtensionLengthSetting", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:5495")]
-        public bool UseEnterpriseExtensionLengthSetting
+        public bool? UseEnterpriseExtensionLengthSetting
         {
             get => _useEnterpriseExtensionLengthSetting;
             set
             {
-                UseEnterpriseExtensionLengthSettingSpecified = true;
+                UseEnterpriseExtensionLengthSettingSpecified = (value != null);
                 _useEnterpriseExtensionLengthSetting = value;
             }
         }

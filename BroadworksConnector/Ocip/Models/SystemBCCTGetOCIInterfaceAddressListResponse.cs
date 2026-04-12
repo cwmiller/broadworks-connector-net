@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _interfaceNetAddress;
             set
             {
-                InterfaceNetAddressSpecified = true;
+                InterfaceNetAddressSpecified = (value != null);
                 _interfaceNetAddress = value;
             }
         }

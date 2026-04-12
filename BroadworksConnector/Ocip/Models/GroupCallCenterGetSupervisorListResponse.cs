@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _reportingServerURL;
             set
             {
-                ReportingServerURLSpecified = true;
+                ReportingServerURLSpecified = (value != null);
                 _reportingServerURL = value;
             }
         }

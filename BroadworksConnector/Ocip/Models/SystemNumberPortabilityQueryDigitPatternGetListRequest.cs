@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaNumberPortabilityQueryDigitPattern;
             set
             {
-                SearchCriteriaNumberPortabilityQueryDigitPatternSpecified = true;
+                SearchCriteriaNumberPortabilityQueryDigitPatternSpecified = (value != null);
                 _searchCriteriaNumberPortabilityQueryDigitPattern = value;
             }
         }
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaNumberPortabilityStatus;
             set
             {
-                SearchCriteriaNumberPortabilityStatusSpecified = true;
+                SearchCriteriaNumberPortabilityStatusSpecified = (value != null);
                 _searchCriteriaNumberPortabilityStatus = value;
             }
         }
@@ -55,18 +55,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaNumberPortabilityStatusSpecified { get; set; }
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:13244")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }

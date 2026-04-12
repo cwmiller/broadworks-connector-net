@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _entranceGreetingFile;
             set
             {
-                EntranceGreetingFileSpecified = true;
+                EntranceGreetingFileSpecified = (value != null);
                 _entranceGreetingFile = value;
             }
         }

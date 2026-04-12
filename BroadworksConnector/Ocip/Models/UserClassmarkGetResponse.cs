@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _classmark;
             set
             {
-                ClassmarkSpecified = true;
+                ClassmarkSpecified = (value != null);
                 _classmark = value;
             }
         }

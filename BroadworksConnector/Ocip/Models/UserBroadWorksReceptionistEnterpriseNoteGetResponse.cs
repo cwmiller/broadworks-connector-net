@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _receptionistNote;
             set
             {
-                ReceptionistNoteSpecified = true;
+                ReceptionistNoteSpecified = (value != null);
                 _receptionistNote = value;
             }
         }

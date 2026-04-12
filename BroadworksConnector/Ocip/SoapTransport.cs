@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip
                 throw new BadResponseException($"SOAP endpoint responded with status code {httpResponse.StatusCode}");
             }
 
-            var resp =  await httpResponse.Content.ReadAsStringAsync();
+            var resp = await httpResponse.Content.ReadAsStringAsync();
 
 
             string processOCIMessageReturn = null;

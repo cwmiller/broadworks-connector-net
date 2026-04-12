@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _privateDigitMap;
             set
             {
-                PrivateDigitMapSpecified = true;
+                PrivateDigitMapSpecified = (value != null);
                 _privateDigitMap = value;
             }
         }
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deviceDigitMap;
             set
             {
-                DeviceDigitMapSpecified = true;
+                DeviceDigitMapSpecified = (value != null);
                 _deviceDigitMap = value;
             }
         }

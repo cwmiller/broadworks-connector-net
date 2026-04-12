@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _reportApplicationURL;
             set
             {
-                ReportApplicationURLSpecified = true;
+                ReportApplicationURLSpecified = (value != null);
                 _reportApplicationURL = value;
             }
         }
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _repositoryApplicationURL;
             set
             {
-                RepositoryApplicationURLSpecified = true;
+                RepositoryApplicationURLSpecified = (value != null);
                 _repositoryApplicationURL = value;
             }
         }

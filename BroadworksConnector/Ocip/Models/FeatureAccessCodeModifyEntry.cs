@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _mainCode;
             set
             {
-                MainCodeSpecified = true;
+                MainCodeSpecified = (value != null);
                 _mainCode = value;
             }
         }
@@ -75,17 +75,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AlternateCodeSpecified { get; set; }
 
-        protected bool _enableFAC;
+        protected bool? _enableFAC;
 
         [XmlElement(ElementName = "enableFAC", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:3255")]
-        public bool EnableFAC
+        public bool? EnableFAC
         {
             get => _enableFAC;
             set
             {
-                EnableFACSpecified = true;
+                EnableFACSpecified = (value != null);
                 _enableFAC = value;
             }
         }

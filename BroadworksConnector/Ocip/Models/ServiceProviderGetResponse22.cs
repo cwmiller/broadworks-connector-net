@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceProviderName;
             set
             {
-                ServiceProviderNameSpecified = true;
+                ServiceProviderNameSpecified = (value != null);
                 _serviceProviderName = value;
             }
         }
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _supportEmail;
             set
             {
-                SupportEmailSpecified = true;
+                SupportEmailSpecified = (value != null);
                 _supportEmail = value;
             }
         }
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _contact;
             set
             {
-                ContactSpecified = true;
+                ContactSpecified = (value != null);
                 _contact = value;
             }
         }
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _address;
             set
             {
-                AddressSpecified = true;
+                AddressSpecified = (value != null);
                 _address = value;
             }
         }
@@ -185,7 +185,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _servicePolicy;
             set
             {
-                ServicePolicySpecified = true;
+                ServicePolicySpecified = (value != null);
                 _servicePolicy = value;
             }
         }
@@ -205,7 +205,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callProcessingSliceId;
             set
             {
-                CallProcessingSliceIdSpecified = true;
+                CallProcessingSliceIdSpecified = (value != null);
                 _callProcessingSliceId = value;
             }
         }
@@ -225,7 +225,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _provisioningSliceId;
             set
             {
-                ProvisioningSliceIdSpecified = true;
+                ProvisioningSliceIdSpecified = (value != null);
                 _provisioningSliceId = value;
             }
         }
@@ -245,7 +245,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _subscriberPartition;
             set
             {
-                SubscriberPartitionSpecified = true;
+                SubscriberPartitionSpecified = (value != null);
                 _subscriberPartition = value;
             }
         }
@@ -265,7 +265,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _preferredDataCenter;
             set
             {
-                PreferredDataCenterSpecified = true;
+                PreferredDataCenterSpecified = (value != null);
                 _preferredDataCenter = value;
             }
         }

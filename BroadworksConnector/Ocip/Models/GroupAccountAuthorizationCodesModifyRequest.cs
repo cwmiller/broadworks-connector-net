@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AccountAuthorizationCodeType _codeType;
+        protected BroadWorksConnector.Ocip.Models.AccountAuthorizationCodeType? _codeType;
 
         [XmlElement(ElementName = "codeType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fcf43b3a58ff66521262b4426bab8748:196")]
-        public BroadWorksConnector.Ocip.Models.AccountAuthorizationCodeType CodeType
+        public BroadWorksConnector.Ocip.Models.AccountAuthorizationCodeType? CodeType
         {
             get => _codeType;
             set
             {
-                CodeTypeSpecified = true;
+                CodeTypeSpecified = (value != null);
                 _codeType = value;
             }
         }
@@ -75,19 +75,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CodeTypeSpecified { get; set; }
 
-        protected int _numberOfDigits;
+        protected int? _numberOfDigits;
 
         [XmlElement(ElementName = "numberOfDigits", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fcf43b3a58ff66521262b4426bab8748:196")]
         [MinInclusive(2)]
         [MaxInclusive(14)]
-        public int NumberOfDigits
+        public int? NumberOfDigits
         {
             get => _numberOfDigits;
             set
             {
-                NumberOfDigitsSpecified = true;
+                NumberOfDigitsSpecified = (value != null);
                 _numberOfDigits = value;
             }
         }
@@ -95,17 +95,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberOfDigitsSpecified { get; set; }
 
-        protected bool _allowLocalAndTollFreeCalls;
+        protected bool? _allowLocalAndTollFreeCalls;
 
         [XmlElement(ElementName = "allowLocalAndTollFreeCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fcf43b3a58ff66521262b4426bab8748:196")]
-        public bool AllowLocalAndTollFreeCalls
+        public bool? AllowLocalAndTollFreeCalls
         {
             get => _allowLocalAndTollFreeCalls;
             set
             {
-                AllowLocalAndTollFreeCallsSpecified = true;
+                AllowLocalAndTollFreeCallsSpecified = (value != null);
                 _allowLocalAndTollFreeCalls = value;
             }
         }

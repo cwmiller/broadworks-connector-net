@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _externalSource;
             set
             {
-                ExternalSourceSpecified = true;
+                ExternalSourceSpecified = (value != null);
                 _externalSource = value;
             }
         }

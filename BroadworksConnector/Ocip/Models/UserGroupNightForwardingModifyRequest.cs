@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.GroupNightForwardingUserServiceActivationMode _nightForwarding;
+        protected BroadWorksConnector.Ocip.Models.GroupNightForwardingUserServiceActivationMode? _nightForwarding;
 
         [XmlElement(ElementName = "nightForwarding", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"65f35694d7d3354987bf6387ab55bfc6:183")]
-        public BroadWorksConnector.Ocip.Models.GroupNightForwardingUserServiceActivationMode NightForwarding
+        public BroadWorksConnector.Ocip.Models.GroupNightForwardingUserServiceActivationMode? NightForwarding
         {
             get => _nightForwarding;
             set
             {
-                NightForwardingSpecified = true;
+                NightForwardingSpecified = (value != null);
                 _nightForwarding = value;
             }
         }

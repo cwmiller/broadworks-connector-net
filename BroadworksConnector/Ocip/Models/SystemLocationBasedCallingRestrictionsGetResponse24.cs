@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _mccMncRoamingNetworkTranslationIndex;
             set
             {
-                MccMncRoamingNetworkTranslationIndexSpecified = true;
+                MccMncRoamingNetworkTranslationIndexSpecified = (value != null);
                 _mccMncRoamingNetworkTranslationIndex = value;
             }
         }

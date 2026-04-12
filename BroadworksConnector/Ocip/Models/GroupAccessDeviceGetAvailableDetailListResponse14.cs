@@ -27,7 +27,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _availableAccessDevice;
             set
             {
-                AvailableAccessDeviceSpecified = true;
+                AvailableAccessDeviceSpecified = (value != null);
                 _availableAccessDevice = value;
             }
         }

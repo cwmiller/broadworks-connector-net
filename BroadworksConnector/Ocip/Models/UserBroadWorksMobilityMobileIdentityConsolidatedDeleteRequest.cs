@@ -66,17 +66,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MobileNumberSpecified { get; set; }
 
-        protected bool _deleteExistingDevices;
+        protected bool? _deleteExistingDevices;
 
         [XmlElement(ElementName = "deleteExistingDevices", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1668")]
-        public bool DeleteExistingDevices
+        public bool? DeleteExistingDevices
         {
             get => _deleteExistingDevices;
             set
             {
-                DeleteExistingDevicesSpecified = true;
+                DeleteExistingDevicesSpecified = (value != null);
                 _deleteExistingDevices = value;
             }
         }

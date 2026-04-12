@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _directRouteIdentityList;
             set
             {
-                DirectRouteIdentityListSpecified = true;
+                DirectRouteIdentityListSpecified = (value != null);
                 _directRouteIdentityList = value;
             }
         }

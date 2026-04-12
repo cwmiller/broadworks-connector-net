@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ApplicationIdSpecified { get; set; }
 
-        protected bool _enableSystemWide;
+        protected bool? _enableSystemWide;
 
         [XmlElement(ElementName = "enableSystemWide", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:13675")]
-        public bool EnableSystemWide
+        public bool? EnableSystemWide
         {
             get => _enableSystemWide;
             set
             {
-                EnableSystemWideSpecified = true;
+                EnableSystemWideSpecified = (value != null);
                 _enableSystemWide = value;
             }
         }
@@ -56,19 +56,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableSystemWideSpecified { get; set; }
 
-        protected int _notificationTimeoutSeconds;
+        protected int? _notificationTimeoutSeconds;
 
         [XmlElement(ElementName = "notificationTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:13675")]
         [MinInclusive(2)]
         [MaxInclusive(30)]
-        public int NotificationTimeoutSeconds
+        public int? NotificationTimeoutSeconds
         {
             get => _notificationTimeoutSeconds;
             set
             {
-                NotificationTimeoutSecondsSpecified = true;
+                NotificationTimeoutSecondsSpecified = (value != null);
                 _notificationTimeoutSeconds = value;
             }
         }
@@ -96,19 +96,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DescriptionSpecified { get; set; }
 
-        protected int _maxEventChannelsPerSet;
+        protected int? _maxEventChannelsPerSet;
 
         [XmlElement(ElementName = "maxEventChannelsPerSet", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:13675")]
         [MinInclusive(1)]
         [MaxInclusive(100)]
-        public int MaxEventChannelsPerSet
+        public int? MaxEventChannelsPerSet
         {
             get => _maxEventChannelsPerSet;
             set
             {
-                MaxEventChannelsPerSetSpecified = true;
+                MaxEventChannelsPerSetSpecified = (value != null);
                 _maxEventChannelsPerSet = value;
             }
         }
@@ -116,19 +116,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxEventChannelsPerSetSpecified { get; set; }
 
-        protected int _unresponsiveChannelSetGracePeriodSeconds;
+        protected int? _unresponsiveChannelSetGracePeriodSeconds;
 
         [XmlElement(ElementName = "unresponsiveChannelSetGracePeriodSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:13675")]
         [MinInclusive(0)]
         [MaxInclusive(30)]
-        public int UnresponsiveChannelSetGracePeriodSeconds
+        public int? UnresponsiveChannelSetGracePeriodSeconds
         {
             get => _unresponsiveChannelSetGracePeriodSeconds;
             set
             {
-                UnresponsiveChannelSetGracePeriodSecondsSpecified = true;
+                UnresponsiveChannelSetGracePeriodSecondsSpecified = (value != null);
                 _unresponsiveChannelSetGracePeriodSeconds = value;
             }
         }

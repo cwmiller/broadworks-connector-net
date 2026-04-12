@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _responsePagingControl;
             set
             {
-                ResponsePagingControlSpecified = true;
+                ResponsePagingControlSpecified = (value != null);
                 _responsePagingControl = value;
             }
         }
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _sortByScheduleName;
             set
             {
-                SortByScheduleNameSpecified = true;
+                SortByScheduleNameSpecified = (value != null);
                 _sortByScheduleName = value;
             }
         }
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaScheduleName;
             set
             {
-                SearchCriteriaScheduleNameSpecified = true;
+                SearchCriteriaScheduleNameSpecified = (value != null);
                 _searchCriteriaScheduleName = value;
             }
         }
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactScheduleType;
             set
             {
-                SearchCriteriaExactScheduleTypeSpecified = true;
+                SearchCriteriaExactScheduleTypeSpecified = (value != null);
                 _searchCriteriaExactScheduleType = value;
             }
         }
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactScheduleLevel;
             set
             {
-                SearchCriteriaExactScheduleLevelSpecified = true;
+                SearchCriteriaExactScheduleLevelSpecified = (value != null);
                 _searchCriteriaExactScheduleLevel = value;
             }
         }
@@ -136,17 +136,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaExactScheduleLevelSpecified { get; set; }
 
-        protected bool _searchCriteriaModeOr;
+        protected bool? _searchCriteriaModeOr;
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3765")]
-        public bool SearchCriteriaModeOr
+        public bool? SearchCriteriaModeOr
         {
             get => _searchCriteriaModeOr;
             set
             {
-                SearchCriteriaModeOrSpecified = true;
+                SearchCriteriaModeOrSpecified = (value != null);
                 _searchCriteriaModeOr = value;
             }
         }

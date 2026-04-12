@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newName;
             set
             {
-                NewNameSpecified = true;
+                NewNameSpecified = (value != null);
                 _newName = value;
             }
         }
@@ -136,17 +136,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchNumberPortabilityStatusSpecified { get; set; }
 
-        protected bool _callTaggedAsSpam;
+        protected bool? _callTaggedAsSpam;
 
         [XmlElement(ElementName = "callTaggedAsSpam", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6288")]
-        public bool CallTaggedAsSpam
+        public bool? CallTaggedAsSpam
         {
             get => _callTaggedAsSpam;
             set
             {
-                CallTaggedAsSpamSpecified = true;
+                CallTaggedAsSpamSpecified = (value != null);
                 _callTaggedAsSpam = value;
             }
         }

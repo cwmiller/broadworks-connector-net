@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _audioFileDescription;
             set
             {
-                AudioFileDescriptionSpecified = true;
+                AudioFileDescriptionSpecified = (value != null);
                 _audioFileDescription = value;
             }
         }
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _audioFileUrl;
             set
             {
-                AudioFileUrlSpecified = true;
+                AudioFileUrlSpecified = (value != null);
                 _audioFileUrl = value;
             }
         }
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _videoFileDescription;
             set
             {
-                VideoFileDescriptionSpecified = true;
+                VideoFileDescriptionSpecified = (value != null);
                 _videoFileDescription = value;
             }
         }
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _videoFileUrl;
             set
             {
-                VideoFileUrlSpecified = true;
+                VideoFileUrlSpecified = (value != null);
                 _videoFileUrl = value;
             }
         }

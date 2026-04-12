@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _accessDevice;
             set
             {
-                AccessDeviceSpecified = true;
+                AccessDeviceSpecified = (value != null);
                 _accessDevice = value;
             }
         }
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _linePort;
             set
             {
-                LinePortSpecified = true;
+                LinePortSpecified = (value != null);
                 _linePort = value;
             }
         }
@@ -100,19 +100,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ContactListSpecified { get; set; }
 
-        protected int _portNumber;
+        protected int? _portNumber;
 
         [XmlElement(ElementName = "portNumber", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:376")]
         [MinInclusive(1)]
         [MaxInclusive(1024)]
-        public int PortNumber
+        public int? PortNumber
         {
             get => _portNumber;
             set
             {
-                PortNumberSpecified = true;
+                PortNumberSpecified = (value != null);
                 _portNumber = value;
             }
         }
@@ -120,17 +120,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PortNumberSpecified { get; set; }
 
-        protected bool _useHotline;
+        protected bool? _useHotline;
 
         [XmlElement(ElementName = "useHotline", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:376")]
-        public bool UseHotline
+        public bool? UseHotline
         {
             get => _useHotline;
             set
             {
-                UseHotlineSpecified = true;
+                UseHotlineSpecified = (value != null);
                 _useHotline = value;
             }
         }

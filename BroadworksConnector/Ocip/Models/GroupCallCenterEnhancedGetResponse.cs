@@ -34,19 +34,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OverrideAgentWrapUpTimeSpecified { get; set; }
 
-        protected int _wrapUpSeconds;
+        protected int? _wrapUpSeconds;
 
         [XmlElement(ElementName = "wrapUpSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:4967")]
         [MinInclusive(1)]
         [MaxInclusive(3600)]
-        public int WrapUpSeconds
+        public int? WrapUpSeconds
         {
             get => _wrapUpSeconds;
             set
             {
-                WrapUpSecondsSpecified = true;
+                WrapUpSecondsSpecified = (value != null);
                 _wrapUpSeconds = value;
             }
         }

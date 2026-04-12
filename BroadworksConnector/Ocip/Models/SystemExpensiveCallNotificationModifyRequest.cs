@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemExpensiveCallNotificationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _enablePostAnnouncementDelayTimer;
+        protected bool? _enablePostAnnouncementDelayTimer;
 
         [XmlElement(ElementName = "enablePostAnnouncementDelayTimer", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:9946")]
-        public bool EnablePostAnnouncementDelayTimer
+        public bool? EnablePostAnnouncementDelayTimer
         {
             get => _enablePostAnnouncementDelayTimer;
             set
             {
-                EnablePostAnnouncementDelayTimerSpecified = true;
+                EnablePostAnnouncementDelayTimerSpecified = (value != null);
                 _enablePostAnnouncementDelayTimer = value;
             }
         }
@@ -37,19 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnablePostAnnouncementDelayTimerSpecified { get; set; }
 
-        protected int _postAnnouncementDelaySeconds;
+        protected int? _postAnnouncementDelaySeconds;
 
         [XmlElement(ElementName = "postAnnouncementDelaySeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:9946")]
         [MinInclusive(0)]
         [MaxInclusive(20)]
-        public int PostAnnouncementDelaySeconds
+        public int? PostAnnouncementDelaySeconds
         {
             get => _postAnnouncementDelaySeconds;
             set
             {
-                PostAnnouncementDelaySecondsSpecified = true;
+                PostAnnouncementDelaySecondsSpecified = (value != null);
                 _postAnnouncementDelaySeconds = value;
             }
         }

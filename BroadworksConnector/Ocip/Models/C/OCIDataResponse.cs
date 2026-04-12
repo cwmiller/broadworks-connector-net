@@ -155,6 +155,8 @@ namespace BroadWorksConnector.Ocip.Models.C
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.GroupVisualDeviceManagementGetDeviceInfoResponse))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.GroupXsiPolicyProfileGetAssignedListResponse))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.GroupXsiPolicyProfileGetAssignedUserListResponse))]
+    [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.UserAnnouncementFileLocationGetResponse))]
+    [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.GroupAnnouncementFileLocationGetResponse))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.AuthenticationVerifyResponse22V4))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.DeviceManagementFileAuthLocationGetResponse22V4))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.ExternalAuthenticationCreateLoginTokenResponse))]

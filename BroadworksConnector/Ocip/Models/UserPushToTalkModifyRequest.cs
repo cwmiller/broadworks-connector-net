@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _allowAutoAnswer;
+        protected bool? _allowAutoAnswer;
 
         [XmlElement(ElementName = "allowAutoAnswer", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"22c82692327758edb5adf1f1db18fc71:123")]
-        public bool AllowAutoAnswer
+        public bool? AllowAutoAnswer
         {
             get => _allowAutoAnswer;
             set
             {
-                AllowAutoAnswerSpecified = true;
+                AllowAutoAnswerSpecified = (value != null);
                 _allowAutoAnswer = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowAutoAnswerSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.PushToTalkOutgoingConnectionSelection _outgoingConnectionSelection;
+        protected BroadWorksConnector.Ocip.Models.PushToTalkOutgoingConnectionSelection? _outgoingConnectionSelection;
 
         [XmlElement(ElementName = "outgoingConnectionSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"22c82692327758edb5adf1f1db18fc71:123")]
-        public BroadWorksConnector.Ocip.Models.PushToTalkOutgoingConnectionSelection OutgoingConnectionSelection
+        public BroadWorksConnector.Ocip.Models.PushToTalkOutgoingConnectionSelection? OutgoingConnectionSelection
         {
             get => _outgoingConnectionSelection;
             set
             {
-                OutgoingConnectionSelectionSpecified = true;
+                OutgoingConnectionSelectionSpecified = (value != null);
                 _outgoingConnectionSelection = value;
             }
         }
@@ -74,17 +74,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OutgoingConnectionSelectionSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.PushToTalkAccessListSelection _accessListSelection;
+        protected BroadWorksConnector.Ocip.Models.PushToTalkAccessListSelection? _accessListSelection;
 
         [XmlElement(ElementName = "accessListSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"22c82692327758edb5adf1f1db18fc71:123")]
-        public BroadWorksConnector.Ocip.Models.PushToTalkAccessListSelection AccessListSelection
+        public BroadWorksConnector.Ocip.Models.PushToTalkAccessListSelection? AccessListSelection
         {
             get => _accessListSelection;
             set
             {
-                AccessListSelectionSpecified = true;
+                AccessListSelectionSpecified = (value != null);
                 _accessListSelection = value;
             }
         }

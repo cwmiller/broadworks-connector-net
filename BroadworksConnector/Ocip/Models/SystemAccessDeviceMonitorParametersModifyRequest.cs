@@ -19,19 +19,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAccessDeviceMonitorParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected int _pollingIntervalMinutes;
+        protected int? _pollingIntervalMinutes;
 
         [XmlElement(ElementName = "pollingIntervalMinutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:1695")]
         [MinInclusive(0)]
         [MaxInclusive(1440)]
-        public int PollingIntervalMinutes
+        public int? PollingIntervalMinutes
         {
             get => _pollingIntervalMinutes;
             set
             {
-                PollingIntervalMinutesSpecified = true;
+                PollingIntervalMinutesSpecified = (value != null);
                 _pollingIntervalMinutes = value;
             }
         }

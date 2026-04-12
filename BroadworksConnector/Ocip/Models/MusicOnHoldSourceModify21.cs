@@ -20,17 +20,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class MusicOnHoldSourceModify21
     {
 
-        protected BroadWorksConnector.Ocip.Models.AudioFileCodecExtended _audioFilePreferredCodec;
+        protected BroadWorksConnector.Ocip.Models.AudioFileCodecExtended? _audioFilePreferredCodec;
 
         [XmlElement(ElementName = "audioFilePreferredCodec", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:3639")]
-        public BroadWorksConnector.Ocip.Models.AudioFileCodecExtended AudioFilePreferredCodec
+        public BroadWorksConnector.Ocip.Models.AudioFileCodecExtended? AudioFilePreferredCodec
         {
             get => _audioFilePreferredCodec;
             set
             {
-                AudioFilePreferredCodecSpecified = true;
+                AudioFilePreferredCodecSpecified = (value != null);
                 _audioFilePreferredCodec = value;
             }
         }
@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioFilePreferredCodecSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection _messageSourceSelection;
+        protected BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection? _messageSourceSelection;
 
         [XmlElement(ElementName = "messageSourceSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:3639")]
-        public BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection MessageSourceSelection
+        public BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection? MessageSourceSelection
         {
             get => _messageSourceSelection;
             set
             {
-                MessageSourceSelectionSpecified = true;
+                MessageSourceSelectionSpecified = (value != null);
                 _messageSourceSelection = value;
             }
         }
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _externalSource;
             set
             {
-                ExternalSourceSpecified = true;
+                ExternalSourceSpecified = (value != null);
                 _externalSource = value;
             }
         }

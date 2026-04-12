@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _mailServerNetAddress;
             set
             {
-                MailServerNetAddressSpecified = true;
+                MailServerNetAddressSpecified = (value != null);
                 _mailServerNetAddress = value;
             }
         }

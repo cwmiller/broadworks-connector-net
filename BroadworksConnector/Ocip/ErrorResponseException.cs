@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip
             // There is a field in ErrorResponse for an error code, however it's sometimes blank.
             // The error message will include the error code so it can retrieved from there.
 
-            Code = response.ErrorCode;
+            Code = response.ErrorCode ?? 0;
 
             var rx = new Regex(@"\[Error (\d+)\]", RegexOptions.Compiled);
             var matches = rx.Matches(response.Summary);

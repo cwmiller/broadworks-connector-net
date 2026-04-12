@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _oldPassword;
             set
             {
-                OldPasswordSpecified = true;
+                OldPasswordSpecified = (value != null);
                 _oldPassword = value;
             }
         }

@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _forwardToPhoneNumber;
             set
             {
-                ForwardToPhoneNumberSpecified = true;
+                ForwardToPhoneNumberSpecified = (value != null);
                 _forwardToPhoneNumber = value;
             }
         }

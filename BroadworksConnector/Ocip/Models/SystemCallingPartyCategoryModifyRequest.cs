@@ -98,17 +98,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GtdOliValueSpecified { get; set; }
 
-        protected bool _userCategory;
+        protected bool? _userCategory;
 
         [XmlElement(ElementName = "userCategory", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d0efd2493d3062b292fd31759011925e:160")]
-        public bool UserCategory
+        public bool? UserCategory
         {
             get => _userCategory;
             set
             {
-                UserCategorySpecified = true;
+                UserCategorySpecified = (value != null);
                 _userCategory = value;
             }
         }
@@ -116,17 +116,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserCategorySpecified { get; set; }
 
-        protected bool _payPhone;
+        protected bool? _payPhone;
 
         [XmlElement(ElementName = "payPhone", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d0efd2493d3062b292fd31759011925e:160")]
-        public bool PayPhone
+        public bool? PayPhone
         {
             get => _payPhone;
             set
             {
-                PayPhoneSpecified = true;
+                PayPhoneSpecified = (value != null);
                 _payPhone = value;
             }
         }
@@ -134,17 +134,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PayPhoneSpecified { get; set; }
 
-        protected bool _operator;
+        protected bool? _operator;
 
         [XmlElement(ElementName = "operator", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d0efd2493d3062b292fd31759011925e:160")]
-        public bool Operator
+        public bool? Operator
         {
             get => _operator;
             set
             {
-                OperatorSpecified = true;
+                OperatorSpecified = (value != null);
                 _operator = value;
             }
         }
@@ -152,17 +152,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OperatorSpecified { get; set; }
 
-        protected bool _becomeDefault;
+        protected bool? _becomeDefault;
 
         [XmlElement(ElementName = "becomeDefault", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d0efd2493d3062b292fd31759011925e:160")]
-        public bool BecomeDefault
+        public bool? BecomeDefault
         {
             get => _becomeDefault;
             set
             {
-                BecomeDefaultSpecified = true;
+                BecomeDefaultSpecified = (value != null);
                 _becomeDefault = value;
             }
         }
@@ -170,17 +170,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BecomeDefaultSpecified { get; set; }
 
-        protected bool _collectCall;
+        protected bool? _collectCall;
 
         [XmlElement(ElementName = "collectCall", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d0efd2493d3062b292fd31759011925e:160")]
-        public bool CollectCall
+        public bool? CollectCall
         {
             get => _collectCall;
             set
             {
-                CollectCallSpecified = true;
+                CollectCallSpecified = (value != null);
                 _collectCall = value;
             }
         }

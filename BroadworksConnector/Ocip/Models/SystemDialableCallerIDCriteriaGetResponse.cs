@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _description;
             set
             {
-                DescriptionSpecified = true;
+                DescriptionSpecified = (value != null);
                 _description = value;
             }
         }
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _prefixDigits;
             set
             {
-                PrefixDigitsSpecified = true;
+                PrefixDigitsSpecified = (value != null);
                 _prefixDigits = value;
             }
         }
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _matchCallType;
             set
             {
-                MatchCallTypeSpecified = true;
+                MatchCallTypeSpecified = (value != null);
                 _matchCallType = value;
             }
         }
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _matchAlternateCallIndicator;
             set
             {
-                MatchAlternateCallIndicatorSpecified = true;
+                MatchAlternateCallIndicatorSpecified = (value != null);
                 _matchAlternateCallIndicator = value;
             }
         }

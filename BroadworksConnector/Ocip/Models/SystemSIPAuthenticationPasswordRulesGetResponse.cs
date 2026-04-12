@@ -261,7 +261,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _permanentLockoutNotifyEmailAddress;
             set
             {
-                PermanentLockoutNotifyEmailAddressSpecified = true;
+                PermanentLockoutNotifyEmailAddressSpecified = (value != null);
                 _permanentLockoutNotifyEmailAddress = value;
             }
         }

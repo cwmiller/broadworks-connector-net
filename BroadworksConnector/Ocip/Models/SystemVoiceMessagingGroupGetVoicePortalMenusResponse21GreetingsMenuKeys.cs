@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _personalizedName;
             set
             {
-                PersonalizedNameSpecified = true;
+                PersonalizedNameSpecified = (value != null);
                 _personalizedName = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _conferenceGreeting;
             set
             {
-                ConferenceGreetingSpecified = true;
+                ConferenceGreetingSpecified = (value != null);
                 _conferenceGreeting = value;
             }
         }
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _repeatMenu;
             set
             {
-                RepeatMenuSpecified = true;
+                RepeatMenuSpecified = (value != null);
                 _repeatMenu = value;
             }
         }

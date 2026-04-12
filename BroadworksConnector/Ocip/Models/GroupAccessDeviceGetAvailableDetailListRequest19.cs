@@ -97,17 +97,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OnlyVideoCapableSpecified { get; set; }
 
-        protected bool _onlyIntelligentDevice;
+        protected bool? _onlyIntelligentDevice;
 
         [XmlElement(ElementName = "onlyIntelligentDevice", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:749")]
-        public bool OnlyIntelligentDevice
+        public bool? OnlyIntelligentDevice
         {
             get => _onlyIntelligentDevice;
             set
             {
-                OnlyIntelligentDeviceSpecified = true;
+                OnlyIntelligentDeviceSpecified = (value != null);
                 _onlyIntelligentDevice = value;
             }
         }

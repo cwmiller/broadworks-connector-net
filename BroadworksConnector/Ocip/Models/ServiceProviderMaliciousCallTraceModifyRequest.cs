@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        protected bool _useSystemPlayMCTWarningAnnouncement;
+        protected bool? _useSystemPlayMCTWarningAnnouncement;
 
         [XmlElement(ElementName = "useSystemPlayMCTWarningAnnouncement", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"be7f3162f133f8d7fcc75e712b0258e6:80")]
-        public bool UseSystemPlayMCTWarningAnnouncement
+        public bool? UseSystemPlayMCTWarningAnnouncement
         {
             get => _useSystemPlayMCTWarningAnnouncement;
             set
             {
-                UseSystemPlayMCTWarningAnnouncementSpecified = true;
+                UseSystemPlayMCTWarningAnnouncementSpecified = (value != null);
                 _useSystemPlayMCTWarningAnnouncement = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseSystemPlayMCTWarningAnnouncementSpecified { get; set; }
 
-        protected bool _playMCTWarningAnnouncement;
+        protected bool? _playMCTWarningAnnouncement;
 
         [XmlElement(ElementName = "playMCTWarningAnnouncement", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"be7f3162f133f8d7fcc75e712b0258e6:80")]
-        public bool PlayMCTWarningAnnouncement
+        public bool? PlayMCTWarningAnnouncement
         {
             get => _playMCTWarningAnnouncement;
             set
             {
-                PlayMCTWarningAnnouncementSpecified = true;
+                PlayMCTWarningAnnouncementSpecified = (value != null);
                 _playMCTWarningAnnouncement = value;
             }
         }

@@ -27,7 +27,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _leafDeviceKey;
             set
             {
-                LeafDeviceKeySpecified = true;
+                LeafDeviceKeySpecified = (value != null);
                 _leafDeviceKey = value;
             }
         }
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _supportLinks;
             set
             {
-                SupportLinksSpecified = true;
+                SupportLinksSpecified = (value != null);
                 _supportLinks = value;
             }
         }

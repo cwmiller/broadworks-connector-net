@@ -31,7 +31,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _transferToAttendantKey;
             set
             {
-                TransferToAttendantKeySpecified = true;
+                TransferToAttendantKeySpecified = (value != null);
                 _transferToAttendantKey = value;
             }
         }
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _transferToVoiceMessagingKey;
             set
             {
-                TransferToVoiceMessagingKeySpecified = true;
+                TransferToVoiceMessagingKeySpecified = (value != null);
                 _transferToVoiceMessagingKey = value;
             }
         }

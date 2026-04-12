@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerId;
             set
             {
-                ResellerIdSpecified = true;
+                ResellerIdSpecified = (value != null);
                 _resellerId = value;
             }
         }
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deviceTypeRename;
             set
             {
-                DeviceTypeRenameSpecified = true;
+                DeviceTypeRenameSpecified = (value != null);
                 _deviceTypeRename = value;
             }
         }
@@ -84,17 +84,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceTypeRenameSpecified { get; set; }
 
-        protected bool _deviceTypeFileUpdate;
+        protected bool? _deviceTypeFileUpdate;
 
         [XmlElement(ElementName = "deviceTypeFileUpdate", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:8981")]
-        public bool DeviceTypeFileUpdate
+        public bool? DeviceTypeFileUpdate
         {
             get => _deviceTypeFileUpdate;
             set
             {
-                DeviceTypeFileUpdateSpecified = true;
+                DeviceTypeFileUpdateSpecified = (value != null);
                 _deviceTypeFileUpdate = value;
             }
         }

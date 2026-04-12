@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newPriorityValue;
             set
             {
-                NewPriorityValueSpecified = true;
+                NewPriorityValueSpecified = (value != null);
                 _newPriorityValue = value;
             }
         }
@@ -58,19 +58,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewPriorityValueSpecified { get; set; }
 
-        protected int _priorityLevel;
+        protected int? _priorityLevel;
 
         [XmlElement(ElementName = "priorityLevel", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:11239")]
         [MinInclusive(1)]
         [MaxInclusive(5)]
-        public int PriorityLevel
+        public int? PriorityLevel
         {
             get => _priorityLevel;
             set
             {
-                PriorityLevelSpecified = true;
+                PriorityLevelSpecified = (value != null);
                 _priorityLevel = value;
             }
         }
@@ -78,17 +78,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PriorityLevelSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.GETSPriorityClass _priorityClass;
+        protected BroadWorksConnector.Ocip.Models.GETSPriorityClass? _priorityClass;
 
         [XmlElement(ElementName = "priorityClass", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:11239")]
-        public BroadWorksConnector.Ocip.Models.GETSPriorityClass PriorityClass
+        public BroadWorksConnector.Ocip.Models.GETSPriorityClass? PriorityClass
         {
             get => _priorityClass;
             set
             {
-                PriorityClassSpecified = true;
+                PriorityClassSpecified = (value != null);
                 _priorityClass = value;
             }
         }

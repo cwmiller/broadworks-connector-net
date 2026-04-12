@@ -19,19 +19,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemServicePackMigrationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected int _maxSimultaneousMigrationTasks;
+        protected int? _maxSimultaneousMigrationTasks;
 
         [XmlElement(ElementName = "maxSimultaneousMigrationTasks", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:16405")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
-        public int MaxSimultaneousMigrationTasks
+        public int? MaxSimultaneousMigrationTasks
         {
             get => _maxSimultaneousMigrationTasks;
             set
             {
-                MaxSimultaneousMigrationTasksSpecified = true;
+                MaxSimultaneousMigrationTasksSpecified = (value != null);
                 _maxSimultaneousMigrationTasks = value;
             }
         }

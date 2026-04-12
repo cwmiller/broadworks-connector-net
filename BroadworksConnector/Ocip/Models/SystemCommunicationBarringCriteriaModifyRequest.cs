@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newName;
             set
             {
-                NewNameSpecified = true;
+                NewNameSpecified = (value != null);
                 _newName = value;
             }
         }
@@ -143,17 +143,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchVirtualOnNetCallTypeSpecified { get; set; }
 
-        protected bool _matchPublicNetwork;
+        protected bool? _matchPublicNetwork;
 
         [XmlElement(ElementName = "matchPublicNetwork", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchPublicNetwork
+        public bool? MatchPublicNetwork
         {
             get => _matchPublicNetwork;
             set
             {
-                MatchPublicNetworkSpecified = true;
+                MatchPublicNetworkSpecified = (value != null);
                 _matchPublicNetwork = value;
             }
         }
@@ -161,17 +161,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchPublicNetworkSpecified { get; set; }
 
-        protected bool _matchPrivateNetwork;
+        protected bool? _matchPrivateNetwork;
 
         [XmlElement(ElementName = "matchPrivateNetwork", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchPrivateNetwork
+        public bool? MatchPrivateNetwork
         {
             get => _matchPrivateNetwork;
             set
             {
-                MatchPrivateNetworkSpecified = true;
+                MatchPrivateNetworkSpecified = (value != null);
                 _matchPrivateNetwork = value;
             }
         }
@@ -179,17 +179,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchPrivateNetworkSpecified { get; set; }
 
-        protected bool _matchLocalCategory;
+        protected bool? _matchLocalCategory;
 
         [XmlElement(ElementName = "matchLocalCategory", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchLocalCategory
+        public bool? MatchLocalCategory
         {
             get => _matchLocalCategory;
             set
             {
-                MatchLocalCategorySpecified = true;
+                MatchLocalCategorySpecified = (value != null);
                 _matchLocalCategory = value;
             }
         }
@@ -197,17 +197,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchLocalCategorySpecified { get; set; }
 
-        protected bool _matchNationalCategory;
+        protected bool? _matchNationalCategory;
 
         [XmlElement(ElementName = "matchNationalCategory", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchNationalCategory
+        public bool? MatchNationalCategory
         {
             get => _matchNationalCategory;
             set
             {
-                MatchNationalCategorySpecified = true;
+                MatchNationalCategorySpecified = (value != null);
                 _matchNationalCategory = value;
             }
         }
@@ -215,17 +215,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchNationalCategorySpecified { get; set; }
 
-        protected bool _matchInterlataCategory;
+        protected bool? _matchInterlataCategory;
 
         [XmlElement(ElementName = "matchInterlataCategory", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchInterlataCategory
+        public bool? MatchInterlataCategory
         {
             get => _matchInterlataCategory;
             set
             {
-                MatchInterlataCategorySpecified = true;
+                MatchInterlataCategorySpecified = (value != null);
                 _matchInterlataCategory = value;
             }
         }
@@ -233,17 +233,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchInterlataCategorySpecified { get; set; }
 
-        protected bool _matchIntralataCategory;
+        protected bool? _matchIntralataCategory;
 
         [XmlElement(ElementName = "matchIntralataCategory", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchIntralataCategory
+        public bool? MatchIntralataCategory
         {
             get => _matchIntralataCategory;
             set
             {
-                MatchIntralataCategorySpecified = true;
+                MatchIntralataCategorySpecified = (value != null);
                 _matchIntralataCategory = value;
             }
         }
@@ -251,17 +251,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchIntralataCategorySpecified { get; set; }
 
-        protected bool _matchInternationalCategory;
+        protected bool? _matchInternationalCategory;
 
         [XmlElement(ElementName = "matchInternationalCategory", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchInternationalCategory
+        public bool? MatchInternationalCategory
         {
             get => _matchInternationalCategory;
             set
             {
-                MatchInternationalCategorySpecified = true;
+                MatchInternationalCategorySpecified = (value != null);
                 _matchInternationalCategory = value;
             }
         }
@@ -269,17 +269,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchInternationalCategorySpecified { get; set; }
 
-        protected bool _matchPrivateCategory;
+        protected bool? _matchPrivateCategory;
 
         [XmlElement(ElementName = "matchPrivateCategory", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchPrivateCategory
+        public bool? MatchPrivateCategory
         {
             get => _matchPrivateCategory;
             set
             {
-                MatchPrivateCategorySpecified = true;
+                MatchPrivateCategorySpecified = (value != null);
                 _matchPrivateCategory = value;
             }
         }
@@ -287,17 +287,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchPrivateCategorySpecified { get; set; }
 
-        protected bool _matchEmergencyCategory;
+        protected bool? _matchEmergencyCategory;
 
         [XmlElement(ElementName = "matchEmergencyCategory", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchEmergencyCategory
+        public bool? MatchEmergencyCategory
         {
             get => _matchEmergencyCategory;
             set
             {
-                MatchEmergencyCategorySpecified = true;
+                MatchEmergencyCategorySpecified = (value != null);
                 _matchEmergencyCategory = value;
             }
         }
@@ -305,17 +305,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchEmergencyCategorySpecified { get; set; }
 
-        protected bool _matchOtherCategory;
+        protected bool? _matchOtherCategory;
 
         [XmlElement(ElementName = "matchOtherCategory", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchOtherCategory
+        public bool? MatchOtherCategory
         {
             get => _matchOtherCategory;
             set
             {
-                MatchOtherCategorySpecified = true;
+                MatchOtherCategorySpecified = (value != null);
                 _matchOtherCategory = value;
             }
         }
@@ -323,17 +323,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchOtherCategorySpecified { get; set; }
 
-        protected bool _matchInterNetwork;
+        protected bool? _matchInterNetwork;
 
         [XmlElement(ElementName = "matchInterNetwork", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchInterNetwork
+        public bool? MatchInterNetwork
         {
             get => _matchInterNetwork;
             set
             {
-                MatchInterNetworkSpecified = true;
+                MatchInterNetworkSpecified = (value != null);
                 _matchInterNetwork = value;
             }
         }
@@ -341,17 +341,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchInterNetworkSpecified { get; set; }
 
-        protected bool _matchInterHostingNE;
+        protected bool? _matchInterHostingNE;
 
         [XmlElement(ElementName = "matchInterHostingNE", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchInterHostingNE
+        public bool? MatchInterHostingNE
         {
             get => _matchInterHostingNE;
             set
             {
-                MatchInterHostingNESpecified = true;
+                MatchInterHostingNESpecified = (value != null);
                 _matchInterHostingNE = value;
             }
         }
@@ -359,17 +359,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchInterHostingNESpecified { get; set; }
 
-        protected bool _matchInterAS;
+        protected bool? _matchInterAS;
 
         [XmlElement(ElementName = "matchInterAS", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchInterAS
+        public bool? MatchInterAS
         {
             get => _matchInterAS;
             set
             {
-                MatchInterASSpecified = true;
+                MatchInterASSpecified = (value != null);
                 _matchInterAS = value;
             }
         }
@@ -377,17 +377,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchInterASSpecified { get; set; }
 
-        protected bool _matchIntraAS;
+        protected bool? _matchIntraAS;
 
         [XmlElement(ElementName = "matchIntraAS", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchIntraAS
+        public bool? MatchIntraAS
         {
             get => _matchIntraAS;
             set
             {
-                MatchIntraASSpecified = true;
+                MatchIntraASSpecified = (value != null);
                 _matchIntraAS = value;
             }
         }
@@ -395,17 +395,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchIntraASSpecified { get; set; }
 
-        protected bool _matchChargeCalls;
+        protected bool? _matchChargeCalls;
 
         [XmlElement(ElementName = "matchChargeCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchChargeCalls
+        public bool? MatchChargeCalls
         {
             get => _matchChargeCalls;
             set
             {
-                MatchChargeCallsSpecified = true;
+                MatchChargeCallsSpecified = (value != null);
                 _matchChargeCalls = value;
             }
         }
@@ -413,17 +413,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchChargeCallsSpecified { get; set; }
 
-        protected bool _matchNoChargeCalls;
+        protected bool? _matchNoChargeCalls;
 
         [XmlElement(ElementName = "matchNoChargeCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchNoChargeCalls
+        public bool? MatchNoChargeCalls
         {
             get => _matchNoChargeCalls;
             set
             {
-                MatchNoChargeCallsSpecified = true;
+                MatchNoChargeCallsSpecified = (value != null);
                 _matchNoChargeCalls = value;
             }
         }
@@ -431,17 +431,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchNoChargeCallsSpecified { get; set; }
 
-        protected bool _matchGroupCalls;
+        protected bool? _matchGroupCalls;
 
         [XmlElement(ElementName = "matchGroupCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchGroupCalls
+        public bool? MatchGroupCalls
         {
             get => _matchGroupCalls;
             set
             {
-                MatchGroupCallsSpecified = true;
+                MatchGroupCallsSpecified = (value != null);
                 _matchGroupCalls = value;
             }
         }
@@ -449,17 +449,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchGroupCallsSpecified { get; set; }
 
-        protected bool _matchEnterpriseCalls;
+        protected bool? _matchEnterpriseCalls;
 
         [XmlElement(ElementName = "matchEnterpriseCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchEnterpriseCalls
+        public bool? MatchEnterpriseCalls
         {
             get => _matchEnterpriseCalls;
             set
             {
-                MatchEnterpriseCallsSpecified = true;
+                MatchEnterpriseCallsSpecified = (value != null);
                 _matchEnterpriseCalls = value;
             }
         }
@@ -467,17 +467,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchEnterpriseCallsSpecified { get; set; }
 
-        protected bool _matchNetworkCalls;
+        protected bool? _matchNetworkCalls;
 
         [XmlElement(ElementName = "matchNetworkCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchNetworkCalls
+        public bool? MatchNetworkCalls
         {
             get => _matchNetworkCalls;
             set
             {
-                MatchNetworkCallsSpecified = true;
+                MatchNetworkCallsSpecified = (value != null);
                 _matchNetworkCalls = value;
             }
         }
@@ -485,17 +485,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchNetworkCallsSpecified { get; set; }
 
-        protected bool _matchNetworkURLCalls;
+        protected bool? _matchNetworkURLCalls;
 
         [XmlElement(ElementName = "matchNetworkURLCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchNetworkURLCalls
+        public bool? MatchNetworkURLCalls
         {
             get => _matchNetworkURLCalls;
             set
             {
-                MatchNetworkURLCallsSpecified = true;
+                MatchNetworkURLCallsSpecified = (value != null);
                 _matchNetworkURLCalls = value;
             }
         }
@@ -503,17 +503,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchNetworkURLCallsSpecified { get; set; }
 
-        protected bool _matchRepairCalls;
+        protected bool? _matchRepairCalls;
 
         [XmlElement(ElementName = "matchRepairCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchRepairCalls
+        public bool? MatchRepairCalls
         {
             get => _matchRepairCalls;
             set
             {
-                MatchRepairCallsSpecified = true;
+                MatchRepairCallsSpecified = (value != null);
                 _matchRepairCalls = value;
             }
         }
@@ -521,17 +521,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchRepairCallsSpecified { get; set; }
 
-        protected bool _matchEmergencyCalls;
+        protected bool? _matchEmergencyCalls;
 
         [XmlElement(ElementName = "matchEmergencyCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchEmergencyCalls
+        public bool? MatchEmergencyCalls
         {
             get => _matchEmergencyCalls;
             set
             {
-                MatchEmergencyCallsSpecified = true;
+                MatchEmergencyCallsSpecified = (value != null);
                 _matchEmergencyCalls = value;
             }
         }
@@ -539,17 +539,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchEmergencyCallsSpecified { get; set; }
 
-        protected bool _matchInternalCalls;
+        protected bool? _matchInternalCalls;
 
         [XmlElement(ElementName = "matchInternalCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchInternalCalls
+        public bool? MatchInternalCalls
         {
             get => _matchInternalCalls;
             set
             {
-                MatchInternalCallsSpecified = true;
+                MatchInternalCallsSpecified = (value != null);
                 _matchInternalCalls = value;
             }
         }
@@ -557,17 +557,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchInternalCallsSpecified { get; set; }
 
-        protected bool _matchOtherGETSGets;
+        protected bool? _matchOtherGETSGets;
 
         [XmlElement(ElementName = "matchOtherGETSGets", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchOtherGETSGets
+        public bool? MatchOtherGETSGets
         {
             get => _matchOtherGETSGets;
             set
             {
-                MatchOtherGETSGetsSpecified = true;
+                MatchOtherGETSGetsSpecified = (value != null);
                 _matchOtherGETSGets = value;
             }
         }
@@ -575,17 +575,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchOtherGETSGetsSpecified { get; set; }
 
-        protected bool _matchNotGETSGets;
+        protected bool? _matchNotGETSGets;
 
         [XmlElement(ElementName = "matchNotGETSGets", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchNotGETSGets
+        public bool? MatchNotGETSGets
         {
             get => _matchNotGETSGets;
             set
             {
-                MatchNotGETSGetsSpecified = true;
+                MatchNotGETSGetsSpecified = (value != null);
                 _matchNotGETSGets = value;
             }
         }
@@ -593,17 +593,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchNotGETSGetsSpecified { get; set; }
 
-        protected bool _matchGETSANGets;
+        protected bool? _matchGETSANGets;
 
         [XmlElement(ElementName = "matchGETSANGets", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchGETSANGets
+        public bool? MatchGETSANGets
         {
             get => _matchGETSANGets;
             set
             {
-                MatchGETSANGetsSpecified = true;
+                MatchGETSANGetsSpecified = (value != null);
                 _matchGETSANGets = value;
             }
         }
@@ -611,17 +611,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchGETSANGetsSpecified { get; set; }
 
-        protected bool _matchGETSNTGets;
+        protected bool? _matchGETSNTGets;
 
         [XmlElement(ElementName = "matchGETSNTGets", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchGETSNTGets
+        public bool? MatchGETSNTGets
         {
             get => _matchGETSNTGets;
             set
             {
-                MatchGETSNTGetsSpecified = true;
+                MatchGETSNTGetsSpecified = (value != null);
                 _matchGETSNTGets = value;
             }
         }
@@ -629,17 +629,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchGETSNTGetsSpecified { get; set; }
 
-        protected bool _matchGETSFCGets;
+        protected bool? _matchGETSFCGets;
 
         [XmlElement(ElementName = "matchGETSFCGets", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchGETSFCGets
+        public bool? MatchGETSFCGets
         {
             get => _matchGETSFCGets;
             set
             {
-                MatchGETSFCGetsSpecified = true;
+                MatchGETSFCGetsSpecified = (value != null);
                 _matchGETSFCGets = value;
             }
         }
@@ -647,17 +647,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchGETSFCGetsSpecified { get; set; }
 
-        protected bool _matchGETSFCANGets;
+        protected bool? _matchGETSFCANGets;
 
         [XmlElement(ElementName = "matchGETSFCANGets", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchGETSFCANGets
+        public bool? MatchGETSFCANGets
         {
             get => _matchGETSFCANGets;
             set
             {
-                MatchGETSFCANGetsSpecified = true;
+                MatchGETSFCANGetsSpecified = (value != null);
                 _matchGETSFCANGets = value;
             }
         }
@@ -665,17 +665,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchGETSFCANGetsSpecified { get; set; }
 
-        protected bool _matchGETSFCNTGets;
+        protected bool? _matchGETSFCNTGets;
 
         [XmlElement(ElementName = "matchGETSFCNTGets", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public bool MatchGETSFCNTGets
+        public bool? MatchGETSFCNTGets
         {
             get => _matchGETSFCNTGets;
             set
             {
-                MatchGETSFCNTGetsSpecified = true;
+                MatchGETSFCNTGetsSpecified = (value != null);
                 _matchGETSFCNTGets = value;
             }
         }
@@ -683,17 +683,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchGETSFCNTGetsSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.LocationCriteria _matchLocation;
+        protected BroadWorksConnector.Ocip.Models.LocationCriteria? _matchLocation;
 
         [XmlElement(ElementName = "matchLocation", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public BroadWorksConnector.Ocip.Models.LocationCriteria MatchLocation
+        public BroadWorksConnector.Ocip.Models.LocationCriteria? MatchLocation
         {
             get => _matchLocation;
             set
             {
-                MatchLocationSpecified = true;
+                MatchLocationSpecified = (value != null);
                 _matchLocation = value;
             }
         }
@@ -701,17 +701,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchLocationSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.RoamingCriteria _matchRoaming;
+        protected BroadWorksConnector.Ocip.Models.RoamingCriteria? _matchRoaming;
 
         [XmlElement(ElementName = "matchRoaming", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5946")]
-        public BroadWorksConnector.Ocip.Models.RoamingCriteria MatchRoaming
+        public BroadWorksConnector.Ocip.Models.RoamingCriteria? MatchRoaming
         {
             get => _matchRoaming;
             set
             {
-                MatchRoamingSpecified = true;
+                MatchRoamingSpecified = (value != null);
                 _matchRoaming = value;
             }
         }

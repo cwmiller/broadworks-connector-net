@@ -34,17 +34,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TransmissionMethodSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.DtmfTransmissionSignalingContentType _signalingContentType;
+        protected BroadWorksConnector.Ocip.Models.DtmfTransmissionSignalingContentType? _signalingContentType;
 
         [XmlElement(ElementName = "signalingContentType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:9728")]
-        public BroadWorksConnector.Ocip.Models.DtmfTransmissionSignalingContentType SignalingContentType
+        public BroadWorksConnector.Ocip.Models.DtmfTransmissionSignalingContentType? SignalingContentType
         {
             get => _signalingContentType;
             set
             {
-                SignalingContentTypeSpecified = true;
+                SignalingContentTypeSpecified = (value != null);
                 _signalingContentType = value;
             }
         }

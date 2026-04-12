@@ -48,17 +48,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel _unassignPhoneNumbers;
+        protected BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel? _unassignPhoneNumbers;
 
         [XmlElement(ElementName = "unassignPhoneNumbers", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"bc805893b9cc7e3e01eec64e9ad62768:161")]
-        public BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel UnassignPhoneNumbers
+        public BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel? UnassignPhoneNumbers
         {
             get => _unassignPhoneNumbers;
             set
             {
-                UnassignPhoneNumbersSpecified = true;
+                UnassignPhoneNumbersSpecified = (value != null);
                 _unassignPhoneNumbers = value;
             }
         }
@@ -66,17 +66,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UnassignPhoneNumbersSpecified { get; set; }
 
-        protected bool _addPhoneNumberToGroup;
+        protected bool? _addPhoneNumberToGroup;
 
         [XmlElement(ElementName = "addPhoneNumberToGroup", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"bc805893b9cc7e3e01eec64e9ad62768:161")]
-        public bool AddPhoneNumberToGroup
+        public bool? AddPhoneNumberToGroup
         {
             get => _addPhoneNumberToGroup;
             set
             {
-                AddPhoneNumberToGroupSpecified = true;
+                AddPhoneNumberToGroupSpecified = (value != null);
                 _addPhoneNumberToGroup = value;
             }
         }
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceInstanceProfile;
             set
             {
-                ServiceInstanceProfileSpecified = true;
+                ServiceInstanceProfileSpecified = (value != null);
                 _serviceInstanceProfile = value;
             }
         }
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _maximumBridgeParticipants;
             set
             {
-                MaximumBridgeParticipantsSpecified = true;
+                MaximumBridgeParticipantsSpecified = (value != null);
                 _maximumBridgeParticipants = value;
             }
         }
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkClassOfService;
             set
             {
-                NetworkClassOfServiceSpecified = true;
+                NetworkClassOfServiceSpecified = (value != null);
                 _networkClassOfService = value;
             }
         }
@@ -140,19 +140,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetworkClassOfServiceSpecified { get; set; }
 
-        protected int _maxCollaborateRoomParticipants;
+        protected int? _maxCollaborateRoomParticipants;
 
         [XmlElement(ElementName = "maxCollaborateRoomParticipants", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"bc805893b9cc7e3e01eec64e9ad62768:161")]
         [MinInclusive(3)]
         [MaxInclusive(145)]
-        public int MaxCollaborateRoomParticipants
+        public int? MaxCollaborateRoomParticipants
         {
             get => _maxCollaborateRoomParticipants;
             set
             {
-                MaxCollaborateRoomParticipantsSpecified = true;
+                MaxCollaborateRoomParticipantsSpecified = (value != null);
                 _maxCollaborateRoomParticipants = value;
             }
         }
@@ -160,17 +160,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxCollaborateRoomParticipantsSpecified { get; set; }
 
-        protected bool _supportOutdial;
+        protected bool? _supportOutdial;
 
         [XmlElement(ElementName = "supportOutdial", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"bc805893b9cc7e3e01eec64e9ad62768:161")]
-        public bool SupportOutdial
+        public bool? SupportOutdial
         {
             get => _supportOutdial;
             set
             {
-                SupportOutdialSpecified = true;
+                SupportOutdialSpecified = (value != null);
                 _supportOutdial = value;
             }
         }

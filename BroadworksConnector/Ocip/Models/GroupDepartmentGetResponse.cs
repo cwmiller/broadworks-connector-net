@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _parentDepartmentKey;
             set
             {
-                ParentDepartmentKeySpecified = true;
+                ParentDepartmentKeySpecified = (value != null);
                 _parentDepartmentKey = value;
             }
         }
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callingLineIdName;
             set
             {
-                CallingLineIdNameSpecified = true;
+                CallingLineIdNameSpecified = (value != null);
                 _callingLineIdName = value;
             }
         }
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callingLineIdPhoneNumber;
             set
             {
-                CallingLineIdPhoneNumberSpecified = true;
+                CallingLineIdPhoneNumberSpecified = (value != null);
                 _callingLineIdPhoneNumber = value;
             }
         }

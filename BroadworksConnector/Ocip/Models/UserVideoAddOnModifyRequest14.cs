@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"b5d2e7958e32dd9b5dece82d23577a17:74")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.VideoAddOnMaxOriginatingCallDelaySeconds _maxOriginatingCallDelaySeconds;
+        protected BroadWorksConnector.Ocip.Models.VideoAddOnMaxOriginatingCallDelaySeconds? _maxOriginatingCallDelaySeconds;
 
         [XmlElement(ElementName = "maxOriginatingCallDelaySeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"b5d2e7958e32dd9b5dece82d23577a17:74")]
-        public BroadWorksConnector.Ocip.Models.VideoAddOnMaxOriginatingCallDelaySeconds MaxOriginatingCallDelaySeconds
+        public BroadWorksConnector.Ocip.Models.VideoAddOnMaxOriginatingCallDelaySeconds? MaxOriginatingCallDelaySeconds
         {
             get => _maxOriginatingCallDelaySeconds;
             set
             {
-                MaxOriginatingCallDelaySecondsSpecified = true;
+                MaxOriginatingCallDelaySecondsSpecified = (value != null);
                 _maxOriginatingCallDelaySeconds = value;
             }
         }

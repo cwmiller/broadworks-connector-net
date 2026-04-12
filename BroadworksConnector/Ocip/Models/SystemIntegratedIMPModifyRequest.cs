@@ -64,17 +64,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServicePortSpecified { get; set; }
 
-        protected bool _addServiceProviderInIMPUserId;
+        protected bool? _addServiceProviderInIMPUserId;
 
         [XmlElement(ElementName = "addServiceProviderInIMPUserId", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"37cec25308bcc82fe5a80bf541c42c89:317")]
-        public bool AddServiceProviderInIMPUserId
+        public bool? AddServiceProviderInIMPUserId
         {
             get => _addServiceProviderInIMPUserId;
             set
             {
-                AddServiceProviderInIMPUserIdSpecified = true;
+                AddServiceProviderInIMPUserIdSpecified = (value != null);
                 _addServiceProviderInIMPUserId = value;
             }
         }
@@ -102,17 +102,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BoshURLSpecified { get; set; }
 
-        protected bool _allowImpPasswordRetrieval;
+        protected bool? _allowImpPasswordRetrieval;
 
         [XmlElement(ElementName = "allowImpPasswordRetrieval", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"37cec25308bcc82fe5a80bf541c42c89:317")]
-        public bool AllowImpPasswordRetrieval
+        public bool? AllowImpPasswordRetrieval
         {
             get => _allowImpPasswordRetrieval;
             set
             {
-                AllowImpPasswordRetrievalSpecified = true;
+                AllowImpPasswordRetrievalSpecified = (value != null);
                 _allowImpPasswordRetrieval = value;
             }
         }
@@ -120,17 +120,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowImpPasswordRetrievalSpecified { get; set; }
 
-        protected bool _propagateImpErrorDetails;
+        protected bool? _propagateImpErrorDetails;
 
         [XmlElement(ElementName = "propagateImpErrorDetails", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"37cec25308bcc82fe5a80bf541c42c89:317")]
-        public bool PropagateImpErrorDetails
+        public bool? PropagateImpErrorDetails
         {
             get => _propagateImpErrorDetails;
             set
             {
-                PropagateImpErrorDetailsSpecified = true;
+                PropagateImpErrorDetailsSpecified = (value != null);
                 _propagateImpErrorDetails = value;
             }
         }

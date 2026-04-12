@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _originatorCLIDPrefix;
             set
             {
-                OriginatorCLIDPrefixSpecified = true;
+                OriginatorCLIDPrefixSpecified = (value != null);
                 _originatorCLIDPrefix = value;
             }
         }

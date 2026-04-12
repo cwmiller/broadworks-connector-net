@@ -269,7 +269,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _supportedMediaSetName;
             set
             {
-                SupportedMediaSetNameSpecified = true;
+                SupportedMediaSetNameSpecified = (value != null);
                 _supportedMediaSetName = value;
             }
         }

@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _trunkGroupName;
             set
             {
-                TrunkGroupNameSpecified = true;
+                TrunkGroupNameSpecified = (value != null);
                 _trunkGroupName = value;
             }
         }

@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newServicePackName;
             set
             {
-                NewServicePackNameSpecified = true;
+                NewServicePackNameSpecified = (value != null);
                 _newServicePackName = value;
             }
         }
@@ -97,17 +97,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServicePackDescriptionSpecified { get; set; }
 
-        protected bool _isAvailableForUse;
+        protected bool? _isAvailableForUse;
 
         [XmlElement(ElementName = "isAvailableForUse", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6649")]
-        public bool IsAvailableForUse
+        public bool? IsAvailableForUse
         {
             get => _isAvailableForUse;
             set
             {
-                IsAvailableForUseSpecified = true;
+                IsAvailableForUseSpecified = (value != null);
                 _isAvailableForUse = value;
             }
         }
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _servicePackQuantity;
             set
             {
-                ServicePackQuantitySpecified = true;
+                ServicePackQuantitySpecified = (value != null);
                 _servicePackQuantity = value;
             }
         }

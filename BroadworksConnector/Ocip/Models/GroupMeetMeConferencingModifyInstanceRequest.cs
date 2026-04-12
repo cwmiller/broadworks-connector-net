@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceInstanceProfile;
             set
             {
-                ServiceInstanceProfileSpecified = true;
+                ServiceInstanceProfileSpecified = (value != null);
                 _serviceInstanceProfile = value;
             }
         }
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _allocatedPorts;
             set
             {
-                AllocatedPortsSpecified = true;
+                AllocatedPortsSpecified = (value != null);
                 _allocatedPorts = value;
             }
         }
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkClassOfService;
             set
             {
-                NetworkClassOfServiceSpecified = true;
+                NetworkClassOfServiceSpecified = (value != null);
                 _networkClassOfService = value;
             }
         }
@@ -94,19 +94,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetworkClassOfServiceSpecified { get; set; }
 
-        protected int _securityPinLength;
+        protected int? _securityPinLength;
 
         [XmlElement(ElementName = "securityPinLength", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:288")]
         [MinInclusive(4)]
         [MaxInclusive(12)]
-        public int SecurityPinLength
+        public int? SecurityPinLength
         {
             get => _securityPinLength;
             set
             {
-                SecurityPinLengthSpecified = true;
+                SecurityPinLengthSpecified = (value != null);
                 _securityPinLength = value;
             }
         }
@@ -114,17 +114,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SecurityPinLengthSpecified { get; set; }
 
-        protected bool _allowIndividualOutDial;
+        protected bool? _allowIndividualOutDial;
 
         [XmlElement(ElementName = "allowIndividualOutDial", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:288")]
-        public bool AllowIndividualOutDial
+        public bool? AllowIndividualOutDial
         {
             get => _allowIndividualOutDial;
             set
             {
-                AllowIndividualOutDialSpecified = true;
+                AllowIndividualOutDialSpecified = (value != null);
                 _allowIndividualOutDial = value;
             }
         }
@@ -170,17 +170,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConferenceHostUserIdListSpecified { get; set; }
 
-        protected bool _playWarningPrompt;
+        protected bool? _playWarningPrompt;
 
         [XmlElement(ElementName = "playWarningPrompt", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:288")]
-        public bool PlayWarningPrompt
+        public bool? PlayWarningPrompt
         {
             get => _playWarningPrompt;
             set
             {
-                PlayWarningPromptSpecified = true;
+                PlayWarningPromptSpecified = (value != null);
                 _playWarningPrompt = value;
             }
         }
@@ -188,19 +188,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PlayWarningPromptSpecified { get; set; }
 
-        protected int _conferenceEndWarningPromptMinutes;
+        protected int? _conferenceEndWarningPromptMinutes;
 
         [XmlElement(ElementName = "conferenceEndWarningPromptMinutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:288")]
         [MinInclusive(1)]
         [MaxInclusive(15)]
-        public int ConferenceEndWarningPromptMinutes
+        public int? ConferenceEndWarningPromptMinutes
         {
             get => _conferenceEndWarningPromptMinutes;
             set
             {
-                ConferenceEndWarningPromptMinutesSpecified = true;
+                ConferenceEndWarningPromptMinutesSpecified = (value != null);
                 _conferenceEndWarningPromptMinutes = value;
             }
         }
@@ -208,17 +208,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConferenceEndWarningPromptMinutesSpecified { get; set; }
 
-        protected bool _enableMaxConferenceDuration;
+        protected bool? _enableMaxConferenceDuration;
 
         [XmlElement(ElementName = "enableMaxConferenceDuration", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:288")]
-        public bool EnableMaxConferenceDuration
+        public bool? EnableMaxConferenceDuration
         {
             get => _enableMaxConferenceDuration;
             set
             {
-                EnableMaxConferenceDurationSpecified = true;
+                EnableMaxConferenceDurationSpecified = (value != null);
                 _enableMaxConferenceDuration = value;
             }
         }
@@ -236,7 +236,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _maxConferenceDurationMinutes;
             set
             {
-                MaxConferenceDurationMinutesSpecified = true;
+                MaxConferenceDurationMinutesSpecified = (value != null);
                 _maxConferenceDurationMinutes = value;
             }
         }
@@ -254,7 +254,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _maxScheduledConferenceDurationMinutes;
             set
             {
-                MaxScheduledConferenceDurationMinutesSpecified = true;
+                MaxScheduledConferenceDurationMinutesSpecified = (value != null);
                 _maxScheduledConferenceDurationMinutes = value;
             }
         }

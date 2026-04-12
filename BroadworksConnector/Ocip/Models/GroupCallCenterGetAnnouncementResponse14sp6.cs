@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _entranceMessageAudioFileDescription;
             set
             {
-                EntranceMessageAudioFileDescriptionSpecified = true;
+                EntranceMessageAudioFileDescriptionSpecified = (value != null);
                 _entranceMessageAudioFileDescription = value;
             }
         }
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _entranceMessageVideoFileDescription;
             set
             {
-                EntranceMessageVideoFileDescriptionSpecified = true;
+                EntranceMessageVideoFileDescriptionSpecified = (value != null);
                 _entranceMessageVideoFileDescription = value;
             }
         }
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _periodicComfortMessageAudioFileDescription;
             set
             {
-                PeriodicComfortMessageAudioFileDescriptionSpecified = true;
+                PeriodicComfortMessageAudioFileDescriptionSpecified = (value != null);
                 _periodicComfortMessageAudioFileDescription = value;
             }
         }
@@ -123,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _periodicComfortMessageVideoFileDescription;
             set
             {
-                PeriodicComfortMessageVideoFileDescriptionSpecified = true;
+                PeriodicComfortMessageVideoFileDescriptionSpecified = (value != null);
                 _periodicComfortMessageVideoFileDescription = value;
             }
         }
@@ -175,7 +175,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _onHoldInternalSource;
             set
             {
-                OnHoldInternalSourceSpecified = true;
+                OnHoldInternalSourceSpecified = (value != null);
                 _onHoldInternalSource = value;
             }
         }

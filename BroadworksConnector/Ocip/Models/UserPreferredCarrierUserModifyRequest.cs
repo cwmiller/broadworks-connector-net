@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _intraLataCarrier;
             set
             {
-                IntraLataCarrierSpecified = true;
+                IntraLataCarrierSpecified = (value != null);
                 _intraLataCarrier = value;
             }
         }
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _interLataCarrier;
             set
             {
-                InterLataCarrierSpecified = true;
+                InterLataCarrierSpecified = (value != null);
                 _interLataCarrier = value;
             }
         }
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _internationalCarrier;
             set
             {
-                InternationalCarrierSpecified = true;
+                InternationalCarrierSpecified = (value != null);
                 _internationalCarrier = value;
             }
         }

@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callNotifyEmailAddress;
             set
             {
-                CallNotifyEmailAddressSpecified = true;
+                CallNotifyEmailAddressSpecified = (value != null);
                 _callNotifyEmailAddress = value;
             }
         }

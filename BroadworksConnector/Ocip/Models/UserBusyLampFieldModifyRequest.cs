@@ -76,17 +76,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MonitoredUserIdListSpecified { get; set; }
 
-        protected bool _enableCallParkNotification;
+        protected bool? _enableCallParkNotification;
 
         [XmlElement(ElementName = "enableCallParkNotification", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"b1745b5f688013b73224574a66f4f4b2:210")]
-        public bool EnableCallParkNotification
+        public bool? EnableCallParkNotification
         {
             get => _enableCallParkNotification;
             set
             {
-                EnableCallParkNotificationSpecified = true;
+                EnableCallParkNotificationSpecified = (value != null);
                 _enableCallParkNotification = value;
             }
         }

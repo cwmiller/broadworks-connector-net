@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _confirmSendingMessage;
             set
             {
-                ConfirmSendingMessageSpecified = true;
+                ConfirmSendingMessageSpecified = (value != null);
                 _confirmSendingMessage = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _cancelSendingMessage;
             set
             {
-                CancelSendingMessageSpecified = true;
+                CancelSendingMessageSpecified = (value != null);
                 _cancelSendingMessage = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _finishEnteringNumberWhereToSendMessageTo;
             set
             {
-                FinishEnteringNumberWhereToSendMessageToSpecified = true;
+                FinishEnteringNumberWhereToSendMessageToSpecified = (value != null);
                 _finishEnteringNumberWhereToSendMessageTo = value;
             }
         }
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _finishForwardingOrSendingMessage;
             set
             {
-                FinishForwardingOrSendingMessageSpecified = true;
+                FinishForwardingOrSendingMessageSpecified = (value != null);
                 _finishForwardingOrSendingMessage = value;
             }
         }

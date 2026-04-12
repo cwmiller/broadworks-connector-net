@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _responsePagingControl;
             set
             {
-                ResponsePagingControlSpecified = true;
+                ResponsePagingControlSpecified = (value != null);
                 _responsePagingControl = value;
             }
         }
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaAnnouncementFileName;
             set
             {
-                SearchCriteriaAnnouncementFileNameSpecified = true;
+                SearchCriteriaAnnouncementFileNameSpecified = (value != null);
                 _searchCriteriaAnnouncementFileName = value;
             }
         }
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactAnnouncementFileType;
             set
             {
-                SearchCriteriaExactAnnouncementFileTypeSpecified = true;
+                SearchCriteriaExactAnnouncementFileTypeSpecified = (value != null);
                 _searchCriteriaExactAnnouncementFileType = value;
             }
         }
@@ -143,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactMediaFileType;
             set
             {
-                SearchCriteriaExactMediaFileTypeSpecified = true;
+                SearchCriteriaExactMediaFileTypeSpecified = (value != null);
                 _searchCriteriaExactMediaFileType = value;
             }
         }
@@ -151,17 +151,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaExactMediaFileTypeSpecified { get; set; }
 
-        protected bool _searchCriteriaModeOr;
+        protected bool? _searchCriteriaModeOr;
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:651")]
-        public bool SearchCriteriaModeOr
+        public bool? SearchCriteriaModeOr
         {
             get => _searchCriteriaModeOr;
             set
             {
-                SearchCriteriaModeOrSpecified = true;
+                SearchCriteriaModeOrSpecified = (value != null);
                 _searchCriteriaModeOr = value;
             }
         }

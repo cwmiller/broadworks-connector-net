@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _department;
             set
             {
-                DepartmentSpecified = true;
+                DepartmentSpecified = (value != null);
                 _department = value;
             }
         }
@@ -76,17 +76,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DepartmentSpecified { get; set; }
 
-        protected bool _isActiveDuringCallHold;
+        protected bool? _isActiveDuringCallHold;
 
         [XmlElement(ElementName = "isActiveDuringCallHold", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:11779")]
-        public bool IsActiveDuringCallHold
+        public bool? IsActiveDuringCallHold
         {
             get => _isActiveDuringCallHold;
             set
             {
-                IsActiveDuringCallHoldSpecified = true;
+                IsActiveDuringCallHoldSpecified = (value != null);
                 _isActiveDuringCallHold = value;
             }
         }
@@ -94,17 +94,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveDuringCallHoldSpecified { get; set; }
 
-        protected bool _isActiveDuringCallPark;
+        protected bool? _isActiveDuringCallPark;
 
         [XmlElement(ElementName = "isActiveDuringCallPark", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:11779")]
-        public bool IsActiveDuringCallPark
+        public bool? IsActiveDuringCallPark
         {
             get => _isActiveDuringCallPark;
             set
             {
-                IsActiveDuringCallParkSpecified = true;
+                IsActiveDuringCallParkSpecified = (value != null);
                 _isActiveDuringCallPark = value;
             }
         }
@@ -112,17 +112,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveDuringCallParkSpecified { get; set; }
 
-        protected bool _isActiveDuringBusyCampOn;
+        protected bool? _isActiveDuringBusyCampOn;
 
         [XmlElement(ElementName = "isActiveDuringBusyCampOn", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:11779")]
-        public bool IsActiveDuringBusyCampOn
+        public bool? IsActiveDuringBusyCampOn
         {
             get => _isActiveDuringBusyCampOn;
             set
             {
-                IsActiveDuringBusyCampOnSpecified = true;
+                IsActiveDuringBusyCampOnSpecified = (value != null);
                 _isActiveDuringBusyCampOn = value;
             }
         }
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _source;
             set
             {
-                SourceSpecified = true;
+                SourceSpecified = (value != null);
                 _source = value;
             }
         }
@@ -148,17 +148,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SourceSpecified { get; set; }
 
-        protected bool _useAlternateSourceForInternalCalls;
+        protected bool? _useAlternateSourceForInternalCalls;
 
         [XmlElement(ElementName = "useAlternateSourceForInternalCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:11779")]
-        public bool UseAlternateSourceForInternalCalls
+        public bool? UseAlternateSourceForInternalCalls
         {
             get => _useAlternateSourceForInternalCalls;
             set
             {
-                UseAlternateSourceForInternalCallsSpecified = true;
+                UseAlternateSourceForInternalCallsSpecified = (value != null);
                 _useAlternateSourceForInternalCalls = value;
             }
         }
@@ -176,7 +176,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _internalSource;
             set
             {
-                InternalSourceSpecified = true;
+                InternalSourceSpecified = (value != null);
                 _internalSource = value;
             }
         }

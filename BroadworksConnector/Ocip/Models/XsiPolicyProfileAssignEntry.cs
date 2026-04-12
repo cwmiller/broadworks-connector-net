@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _name;
             set
             {
-                NameSpecified = true;
+                NameSpecified = (value != null);
                 _name = value;
             }
         }
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _default;
             set
             {
-                DefaultSpecified = true;
+                DefaultSpecified = (value != null);
                 _default = value;
             }
         }

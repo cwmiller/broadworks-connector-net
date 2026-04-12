@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemExecutiveModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _treatVirtualOnNetCallsAsInternal;
+        protected bool? _treatVirtualOnNetCallsAsInternal;
 
         [XmlElement(ElementName = "treatVirtualOnNetCallsAsInternal", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:82")]
-        public bool TreatVirtualOnNetCallsAsInternal
+        public bool? TreatVirtualOnNetCallsAsInternal
         {
             get => _treatVirtualOnNetCallsAsInternal;
             set
             {
-                TreatVirtualOnNetCallsAsInternalSpecified = true;
+                TreatVirtualOnNetCallsAsInternalSpecified = (value != null);
                 _treatVirtualOnNetCallsAsInternal = value;
             }
         }

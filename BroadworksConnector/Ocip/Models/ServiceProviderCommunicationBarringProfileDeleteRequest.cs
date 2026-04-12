@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultProfile;
             set
             {
-                DefaultProfileSpecified = true;
+                DefaultProfileSpecified = (value != null);
                 _defaultProfile = value;
             }
         }

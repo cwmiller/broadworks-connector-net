@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _netAddress;
             set
             {
-                NetAddressSpecified = true;
+                NetAddressSpecified = (value != null);
                 _netAddress = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _netAddressRange;
             set
             {
-                NetAddressRangeSpecified = true;
+                NetAddressRangeSpecified = (value != null);
                 _netAddressRange = value;
             }
         }

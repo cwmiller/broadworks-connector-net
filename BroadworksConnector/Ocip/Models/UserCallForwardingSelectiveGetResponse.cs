@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultForwardToPhoneNumber;
             set
             {
-                DefaultForwardToPhoneNumberSpecified = true;
+                DefaultForwardToPhoneNumberSpecified = (value != null);
                 _defaultForwardToPhoneNumber = value;
             }
         }

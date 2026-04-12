@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _audioFile;
             set
             {
-                AudioFileSpecified = true;
+                AudioFileSpecified = (value != null);
                 _audioFile = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AudioFileSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MediaFileType _audioMediaType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType? _audioMediaType;
 
         [XmlElement(ElementName = "audioMediaType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:5827")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType AudioMediaType
+        public BroadWorksConnector.Ocip.Models.MediaFileType? AudioMediaType
         {
             get => _audioMediaType;
             set
             {
-                AudioMediaTypeSpecified = true;
+                AudioMediaTypeSpecified = (value != null);
                 _audioMediaType = value;
             }
         }
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _videoFile;
             set
             {
-                VideoFileSpecified = true;
+                VideoFileSpecified = (value != null);
                 _videoFile = value;
             }
         }
@@ -94,17 +94,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VideoFileSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MediaFileType _videoMediaType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType? _videoMediaType;
 
         [XmlElement(ElementName = "videoMediaType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:5827")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType VideoMediaType
+        public BroadWorksConnector.Ocip.Models.MediaFileType? VideoMediaType
         {
             get => _videoMediaType;
             set
             {
-                VideoMediaTypeSpecified = true;
+                VideoMediaTypeSpecified = (value != null);
                 _videoMediaType = value;
             }
         }

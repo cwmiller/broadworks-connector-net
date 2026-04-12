@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAnonymousCallRejectionModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _paiRequired;
+        protected bool? _paiRequired;
 
         [XmlElement(ElementName = "paiRequired", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"17d2110a0df023b843fdbd156e17bec8:77")]
-        public bool PaiRequired
+        public bool? PaiRequired
         {
             get => _paiRequired;
             set
             {
-                PaiRequiredSpecified = true;
+                PaiRequiredSpecified = (value != null);
                 _paiRequired = value;
             }
         }
@@ -37,17 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PaiRequiredSpecified { get; set; }
 
-        protected bool _screenOnlyLocalCalls;
+        protected bool? _screenOnlyLocalCalls;
 
         [XmlElement(ElementName = "screenOnlyLocalCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"17d2110a0df023b843fdbd156e17bec8:77")]
-        public bool ScreenOnlyLocalCalls
+        public bool? ScreenOnlyLocalCalls
         {
             get => _screenOnlyLocalCalls;
             set
             {
-                ScreenOnlyLocalCallsSpecified = true;
+                ScreenOnlyLocalCallsSpecified = (value != null);
                 _screenOnlyLocalCalls = value;
             }
         }

@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCrInterfaceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _crAuditEnabled;
+        protected bool? _crAuditEnabled;
 
         [XmlElement(ElementName = "crAuditEnabled", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:7384")]
-        public bool CrAuditEnabled
+        public bool? CrAuditEnabled
         {
             get => _crAuditEnabled;
             set
             {
-                CrAuditEnabledSpecified = true;
+                CrAuditEnabledSpecified = (value != null);
                 _crAuditEnabled = value;
             }
         }
@@ -37,19 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CrAuditEnabledSpecified { get; set; }
 
-        protected int _crAuditIntervalMilliseconds;
+        protected int? _crAuditIntervalMilliseconds;
 
         [XmlElement(ElementName = "crAuditIntervalMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:7384")]
         [MinInclusive(500)]
         [MaxInclusive(60000)]
-        public int CrAuditIntervalMilliseconds
+        public int? CrAuditIntervalMilliseconds
         {
             get => _crAuditIntervalMilliseconds;
             set
             {
-                CrAuditIntervalMillisecondsSpecified = true;
+                CrAuditIntervalMillisecondsSpecified = (value != null);
                 _crAuditIntervalMilliseconds = value;
             }
         }
@@ -57,19 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CrAuditIntervalMillisecondsSpecified { get; set; }
 
-        protected int _crAuditTimeoutMilliseconds;
+        protected int? _crAuditTimeoutMilliseconds;
 
         [XmlElement(ElementName = "crAuditTimeoutMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:7384")]
         [MinInclusive(500)]
         [MaxInclusive(10000)]
-        public int CrAuditTimeoutMilliseconds
+        public int? CrAuditTimeoutMilliseconds
         {
             get => _crAuditTimeoutMilliseconds;
             set
             {
-                CrAuditTimeoutMillisecondsSpecified = true;
+                CrAuditTimeoutMillisecondsSpecified = (value != null);
                 _crAuditTimeoutMilliseconds = value;
             }
         }
@@ -77,17 +77,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CrAuditTimeoutMillisecondsSpecified { get; set; }
 
-        protected bool _crConnectionEnabled;
+        protected bool? _crConnectionEnabled;
 
         [XmlElement(ElementName = "crConnectionEnabled", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:7384")]
-        public bool CrConnectionEnabled
+        public bool? CrConnectionEnabled
         {
             get => _crConnectionEnabled;
             set
             {
-                CrConnectionEnabledSpecified = true;
+                CrConnectionEnabledSpecified = (value != null);
                 _crConnectionEnabled = value;
             }
         }
@@ -95,19 +95,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CrConnectionEnabledSpecified { get; set; }
 
-        protected int _crConnectionTimeoutMilliseconds;
+        protected int? _crConnectionTimeoutMilliseconds;
 
         [XmlElement(ElementName = "crConnectionTimeoutMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:7384")]
         [MinInclusive(1000)]
         [MaxInclusive(32000)]
-        public int CrConnectionTimeoutMilliseconds
+        public int? CrConnectionTimeoutMilliseconds
         {
             get => _crConnectionTimeoutMilliseconds;
             set
             {
-                CrConnectionTimeoutMillisecondsSpecified = true;
+                CrConnectionTimeoutMillisecondsSpecified = (value != null);
                 _crConnectionTimeoutMilliseconds = value;
             }
         }
@@ -115,19 +115,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CrConnectionTimeoutMillisecondsSpecified { get; set; }
 
-        protected int _crTcpConnectionTimeoutSeconds;
+        protected int? _crTcpConnectionTimeoutSeconds;
 
         [XmlElement(ElementName = "crTcpConnectionTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:7384")]
         [MinInclusive(1)]
         [MaxInclusive(120)]
-        public int CrTcpConnectionTimeoutSeconds
+        public int? CrTcpConnectionTimeoutSeconds
         {
             get => _crTcpConnectionTimeoutSeconds;
             set
             {
-                CrTcpConnectionTimeoutSecondsSpecified = true;
+                CrTcpConnectionTimeoutSecondsSpecified = (value != null);
                 _crTcpConnectionTimeoutSeconds = value;
             }
         }
@@ -135,19 +135,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CrTcpConnectionTimeoutSecondsSpecified { get; set; }
 
-        protected int _crNumberOfReconnectionAttempts;
+        protected int? _crNumberOfReconnectionAttempts;
 
         [XmlElement(ElementName = "crNumberOfReconnectionAttempts", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:7384")]
         [MinInclusive(0)]
         [MaxInclusive(100)]
-        public int CrNumberOfReconnectionAttempts
+        public int? CrNumberOfReconnectionAttempts
         {
             get => _crNumberOfReconnectionAttempts;
             set
             {
-                CrNumberOfReconnectionAttemptsSpecified = true;
+                CrNumberOfReconnectionAttemptsSpecified = (value != null);
                 _crNumberOfReconnectionAttempts = value;
             }
         }

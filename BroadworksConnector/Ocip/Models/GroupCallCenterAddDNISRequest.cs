@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _dnisPhoneNumber;
             set
             {
-                DnisPhoneNumberSpecified = true;
+                DnisPhoneNumberSpecified = (value != null);
                 _dnisPhoneNumber = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _extension;
             set
             {
-                ExtensionSpecified = true;
+                ExtensionSpecified = (value != null);
                 _extension = value;
             }
         }
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callingLineIdPhoneNumber;
             set
             {
-                CallingLineIdPhoneNumberSpecified = true;
+                CallingLineIdPhoneNumberSpecified = (value != null);
                 _callingLineIdPhoneNumber = value;
             }
         }
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callingLineIdLastName;
             set
             {
-                CallingLineIdLastNameSpecified = true;
+                CallingLineIdLastNameSpecified = (value != null);
                 _callingLineIdLastName = value;
             }
         }
@@ -145,7 +145,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callingLineIdFirstName;
             set
             {
-                CallingLineIdFirstNameSpecified = true;
+                CallingLineIdFirstNameSpecified = (value != null);
                 _callingLineIdFirstName = value;
             }
         }

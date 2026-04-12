@@ -16,17 +16,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class OutgoingCallingPlanRedirectingPermissionsModify
     {
 
-        protected bool _group;
+        protected bool? _group;
 
         [XmlElement(ElementName = "group", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"a63afa661ee5c74f4700e562e88c66d0:2183")]
-        public bool Group
+        public bool? Group
         {
             get => _group;
             set
             {
-                GroupSpecified = true;
+                GroupSpecified = (value != null);
                 _group = value;
             }
         }
@@ -34,17 +34,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupSpecified { get; set; }
 
-        protected bool _local;
+        protected bool? _local;
 
         [XmlElement(ElementName = "local", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"a63afa661ee5c74f4700e562e88c66d0:2183")]
-        public bool Local
+        public bool? Local
         {
             get => _local;
             set
             {
-                LocalSpecified = true;
+                LocalSpecified = (value != null);
                 _local = value;
             }
         }
@@ -52,17 +52,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LocalSpecified { get; set; }
 
-        protected bool _tollFree;
+        protected bool? _tollFree;
 
         [XmlElement(ElementName = "tollFree", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"a63afa661ee5c74f4700e562e88c66d0:2183")]
-        public bool TollFree
+        public bool? TollFree
         {
             get => _tollFree;
             set
             {
-                TollFreeSpecified = true;
+                TollFreeSpecified = (value != null);
                 _tollFree = value;
             }
         }
@@ -70,17 +70,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TollFreeSpecified { get; set; }
 
-        protected bool _toll;
+        protected bool? _toll;
 
         [XmlElement(ElementName = "toll", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"a63afa661ee5c74f4700e562e88c66d0:2183")]
-        public bool Toll
+        public bool? Toll
         {
             get => _toll;
             set
             {
-                TollSpecified = true;
+                TollSpecified = (value != null);
                 _toll = value;
             }
         }
@@ -88,17 +88,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TollSpecified { get; set; }
 
-        protected bool _international;
+        protected bool? _international;
 
         [XmlElement(ElementName = "international", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"a63afa661ee5c74f4700e562e88c66d0:2183")]
-        public bool International
+        public bool? International
         {
             get => _international;
             set
             {
-                InternationalSpecified = true;
+                InternationalSpecified = (value != null);
                 _international = value;
             }
         }
@@ -106,17 +106,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool InternationalSpecified { get; set; }
 
-        protected bool _operatorAssisted;
+        protected bool? _operatorAssisted;
 
         [XmlElement(ElementName = "operatorAssisted", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"a63afa661ee5c74f4700e562e88c66d0:2183")]
-        public bool OperatorAssisted
+        public bool? OperatorAssisted
         {
             get => _operatorAssisted;
             set
             {
-                OperatorAssistedSpecified = true;
+                OperatorAssistedSpecified = (value != null);
                 _operatorAssisted = value;
             }
         }
@@ -124,17 +124,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OperatorAssistedSpecified { get; set; }
 
-        protected bool _chargeableDirectoryAssisted;
+        protected bool? _chargeableDirectoryAssisted;
 
         [XmlElement(ElementName = "chargeableDirectoryAssisted", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"a63afa661ee5c74f4700e562e88c66d0:2183")]
-        public bool ChargeableDirectoryAssisted
+        public bool? ChargeableDirectoryAssisted
         {
             get => _chargeableDirectoryAssisted;
             set
             {
-                ChargeableDirectoryAssistedSpecified = true;
+                ChargeableDirectoryAssistedSpecified = (value != null);
                 _chargeableDirectoryAssisted = value;
             }
         }
@@ -142,17 +142,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ChargeableDirectoryAssistedSpecified { get; set; }
 
-        protected bool _specialServicesI;
+        protected bool? _specialServicesI;
 
         [XmlElement(ElementName = "specialServicesI", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"a63afa661ee5c74f4700e562e88c66d0:2183")]
-        public bool SpecialServicesI
+        public bool? SpecialServicesI
         {
             get => _specialServicesI;
             set
             {
-                SpecialServicesISpecified = true;
+                SpecialServicesISpecified = (value != null);
                 _specialServicesI = value;
             }
         }
@@ -160,17 +160,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SpecialServicesISpecified { get; set; }
 
-        protected bool _specialServicesII;
+        protected bool? _specialServicesII;
 
         [XmlElement(ElementName = "specialServicesII", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"a63afa661ee5c74f4700e562e88c66d0:2183")]
-        public bool SpecialServicesII
+        public bool? SpecialServicesII
         {
             get => _specialServicesII;
             set
             {
-                SpecialServicesIISpecified = true;
+                SpecialServicesIISpecified = (value != null);
                 _specialServicesII = value;
             }
         }
@@ -178,17 +178,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SpecialServicesIISpecified { get; set; }
 
-        protected bool _premiumServicesI;
+        protected bool? _premiumServicesI;
 
         [XmlElement(ElementName = "premiumServicesI", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"a63afa661ee5c74f4700e562e88c66d0:2183")]
-        public bool PremiumServicesI
+        public bool? PremiumServicesI
         {
             get => _premiumServicesI;
             set
             {
-                PremiumServicesISpecified = true;
+                PremiumServicesISpecified = (value != null);
                 _premiumServicesI = value;
             }
         }
@@ -196,17 +196,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PremiumServicesISpecified { get; set; }
 
-        protected bool _premiumServicesII;
+        protected bool? _premiumServicesII;
 
         [XmlElement(ElementName = "premiumServicesII", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"a63afa661ee5c74f4700e562e88c66d0:2183")]
-        public bool PremiumServicesII
+        public bool? PremiumServicesII
         {
             get => _premiumServicesII;
             set
             {
-                PremiumServicesIISpecified = true;
+                PremiumServicesIISpecified = (value != null);
                 _premiumServicesII = value;
             }
         }
@@ -214,17 +214,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PremiumServicesIISpecified { get; set; }
 
-        protected bool _casual;
+        protected bool? _casual;
 
         [XmlElement(ElementName = "casual", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"a63afa661ee5c74f4700e562e88c66d0:2183")]
-        public bool Casual
+        public bool? Casual
         {
             get => _casual;
             set
             {
-                CasualSpecified = true;
+                CasualSpecified = (value != null);
                 _casual = value;
             }
         }
@@ -232,17 +232,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CasualSpecified { get; set; }
 
-        protected bool _urlDialing;
+        protected bool? _urlDialing;
 
         [XmlElement(ElementName = "urlDialing", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"a63afa661ee5c74f4700e562e88c66d0:2183")]
-        public bool UrlDialing
+        public bool? UrlDialing
         {
             get => _urlDialing;
             set
             {
-                UrlDialingSpecified = true;
+                UrlDialingSpecified = (value != null);
                 _urlDialing = value;
             }
         }
@@ -250,17 +250,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UrlDialingSpecified { get; set; }
 
-        protected bool _unknown;
+        protected bool? _unknown;
 
         [XmlElement(ElementName = "unknown", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"a63afa661ee5c74f4700e562e88c66d0:2183")]
-        public bool Unknown
+        public bool? Unknown
         {
             get => _unknown;
             set
             {
-                UnknownSpecified = true;
+                UnknownSpecified = (value != null);
                 _unknown = value;
             }
         }

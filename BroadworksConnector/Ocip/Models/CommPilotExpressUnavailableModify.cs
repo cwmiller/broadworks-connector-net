@@ -26,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _incomingCalls;
             set
             {
-                IncomingCallsSpecified = true;
+                IncomingCallsSpecified = (value != null);
                 _incomingCalls = value;
             }
         }
@@ -34,17 +34,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncomingCallsSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CommPilotExpressVoiceMailGreeting _voiceMailGreeting;
+        protected BroadWorksConnector.Ocip.Models.CommPilotExpressVoiceMailGreeting? _voiceMailGreeting;
 
         [XmlElement(ElementName = "voiceMailGreeting", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"de7795e1833d459a7eb89116d772fd78:271")]
-        public BroadWorksConnector.Ocip.Models.CommPilotExpressVoiceMailGreeting VoiceMailGreeting
+        public BroadWorksConnector.Ocip.Models.CommPilotExpressVoiceMailGreeting? VoiceMailGreeting
         {
             get => _voiceMailGreeting;
             set
             {
-                VoiceMailGreetingSpecified = true;
+                VoiceMailGreetingSpecified = (value != null);
                 _voiceMailGreeting = value;
             }
         }

@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _sipExternalDatabaseNetAddress;
             set
             {
-                SipExternalDatabaseNetAddressSpecified = true;
+                SipExternalDatabaseNetAddressSpecified = (value != null);
                 _sipExternalDatabaseNetAddress = value;
             }
         }
@@ -107,19 +107,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SipExternalDatabaseNetAddressSpecified { get; set; }
 
-        protected int _sipExternalDatabasePort;
+        protected int? _sipExternalDatabasePort;
 
         [XmlElement(ElementName = "sipExternalDatabasePort", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ba51f415ebda0240287c719bc767eadf:58")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
-        public int SipExternalDatabasePort
+        public int? SipExternalDatabasePort
         {
             get => _sipExternalDatabasePort;
             set
             {
-                SipExternalDatabasePortSpecified = true;
+                SipExternalDatabasePortSpecified = (value != null);
                 _sipExternalDatabasePort = value;
             }
         }
@@ -156,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _soapExternalDatabaseNetAddress;
             set
             {
-                SoapExternalDatabaseNetAddressSpecified = true;
+                SoapExternalDatabaseNetAddressSpecified = (value != null);
                 _soapExternalDatabaseNetAddress = value;
             }
         }

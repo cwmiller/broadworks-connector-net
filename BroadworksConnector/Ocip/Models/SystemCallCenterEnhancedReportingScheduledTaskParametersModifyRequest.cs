@@ -19,19 +19,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallCenterEnhancedReportingScheduledTaskParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected int _scheduledReportSearchIntervalMinutes;
+        protected int? _scheduledReportSearchIntervalMinutes;
 
         [XmlElement(ElementName = "scheduledReportSearchIntervalMinutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:6448")]
         [MinInclusive(1)]
         [MaxInclusive(1440)]
-        public int ScheduledReportSearchIntervalMinutes
+        public int? ScheduledReportSearchIntervalMinutes
         {
             get => _scheduledReportSearchIntervalMinutes;
             set
             {
-                ScheduledReportSearchIntervalMinutesSpecified = true;
+                ScheduledReportSearchIntervalMinutesSpecified = (value != null);
                 _scheduledReportSearchIntervalMinutes = value;
             }
         }
@@ -39,19 +39,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ScheduledReportSearchIntervalMinutesSpecified { get; set; }
 
-        protected int _maximumScheduledReportsPerInterval;
+        protected int? _maximumScheduledReportsPerInterval;
 
         [XmlElement(ElementName = "maximumScheduledReportsPerInterval", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:6448")]
         [MinInclusive(1)]
         [MaxInclusive(100000)]
-        public int MaximumScheduledReportsPerInterval
+        public int? MaximumScheduledReportsPerInterval
         {
             get => _maximumScheduledReportsPerInterval;
             set
             {
-                MaximumScheduledReportsPerIntervalSpecified = true;
+                MaximumScheduledReportsPerIntervalSpecified = (value != null);
                 _maximumScheduledReportsPerInterval = value;
             }
         }
@@ -59,19 +59,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaximumScheduledReportsPerIntervalSpecified { get; set; }
 
-        protected int _deleteScheduledReportDaysAfterCompletion;
+        protected int? _deleteScheduledReportDaysAfterCompletion;
 
         [XmlElement(ElementName = "deleteScheduledReportDaysAfterCompletion", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:6448")]
         [MinInclusive(1)]
         [MaxInclusive(366)]
-        public int DeleteScheduledReportDaysAfterCompletion
+        public int? DeleteScheduledReportDaysAfterCompletion
         {
             get => _deleteScheduledReportDaysAfterCompletion;
             set
             {
-                DeleteScheduledReportDaysAfterCompletionSpecified = true;
+                DeleteScheduledReportDaysAfterCompletionSpecified = (value != null);
                 _deleteScheduledReportDaysAfterCompletion = value;
             }
         }
@@ -79,17 +79,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeleteScheduledReportDaysAfterCompletionSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterEventRecordingCallCenterEventMode _callCenterEventMode;
+        protected BroadWorksConnector.Ocip.Models.CallCenterEventRecordingCallCenterEventMode? _callCenterEventMode;
 
         [XmlElement(ElementName = "callCenterEventMode", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:6448")]
-        public BroadWorksConnector.Ocip.Models.CallCenterEventRecordingCallCenterEventMode CallCenterEventMode
+        public BroadWorksConnector.Ocip.Models.CallCenterEventRecordingCallCenterEventMode? CallCenterEventMode
         {
             get => _callCenterEventMode;
             set
             {
-                CallCenterEventModeSpecified = true;
+                CallCenterEventModeSpecified = (value != null);
                 _callCenterEventMode = value;
             }
         }
@@ -97,17 +97,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallCenterEventModeSpecified { get; set; }
 
-        protected bool _useDialedAddressForRemoteNumber;
+        protected bool? _useDialedAddressForRemoteNumber;
 
         [XmlElement(ElementName = "useDialedAddressForRemoteNumber", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:6448")]
-        public bool UseDialedAddressForRemoteNumber
+        public bool? UseDialedAddressForRemoteNumber
         {
             get => _useDialedAddressForRemoteNumber;
             set
             {
-                UseDialedAddressForRemoteNumberSpecified = true;
+                UseDialedAddressForRemoteNumberSpecified = (value != null);
                 _useDialedAddressForRemoteNumber = value;
             }
         }

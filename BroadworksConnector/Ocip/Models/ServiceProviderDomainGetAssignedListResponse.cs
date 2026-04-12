@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _domain;
             set
             {
-                DomainSpecified = true;
+                DomainSpecified = (value != null);
                 _domain = value;
             }
         }

@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _treatmentFileName;
             set
             {
-                TreatmentFileNameSpecified = true;
+                TreatmentFileNameSpecified = (value != null);
                 _treatmentFileName = value;
             }
         }

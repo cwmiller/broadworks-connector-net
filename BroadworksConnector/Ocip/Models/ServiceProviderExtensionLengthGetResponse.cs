@@ -17,19 +17,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderExtensionLengthGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        protected int _defaultExtensionLength;
+        protected int? _defaultExtensionLength;
 
         [XmlElement(ElementName = "defaultExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:4235")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
-        public int DefaultExtensionLength
+        public int? DefaultExtensionLength
         {
             get => _defaultExtensionLength;
             set
             {
-                DefaultExtensionLengthSpecified = true;
+                DefaultExtensionLengthSpecified = (value != null);
                 _defaultExtensionLength = value;
             }
         }
@@ -37,19 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultExtensionLengthSpecified { get; set; }
 
-        protected int _locationRoutingPrefixDigit;
+        protected int? _locationRoutingPrefixDigit;
 
         [XmlElement(ElementName = "locationRoutingPrefixDigit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:4235")]
         [MinInclusive(0)]
         [MaxInclusive(9)]
-        public int LocationRoutingPrefixDigit
+        public int? LocationRoutingPrefixDigit
         {
             get => _locationRoutingPrefixDigit;
             set
             {
-                LocationRoutingPrefixDigitSpecified = true;
+                LocationRoutingPrefixDigitSpecified = (value != null);
                 _locationRoutingPrefixDigit = value;
             }
         }
@@ -57,19 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LocationRoutingPrefixDigitSpecified { get; set; }
 
-        protected int _locationCodeLength;
+        protected int? _locationCodeLength;
 
         [XmlElement(ElementName = "locationCodeLength", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:4235")]
         [MinInclusive(1)]
         [MaxInclusive(15)]
-        public int LocationCodeLength
+        public int? LocationCodeLength
         {
             get => _locationCodeLength;
             set
             {
-                LocationCodeLengthSpecified = true;
+                LocationCodeLengthSpecified = (value != null);
                 _locationCodeLength = value;
             }
         }

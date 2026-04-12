@@ -123,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkClassOfService;
             set
             {
-                NetworkClassOfServiceSpecified = true;
+                NetworkClassOfServiceSpecified = (value != null);
                 _networkClassOfService = value;
             }
         }
@@ -160,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _operatorNumber;
             set
             {
-                OperatorNumberSpecified = true;
+                OperatorNumberSpecified = (value != null);
                 _operatorNumber = value;
             }
         }
@@ -180,7 +180,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _conferenceHostUserId;
             set
             {
-                ConferenceHostUserIdSpecified = true;
+                ConferenceHostUserIdSpecified = (value != null);
                 _conferenceHostUserId = value;
             }
         }

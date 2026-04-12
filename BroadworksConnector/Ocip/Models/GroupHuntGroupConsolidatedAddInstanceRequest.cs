@@ -88,17 +88,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        protected bool _addPhoneNumberToGroup;
+        protected bool? _addPhoneNumberToGroup;
 
         [XmlElement(ElementName = "addPhoneNumberToGroup", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"781bbab86d937537938d4fe917029d5c:108")]
-        public bool AddPhoneNumberToGroup
+        public bool? AddPhoneNumberToGroup
         {
             get => _addPhoneNumberToGroup;
             set
             {
-                AddPhoneNumberToGroupSpecified = true;
+                AddPhoneNumberToGroupSpecified = (value != null);
                 _addPhoneNumberToGroup = value;
             }
         }
@@ -224,7 +224,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _forwardToPhoneNumber;
             set
             {
-                ForwardToPhoneNumberSpecified = true;
+                ForwardToPhoneNumberSpecified = (value != null);
                 _forwardToPhoneNumber = value;
             }
         }
@@ -348,7 +348,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _notReachableForwardToPhoneNumber;
             set
             {
-                NotReachableForwardToPhoneNumberSpecified = true;
+                NotReachableForwardToPhoneNumberSpecified = (value != null);
                 _notReachableForwardToPhoneNumber = value;
             }
         }
@@ -436,7 +436,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkClassOfService;
             set
             {
-                NetworkClassOfServiceSpecified = true;
+                NetworkClassOfServiceSpecified = (value != null);
                 _networkClassOfService = value;
             }
         }
@@ -454,7 +454,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _service;
             set
             {
-                ServiceSpecified = true;
+                ServiceSpecified = (value != null);
                 _service = value;
             }
         }
@@ -491,7 +491,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _directoryNumberHuntingAgentUserIdList;
             set
             {
-                DirectoryNumberHuntingAgentUserIdListSpecified = true;
+                DirectoryNumberHuntingAgentUserIdListSpecified = (value != null);
                 _directoryNumberHuntingAgentUserIdList = value;
             }
         }
@@ -499,17 +499,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DirectoryNumberHuntingAgentUserIdListSpecified { get; set; }
 
-        protected bool _directoryNumberHuntingUseTerminateCallToAgentFirst;
+        protected bool? _directoryNumberHuntingUseTerminateCallToAgentFirst;
 
         [XmlElement(ElementName = "directoryNumberHuntingUseTerminateCallToAgentFirst", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"781bbab86d937537938d4fe917029d5c:108")]
-        public bool DirectoryNumberHuntingUseTerminateCallToAgentFirst
+        public bool? DirectoryNumberHuntingUseTerminateCallToAgentFirst
         {
             get => _directoryNumberHuntingUseTerminateCallToAgentFirst;
             set
             {
-                DirectoryNumberHuntingUseTerminateCallToAgentFirstSpecified = true;
+                DirectoryNumberHuntingUseTerminateCallToAgentFirstSpecified = (value != null);
                 _directoryNumberHuntingUseTerminateCallToAgentFirst = value;
             }
         }
@@ -517,17 +517,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DirectoryNumberHuntingUseTerminateCallToAgentFirstSpecified { get; set; }
 
-        protected bool _directoryNumberHuntingUseOriginalAgentServicesForBusyAndNoAnswerCalls;
+        protected bool? _directoryNumberHuntingUseOriginalAgentServicesForBusyAndNoAnswerCalls;
 
         [XmlElement(ElementName = "directoryNumberHuntingUseOriginalAgentServicesForBusyAndNoAnswerCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"781bbab86d937537938d4fe917029d5c:108")]
-        public bool DirectoryNumberHuntingUseOriginalAgentServicesForBusyAndNoAnswerCalls
+        public bool? DirectoryNumberHuntingUseOriginalAgentServicesForBusyAndNoAnswerCalls
         {
             get => _directoryNumberHuntingUseOriginalAgentServicesForBusyAndNoAnswerCalls;
             set
             {
-                DirectoryNumberHuntingUseOriginalAgentServicesForBusyAndNoAnswerCallsSpecified = true;
+                DirectoryNumberHuntingUseOriginalAgentServicesForBusyAndNoAnswerCallsSpecified = (value != null);
                 _directoryNumberHuntingUseOriginalAgentServicesForBusyAndNoAnswerCalls = value;
             }
         }

@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _parentDepartmentKey;
             set
             {
-                ParentDepartmentKeySpecified = true;
+                ParentDepartmentKeySpecified = (value != null);
                 _parentDepartmentKey = value;
             }
         }

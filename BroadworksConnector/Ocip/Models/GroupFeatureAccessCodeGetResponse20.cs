@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _featureAccessCode;
             set
             {
-                FeatureAccessCodeSpecified = true;
+                FeatureAccessCodeSpecified = (value != null);
                 _featureAccessCode = value;
             }
         }

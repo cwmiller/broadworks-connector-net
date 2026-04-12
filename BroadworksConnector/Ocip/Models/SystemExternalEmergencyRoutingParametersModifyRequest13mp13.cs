@@ -59,17 +59,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultEmergencyNumberSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:10260")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -77,17 +77,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected bool _supportsDNSSRV;
+        protected bool? _supportsDNSSRV;
 
         [XmlElement(ElementName = "supportsDNSSRV", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:10260")]
-        public bool SupportsDNSSRV
+        public bool? SupportsDNSSRV
         {
             get => _supportsDNSSRV;
             set
             {
-                SupportsDNSSRVSpecified = true;
+                SupportsDNSSRVSpecified = (value != null);
                 _supportsDNSSRV = value;
             }
         }
@@ -95,19 +95,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SupportsDNSSRVSpecified { get; set; }
 
-        protected int _connectionTimeoutSeconds;
+        protected int? _connectionTimeoutSeconds;
 
         [XmlElement(ElementName = "connectionTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:10260")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
-        public int ConnectionTimeoutSeconds
+        public int? ConnectionTimeoutSeconds
         {
             get => _connectionTimeoutSeconds;
             set
             {
-                ConnectionTimeoutSecondsSpecified = true;
+                ConnectionTimeoutSecondsSpecified = (value != null);
                 _connectionTimeoutSeconds = value;
             }
         }

@@ -22,17 +22,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemNetworkServerSyncParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _enableSync;
+        protected bool? _enableSync;
 
         [XmlElement(ElementName = "enableSync", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:12993")]
-        public bool EnableSync
+        public bool? EnableSync
         {
             get => _enableSync;
             set
             {
-                EnableSyncSpecified = true;
+                EnableSyncSpecified = (value != null);
                 _enableSync = value;
             }
         }
@@ -40,17 +40,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableSyncSpecified { get; set; }
 
-        protected bool _syncLinePorts;
+        protected bool? _syncLinePorts;
 
         [XmlElement(ElementName = "syncLinePorts", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:12993")]
-        public bool SyncLinePorts
+        public bool? SyncLinePorts
         {
             get => _syncLinePorts;
             set
             {
-                SyncLinePortsSpecified = true;
+                SyncLinePortsSpecified = (value != null);
                 _syncLinePorts = value;
             }
         }
@@ -58,17 +58,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SyncLinePortsSpecified { get; set; }
 
-        protected bool _syncDeviceManagementInfo;
+        protected bool? _syncDeviceManagementInfo;
 
         [XmlElement(ElementName = "syncDeviceManagementInfo", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:12993")]
-        public bool SyncDeviceManagementInfo
+        public bool? SyncDeviceManagementInfo
         {
             get => _syncDeviceManagementInfo;
             set
             {
-                SyncDeviceManagementInfoSpecified = true;
+                SyncDeviceManagementInfoSpecified = (value != null);
                 _syncDeviceManagementInfo = value;
             }
         }
@@ -76,17 +76,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SyncDeviceManagementInfoSpecified { get; set; }
 
-        protected bool _syncTrunkGroups;
+        protected bool? _syncTrunkGroups;
 
         [XmlElement(ElementName = "syncTrunkGroups", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:12993")]
-        public bool SyncTrunkGroups
+        public bool? SyncTrunkGroups
         {
             get => _syncTrunkGroups;
             set
             {
-                SyncTrunkGroupsSpecified = true;
+                SyncTrunkGroupsSpecified = (value != null);
                 _syncTrunkGroups = value;
             }
         }
@@ -94,19 +94,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SyncTrunkGroupsSpecified { get; set; }
 
-        protected int _syncConnectionTimeoutSeconds;
+        protected int? _syncConnectionTimeoutSeconds;
 
         [XmlElement(ElementName = "syncConnectionTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:12993")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
-        public int SyncConnectionTimeoutSeconds
+        public int? SyncConnectionTimeoutSeconds
         {
             get => _syncConnectionTimeoutSeconds;
             set
             {
-                SyncConnectionTimeoutSecondsSpecified = true;
+                SyncConnectionTimeoutSecondsSpecified = (value != null);
                 _syncConnectionTimeoutSeconds = value;
             }
         }
@@ -114,17 +114,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SyncConnectionTimeoutSecondsSpecified { get; set; }
 
-        protected bool _syncEnterpriseNumbers;
+        protected bool? _syncEnterpriseNumbers;
 
         [XmlElement(ElementName = "syncEnterpriseNumbers", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:12993")]
-        public bool SyncEnterpriseNumbers
+        public bool? SyncEnterpriseNumbers
         {
             get => _syncEnterpriseNumbers;
             set
             {
-                SyncEnterpriseNumbersSpecified = true;
+                SyncEnterpriseNumbersSpecified = (value != null);
                 _syncEnterpriseNumbers = value;
             }
         }

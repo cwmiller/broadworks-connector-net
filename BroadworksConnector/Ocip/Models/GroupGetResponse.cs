@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupName;
             set
             {
-                GroupNameSpecified = true;
+                GroupNameSpecified = (value != null);
                 _groupName = value;
             }
         }
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callingLineIdName;
             set
             {
-                CallingLineIdNameSpecified = true;
+                CallingLineIdNameSpecified = (value != null);
                 _callingLineIdName = value;
             }
         }
@@ -165,7 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _locationDialingCode;
             set
             {
-                LocationDialingCodeSpecified = true;
+                LocationDialingCodeSpecified = (value != null);
                 _locationDialingCode = value;
             }
         }
@@ -183,7 +183,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _contact;
             set
             {
-                ContactSpecified = true;
+                ContactSpecified = (value != null);
                 _contact = value;
             }
         }
@@ -201,7 +201,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _address;
             set
             {
-                AddressSpecified = true;
+                AddressSpecified = (value != null);
                 _address = value;
             }
         }

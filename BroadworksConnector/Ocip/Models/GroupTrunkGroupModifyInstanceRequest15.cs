@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newName;
             set
             {
-                NewNameSpecified = true;
+                NewNameSpecified = (value != null);
                 _newName = value;
             }
         }
@@ -118,18 +118,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessDeviceSpecified { get; set; }
 
-        protected int _maxActiveCalls;
+        protected int? _maxActiveCalls;
 
         [XmlElement(ElementName = "maxActiveCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
         [MinInclusive(1)]
-        public int MaxActiveCalls
+        public int? MaxActiveCalls
         {
             get => _maxActiveCalls;
             set
             {
-                MaxActiveCallsSpecified = true;
+                MaxActiveCallsSpecified = (value != null);
                 _maxActiveCalls = value;
             }
         }
@@ -177,17 +177,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxOutgoingCallsSpecified { get; set; }
 
-        protected bool _enableBursting;
+        protected bool? _enableBursting;
 
         [XmlElement(ElementName = "enableBursting", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
-        public bool EnableBursting
+        public bool? EnableBursting
         {
             get => _enableBursting;
             set
             {
-                EnableBurstingSpecified = true;
+                EnableBurstingSpecified = (value != null);
                 _enableBursting = value;
             }
         }
@@ -311,18 +311,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CapacityExceededRerouteTrunkGroupKeySpecified { get; set; }
 
-        protected int _capacityExceededTrapInitialCalls;
+        protected int? _capacityExceededTrapInitialCalls;
 
         [XmlElement(ElementName = "capacityExceededTrapInitialCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
         [MinInclusive(0)]
-        public int CapacityExceededTrapInitialCalls
+        public int? CapacityExceededTrapInitialCalls
         {
             get => _capacityExceededTrapInitialCalls;
             set
             {
-                CapacityExceededTrapInitialCallsSpecified = true;
+                CapacityExceededTrapInitialCallsSpecified = (value != null);
                 _capacityExceededTrapInitialCalls = value;
             }
         }
@@ -330,18 +330,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CapacityExceededTrapInitialCallsSpecified { get; set; }
 
-        protected int _capacityExceededTrapOffsetCalls;
+        protected int? _capacityExceededTrapOffsetCalls;
 
         [XmlElement(ElementName = "capacityExceededTrapOffsetCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
         [MinInclusive(0)]
-        public int CapacityExceededTrapOffsetCalls
+        public int? CapacityExceededTrapOffsetCalls
         {
             get => _capacityExceededTrapOffsetCalls;
             set
             {
-                CapacityExceededTrapOffsetCallsSpecified = true;
+                CapacityExceededTrapOffsetCallsSpecified = (value != null);
                 _capacityExceededTrapOffsetCalls = value;
             }
         }
@@ -405,19 +405,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UnreachableDestinationRerouteTrunkGroupKeySpecified { get; set; }
 
-        protected int _invitationTimeout;
+        protected int? _invitationTimeout;
 
         [XmlElement(ElementName = "invitationTimeout", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
         [MinInclusive(1)]
         [MaxInclusive(255)]
-        public int InvitationTimeout
+        public int? InvitationTimeout
         {
             get => _invitationTimeout;
             set
             {
-                InvitationTimeoutSpecified = true;
+                InvitationTimeoutSpecified = (value != null);
                 _invitationTimeout = value;
             }
         }
@@ -425,17 +425,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool InvitationTimeoutSpecified { get; set; }
 
-        protected bool _requireAuthentication;
+        protected bool? _requireAuthentication;
 
         [XmlElement(ElementName = "requireAuthentication", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
-        public bool RequireAuthentication
+        public bool? RequireAuthentication
         {
             get => _requireAuthentication;
             set
             {
-                RequireAuthenticationSpecified = true;
+                RequireAuthenticationSpecified = (value != null);
                 _requireAuthentication = value;
             }
         }
@@ -541,17 +541,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OtgDtgIdentitySpecified { get; set; }
 
-        protected bool _allowTerminationToTrunkGroupIdentity;
+        protected bool? _allowTerminationToTrunkGroupIdentity;
 
         [XmlElement(ElementName = "allowTerminationToTrunkGroupIdentity", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
-        public bool AllowTerminationToTrunkGroupIdentity
+        public bool? AllowTerminationToTrunkGroupIdentity
         {
             get => _allowTerminationToTrunkGroupIdentity;
             set
             {
-                AllowTerminationToTrunkGroupIdentitySpecified = true;
+                AllowTerminationToTrunkGroupIdentitySpecified = (value != null);
                 _allowTerminationToTrunkGroupIdentity = value;
             }
         }
@@ -559,17 +559,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowTerminationToTrunkGroupIdentitySpecified { get; set; }
 
-        protected bool _allowTerminationToDtgIdentity;
+        protected bool? _allowTerminationToDtgIdentity;
 
         [XmlElement(ElementName = "allowTerminationToDtgIdentity", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
-        public bool AllowTerminationToDtgIdentity
+        public bool? AllowTerminationToDtgIdentity
         {
             get => _allowTerminationToDtgIdentity;
             set
             {
-                AllowTerminationToDtgIdentitySpecified = true;
+                AllowTerminationToDtgIdentitySpecified = (value != null);
                 _allowTerminationToDtgIdentity = value;
             }
         }
@@ -577,17 +577,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowTerminationToDtgIdentitySpecified { get; set; }
 
-        protected bool _includeTrunkGroupIdentity;
+        protected bool? _includeTrunkGroupIdentity;
 
         [XmlElement(ElementName = "includeTrunkGroupIdentity", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
-        public bool IncludeTrunkGroupIdentity
+        public bool? IncludeTrunkGroupIdentity
         {
             get => _includeTrunkGroupIdentity;
             set
             {
-                IncludeTrunkGroupIdentitySpecified = true;
+                IncludeTrunkGroupIdentitySpecified = (value != null);
                 _includeTrunkGroupIdentity = value;
             }
         }
@@ -595,17 +595,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeTrunkGroupIdentitySpecified { get; set; }
 
-        protected bool _includeDtgIdentity;
+        protected bool? _includeDtgIdentity;
 
         [XmlElement(ElementName = "includeDtgIdentity", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
-        public bool IncludeDtgIdentity
+        public bool? IncludeDtgIdentity
         {
             get => _includeDtgIdentity;
             set
             {
-                IncludeDtgIdentitySpecified = true;
+                IncludeDtgIdentitySpecified = (value != null);
                 _includeDtgIdentity = value;
             }
         }
@@ -613,17 +613,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeDtgIdentitySpecified { get; set; }
 
-        protected bool _includeTrunkGroupIdentityForNetworkCalls;
+        protected bool? _includeTrunkGroupIdentityForNetworkCalls;
 
         [XmlElement(ElementName = "includeTrunkGroupIdentityForNetworkCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
-        public bool IncludeTrunkGroupIdentityForNetworkCalls
+        public bool? IncludeTrunkGroupIdentityForNetworkCalls
         {
             get => _includeTrunkGroupIdentityForNetworkCalls;
             set
             {
-                IncludeTrunkGroupIdentityForNetworkCallsSpecified = true;
+                IncludeTrunkGroupIdentityForNetworkCallsSpecified = (value != null);
                 _includeTrunkGroupIdentityForNetworkCalls = value;
             }
         }
@@ -631,17 +631,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeTrunkGroupIdentityForNetworkCallsSpecified { get; set; }
 
-        protected bool _includeOtgIdentityForNetworkCalls;
+        protected bool? _includeOtgIdentityForNetworkCalls;
 
         [XmlElement(ElementName = "includeOtgIdentityForNetworkCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
-        public bool IncludeOtgIdentityForNetworkCalls
+        public bool? IncludeOtgIdentityForNetworkCalls
         {
             get => _includeOtgIdentityForNetworkCalls;
             set
             {
-                IncludeOtgIdentityForNetworkCallsSpecified = true;
+                IncludeOtgIdentityForNetworkCallsSpecified = (value != null);
                 _includeOtgIdentityForNetworkCalls = value;
             }
         }
@@ -649,17 +649,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeOtgIdentityForNetworkCallsSpecified { get; set; }
 
-        protected bool _enableNetworkAddressIdentity;
+        protected bool? _enableNetworkAddressIdentity;
 
         [XmlElement(ElementName = "enableNetworkAddressIdentity", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
-        public bool EnableNetworkAddressIdentity
+        public bool? EnableNetworkAddressIdentity
         {
             get => _enableNetworkAddressIdentity;
             set
             {
-                EnableNetworkAddressIdentitySpecified = true;
+                EnableNetworkAddressIdentitySpecified = (value != null);
                 _enableNetworkAddressIdentity = value;
             }
         }
@@ -667,17 +667,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableNetworkAddressIdentitySpecified { get; set; }
 
-        protected bool _allowUnscreenedCalls;
+        protected bool? _allowUnscreenedCalls;
 
         [XmlElement(ElementName = "allowUnscreenedCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
-        public bool AllowUnscreenedCalls
+        public bool? AllowUnscreenedCalls
         {
             get => _allowUnscreenedCalls;
             set
             {
-                AllowUnscreenedCallsSpecified = true;
+                AllowUnscreenedCallsSpecified = (value != null);
                 _allowUnscreenedCalls = value;
             }
         }
@@ -685,17 +685,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowUnscreenedCallsSpecified { get; set; }
 
-        protected bool _allowUnscreenedEmergencyCalls;
+        protected bool? _allowUnscreenedEmergencyCalls;
 
         [XmlElement(ElementName = "allowUnscreenedEmergencyCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
-        public bool AllowUnscreenedEmergencyCalls
+        public bool? AllowUnscreenedEmergencyCalls
         {
             get => _allowUnscreenedEmergencyCalls;
             set
             {
-                AllowUnscreenedEmergencyCallsSpecified = true;
+                AllowUnscreenedEmergencyCallsSpecified = (value != null);
                 _allowUnscreenedEmergencyCalls = value;
             }
         }
@@ -703,17 +703,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowUnscreenedEmergencyCallsSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.TrunkGroupPilotUserCallingLineIdentityUsagePolicy _pilotUserCallingLineIdentityPolicy;
+        protected BroadWorksConnector.Ocip.Models.TrunkGroupPilotUserCallingLineIdentityUsagePolicy? _pilotUserCallingLineIdentityPolicy;
 
         [XmlElement(ElementName = "pilotUserCallingLineIdentityPolicy", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
-        public BroadWorksConnector.Ocip.Models.TrunkGroupPilotUserCallingLineIdentityUsagePolicy PilotUserCallingLineIdentityPolicy
+        public BroadWorksConnector.Ocip.Models.TrunkGroupPilotUserCallingLineIdentityUsagePolicy? PilotUserCallingLineIdentityPolicy
         {
             get => _pilotUserCallingLineIdentityPolicy;
             set
             {
-                PilotUserCallingLineIdentityPolicySpecified = true;
+                PilotUserCallingLineIdentityPolicySpecified = (value != null);
                 _pilotUserCallingLineIdentityPolicy = value;
             }
         }
@@ -721,17 +721,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PilotUserCallingLineIdentityPolicySpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.TrunkGroupPilotUserChargeNumberUsagePolicy _pilotUserChargeNumberPolicy;
+        protected BroadWorksConnector.Ocip.Models.TrunkGroupPilotUserChargeNumberUsagePolicy? _pilotUserChargeNumberPolicy;
 
         [XmlElement(ElementName = "pilotUserChargeNumberPolicy", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
-        public BroadWorksConnector.Ocip.Models.TrunkGroupPilotUserChargeNumberUsagePolicy PilotUserChargeNumberPolicy
+        public BroadWorksConnector.Ocip.Models.TrunkGroupPilotUserChargeNumberUsagePolicy? PilotUserChargeNumberPolicy
         {
             get => _pilotUserChargeNumberPolicy;
             set
             {
-                PilotUserChargeNumberPolicySpecified = true;
+                PilotUserChargeNumberPolicySpecified = (value != null);
                 _pilotUserChargeNumberPolicy = value;
             }
         }
@@ -815,17 +815,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PeeringDomainSpecified { get; set; }
 
-        protected bool _routeToPeeringDomain;
+        protected bool? _routeToPeeringDomain;
 
         [XmlElement(ElementName = "routeToPeeringDomain", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
-        public bool RouteToPeeringDomain
+        public bool? RouteToPeeringDomain
         {
             get => _routeToPeeringDomain;
             set
             {
-                RouteToPeeringDomainSpecified = true;
+                RouteToPeeringDomainSpecified = (value != null);
                 _routeToPeeringDomain = value;
             }
         }
@@ -833,17 +833,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RouteToPeeringDomainSpecified { get; set; }
 
-        protected bool _prefixEnabled;
+        protected bool? _prefixEnabled;
 
         [XmlElement(ElementName = "prefixEnabled", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
-        public bool PrefixEnabled
+        public bool? PrefixEnabled
         {
             get => _prefixEnabled;
             set
             {
-                PrefixEnabledSpecified = true;
+                PrefixEnabledSpecified = (value != null);
                 _prefixEnabled = value;
             }
         }
@@ -871,17 +871,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PrefixSpecified { get; set; }
 
-        protected bool _statefulReroutingEnabled;
+        protected bool? _statefulReroutingEnabled;
 
         [XmlElement(ElementName = "statefulReroutingEnabled", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
-        public bool StatefulReroutingEnabled
+        public bool? StatefulReroutingEnabled
         {
             get => _statefulReroutingEnabled;
             set
             {
-                StatefulReroutingEnabledSpecified = true;
+                StatefulReroutingEnabledSpecified = (value != null);
                 _statefulReroutingEnabled = value;
             }
         }
@@ -889,17 +889,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StatefulReroutingEnabledSpecified { get; set; }
 
-        protected bool _sendContinuousOptionsMessage;
+        protected bool? _sendContinuousOptionsMessage;
 
         [XmlElement(ElementName = "sendContinuousOptionsMessage", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
-        public bool SendContinuousOptionsMessage
+        public bool? SendContinuousOptionsMessage
         {
             get => _sendContinuousOptionsMessage;
             set
             {
-                SendContinuousOptionsMessageSpecified = true;
+                SendContinuousOptionsMessageSpecified = (value != null);
                 _sendContinuousOptionsMessage = value;
             }
         }
@@ -907,19 +907,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SendContinuousOptionsMessageSpecified { get; set; }
 
-        protected int _continuousOptionsSendingIntervalSeconds;
+        protected int? _continuousOptionsSendingIntervalSeconds;
 
         [XmlElement(ElementName = "continuousOptionsSendingIntervalSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
         [MinInclusive(30)]
         [MaxInclusive(86400)]
-        public int ContinuousOptionsSendingIntervalSeconds
+        public int? ContinuousOptionsSendingIntervalSeconds
         {
             get => _continuousOptionsSendingIntervalSeconds;
             set
             {
-                ContinuousOptionsSendingIntervalSecondsSpecified = true;
+                ContinuousOptionsSendingIntervalSecondsSpecified = (value != null);
                 _continuousOptionsSendingIntervalSeconds = value;
             }
         }
@@ -927,19 +927,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ContinuousOptionsSendingIntervalSecondsSpecified { get; set; }
 
-        protected int _failureOptionsSendingIntervalSeconds;
+        protected int? _failureOptionsSendingIntervalSeconds;
 
         [XmlElement(ElementName = "failureOptionsSendingIntervalSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
         [MinInclusive(10)]
         [MaxInclusive(86400)]
-        public int FailureOptionsSendingIntervalSeconds
+        public int? FailureOptionsSendingIntervalSeconds
         {
             get => _failureOptionsSendingIntervalSeconds;
             set
             {
-                FailureOptionsSendingIntervalSecondsSpecified = true;
+                FailureOptionsSendingIntervalSecondsSpecified = (value != null);
                 _failureOptionsSendingIntervalSeconds = value;
             }
         }
@@ -947,19 +947,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FailureOptionsSendingIntervalSecondsSpecified { get; set; }
 
-        protected int _failureThresholdCounter;
+        protected int? _failureThresholdCounter;
 
         [XmlElement(ElementName = "failureThresholdCounter", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
         [MinInclusive(1)]
         [MaxInclusive(60)]
-        public int FailureThresholdCounter
+        public int? FailureThresholdCounter
         {
             get => _failureThresholdCounter;
             set
             {
-                FailureThresholdCounterSpecified = true;
+                FailureThresholdCounterSpecified = (value != null);
                 _failureThresholdCounter = value;
             }
         }
@@ -967,19 +967,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FailureThresholdCounterSpecified { get; set; }
 
-        protected int _successThresholdCounter;
+        protected int? _successThresholdCounter;
 
         [XmlElement(ElementName = "successThresholdCounter", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
         [MinInclusive(1)]
         [MaxInclusive(60)]
-        public int SuccessThresholdCounter
+        public int? SuccessThresholdCounter
         {
             get => _successThresholdCounter;
             set
             {
-                SuccessThresholdCounterSpecified = true;
+                SuccessThresholdCounterSpecified = (value != null);
                 _successThresholdCounter = value;
             }
         }
@@ -987,19 +987,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SuccessThresholdCounterSpecified { get; set; }
 
-        protected int _inviteFailureThresholdCounter;
+        protected int? _inviteFailureThresholdCounter;
 
         [XmlElement(ElementName = "inviteFailureThresholdCounter", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
         [MinInclusive(1)]
         [MaxInclusive(60)]
-        public int InviteFailureThresholdCounter
+        public int? InviteFailureThresholdCounter
         {
             get => _inviteFailureThresholdCounter;
             set
             {
-                InviteFailureThresholdCounterSpecified = true;
+                InviteFailureThresholdCounterSpecified = (value != null);
                 _inviteFailureThresholdCounter = value;
             }
         }
@@ -1007,19 +1007,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool InviteFailureThresholdCounterSpecified { get; set; }
 
-        protected int _inviteFailureThresholdWindowSeconds;
+        protected int? _inviteFailureThresholdWindowSeconds;
 
         [XmlElement(ElementName = "inviteFailureThresholdWindowSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
         [MinInclusive(30)]
         [MaxInclusive(240)]
-        public int InviteFailureThresholdWindowSeconds
+        public int? InviteFailureThresholdWindowSeconds
         {
             get => _inviteFailureThresholdWindowSeconds;
             set
             {
-                InviteFailureThresholdWindowSecondsSpecified = true;
+                InviteFailureThresholdWindowSecondsSpecified = (value != null);
                 _inviteFailureThresholdWindowSeconds = value;
             }
         }
@@ -1027,17 +1027,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool InviteFailureThresholdWindowSecondsSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.TrunkGroupPilotUserCallingLineAssertedIdentityUsagePolicy _pilotUserCallingLineAssertedIdentityPolicy;
+        protected BroadWorksConnector.Ocip.Models.TrunkGroupPilotUserCallingLineAssertedIdentityUsagePolicy? _pilotUserCallingLineAssertedIdentityPolicy;
 
         [XmlElement(ElementName = "pilotUserCallingLineAssertedIdentityPolicy", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
-        public BroadWorksConnector.Ocip.Models.TrunkGroupPilotUserCallingLineAssertedIdentityUsagePolicy PilotUserCallingLineAssertedIdentityPolicy
+        public BroadWorksConnector.Ocip.Models.TrunkGroupPilotUserCallingLineAssertedIdentityUsagePolicy? PilotUserCallingLineAssertedIdentityPolicy
         {
             get => _pilotUserCallingLineAssertedIdentityPolicy;
             set
             {
-                PilotUserCallingLineAssertedIdentityPolicySpecified = true;
+                PilotUserCallingLineAssertedIdentityPolicySpecified = (value != null);
                 _pilotUserCallingLineAssertedIdentityPolicy = value;
             }
         }
@@ -1045,17 +1045,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PilotUserCallingLineAssertedIdentityPolicySpecified { get; set; }
 
-        protected bool _useSystemCallingLineAssertedIdentityPolicy;
+        protected bool? _useSystemCallingLineAssertedIdentityPolicy;
 
         [XmlElement(ElementName = "useSystemCallingLineAssertedIdentityPolicy", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
-        public bool UseSystemCallingLineAssertedIdentityPolicy
+        public bool? UseSystemCallingLineAssertedIdentityPolicy
         {
             get => _useSystemCallingLineAssertedIdentityPolicy;
             set
             {
-                UseSystemCallingLineAssertedIdentityPolicySpecified = true;
+                UseSystemCallingLineAssertedIdentityPolicySpecified = (value != null);
                 _useSystemCallingLineAssertedIdentityPolicy = value;
             }
         }
@@ -1063,17 +1063,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseSystemCallingLineAssertedIdentityPolicySpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.TrunkGroupPilotUserCallOptimizationPolicy _pilotUserCallOptimizationPolicy;
+        protected BroadWorksConnector.Ocip.Models.TrunkGroupPilotUserCallOptimizationPolicy? _pilotUserCallOptimizationPolicy;
 
         [XmlElement(ElementName = "pilotUserCallOptimizationPolicy", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
-        public BroadWorksConnector.Ocip.Models.TrunkGroupPilotUserCallOptimizationPolicy PilotUserCallOptimizationPolicy
+        public BroadWorksConnector.Ocip.Models.TrunkGroupPilotUserCallOptimizationPolicy? PilotUserCallOptimizationPolicy
         {
             get => _pilotUserCallOptimizationPolicy;
             set
             {
-                PilotUserCallOptimizationPolicySpecified = true;
+                PilotUserCallOptimizationPolicySpecified = (value != null);
                 _pilotUserCallOptimizationPolicy = value;
             }
         }

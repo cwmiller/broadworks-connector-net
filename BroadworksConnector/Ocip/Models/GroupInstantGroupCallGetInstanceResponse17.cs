@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _destinationPhoneNumber;
             set
             {
-                DestinationPhoneNumberSpecified = true;
+                DestinationPhoneNumberSpecified = (value != null);
                 _destinationPhoneNumber = value;
             }
         }
@@ -75,19 +75,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsAnswerTimeoutEnabledSpecified { get; set; }
 
-        protected int _answerTimeoutMinutes;
+        protected int? _answerTimeoutMinutes;
 
         [XmlElement(ElementName = "answerTimeoutMinutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:10945")]
         [MinInclusive(1)]
         [MaxInclusive(60)]
-        public int AnswerTimeoutMinutes
+        public int? AnswerTimeoutMinutes
         {
             get => _answerTimeoutMinutes;
             set
             {
-                AnswerTimeoutMinutesSpecified = true;
+                AnswerTimeoutMinutesSpecified = (value != null);
                 _answerTimeoutMinutes = value;
             }
         }

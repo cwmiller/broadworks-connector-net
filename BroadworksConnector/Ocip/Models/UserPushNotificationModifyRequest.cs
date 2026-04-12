@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _sendPushNotificationForClickToDial;
+        protected bool? _sendPushNotificationForClickToDial;
 
         [XmlElement(ElementName = "sendPushNotificationForClickToDial", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3452")]
-        public bool SendPushNotificationForClickToDial
+        public bool? SendPushNotificationForClickToDial
         {
             get => _sendPushNotificationForClickToDial;
             set
             {
-                SendPushNotificationForClickToDialSpecified = true;
+                SendPushNotificationForClickToDialSpecified = (value != null);
                 _sendPushNotificationForClickToDial = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SendPushNotificationForClickToDialSpecified { get; set; }
 
-        protected bool _sendPushNotificationForGroupPaging;
+        protected bool? _sendPushNotificationForGroupPaging;
 
         [XmlElement(ElementName = "sendPushNotificationForGroupPaging", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3452")]
-        public bool SendPushNotificationForGroupPaging
+        public bool? SendPushNotificationForGroupPaging
         {
             get => _sendPushNotificationForGroupPaging;
             set
             {
-                SendPushNotificationForGroupPagingSpecified = true;
+                SendPushNotificationForGroupPagingSpecified = (value != null);
                 _sendPushNotificationForGroupPaging = value;
             }
         }

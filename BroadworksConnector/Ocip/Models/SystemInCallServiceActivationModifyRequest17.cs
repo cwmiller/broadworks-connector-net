@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultFlashActivationDigits;
             set
             {
-                DefaultFlashActivationDigitsSpecified = true;
+                DefaultFlashActivationDigitsSpecified = (value != null);
                 _defaultFlashActivationDigits = value;
             }
         }
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultCallTransferActivationDigits;
             set
             {
-                DefaultCallTransferActivationDigitsSpecified = true;
+                DefaultCallTransferActivationDigitsSpecified = (value != null);
                 _defaultCallTransferActivationDigits = value;
             }
         }

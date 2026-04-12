@@ -184,7 +184,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _nameDialingName;
             set
             {
-                NameDialingNameSpecified = true;
+                NameDialingNameSpecified = (value != null);
                 _nameDialingName = value;
             }
         }
@@ -204,7 +204,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hiraganaLastName;
             set
             {
-                HiraganaLastNameSpecified = true;
+                HiraganaLastNameSpecified = (value != null);
                 _hiraganaLastName = value;
             }
         }
@@ -224,7 +224,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hiraganaFirstName;
             set
             {
-                HiraganaFirstNameSpecified = true;
+                HiraganaFirstNameSpecified = (value != null);
                 _hiraganaFirstName = value;
             }
         }
@@ -244,7 +244,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _phoneNumber;
             set
             {
-                PhoneNumberSpecified = true;
+                PhoneNumberSpecified = (value != null);
                 _phoneNumber = value;
             }
         }
@@ -264,7 +264,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _extension;
             set
             {
-                ExtensionSpecified = true;
+                ExtensionSpecified = (value != null);
                 _extension = value;
             }
         }
@@ -284,7 +284,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callingLineIdPhoneNumber;
             set
             {
-                CallingLineIdPhoneNumberSpecified = true;
+                CallingLineIdPhoneNumberSpecified = (value != null);
                 _callingLineIdPhoneNumber = value;
             }
         }
@@ -302,7 +302,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _department;
             set
             {
-                DepartmentSpecified = true;
+                DepartmentSpecified = (value != null);
                 _department = value;
             }
         }
@@ -321,7 +321,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _departmentFullPath;
             set
             {
-                DepartmentFullPathSpecified = true;
+                DepartmentFullPathSpecified = (value != null);
                 _departmentFullPath = value;
             }
         }
@@ -417,7 +417,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _alias;
             set
             {
-                AliasSpecified = true;
+                AliasSpecified = (value != null);
                 _alias = value;
             }
         }
@@ -435,7 +435,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _accessDeviceEndpoint;
             set
             {
-                AccessDeviceEndpointSpecified = true;
+                AccessDeviceEndpointSpecified = (value != null);
                 _accessDeviceEndpoint = value;
             }
         }
@@ -453,7 +453,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _trunkAddressing;
             set
             {
-                TrunkAddressingSpecified = true;
+                TrunkAddressingSpecified = (value != null);
                 _trunkAddressing = value;
             }
         }
@@ -473,7 +473,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _title;
             set
             {
-                TitleSpecified = true;
+                TitleSpecified = (value != null);
                 _title = value;
             }
         }
@@ -493,7 +493,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _pagerPhoneNumber;
             set
             {
-                PagerPhoneNumberSpecified = true;
+                PagerPhoneNumberSpecified = (value != null);
                 _pagerPhoneNumber = value;
             }
         }
@@ -513,7 +513,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _mobilePhoneNumber;
             set
             {
-                MobilePhoneNumberSpecified = true;
+                MobilePhoneNumberSpecified = (value != null);
                 _mobilePhoneNumber = value;
             }
         }
@@ -533,7 +533,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _emailAddress;
             set
             {
-                EmailAddressSpecified = true;
+                EmailAddressSpecified = (value != null);
                 _emailAddress = value;
             }
         }
@@ -553,7 +553,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _yahooId;
             set
             {
-                YahooIdSpecified = true;
+                YahooIdSpecified = (value != null);
                 _yahooId = value;
             }
         }
@@ -573,7 +573,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _addressLocation;
             set
             {
-                AddressLocationSpecified = true;
+                AddressLocationSpecified = (value != null);
                 _addressLocation = value;
             }
         }
@@ -591,7 +591,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _address;
             set
             {
-                AddressSpecified = true;
+                AddressSpecified = (value != null);
                 _address = value;
             }
         }
@@ -630,7 +630,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _nationalPrefix;
             set
             {
-                NationalPrefixSpecified = true;
+                NationalPrefixSpecified = (value != null);
                 _nationalPrefix = value;
             }
         }
@@ -650,7 +650,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkClassOfService;
             set
             {
-                NetworkClassOfServiceSpecified = true;
+                NetworkClassOfServiceSpecified = (value != null);
                 _networkClassOfService = value;
             }
         }
@@ -670,7 +670,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _officeZoneName;
             set
             {
-                OfficeZoneNameSpecified = true;
+                OfficeZoneNameSpecified = (value != null);
                 _officeZoneName = value;
             }
         }
@@ -690,7 +690,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _primaryZoneName;
             set
             {
-                PrimaryZoneNameSpecified = true;
+                PrimaryZoneNameSpecified = (value != null);
                 _primaryZoneName = value;
             }
         }
@@ -710,7 +710,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _impId;
             set
             {
-                ImpIdSpecified = true;
+                ImpIdSpecified = (value != null);
                 _impId = value;
             }
         }
@@ -728,7 +728,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _alternateUserId;
             set
             {
-                AlternateUserIdSpecified = true;
+                AlternateUserIdSpecified = (value != null);
                 _alternateUserId = value;
             }
         }
@@ -748,7 +748,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerId;
             set
             {
-                ResellerIdSpecified = true;
+                ResellerIdSpecified = (value != null);
                 _resellerId = value;
             }
         }

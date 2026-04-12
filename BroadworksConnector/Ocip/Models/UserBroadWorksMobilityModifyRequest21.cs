@@ -41,17 +41,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1879")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -59,17 +59,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected bool _useMobileIdentityCallAnchoring;
+        protected bool? _useMobileIdentityCallAnchoring;
 
         [XmlElement(ElementName = "useMobileIdentityCallAnchoring", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1879")]
-        public bool UseMobileIdentityCallAnchoring
+        public bool? UseMobileIdentityCallAnchoring
         {
             get => _useMobileIdentityCallAnchoring;
             set
             {
-                UseMobileIdentityCallAnchoringSpecified = true;
+                UseMobileIdentityCallAnchoringSpecified = (value != null);
                 _useMobileIdentityCallAnchoring = value;
             }
         }
@@ -77,17 +77,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseMobileIdentityCallAnchoringSpecified { get; set; }
 
-        protected bool _preventCallsToOwnMobiles;
+        protected bool? _preventCallsToOwnMobiles;
 
         [XmlElement(ElementName = "preventCallsToOwnMobiles", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1879")]
-        public bool PreventCallsToOwnMobiles
+        public bool? PreventCallsToOwnMobiles
         {
             get => _preventCallsToOwnMobiles;
             set
             {
-                PreventCallsToOwnMobilesSpecified = true;
+                PreventCallsToOwnMobilesSpecified = (value != null);
                 _preventCallsToOwnMobiles = value;
             }
         }
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _mobileIdentity;
             set
             {
-                MobileIdentitySpecified = true;
+                MobileIdentitySpecified = (value != null);
                 _mobileIdentity = value;
             }
         }
@@ -113,17 +113,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MobileIdentitySpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing _profileIdentityDevicesToRing;
+        protected BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing? _profileIdentityDevicesToRing;
 
         [XmlElement(ElementName = "profileIdentityDevicesToRing", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1879")]
-        public BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing ProfileIdentityDevicesToRing
+        public BroadWorksConnector.Ocip.Models.BroadWorksMobilityPhoneToRing? ProfileIdentityDevicesToRing
         {
             get => _profileIdentityDevicesToRing;
             set
             {
-                ProfileIdentityDevicesToRingSpecified = true;
+                ProfileIdentityDevicesToRingSpecified = (value != null);
                 _profileIdentityDevicesToRing = value;
             }
         }
@@ -131,17 +131,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProfileIdentityDevicesToRingSpecified { get; set; }
 
-        protected bool _profileIdentityIncludeSharedCallAppearance;
+        protected bool? _profileIdentityIncludeSharedCallAppearance;
 
         [XmlElement(ElementName = "profileIdentityIncludeSharedCallAppearance", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1879")]
-        public bool ProfileIdentityIncludeSharedCallAppearance
+        public bool? ProfileIdentityIncludeSharedCallAppearance
         {
             get => _profileIdentityIncludeSharedCallAppearance;
             set
             {
-                ProfileIdentityIncludeSharedCallAppearanceSpecified = true;
+                ProfileIdentityIncludeSharedCallAppearanceSpecified = (value != null);
                 _profileIdentityIncludeSharedCallAppearance = value;
             }
         }
@@ -149,17 +149,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProfileIdentityIncludeSharedCallAppearanceSpecified { get; set; }
 
-        protected bool _profileIdentityIncludeBroadworksAnywhere;
+        protected bool? _profileIdentityIncludeBroadworksAnywhere;
 
         [XmlElement(ElementName = "profileIdentityIncludeBroadworksAnywhere", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1879")]
-        public bool ProfileIdentityIncludeBroadworksAnywhere
+        public bool? ProfileIdentityIncludeBroadworksAnywhere
         {
             get => _profileIdentityIncludeBroadworksAnywhere;
             set
             {
-                ProfileIdentityIncludeBroadworksAnywhereSpecified = true;
+                ProfileIdentityIncludeBroadworksAnywhereSpecified = (value != null);
                 _profileIdentityIncludeBroadworksAnywhere = value;
             }
         }
@@ -167,17 +167,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProfileIdentityIncludeBroadworksAnywhereSpecified { get; set; }
 
-        protected bool _profileIdentityIncludeExecutiveAssistant;
+        protected bool? _profileIdentityIncludeExecutiveAssistant;
 
         [XmlElement(ElementName = "profileIdentityIncludeExecutiveAssistant", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1879")]
-        public bool ProfileIdentityIncludeExecutiveAssistant
+        public bool? ProfileIdentityIncludeExecutiveAssistant
         {
             get => _profileIdentityIncludeExecutiveAssistant;
             set
             {
-                ProfileIdentityIncludeExecutiveAssistantSpecified = true;
+                ProfileIdentityIncludeExecutiveAssistantSpecified = (value != null);
                 _profileIdentityIncludeExecutiveAssistant = value;
             }
         }

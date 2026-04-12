@@ -58,17 +58,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewGroupIdSpecified { get; set; }
 
-        protected bool _evaluateOnly;
+        protected bool? _evaluateOnly;
 
         [XmlElement(ElementName = "evaluateOnly", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2499")]
-        public bool EvaluateOnly
+        public bool? EvaluateOnly
         {
             get => _evaluateOnly;
             set
             {
-                EvaluateOnlySpecified = true;
+                EvaluateOnlySpecified = (value != null);
                 _evaluateOnly = value;
             }
         }

@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _customerId;
             set
             {
-                CustomerIdSpecified = true;
+                CustomerIdSpecified = (value != null);
                 _customerId = value;
             }
         }

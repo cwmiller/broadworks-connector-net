@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterEnhancedReportingBrandingChoice _brandingChoice;
+        protected BroadWorksConnector.Ocip.Models.CallCenterEnhancedReportingBrandingChoice? _brandingChoice;
 
         [XmlElement(ElementName = "brandingChoice", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:3311")]
-        public BroadWorksConnector.Ocip.Models.CallCenterEnhancedReportingBrandingChoice BrandingChoice
+        public BroadWorksConnector.Ocip.Models.CallCenterEnhancedReportingBrandingChoice? BrandingChoice
         {
             get => _brandingChoice;
             set
             {
-                BrandingChoiceSpecified = true;
+                BrandingChoiceSpecified = (value != null);
                 _brandingChoice = value;
             }
         }
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _brandingFile;
             set
             {
-                BrandingFileSpecified = true;
+                BrandingFileSpecified = (value != null);
                 _brandingFile = value;
             }
         }

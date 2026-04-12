@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemSMDIParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _enableSMDI;
+        protected bool? _enableSMDI;
 
         [XmlElement(ElementName = "enableSMDI", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:17961")]
-        public bool EnableSMDI
+        public bool? EnableSMDI
         {
             get => _enableSMDI;
             set
             {
-                EnableSMDISpecified = true;
+                EnableSMDISpecified = (value != null);
                 _enableSMDI = value;
             }
         }
@@ -37,19 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableSMDISpecified { get; set; }
 
-        protected int _listeningPort;
+        protected int? _listeningPort;
 
         [XmlElement(ElementName = "listeningPort", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:17961")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
-        public int ListeningPort
+        public int? ListeningPort
         {
             get => _listeningPort;
             set
             {
-                ListeningPortSpecified = true;
+                ListeningPortSpecified = (value != null);
                 _listeningPort = value;
             }
         }
@@ -57,19 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ListeningPortSpecified { get; set; }
 
-        protected int _maxConnections;
+        protected int? _maxConnections;
 
         [XmlElement(ElementName = "maxConnections", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:17961")]
         [MinInclusive(0)]
         [MaxInclusive(64)]
-        public int MaxConnections
+        public int? MaxConnections
         {
             get => _maxConnections;
             set
             {
-                MaxConnectionsSpecified = true;
+                MaxConnectionsSpecified = (value != null);
                 _maxConnections = value;
             }
         }

@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerId;
             set
             {
-                ResellerIdSpecified = true;
+                ResellerIdSpecified = (value != null);
                 _resellerId = value;
             }
         }
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaDn;
             set
             {
-                SearchCriteriaDnSpecified = true;
+                SearchCriteriaDnSpecified = (value != null);
                 _searchCriteriaDn = value;
             }
         }
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaServiceProviderId;
             set
             {
-                SearchCriteriaServiceProviderIdSpecified = true;
+                SearchCriteriaServiceProviderIdSpecified = (value != null);
                 _searchCriteriaServiceProviderId = value;
             }
         }
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactOrganizationType;
             set
             {
-                SearchCriteriaExactOrganizationTypeSpecified = true;
+                SearchCriteriaExactOrganizationTypeSpecified = (value != null);
                 _searchCriteriaExactOrganizationType = value;
             }
         }

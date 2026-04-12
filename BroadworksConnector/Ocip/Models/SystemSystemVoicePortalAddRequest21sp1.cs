@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _phoneNumber;
             set
             {
-                PhoneNumberSpecified = true;
+                PhoneNumberSpecified = (value != null);
                 _phoneNumber = value;
             }
         }
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _publicUserIdentity;
             set
             {
-                PublicUserIdentitySpecified = true;
+                PublicUserIdentitySpecified = (value != null);
                 _publicUserIdentity = value;
             }
         }
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkVoicePortalNumber;
             set
             {
-                NetworkVoicePortalNumberSpecified = true;
+                NetworkVoicePortalNumberSpecified = (value != null);
                 _networkVoicePortalNumber = value;
             }
         }
@@ -241,7 +241,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _voicePortalGreetingFile;
             set
             {
-                VoicePortalGreetingFileSpecified = true;
+                VoicePortalGreetingFileSpecified = (value != null);
                 _voicePortalGreetingFile = value;
             }
         }
@@ -276,7 +276,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _voiceMessagingGreetingFile;
             set
             {
-                VoiceMessagingGreetingFileSpecified = true;
+                VoiceMessagingGreetingFileSpecified = (value != null);
                 _voiceMessagingGreetingFile = value;
             }
         }
@@ -313,7 +313,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkClassOfService;
             set
             {
-                NetworkClassOfServiceSpecified = true;
+                NetworkClassOfServiceSpecified = (value != null);
                 _networkClassOfService = value;
             }
         }

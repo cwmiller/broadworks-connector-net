@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        protected bool _allowActivation;
+        protected bool? _allowActivation;
 
         [XmlElement(ElementName = "allowActivation", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:7068")]
-        public bool AllowActivation
+        public bool? AllowActivation
         {
             get => _allowActivation;
             set
             {
-                AllowActivationSpecified = true;
+                AllowActivationSpecified = (value != null);
                 _allowActivation = value;
             }
         }

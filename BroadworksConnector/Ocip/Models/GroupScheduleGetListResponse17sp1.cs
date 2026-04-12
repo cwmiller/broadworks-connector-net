@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _scheduleGlobalKey;
             set
             {
-                ScheduleGlobalKeySpecified = true;
+                ScheduleGlobalKeySpecified = (value != null);
                 _scheduleGlobalKey = value;
             }
         }

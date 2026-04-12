@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _simRingPhoneNumber;
             set
             {
-                SimRingPhoneNumberSpecified = true;
+                SimRingPhoneNumberSpecified = (value != null);
                 _simRingPhoneNumber = value;
             }
         }

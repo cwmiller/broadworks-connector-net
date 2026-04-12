@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _department;
             set
             {
-                DepartmentSpecified = true;
+                DepartmentSpecified = (value != null);
                 _department = value;
             }
         }
@@ -75,17 +75,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DepartmentSpecified { get; set; }
 
-        protected bool _isActiveDuringCallHold;
+        protected bool? _isActiveDuringCallHold;
 
         [XmlElement(ElementName = "isActiveDuringCallHold", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:11728")]
-        public bool IsActiveDuringCallHold
+        public bool? IsActiveDuringCallHold
         {
             get => _isActiveDuringCallHold;
             set
             {
-                IsActiveDuringCallHoldSpecified = true;
+                IsActiveDuringCallHoldSpecified = (value != null);
                 _isActiveDuringCallHold = value;
             }
         }
@@ -93,17 +93,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveDuringCallHoldSpecified { get; set; }
 
-        protected bool _isActiveDuringCallPark;
+        protected bool? _isActiveDuringCallPark;
 
         [XmlElement(ElementName = "isActiveDuringCallPark", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:11728")]
-        public bool IsActiveDuringCallPark
+        public bool? IsActiveDuringCallPark
         {
             get => _isActiveDuringCallPark;
             set
             {
-                IsActiveDuringCallParkSpecified = true;
+                IsActiveDuringCallParkSpecified = (value != null);
                 _isActiveDuringCallPark = value;
             }
         }
@@ -111,17 +111,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveDuringCallParkSpecified { get; set; }
 
-        protected bool _isActiveDuringBusyCampOn;
+        protected bool? _isActiveDuringBusyCampOn;
 
         [XmlElement(ElementName = "isActiveDuringBusyCampOn", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:11728")]
-        public bool IsActiveDuringBusyCampOn
+        public bool? IsActiveDuringBusyCampOn
         {
             get => _isActiveDuringBusyCampOn;
             set
             {
-                IsActiveDuringBusyCampOnSpecified = true;
+                IsActiveDuringBusyCampOnSpecified = (value != null);
                 _isActiveDuringBusyCampOn = value;
             }
         }
@@ -129,17 +129,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveDuringBusyCampOnSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection _messageSelection;
+        protected BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection? _messageSelection;
 
         [XmlElement(ElementName = "messageSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:11728")]
-        public BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection MessageSelection
+        public BroadWorksConnector.Ocip.Models.MusicOnHoldMessageSelection? MessageSelection
         {
             get => _messageSelection;
             set
             {
-                MessageSelectionSpecified = true;
+                MessageSelectionSpecified = (value != null);
                 _messageSelection = value;
             }
         }
@@ -175,7 +175,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _audioFile;
             set
             {
-                AudioFileSpecified = true;
+                AudioFileSpecified = (value != null);
                 _audioFile = value;
             }
         }
@@ -193,7 +193,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _videoFile;
             set
             {
-                VideoFileSpecified = true;
+                VideoFileSpecified = (value != null);
                 _videoFile = value;
             }
         }

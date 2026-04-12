@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAutomaticCollectCallModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _enableAutomaticCollectCall;
+        protected bool? _enableAutomaticCollectCall;
 
         [XmlElement(ElementName = "enableAutomaticCollectCall", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"0d5db1a19a0aeda6f13d1f1c609efa0a:78")]
-        public bool EnableAutomaticCollectCall
+        public bool? EnableAutomaticCollectCall
         {
             get => _enableAutomaticCollectCall;
             set
             {
-                EnableAutomaticCollectCallSpecified = true;
+                EnableAutomaticCollectCallSpecified = (value != null);
                 _enableAutomaticCollectCall = value;
             }
         }
@@ -37,17 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableAutomaticCollectCallSpecified { get; set; }
 
-        protected bool _enableConnectTone;
+        protected bool? _enableConnectTone;
 
         [XmlElement(ElementName = "enableConnectTone", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"0d5db1a19a0aeda6f13d1f1c609efa0a:78")]
-        public bool EnableConnectTone
+        public bool? EnableConnectTone
         {
             get => _enableConnectTone;
             set
             {
-                EnableConnectToneSpecified = true;
+                EnableConnectToneSpecified = (value != null);
                 _enableConnectTone = value;
             }
         }
@@ -55,17 +55,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableConnectToneSpecified { get; set; }
 
-        protected bool _includeCountryCodeInCic;
+        protected bool? _includeCountryCodeInCic;
 
         [XmlElement(ElementName = "includeCountryCodeInCic", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"0d5db1a19a0aeda6f13d1f1c609efa0a:78")]
-        public bool IncludeCountryCodeInCic
+        public bool? IncludeCountryCodeInCic
         {
             get => _includeCountryCodeInCic;
             set
             {
-                IncludeCountryCodeInCicSpecified = true;
+                IncludeCountryCodeInCicSpecified = (value != null);
                 _includeCountryCodeInCic = value;
             }
         }

@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hostUserId;
             set
             {
-                HostUserIdSpecified = true;
+                HostUserIdSpecified = (value != null);
                 _hostUserId = value;
             }
         }
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hostLastName;
             set
             {
-                HostLastNameSpecified = true;
+                HostLastNameSpecified = (value != null);
                 _hostLastName = value;
             }
         }
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hostFirstName;
             set
             {
-                HostFirstNameSpecified = true;
+                HostFirstNameSpecified = (value != null);
                 _hostFirstName = value;
             }
         }
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hostAssociationDateTime;
             set
             {
-                HostAssociationDateTimeSpecified = true;
+                HostAssociationDateTimeSpecified = (value != null);
                 _hostAssociationDateTime = value;
             }
         }
@@ -148,17 +148,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HostAssociationDateTimeSpecified { get; set; }
 
-        protected bool _hostEnforcesAssociationLimit;
+        protected bool? _hostEnforcesAssociationLimit;
 
         [XmlElement(ElementName = "hostEnforcesAssociationLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:98")]
-        public bool HostEnforcesAssociationLimit
+        public bool? HostEnforcesAssociationLimit
         {
             get => _hostEnforcesAssociationLimit;
             set
             {
-                HostEnforcesAssociationLimitSpecified = true;
+                HostEnforcesAssociationLimitSpecified = (value != null);
                 _hostEnforcesAssociationLimit = value;
             }
         }
@@ -166,19 +166,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HostEnforcesAssociationLimitSpecified { get; set; }
 
-        protected int _hostAssociationLimitHours;
+        protected int? _hostAssociationLimitHours;
 
         [XmlElement(ElementName = "hostAssociationLimitHours", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:98")]
         [MinInclusive(1)]
         [MaxInclusive(999)]
-        public int HostAssociationLimitHours
+        public int? HostAssociationLimitHours
         {
             get => _hostAssociationLimitHours;
             set
             {
-                HostAssociationLimitHoursSpecified = true;
+                HostAssociationLimitHoursSpecified = (value != null);
                 _hostAssociationLimitHours = value;
             }
         }

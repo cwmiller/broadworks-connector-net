@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _ringBaseLocationFirst;
+        protected bool? _ringBaseLocationFirst;
 
         [XmlElement(ElementName = "ringBaseLocationFirst", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"15725c7b98a01f80f88e9d5af56d48a5:181")]
-        public bool RingBaseLocationFirst
+        public bool? RingBaseLocationFirst
         {
             get => _ringBaseLocationFirst;
             set
             {
-                RingBaseLocationFirstSpecified = true;
+                RingBaseLocationFirstSpecified = (value != null);
                 _ringBaseLocationFirst = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RingBaseLocationFirstSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.SequentialRingNumberOfRings _baseLocationNumberOfRings;
+        protected BroadWorksConnector.Ocip.Models.SequentialRingNumberOfRings? _baseLocationNumberOfRings;
 
         [XmlElement(ElementName = "baseLocationNumberOfRings", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"15725c7b98a01f80f88e9d5af56d48a5:181")]
-        public BroadWorksConnector.Ocip.Models.SequentialRingNumberOfRings BaseLocationNumberOfRings
+        public BroadWorksConnector.Ocip.Models.SequentialRingNumberOfRings? BaseLocationNumberOfRings
         {
             get => _baseLocationNumberOfRings;
             set
             {
-                BaseLocationNumberOfRingsSpecified = true;
+                BaseLocationNumberOfRingsSpecified = (value != null);
                 _baseLocationNumberOfRings = value;
             }
         }
@@ -74,17 +74,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BaseLocationNumberOfRingsSpecified { get; set; }
 
-        protected bool _continueIfBaseLocationIsBusy;
+        protected bool? _continueIfBaseLocationIsBusy;
 
         [XmlElement(ElementName = "continueIfBaseLocationIsBusy", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"15725c7b98a01f80f88e9d5af56d48a5:181")]
-        public bool ContinueIfBaseLocationIsBusy
+        public bool? ContinueIfBaseLocationIsBusy
         {
             get => _continueIfBaseLocationIsBusy;
             set
             {
-                ContinueIfBaseLocationIsBusySpecified = true;
+                ContinueIfBaseLocationIsBusySpecified = (value != null);
                 _continueIfBaseLocationIsBusy = value;
             }
         }
@@ -92,17 +92,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ContinueIfBaseLocationIsBusySpecified { get; set; }
 
-        protected bool _callerMayStopSearch;
+        protected bool? _callerMayStopSearch;
 
         [XmlElement(ElementName = "callerMayStopSearch", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"15725c7b98a01f80f88e9d5af56d48a5:181")]
-        public bool CallerMayStopSearch
+        public bool? CallerMayStopSearch
         {
             get => _callerMayStopSearch;
             set
             {
-                CallerMayStopSearchSpecified = true;
+                CallerMayStopSearchSpecified = (value != null);
                 _callerMayStopSearch = value;
             }
         }
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _location01;
             set
             {
-                Location01Specified = true;
+                Location01Specified = (value != null);
                 _location01 = value;
             }
         }
@@ -138,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _location02;
             set
             {
-                Location02Specified = true;
+                Location02Specified = (value != null);
                 _location02 = value;
             }
         }
@@ -156,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _location03;
             set
             {
-                Location03Specified = true;
+                Location03Specified = (value != null);
                 _location03 = value;
             }
         }
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _location04;
             set
             {
-                Location04Specified = true;
+                Location04Specified = (value != null);
                 _location04 = value;
             }
         }
@@ -192,7 +192,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _location05;
             set
             {
-                Location05Specified = true;
+                Location05Specified = (value != null);
                 _location05 = value;
             }
         }
@@ -210,7 +210,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _criteriaActivation;
             set
             {
-                CriteriaActivationSpecified = true;
+                CriteriaActivationSpecified = (value != null);
                 _criteriaActivation = value;
             }
         }

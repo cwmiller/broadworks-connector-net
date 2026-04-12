@@ -295,6 +295,8 @@ namespace BroadWorksConnector.Ocip.Models.C
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.GroupXsiPolicyProfileGetAssignedUserListRequest))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.GroupXsiPolicyProfileModifyDefaultRequest))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.GroupXsiPolicyProfileUnassignListRequest))]
+    [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.UserAnnouncementFileLocationGetRequest))]
+    [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.GroupAnnouncementFileLocationGetRequest))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.AuthenticationVerifyRequest22V4))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.AvailabilityTestRequest))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.DeviceManagementFileAuthLocationGetRequest22V4))]

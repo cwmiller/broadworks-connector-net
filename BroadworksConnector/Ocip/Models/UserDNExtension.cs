@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _dn;
             set
             {
-                DnSpecified = true;
+                DnSpecified = (value != null);
                 _dn = value;
             }
         }
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _extension;
             set
             {
-                ExtensionSpecified = true;
+                ExtensionSpecified = (value != null);
                 _extension = value;
             }
         }

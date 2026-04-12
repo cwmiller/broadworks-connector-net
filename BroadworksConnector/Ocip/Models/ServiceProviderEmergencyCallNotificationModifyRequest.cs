@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        protected bool _sendEmergencyCallNotificationEmail;
+        protected bool? _sendEmergencyCallNotificationEmail;
 
         [XmlElement(ElementName = "sendEmergencyCallNotificationEmail", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:4153")]
-        public bool SendEmergencyCallNotificationEmail
+        public bool? SendEmergencyCallNotificationEmail
         {
             get => _sendEmergencyCallNotificationEmail;
             set
             {
-                SendEmergencyCallNotificationEmailSpecified = true;
+                SendEmergencyCallNotificationEmailSpecified = (value != null);
                 _sendEmergencyCallNotificationEmail = value;
             }
         }
@@ -76,17 +76,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EmergencyCallNotifyEmailAddressSpecified { get; set; }
 
-        protected bool _allowGroupOverride;
+        protected bool? _allowGroupOverride;
 
         [XmlElement(ElementName = "allowGroupOverride", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:4153")]
-        public bool AllowGroupOverride
+        public bool? AllowGroupOverride
         {
             get => _allowGroupOverride;
             set
             {
-                AllowGroupOverrideSpecified = true;
+                AllowGroupOverrideSpecified = (value != null);
                 _allowGroupOverride = value;
             }
         }

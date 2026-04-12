@@ -50,17 +50,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StaticRegistrationCapableSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 _configType;
+        protected BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14? _configType;
 
         [XmlElement(ElementName = "configType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:8853")]
-        public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 ConfigType
+        public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14? ConfigType
         {
             get => _configType;
             set
             {
-                ConfigTypeSpecified = true;
+                ConfigTypeSpecified = (value != null);
                 _configType = value;
             }
         }
@@ -138,17 +138,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsMobilityManagerDeviceSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType _deviceConfigurationOption;
+        protected BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType? _deviceConfigurationOption;
 
         [XmlElement(ElementName = "deviceConfigurationOption", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:8853")]
-        public BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType DeviceConfigurationOption
+        public BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType? DeviceConfigurationOption
         {
             get => _deviceConfigurationOption;
             set
             {
-                DeviceConfigurationOptionSpecified = true;
+                DeviceConfigurationOptionSpecified = (value != null);
                 _deviceConfigurationOption = value;
             }
         }
@@ -156,17 +156,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceConfigurationOptionSpecified { get; set; }
 
-        protected bool _staticLineOrdering;
+        protected bool? _staticLineOrdering;
 
         [XmlElement(ElementName = "staticLineOrdering", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:8853")]
-        public bool StaticLineOrdering
+        public bool? StaticLineOrdering
         {
             get => _staticLineOrdering;
             set
             {
-                StaticLineOrderingSpecified = true;
+                StaticLineOrderingSpecified = (value != null);
                 _staticLineOrdering = value;
             }
         }
@@ -174,19 +174,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool StaticLineOrderingSpecified { get; set; }
 
-        protected int _numberOfPorts;
+        protected int? _numberOfPorts;
 
         [XmlElement(ElementName = "numberOfPorts", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:8853")]
         [MinInclusive(1)]
         [MaxInclusive(1024)]
-        public int NumberOfPorts
+        public int? NumberOfPorts
         {
             get => _numberOfPorts;
             set
             {
-                NumberOfPortsSpecified = true;
+                NumberOfPortsSpecified = (value != null);
                 _numberOfPorts = value;
             }
         }
@@ -211,17 +211,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceTypeLevelSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.SupportLinks22V2 _supportLinks;
+        protected BroadWorksConnector.Ocip.Models.SupportLinks22V2? _supportLinks;
 
         [XmlElement(ElementName = "supportLinks", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:8853")]
-        public BroadWorksConnector.Ocip.Models.SupportLinks22V2 SupportLinks
+        public BroadWorksConnector.Ocip.Models.SupportLinks22V2? SupportLinks
         {
             get => _supportLinks;
             set
             {
-                SupportLinksSpecified = true;
+                SupportLinksSpecified = (value != null);
                 _supportLinks = value;
             }
         }

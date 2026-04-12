@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _templateActivation;
             set
             {
-                TemplateActivationSpecified = true;
+                TemplateActivationSpecified = (value != null);
                 _templateActivation = value;
             }
         }

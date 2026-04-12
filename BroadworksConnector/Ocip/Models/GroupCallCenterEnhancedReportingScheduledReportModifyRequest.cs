@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newName;
             set
             {
-                NewNameSpecified = true;
+                NewNameSpecified = (value != null);
                 _newName = value;
             }
         }
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _schedule;
             set
             {
-                ScheduleSpecified = true;
+                ScheduleSpecified = (value != null);
                 _schedule = value;
             }
         }
@@ -135,17 +135,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ScheduleSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterReportSamplingPeriod _samplingPeriod;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportSamplingPeriod? _samplingPeriod;
 
         [XmlElement(ElementName = "samplingPeriod", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:3857")]
-        public BroadWorksConnector.Ocip.Models.CallCenterReportSamplingPeriod SamplingPeriod
+        public BroadWorksConnector.Ocip.Models.CallCenterReportSamplingPeriod? SamplingPeriod
         {
             get => _samplingPeriod;
             set
             {
-                SamplingPeriodSpecified = true;
+                SamplingPeriodSpecified = (value != null);
                 _samplingPeriod = value;
             }
         }
@@ -153,17 +153,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SamplingPeriodSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.DayOfWeek _startDayOfWeek;
+        protected BroadWorksConnector.Ocip.Models.DayOfWeek? _startDayOfWeek;
 
         [XmlElement(ElementName = "startDayOfWeek", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:3857")]
-        public BroadWorksConnector.Ocip.Models.DayOfWeek StartDayOfWeek
+        public BroadWorksConnector.Ocip.Models.DayOfWeek? StartDayOfWeek
         {
             get => _startDayOfWeek;
             set
             {
-                StartDayOfWeekSpecified = true;
+                StartDayOfWeekSpecified = (value != null);
                 _startDayOfWeek = value;
             }
         }
@@ -183,7 +183,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _reportTimeZone;
             set
             {
-                ReportTimeZoneSpecified = true;
+                ReportTimeZoneSpecified = (value != null);
                 _reportTimeZone = value;
             }
         }
@@ -191,17 +191,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReportTimeZoneSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterReportDateFormat _reportDateFormat;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportDateFormat? _reportDateFormat;
 
         [XmlElement(ElementName = "reportDateFormat", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:3857")]
-        public BroadWorksConnector.Ocip.Models.CallCenterReportDateFormat ReportDateFormat
+        public BroadWorksConnector.Ocip.Models.CallCenterReportDateFormat? ReportDateFormat
         {
             get => _reportDateFormat;
             set
             {
-                ReportDateFormatSpecified = true;
+                ReportDateFormatSpecified = (value != null);
                 _reportDateFormat = value;
             }
         }
@@ -209,17 +209,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReportDateFormatSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterReportTimeFormat _reportTimeFormat;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportTimeFormat? _reportTimeFormat;
 
         [XmlElement(ElementName = "reportTimeFormat", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:3857")]
-        public BroadWorksConnector.Ocip.Models.CallCenterReportTimeFormat ReportTimeFormat
+        public BroadWorksConnector.Ocip.Models.CallCenterReportTimeFormat? ReportTimeFormat
         {
             get => _reportTimeFormat;
             set
             {
-                ReportTimeFormatSpecified = true;
+                ReportTimeFormatSpecified = (value != null);
                 _reportTimeFormat = value;
             }
         }
@@ -237,7 +237,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _reportInterval;
             set
             {
-                ReportIntervalSpecified = true;
+                ReportIntervalSpecified = (value != null);
                 _reportInterval = value;
             }
         }
@@ -245,17 +245,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReportIntervalSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterReportFileFormat _reportFormat;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportFileFormat? _reportFormat;
 
         [XmlElement(ElementName = "reportFormat", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:3857")]
-        public BroadWorksConnector.Ocip.Models.CallCenterReportFileFormat ReportFormat
+        public BroadWorksConnector.Ocip.Models.CallCenterReportFileFormat? ReportFormat
         {
             get => _reportFormat;
             set
             {
-                ReportFormatSpecified = true;
+                ReportFormatSpecified = (value != null);
                 _reportFormat = value;
             }
         }
@@ -273,7 +273,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _agent;
             set
             {
-                AgentSpecified = true;
+                AgentSpecified = (value != null);
                 _agent = value;
             }
         }
@@ -315,19 +315,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DnisSpecified { get; set; }
 
-        protected int _callCompletionThresholdSeconds;
+        protected int? _callCompletionThresholdSeconds;
 
         [XmlElement(ElementName = "callCompletionThresholdSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:3857")]
         [MinInclusive(1)]
         [MaxInclusive(7200)]
-        public int CallCompletionThresholdSeconds
+        public int? CallCompletionThresholdSeconds
         {
             get => _callCompletionThresholdSeconds;
             set
             {
-                CallCompletionThresholdSecondsSpecified = true;
+                CallCompletionThresholdSecondsSpecified = (value != null);
                 _callCompletionThresholdSeconds = value;
             }
         }
@@ -335,19 +335,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallCompletionThresholdSecondsSpecified { get; set; }
 
-        protected int _shortDurationThresholdSeconds;
+        protected int? _shortDurationThresholdSeconds;
 
         [XmlElement(ElementName = "shortDurationThresholdSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:3857")]
         [MinInclusive(1)]
         [MaxInclusive(7200)]
-        public int ShortDurationThresholdSeconds
+        public int? ShortDurationThresholdSeconds
         {
             get => _shortDurationThresholdSeconds;
             set
             {
-                ShortDurationThresholdSecondsSpecified = true;
+                ShortDurationThresholdSecondsSpecified = (value != null);
                 _shortDurationThresholdSeconds = value;
             }
         }
@@ -365,7 +365,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceLevelThresholdSeconds;
             set
             {
-                ServiceLevelThresholdSecondsSpecified = true;
+                ServiceLevelThresholdSecondsSpecified = (value != null);
                 _serviceLevelThresholdSeconds = value;
             }
         }
@@ -383,7 +383,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceLevelInclusions;
             set
             {
-                ServiceLevelInclusionsSpecified = true;
+                ServiceLevelInclusionsSpecified = (value != null);
                 _serviceLevelInclusions = value;
             }
         }
@@ -421,7 +421,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _abandonedCallThresholdSeconds;
             set
             {
-                AbandonedCallThresholdSecondsSpecified = true;
+                AbandonedCallThresholdSecondsSpecified = (value != null);
                 _abandonedCallThresholdSeconds = value;
             }
         }
@@ -439,7 +439,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _emailAddress;
             set
             {
-                EmailAddressSpecified = true;
+                EmailAddressSpecified = (value != null);
                 _emailAddress = value;
             }
         }

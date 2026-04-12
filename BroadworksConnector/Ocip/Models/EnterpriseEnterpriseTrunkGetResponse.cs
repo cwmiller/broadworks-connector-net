@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _routeExhaustionForwardAddress;
             set
             {
-                RouteExhaustionForwardAddressSpecified = true;
+                RouteExhaustionForwardAddressSpecified = (value != null);
                 _routeExhaustionForwardAddress = value;
             }
         }

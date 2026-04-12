@@ -21,17 +21,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemHuntGroupModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _anonymousInsteadOfPrivateCLID;
+        protected bool? _anonymousInsteadOfPrivateCLID;
 
         [XmlElement(ElementName = "anonymousInsteadOfPrivateCLID", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:10437")]
-        public bool AnonymousInsteadOfPrivateCLID
+        public bool? AnonymousInsteadOfPrivateCLID
         {
             get => _anonymousInsteadOfPrivateCLID;
             set
             {
-                AnonymousInsteadOfPrivateCLIDSpecified = true;
+                AnonymousInsteadOfPrivateCLIDSpecified = (value != null);
                 _anonymousInsteadOfPrivateCLID = value;
             }
         }
@@ -39,17 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AnonymousInsteadOfPrivateCLIDSpecified { get; set; }
 
-        protected bool _removeHuntGroupNameFromCLID;
+        protected bool? _removeHuntGroupNameFromCLID;
 
         [XmlElement(ElementName = "removeHuntGroupNameFromCLID", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:10437")]
-        public bool RemoveHuntGroupNameFromCLID
+        public bool? RemoveHuntGroupNameFromCLID
         {
             get => _removeHuntGroupNameFromCLID;
             set
             {
-                RemoveHuntGroupNameFromCLIDSpecified = true;
+                RemoveHuntGroupNameFromCLIDSpecified = (value != null);
                 _removeHuntGroupNameFromCLID = value;
             }
         }
@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RemoveHuntGroupNameFromCLIDSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.HuntGroupUniformCallDistributionPolicyScope _uniformCallDistributionPolicyScope;
+        protected BroadWorksConnector.Ocip.Models.HuntGroupUniformCallDistributionPolicyScope? _uniformCallDistributionPolicyScope;
 
         [XmlElement(ElementName = "uniformCallDistributionPolicyScope", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:10437")]
-        public BroadWorksConnector.Ocip.Models.HuntGroupUniformCallDistributionPolicyScope UniformCallDistributionPolicyScope
+        public BroadWorksConnector.Ocip.Models.HuntGroupUniformCallDistributionPolicyScope? UniformCallDistributionPolicyScope
         {
             get => _uniformCallDistributionPolicyScope;
             set
             {
-                UniformCallDistributionPolicyScopeSpecified = true;
+                UniformCallDistributionPolicyScopeSpecified = (value != null);
                 _uniformCallDistributionPolicyScope = value;
             }
         }

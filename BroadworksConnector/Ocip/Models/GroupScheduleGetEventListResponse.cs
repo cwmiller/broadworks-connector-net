@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _eventName;
             set
             {
-                EventNameSpecified = true;
+                EventNameSpecified = (value != null);
                 _eventName = value;
             }
         }

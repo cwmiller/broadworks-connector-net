@@ -17,17 +17,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class CommPilotExpressRedirectionModify
     {
 
-        protected BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionAction _action;
+        protected BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionAction? _action;
 
         [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"de7795e1833d459a7eb89116d772fd78:215")]
-        public BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionAction Action
+        public BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionAction? Action
         {
             get => _action;
             set
             {
-                ActionSpecified = true;
+                ActionSpecified = (value != null);
                 _action = value;
             }
         }

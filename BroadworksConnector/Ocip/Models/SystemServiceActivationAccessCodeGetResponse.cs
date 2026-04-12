@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _terminatingAccessCode;
             set
             {
-                TerminatingAccessCodeSpecified = true;
+                TerminatingAccessCodeSpecified = (value != null);
                 _terminatingAccessCode = value;
             }
         }
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _redirectingAccessCode;
             set
             {
-                RedirectingAccessCodeSpecified = true;
+                RedirectingAccessCodeSpecified = (value != null);
                 _redirectingAccessCode = value;
             }
         }
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _clickToDialAccessCode;
             set
             {
-                ClickToDialAccessCodeSpecified = true;
+                ClickToDialAccessCodeSpecified = (value != null);
                 _clickToDialAccessCode = value;
             }
         }

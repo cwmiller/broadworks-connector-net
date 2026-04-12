@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _portNumber;
             set
             {
-                PortNumberSpecified = true;
+                PortNumberSpecified = (value != null);
                 _portNumber = value;
             }
         }

@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        protected bool _displayDNISNumber;
+        protected bool? _displayDNISNumber;
 
         [XmlElement(ElementName = "displayDNISNumber", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5116")]
-        public bool DisplayDNISNumber
+        public bool? DisplayDNISNumber
         {
             get => _displayDNISNumber;
             set
             {
-                DisplayDNISNumberSpecified = true;
+                DisplayDNISNumberSpecified = (value != null);
                 _displayDNISNumber = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisplayDNISNumberSpecified { get; set; }
 
-        protected bool _displayDNISName;
+        protected bool? _displayDNISName;
 
         [XmlElement(ElementName = "displayDNISName", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5116")]
-        public bool DisplayDNISName
+        public bool? DisplayDNISName
         {
             get => _displayDNISName;
             set
             {
-                DisplayDNISNameSpecified = true;
+                DisplayDNISNameSpecified = (value != null);
                 _displayDNISName = value;
             }
         }
@@ -74,17 +74,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisplayDNISNameSpecified { get; set; }
 
-        protected bool _promoteCallsFromPriority1to0;
+        protected bool? _promoteCallsFromPriority1to0;
 
         [XmlElement(ElementName = "promoteCallsFromPriority1to0", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5116")]
-        public bool PromoteCallsFromPriority1to0
+        public bool? PromoteCallsFromPriority1to0
         {
             get => _promoteCallsFromPriority1to0;
             set
             {
-                PromoteCallsFromPriority1to0Specified = true;
+                PromoteCallsFromPriority1to0Specified = (value != null);
                 _promoteCallsFromPriority1to0 = value;
             }
         }
@@ -92,17 +92,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PromoteCallsFromPriority1to0Specified { get; set; }
 
-        protected bool _promoteCallsFromPriority2to1;
+        protected bool? _promoteCallsFromPriority2to1;
 
         [XmlElement(ElementName = "promoteCallsFromPriority2to1", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5116")]
-        public bool PromoteCallsFromPriority2to1
+        public bool? PromoteCallsFromPriority2to1
         {
             get => _promoteCallsFromPriority2to1;
             set
             {
-                PromoteCallsFromPriority2to1Specified = true;
+                PromoteCallsFromPriority2to1Specified = (value != null);
                 _promoteCallsFromPriority2to1 = value;
             }
         }
@@ -110,17 +110,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PromoteCallsFromPriority2to1Specified { get; set; }
 
-        protected bool _promoteCallsFromPriority3to2;
+        protected bool? _promoteCallsFromPriority3to2;
 
         [XmlElement(ElementName = "promoteCallsFromPriority3to2", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5116")]
-        public bool PromoteCallsFromPriority3to2
+        public bool? PromoteCallsFromPriority3to2
         {
             get => _promoteCallsFromPriority3to2;
             set
             {
-                PromoteCallsFromPriority3to2Specified = true;
+                PromoteCallsFromPriority3to2Specified = (value != null);
                 _promoteCallsFromPriority3to2 = value;
             }
         }
@@ -128,19 +128,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PromoteCallsFromPriority3to2Specified { get; set; }
 
-        protected int _promoteCallsFromPriority1to0Seconds;
+        protected int? _promoteCallsFromPriority1to0Seconds;
 
         [XmlElement(ElementName = "promoteCallsFromPriority1to0Seconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5116")]
         [MinInclusive(1)]
         [MaxInclusive(1800)]
-        public int PromoteCallsFromPriority1to0Seconds
+        public int? PromoteCallsFromPriority1to0Seconds
         {
             get => _promoteCallsFromPriority1to0Seconds;
             set
             {
-                PromoteCallsFromPriority1to0SecondsSpecified = true;
+                PromoteCallsFromPriority1to0SecondsSpecified = (value != null);
                 _promoteCallsFromPriority1to0Seconds = value;
             }
         }
@@ -148,19 +148,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PromoteCallsFromPriority1to0SecondsSpecified { get; set; }
 
-        protected int _promoteCallsFromPriority2to1Seconds;
+        protected int? _promoteCallsFromPriority2to1Seconds;
 
         [XmlElement(ElementName = "promoteCallsFromPriority2to1Seconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5116")]
         [MinInclusive(1)]
         [MaxInclusive(1800)]
-        public int PromoteCallsFromPriority2to1Seconds
+        public int? PromoteCallsFromPriority2to1Seconds
         {
             get => _promoteCallsFromPriority2to1Seconds;
             set
             {
-                PromoteCallsFromPriority2to1SecondsSpecified = true;
+                PromoteCallsFromPriority2to1SecondsSpecified = (value != null);
                 _promoteCallsFromPriority2to1Seconds = value;
             }
         }
@@ -168,19 +168,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PromoteCallsFromPriority2to1SecondsSpecified { get; set; }
 
-        protected int _promoteCallsFromPriority3to2Seconds;
+        protected int? _promoteCallsFromPriority3to2Seconds;
 
         [XmlElement(ElementName = "promoteCallsFromPriority3to2Seconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5116")]
         [MinInclusive(1)]
         [MaxInclusive(1800)]
-        public int PromoteCallsFromPriority3to2Seconds
+        public int? PromoteCallsFromPriority3to2Seconds
         {
             get => _promoteCallsFromPriority3to2Seconds;
             set
             {
-                PromoteCallsFromPriority3to2SecondsSpecified = true;
+                PromoteCallsFromPriority3to2SecondsSpecified = (value != null);
                 _promoteCallsFromPriority3to2Seconds = value;
             }
         }

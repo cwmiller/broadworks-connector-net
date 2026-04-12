@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ba51f415ebda0240287c719bc767eadf:165")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected bool _bypassFiltering;
+        protected bool? _bypassFiltering;
 
         [XmlElement(ElementName = "bypassFiltering", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ba51f415ebda0240287c719bc767eadf:165")]
-        public bool BypassFiltering
+        public bool? BypassFiltering
         {
             get => _bypassFiltering;
             set
             {
-                BypassFilteringSpecified = true;
+                BypassFilteringSpecified = (value != null);
                 _bypassFiltering = value;
             }
         }

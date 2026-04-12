@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _additionalPhoneNumberToRing;
             set
             {
-                AdditionalPhoneNumberToRingSpecified = true;
+                AdditionalPhoneNumberToRingSpecified = (value != null);
                 _additionalPhoneNumberToRing = value;
             }
         }

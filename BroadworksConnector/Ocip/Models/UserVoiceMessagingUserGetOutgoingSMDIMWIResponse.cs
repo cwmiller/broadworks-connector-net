@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _outgoingSMDIMWIPhoneNumber;
             set
             {
-                OutgoingSMDIMWIPhoneNumberSpecified = true;
+                OutgoingSMDIMWIPhoneNumberSpecified = (value != null);
                 _outgoingSMDIMWIPhoneNumber = value;
             }
         }

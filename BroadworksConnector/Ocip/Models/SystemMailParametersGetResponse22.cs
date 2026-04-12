@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _primaryServerNetAddress;
             set
             {
-                PrimaryServerNetAddressSpecified = true;
+                PrimaryServerNetAddressSpecified = (value != null);
                 _primaryServerNetAddress = value;
             }
         }
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _secondaryServerNetAddress;
             set
             {
-                SecondaryServerNetAddressSpecified = true;
+                SecondaryServerNetAddressSpecified = (value != null);
                 _secondaryServerNetAddress = value;
             }
         }
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultSubject;
             set
             {
-                DefaultSubjectSpecified = true;
+                DefaultSubjectSpecified = (value != null);
                 _defaultSubject = value;
             }
         }
@@ -131,19 +131,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SecureModeSpecified { get; set; }
 
-        protected int _port;
+        protected int? _port;
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:11718")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
-        public int Port
+        public int? Port
         {
             get => _port;
             set
             {
-                PortSpecified = true;
+                PortSpecified = (value != null);
                 _port = value;
             }
         }

@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _signedPassword;
             set
             {
-                SignedPasswordSpecified = true;
+                SignedPasswordSpecified = (value != null);
                 _signedPassword = value;
             }
         }

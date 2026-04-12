@@ -40,17 +40,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _allowOrigination;
+        protected bool? _allowOrigination;
 
         [XmlElement(ElementName = "allowOrigination", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3401")]
-        public bool AllowOrigination
+        public bool? AllowOrigination
         {
             get => _allowOrigination;
             set
             {
-                AllowOriginationSpecified = true;
+                AllowOriginationSpecified = (value != null);
                 _allowOrigination = value;
             }
         }
@@ -58,17 +58,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowOriginationSpecified { get; set; }
 
-        protected bool _allowTermination;
+        protected bool? _allowTermination;
 
         [XmlElement(ElementName = "allowTermination", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3401")]
-        public bool AllowTermination
+        public bool? AllowTermination
         {
             get => _allowTermination;
             set
             {
-                AllowTerminationSpecified = true;
+                AllowTerminationSpecified = (value != null);
                 _allowTermination = value;
             }
         }
@@ -76,17 +76,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowTerminationSpecified { get; set; }
 
-        protected bool _allowVideo;
+        protected bool? _allowVideo;
 
         [XmlElement(ElementName = "allowVideo", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3401")]
-        public bool AllowVideo
+        public bool? AllowVideo
         {
             get => _allowVideo;
             set
             {
-                AllowVideoSpecified = true;
+                AllowVideoSpecified = (value != null);
                 _allowVideo = value;
             }
         }

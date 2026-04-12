@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected bool _useDefaultServiceProviderProfile;
+        protected bool? _useDefaultServiceProviderProfile;
 
         [XmlElement(ElementName = "useDefaultServiceProviderProfile", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:2778")]
-        public bool UseDefaultServiceProviderProfile
+        public bool? UseDefaultServiceProviderProfile
         {
             get => _useDefaultServiceProviderProfile;
             set
             {
-                UseDefaultServiceProviderProfileSpecified = true;
+                UseDefaultServiceProviderProfileSpecified = (value != null);
                 _useDefaultServiceProviderProfile = value;
             }
         }

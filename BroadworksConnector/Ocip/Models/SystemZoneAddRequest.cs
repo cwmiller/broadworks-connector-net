@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _netAddress;
             set
             {
-                NetAddressSpecified = true;
+                NetAddressSpecified = (value != null);
                 _netAddress = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _netAddressRange;
             set
             {
-                NetAddressRangeSpecified = true;
+                NetAddressRangeSpecified = (value != null);
                 _netAddressRange = value;
             }
         }
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _locationBasedPhysicalLocation;
             set
             {
-                LocationBasedPhysicalLocationSpecified = true;
+                LocationBasedPhysicalLocationSpecified = (value != null);
                 _locationBasedPhysicalLocation = value;
             }
         }
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callingZonePhysicalLocation;
             set
             {
-                CallingZonePhysicalLocationSpecified = true;
+                CallingZonePhysicalLocationSpecified = (value != null);
                 _callingZonePhysicalLocation = value;
             }
         }

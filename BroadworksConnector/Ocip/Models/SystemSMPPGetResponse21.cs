@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _primarySMPPServerNetAddress;
             set
             {
-                PrimarySMPPServerNetAddressSpecified = true;
+                PrimarySMPPServerNetAddressSpecified = (value != null);
                 _primarySMPPServerNetAddress = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _secondarySMPPServerNetAddress;
             set
             {
-                SecondarySMPPServerNetAddressSpecified = true;
+                SecondarySMPPServerNetAddressSpecified = (value != null);
                 _secondarySMPPServerNetAddress = value;
             }
         }
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _systemId;
             set
             {
-                SystemIdSpecified = true;
+                SystemIdSpecified = (value != null);
                 _systemId = value;
             }
         }
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _password;
             set
             {
-                PasswordSpecified = true;
+                PasswordSpecified = (value != null);
                 _password = value;
             }
         }
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _systemType;
             set
             {
-                SystemTypeSpecified = true;
+                SystemTypeSpecified = (value != null);
                 _systemType = value;
             }
         }

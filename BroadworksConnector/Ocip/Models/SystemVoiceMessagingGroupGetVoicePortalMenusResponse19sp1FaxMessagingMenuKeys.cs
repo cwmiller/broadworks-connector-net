@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _saveFaxMessageAndSkipToNext;
             set
             {
-                SaveFaxMessageAndSkipToNextSpecified = true;
+                SaveFaxMessageAndSkipToNextSpecified = (value != null);
                 _saveFaxMessageAndSkipToNext = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _previousFaxMessage;
             set
             {
-                PreviousFaxMessageSpecified = true;
+                PreviousFaxMessageSpecified = (value != null);
                 _previousFaxMessage = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _playEnvelope;
             set
             {
-                PlayEnvelopeSpecified = true;
+                PlayEnvelopeSpecified = (value != null);
                 _playEnvelope = value;
             }
         }
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _nextFaxMessage;
             set
             {
-                NextFaxMessageSpecified = true;
+                NextFaxMessageSpecified = (value != null);
                 _nextFaxMessage = value;
             }
         }
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deleteFaxMessage;
             set
             {
-                DeleteFaxMessageSpecified = true;
+                DeleteFaxMessageSpecified = (value != null);
                 _deleteFaxMessage = value;
             }
         }
@@ -128,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _printFaxMessage;
             set
             {
-                PrintFaxMessageSpecified = true;
+                PrintFaxMessageSpecified = (value != null);
                 _printFaxMessage = value;
             }
         }
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _returnToPreviousMenu;
             set
             {
-                ReturnToPreviousMenuSpecified = true;
+                ReturnToPreviousMenuSpecified = (value != null);
                 _returnToPreviousMenu = value;
             }
         }

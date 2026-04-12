@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultFromAddress;
             set
             {
-                DefaultFromAddressSpecified = true;
+                DefaultFromAddressSpecified = (value != null);
                 _defaultFromAddress = value;
             }
         }

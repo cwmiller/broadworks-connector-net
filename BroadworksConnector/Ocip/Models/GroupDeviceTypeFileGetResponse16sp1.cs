@@ -17,17 +17,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupDeviceTypeFileGetResponse16sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        protected BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode _fileSource;
+        protected BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode? _fileSource;
 
         [XmlElement(ElementName = "fileSource", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:4138")]
-        public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode FileSource
+        public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode? FileSource
         {
             get => _fileSource;
             set
             {
-                FileSourceSpecified = true;
+                FileSourceSpecified = (value != null);
                 _fileSource = value;
             }
         }
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _configurationFileName;
             set
             {
-                ConfigurationFileNameSpecified = true;
+                ConfigurationFileNameSpecified = (value != null);
                 _configurationFileName = value;
             }
         }
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _repositoryUrl;
             set
             {
-                RepositoryUrlSpecified = true;
+                RepositoryUrlSpecified = (value != null);
                 _repositoryUrl = value;
             }
         }
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _templateUrl;
             set
             {
-                TemplateUrlSpecified = true;
+                TemplateUrlSpecified = (value != null);
                 _templateUrl = value;
             }
         }

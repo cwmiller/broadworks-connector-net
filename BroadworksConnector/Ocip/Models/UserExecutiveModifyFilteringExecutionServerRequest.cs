@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _requestingUserId;
             set
             {
-                RequestingUserIdSpecified = true;
+                RequestingUserIdSpecified = (value != null);
                 _requestingUserId = value;
             }
         }
@@ -60,17 +60,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RequestingUserIdSpecified { get; set; }
 
-        protected bool _enableFiltering;
+        protected bool? _enableFiltering;
 
         [XmlElement(ElementName = "enableFiltering", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"0b10bca40a55275de6ba2076c583b7fd:89")]
-        public bool EnableFiltering
+        public bool? EnableFiltering
         {
             get => _enableFiltering;
             set
             {
-                EnableFilteringSpecified = true;
+                EnableFilteringSpecified = (value != null);
                 _enableFiltering = value;
             }
         }

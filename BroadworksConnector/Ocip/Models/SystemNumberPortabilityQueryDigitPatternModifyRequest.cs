@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newDigitPattern;
             set
             {
-                NewDigitPatternSpecified = true;
+                NewDigitPatternSpecified = (value != null);
                 _newDigitPattern = value;
             }
         }
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _status;
             set
             {
-                StatusSpecified = true;
+                StatusSpecified = (value != null);
                 _status = value;
             }
         }

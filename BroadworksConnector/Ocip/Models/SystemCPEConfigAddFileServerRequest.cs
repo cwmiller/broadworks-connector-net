@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _cpeFileDirectory;
             set
             {
-                CpeFileDirectorySpecified = true;
+                CpeFileDirectorySpecified = (value != null);
                 _cpeFileDirectory = value;
             }
         }
@@ -117,17 +117,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CpeFileDirectorySpecified { get; set; }
 
-        protected bool _passiveFTP;
+        protected bool? _passiveFTP;
 
         [XmlElement(ElementName = "passiveFTP", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:25756")]
-        public bool PassiveFTP
+        public bool? PassiveFTP
         {
             get => _passiveFTP;
             set
             {
-                PassiveFTPSpecified = true;
+                PassiveFTPSpecified = (value != null);
                 _passiveFTP = value;
             }
         }

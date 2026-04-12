@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _code;
             set
             {
-                CodeSpecified = true;
+                CodeSpecified = (value != null);
                 _code = value;
             }
         }

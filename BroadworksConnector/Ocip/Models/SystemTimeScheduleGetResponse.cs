@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeInterval01;
             set
             {
-                TimeInterval01Specified = true;
+                TimeInterval01Specified = (value != null);
                 _timeInterval01 = value;
             }
         }
@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeInterval02;
             set
             {
-                TimeInterval02Specified = true;
+                TimeInterval02Specified = (value != null);
                 _timeInterval02 = value;
             }
         }
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeInterval03;
             set
             {
-                TimeInterval03Specified = true;
+                TimeInterval03Specified = (value != null);
                 _timeInterval03 = value;
             }
         }
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeInterval04;
             set
             {
-                TimeInterval04Specified = true;
+                TimeInterval04Specified = (value != null);
                 _timeInterval04 = value;
             }
         }
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeInterval05;
             set
             {
-                TimeInterval05Specified = true;
+                TimeInterval05Specified = (value != null);
                 _timeInterval05 = value;
             }
         }
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeInterval06;
             set
             {
-                TimeInterval06Specified = true;
+                TimeInterval06Specified = (value != null);
                 _timeInterval06 = value;
             }
         }
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeInterval07;
             set
             {
-                TimeInterval07Specified = true;
+                TimeInterval07Specified = (value != null);
                 _timeInterval07 = value;
             }
         }
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeInterval08;
             set
             {
-                TimeInterval08Specified = true;
+                TimeInterval08Specified = (value != null);
                 _timeInterval08 = value;
             }
         }
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeInterval09;
             set
             {
-                TimeInterval09Specified = true;
+                TimeInterval09Specified = (value != null);
                 _timeInterval09 = value;
             }
         }
@@ -190,7 +190,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeInterval10;
             set
             {
-                TimeInterval10Specified = true;
+                TimeInterval10Specified = (value != null);
                 _timeInterval10 = value;
             }
         }
@@ -208,7 +208,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeInterval11;
             set
             {
-                TimeInterval11Specified = true;
+                TimeInterval11Specified = (value != null);
                 _timeInterval11 = value;
             }
         }
@@ -226,7 +226,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeInterval12;
             set
             {
-                TimeInterval12Specified = true;
+                TimeInterval12Specified = (value != null);
                 _timeInterval12 = value;
             }
         }
@@ -244,7 +244,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeInterval13;
             set
             {
-                TimeInterval13Specified = true;
+                TimeInterval13Specified = (value != null);
                 _timeInterval13 = value;
             }
         }
@@ -262,7 +262,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeInterval14;
             set
             {
-                TimeInterval14Specified = true;
+                TimeInterval14Specified = (value != null);
                 _timeInterval14 = value;
             }
         }
@@ -280,7 +280,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeInterval15;
             set
             {
-                TimeInterval15Specified = true;
+                TimeInterval15Specified = (value != null);
                 _timeInterval15 = value;
             }
         }
@@ -298,7 +298,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeInterval16;
             set
             {
-                TimeInterval16Specified = true;
+                TimeInterval16Specified = (value != null);
                 _timeInterval16 = value;
             }
         }
@@ -316,7 +316,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeInterval17;
             set
             {
-                TimeInterval17Specified = true;
+                TimeInterval17Specified = (value != null);
                 _timeInterval17 = value;
             }
         }
@@ -334,7 +334,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeInterval18;
             set
             {
-                TimeInterval18Specified = true;
+                TimeInterval18Specified = (value != null);
                 _timeInterval18 = value;
             }
         }
@@ -352,7 +352,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeInterval19;
             set
             {
-                TimeInterval19Specified = true;
+                TimeInterval19Specified = (value != null);
                 _timeInterval19 = value;
             }
         }
@@ -370,7 +370,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeInterval20;
             set
             {
-                TimeInterval20Specified = true;
+                TimeInterval20Specified = (value != null);
                 _timeInterval20 = value;
             }
         }

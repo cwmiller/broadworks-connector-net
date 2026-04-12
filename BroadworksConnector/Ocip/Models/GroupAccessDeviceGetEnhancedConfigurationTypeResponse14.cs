@@ -51,17 +51,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SupportsResetSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 _configurationType;
+        protected BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14? _configurationType;
 
         [XmlElement(ElementName = "configurationType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:846")]
-        public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14 ConfigurationType
+        public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationType14? ConfigurationType
         {
             get => _configurationType;
             set
             {
-                ConfigurationTypeSpecified = true;
+                ConfigurationTypeSpecified = (value != null);
                 _configurationType = value;
             }
         }
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _configurationFileName;
             set
             {
-                ConfigurationFileNameSpecified = true;
+                ConfigurationFileNameSpecified = (value != null);
                 _configurationFileName = value;
             }
         }

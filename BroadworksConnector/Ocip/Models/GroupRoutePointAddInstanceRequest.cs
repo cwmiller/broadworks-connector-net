@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkClassOfService;
             set
             {
-                NetworkClassOfServiceSpecified = true;
+                NetworkClassOfServiceSpecified = (value != null);
                 _networkClassOfService = value;
             }
         }
@@ -242,19 +242,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OverrideAgentWrapUpTimeSpecified { get; set; }
 
-        protected int _wrapUpSeconds;
+        protected int? _wrapUpSeconds;
 
         [XmlElement(ElementName = "wrapUpSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:4316")]
         [MinInclusive(1)]
         [MaxInclusive(3600)]
-        public int WrapUpSeconds
+        public int? WrapUpSeconds
         {
             get => _wrapUpSeconds;
             set
             {
-                WrapUpSecondsSpecified = true;
+                WrapUpSecondsSpecified = (value != null);
                 _wrapUpSeconds = value;
             }
         }
@@ -308,7 +308,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _agentUnavailableCode;
             set
             {
-                AgentUnavailableCodeSpecified = true;
+                AgentUnavailableCodeSpecified = (value != null);
                 _agentUnavailableCode = value;
             }
         }
@@ -333,19 +333,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ForceDeliveryOfCallsSpecified { get; set; }
 
-        protected int _forceDeliveryWaitTimeSeconds;
+        protected int? _forceDeliveryWaitTimeSeconds;
 
         [XmlElement(ElementName = "forceDeliveryWaitTimeSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:4316")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
-        public int ForceDeliveryWaitTimeSeconds
+        public int? ForceDeliveryWaitTimeSeconds
         {
             get => _forceDeliveryWaitTimeSeconds;
             set
             {
-                ForceDeliveryWaitTimeSecondsSpecified = true;
+                ForceDeliveryWaitTimeSecondsSpecified = (value != null);
                 _forceDeliveryWaitTimeSeconds = value;
             }
         }

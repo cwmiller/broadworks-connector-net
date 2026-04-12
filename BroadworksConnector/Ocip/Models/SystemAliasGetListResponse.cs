@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _aliasNetAddress;
             set
             {
-                AliasNetAddressSpecified = true;
+                AliasNetAddressSpecified = (value != null);
                 _aliasNetAddress = value;
             }
         }

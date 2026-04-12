@@ -41,17 +41,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        protected bool _requiresAccessCodeForPublicCalls;
+        protected bool? _requiresAccessCodeForPublicCalls;
 
         [XmlElement(ElementName = "requiresAccessCodeForPublicCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:3789")]
-        public bool RequiresAccessCodeForPublicCalls
+        public bool? RequiresAccessCodeForPublicCalls
         {
             get => _requiresAccessCodeForPublicCalls;
             set
             {
-                RequiresAccessCodeForPublicCallsSpecified = true;
+                RequiresAccessCodeForPublicCallsSpecified = (value != null);
                 _requiresAccessCodeForPublicCalls = value;
             }
         }
@@ -59,17 +59,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RequiresAccessCodeForPublicCallsSpecified { get; set; }
 
-        protected bool _allowE164PublicCalls;
+        protected bool? _allowE164PublicCalls;
 
         [XmlElement(ElementName = "allowE164PublicCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:3789")]
-        public bool AllowE164PublicCalls
+        public bool? AllowE164PublicCalls
         {
             get => _allowE164PublicCalls;
             set
             {
-                AllowE164PublicCallsSpecified = true;
+                AllowE164PublicCallsSpecified = (value != null);
                 _allowE164PublicCalls = value;
             }
         }
@@ -77,17 +77,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowE164PublicCallsSpecified { get; set; }
 
-        protected bool _preferE164NumberFormatForCallbackServices;
+        protected bool? _preferE164NumberFormatForCallbackServices;
 
         [XmlElement(ElementName = "preferE164NumberFormatForCallbackServices", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:3789")]
-        public bool PreferE164NumberFormatForCallbackServices
+        public bool? PreferE164NumberFormatForCallbackServices
         {
             get => _preferE164NumberFormatForCallbackServices;
             set
             {
-                PreferE164NumberFormatForCallbackServicesSpecified = true;
+                PreferE164NumberFormatForCallbackServicesSpecified = (value != null);
                 _preferE164NumberFormatForCallbackServices = value;
             }
         }
@@ -135,17 +135,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PrivateDigitMapSpecified { get; set; }
 
-        protected bool _overrideResolvedDeviceDigitMap;
+        protected bool? _overrideResolvedDeviceDigitMap;
 
         [XmlElement(ElementName = "overrideResolvedDeviceDigitMap", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:3789")]
-        public bool OverrideResolvedDeviceDigitMap
+        public bool? OverrideResolvedDeviceDigitMap
         {
             get => _overrideResolvedDeviceDigitMap;
             set
             {
-                OverrideResolvedDeviceDigitMapSpecified = true;
+                OverrideResolvedDeviceDigitMapSpecified = (value != null);
                 _overrideResolvedDeviceDigitMap = value;
             }
         }

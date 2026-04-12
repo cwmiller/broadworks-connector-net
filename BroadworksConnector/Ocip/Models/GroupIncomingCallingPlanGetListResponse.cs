@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _departmentPermissions;
             set
             {
-                DepartmentPermissionsSpecified = true;
+                DepartmentPermissionsSpecified = (value != null);
                 _departmentPermissions = value;
             }
         }

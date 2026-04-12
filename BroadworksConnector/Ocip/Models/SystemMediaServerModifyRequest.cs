@@ -58,17 +58,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PortSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.TransportProtocol _transportProtocol;
+        protected BroadWorksConnector.Ocip.Models.TransportProtocol? _transportProtocol;
 
         [XmlElement(ElementName = "transportProtocol", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:12112")]
-        public BroadWorksConnector.Ocip.Models.TransportProtocol TransportProtocol
+        public BroadWorksConnector.Ocip.Models.TransportProtocol? TransportProtocol
         {
             get => _transportProtocol;
             set
             {
-                TransportProtocolSpecified = true;
+                TransportProtocolSpecified = (value != null);
                 _transportProtocol = value;
             }
         }

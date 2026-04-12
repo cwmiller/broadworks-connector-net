@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _statusCode;
             set
             {
-                StatusCodeSpecified = true;
+                StatusCodeSpecified = (value != null);
                 _statusCode = value;
             }
         }

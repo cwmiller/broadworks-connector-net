@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemClientSessionParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _enableInactivityTimeout;
+        protected bool? _enableInactivityTimeout;
 
         [XmlElement(ElementName = "enableInactivityTimeout", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5536")]
-        public bool EnableInactivityTimeout
+        public bool? EnableInactivityTimeout
         {
             get => _enableInactivityTimeout;
             set
             {
-                EnableInactivityTimeoutSpecified = true;
+                EnableInactivityTimeoutSpecified = (value != null);
                 _enableInactivityTimeout = value;
             }
         }
@@ -37,19 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableInactivityTimeoutSpecified { get; set; }
 
-        protected int _inactivityTimeoutMinutes;
+        protected int? _inactivityTimeoutMinutes;
 
         [XmlElement(ElementName = "inactivityTimeoutMinutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:5536")]
         [MinInclusive(10)]
         [MaxInclusive(360)]
-        public int InactivityTimeoutMinutes
+        public int? InactivityTimeoutMinutes
         {
             get => _inactivityTimeoutMinutes;
             set
             {
-                InactivityTimeoutMinutesSpecified = true;
+                InactivityTimeoutMinutesSpecified = (value != null);
                 _inactivityTimeoutMinutes = value;
             }
         }

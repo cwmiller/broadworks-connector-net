@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _contact;
             set
             {
-                ContactSpecified = true;
+                ContactSpecified = (value != null);
                 _contact = value;
             }
         }
@@ -74,19 +74,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ContactSpecified { get; set; }
 
-        protected int _portNumber;
+        protected int? _portNumber;
 
         [XmlElement(ElementName = "portNumber", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:48252")]
         [MinInclusive(1)]
         [MaxInclusive(1024)]
-        public int PortNumber
+        public int? PortNumber
         {
             get => _portNumber;
             set
             {
-                PortNumberSpecified = true;
+                PortNumberSpecified = (value != null);
                 _portNumber = value;
             }
         }

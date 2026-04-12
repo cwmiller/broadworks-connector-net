@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        protected bool _restrictAggregateSessions;
+        protected bool? _restrictAggregateSessions;
 
         [XmlElement(ElementName = "restrictAggregateSessions", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6741")]
-        public bool RestrictAggregateSessions
+        public bool? RestrictAggregateSessions
         {
             get => _restrictAggregateSessions;
             set
             {
-                RestrictAggregateSessionsSpecified = true;
+                RestrictAggregateSessionsSpecified = (value != null);
                 _restrictAggregateSessions = value;
             }
         }
@@ -113,17 +113,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxUserTerminatingSessionsSpecified { get; set; }
 
-        protected bool _countIntraServiceProviderSessions;
+        protected bool? _countIntraServiceProviderSessions;
 
         [XmlElement(ElementName = "countIntraServiceProviderSessions", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6741")]
-        public bool CountIntraServiceProviderSessions
+        public bool? CountIntraServiceProviderSessions
         {
             get => _countIntraServiceProviderSessions;
             set
             {
-                CountIntraServiceProviderSessionsSpecified = true;
+                CountIntraServiceProviderSessionsSpecified = (value != null);
                 _countIntraServiceProviderSessions = value;
             }
         }

@@ -58,17 +58,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DescriptionSpecified { get; set; }
 
-        protected bool _restrictMessages;
+        protected bool? _restrictMessages;
 
         [XmlElement(ElementName = "restrictMessages", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:13959")]
-        public bool RestrictMessages
+        public bool? RestrictMessages
         {
             get => _restrictMessages;
             set
             {
-                RestrictMessagesSpecified = true;
+                RestrictMessagesSpecified = (value != null);
                 _restrictMessages = value;
             }
         }

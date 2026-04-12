@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _excludedPhoneNumber01;
             set
             {
-                ExcludedPhoneNumber01Specified = true;
+                ExcludedPhoneNumber01Specified = (value != null);
                 _excludedPhoneNumber01 = value;
             }
         }
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _excludedPhoneNumber02;
             set
             {
-                ExcludedPhoneNumber02Specified = true;
+                ExcludedPhoneNumber02Specified = (value != null);
                 _excludedPhoneNumber02 = value;
             }
         }
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _excludedPhoneNumber03;
             set
             {
-                ExcludedPhoneNumber03Specified = true;
+                ExcludedPhoneNumber03Specified = (value != null);
                 _excludedPhoneNumber03 = value;
             }
         }
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _forwardExcludedNumbersTo;
             set
             {
-                ForwardExcludedNumbersToSpecified = true;
+                ForwardExcludedNumbersToSpecified = (value != null);
                 _forwardExcludedNumbersTo = value;
             }
         }

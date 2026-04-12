@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkServerCallType;
             set
             {
-                NetworkServerCallTypeSpecified = true;
+                NetworkServerCallTypeSpecified = (value != null);
                 _networkServerCallType = value;
             }
         }
@@ -58,17 +58,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetworkServerCallTypeSpecified { get; set; }
 
-        protected bool _enforceNSChargeField;
+        protected bool? _enforceNSChargeField;
 
         [XmlElement(ElementName = "enforceNSChargeField", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:19611")]
-        public bool EnforceNSChargeField
+        public bool? EnforceNSChargeField
         {
             get => _enforceNSChargeField;
             set
             {
-                EnforceNSChargeFieldSpecified = true;
+                EnforceNSChargeFieldSpecified = (value != null);
                 _enforceNSChargeField = value;
             }
         }
@@ -76,17 +76,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnforceNSChargeFieldSpecified { get; set; }
 
-        protected bool _processAsInternalForSACSubscriber;
+        protected bool? _processAsInternalForSACSubscriber;
 
         [XmlElement(ElementName = "processAsInternalForSACSubscriber", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:19611")]
-        public bool ProcessAsInternalForSACSubscriber
+        public bool? ProcessAsInternalForSACSubscriber
         {
             get => _processAsInternalForSACSubscriber;
             set
             {
-                ProcessAsInternalForSACSubscriberSpecified = true;
+                ProcessAsInternalForSACSubscriberSpecified = (value != null);
                 _processAsInternalForSACSubscriber = value;
             }
         }

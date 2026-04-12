@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _xsRealm;
             set
             {
-                XsRealmSpecified = true;
+                XsRealmSpecified = (value != null);
                 _xsRealm = value;
             }
         }
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _psRealm;
             set
             {
-                PsRealmSpecified = true;
+                PsRealmSpecified = (value != null);
                 _psRealm = value;
             }
         }

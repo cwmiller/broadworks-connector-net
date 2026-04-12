@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newName;
             set
             {
-                NewNameSpecified = true;
+                NewNameSpecified = (value != null);
                 _newName = value;
             }
         }
@@ -79,18 +79,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewNameSpecified { get; set; }
 
-        protected int _maxSession;
+        protected int? _maxSession;
 
         [XmlElement(ElementName = "maxSession", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:740")]
         [MinInclusive(0)]
-        public int MaxSession
+        public int? MaxSession
         {
             get => _maxSession;
             set
             {
-                MaxSessionSpecified = true;
+                MaxSessionSpecified = (value != null);
                 _maxSession = value;
             }
         }
@@ -136,18 +136,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxUserTerminatingSessionsSpecified { get; set; }
 
-        protected int _reservedSession;
+        protected int? _reservedSession;
 
         [XmlElement(ElementName = "reservedSession", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:740")]
         [MinInclusive(0)]
-        public int ReservedSession
+        public int? ReservedSession
         {
             get => _reservedSession;
             set
             {
-                ReservedSessionSpecified = true;
+                ReservedSessionSpecified = (value != null);
                 _reservedSession = value;
             }
         }
@@ -193,17 +193,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReservedUserTerminatingSessionsSpecified { get; set; }
 
-        protected bool _becomeDefaultGroup;
+        protected bool? _becomeDefaultGroup;
 
         [XmlElement(ElementName = "becomeDefaultGroup", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:740")]
-        public bool BecomeDefaultGroup
+        public bool? BecomeDefaultGroup
         {
             get => _becomeDefaultGroup;
             set
             {
-                BecomeDefaultGroupSpecified = true;
+                BecomeDefaultGroupSpecified = (value != null);
                 _becomeDefaultGroup = value;
             }
         }
@@ -211,17 +211,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BecomeDefaultGroupSpecified { get; set; }
 
-        protected bool _countIntraSACGroupSessions;
+        protected bool? _countIntraSACGroupSessions;
 
         [XmlElement(ElementName = "countIntraSACGroupSessions", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:740")]
-        public bool CountIntraSACGroupSessions
+        public bool? CountIntraSACGroupSessions
         {
             get => _countIntraSACGroupSessions;
             set
             {
-                CountIntraSACGroupSessionsSpecified = true;
+                CountIntraSACGroupSessionsSpecified = (value != null);
                 _countIntraSACGroupSessions = value;
             }
         }
@@ -247,17 +247,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceListSpecified { get; set; }
 
-        protected bool _blockEmergencyAndRepairCallsDueToSACLimits;
+        protected bool? _blockEmergencyAndRepairCallsDueToSACLimits;
 
         [XmlElement(ElementName = "blockEmergencyAndRepairCallsDueToSACLimits", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:740")]
-        public bool BlockEmergencyAndRepairCallsDueToSACLimits
+        public bool? BlockEmergencyAndRepairCallsDueToSACLimits
         {
             get => _blockEmergencyAndRepairCallsDueToSACLimits;
             set
             {
-                BlockEmergencyAndRepairCallsDueToSACLimitsSpecified = true;
+                BlockEmergencyAndRepairCallsDueToSACLimitsSpecified = (value != null);
                 _blockEmergencyAndRepairCallsDueToSACLimits = value;
             }
         }

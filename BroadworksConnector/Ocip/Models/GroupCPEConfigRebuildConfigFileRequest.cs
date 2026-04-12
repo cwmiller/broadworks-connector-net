@@ -76,17 +76,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceTypeSpecified { get; set; }
 
-        protected bool _force;
+        protected bool? _force;
 
         [XmlElement(ElementName = "force", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:3098")]
-        public bool Force
+        public bool? Force
         {
             get => _force;
             set
             {
-                ForceSpecified = true;
+                ForceSpecified = (value != null);
                 _force = value;
             }
         }

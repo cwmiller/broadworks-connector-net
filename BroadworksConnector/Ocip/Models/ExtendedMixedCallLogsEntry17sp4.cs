@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _dialedNumber;
             set
             {
-                DialedNumberSpecified = true;
+                DialedNumberSpecified = (value != null);
                 _dialedNumber = value;
             }
         }
@@ -153,7 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _calledNumber;
             set
             {
-                CalledNumberSpecified = true;
+                CalledNumberSpecified = (value != null);
                 _calledNumber = value;
             }
         }
@@ -173,7 +173,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkTranslatedAddress;
             set
             {
-                NetworkTranslatedAddressSpecified = true;
+                NetworkTranslatedAddressSpecified = (value != null);
                 _networkTranslatedAddress = value;
             }
         }
@@ -193,7 +193,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callingAssertedNumber;
             set
             {
-                CallingAssertedNumberSpecified = true;
+                CallingAssertedNumberSpecified = (value != null);
                 _callingAssertedNumber = value;
             }
         }
@@ -213,7 +213,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callingPresentationNumber;
             set
             {
-                CallingPresentationNumberSpecified = true;
+                CallingPresentationNumberSpecified = (value != null);
                 _callingPresentationNumber = value;
             }
         }
@@ -221,17 +221,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallingPresentationNumberSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallingPresentationNumberSource _callingPresentationNumberSource;
+        protected BroadWorksConnector.Ocip.Models.CallingPresentationNumberSource? _callingPresentationNumberSource;
 
         [XmlElement(ElementName = "callingPresentationNumberSource", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:49525")]
-        public BroadWorksConnector.Ocip.Models.CallingPresentationNumberSource CallingPresentationNumberSource
+        public BroadWorksConnector.Ocip.Models.CallingPresentationNumberSource? CallingPresentationNumberSource
         {
             get => _callingPresentationNumberSource;
             set
             {
-                CallingPresentationNumberSourceSpecified = true;
+                CallingPresentationNumberSourceSpecified = (value != null);
                 _callingPresentationNumberSource = value;
             }
         }
@@ -251,7 +251,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callingPresentationName;
             set
             {
-                CallingPresentationNameSpecified = true;
+                CallingPresentationNameSpecified = (value != null);
                 _callingPresentationName = value;
             }
         }
@@ -288,7 +288,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callingGroupId;
             set
             {
-                CallingGroupIdSpecified = true;
+                CallingGroupIdSpecified = (value != null);
                 _callingGroupId = value;
             }
         }
@@ -308,7 +308,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _calledDirectoryName;
             set
             {
-                CalledDirectoryNameSpecified = true;
+                CalledDirectoryNameSpecified = (value != null);
                 _calledDirectoryName = value;
             }
         }
@@ -328,7 +328,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _calledGroupId;
             set
             {
-                CalledGroupIdSpecified = true;
+                CalledGroupIdSpecified = (value != null);
                 _calledGroupId = value;
             }
         }
@@ -348,7 +348,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _connectedNumber;
             set
             {
-                ConnectedNumberSpecified = true;
+                ConnectedNumberSpecified = (value != null);
                 _connectedNumber = value;
             }
         }
@@ -356,17 +356,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConnectedNumberSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ConnectedNumberSource _connectedNumberSource;
+        protected BroadWorksConnector.Ocip.Models.ConnectedNumberSource? _connectedNumberSource;
 
         [XmlElement(ElementName = "connectedNumberSource", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:49525")]
-        public BroadWorksConnector.Ocip.Models.ConnectedNumberSource ConnectedNumberSource
+        public BroadWorksConnector.Ocip.Models.ConnectedNumberSource? ConnectedNumberSource
         {
             get => _connectedNumberSource;
             set
             {
-                ConnectedNumberSourceSpecified = true;
+                ConnectedNumberSourceSpecified = (value != null);
                 _connectedNumberSource = value;
             }
         }
@@ -386,7 +386,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _connectedName;
             set
             {
-                ConnectedNameSpecified = true;
+                ConnectedNameSpecified = (value != null);
                 _connectedName = value;
             }
         }
@@ -394,17 +394,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConnectedNameSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.PresentationIndicator _connectedPresentationIndicator;
+        protected BroadWorksConnector.Ocip.Models.PresentationIndicator? _connectedPresentationIndicator;
 
         [XmlElement(ElementName = "connectedPresentationIndicator", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:49525")]
-        public BroadWorksConnector.Ocip.Models.PresentationIndicator ConnectedPresentationIndicator
+        public BroadWorksConnector.Ocip.Models.PresentationIndicator? ConnectedPresentationIndicator
         {
             get => _connectedPresentationIndicator;
             set
             {
-                ConnectedPresentationIndicatorSpecified = true;
+                ConnectedPresentationIndicatorSpecified = (value != null);
                 _connectedPresentationIndicator = value;
             }
         }
@@ -412,17 +412,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConnectedPresentationIndicatorSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.NetworkType _typeOfNetwork;
+        protected BroadWorksConnector.Ocip.Models.NetworkType? _typeOfNetwork;
 
         [XmlElement(ElementName = "typeOfNetwork", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:49525")]
-        public BroadWorksConnector.Ocip.Models.NetworkType TypeOfNetwork
+        public BroadWorksConnector.Ocip.Models.NetworkType? TypeOfNetwork
         {
             get => _typeOfNetwork;
             set
             {
-                TypeOfNetworkSpecified = true;
+                TypeOfNetworkSpecified = (value != null);
                 _typeOfNetwork = value;
             }
         }
@@ -430,17 +430,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TypeOfNetworkSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCategory _callCategory;
+        protected BroadWorksConnector.Ocip.Models.CallCategory? _callCategory;
 
         [XmlElement(ElementName = "callCategory", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:49525")]
-        public BroadWorksConnector.Ocip.Models.CallCategory CallCategory
+        public BroadWorksConnector.Ocip.Models.CallCategory? CallCategory
         {
             get => _callCategory;
             set
             {
-                CallCategorySpecified = true;
+                CallCategorySpecified = (value != null);
                 _callCategory = value;
             }
         }
@@ -477,7 +477,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _configurableCallType;
             set
             {
-                ConfigurableCallTypeSpecified = true;
+                ConfigurableCallTypeSpecified = (value != null);
                 _configurableCallType = value;
             }
         }
@@ -497,7 +497,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _alternateCallIndicator;
             set
             {
-                AlternateCallIndicatorSpecified = true;
+                AlternateCallIndicatorSpecified = (value != null);
                 _alternateCallIndicator = value;
             }
         }
@@ -517,7 +517,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _virtualOnNetCallType;
             set
             {
-                VirtualOnNetCallTypeSpecified = true;
+                VirtualOnNetCallTypeSpecified = (value != null);
                 _virtualOnNetCallType = value;
             }
         }
@@ -569,7 +569,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _answerTime;
             set
             {
-                AnswerTimeSpecified = true;
+                AnswerTimeSpecified = (value != null);
                 _answerTime = value;
             }
         }
@@ -587,7 +587,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _releaseTime;
             set
             {
-                ReleaseTimeSpecified = true;
+                ReleaseTimeSpecified = (value != null);
                 _releaseTime = value;
             }
         }
@@ -605,7 +605,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _detachedTime;
             set
             {
-                DetachedTimeSpecified = true;
+                DetachedTimeSpecified = (value != null);
                 _detachedTime = value;
             }
         }
@@ -623,7 +623,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _detachedAnswerTime;
             set
             {
-                DetachedAnswerTimeSpecified = true;
+                DetachedAnswerTimeSpecified = (value != null);
                 _detachedAnswerTime = value;
             }
         }
@@ -643,7 +643,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _outgoingDnis;
             set
             {
-                OutgoingDnisSpecified = true;
+                OutgoingDnisSpecified = (value != null);
                 _outgoingDnis = value;
             }
         }
@@ -651,17 +651,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OutgoingDnisSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ServiceInvocationDisposition _serviceInvocationDisposition;
+        protected BroadWorksConnector.Ocip.Models.ServiceInvocationDisposition? _serviceInvocationDisposition;
 
         [XmlElement(ElementName = "serviceInvocationDisposition", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:49525")]
-        public BroadWorksConnector.Ocip.Models.ServiceInvocationDisposition ServiceInvocationDisposition
+        public BroadWorksConnector.Ocip.Models.ServiceInvocationDisposition? ServiceInvocationDisposition
         {
             get => _serviceInvocationDisposition;
             set
             {
-                ServiceInvocationDispositionSpecified = true;
+                ServiceInvocationDispositionSpecified = (value != null);
                 _serviceInvocationDisposition = value;
             }
         }
@@ -681,7 +681,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceInvocationDialedNumber;
             set
             {
-                ServiceInvocationDialedNumberSpecified = true;
+                ServiceInvocationDialedNumberSpecified = (value != null);
                 _serviceInvocationDialedNumber = value;
             }
         }
@@ -701,7 +701,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceInvocationCalledNumber;
             set
             {
-                ServiceInvocationCalledNumberSpecified = true;
+                ServiceInvocationCalledNumberSpecified = (value != null);
                 _serviceInvocationCalledNumber = value;
             }
         }
@@ -721,7 +721,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceInvocationNetworkTranslatedAddress;
             set
             {
-                ServiceInvocationNetworkTranslatedAddressSpecified = true;
+                ServiceInvocationNetworkTranslatedAddressSpecified = (value != null);
                 _serviceInvocationNetworkTranslatedAddress = value;
             }
         }
@@ -729,17 +729,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceInvocationNetworkTranslatedAddressSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.NetworkType _serviceInvocationTypeOfNetwork;
+        protected BroadWorksConnector.Ocip.Models.NetworkType? _serviceInvocationTypeOfNetwork;
 
         [XmlElement(ElementName = "serviceInvocationTypeOfNetwork", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:49525")]
-        public BroadWorksConnector.Ocip.Models.NetworkType ServiceInvocationTypeOfNetwork
+        public BroadWorksConnector.Ocip.Models.NetworkType? ServiceInvocationTypeOfNetwork
         {
             get => _serviceInvocationTypeOfNetwork;
             set
             {
-                ServiceInvocationTypeOfNetworkSpecified = true;
+                ServiceInvocationTypeOfNetworkSpecified = (value != null);
                 _serviceInvocationTypeOfNetwork = value;
             }
         }
@@ -747,17 +747,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceInvocationTypeOfNetworkSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCategory _serviceInvocationCallCategory;
+        protected BroadWorksConnector.Ocip.Models.CallCategory? _serviceInvocationCallCategory;
 
         [XmlElement(ElementName = "serviceInvocationCallCategory", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:49525")]
-        public BroadWorksConnector.Ocip.Models.CallCategory ServiceInvocationCallCategory
+        public BroadWorksConnector.Ocip.Models.CallCategory? ServiceInvocationCallCategory
         {
             get => _serviceInvocationCallCategory;
             set
             {
-                ServiceInvocationCallCategorySpecified = true;
+                ServiceInvocationCallCategorySpecified = (value != null);
                 _serviceInvocationCallCategory = value;
             }
         }
@@ -765,17 +765,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceInvocationCallCategorySpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.BasicCallType _serviceInvocationBasicCallType;
+        protected BroadWorksConnector.Ocip.Models.BasicCallType? _serviceInvocationBasicCallType;
 
         [XmlElement(ElementName = "serviceInvocationBasicCallType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:49525")]
-        public BroadWorksConnector.Ocip.Models.BasicCallType ServiceInvocationBasicCallType
+        public BroadWorksConnector.Ocip.Models.BasicCallType? ServiceInvocationBasicCallType
         {
             get => _serviceInvocationBasicCallType;
             set
             {
-                ServiceInvocationBasicCallTypeSpecified = true;
+                ServiceInvocationBasicCallTypeSpecified = (value != null);
                 _serviceInvocationBasicCallType = value;
             }
         }
@@ -795,7 +795,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceInvocationConfigurableCallType;
             set
             {
-                ServiceInvocationConfigurableCallTypeSpecified = true;
+                ServiceInvocationConfigurableCallTypeSpecified = (value != null);
                 _serviceInvocationConfigurableCallType = value;
             }
         }
@@ -815,7 +815,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceInvocationAlternateCallIndicator;
             set
             {
-                ServiceInvocationAlternateCallIndicatorSpecified = true;
+                ServiceInvocationAlternateCallIndicatorSpecified = (value != null);
                 _serviceInvocationAlternateCallIndicator = value;
             }
         }
@@ -835,7 +835,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceInvocationVirtualOnNetCallType;
             set
             {
-                ServiceInvocationVirtualOnNetCallTypeSpecified = true;
+                ServiceInvocationVirtualOnNetCallTypeSpecified = (value != null);
                 _serviceInvocationVirtualOnNetCallType = value;
             }
         }
@@ -855,7 +855,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceInvocationCalledDirectoryName;
             set
             {
-                ServiceInvocationCalledDirectoryNameSpecified = true;
+                ServiceInvocationCalledDirectoryNameSpecified = (value != null);
                 _serviceInvocationCalledDirectoryName = value;
             }
         }
@@ -875,7 +875,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceInvocationCalledGroupId;
             set
             {
-                ServiceInvocationCalledGroupIdSpecified = true;
+                ServiceInvocationCalledGroupIdSpecified = (value != null);
                 _serviceInvocationCalledGroupId = value;
             }
         }
@@ -895,7 +895,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _redirectingNumber;
             set
             {
-                RedirectingNumberSpecified = true;
+                RedirectingNumberSpecified = (value != null);
                 _redirectingNumber = value;
             }
         }
@@ -915,7 +915,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _redirectingName;
             set
             {
-                RedirectingNameSpecified = true;
+                RedirectingNameSpecified = (value != null);
                 _redirectingName = value;
             }
         }
@@ -923,17 +923,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RedirectingNameSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.RedirectingPresentationIndicator _redirectingPresentationIndicator;
+        protected BroadWorksConnector.Ocip.Models.RedirectingPresentationIndicator? _redirectingPresentationIndicator;
 
         [XmlElement(ElementName = "redirectingPresentationIndicator", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:49525")]
-        public BroadWorksConnector.Ocip.Models.RedirectingPresentationIndicator RedirectingPresentationIndicator
+        public BroadWorksConnector.Ocip.Models.RedirectingPresentationIndicator? RedirectingPresentationIndicator
         {
             get => _redirectingPresentationIndicator;
             set
             {
-                RedirectingPresentationIndicatorSpecified = true;
+                RedirectingPresentationIndicatorSpecified = (value != null);
                 _redirectingPresentationIndicator = value;
             }
         }
@@ -953,7 +953,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _redirectingReason;
             set
             {
-                RedirectingReasonSpecified = true;
+                RedirectingReasonSpecified = (value != null);
                 _redirectingReason = value;
             }
         }
@@ -973,7 +973,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _accountAuthorizationCode;
             set
             {
-                AccountAuthorizationCodeSpecified = true;
+                AccountAuthorizationCodeSpecified = (value != null);
                 _accountAuthorizationCode = value;
             }
         }
@@ -993,7 +993,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callAuthorizationCode;
             set
             {
-                CallAuthorizationCodeSpecified = true;
+                CallAuthorizationCodeSpecified = (value != null);
                 _callAuthorizationCode = value;
             }
         }
@@ -1013,7 +1013,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userGroupId;
             set
             {
-                UserGroupIdSpecified = true;
+                UserGroupIdSpecified = (value != null);
                 _userGroupId = value;
             }
         }
@@ -1033,7 +1033,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userId;
             set
             {
-                UserIdSpecified = true;
+                UserIdSpecified = (value != null);
                 _userId = value;
             }
         }
@@ -1053,7 +1053,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userPrimaryDn;
             set
             {
-                UserPrimaryDnSpecified = true;
+                UserPrimaryDnSpecified = (value != null);
                 _userPrimaryDn = value;
             }
         }
@@ -1073,7 +1073,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userPrimaryExtension;
             set
             {
-                UserPrimaryExtensionSpecified = true;
+                UserPrimaryExtensionSpecified = (value != null);
                 _userPrimaryExtension = value;
             }
         }

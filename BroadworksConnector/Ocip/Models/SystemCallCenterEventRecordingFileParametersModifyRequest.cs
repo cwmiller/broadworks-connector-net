@@ -19,19 +19,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCallCenterEventRecordingFileParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected int _fileRetentionTimeDays;
+        protected int? _fileRetentionTimeDays;
 
         [XmlElement(ElementName = "fileRetentionTimeDays", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:6502")]
         [MinInclusive(0)]
         [MaxInclusive(120)]
-        public int FileRetentionTimeDays
+        public int? FileRetentionTimeDays
         {
             get => _fileRetentionTimeDays;
             set
             {
-                FileRetentionTimeDaysSpecified = true;
+                FileRetentionTimeDaysSpecified = (value != null);
                 _fileRetentionTimeDays = value;
             }
         }
@@ -39,17 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FileRetentionTimeDaysSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterEventRecordingFileRotationPeriodMinutes _fileRotationPeriodMinutes;
+        protected BroadWorksConnector.Ocip.Models.CallCenterEventRecordingFileRotationPeriodMinutes? _fileRotationPeriodMinutes;
 
         [XmlElement(ElementName = "fileRotationPeriodMinutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:6502")]
-        public BroadWorksConnector.Ocip.Models.CallCenterEventRecordingFileRotationPeriodMinutes FileRotationPeriodMinutes
+        public BroadWorksConnector.Ocip.Models.CallCenterEventRecordingFileRotationPeriodMinutes? FileRotationPeriodMinutes
         {
             get => _fileRotationPeriodMinutes;
             set
             {
-                FileRotationPeriodMinutesSpecified = true;
+                FileRotationPeriodMinutesSpecified = (value != null);
                 _fileRotationPeriodMinutes = value;
             }
         }
@@ -57,19 +57,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FileRotationPeriodMinutesSpecified { get; set; }
 
-        protected int _fileRotationOffsetMinutes;
+        protected int? _fileRotationOffsetMinutes;
 
         [XmlElement(ElementName = "fileRotationOffsetMinutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:6502")]
         [MinInclusive(0)]
         [MaxInclusive(59)]
-        public int FileRotationOffsetMinutes
+        public int? FileRotationOffsetMinutes
         {
             get => _fileRotationOffsetMinutes;
             set
             {
-                FileRotationOffsetMinutesSpecified = true;
+                FileRotationOffsetMinutesSpecified = (value != null);
                 _fileRotationOffsetMinutes = value;
             }
         }

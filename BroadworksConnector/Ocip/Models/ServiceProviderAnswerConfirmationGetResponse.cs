@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _confirmationMessageAudioFileDescription;
             set
             {
-                ConfirmationMessageAudioFileDescriptionSpecified = true;
+                ConfirmationMessageAudioFileDescriptionSpecified = (value != null);
                 _confirmationMessageAudioFileDescription = value;
             }
         }

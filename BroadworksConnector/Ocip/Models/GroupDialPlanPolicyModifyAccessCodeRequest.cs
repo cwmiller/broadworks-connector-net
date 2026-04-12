@@ -76,17 +76,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessCodeSpecified { get; set; }
 
-        protected bool _includeCodeForNetworkTranslationsAndRouting;
+        protected bool? _includeCodeForNetworkTranslationsAndRouting;
 
         [XmlElement(ElementName = "includeCodeForNetworkTranslationsAndRouting", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:4563")]
-        public bool IncludeCodeForNetworkTranslationsAndRouting
+        public bool? IncludeCodeForNetworkTranslationsAndRouting
         {
             get => _includeCodeForNetworkTranslationsAndRouting;
             set
             {
-                IncludeCodeForNetworkTranslationsAndRoutingSpecified = true;
+                IncludeCodeForNetworkTranslationsAndRoutingSpecified = (value != null);
                 _includeCodeForNetworkTranslationsAndRouting = value;
             }
         }
@@ -94,17 +94,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeCodeForNetworkTranslationsAndRoutingSpecified { get; set; }
 
-        protected bool _includeCodeForScreeningServices;
+        protected bool? _includeCodeForScreeningServices;
 
         [XmlElement(ElementName = "includeCodeForScreeningServices", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:4563")]
-        public bool IncludeCodeForScreeningServices
+        public bool? IncludeCodeForScreeningServices
         {
             get => _includeCodeForScreeningServices;
             set
             {
-                IncludeCodeForScreeningServicesSpecified = true;
+                IncludeCodeForScreeningServicesSpecified = (value != null);
                 _includeCodeForScreeningServices = value;
             }
         }
@@ -112,17 +112,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeCodeForScreeningServicesSpecified { get; set; }
 
-        protected bool _enableSecondaryDialTone;
+        protected bool? _enableSecondaryDialTone;
 
         [XmlElement(ElementName = "enableSecondaryDialTone", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:4563")]
-        public bool EnableSecondaryDialTone
+        public bool? EnableSecondaryDialTone
         {
             get => _enableSecondaryDialTone;
             set
             {
-                EnableSecondaryDialToneSpecified = true;
+                EnableSecondaryDialToneSpecified = (value != null);
                 _enableSecondaryDialTone = value;
             }
         }

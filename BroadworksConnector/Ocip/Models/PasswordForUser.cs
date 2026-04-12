@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userId;
             set
             {
-                UserIdSpecified = true;
+                UserIdSpecified = (value != null);
                 _userId = value;
             }
         }
@@ -76,17 +76,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _generatePassword;
+        protected bool? _generatePassword;
 
         [XmlElement(ElementName = "generatePassword", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ef3c4f453d01f7ce750331de83ebc765:733")]
-        public bool GeneratePassword
+        public bool? GeneratePassword
         {
             get => _generatePassword;
             set
             {
-                GeneratePasswordSpecified = true;
+                GeneratePasswordSpecified = (value != null);
                 _generatePassword = value;
             }
         }
@@ -94,17 +94,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GeneratePasswordSpecified { get; set; }
 
-        protected bool _generatePasscode;
+        protected bool? _generatePasscode;
 
         [XmlElement(ElementName = "generatePasscode", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ef3c4f453d01f7ce750331de83ebc765:733")]
-        public bool GeneratePasscode
+        public bool? GeneratePasscode
         {
             get => _generatePasscode;
             set
             {
-                GeneratePasscodeSpecified = true;
+                GeneratePasscodeSpecified = (value != null);
                 _generatePasscode = value;
             }
         }
@@ -112,17 +112,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GeneratePasscodeSpecified { get; set; }
 
-        protected bool _generateSipPassword;
+        protected bool? _generateSipPassword;
 
         [XmlElement(ElementName = "generateSipPassword", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ef3c4f453d01f7ce750331de83ebc765:733")]
-        public bool GenerateSipPassword
+        public bool? GenerateSipPassword
         {
             get => _generateSipPassword;
             set
             {
-                GenerateSipPasswordSpecified = true;
+                GenerateSipPasswordSpecified = (value != null);
                 _generateSipPassword = value;
             }
         }

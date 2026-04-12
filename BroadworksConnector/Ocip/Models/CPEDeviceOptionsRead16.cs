@@ -33,17 +33,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableMonitoringSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CPEDeviceResetEventType _resetEvent;
+        protected BroadWorksConnector.Ocip.Models.CPEDeviceResetEventType? _resetEvent;
 
         [XmlElement(ElementName = "resetEvent", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:48890")]
-        public BroadWorksConnector.Ocip.Models.CPEDeviceResetEventType ResetEvent
+        public BroadWorksConnector.Ocip.Models.CPEDeviceResetEventType? ResetEvent
         {
             get => _resetEvent;
             set
             {
-                ResetEventSpecified = true;
+                ResetEventSpecified = (value != null);
                 _resetEvent = value;
             }
         }
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _systemFileName;
             set
             {
-                SystemFileNameSpecified = true;
+                SystemFileNameSpecified = (value != null);
                 _systemFileName = value;
             }
         }
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deviceFileFormat;
             set
             {
-                DeviceFileFormatSpecified = true;
+                DeviceFileFormatSpecified = (value != null);
                 _deviceFileFormat = value;
             }
         }
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deviceManagementDeviceTypeOptions;
             set
             {
-                DeviceManagementDeviceTypeOptionsSpecified = true;
+                DeviceManagementDeviceTypeOptionsSpecified = (value != null);
                 _deviceManagementDeviceTypeOptions = value;
             }
         }

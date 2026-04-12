@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _scheduleEvents;
             set
             {
-                ScheduleEventsSpecified = true;
+                ScheduleEventsSpecified = (value != null);
                 _scheduleEvents = value;
             }
         }

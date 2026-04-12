@@ -19,19 +19,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemMeetMeConferencingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected int _conferenceIdLength;
+        protected int? _conferenceIdLength;
 
         [XmlElement(ElementName = "conferenceIdLength", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:490")]
         [MinInclusive(6)]
         [MaxInclusive(12)]
-        public int ConferenceIdLength
+        public int? ConferenceIdLength
         {
             get => _conferenceIdLength;
             set
             {
-                ConferenceIdLengthSpecified = true;
+                ConferenceIdLengthSpecified = (value != null);
                 _conferenceIdLength = value;
             }
         }
@@ -39,19 +39,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConferenceIdLengthSpecified { get; set; }
 
-        protected int _moderatorPinLength;
+        protected int? _moderatorPinLength;
 
         [XmlElement(ElementName = "moderatorPinLength", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:490")]
         [MinInclusive(6)]
         [MaxInclusive(12)]
-        public int ModeratorPinLength
+        public int? ModeratorPinLength
         {
             get => _moderatorPinLength;
             set
             {
-                ModeratorPinLengthSpecified = true;
+                ModeratorPinLengthSpecified = (value != null);
                 _moderatorPinLength = value;
             }
         }
@@ -59,17 +59,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ModeratorPinLengthSpecified { get; set; }
 
-        protected bool _enableConferenceEndDateRestriction;
+        protected bool? _enableConferenceEndDateRestriction;
 
         [XmlElement(ElementName = "enableConferenceEndDateRestriction", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:490")]
-        public bool EnableConferenceEndDateRestriction
+        public bool? EnableConferenceEndDateRestriction
         {
             get => _enableConferenceEndDateRestriction;
             set
             {
-                EnableConferenceEndDateRestrictionSpecified = true;
+                EnableConferenceEndDateRestrictionSpecified = (value != null);
                 _enableConferenceEndDateRestriction = value;
             }
         }
@@ -77,19 +77,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableConferenceEndDateRestrictionSpecified { get; set; }
 
-        protected int _conferenceEndDateRestrictionMonths;
+        protected int? _conferenceEndDateRestrictionMonths;
 
         [XmlElement(ElementName = "conferenceEndDateRestrictionMonths", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:490")]
         [MinInclusive(1)]
         [MaxInclusive(99)]
-        public int ConferenceEndDateRestrictionMonths
+        public int? ConferenceEndDateRestrictionMonths
         {
             get => _conferenceEndDateRestrictionMonths;
             set
             {
-                ConferenceEndDateRestrictionMonthsSpecified = true;
+                ConferenceEndDateRestrictionMonthsSpecified = (value != null);
                 _conferenceEndDateRestrictionMonths = value;
             }
         }
@@ -97,17 +97,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConferenceEndDateRestrictionMonthsSpecified { get; set; }
 
-        protected bool _deleteExpiredConferencesAfterHoldPeriod;
+        protected bool? _deleteExpiredConferencesAfterHoldPeriod;
 
         [XmlElement(ElementName = "deleteExpiredConferencesAfterHoldPeriod", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:490")]
-        public bool DeleteExpiredConferencesAfterHoldPeriod
+        public bool? DeleteExpiredConferencesAfterHoldPeriod
         {
             get => _deleteExpiredConferencesAfterHoldPeriod;
             set
             {
-                DeleteExpiredConferencesAfterHoldPeriodSpecified = true;
+                DeleteExpiredConferencesAfterHoldPeriodSpecified = (value != null);
                 _deleteExpiredConferencesAfterHoldPeriod = value;
             }
         }
@@ -115,17 +115,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeleteExpiredConferencesAfterHoldPeriodSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MeetMeConferencingExpiredConferenceHoldPeriodDays _expiredConferenceHoldPeriodDays;
+        protected BroadWorksConnector.Ocip.Models.MeetMeConferencingExpiredConferenceHoldPeriodDays? _expiredConferenceHoldPeriodDays;
 
         [XmlElement(ElementName = "expiredConferenceHoldPeriodDays", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:490")]
-        public BroadWorksConnector.Ocip.Models.MeetMeConferencingExpiredConferenceHoldPeriodDays ExpiredConferenceHoldPeriodDays
+        public BroadWorksConnector.Ocip.Models.MeetMeConferencingExpiredConferenceHoldPeriodDays? ExpiredConferenceHoldPeriodDays
         {
             get => _expiredConferenceHoldPeriodDays;
             set
             {
-                ExpiredConferenceHoldPeriodDaysSpecified = true;
+                ExpiredConferenceHoldPeriodDaysSpecified = (value != null);
                 _expiredConferenceHoldPeriodDays = value;
             }
         }
@@ -153,17 +153,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecordingWebAppURLSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MeetMeConferencingRecordingFileFormat _recordingFileFormat;
+        protected BroadWorksConnector.Ocip.Models.MeetMeConferencingRecordingFileFormat? _recordingFileFormat;
 
         [XmlElement(ElementName = "recordingFileFormat", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:490")]
-        public BroadWorksConnector.Ocip.Models.MeetMeConferencingRecordingFileFormat RecordingFileFormat
+        public BroadWorksConnector.Ocip.Models.MeetMeConferencingRecordingFileFormat? RecordingFileFormat
         {
             get => _recordingFileFormat;
             set
             {
-                RecordingFileFormatSpecified = true;
+                RecordingFileFormatSpecified = (value != null);
                 _recordingFileFormat = value;
             }
         }
@@ -171,17 +171,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RecordingFileFormatSpecified { get; set; }
 
-        protected bool _terminateAfterGracePeriod;
+        protected bool? _terminateAfterGracePeriod;
 
         [XmlElement(ElementName = "terminateAfterGracePeriod", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:490")]
-        public bool TerminateAfterGracePeriod
+        public bool? TerminateAfterGracePeriod
         {
             get => _terminateAfterGracePeriod;
             set
             {
-                TerminateAfterGracePeriodSpecified = true;
+                TerminateAfterGracePeriodSpecified = (value != null);
                 _terminateAfterGracePeriod = value;
             }
         }
@@ -199,7 +199,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _conferenceGracePeriodMinutes;
             set
             {
-                ConferenceGracePeriodMinutesSpecified = true;
+                ConferenceGracePeriodMinutesSpecified = (value != null);
                 _conferenceGracePeriodMinutes = value;
             }
         }
@@ -207,19 +207,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConferenceGracePeriodMinutesSpecified { get; set; }
 
-        protected int _conferenceParticipantEarlyEntryMinutes;
+        protected int? _conferenceParticipantEarlyEntryMinutes;
 
         [XmlElement(ElementName = "conferenceParticipantEarlyEntryMinutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:490")]
         [MinInclusive(0)]
         [MaxInclusive(15)]
-        public int ConferenceParticipantEarlyEntryMinutes
+        public int? ConferenceParticipantEarlyEntryMinutes
         {
             get => _conferenceParticipantEarlyEntryMinutes;
             set
             {
-                ConferenceParticipantEarlyEntryMinutesSpecified = true;
+                ConferenceParticipantEarlyEntryMinutesSpecified = (value != null);
                 _conferenceParticipantEarlyEntryMinutes = value;
             }
         }
@@ -227,17 +227,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConferenceParticipantEarlyEntryMinutesSpecified { get; set; }
 
-        protected bool _enableConferenceExpiryNotification;
+        protected bool? _enableConferenceExpiryNotification;
 
         [XmlElement(ElementName = "enableConferenceExpiryNotification", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:490")]
-        public bool EnableConferenceExpiryNotification
+        public bool? EnableConferenceExpiryNotification
         {
             get => _enableConferenceExpiryNotification;
             set
             {
-                EnableConferenceExpiryNotificationSpecified = true;
+                EnableConferenceExpiryNotificationSpecified = (value != null);
                 _enableConferenceExpiryNotification = value;
             }
         }
@@ -245,17 +245,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableConferenceExpiryNotificationSpecified { get; set; }
 
-        protected bool _enableActiveConferenceNotification;
+        protected bool? _enableActiveConferenceNotification;
 
         [XmlElement(ElementName = "enableActiveConferenceNotification", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:490")]
-        public bool EnableActiveConferenceNotification
+        public bool? EnableActiveConferenceNotification
         {
             get => _enableActiveConferenceNotification;
             set
             {
-                EnableActiveConferenceNotificationSpecified = true;
+                EnableActiveConferenceNotificationSpecified = (value != null);
                 _enableActiveConferenceNotification = value;
             }
         }
@@ -275,7 +275,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _conferenceFromAddress;
             set
             {
-                ConferenceFromAddressSpecified = true;
+                ConferenceFromAddressSpecified = (value != null);
                 _conferenceFromAddress = value;
             }
         }
@@ -283,19 +283,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConferenceFromAddressSpecified { get; set; }
 
-        protected int _conferenceActiveTalkerRefreshIntervalSeconds;
+        protected int? _conferenceActiveTalkerRefreshIntervalSeconds;
 
         [XmlElement(ElementName = "conferenceActiveTalkerRefreshIntervalSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:490")]
         [MinInclusive(1)]
         [MaxInclusive(5)]
-        public int ConferenceActiveTalkerRefreshIntervalSeconds
+        public int? ConferenceActiveTalkerRefreshIntervalSeconds
         {
             get => _conferenceActiveTalkerRefreshIntervalSeconds;
             set
             {
-                ConferenceActiveTalkerRefreshIntervalSecondsSpecified = true;
+                ConferenceActiveTalkerRefreshIntervalSecondsSpecified = (value != null);
                 _conferenceActiveTalkerRefreshIntervalSeconds = value;
             }
         }

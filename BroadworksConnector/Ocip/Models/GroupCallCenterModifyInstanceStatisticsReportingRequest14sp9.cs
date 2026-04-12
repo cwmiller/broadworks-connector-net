@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        protected bool _generateDailyReport;
+        protected bool? _generateDailyReport;
 
         [XmlElement(ElementName = "generateDailyReport", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:6923")]
-        public bool GenerateDailyReport
+        public bool? GenerateDailyReport
         {
             get => _generateDailyReport;
             set
             {
-                GenerateDailyReportSpecified = true;
+                GenerateDailyReportSpecified = (value != null);
                 _generateDailyReport = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GenerateDailyReportSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes _collectionPeriodMinutes;
+        protected BroadWorksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes? _collectionPeriodMinutes;
 
         [XmlElement(ElementName = "collectionPeriodMinutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:6923")]
-        public BroadWorksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes CollectionPeriodMinutes
+        public BroadWorksConnector.Ocip.Models.CallCenterStatisticsCollectionPeriodMinutes? CollectionPeriodMinutes
         {
             get => _collectionPeriodMinutes;
             set
             {
-                CollectionPeriodMinutesSpecified = true;
+                CollectionPeriodMinutesSpecified = (value != null);
                 _collectionPeriodMinutes = value;
             }
         }
@@ -114,17 +114,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReportingEmailAddress2Specified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterStatisticsSource _statisticsSource;
+        protected BroadWorksConnector.Ocip.Models.CallCenterStatisticsSource? _statisticsSource;
 
         [XmlElement(ElementName = "statisticsSource", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:6923")]
-        public BroadWorksConnector.Ocip.Models.CallCenterStatisticsSource StatisticsSource
+        public BroadWorksConnector.Ocip.Models.CallCenterStatisticsSource? StatisticsSource
         {
             get => _statisticsSource;
             set
             {
-                StatisticsSourceSpecified = true;
+                StatisticsSourceSpecified = (value != null);
                 _statisticsSource = value;
             }
         }

@@ -16,19 +16,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class RecurrenceRecurDaily
     {
 
-        protected int _recurInterval;
+        protected int? _recurInterval;
 
         [XmlElement(ElementName = "recurInterval", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:4104")]
         [MinInclusive(1)]
         [MaxInclusive(999)]
-        public int RecurInterval
+        public int? RecurInterval
         {
             get => _recurInterval;
             set
             {
-                RecurIntervalSpecified = true;
+                RecurIntervalSpecified = (value != null);
                 _recurInterval = value;
             }
         }

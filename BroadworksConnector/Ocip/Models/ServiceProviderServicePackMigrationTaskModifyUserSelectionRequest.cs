@@ -58,17 +58,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TaskNameSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ServicePackMigrationTaskUserSelectionType _userSelectionType;
+        protected BroadWorksConnector.Ocip.Models.ServicePackMigrationTaskUserSelectionType? _userSelectionType;
 
         [XmlElement(ElementName = "userSelectionType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6611")]
-        public BroadWorksConnector.Ocip.Models.ServicePackMigrationTaskUserSelectionType UserSelectionType
+        public BroadWorksConnector.Ocip.Models.ServicePackMigrationTaskUserSelectionType? UserSelectionType
         {
             get => _userSelectionType;
             set
             {
-                UserSelectionTypeSpecified = true;
+                UserSelectionTypeSpecified = (value != null);
                 _userSelectionType = value;
             }
         }

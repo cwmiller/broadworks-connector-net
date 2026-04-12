@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _scheduleName;
             set
             {
-                ScheduleNameSpecified = true;
+                ScheduleNameSpecified = (value != null);
                 _scheduleName = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _scheduleType;
             set
             {
-                ScheduleTypeSpecified = true;
+                ScheduleTypeSpecified = (value != null);
                 _scheduleType = value;
             }
         }
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _scheduleLevel;
             set
             {
-                ScheduleLevelSpecified = true;
+                ScheduleLevelSpecified = (value != null);
                 _scheduleLevel = value;
             }
         }

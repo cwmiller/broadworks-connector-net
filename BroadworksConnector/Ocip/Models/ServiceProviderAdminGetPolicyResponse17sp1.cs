@@ -259,17 +259,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CommunicationBarringAccessSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.EnterpriseAdminNetworkPolicyAccess _networkPolicyAccess;
+        protected BroadWorksConnector.Ocip.Models.EnterpriseAdminNetworkPolicyAccess? _networkPolicyAccess;
 
         [XmlElement(ElementName = "networkPolicyAccess", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:17695")]
-        public BroadWorksConnector.Ocip.Models.EnterpriseAdminNetworkPolicyAccess NetworkPolicyAccess
+        public BroadWorksConnector.Ocip.Models.EnterpriseAdminNetworkPolicyAccess? NetworkPolicyAccess
         {
             get => _networkPolicyAccess;
             set
             {
-                NetworkPolicyAccessSpecified = true;
+                NetworkPolicyAccessSpecified = (value != null);
                 _networkPolicyAccess = value;
             }
         }

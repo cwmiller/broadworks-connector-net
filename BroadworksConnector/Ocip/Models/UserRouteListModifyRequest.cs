@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _treatOriginationsAndPBXRedirectionsAsScreened;
+        protected bool? _treatOriginationsAndPBXRedirectionsAsScreened;
 
         [XmlElement(ElementName = "treatOriginationsAndPBXRedirectionsAsScreened", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"500f9871ed90b8ab3fbd262883ab503b:858")]
-        public bool TreatOriginationsAndPBXRedirectionsAsScreened
+        public bool? TreatOriginationsAndPBXRedirectionsAsScreened
         {
             get => _treatOriginationsAndPBXRedirectionsAsScreened;
             set
             {
-                TreatOriginationsAndPBXRedirectionsAsScreenedSpecified = true;
+                TreatOriginationsAndPBXRedirectionsAsScreenedSpecified = (value != null);
                 _treatOriginationsAndPBXRedirectionsAsScreened = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TreatOriginationsAndPBXRedirectionsAsScreenedSpecified { get; set; }
 
-        protected bool _useRouteListIdentityForNonEmergencyCalls;
+        protected bool? _useRouteListIdentityForNonEmergencyCalls;
 
         [XmlElement(ElementName = "useRouteListIdentityForNonEmergencyCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"500f9871ed90b8ab3fbd262883ab503b:858")]
-        public bool UseRouteListIdentityForNonEmergencyCalls
+        public bool? UseRouteListIdentityForNonEmergencyCalls
         {
             get => _useRouteListIdentityForNonEmergencyCalls;
             set
             {
-                UseRouteListIdentityForNonEmergencyCallsSpecified = true;
+                UseRouteListIdentityForNonEmergencyCallsSpecified = (value != null);
                 _useRouteListIdentityForNonEmergencyCalls = value;
             }
         }
@@ -74,17 +74,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseRouteListIdentityForNonEmergencyCallsSpecified { get; set; }
 
-        protected bool _useRouteListIdentityForEmergencyCalls;
+        protected bool? _useRouteListIdentityForEmergencyCalls;
 
         [XmlElement(ElementName = "useRouteListIdentityForEmergencyCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"500f9871ed90b8ab3fbd262883ab503b:858")]
-        public bool UseRouteListIdentityForEmergencyCalls
+        public bool? UseRouteListIdentityForEmergencyCalls
         {
             get => _useRouteListIdentityForEmergencyCalls;
             set
             {
-                UseRouteListIdentityForEmergencyCallsSpecified = true;
+                UseRouteListIdentityForEmergencyCallsSpecified = (value != null);
                 _useRouteListIdentityForEmergencyCalls = value;
             }
         }
@@ -92,17 +92,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseRouteListIdentityForEmergencyCallsSpecified { get; set; }
 
-        protected bool _ignoreCallingNameForCallProcessing;
+        protected bool? _ignoreCallingNameForCallProcessing;
 
         [XmlElement(ElementName = "ignoreCallingNameForCallProcessing", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"500f9871ed90b8ab3fbd262883ab503b:858")]
-        public bool IgnoreCallingNameForCallProcessing
+        public bool? IgnoreCallingNameForCallProcessing
         {
             get => _ignoreCallingNameForCallProcessing;
             set
             {
-                IgnoreCallingNameForCallProcessingSpecified = true;
+                IgnoreCallingNameForCallProcessingSpecified = (value != null);
                 _ignoreCallingNameForCallProcessing = value;
             }
         }

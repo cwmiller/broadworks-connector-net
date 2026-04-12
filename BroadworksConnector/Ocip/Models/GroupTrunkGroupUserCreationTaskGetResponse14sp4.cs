@@ -123,17 +123,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PopulateContactSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat _contactFormat;
+        protected BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat? _contactFormat;
 
         [XmlElement(ElementName = "contactFormat", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1582")]
-        public BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat ContactFormat
+        public BroadWorksConnector.Ocip.Models.TrunkGroupUserCreationSIPURIFormat? ContactFormat
         {
             get => _contactFormat;
             set
             {
-                ContactFormatSpecified = true;
+                ContactFormatSpecified = (value != null);
                 _contactFormat = value;
             }
         }
@@ -153,7 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _contactDomain;
             set
             {
-                ContactDomainSpecified = true;
+                ContactDomainSpecified = (value != null);
                 _contactDomain = value;
             }
         }
@@ -224,7 +224,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _servicePackName;
             set
             {
-                ServicePackNameSpecified = true;
+                ServicePackNameSpecified = (value != null);
                 _servicePackName = value;
             }
         }
@@ -242,7 +242,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userServiceName;
             set
             {
-                UserServiceNameSpecified = true;
+                UserServiceNameSpecified = (value != null);
                 _userServiceName = value;
             }
         }

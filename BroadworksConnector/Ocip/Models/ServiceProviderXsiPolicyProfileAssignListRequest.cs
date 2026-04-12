@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _spXsiPolicyProfile;
             set
             {
-                SpXsiPolicyProfileSpecified = true;
+                SpXsiPolicyProfileSpecified = (value != null);
                 _spXsiPolicyProfile = value;
             }
         }
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupXsiPolicyProfile;
             set
             {
-                GroupXsiPolicyProfileSpecified = true;
+                GroupXsiPolicyProfileSpecified = (value != null);
                 _groupXsiPolicyProfile = value;
             }
         }
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userXsiPolicyProfile;
             set
             {
-                UserXsiPolicyProfileSpecified = true;
+                UserXsiPolicyProfileSpecified = (value != null);
                 _userXsiPolicyProfile = value;
             }
         }

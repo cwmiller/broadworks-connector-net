@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _recallAlternateUserId;
             set
             {
-                RecallAlternateUserIdSpecified = true;
+                RecallAlternateUserIdSpecified = (value != null);
                 _recallAlternateUserId = value;
             }
         }

@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _privateIdentity;
             set
             {
-                PrivateIdentitySpecified = true;
+                PrivateIdentitySpecified = (value != null);
                 _privateIdentity = value;
             }
         }
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _contact;
             set
             {
-                ContactSpecified = true;
+                ContactSpecified = (value != null);
                 _contact = value;
             }
         }
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _pathHeader;
             set
             {
-                PathHeaderSpecified = true;
+                PathHeaderSpecified = (value != null);
                 _pathHeader = value;
             }
         }
@@ -120,19 +120,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PathHeaderSpecified { get; set; }
 
-        protected int _portNumber;
+        protected int? _portNumber;
 
         [XmlElement(ElementName = "portNumber", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:67")]
         [MinInclusive(1)]
         [MaxInclusive(1024)]
-        public int PortNumber
+        public int? PortNumber
         {
             get => _portNumber;
             set
             {
-                PortNumberSpecified = true;
+                PortNumberSpecified = (value != null);
                 _portNumber = value;
             }
         }
@@ -169,7 +169,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hotlineContact;
             set
             {
-                HotlineContactSpecified = true;
+                HotlineContactSpecified = (value != null);
                 _hotlineContact = value;
             }
         }

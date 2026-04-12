@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemPhysicalLocationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _alwaysAllowEmergencyCalls;
+        protected bool? _alwaysAllowEmergencyCalls;
 
         [XmlElement(ElementName = "alwaysAllowEmergencyCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"8250786d50d10f8fe081d126ecca3847:73")]
-        public bool AlwaysAllowEmergencyCalls
+        public bool? AlwaysAllowEmergencyCalls
         {
             get => _alwaysAllowEmergencyCalls;
             set
             {
-                AlwaysAllowEmergencyCallsSpecified = true;
+                AlwaysAllowEmergencyCallsSpecified = (value != null);
                 _alwaysAllowEmergencyCalls = value;
             }
         }

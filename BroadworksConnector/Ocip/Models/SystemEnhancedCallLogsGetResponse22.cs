@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _eclQueryApplicationURL;
             set
             {
-                EclQueryApplicationURLSpecified = true;
+                EclQueryApplicationURLSpecified = (value != null);
                 _eclQueryApplicationURL = value;
             }
         }
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _eclQueryDataRepositoryURL;
             set
             {
-                EclQueryDataRepositoryURLSpecified = true;
+                EclQueryDataRepositoryURLSpecified = (value != null);
                 _eclQueryDataRepositoryURL = value;
             }
         }

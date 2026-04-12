@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _featureAccessCode;
             set
             {
-                FeatureAccessCodeSpecified = true;
+                FeatureAccessCodeSpecified = (value != null);
                 _featureAccessCode = value;
             }
         }
@@ -77,17 +77,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FeatureAccessCodeSpecified { get; set; }
 
-        protected bool _restoreDefaultCodes;
+        protected bool? _restoreDefaultCodes;
 
         [XmlElement(ElementName = "restoreDefaultCodes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:9882")]
-        public bool RestoreDefaultCodes
+        public bool? RestoreDefaultCodes
         {
             get => _restoreDefaultCodes;
             set
             {
-                RestoreDefaultCodesSpecified = true;
+                RestoreDefaultCodesSpecified = (value != null);
                 _restoreDefaultCodes = value;
             }
         }

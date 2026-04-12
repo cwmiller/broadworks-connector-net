@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerName;
             set
             {
-                ResellerNameSpecified = true;
+                ResellerNameSpecified = (value != null);
                 _resellerName = value;
             }
         }
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerExternalId;
             set
             {
-                ResellerExternalIdSpecified = true;
+                ResellerExternalIdSpecified = (value != null);
                 _resellerExternalId = value;
             }
         }

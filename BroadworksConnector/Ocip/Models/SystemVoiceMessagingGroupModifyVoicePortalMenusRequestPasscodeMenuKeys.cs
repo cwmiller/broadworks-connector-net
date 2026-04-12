@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _finishEnteringOrReenteringPasscode;
             set
             {
-                FinishEnteringOrReenteringPasscodeSpecified = true;
+                FinishEnteringOrReenteringPasscodeSpecified = (value != null);
                 _finishEnteringOrReenteringPasscode = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _returnToPreviousMenu;
             set
             {
-                ReturnToPreviousMenuSpecified = true;
+                ReturnToPreviousMenuSpecified = (value != null);
                 _returnToPreviousMenu = value;
             }
         }

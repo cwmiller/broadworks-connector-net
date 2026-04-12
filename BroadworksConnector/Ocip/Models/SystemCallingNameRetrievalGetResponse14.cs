@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serverNetAddress;
             set
             {
-                ServerNetAddressSpecified = true;
+                ServerNetAddressSpecified = (value != null);
                 _serverNetAddress = value;
             }
         }
@@ -56,19 +56,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServerNetAddressSpecified { get; set; }
 
-        protected int _serverPort;
+        protected int? _serverPort;
 
         [XmlElement(ElementName = "serverPort", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:21836")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
-        public int ServerPort
+        public int? ServerPort
         {
             get => _serverPort;
             set
             {
-                ServerPortSpecified = true;
+                ServerPortSpecified = (value != null);
                 _serverPort = value;
             }
         }

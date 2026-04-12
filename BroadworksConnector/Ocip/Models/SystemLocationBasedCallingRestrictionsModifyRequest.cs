@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemLocationBasedCallingRestrictionsModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected BroadWorksConnector.Ocip.Models.PhysicalLocationIndicator _physicalLocationIndicator;
+        protected BroadWorksConnector.Ocip.Models.PhysicalLocationIndicator? _physicalLocationIndicator;
 
         [XmlElement(ElementName = "physicalLocationIndicator", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4489f4baeefa41b8df0a86def4c05cd8:81")]
-        public BroadWorksConnector.Ocip.Models.PhysicalLocationIndicator PhysicalLocationIndicator
+        public BroadWorksConnector.Ocip.Models.PhysicalLocationIndicator? PhysicalLocationIndicator
         {
             get => _physicalLocationIndicator;
             set
             {
-                PhysicalLocationIndicatorSpecified = true;
+                PhysicalLocationIndicatorSpecified = (value != null);
                 _physicalLocationIndicator = value;
             }
         }
@@ -37,17 +37,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PhysicalLocationIndicatorSpecified { get; set; }
 
-        protected bool _enforceMscValidation;
+        protected bool? _enforceMscValidation;
 
         [XmlElement(ElementName = "enforceMscValidation", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4489f4baeefa41b8df0a86def4c05cd8:81")]
-        public bool EnforceMscValidation
+        public bool? EnforceMscValidation
         {
             get => _enforceMscValidation;
             set
             {
-                EnforceMscValidationSpecified = true;
+                EnforceMscValidationSpecified = (value != null);
                 _enforceMscValidation = value;
             }
         }
@@ -55,17 +55,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnforceMscValidationSpecified { get; set; }
 
-        protected bool _enableOfficeZoneAnnouncement;
+        protected bool? _enableOfficeZoneAnnouncement;
 
         [XmlElement(ElementName = "enableOfficeZoneAnnouncement", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4489f4baeefa41b8df0a86def4c05cd8:81")]
-        public bool EnableOfficeZoneAnnouncement
+        public bool? EnableOfficeZoneAnnouncement
         {
             get => _enableOfficeZoneAnnouncement;
             set
             {
-                EnableOfficeZoneAnnouncementSpecified = true;
+                EnableOfficeZoneAnnouncementSpecified = (value != null);
                 _enableOfficeZoneAnnouncement = value;
             }
         }
@@ -73,17 +73,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableOfficeZoneAnnouncementSpecified { get; set; }
 
-        protected bool _enhanceOfficeZone;
+        protected bool? _enhanceOfficeZone;
 
         [XmlElement(ElementName = "enhanceOfficeZone", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4489f4baeefa41b8df0a86def4c05cd8:81")]
-        public bool EnhanceOfficeZone
+        public bool? EnhanceOfficeZone
         {
             get => _enhanceOfficeZone;
             set
             {
-                EnhanceOfficeZoneSpecified = true;
+                EnhanceOfficeZoneSpecified = (value != null);
                 _enhanceOfficeZone = value;
             }
         }
@@ -91,17 +91,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnhanceOfficeZoneSpecified { get; set; }
 
-        protected bool _enableMccMncBasedLocation;
+        protected bool? _enableMccMncBasedLocation;
 
         [XmlElement(ElementName = "enableMccMncBasedLocation", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4489f4baeefa41b8df0a86def4c05cd8:81")]
-        public bool EnableMccMncBasedLocation
+        public bool? EnableMccMncBasedLocation
         {
             get => _enableMccMncBasedLocation;
             set
             {
-                EnableMccMncBasedLocationSpecified = true;
+                EnableMccMncBasedLocationSpecified = (value != null);
                 _enableMccMncBasedLocation = value;
             }
         }
@@ -129,17 +129,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MccMncRoamingNetworkTranslationIndexSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.DefaultMccMncBasedLocation _defaultMccMncBasedLocation;
+        protected BroadWorksConnector.Ocip.Models.DefaultMccMncBasedLocation? _defaultMccMncBasedLocation;
 
         [XmlElement(ElementName = "defaultMccMncBasedLocation", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4489f4baeefa41b8df0a86def4c05cd8:81")]
-        public BroadWorksConnector.Ocip.Models.DefaultMccMncBasedLocation DefaultMccMncBasedLocation
+        public BroadWorksConnector.Ocip.Models.DefaultMccMncBasedLocation? DefaultMccMncBasedLocation
         {
             get => _defaultMccMncBasedLocation;
             set
             {
-                DefaultMccMncBasedLocationSpecified = true;
+                DefaultMccMncBasedLocationSpecified = (value != null);
                 _defaultMccMncBasedLocation = value;
             }
         }

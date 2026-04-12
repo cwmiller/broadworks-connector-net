@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupId;
             set
             {
-                GroupIdSpecified = true;
+                GroupIdSpecified = (value != null);
                 _groupId = value;
             }
         }

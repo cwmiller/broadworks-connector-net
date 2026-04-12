@@ -16,19 +16,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class GroupEnterpriseTrunkModifyRequestPriorityWeightedRouting
     {
 
-        protected int _maximumRerouteAttemptsWithinPriority;
+        protected int? _maximumRerouteAttemptsWithinPriority;
 
         [XmlElement(ElementName = "maximumRerouteAttemptsWithinPriority", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:934")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
-        public int MaximumRerouteAttemptsWithinPriority
+        public int? MaximumRerouteAttemptsWithinPriority
         {
             get => _maximumRerouteAttemptsWithinPriority;
             set
             {
-                MaximumRerouteAttemptsWithinPrioritySpecified = true;
+                MaximumRerouteAttemptsWithinPrioritySpecified = (value != null);
                 _maximumRerouteAttemptsWithinPriority = value;
             }
         }

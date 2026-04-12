@@ -60,17 +60,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.GroupDialPlanPolicySettingLevel _useSetting;
+        protected BroadWorksConnector.Ocip.Models.GroupDialPlanPolicySettingLevel? _useSetting;
 
         [XmlElement(ElementName = "useSetting", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:4588")]
-        public BroadWorksConnector.Ocip.Models.GroupDialPlanPolicySettingLevel UseSetting
+        public BroadWorksConnector.Ocip.Models.GroupDialPlanPolicySettingLevel? UseSetting
         {
             get => _useSetting;
             set
             {
-                UseSettingSpecified = true;
+                UseSettingSpecified = (value != null);
                 _useSetting = value;
             }
         }
@@ -78,17 +78,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseSettingSpecified { get; set; }
 
-        protected bool _requiresAccessCodeForPublicCalls;
+        protected bool? _requiresAccessCodeForPublicCalls;
 
         [XmlElement(ElementName = "requiresAccessCodeForPublicCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:4588")]
-        public bool RequiresAccessCodeForPublicCalls
+        public bool? RequiresAccessCodeForPublicCalls
         {
             get => _requiresAccessCodeForPublicCalls;
             set
             {
-                RequiresAccessCodeForPublicCallsSpecified = true;
+                RequiresAccessCodeForPublicCallsSpecified = (value != null);
                 _requiresAccessCodeForPublicCalls = value;
             }
         }
@@ -96,17 +96,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RequiresAccessCodeForPublicCallsSpecified { get; set; }
 
-        protected bool _allowE164PublicCalls;
+        protected bool? _allowE164PublicCalls;
 
         [XmlElement(ElementName = "allowE164PublicCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:4588")]
-        public bool AllowE164PublicCalls
+        public bool? AllowE164PublicCalls
         {
             get => _allowE164PublicCalls;
             set
             {
-                AllowE164PublicCallsSpecified = true;
+                AllowE164PublicCallsSpecified = (value != null);
                 _allowE164PublicCalls = value;
             }
         }
@@ -114,17 +114,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowE164PublicCallsSpecified { get; set; }
 
-        protected bool _preferE164NumberFormatForCallbackServices;
+        protected bool? _preferE164NumberFormatForCallbackServices;
 
         [XmlElement(ElementName = "preferE164NumberFormatForCallbackServices", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:4588")]
-        public bool PreferE164NumberFormatForCallbackServices
+        public bool? PreferE164NumberFormatForCallbackServices
         {
             get => _preferE164NumberFormatForCallbackServices;
             set
             {
-                PreferE164NumberFormatForCallbackServicesSpecified = true;
+                PreferE164NumberFormatForCallbackServicesSpecified = (value != null);
                 _preferE164NumberFormatForCallbackServices = value;
             }
         }
@@ -172,17 +172,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PrivateDigitMapSpecified { get; set; }
 
-        protected bool _overrideResolvedDeviceDigitMap;
+        protected bool? _overrideResolvedDeviceDigitMap;
 
         [XmlElement(ElementName = "overrideResolvedDeviceDigitMap", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:4588")]
-        public bool OverrideResolvedDeviceDigitMap
+        public bool? OverrideResolvedDeviceDigitMap
         {
             get => _overrideResolvedDeviceDigitMap;
             set
             {
-                OverrideResolvedDeviceDigitMapSpecified = true;
+                OverrideResolvedDeviceDigitMapSpecified = (value != null);
                 _overrideResolvedDeviceDigitMap = value;
             }
         }

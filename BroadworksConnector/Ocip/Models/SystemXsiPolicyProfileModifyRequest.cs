@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newXsiPolicyProfileName;
             set
             {
-                NewXsiPolicyProfileNameSpecified = true;
+                NewXsiPolicyProfileNameSpecified = (value != null);
                 _newXsiPolicyProfileName = value;
             }
         }
@@ -76,19 +76,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DescriptionSpecified { get; set; }
 
-        protected int _maxTargetSubscription;
+        protected int? _maxTargetSubscription;
 
         [XmlElement(ElementName = "maxTargetSubscription", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:19894")]
         [MinInclusive(1)]
         [MaxInclusive(2147483647)]
-        public int MaxTargetSubscription
+        public int? MaxTargetSubscription
         {
             get => _maxTargetSubscription;
             set
             {
-                MaxTargetSubscriptionSpecified = true;
+                MaxTargetSubscriptionSpecified = (value != null);
                 _maxTargetSubscription = value;
             }
         }

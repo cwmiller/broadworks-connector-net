@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _recordAudio;
             set
             {
-                RecordAudioSpecified = true;
+                RecordAudioSpecified = (value != null);
                 _recordAudio = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _recordAudioVideo;
             set
             {
-                RecordAudioVideoSpecified = true;
+                RecordAudioVideoSpecified = (value != null);
                 _recordAudioVideo = value;
             }
         }
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _repeatMenu;
             set
             {
-                RepeatMenuSpecified = true;
+                RepeatMenuSpecified = (value != null);
                 _repeatMenu = value;
             }
         }

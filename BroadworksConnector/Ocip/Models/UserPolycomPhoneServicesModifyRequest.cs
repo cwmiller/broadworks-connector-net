@@ -55,17 +55,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessDeviceSpecified { get; set; }
 
-        protected bool _integratePhoneDirectoryWithBroadWorks;
+        protected bool? _integratePhoneDirectoryWithBroadWorks;
 
         [XmlElement(ElementName = "integratePhoneDirectoryWithBroadWorks", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:167")]
-        public bool IntegratePhoneDirectoryWithBroadWorks
+        public bool? IntegratePhoneDirectoryWithBroadWorks
         {
             get => _integratePhoneDirectoryWithBroadWorks;
             set
             {
-                IntegratePhoneDirectoryWithBroadWorksSpecified = true;
+                IntegratePhoneDirectoryWithBroadWorksSpecified = (value != null);
                 _integratePhoneDirectoryWithBroadWorks = value;
             }
         }
@@ -73,17 +73,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IntegratePhoneDirectoryWithBroadWorksSpecified { get; set; }
 
-        protected bool _includeUserPersonalPhoneListInDirectory;
+        protected bool? _includeUserPersonalPhoneListInDirectory;
 
         [XmlElement(ElementName = "includeUserPersonalPhoneListInDirectory", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:167")]
-        public bool IncludeUserPersonalPhoneListInDirectory
+        public bool? IncludeUserPersonalPhoneListInDirectory
         {
             get => _includeUserPersonalPhoneListInDirectory;
             set
             {
-                IncludeUserPersonalPhoneListInDirectorySpecified = true;
+                IncludeUserPersonalPhoneListInDirectorySpecified = (value != null);
                 _includeUserPersonalPhoneListInDirectory = value;
             }
         }
@@ -91,17 +91,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncludeUserPersonalPhoneListInDirectorySpecified { get; set; }
 
-        protected bool _includeGroupCustomContactDirectoryInDirectory;
+        protected bool? _includeGroupCustomContactDirectoryInDirectory;
 
         [XmlElement(ElementName = "includeGroupCustomContactDirectoryInDirectory", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:167")]
-        public bool IncludeGroupCustomContactDirectoryInDirectory
+        public bool? IncludeGroupCustomContactDirectoryInDirectory
         {
             get => _includeGroupCustomContactDirectoryInDirectory;
             set
             {
-                IncludeGroupCustomContactDirectoryInDirectorySpecified = true;
+                IncludeGroupCustomContactDirectoryInDirectorySpecified = (value != null);
                 _includeGroupCustomContactDirectoryInDirectory = value;
             }
         }

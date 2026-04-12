@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _expirationDate;
             set
             {
-                ExpirationDateSpecified = true;
+                ExpirationDateSpecified = (value != null);
                 _expirationDate = value;
             }
         }
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hostId;
             set
             {
-                HostIdSpecified = true;
+                HostIdSpecified = (value != null);
                 _hostId = value;
             }
         }
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _licenseName;
             set
             {
-                LicenseNameSpecified = true;
+                LicenseNameSpecified = (value != null);
                 _licenseName = value;
             }
         }
@@ -139,7 +139,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _systemId;
             set
             {
-                SystemIdSpecified = true;
+                SystemIdSpecified = (value != null);
                 _systemId = value;
             }
         }

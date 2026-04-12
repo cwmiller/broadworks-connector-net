@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _listURI;
             set
             {
-                ListURISpecified = true;
+                ListURISpecified = (value != null);
                 _listURI = value;
             }
         }

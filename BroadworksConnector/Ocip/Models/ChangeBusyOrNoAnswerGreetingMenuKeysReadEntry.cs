@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _recordNewGreeting;
             set
             {
-                RecordNewGreetingSpecified = true;
+                RecordNewGreetingSpecified = (value != null);
                 _recordNewGreeting = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _listenToCurrentGreeting;
             set
             {
-                ListenToCurrentGreetingSpecified = true;
+                ListenToCurrentGreetingSpecified = (value != null);
                 _listenToCurrentGreeting = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _revertToSystemDefaultGreeting;
             set
             {
-                RevertToSystemDefaultGreetingSpecified = true;
+                RevertToSystemDefaultGreetingSpecified = (value != null);
                 _revertToSystemDefaultGreeting = value;
             }
         }
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _repeatMenu;
             set
             {
-                RepeatMenuSpecified = true;
+                RepeatMenuSpecified = (value != null);
                 _repeatMenu = value;
             }
         }

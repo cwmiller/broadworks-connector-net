@@ -26,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _file1;
             set
             {
-                File1Specified = true;
+                File1Specified = (value != null);
                 _file1 = value;
             }
         }
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _file2;
             set
             {
-                File2Specified = true;
+                File2Specified = (value != null);
                 _file2 = value;
             }
         }
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _file3;
             set
             {
-                File3Specified = true;
+                File3Specified = (value != null);
                 _file3 = value;
             }
         }
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _file4;
             set
             {
-                File4Specified = true;
+                File4Specified = (value != null);
                 _file4 = value;
             }
         }

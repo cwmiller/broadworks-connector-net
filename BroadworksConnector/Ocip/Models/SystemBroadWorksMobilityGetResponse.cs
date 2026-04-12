@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _scfSignalingIPAddress;
             set
             {
-                ScfSignalingIPAddressSpecified = true;
+                ScfSignalingIPAddressSpecified = (value != null);
                 _scfSignalingIPAddress = value;
             }
         }
@@ -144,19 +144,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ScfSignalingIPAddressSpecified { get; set; }
 
-        protected int _scfSignalingPort;
+        protected int? _scfSignalingPort;
 
         [XmlElement(ElementName = "scfSignalingPort", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:20958")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
-        public int ScfSignalingPort
+        public int? ScfSignalingPort
         {
             get => _scfSignalingPort;
             set
             {
-                ScfSignalingPortSpecified = true;
+                ScfSignalingPortSpecified = (value != null);
                 _scfSignalingPort = value;
             }
         }

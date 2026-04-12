@@ -267,19 +267,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisableLoginAfterMaxFailedLoginAttemptsSpecified { get; set; }
 
-        protected int _maxFailedLoginAttempts;
+        protected int? _maxFailedLoginAttempts;
 
         [XmlElement(ElementName = "maxFailedLoginAttempts", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3333")]
         [MinInclusive(2)]
         [MaxInclusive(10)]
-        public int MaxFailedLoginAttempts
+        public int? MaxFailedLoginAttempts
         {
             get => _maxFailedLoginAttempts;
             set
             {
-                MaxFailedLoginAttemptsSpecified = true;
+                MaxFailedLoginAttemptsSpecified = (value != null);
                 _maxFailedLoginAttempts = value;
             }
         }
@@ -304,19 +304,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExpirePasswordSpecified { get; set; }
 
-        protected int _passcodeExpiresDays;
+        protected int? _passcodeExpiresDays;
 
         [XmlElement(ElementName = "passcodeExpiresDays", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3333")]
         [MinInclusive(15)]
         [MaxInclusive(180)]
-        public int PasscodeExpiresDays
+        public int? PasscodeExpiresDays
         {
             get => _passcodeExpiresDays;
             set
             {
-                PasscodeExpiresDaysSpecified = true;
+                PasscodeExpiresDaysSpecified = (value != null);
                 _passcodeExpiresDays = value;
             }
         }
@@ -353,7 +353,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _loginDisabledNotifyEmailAddress;
             set
             {
-                LoginDisabledNotifyEmailAddressSpecified = true;
+                LoginDisabledNotifyEmailAddressSpecified = (value != null);
                 _loginDisabledNotifyEmailAddress = value;
             }
         }

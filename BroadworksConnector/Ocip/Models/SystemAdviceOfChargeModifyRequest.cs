@@ -22,19 +22,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAdviceOfChargeModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected int _delayBetweenNotificationSeconds;
+        protected int? _delayBetweenNotificationSeconds;
 
         [XmlElement(ElementName = "delayBetweenNotificationSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:20506")]
         [MinInclusive(5)]
         [MaxInclusive(1800)]
-        public int DelayBetweenNotificationSeconds
+        public int? DelayBetweenNotificationSeconds
         {
             get => _delayBetweenNotificationSeconds;
             set
             {
-                DelayBetweenNotificationSecondsSpecified = true;
+                DelayBetweenNotificationSecondsSpecified = (value != null);
                 _delayBetweenNotificationSeconds = value;
             }
         }
@@ -42,17 +42,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DelayBetweenNotificationSecondsSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling _incomingAocHandling;
+        protected BroadWorksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling? _incomingAocHandling;
 
         [XmlElement(ElementName = "incomingAocHandling", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:20506")]
-        public BroadWorksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling IncomingAocHandling
+        public BroadWorksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling? IncomingAocHandling
         {
             get => _incomingAocHandling;
             set
             {
-                IncomingAocHandlingSpecified = true;
+                IncomingAocHandlingSpecified = (value != null);
                 _incomingAocHandling = value;
             }
         }

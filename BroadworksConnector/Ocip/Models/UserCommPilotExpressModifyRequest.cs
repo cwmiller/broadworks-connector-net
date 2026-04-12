@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _availableInOffice;
             set
             {
-                AvailableInOfficeSpecified = true;
+                AvailableInOfficeSpecified = (value != null);
                 _availableInOffice = value;
             }
         }
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _availableOutOfOffice;
             set
             {
-                AvailableOutOfOfficeSpecified = true;
+                AvailableOutOfOfficeSpecified = (value != null);
                 _availableOutOfOffice = value;
             }
         }
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _busy;
             set
             {
-                BusySpecified = true;
+                BusySpecified = (value != null);
                 _busy = value;
             }
         }
@@ -121,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _unavailable;
             set
             {
-                UnavailableSpecified = true;
+                UnavailableSpecified = (value != null);
                 _unavailable = value;
             }
         }

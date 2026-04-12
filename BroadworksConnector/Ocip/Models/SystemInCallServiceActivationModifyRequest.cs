@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultActivationDigits;
             set
             {
-                DefaultActivationDigitsSpecified = true;
+                DefaultActivationDigitsSpecified = (value != null);
                 _defaultActivationDigits = value;
             }
         }

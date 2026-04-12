@@ -60,19 +60,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected int _minExtensionLength;
+        protected int? _minExtensionLength;
 
         [XmlElement(ElementName = "minExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:5518")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
-        public int MinExtensionLength
+        public int? MinExtensionLength
         {
             get => _minExtensionLength;
             set
             {
-                MinExtensionLengthSpecified = true;
+                MinExtensionLengthSpecified = (value != null);
                 _minExtensionLength = value;
             }
         }
@@ -80,19 +80,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MinExtensionLengthSpecified { get; set; }
 
-        protected int _maxExtensionLength;
+        protected int? _maxExtensionLength;
 
         [XmlElement(ElementName = "maxExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:5518")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
-        public int MaxExtensionLength
+        public int? MaxExtensionLength
         {
             get => _maxExtensionLength;
             set
             {
-                MaxExtensionLengthSpecified = true;
+                MaxExtensionLengthSpecified = (value != null);
                 _maxExtensionLength = value;
             }
         }
@@ -100,19 +100,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxExtensionLengthSpecified { get; set; }
 
-        protected int _defaultExtensionLength;
+        protected int? _defaultExtensionLength;
 
         [XmlElement(ElementName = "defaultExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:5518")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
-        public int DefaultExtensionLength
+        public int? DefaultExtensionLength
         {
             get => _defaultExtensionLength;
             set
             {
-                DefaultExtensionLengthSpecified = true;
+                DefaultExtensionLengthSpecified = (value != null);
                 _defaultExtensionLength = value;
             }
         }
@@ -120,17 +120,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultExtensionLengthSpecified { get; set; }
 
-        protected bool _useEnterpriseExtensionLengthSetting;
+        protected bool? _useEnterpriseExtensionLengthSetting;
 
         [XmlElement(ElementName = "useEnterpriseExtensionLengthSetting", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:5518")]
-        public bool UseEnterpriseExtensionLengthSetting
+        public bool? UseEnterpriseExtensionLengthSetting
         {
             get => _useEnterpriseExtensionLengthSetting;
             set
             {
-                UseEnterpriseExtensionLengthSettingSpecified = true;
+                UseEnterpriseExtensionLengthSettingSpecified = (value != null);
                 _useEnterpriseExtensionLengthSetting = value;
             }
         }

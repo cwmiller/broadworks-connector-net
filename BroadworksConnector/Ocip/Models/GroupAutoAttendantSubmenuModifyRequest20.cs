@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newSubmenuId;
             set
             {
-                NewSubmenuIdSpecified = true;
+                NewSubmenuIdSpecified = (value != null);
                 _newSubmenuId = value;
             }
         }
@@ -78,17 +78,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NewSubmenuIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.AnnouncementSelection _announcementSelection;
+        protected BroadWorksConnector.Ocip.Models.AnnouncementSelection? _announcementSelection;
 
         [XmlElement(ElementName = "announcementSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:620")]
-        public BroadWorksConnector.Ocip.Models.AnnouncementSelection AnnouncementSelection
+        public BroadWorksConnector.Ocip.Models.AnnouncementSelection? AnnouncementSelection
         {
             get => _announcementSelection;
             set
             {
-                AnnouncementSelectionSpecified = true;
+                AnnouncementSelectionSpecified = (value != null);
                 _announcementSelection = value;
             }
         }
@@ -132,17 +132,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VideoFileSpecified { get; set; }
 
-        protected bool _enableLevelExtensionDialing;
+        protected bool? _enableLevelExtensionDialing;
 
         [XmlElement(ElementName = "enableLevelExtensionDialing", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:620")]
-        public bool EnableLevelExtensionDialing
+        public bool? EnableLevelExtensionDialing
         {
             get => _enableLevelExtensionDialing;
             set
             {
-                EnableLevelExtensionDialingSpecified = true;
+                EnableLevelExtensionDialingSpecified = (value != null);
                 _enableLevelExtensionDialing = value;
             }
         }
@@ -160,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _keyConfiguration;
             set
             {
-                KeyConfigurationSpecified = true;
+                KeyConfigurationSpecified = (value != null);
                 _keyConfiguration = value;
             }
         }

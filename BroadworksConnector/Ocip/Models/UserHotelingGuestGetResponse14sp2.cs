@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hostUserId;
             set
             {
-                HostUserIdSpecified = true;
+                HostUserIdSpecified = (value != null);
                 _hostUserId = value;
             }
         }
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hostLastName;
             set
             {
-                HostLastNameSpecified = true;
+                HostLastNameSpecified = (value != null);
                 _hostLastName = value;
             }
         }
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hostFirstName;
             set
             {
-                HostFirstNameSpecified = true;
+                HostFirstNameSpecified = (value != null);
                 _hostFirstName = value;
             }
         }
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hostAssociationDateTime;
             set
             {
-                HostAssociationDateTimeSpecified = true;
+                HostAssociationDateTimeSpecified = (value != null);
                 _hostAssociationDateTime = value;
             }
         }
@@ -133,19 +133,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HostAssociationDateTimeSpecified { get; set; }
 
-        protected int _hostAssociationLimitHours;
+        protected int? _hostAssociationLimitHours;
 
         [XmlElement(ElementName = "hostAssociationLimitHours", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:45430")]
         [MinInclusive(1)]
         [MaxInclusive(999)]
-        public int HostAssociationLimitHours
+        public int? HostAssociationLimitHours
         {
             get => _hostAssociationLimitHours;
             set
             {
-                HostAssociationLimitHoursSpecified = true;
+                HostAssociationLimitHoursSpecified = (value != null);
                 _hostAssociationLimitHours = value;
             }
         }

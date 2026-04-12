@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newName;
             set
             {
-                NewNameSpecified = true;
+                NewNameSpecified = (value != null);
                 _newName = value;
             }
         }
@@ -87,17 +87,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DescriptionSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction _originatingDefaultAction;
+        protected BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction? _originatingDefaultAction;
 
         [XmlElement(ElementName = "originatingDefaultAction", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6582")]
-        public BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction OriginatingDefaultAction
+        public BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction? OriginatingDefaultAction
         {
             get => _originatingDefaultAction;
             set
             {
-                OriginatingDefaultActionSpecified = true;
+                OriginatingDefaultActionSpecified = (value != null);
                 _originatingDefaultAction = value;
             }
         }
@@ -183,17 +183,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OriginatingRuleSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingAction _redirectingDefaultAction;
+        protected BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingAction? _redirectingDefaultAction;
 
         [XmlElement(ElementName = "redirectingDefaultAction", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6582")]
-        public BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingAction RedirectingDefaultAction
+        public BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingAction? RedirectingDefaultAction
         {
             get => _redirectingDefaultAction;
             set
             {
-                RedirectingDefaultActionSpecified = true;
+                RedirectingDefaultActionSpecified = (value != null);
                 _redirectingDefaultAction = value;
             }
         }
@@ -239,17 +239,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RedirectingRuleSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingAction _incomingDefaultAction;
+        protected BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingAction? _incomingDefaultAction;
 
         [XmlElement(ElementName = "incomingDefaultAction", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6582")]
-        public BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingAction IncomingDefaultAction
+        public BroadWorksConnector.Ocip.Models.CommunicationBarringIncomingAction? IncomingDefaultAction
         {
             get => _incomingDefaultAction;
             set
             {
-                IncomingDefaultActionSpecified = true;
+                IncomingDefaultActionSpecified = (value != null);
                 _incomingDefaultAction = value;
             }
         }
@@ -295,17 +295,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncomingRuleSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowAction _callMeNowDefaultAction;
+        protected BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowAction? _callMeNowDefaultAction;
 
         [XmlElement(ElementName = "callMeNowDefaultAction", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6582")]
-        public BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowAction CallMeNowDefaultAction
+        public BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowAction? CallMeNowDefaultAction
         {
             get => _callMeNowDefaultAction;
             set
             {
-                CallMeNowDefaultActionSpecified = true;
+                CallMeNowDefaultActionSpecified = (value != null);
                 _callMeNowDefaultAction = value;
             }
         }
@@ -351,17 +351,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallMeNowRuleSpecified { get; set; }
 
-        protected bool _applyToAttendedCallTransfers;
+        protected bool? _applyToAttendedCallTransfers;
 
         [XmlElement(ElementName = "applyToAttendedCallTransfers", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6582")]
-        public bool ApplyToAttendedCallTransfers
+        public bool? ApplyToAttendedCallTransfers
         {
             get => _applyToAttendedCallTransfers;
             set
             {
-                ApplyToAttendedCallTransfersSpecified = true;
+                ApplyToAttendedCallTransfersSpecified = (value != null);
                 _applyToAttendedCallTransfers = value;
             }
         }

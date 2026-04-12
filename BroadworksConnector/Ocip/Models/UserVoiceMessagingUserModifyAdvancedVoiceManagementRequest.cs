@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.VoiceMessagingUserMailServerSelection _mailServerSelection;
+        protected BroadWorksConnector.Ocip.Models.VoiceMessagingUserMailServerSelection? _mailServerSelection;
 
         [XmlElement(ElementName = "mailServerSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1972")]
-        public BroadWorksConnector.Ocip.Models.VoiceMessagingUserMailServerSelection MailServerSelection
+        public BroadWorksConnector.Ocip.Models.VoiceMessagingUserMailServerSelection? MailServerSelection
         {
             get => _mailServerSelection;
             set
             {
-                MailServerSelectionSpecified = true;
+                MailServerSelectionSpecified = (value != null);
                 _mailServerSelection = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupMailServerEmailAddress;
             set
             {
-                GroupMailServerEmailAddressSpecified = true;
+                GroupMailServerEmailAddressSpecified = (value != null);
                 _groupMailServerEmailAddress = value;
             }
         }
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupMailServerUserId;
             set
             {
-                GroupMailServerUserIdSpecified = true;
+                GroupMailServerUserIdSpecified = (value != null);
                 _groupMailServerUserId = value;
             }
         }
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupMailServerPassword;
             set
             {
-                GroupMailServerPasswordSpecified = true;
+                GroupMailServerPasswordSpecified = (value != null);
                 _groupMailServerPassword = value;
             }
         }
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _personalMailServerNetAddress;
             set
             {
-                PersonalMailServerNetAddressSpecified = true;
+                PersonalMailServerNetAddressSpecified = (value != null);
                 _personalMailServerNetAddress = value;
             }
         }
@@ -170,17 +170,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PersonalMailServerNetAddressSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.VoiceMessagingMailServerProtocol _personalMailServerProtocol;
+        protected BroadWorksConnector.Ocip.Models.VoiceMessagingMailServerProtocol? _personalMailServerProtocol;
 
         [XmlElement(ElementName = "personalMailServerProtocol", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1972")]
-        public BroadWorksConnector.Ocip.Models.VoiceMessagingMailServerProtocol PersonalMailServerProtocol
+        public BroadWorksConnector.Ocip.Models.VoiceMessagingMailServerProtocol? PersonalMailServerProtocol
         {
             get => _personalMailServerProtocol;
             set
             {
-                PersonalMailServerProtocolSpecified = true;
+                PersonalMailServerProtocolSpecified = (value != null);
                 _personalMailServerProtocol = value;
             }
         }
@@ -188,17 +188,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PersonalMailServerProtocolSpecified { get; set; }
 
-        protected bool _personalMailServerRealDeleteForImap;
+        protected bool? _personalMailServerRealDeleteForImap;
 
         [XmlElement(ElementName = "personalMailServerRealDeleteForImap", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1972")]
-        public bool PersonalMailServerRealDeleteForImap
+        public bool? PersonalMailServerRealDeleteForImap
         {
             get => _personalMailServerRealDeleteForImap;
             set
             {
-                PersonalMailServerRealDeleteForImapSpecified = true;
+                PersonalMailServerRealDeleteForImapSpecified = (value != null);
                 _personalMailServerRealDeleteForImap = value;
             }
         }
@@ -218,7 +218,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _personalMailServerEmailAddress;
             set
             {
-                PersonalMailServerEmailAddressSpecified = true;
+                PersonalMailServerEmailAddressSpecified = (value != null);
                 _personalMailServerEmailAddress = value;
             }
         }
@@ -238,7 +238,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _personalMailServerUserId;
             set
             {
-                PersonalMailServerUserIdSpecified = true;
+                PersonalMailServerUserIdSpecified = (value != null);
                 _personalMailServerUserId = value;
             }
         }
@@ -258,7 +258,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _personalMailServerPassword;
             set
             {
-                PersonalMailServerPasswordSpecified = true;
+                PersonalMailServerPasswordSpecified = (value != null);
                 _personalMailServerPassword = value;
             }
         }

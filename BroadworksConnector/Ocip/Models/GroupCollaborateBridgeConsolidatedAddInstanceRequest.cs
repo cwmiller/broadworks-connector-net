@@ -82,17 +82,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        protected bool _addPhoneNumberToGroup;
+        protected bool? _addPhoneNumberToGroup;
 
         [XmlElement(ElementName = "addPhoneNumberToGroup", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"bc805893b9cc7e3e01eec64e9ad62768:103")]
-        public bool AddPhoneNumberToGroup
+        public bool? AddPhoneNumberToGroup
         {
             get => _addPhoneNumberToGroup;
             set
             {
-                AddPhoneNumberToGroupSpecified = true;
+                AddPhoneNumberToGroupSpecified = (value != null);
                 _addPhoneNumberToGroup = value;
             }
         }
@@ -146,7 +146,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkClassOfService;
             set
             {
-                NetworkClassOfServiceSpecified = true;
+                NetworkClassOfServiceSpecified = (value != null);
                 _networkClassOfService = value;
             }
         }
@@ -202,7 +202,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _collaborateOwnerUserId;
             set
             {
-                CollaborateOwnerUserIdSpecified = true;
+                CollaborateOwnerUserIdSpecified = (value != null);
                 _collaborateOwnerUserId = value;
             }
         }
@@ -220,7 +220,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _service;
             set
             {
-                ServiceSpecified = true;
+                ServiceSpecified = (value != null);
                 _service = value;
             }
         }

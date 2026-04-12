@@ -42,19 +42,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetAddressSpecified { get; set; }
 
-        protected int _port;
+        protected int? _port;
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:13092")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
-        public int Port
+        public int? Port
         {
             get => _port;
             set
             {
-                PortSpecified = true;
+                PortSpecified = (value != null);
                 _port = value;
             }
         }
@@ -82,17 +82,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DescriptionSpecified { get; set; }
 
-        protected bool _becomePreferred;
+        protected bool? _becomePreferred;
 
         [XmlElement(ElementName = "becomePreferred", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:13092")]
-        public bool BecomePreferred
+        public bool? BecomePreferred
         {
             get => _becomePreferred;
             set
             {
-                BecomePreferredSpecified = true;
+                BecomePreferredSpecified = (value != null);
                 _becomePreferred = value;
             }
         }
@@ -100,19 +100,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BecomePreferredSpecified { get; set; }
 
-        protected int _order;
+        protected int? _order;
 
         [XmlElement(ElementName = "order", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:13092")]
         [MinInclusive(1)]
         [MaxInclusive(32767)]
-        public int Order
+        public int? Order
         {
             get => _order;
             set
             {
-                OrderSpecified = true;
+                OrderSpecified = (value != null);
                 _order = value;
             }
         }
@@ -120,17 +120,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OrderSpecified { get; set; }
 
-        protected bool _secure;
+        protected bool? _secure;
 
         [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:13092")]
-        public bool Secure
+        public bool? Secure
         {
             get => _secure;
             set
             {
-                SecureSpecified = true;
+                SecureSpecified = (value != null);
                 _secure = value;
             }
         }

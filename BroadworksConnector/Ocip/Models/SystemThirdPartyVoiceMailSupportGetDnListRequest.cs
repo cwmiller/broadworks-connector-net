@@ -20,18 +20,18 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemThirdPartyVoiceMailSupportGetDnListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemThirdPartyVoiceMailSupportGetDnListResponse>
     {
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"21e97b8199c6e7eff29a84874335b46e:139")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaSystemServiceDn;
             set
             {
-                SearchCriteriaSystemServiceDnSpecified = true;
+                SearchCriteriaSystemServiceDnSpecified = (value != null);
                 _searchCriteriaSystemServiceDn = value;
             }
         }

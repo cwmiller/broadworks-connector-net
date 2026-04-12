@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultDomain;
             set
             {
-                DefaultDomainSpecified = true;
+                DefaultDomainSpecified = (value != null);
                 _defaultDomain = value;
             }
         }

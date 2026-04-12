@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceInstanceProfile;
             set
             {
-                ServiceInstanceProfileSpecified = true;
+                ServiceInstanceProfileSpecified = (value != null);
                 _serviceInstanceProfile = value;
             }
         }
@@ -74,17 +74,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DestinationPhoneNumberListSpecified { get; set; }
 
-        protected bool _isAnswerTimeoutEnabled;
+        protected bool? _isAnswerTimeoutEnabled;
 
         [XmlElement(ElementName = "isAnswerTimeoutEnabled", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6c8b59f80404b6283b25be24c263cb12:174")]
-        public bool IsAnswerTimeoutEnabled
+        public bool? IsAnswerTimeoutEnabled
         {
             get => _isAnswerTimeoutEnabled;
             set
             {
-                IsAnswerTimeoutEnabledSpecified = true;
+                IsAnswerTimeoutEnabledSpecified = (value != null);
                 _isAnswerTimeoutEnabled = value;
             }
         }
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkClassOfService;
             set
             {
-                NetworkClassOfServiceSpecified = true;
+                NetworkClassOfServiceSpecified = (value != null);
                 _networkClassOfService = value;
             }
         }

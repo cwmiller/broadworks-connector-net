@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceDomain;
             set
             {
-                ServiceDomainSpecified = true;
+                ServiceDomainSpecified = (value != null);
                 _serviceDomain = value;
             }
         }
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _effectiveServiceDomain;
             set
             {
-                EffectiveServiceDomainSpecified = true;
+                EffectiveServiceDomainSpecified = (value != null);
                 _effectiveServiceDomain = value;
             }
         }

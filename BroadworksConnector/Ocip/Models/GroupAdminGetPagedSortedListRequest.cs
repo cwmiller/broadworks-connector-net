@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _responsePagingControl;
             set
             {
-                ResponsePagingControlSpecified = true;
+                ResponsePagingControlSpecified = (value != null);
                 _responsePagingControl = value;
             }
         }
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _sortOrder;
             set
             {
-                SortOrderSpecified = true;
+                SortOrderSpecified = (value != null);
                 _sortOrder = value;
             }
         }
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaAdminId;
             set
             {
-                SearchCriteriaAdminIdSpecified = true;
+                SearchCriteriaAdminIdSpecified = (value != null);
                 _searchCriteriaAdminId = value;
             }
         }
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaAdminLastName;
             set
             {
-                SearchCriteriaAdminLastNameSpecified = true;
+                SearchCriteriaAdminLastNameSpecified = (value != null);
                 _searchCriteriaAdminLastName = value;
             }
         }
@@ -145,7 +145,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaAdminFirstName;
             set
             {
-                SearchCriteriaAdminFirstNameSpecified = true;
+                SearchCriteriaAdminFirstNameSpecified = (value != null);
                 _searchCriteriaAdminFirstName = value;
             }
         }
@@ -163,7 +163,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactGroupAdminType;
             set
             {
-                SearchCriteriaExactGroupAdminTypeSpecified = true;
+                SearchCriteriaExactGroupAdminTypeSpecified = (value != null);
                 _searchCriteriaExactGroupAdminType = value;
             }
         }
@@ -181,7 +181,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaLanguage;
             set
             {
-                SearchCriteriaLanguageSpecified = true;
+                SearchCriteriaLanguageSpecified = (value != null);
                 _searchCriteriaLanguage = value;
             }
         }
@@ -199,7 +199,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaDepartmentName;
             set
             {
-                SearchCriteriaDepartmentNameSpecified = true;
+                SearchCriteriaDepartmentNameSpecified = (value != null);
                 _searchCriteriaDepartmentName = value;
             }
         }
@@ -207,17 +207,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SearchCriteriaDepartmentNameSpecified { get; set; }
 
-        protected bool _searchCriteriaModeOr;
+        protected bool? _searchCriteriaModeOr;
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:1581")]
-        public bool SearchCriteriaModeOr
+        public bool? SearchCriteriaModeOr
         {
             get => _searchCriteriaModeOr;
             set
             {
-                SearchCriteriaModeOrSpecified = true;
+                SearchCriteriaModeOrSpecified = (value != null);
                 _searchCriteriaModeOr = value;
             }
         }

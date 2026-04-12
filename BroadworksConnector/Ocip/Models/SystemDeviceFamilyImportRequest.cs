@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerId;
             set
             {
-                ResellerIdSpecified = true;
+                ResellerIdSpecified = (value != null);
                 _resellerId = value;
             }
         }
@@ -65,17 +65,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResellerIdSpecified { get; set; }
 
-        protected bool _deviceFamilyOverride;
+        protected bool? _deviceFamilyOverride;
 
         [XmlElement(ElementName = "deviceFamilyOverride", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:7686")]
-        public bool DeviceFamilyOverride
+        public bool? DeviceFamilyOverride
         {
             get => _deviceFamilyOverride;
             set
             {
-                DeviceFamilyOverrideSpecified = true;
+                DeviceFamilyOverrideSpecified = (value != null);
                 _deviceFamilyOverride = value;
             }
         }
@@ -83,17 +83,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceFamilyOverrideSpecified { get; set; }
 
-        protected bool _tagSetOverride;
+        protected bool? _tagSetOverride;
 
         [XmlElement(ElementName = "tagSetOverride", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:7686")]
-        public bool TagSetOverride
+        public bool? TagSetOverride
         {
             get => _tagSetOverride;
             set
             {
-                TagSetOverrideSpecified = true;
+                TagSetOverrideSpecified = (value != null);
                 _tagSetOverride = value;
             }
         }
@@ -101,17 +101,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TagSetOverrideSpecified { get; set; }
 
-        protected bool _deviceTypeFileUpdate;
+        protected bool? _deviceTypeFileUpdate;
 
         [XmlElement(ElementName = "deviceTypeFileUpdate", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:7686")]
-        public bool DeviceTypeFileUpdate
+        public bool? DeviceTypeFileUpdate
         {
             get => _deviceTypeFileUpdate;
             set
             {
-                DeviceTypeFileUpdateSpecified = true;
+                DeviceTypeFileUpdateSpecified = (value != null);
                 _deviceTypeFileUpdate = value;
             }
         }

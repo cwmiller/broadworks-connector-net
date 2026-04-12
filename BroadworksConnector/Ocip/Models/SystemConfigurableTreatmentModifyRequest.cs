@@ -44,17 +44,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TreatmentIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ChargeIndicator _chargeIndicator;
+        protected BroadWorksConnector.Ocip.Models.ChargeIndicator? _chargeIndicator;
 
         [XmlElement(ElementName = "chargeIndicator", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6927")]
-        public BroadWorksConnector.Ocip.Models.ChargeIndicator ChargeIndicator
+        public BroadWorksConnector.Ocip.Models.ChargeIndicator? ChargeIndicator
         {
             get => _chargeIndicator;
             set
             {
-                ChargeIndicatorSpecified = true;
+                ChargeIndicatorSpecified = (value != null);
                 _chargeIndicator = value;
             }
         }
@@ -302,17 +302,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CdrTerminationCauseSpecified { get; set; }
 
-        protected bool _routeAdvance;
+        protected bool? _routeAdvance;
 
         [XmlElement(ElementName = "routeAdvance", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6927")]
-        public bool RouteAdvance
+        public bool? RouteAdvance
         {
             get => _routeAdvance;
             set
             {
-                RouteAdvanceSpecified = true;
+                RouteAdvanceSpecified = (value != null);
                 _routeAdvance = value;
             }
         }
@@ -338,17 +338,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool InternalReleaseCauseSpecified { get; set; }
 
-        protected bool _accessSendReasonHeader;
+        protected bool? _accessSendReasonHeader;
 
         [XmlElement(ElementName = "accessSendReasonHeader", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6927")]
-        public bool AccessSendReasonHeader
+        public bool? AccessSendReasonHeader
         {
             get => _accessSendReasonHeader;
             set
             {
-                AccessSendReasonHeaderSpecified = true;
+                AccessSendReasonHeaderSpecified = (value != null);
                 _accessSendReasonHeader = value;
             }
         }
@@ -356,17 +356,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessSendReasonHeaderSpecified { get; set; }
 
-        protected bool _networkSendReasonHeader;
+        protected bool? _networkSendReasonHeader;
 
         [XmlElement(ElementName = "networkSendReasonHeader", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6927")]
-        public bool NetworkSendReasonHeader
+        public bool? NetworkSendReasonHeader
         {
             get => _networkSendReasonHeader;
             set
             {
-                NetworkSendReasonHeaderSpecified = true;
+                NetworkSendReasonHeaderSpecified = (value != null);
                 _networkSendReasonHeader = value;
             }
         }
@@ -414,17 +414,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool WarnTextSpecified { get; set; }
 
-        protected bool _accessSendWarningHeader;
+        protected bool? _accessSendWarningHeader;
 
         [XmlElement(ElementName = "accessSendWarningHeader", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6927")]
-        public bool AccessSendWarningHeader
+        public bool? AccessSendWarningHeader
         {
             get => _accessSendWarningHeader;
             set
             {
-                AccessSendWarningHeaderSpecified = true;
+                AccessSendWarningHeaderSpecified = (value != null);
                 _accessSendWarningHeader = value;
             }
         }
@@ -432,17 +432,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessSendWarningHeaderSpecified { get; set; }
 
-        protected bool _networkSendWarningHeader;
+        protected bool? _networkSendWarningHeader;
 
         [XmlElement(ElementName = "networkSendWarningHeader", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6927")]
-        public bool NetworkSendWarningHeader
+        public bool? NetworkSendWarningHeader
         {
             get => _networkSendWarningHeader;
             set
             {
-                NetworkSendWarningHeaderSpecified = true;
+                NetworkSendWarningHeaderSpecified = (value != null);
                 _networkSendWarningHeader = value;
             }
         }

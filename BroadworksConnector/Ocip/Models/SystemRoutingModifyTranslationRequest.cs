@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _routeName;
             set
             {
-                RouteNameSpecified = true;
+                RouteNameSpecified = (value != null);
                 _routeName = value;
             }
         }

@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _protocol;
             set
             {
-                ProtocolSpecified = true;
+                ProtocolSpecified = (value != null);
                 _protocol = value;
             }
         }
@@ -243,17 +243,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PhysicalLocationSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol _transportProtocol;
+        protected BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol? _transportProtocol;
 
         [XmlElement(ElementName = "transportProtocol", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:8181")]
-        public BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol TransportProtocol
+        public BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol? TransportProtocol
         {
             get => _transportProtocol;
             set
             {
-                TransportProtocolSpecified = true;
+                TransportProtocolSpecified = (value != null);
                 _transportProtocol = value;
             }
         }
@@ -273,7 +273,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _mobilityManagerProvisioningURL;
             set
             {
-                MobilityManagerProvisioningURLSpecified = true;
+                MobilityManagerProvisioningURLSpecified = (value != null);
                 _mobilityManagerProvisioningURL = value;
             }
         }
@@ -293,7 +293,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _mobilityManagerProvisioningUserName;
             set
             {
-                MobilityManagerProvisioningUserNameSpecified = true;
+                MobilityManagerProvisioningUserNameSpecified = (value != null);
                 _mobilityManagerProvisioningUserName = value;
             }
         }
@@ -313,7 +313,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _mobilityManagerProvisioningPassword;
             set
             {
-                MobilityManagerProvisioningPasswordSpecified = true;
+                MobilityManagerProvisioningPasswordSpecified = (value != null);
                 _mobilityManagerProvisioningPassword = value;
             }
         }
@@ -361,17 +361,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MobilityManagerDefaultTerminatingServiceKeySpecified { get; set; }
 
-        protected bool _useCustomUserNamePassword;
+        protected bool? _useCustomUserNamePassword;
 
         [XmlElement(ElementName = "useCustomUserNamePassword", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:8181")]
-        public bool UseCustomUserNamePassword
+        public bool? UseCustomUserNamePassword
         {
             get => _useCustomUserNamePassword;
             set
             {
-                UseCustomUserNamePasswordSpecified = true;
+                UseCustomUserNamePasswordSpecified = (value != null);
                 _useCustomUserNamePassword = value;
             }
         }
@@ -397,17 +397,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccessDeviceCredentialsSpecified { get; set; }
 
-        protected bool _useHotline;
+        protected bool? _useHotline;
 
         [XmlElement(ElementName = "useHotline", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:8181")]
-        public bool UseHotline
+        public bool? UseHotline
         {
             get => _useHotline;
             set
             {
-                UseHotlineSpecified = true;
+                UseHotlineSpecified = (value != null);
                 _useHotline = value;
             }
         }
@@ -435,17 +435,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HotlineContactSpecified { get; set; }
 
-        protected bool _isWebexTeamsDevice;
+        protected bool? _isWebexTeamsDevice;
 
         [XmlElement(ElementName = "isWebexTeamsDevice", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:8181")]
-        public bool IsWebexTeamsDevice
+        public bool? IsWebexTeamsDevice
         {
             get => _isWebexTeamsDevice;
             set
             {
-                IsWebexTeamsDeviceSpecified = true;
+                IsWebexTeamsDeviceSpecified = (value != null);
                 _isWebexTeamsDevice = value;
             }
         }

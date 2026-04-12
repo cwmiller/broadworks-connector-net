@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _simultaneousRingNumber;
             set
             {
-                SimultaneousRingNumberSpecified = true;
+                SimultaneousRingNumberSpecified = (value != null);
                 _simultaneousRingNumber = value;
             }
         }

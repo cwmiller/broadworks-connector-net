@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _busyPersonalAudioFile;
             set
             {
-                BusyPersonalAudioFileSpecified = true;
+                BusyPersonalAudioFileSpecified = (value != null);
                 _busyPersonalAudioFile = value;
             }
         }
@@ -70,17 +70,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BusyPersonalAudioFileSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MediaFileType _busyPersonalAudioMediaType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType? _busyPersonalAudioMediaType;
 
         [XmlElement(ElementName = "busyPersonalAudioMediaType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9bff48d8661ff401ea11b6e32b924f02:446")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType BusyPersonalAudioMediaType
+        public BroadWorksConnector.Ocip.Models.MediaFileType? BusyPersonalAudioMediaType
         {
             get => _busyPersonalAudioMediaType;
             set
             {
-                BusyPersonalAudioMediaTypeSpecified = true;
+                BusyPersonalAudioMediaTypeSpecified = (value != null);
                 _busyPersonalAudioMediaType = value;
             }
         }
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _busyPersonalVideoFile;
             set
             {
-                BusyPersonalVideoFileSpecified = true;
+                BusyPersonalVideoFileSpecified = (value != null);
                 _busyPersonalVideoFile = value;
             }
         }
@@ -108,17 +108,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BusyPersonalVideoFileSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MediaFileType _busyPersonalVideoMediaType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType? _busyPersonalVideoMediaType;
 
         [XmlElement(ElementName = "busyPersonalVideoMediaType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9bff48d8661ff401ea11b6e32b924f02:446")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType BusyPersonalVideoMediaType
+        public BroadWorksConnector.Ocip.Models.MediaFileType? BusyPersonalVideoMediaType
         {
             get => _busyPersonalVideoMediaType;
             set
             {
-                BusyPersonalVideoMediaTypeSpecified = true;
+                BusyPersonalVideoMediaTypeSpecified = (value != null);
                 _busyPersonalVideoMediaType = value;
             }
         }
@@ -155,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _noAnswerPersonalAudioFile;
             set
             {
-                NoAnswerPersonalAudioFileSpecified = true;
+                NoAnswerPersonalAudioFileSpecified = (value != null);
                 _noAnswerPersonalAudioFile = value;
             }
         }
@@ -163,17 +163,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NoAnswerPersonalAudioFileSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MediaFileType _noAnswerPersonalAudioMediaType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType? _noAnswerPersonalAudioMediaType;
 
         [XmlElement(ElementName = "noAnswerPersonalAudioMediaType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9bff48d8661ff401ea11b6e32b924f02:446")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType NoAnswerPersonalAudioMediaType
+        public BroadWorksConnector.Ocip.Models.MediaFileType? NoAnswerPersonalAudioMediaType
         {
             get => _noAnswerPersonalAudioMediaType;
             set
             {
-                NoAnswerPersonalAudioMediaTypeSpecified = true;
+                NoAnswerPersonalAudioMediaTypeSpecified = (value != null);
                 _noAnswerPersonalAudioMediaType = value;
             }
         }
@@ -193,7 +193,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _noAnswerPersonalVideoFile;
             set
             {
-                NoAnswerPersonalVideoFileSpecified = true;
+                NoAnswerPersonalVideoFileSpecified = (value != null);
                 _noAnswerPersonalVideoFile = value;
             }
         }
@@ -201,17 +201,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NoAnswerPersonalVideoFileSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MediaFileType _noAnswerPersonalVideoMediaType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType? _noAnswerPersonalVideoMediaType;
 
         [XmlElement(ElementName = "noAnswerPersonalVideoMediaType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9bff48d8661ff401ea11b6e32b924f02:446")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType NoAnswerPersonalVideoMediaType
+        public BroadWorksConnector.Ocip.Models.MediaFileType? NoAnswerPersonalVideoMediaType
         {
             get => _noAnswerPersonalVideoMediaType;
             set
             {
-                NoAnswerPersonalVideoMediaTypeSpecified = true;
+                NoAnswerPersonalVideoMediaTypeSpecified = (value != null);
                 _noAnswerPersonalVideoMediaType = value;
             }
         }
@@ -265,7 +265,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _extendedAwayAudioFile;
             set
             {
-                ExtendedAwayAudioFileSpecified = true;
+                ExtendedAwayAudioFileSpecified = (value != null);
                 _extendedAwayAudioFile = value;
             }
         }
@@ -273,17 +273,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExtendedAwayAudioFileSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MediaFileType _extendedAwayAudioMediaType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType? _extendedAwayAudioMediaType;
 
         [XmlElement(ElementName = "extendedAwayAudioMediaType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9bff48d8661ff401ea11b6e32b924f02:446")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType ExtendedAwayAudioMediaType
+        public BroadWorksConnector.Ocip.Models.MediaFileType? ExtendedAwayAudioMediaType
         {
             get => _extendedAwayAudioMediaType;
             set
             {
-                ExtendedAwayAudioMediaTypeSpecified = true;
+                ExtendedAwayAudioMediaTypeSpecified = (value != null);
                 _extendedAwayAudioMediaType = value;
             }
         }
@@ -303,7 +303,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _extendedAwayVideoFile;
             set
             {
-                ExtendedAwayVideoFileSpecified = true;
+                ExtendedAwayVideoFileSpecified = (value != null);
                 _extendedAwayVideoFile = value;
             }
         }
@@ -311,17 +311,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExtendedAwayVideoFileSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MediaFileType _extendedAwayVideoMediaType;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType? _extendedAwayVideoMediaType;
 
         [XmlElement(ElementName = "extendedAwayVideoMediaType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9bff48d8661ff401ea11b6e32b924f02:446")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType ExtendedAwayVideoMediaType
+        public BroadWorksConnector.Ocip.Models.MediaFileType? ExtendedAwayVideoMediaType
         {
             get => _extendedAwayVideoMediaType;
             set
             {
-                ExtendedAwayVideoMediaTypeSpecified = true;
+                ExtendedAwayVideoMediaTypeSpecified = (value != null);
                 _extendedAwayVideoMediaType = value;
             }
         }
@@ -339,7 +339,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _noAnswerAlternateGreeting01;
             set
             {
-                NoAnswerAlternateGreeting01Specified = true;
+                NoAnswerAlternateGreeting01Specified = (value != null);
                 _noAnswerAlternateGreeting01 = value;
             }
         }
@@ -357,7 +357,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _noAnswerAlternateGreeting02;
             set
             {
-                NoAnswerAlternateGreeting02Specified = true;
+                NoAnswerAlternateGreeting02Specified = (value != null);
                 _noAnswerAlternateGreeting02 = value;
             }
         }
@@ -375,7 +375,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _noAnswerAlternateGreeting03;
             set
             {
-                NoAnswerAlternateGreeting03Specified = true;
+                NoAnswerAlternateGreeting03Specified = (value != null);
                 _noAnswerAlternateGreeting03 = value;
             }
         }
@@ -446,7 +446,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _greetingOnlyForwardDestination;
             set
             {
-                GreetingOnlyForwardDestinationSpecified = true;
+                GreetingOnlyForwardDestinationSpecified = (value != null);
                 _greetingOnlyForwardDestination = value;
             }
         }

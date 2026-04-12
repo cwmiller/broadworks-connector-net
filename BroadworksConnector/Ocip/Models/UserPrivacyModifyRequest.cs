@@ -39,17 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _enableDirectoryPrivacy;
+        protected bool? _enableDirectoryPrivacy;
 
         [XmlElement(ElementName = "enableDirectoryPrivacy", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"f0850ccc76fd27f9c07cb7218b2c1f84:189")]
-        public bool EnableDirectoryPrivacy
+        public bool? EnableDirectoryPrivacy
         {
             get => _enableDirectoryPrivacy;
             set
             {
-                EnableDirectoryPrivacySpecified = true;
+                EnableDirectoryPrivacySpecified = (value != null);
                 _enableDirectoryPrivacy = value;
             }
         }
@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableDirectoryPrivacySpecified { get; set; }
 
-        protected bool _enableAutoAttendantExtensionDialingPrivacy;
+        protected bool? _enableAutoAttendantExtensionDialingPrivacy;
 
         [XmlElement(ElementName = "enableAutoAttendantExtensionDialingPrivacy", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"f0850ccc76fd27f9c07cb7218b2c1f84:189")]
-        public bool EnableAutoAttendantExtensionDialingPrivacy
+        public bool? EnableAutoAttendantExtensionDialingPrivacy
         {
             get => _enableAutoAttendantExtensionDialingPrivacy;
             set
             {
-                EnableAutoAttendantExtensionDialingPrivacySpecified = true;
+                EnableAutoAttendantExtensionDialingPrivacySpecified = (value != null);
                 _enableAutoAttendantExtensionDialingPrivacy = value;
             }
         }
@@ -75,17 +75,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableAutoAttendantExtensionDialingPrivacySpecified { get; set; }
 
-        protected bool _enableAutoAttendantNameDialingPrivacy;
+        protected bool? _enableAutoAttendantNameDialingPrivacy;
 
         [XmlElement(ElementName = "enableAutoAttendantNameDialingPrivacy", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"f0850ccc76fd27f9c07cb7218b2c1f84:189")]
-        public bool EnableAutoAttendantNameDialingPrivacy
+        public bool? EnableAutoAttendantNameDialingPrivacy
         {
             get => _enableAutoAttendantNameDialingPrivacy;
             set
             {
-                EnableAutoAttendantNameDialingPrivacySpecified = true;
+                EnableAutoAttendantNameDialingPrivacySpecified = (value != null);
                 _enableAutoAttendantNameDialingPrivacy = value;
             }
         }
@@ -93,17 +93,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableAutoAttendantNameDialingPrivacySpecified { get; set; }
 
-        protected bool _enablePhoneStatusPrivacy;
+        protected bool? _enablePhoneStatusPrivacy;
 
         [XmlElement(ElementName = "enablePhoneStatusPrivacy", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"f0850ccc76fd27f9c07cb7218b2c1f84:189")]
-        public bool EnablePhoneStatusPrivacy
+        public bool? EnablePhoneStatusPrivacy
         {
             get => _enablePhoneStatusPrivacy;
             set
             {
-                EnablePhoneStatusPrivacySpecified = true;
+                EnablePhoneStatusPrivacySpecified = (value != null);
                 _enablePhoneStatusPrivacy = value;
             }
         }

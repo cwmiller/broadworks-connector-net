@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemScheduleGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemScheduleGetListResponse>
     {
 
-        protected BroadWorksConnector.Ocip.Models.ScheduleType _scheduleType;
+        protected BroadWorksConnector.Ocip.Models.ScheduleType? _scheduleType;
 
         [XmlElement(ElementName = "scheduleType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:15996")]
-        public BroadWorksConnector.Ocip.Models.ScheduleType ScheduleType
+        public BroadWorksConnector.Ocip.Models.ScheduleType? ScheduleType
         {
             get => _scheduleType;
             set
             {
-                ScheduleTypeSpecified = true;
+                ScheduleTypeSpecified = (value != null);
                 _scheduleType = value;
             }
         }

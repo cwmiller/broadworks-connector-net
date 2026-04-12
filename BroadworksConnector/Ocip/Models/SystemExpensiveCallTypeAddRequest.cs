@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _treatmentAudioFile;
             set
             {
-                TreatmentAudioFileSpecified = true;
+                TreatmentAudioFileSpecified = (value != null);
                 _treatmentAudioFile = value;
             }
         }

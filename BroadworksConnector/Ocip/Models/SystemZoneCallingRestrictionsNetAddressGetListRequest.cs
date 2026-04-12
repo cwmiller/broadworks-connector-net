@@ -40,18 +40,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ZoneNameSpecified { get; set; }
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39923")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaZoneIPAddress;
             set
             {
-                SearchCriteriaZoneIPAddressSpecified = true;
+                SearchCriteriaZoneIPAddressSpecified = (value != null);
                 _searchCriteriaZoneIPAddress = value;
             }
         }

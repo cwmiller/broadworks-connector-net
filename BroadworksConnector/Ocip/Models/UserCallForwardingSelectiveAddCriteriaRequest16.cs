@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeSchedule;
             set
             {
-                TimeScheduleSpecified = true;
+                TimeScheduleSpecified = (value != null);
                 _timeSchedule = value;
             }
         }
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holidaySchedule;
             set
             {
-                HolidayScheduleSpecified = true;
+                HolidayScheduleSpecified = (value != null);
                 _holidaySchedule = value;
             }
         }
@@ -97,17 +97,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HolidayScheduleSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallForwardingSelectiveNumberSelection16 _forwardToNumberSelection;
+        protected BroadWorksConnector.Ocip.Models.CallForwardingSelectiveNumberSelection16? _forwardToNumberSelection;
 
         [XmlElement(ElementName = "forwardToNumberSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"a80d284dc33fadcf5b323133519ad1a8:51")]
-        public BroadWorksConnector.Ocip.Models.CallForwardingSelectiveNumberSelection16 ForwardToNumberSelection
+        public BroadWorksConnector.Ocip.Models.CallForwardingSelectiveNumberSelection16? ForwardToNumberSelection
         {
             get => _forwardToNumberSelection;
             set
             {
-                ForwardToNumberSelectionSpecified = true;
+                ForwardToNumberSelectionSpecified = (value != null);
                 _forwardToNumberSelection = value;
             }
         }
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _forwardToPhoneNumber;
             set
             {
-                ForwardToPhoneNumberSpecified = true;
+                ForwardToPhoneNumberSpecified = (value != null);
                 _forwardToPhoneNumber = value;
             }
         }
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callToNumber;
             set
             {
-                CallToNumberSpecified = true;
+                CallToNumberSpecified = (value != null);
                 _callToNumber = value;
             }
         }

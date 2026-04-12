@@ -81,19 +81,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TitleSpecified { get; set; }
 
-        protected int _estimatedParticipants;
+        protected int? _estimatedParticipants;
 
         [XmlElement(ElementName = "estimatedParticipants", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:45673")]
         [MinInclusive(1)]
         [MaxInclusive(294)]
-        public int EstimatedParticipants
+        public int? EstimatedParticipants
         {
             get => _estimatedParticipants;
             set
             {
-                EstimatedParticipantsSpecified = true;
+                EstimatedParticipantsSpecified = (value != null);
                 _estimatedParticipants = value;
             }
         }
@@ -149,7 +149,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _accountCode;
             set
             {
-                AccountCodeSpecified = true;
+                AccountCodeSpecified = (value != null);
                 _accountCode = value;
             }
         }

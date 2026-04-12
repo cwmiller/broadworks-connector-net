@@ -32,7 +32,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _profileDescription;
             set
             {
-                ProfileDescriptionSpecified = true;
+                ProfileDescriptionSpecified = (value != null);
                 _profileDescription = value;
             }
         }
@@ -40,19 +40,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProfileDescriptionSpecified { get; set; }
 
-        protected int _thresholdCurrentCallStateIdleTimeYellow;
+        protected int? _thresholdCurrentCallStateIdleTimeYellow;
 
         [XmlElement(ElementName = "thresholdCurrentCallStateIdleTimeYellow", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:2460")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
-        public int ThresholdCurrentCallStateIdleTimeYellow
+        public int? ThresholdCurrentCallStateIdleTimeYellow
         {
             get => _thresholdCurrentCallStateIdleTimeYellow;
             set
             {
-                ThresholdCurrentCallStateIdleTimeYellowSpecified = true;
+                ThresholdCurrentCallStateIdleTimeYellowSpecified = (value != null);
                 _thresholdCurrentCallStateIdleTimeYellow = value;
             }
         }
@@ -60,19 +60,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdCurrentCallStateIdleTimeYellowSpecified { get; set; }
 
-        protected int _thresholdCurrentCallStateIdleTimeRed;
+        protected int? _thresholdCurrentCallStateIdleTimeRed;
 
         [XmlElement(ElementName = "thresholdCurrentCallStateIdleTimeRed", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:2460")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
-        public int ThresholdCurrentCallStateIdleTimeRed
+        public int? ThresholdCurrentCallStateIdleTimeRed
         {
             get => _thresholdCurrentCallStateIdleTimeRed;
             set
             {
-                ThresholdCurrentCallStateIdleTimeRedSpecified = true;
+                ThresholdCurrentCallStateIdleTimeRedSpecified = (value != null);
                 _thresholdCurrentCallStateIdleTimeRed = value;
             }
         }
@@ -80,19 +80,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdCurrentCallStateIdleTimeRedSpecified { get; set; }
 
-        protected int _thresholdCurrentCallStateOnCallTimeYellow;
+        protected int? _thresholdCurrentCallStateOnCallTimeYellow;
 
         [XmlElement(ElementName = "thresholdCurrentCallStateOnCallTimeYellow", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:2460")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
-        public int ThresholdCurrentCallStateOnCallTimeYellow
+        public int? ThresholdCurrentCallStateOnCallTimeYellow
         {
             get => _thresholdCurrentCallStateOnCallTimeYellow;
             set
             {
-                ThresholdCurrentCallStateOnCallTimeYellowSpecified = true;
+                ThresholdCurrentCallStateOnCallTimeYellowSpecified = (value != null);
                 _thresholdCurrentCallStateOnCallTimeYellow = value;
             }
         }
@@ -100,19 +100,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdCurrentCallStateOnCallTimeYellowSpecified { get; set; }
 
-        protected int _thresholdCurrentCallStateOnCallTimeRed;
+        protected int? _thresholdCurrentCallStateOnCallTimeRed;
 
         [XmlElement(ElementName = "thresholdCurrentCallStateOnCallTimeRed", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:2460")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
-        public int ThresholdCurrentCallStateOnCallTimeRed
+        public int? ThresholdCurrentCallStateOnCallTimeRed
         {
             get => _thresholdCurrentCallStateOnCallTimeRed;
             set
             {
-                ThresholdCurrentCallStateOnCallTimeRedSpecified = true;
+                ThresholdCurrentCallStateOnCallTimeRedSpecified = (value != null);
                 _thresholdCurrentCallStateOnCallTimeRed = value;
             }
         }
@@ -120,19 +120,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdCurrentCallStateOnCallTimeRedSpecified { get; set; }
 
-        protected int _thresholdCurrentAgentStateUnavailableTimeYellow;
+        protected int? _thresholdCurrentAgentStateUnavailableTimeYellow;
 
         [XmlElement(ElementName = "thresholdCurrentAgentStateUnavailableTimeYellow", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:2460")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
-        public int ThresholdCurrentAgentStateUnavailableTimeYellow
+        public int? ThresholdCurrentAgentStateUnavailableTimeYellow
         {
             get => _thresholdCurrentAgentStateUnavailableTimeYellow;
             set
             {
-                ThresholdCurrentAgentStateUnavailableTimeYellowSpecified = true;
+                ThresholdCurrentAgentStateUnavailableTimeYellowSpecified = (value != null);
                 _thresholdCurrentAgentStateUnavailableTimeYellow = value;
             }
         }
@@ -140,19 +140,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdCurrentAgentStateUnavailableTimeYellowSpecified { get; set; }
 
-        protected int _thresholdCurrentAgentStateUnavailableTimeRed;
+        protected int? _thresholdCurrentAgentStateUnavailableTimeRed;
 
         [XmlElement(ElementName = "thresholdCurrentAgentStateUnavailableTimeRed", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:2460")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
-        public int ThresholdCurrentAgentStateUnavailableTimeRed
+        public int? ThresholdCurrentAgentStateUnavailableTimeRed
         {
             get => _thresholdCurrentAgentStateUnavailableTimeRed;
             set
             {
-                ThresholdCurrentAgentStateUnavailableTimeRedSpecified = true;
+                ThresholdCurrentAgentStateUnavailableTimeRedSpecified = (value != null);
                 _thresholdCurrentAgentStateUnavailableTimeRed = value;
             }
         }
@@ -160,19 +160,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdCurrentAgentStateUnavailableTimeRedSpecified { get; set; }
 
-        protected int _thresholdAverageBusyInTimeYellow;
+        protected int? _thresholdAverageBusyInTimeYellow;
 
         [XmlElement(ElementName = "thresholdAverageBusyInTimeYellow", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:2460")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
-        public int ThresholdAverageBusyInTimeYellow
+        public int? ThresholdAverageBusyInTimeYellow
         {
             get => _thresholdAverageBusyInTimeYellow;
             set
             {
-                ThresholdAverageBusyInTimeYellowSpecified = true;
+                ThresholdAverageBusyInTimeYellowSpecified = (value != null);
                 _thresholdAverageBusyInTimeYellow = value;
             }
         }
@@ -180,19 +180,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdAverageBusyInTimeYellowSpecified { get; set; }
 
-        protected int _thresholdAverageBusyInTimeRed;
+        protected int? _thresholdAverageBusyInTimeRed;
 
         [XmlElement(ElementName = "thresholdAverageBusyInTimeRed", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:2460")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
-        public int ThresholdAverageBusyInTimeRed
+        public int? ThresholdAverageBusyInTimeRed
         {
             get => _thresholdAverageBusyInTimeRed;
             set
             {
-                ThresholdAverageBusyInTimeRedSpecified = true;
+                ThresholdAverageBusyInTimeRedSpecified = (value != null);
                 _thresholdAverageBusyInTimeRed = value;
             }
         }
@@ -200,19 +200,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdAverageBusyInTimeRedSpecified { get; set; }
 
-        protected int _thresholdAverageBusyOutTimeYellow;
+        protected int? _thresholdAverageBusyOutTimeYellow;
 
         [XmlElement(ElementName = "thresholdAverageBusyOutTimeYellow", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:2460")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
-        public int ThresholdAverageBusyOutTimeYellow
+        public int? ThresholdAverageBusyOutTimeYellow
         {
             get => _thresholdAverageBusyOutTimeYellow;
             set
             {
-                ThresholdAverageBusyOutTimeYellowSpecified = true;
+                ThresholdAverageBusyOutTimeYellowSpecified = (value != null);
                 _thresholdAverageBusyOutTimeYellow = value;
             }
         }
@@ -220,19 +220,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdAverageBusyOutTimeYellowSpecified { get; set; }
 
-        protected int _thresholdAverageBusyOutTimeRed;
+        protected int? _thresholdAverageBusyOutTimeRed;
 
         [XmlElement(ElementName = "thresholdAverageBusyOutTimeRed", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:2460")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
-        public int ThresholdAverageBusyOutTimeRed
+        public int? ThresholdAverageBusyOutTimeRed
         {
             get => _thresholdAverageBusyOutTimeRed;
             set
             {
-                ThresholdAverageBusyOutTimeRedSpecified = true;
+                ThresholdAverageBusyOutTimeRedSpecified = (value != null);
                 _thresholdAverageBusyOutTimeRed = value;
             }
         }
@@ -240,19 +240,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdAverageBusyOutTimeRedSpecified { get; set; }
 
-        protected int _thresholdAverageWrapUpTimeYellow;
+        protected int? _thresholdAverageWrapUpTimeYellow;
 
         [XmlElement(ElementName = "thresholdAverageWrapUpTimeYellow", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:2460")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
-        public int ThresholdAverageWrapUpTimeYellow
+        public int? ThresholdAverageWrapUpTimeYellow
         {
             get => _thresholdAverageWrapUpTimeYellow;
             set
             {
-                ThresholdAverageWrapUpTimeYellowSpecified = true;
+                ThresholdAverageWrapUpTimeYellowSpecified = (value != null);
                 _thresholdAverageWrapUpTimeYellow = value;
             }
         }
@@ -260,19 +260,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ThresholdAverageWrapUpTimeYellowSpecified { get; set; }
 
-        protected int _thresholdAverageWrapUpTimeRed;
+        protected int? _thresholdAverageWrapUpTimeRed;
 
         [XmlElement(ElementName = "thresholdAverageWrapUpTimeRed", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:2460")]
         [MinInclusive(1)]
         [MaxInclusive(86400)]
-        public int ThresholdAverageWrapUpTimeRed
+        public int? ThresholdAverageWrapUpTimeRed
         {
             get => _thresholdAverageWrapUpTimeRed;
             set
             {
-                ThresholdAverageWrapUpTimeRedSpecified = true;
+                ThresholdAverageWrapUpTimeRedSpecified = (value != null);
                 _thresholdAverageWrapUpTimeRed = value;
             }
         }
@@ -309,7 +309,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _notificationEmailAddress;
             set
             {
-                NotificationEmailAddressSpecified = true;
+                NotificationEmailAddressSpecified = (value != null);
                 _notificationEmailAddress = value;
             }
         }

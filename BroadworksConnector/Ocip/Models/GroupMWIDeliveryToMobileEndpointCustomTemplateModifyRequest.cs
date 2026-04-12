@@ -93,17 +93,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TypeSpecified { get; set; }
 
-        protected bool _isEnabled;
+        protected bool? _isEnabled;
 
         [XmlElement(ElementName = "isEnabled", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:130")]
-        public bool IsEnabled
+        public bool? IsEnabled
         {
             get => _isEnabled;
             set
             {
-                IsEnabledSpecified = true;
+                IsEnabledSpecified = (value != null);
                 _isEnabled = value;
             }
         }
@@ -121,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _templateBody;
             set
             {
-                TemplateBodySpecified = true;
+                TemplateBodySpecified = (value != null);
                 _templateBody = value;
             }
         }

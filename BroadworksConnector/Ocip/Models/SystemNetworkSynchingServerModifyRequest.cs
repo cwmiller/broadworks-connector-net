@@ -84,17 +84,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DescriptionSpecified { get; set; }
 
-        protected bool _becomePreferred;
+        protected bool? _becomePreferred;
 
         [XmlElement(ElementName = "becomePreferred", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:28486")]
-        public bool BecomePreferred
+        public bool? BecomePreferred
         {
             get => _becomePreferred;
             set
             {
-                BecomePreferredSpecified = true;
+                BecomePreferredSpecified = (value != null);
                 _becomePreferred = value;
             }
         }
@@ -102,19 +102,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BecomePreferredSpecified { get; set; }
 
-        protected int _order;
+        protected int? _order;
 
         [XmlElement(ElementName = "order", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:28486")]
         [MinInclusive(1)]
         [MaxInclusive(32767)]
-        public int Order
+        public int? Order
         {
             get => _order;
             set
             {
-                OrderSpecified = true;
+                OrderSpecified = (value != null);
                 _order = value;
             }
         }

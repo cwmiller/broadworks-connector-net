@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newName;
             set
             {
-                NewNameSpecified = true;
+                NewNameSpecified = (value != null);
                 _newName = value;
             }
         }
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _xsltTemplate;
             set
             {
-                XsltTemplateSpecified = true;
+                XsltTemplateSpecified = (value != null);
                 _xsltTemplate = value;
             }
         }
@@ -96,17 +96,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool XsltTemplateSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterReportTemplateAccessOption _scope;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportTemplateAccessOption? _scope;
 
         [XmlElement(ElementName = "scope", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:6218")]
-        public BroadWorksConnector.Ocip.Models.CallCenterReportTemplateAccessOption Scope
+        public BroadWorksConnector.Ocip.Models.CallCenterReportTemplateAccessOption? Scope
         {
             get => _scope;
             set
             {
-                ScopeSpecified = true;
+                ScopeSpecified = (value != null);
                 _scope = value;
             }
         }
@@ -114,17 +114,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ScopeSpecified { get; set; }
 
-        protected bool _isEnabled;
+        protected bool? _isEnabled;
 
         [XmlElement(ElementName = "isEnabled", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:6218")]
-        public bool IsEnabled
+        public bool? IsEnabled
         {
             get => _isEnabled;
             set
             {
-                IsEnabledSpecified = true;
+                IsEnabledSpecified = (value != null);
                 _isEnabled = value;
             }
         }
@@ -132,17 +132,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsEnabledSpecified { get; set; }
 
-        protected bool _isRealtimeReport;
+        protected bool? _isRealtimeReport;
 
         [XmlElement(ElementName = "isRealtimeReport", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:6218")]
-        public bool IsRealtimeReport
+        public bool? IsRealtimeReport
         {
             get => _isRealtimeReport;
             set
             {
-                IsRealtimeReportSpecified = true;
+                IsRealtimeReportSpecified = (value != null);
                 _isRealtimeReport = value;
             }
         }

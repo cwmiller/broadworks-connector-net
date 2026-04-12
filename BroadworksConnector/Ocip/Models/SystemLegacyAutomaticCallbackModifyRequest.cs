@@ -19,19 +19,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemLegacyAutomaticCallbackModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected int _maxMonitorsPerOriginator;
+        protected int? _maxMonitorsPerOriginator;
 
         [XmlElement(ElementName = "maxMonitorsPerOriginator", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:135")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
-        public int MaxMonitorsPerOriginator
+        public int? MaxMonitorsPerOriginator
         {
             get => _maxMonitorsPerOriginator;
             set
             {
-                MaxMonitorsPerOriginatorSpecified = true;
+                MaxMonitorsPerOriginatorSpecified = (value != null);
                 _maxMonitorsPerOriginator = value;
             }
         }
@@ -39,19 +39,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxMonitorsPerOriginatorSpecified { get; set; }
 
-        protected int _maxMonitorsPerTerminator;
+        protected int? _maxMonitorsPerTerminator;
 
         [XmlElement(ElementName = "maxMonitorsPerTerminator", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:135")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
-        public int MaxMonitorsPerTerminator
+        public int? MaxMonitorsPerTerminator
         {
             get => _maxMonitorsPerTerminator;
             set
             {
-                MaxMonitorsPerTerminatorSpecified = true;
+                MaxMonitorsPerTerminatorSpecified = (value != null);
                 _maxMonitorsPerTerminator = value;
             }
         }
@@ -59,19 +59,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxMonitorsPerTerminatorSpecified { get; set; }
 
-        protected int _t2Minutes;
+        protected int? _t2Minutes;
 
         [XmlElement(ElementName = "t2Minutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:135")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
-        public int T2Minutes
+        public int? T2Minutes
         {
             get => _t2Minutes;
             set
             {
-                T2MinutesSpecified = true;
+                T2MinutesSpecified = (value != null);
                 _t2Minutes = value;
             }
         }
@@ -79,19 +79,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool T2MinutesSpecified { get; set; }
 
-        protected int _t4Seconds;
+        protected int? _t4Seconds;
 
         [XmlElement(ElementName = "t4Seconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:135")]
         [MinInclusive(0)]
         [MaxInclusive(15)]
-        public int T4Seconds
+        public int? T4Seconds
         {
             get => _t4Seconds;
             set
             {
-                T4SecondsSpecified = true;
+                T4SecondsSpecified = (value != null);
                 _t4Seconds = value;
             }
         }
@@ -99,19 +99,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool T4SecondsSpecified { get; set; }
 
-        protected int _t5Seconds;
+        protected int? _t5Seconds;
 
         [XmlElement(ElementName = "t5Seconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:135")]
         [MinInclusive(2)]
         [MaxInclusive(10)]
-        public int T5Seconds
+        public int? T5Seconds
         {
             get => _t5Seconds;
             set
             {
-                T5SecondsSpecified = true;
+                T5SecondsSpecified = (value != null);
                 _t5Seconds = value;
             }
         }
@@ -119,19 +119,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool T5SecondsSpecified { get; set; }
 
-        protected int _t6Minutes;
+        protected int? _t6Minutes;
 
         [XmlElement(ElementName = "t6Minutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:135")]
         [MinInclusive(1)]
         [MaxInclusive(60)]
-        public int T6Minutes
+        public int? T6Minutes
         {
             get => _t6Minutes;
             set
             {
-                T6MinutesSpecified = true;
+                T6MinutesSpecified = (value != null);
                 _t6Minutes = value;
             }
         }
@@ -139,19 +139,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool T6MinutesSpecified { get; set; }
 
-        protected int _t7Minutes;
+        protected int? _t7Minutes;
 
         [XmlElement(ElementName = "t7Minutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:135")]
         [MinInclusive(5)]
         [MaxInclusive(180)]
-        public int T7Minutes
+        public int? T7Minutes
         {
             get => _t7Minutes;
             set
             {
-                T7MinutesSpecified = true;
+                T7MinutesSpecified = (value != null);
                 _t7Minutes = value;
             }
         }
@@ -159,19 +159,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool T7MinutesSpecified { get; set; }
 
-        protected int _t8Seconds;
+        protected int? _t8Seconds;
 
         [XmlElement(ElementName = "t8Seconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:135")]
         [MinInclusive(0)]
         [MaxInclusive(120)]
-        public int T8Seconds
+        public int? T8Seconds
         {
             get => _t8Seconds;
             set
             {
-                T8SecondsSpecified = true;
+                T8SecondsSpecified = (value != null);
                 _t8Seconds = value;
             }
         }
@@ -179,19 +179,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool T8SecondsSpecified { get; set; }
 
-        protected int _tRingSeconds;
+        protected int? _tRingSeconds;
 
         [XmlElement(ElementName = "tRingSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:135")]
         [MinInclusive(1)]
         [MaxInclusive(120)]
-        public int TRingSeconds
+        public int? TRingSeconds
         {
             get => _tRingSeconds;
             set
             {
-                TRingSecondsSpecified = true;
+                TRingSecondsSpecified = (value != null);
                 _tRingSeconds = value;
             }
         }
@@ -199,19 +199,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TRingSecondsSpecified { get; set; }
 
-        protected int _t10OMinutes;
+        protected int? _t10OMinutes;
 
         [XmlElement(ElementName = "t10OMinutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:135")]
         [MinInclusive(1)]
         [MaxInclusive(120)]
-        public int T10OMinutes
+        public int? T10OMinutes
         {
             get => _t10OMinutes;
             set
             {
-                T10OMinutesSpecified = true;
+                T10OMinutesSpecified = (value != null);
                 _t10OMinutes = value;
             }
         }
@@ -219,19 +219,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool T10OMinutesSpecified { get; set; }
 
-        protected int _t10TMinutes;
+        protected int? _t10TMinutes;
 
         [XmlElement(ElementName = "t10TMinutes", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:135")]
         [MinInclusive(1)]
         [MaxInclusive(120)]
-        public int T10TMinutes
+        public int? T10TMinutes
         {
             get => _t10TMinutes;
             set
             {
-                T10TMinutesSpecified = true;
+                T10TMinutesSpecified = (value != null);
                 _t10TMinutes = value;
             }
         }

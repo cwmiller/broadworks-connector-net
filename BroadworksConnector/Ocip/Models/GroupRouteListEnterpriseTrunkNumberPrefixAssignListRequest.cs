@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _numberPrefix;
             set
             {
-                NumberPrefixSpecified = true;
+                NumberPrefixSpecified = (value != null);
                 _numberPrefix = value;
             }
         }

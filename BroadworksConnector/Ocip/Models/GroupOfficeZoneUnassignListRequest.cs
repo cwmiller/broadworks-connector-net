@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _officeZoneName;
             set
             {
-                OfficeZoneNameSpecified = true;
+                OfficeZoneNameSpecified = (value != null);
                 _officeZoneName = value;
             }
         }
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultOfficeZoneName;
             set
             {
-                DefaultOfficeZoneNameSpecified = true;
+                DefaultOfficeZoneNameSpecified = (value != null);
                 _defaultOfficeZoneName = value;
             }
         }

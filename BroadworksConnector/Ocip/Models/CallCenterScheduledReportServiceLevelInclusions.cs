@@ -67,19 +67,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AbandonedCallsInServiceLevelSpecified { get; set; }
 
-        protected int _abandonedCallIntervalSeconds;
+        protected int? _abandonedCallIntervalSeconds;
 
         [XmlElement(ElementName = "abandonedCallIntervalSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:7670")]
         [MinInclusive(1)]
         [MaxInclusive(7200)]
-        public int AbandonedCallIntervalSeconds
+        public int? AbandonedCallIntervalSeconds
         {
             get => _abandonedCallIntervalSeconds;
             set
             {
-                AbandonedCallIntervalSecondsSpecified = true;
+                AbandonedCallIntervalSecondsSpecified = (value != null);
                 _abandonedCallIntervalSeconds = value;
             }
         }

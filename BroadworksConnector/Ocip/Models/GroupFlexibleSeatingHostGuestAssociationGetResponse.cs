@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _guestLastName;
             set
             {
-                GuestLastNameSpecified = true;
+                GuestLastNameSpecified = (value != null);
                 _guestLastName = value;
             }
         }
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _guestFirstName;
             set
             {
-                GuestFirstNameSpecified = true;
+                GuestFirstNameSpecified = (value != null);
                 _guestFirstName = value;
             }
         }
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _guestPhoneNumber;
             set
             {
-                GuestPhoneNumberSpecified = true;
+                GuestPhoneNumberSpecified = (value != null);
                 _guestPhoneNumber = value;
             }
         }
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _guestExtension;
             set
             {
-                GuestExtensionSpecified = true;
+                GuestExtensionSpecified = (value != null);
                 _guestExtension = value;
             }
         }
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _guestLocationDialingCode;
             set
             {
-                GuestLocationDialingCodeSpecified = true;
+                GuestLocationDialingCodeSpecified = (value != null);
                 _guestLocationDialingCode = value;
             }
         }
@@ -180,7 +180,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _guestAssociationDateTime;
             set
             {
-                GuestAssociationDateTimeSpecified = true;
+                GuestAssociationDateTimeSpecified = (value != null);
                 _guestAssociationDateTime = value;
             }
         }

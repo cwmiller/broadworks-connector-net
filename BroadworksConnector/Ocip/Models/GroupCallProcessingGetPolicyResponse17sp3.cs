@@ -281,7 +281,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _supportedMediaSetName;
             set
             {
-                SupportedMediaSetNameSpecified = true;
+                SupportedMediaSetNameSpecified = (value != null);
                 _supportedMediaSetName = value;
             }
         }
@@ -357,17 +357,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AllowEnterpriseGroupCallTypingForPublicDialingPlanSpecified { get; set; }
 
-        protected bool _overrideCLIDRestrictionForPrivateCallCategory;
+        protected bool? _overrideCLIDRestrictionForPrivateCallCategory;
 
         [XmlElement(ElementName = "overrideCLIDRestrictionForPrivateCallCategory", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:8395")]
-        public bool OverrideCLIDRestrictionForPrivateCallCategory
+        public bool? OverrideCLIDRestrictionForPrivateCallCategory
         {
             get => _overrideCLIDRestrictionForPrivateCallCategory;
             set
             {
-                OverrideCLIDRestrictionForPrivateCallCategorySpecified = true;
+                OverrideCLIDRestrictionForPrivateCallCategorySpecified = (value != null);
                 _overrideCLIDRestrictionForPrivateCallCategory = value;
             }
         }
@@ -375,17 +375,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OverrideCLIDRestrictionForPrivateCallCategorySpecified { get; set; }
 
-        protected bool _useEnterpriseCLIDForPrivateCallCategory;
+        protected bool? _useEnterpriseCLIDForPrivateCallCategory;
 
         [XmlElement(ElementName = "useEnterpriseCLIDForPrivateCallCategory", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:8395")]
-        public bool UseEnterpriseCLIDForPrivateCallCategory
+        public bool? UseEnterpriseCLIDForPrivateCallCategory
         {
             get => _useEnterpriseCLIDForPrivateCallCategory;
             set
             {
-                UseEnterpriseCLIDForPrivateCallCategorySpecified = true;
+                UseEnterpriseCLIDForPrivateCallCategorySpecified = (value != null);
                 _useEnterpriseCLIDForPrivateCallCategory = value;
             }
         }

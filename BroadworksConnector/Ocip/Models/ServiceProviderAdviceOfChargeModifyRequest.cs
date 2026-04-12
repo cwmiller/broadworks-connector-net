@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        protected bool _useSPLevelAoCSettings;
+        protected bool? _useSPLevelAoCSettings;
 
         [XmlElement(ElementName = "useSPLevelAoCSettings", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9975efc7f5883a0595f811ee72ba4df5:137")]
-        public bool UseSPLevelAoCSettings
+        public bool? UseSPLevelAoCSettings
         {
             get => _useSPLevelAoCSettings;
             set
             {
-                UseSPLevelAoCSettingsSpecified = true;
+                UseSPLevelAoCSettingsSpecified = (value != null);
                 _useSPLevelAoCSettings = value;
             }
         }
@@ -56,19 +56,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UseSPLevelAoCSettingsSpecified { get; set; }
 
-        protected int _delayBetweenNotificationSeconds;
+        protected int? _delayBetweenNotificationSeconds;
 
         [XmlElement(ElementName = "delayBetweenNotificationSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9975efc7f5883a0595f811ee72ba4df5:137")]
         [MinInclusive(5)]
         [MaxInclusive(1800)]
-        public int DelayBetweenNotificationSeconds
+        public int? DelayBetweenNotificationSeconds
         {
             get => _delayBetweenNotificationSeconds;
             set
             {
-                DelayBetweenNotificationSecondsSpecified = true;
+                DelayBetweenNotificationSecondsSpecified = (value != null);
                 _delayBetweenNotificationSeconds = value;
             }
         }

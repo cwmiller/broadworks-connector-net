@@ -49,17 +49,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"37cec25308bcc82fe5a80bf541c42c89:402")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _impId;
             set
             {
-                ImpIdSpecified = true;
+                ImpIdSpecified = (value != null);
                 _impId = value;
             }
         }
@@ -87,17 +87,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ImpIdSpecified { get; set; }
 
-        protected bool _isAlternateImpId;
+        protected bool? _isAlternateImpId;
 
         [XmlElement(ElementName = "isAlternateImpId", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"37cec25308bcc82fe5a80bf541c42c89:402")]
-        public bool IsAlternateImpId
+        public bool? IsAlternateImpId
         {
             get => _isAlternateImpId;
             set
             {
-                IsAlternateImpIdSpecified = true;
+                IsAlternateImpIdSpecified = (value != null);
                 _isAlternateImpId = value;
             }
         }

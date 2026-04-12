@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deviceAccessAppServerClusterName;
             set
             {
-                DeviceAccessAppServerClusterNameSpecified = true;
+                DeviceAccessAppServerClusterNameSpecified = (value != null);
                 _deviceAccessAppServerClusterName = value;
             }
         }

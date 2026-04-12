@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _audioUrlList;
             set
             {
-                AudioUrlListSpecified = true;
+                AudioUrlListSpecified = (value != null);
                 _audioUrlList = value;
             }
         }
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _audioFileList;
             set
             {
-                AudioFileListSpecified = true;
+                AudioFileListSpecified = (value != null);
                 _audioFileList = value;
             }
         }
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _audioMediaTypeList;
             set
             {
-                AudioMediaTypeListSpecified = true;
+                AudioMediaTypeListSpecified = (value != null);
                 _audioMediaTypeList = value;
             }
         }
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _externalAudioSource;
             set
             {
-                ExternalAudioSourceSpecified = true;
+                ExternalAudioSourceSpecified = (value != null);
                 _externalAudioSource = value;
             }
         }
@@ -107,17 +107,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExternalAudioSourceSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldMessageSelection _videoMessageSourceSelection;
+        protected BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldMessageSelection? _videoMessageSourceSelection;
 
         [XmlElement(ElementName = "videoMessageSourceSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:48579")]
-        public BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldMessageSelection VideoMessageSourceSelection
+        public BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldMessageSelection? VideoMessageSourceSelection
         {
             get => _videoMessageSourceSelection;
             set
             {
-                VideoMessageSourceSelectionSpecified = true;
+                VideoMessageSourceSelectionSpecified = (value != null);
                 _videoMessageSourceSelection = value;
             }
         }
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _videoUrlList;
             set
             {
-                VideoUrlListSpecified = true;
+                VideoUrlListSpecified = (value != null);
                 _videoUrlList = value;
             }
         }
@@ -153,7 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _videoFileList;
             set
             {
-                VideoFileListSpecified = true;
+                VideoFileListSpecified = (value != null);
                 _videoFileList = value;
             }
         }
@@ -171,7 +171,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _videoMediaTypeList;
             set
             {
-                VideoMediaTypeListSpecified = true;
+                VideoMediaTypeListSpecified = (value != null);
                 _videoMediaTypeList = value;
             }
         }
@@ -189,7 +189,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _externalVideoSource;
             set
             {
-                ExternalVideoSourceSpecified = true;
+                ExternalVideoSourceSpecified = (value != null);
                 _externalVideoSource = value;
             }
         }

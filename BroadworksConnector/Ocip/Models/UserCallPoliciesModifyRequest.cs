@@ -41,17 +41,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ConnectedLineIdentificationPrivacyOnRedirectedCalls _redirectedCallsCOLPPrivacy;
+        protected BroadWorksConnector.Ocip.Models.ConnectedLineIdentificationPrivacyOnRedirectedCalls? _redirectedCallsCOLPPrivacy;
 
         [XmlElement(ElementName = "redirectedCallsCOLPPrivacy", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:925")]
-        public BroadWorksConnector.Ocip.Models.ConnectedLineIdentificationPrivacyOnRedirectedCalls RedirectedCallsCOLPPrivacy
+        public BroadWorksConnector.Ocip.Models.ConnectedLineIdentificationPrivacyOnRedirectedCalls? RedirectedCallsCOLPPrivacy
         {
             get => _redirectedCallsCOLPPrivacy;
             set
             {
-                RedirectedCallsCOLPPrivacySpecified = true;
+                RedirectedCallsCOLPPrivacySpecified = (value != null);
                 _redirectedCallsCOLPPrivacy = value;
             }
         }
@@ -59,17 +59,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RedirectedCallsCOLPPrivacySpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallBeingForwardedResponseCallType _callBeingForwardedResponseCallType;
+        protected BroadWorksConnector.Ocip.Models.CallBeingForwardedResponseCallType? _callBeingForwardedResponseCallType;
 
         [XmlElement(ElementName = "callBeingForwardedResponseCallType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:925")]
-        public BroadWorksConnector.Ocip.Models.CallBeingForwardedResponseCallType CallBeingForwardedResponseCallType
+        public BroadWorksConnector.Ocip.Models.CallBeingForwardedResponseCallType? CallBeingForwardedResponseCallType
         {
             get => _callBeingForwardedResponseCallType;
             set
             {
-                CallBeingForwardedResponseCallTypeSpecified = true;
+                CallBeingForwardedResponseCallTypeSpecified = (value != null);
                 _callBeingForwardedResponseCallType = value;
             }
         }
@@ -77,17 +77,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallBeingForwardedResponseCallTypeSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallingLineIdentityForRedirectedCalls _callingLineIdentityForRedirectedCalls;
+        protected BroadWorksConnector.Ocip.Models.CallingLineIdentityForRedirectedCalls? _callingLineIdentityForRedirectedCalls;
 
         [XmlElement(ElementName = "callingLineIdentityForRedirectedCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:925")]
-        public BroadWorksConnector.Ocip.Models.CallingLineIdentityForRedirectedCalls CallingLineIdentityForRedirectedCalls
+        public BroadWorksConnector.Ocip.Models.CallingLineIdentityForRedirectedCalls? CallingLineIdentityForRedirectedCalls
         {
             get => _callingLineIdentityForRedirectedCalls;
             set
             {
-                CallingLineIdentityForRedirectedCallsSpecified = true;
+                CallingLineIdentityForRedirectedCallsSpecified = (value != null);
                 _callingLineIdentityForRedirectedCalls = value;
             }
         }

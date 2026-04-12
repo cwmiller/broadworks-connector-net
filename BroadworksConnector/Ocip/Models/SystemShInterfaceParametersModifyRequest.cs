@@ -42,19 +42,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool HssRealmSpecified { get; set; }
 
-        protected int _requestTimeoutSeconds;
+        protected int? _requestTimeoutSeconds;
 
         [XmlElement(ElementName = "requestTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:29985")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
-        public int RequestTimeoutSeconds
+        public int? RequestTimeoutSeconds
         {
             get => _requestTimeoutSeconds;
             set
             {
-                RequestTimeoutSecondsSpecified = true;
+                RequestTimeoutSecondsSpecified = (value != null);
                 _requestTimeoutSeconds = value;
             }
         }
@@ -62,19 +62,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RequestTimeoutSecondsSpecified { get; set; }
 
-        protected int _publicIdentityRefreshDelaySeconds;
+        protected int? _publicIdentityRefreshDelaySeconds;
 
         [XmlElement(ElementName = "publicIdentityRefreshDelaySeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:29985")]
         [MinInclusive(0)]
         [MaxInclusive(30)]
-        public int PublicIdentityRefreshDelaySeconds
+        public int? PublicIdentityRefreshDelaySeconds
         {
             get => _publicIdentityRefreshDelaySeconds;
             set
             {
-                PublicIdentityRefreshDelaySecondsSpecified = true;
+                PublicIdentityRefreshDelaySecondsSpecified = (value != null);
                 _publicIdentityRefreshDelaySeconds = value;
             }
         }

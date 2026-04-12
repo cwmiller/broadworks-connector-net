@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userName;
             set
             {
-                UserNameSpecified = true;
+                UserNameSpecified = (value != null);
                 _userName = value;
             }
         }

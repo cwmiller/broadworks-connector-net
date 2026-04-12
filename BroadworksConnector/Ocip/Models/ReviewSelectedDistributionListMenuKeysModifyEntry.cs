@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _interruptPlaybackAndReturnToPreviousMenu;
             set
             {
-                InterruptPlaybackAndReturnToPreviousMenuSpecified = true;
+                InterruptPlaybackAndReturnToPreviousMenuSpecified = (value != null);
                 _interruptPlaybackAndReturnToPreviousMenu = value;
             }
         }

@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _remoteOfficePhoneNumber;
             set
             {
-                RemoteOfficePhoneNumberSpecified = true;
+                RemoteOfficePhoneNumberSpecified = (value != null);
                 _remoteOfficePhoneNumber = value;
             }
         }

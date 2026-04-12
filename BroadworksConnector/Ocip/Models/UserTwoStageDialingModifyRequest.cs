@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"103e8fba76512e5a1abfb373758f36e2:163")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected bool _allowActivationWithUserAddresses;
+        protected bool? _allowActivationWithUserAddresses;
 
         [XmlElement(ElementName = "allowActivationWithUserAddresses", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"103e8fba76512e5a1abfb373758f36e2:163")]
-        public bool AllowActivationWithUserAddresses
+        public bool? AllowActivationWithUserAddresses
         {
             get => _allowActivationWithUserAddresses;
             set
             {
-                AllowActivationWithUserAddressesSpecified = true;
+                AllowActivationWithUserAddressesSpecified = (value != null);
                 _allowActivationWithUserAddresses = value;
             }
         }

@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _description;
             set
             {
-                DescriptionSpecified = true;
+                DescriptionSpecified = (value != null);
                 _description = value;
             }
         }
@@ -115,19 +115,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DataTemplateSpecified { get; set; }
 
-        protected int _filterNumber;
+        protected int? _filterNumber;
 
         [XmlElement(ElementName = "filterNumber", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:3424")]
         [MinInclusive(1)]
         [MaxInclusive(999)]
-        public int FilterNumber
+        public int? FilterNumber
         {
             get => _filterNumber;
             set
             {
-                FilterNumberSpecified = true;
+                FilterNumberSpecified = (value != null);
                 _filterNumber = value;
             }
         }
@@ -186,17 +186,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsEnabledSpecified { get; set; }
 
-        protected bool _isRealtimeReport;
+        protected bool? _isRealtimeReport;
 
         [XmlElement(ElementName = "isRealtimeReport", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:3424")]
-        public bool IsRealtimeReport
+        public bool? IsRealtimeReport
         {
             get => _isRealtimeReport;
             set
             {
-                IsRealtimeReportSpecified = true;
+                IsRealtimeReportSpecified = (value != null);
                 _isRealtimeReport = value;
             }
         }
@@ -204,17 +204,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsRealtimeReportSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption _callCompletionThresholdParam;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption? _callCompletionThresholdParam;
 
         [XmlElement(ElementName = "callCompletionThresholdParam", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:3424")]
-        public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption CallCompletionThresholdParam
+        public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption? CallCompletionThresholdParam
         {
             get => _callCompletionThresholdParam;
             set
             {
-                CallCompletionThresholdParamSpecified = true;
+                CallCompletionThresholdParamSpecified = (value != null);
                 _callCompletionThresholdParam = value;
             }
         }
@@ -222,17 +222,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallCompletionThresholdParamSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption _shortDurationThresholdParam;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption? _shortDurationThresholdParam;
 
         [XmlElement(ElementName = "shortDurationThresholdParam", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:3424")]
-        public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption ShortDurationThresholdParam
+        public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption? ShortDurationThresholdParam
         {
             get => _shortDurationThresholdParam;
             set
             {
-                ShortDurationThresholdParamSpecified = true;
+                ShortDurationThresholdParamSpecified = (value != null);
                 _shortDurationThresholdParam = value;
             }
         }
@@ -240,17 +240,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ShortDurationThresholdParamSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption _serviceLevelThresholdParam;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption? _serviceLevelThresholdParam;
 
         [XmlElement(ElementName = "serviceLevelThresholdParam", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:3424")]
-        public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption ServiceLevelThresholdParam
+        public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption? ServiceLevelThresholdParam
         {
             get => _serviceLevelThresholdParam;
             set
             {
-                ServiceLevelThresholdParamSpecified = true;
+                ServiceLevelThresholdParamSpecified = (value != null);
                 _serviceLevelThresholdParam = value;
             }
         }
@@ -258,17 +258,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceLevelThresholdParamSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption _serviceLevelInclusionsParam;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption? _serviceLevelInclusionsParam;
 
         [XmlElement(ElementName = "serviceLevelInclusionsParam", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:3424")]
-        public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption ServiceLevelInclusionsParam
+        public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption? ServiceLevelInclusionsParam
         {
             get => _serviceLevelInclusionsParam;
             set
             {
-                ServiceLevelInclusionsParamSpecified = true;
+                ServiceLevelInclusionsParamSpecified = (value != null);
                 _serviceLevelInclusionsParam = value;
             }
         }
@@ -276,17 +276,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceLevelInclusionsParamSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption _serviceLevelObjectiveThresholdParam;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption? _serviceLevelObjectiveThresholdParam;
 
         [XmlElement(ElementName = "serviceLevelObjectiveThresholdParam", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:3424")]
-        public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption ServiceLevelObjectiveThresholdParam
+        public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption? ServiceLevelObjectiveThresholdParam
         {
             get => _serviceLevelObjectiveThresholdParam;
             set
             {
-                ServiceLevelObjectiveThresholdParamSpecified = true;
+                ServiceLevelObjectiveThresholdParamSpecified = (value != null);
                 _serviceLevelObjectiveThresholdParam = value;
             }
         }
@@ -294,17 +294,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceLevelObjectiveThresholdParamSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption _abandonedCallThresholdParam;
+        protected BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption? _abandonedCallThresholdParam;
 
         [XmlElement(ElementName = "abandonedCallThresholdParam", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:3424")]
-        public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption AbandonedCallThresholdParam
+        public BroadWorksConnector.Ocip.Models.CallCenterReportInputParameterOption? AbandonedCallThresholdParam
         {
             get => _abandonedCallThresholdParam;
             set
             {
-                AbandonedCallThresholdParamSpecified = true;
+                AbandonedCallThresholdParamSpecified = (value != null);
                 _abandonedCallThresholdParam = value;
             }
         }
@@ -312,19 +312,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AbandonedCallThresholdParamSpecified { get; set; }
 
-        protected int _serviceLevelThresholdParamNumber;
+        protected int? _serviceLevelThresholdParamNumber;
 
         [XmlElement(ElementName = "serviceLevelThresholdParamNumber", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:3424")]
         [MinInclusive(1)]
         [MaxInclusive(5)]
-        public int ServiceLevelThresholdParamNumber
+        public int? ServiceLevelThresholdParamNumber
         {
             get => _serviceLevelThresholdParamNumber;
             set
             {
-                ServiceLevelThresholdParamNumberSpecified = true;
+                ServiceLevelThresholdParamNumberSpecified = (value != null);
                 _serviceLevelThresholdParamNumber = value;
             }
         }
@@ -332,19 +332,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceLevelThresholdParamNumberSpecified { get; set; }
 
-        protected int _abandonedCallThresholdParamNumber;
+        protected int? _abandonedCallThresholdParamNumber;
 
         [XmlElement(ElementName = "abandonedCallThresholdParamNumber", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:3424")]
         [MinInclusive(1)]
         [MaxInclusive(4)]
-        public int AbandonedCallThresholdParamNumber
+        public int? AbandonedCallThresholdParamNumber
         {
             get => _abandonedCallThresholdParamNumber;
             set
             {
-                AbandonedCallThresholdParamNumberSpecified = true;
+                AbandonedCallThresholdParamNumberSpecified = (value != null);
                 _abandonedCallThresholdParamNumber = value;
             }
         }
@@ -364,7 +364,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _filterValue;
             set
             {
-                FilterValueSpecified = true;
+                FilterValueSpecified = (value != null);
                 _filterValue = value;
             }
         }

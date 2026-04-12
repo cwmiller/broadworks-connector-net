@@ -16,17 +16,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallCenterAnnouncementMediaFileTypeList
     {
 
-        protected BroadWorksConnector.Ocip.Models.MediaFileType _mediaType1;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType? _mediaType1;
 
         [XmlElement(ElementName = "mediaType1", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:1007")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType MediaType1
+        public BroadWorksConnector.Ocip.Models.MediaFileType? MediaType1
         {
             get => _mediaType1;
             set
             {
-                MediaType1Specified = true;
+                MediaType1Specified = (value != null);
                 _mediaType1 = value;
             }
         }
@@ -34,17 +34,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MediaType1Specified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MediaFileType _mediaType2;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType? _mediaType2;
 
         [XmlElement(ElementName = "mediaType2", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:1007")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType MediaType2
+        public BroadWorksConnector.Ocip.Models.MediaFileType? MediaType2
         {
             get => _mediaType2;
             set
             {
-                MediaType2Specified = true;
+                MediaType2Specified = (value != null);
                 _mediaType2 = value;
             }
         }
@@ -52,17 +52,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MediaType2Specified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MediaFileType _mediaType3;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType? _mediaType3;
 
         [XmlElement(ElementName = "mediaType3", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:1007")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType MediaType3
+        public BroadWorksConnector.Ocip.Models.MediaFileType? MediaType3
         {
             get => _mediaType3;
             set
             {
-                MediaType3Specified = true;
+                MediaType3Specified = (value != null);
                 _mediaType3 = value;
             }
         }
@@ -70,17 +70,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MediaType3Specified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MediaFileType _mediaType4;
+        protected BroadWorksConnector.Ocip.Models.MediaFileType? _mediaType4;
 
         [XmlElement(ElementName = "mediaType4", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:1007")]
-        public BroadWorksConnector.Ocip.Models.MediaFileType MediaType4
+        public BroadWorksConnector.Ocip.Models.MediaFileType? MediaType4
         {
             get => _mediaType4;
             set
             {
-                MediaType4Specified = true;
+                MediaType4Specified = (value != null);
                 _mediaType4 = value;
             }
         }

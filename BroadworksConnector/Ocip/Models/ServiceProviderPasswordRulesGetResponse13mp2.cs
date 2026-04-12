@@ -355,7 +355,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _loginDisabledNotifyEmailAddress;
             set
             {
-                LoginDisabledNotifyEmailAddressSpecified = true;
+                LoginDisabledNotifyEmailAddressSpecified = (value != null);
                 _loginDisabledNotifyEmailAddress = value;
             }
         }

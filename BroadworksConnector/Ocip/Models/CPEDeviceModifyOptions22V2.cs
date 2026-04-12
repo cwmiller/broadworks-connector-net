@@ -20,17 +20,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class CPEDeviceModifyOptions22V2
     {
 
-        protected bool _enableMonitoring;
+        protected bool? _enableMonitoring;
 
         [XmlElement(ElementName = "enableMonitoring", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:1916")]
-        public bool EnableMonitoring
+        public bool? EnableMonitoring
         {
             get => _enableMonitoring;
             set
             {
-                EnableMonitoringSpecified = true;
+                EnableMonitoringSpecified = (value != null);
                 _enableMonitoring = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deviceManagementDeviceTypeOptions;
             set
             {
-                DeviceManagementDeviceTypeOptionsSpecified = true;
+                DeviceManagementDeviceTypeOptionsSpecified = (value != null);
                 _deviceManagementDeviceTypeOptions = value;
             }
         }

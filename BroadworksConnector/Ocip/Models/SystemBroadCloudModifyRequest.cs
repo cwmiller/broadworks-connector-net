@@ -79,17 +79,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProvisioningPasswordSpecified { get; set; }
 
-        protected bool _enableSynchronization;
+        protected bool? _enableSynchronization;
 
         [XmlElement(ElementName = "enableSynchronization", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2648")]
-        public bool EnableSynchronization
+        public bool? EnableSynchronization
         {
             get => _enableSynchronization;
             set
             {
-                EnableSynchronizationSpecified = true;
+                EnableSynchronizationSpecified = (value != null);
                 _enableSynchronization = value;
             }
         }
@@ -117,19 +117,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ProxyHostSpecified { get; set; }
 
-        protected int _proxyPort;
+        protected int? _proxyPort;
 
         [XmlElement(ElementName = "proxyPort", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2648")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
-        public int ProxyPort
+        public int? ProxyPort
         {
             get => _proxyPort;
             set
             {
-                ProxyPortSpecified = true;
+                ProxyPortSpecified = (value != null);
                 _proxyPort = value;
             }
         }

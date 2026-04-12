@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callNotifyEmailAddress;
             set
             {
-                CallNotifyEmailAddressSpecified = true;
+                CallNotifyEmailAddressSpecified = (value != null);
                 _callNotifyEmailAddress = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _criteriaActivation;
             set
             {
-                CriteriaActivationSpecified = true;
+                CriteriaActivationSpecified = (value != null);
                 _criteriaActivation = value;
             }
         }

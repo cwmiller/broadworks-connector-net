@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _activateAvailableInOfficeProfile;
             set
             {
-                ActivateAvailableInOfficeProfileSpecified = true;
+                ActivateAvailableInOfficeProfileSpecified = (value != null);
                 _activateAvailableInOfficeProfile = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _activateAvailableOutOfOfficeProfile;
             set
             {
-                ActivateAvailableOutOfOfficeProfileSpecified = true;
+                ActivateAvailableOutOfOfficeProfileSpecified = (value != null);
                 _activateAvailableOutOfOfficeProfile = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _activateBusyProfile;
             set
             {
-                ActivateBusyProfileSpecified = true;
+                ActivateBusyProfileSpecified = (value != null);
                 _activateBusyProfile = value;
             }
         }
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _activateUnavailableProfile;
             set
             {
-                ActivateUnavailableProfileSpecified = true;
+                ActivateUnavailableProfileSpecified = (value != null);
                 _activateUnavailableProfile = value;
             }
         }
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _noProfile;
             set
             {
-                NoProfileSpecified = true;
+                NoProfileSpecified = (value != null);
                 _noProfile = value;
             }
         }
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _repeatMenu;
             set
             {
-                RepeatMenuSpecified = true;
+                RepeatMenuSpecified = (value != null);
                 _repeatMenu = value;
             }
         }

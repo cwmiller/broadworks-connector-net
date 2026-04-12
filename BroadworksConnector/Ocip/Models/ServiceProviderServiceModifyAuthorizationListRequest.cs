@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupServiceAuthorization;
             set
             {
-                GroupServiceAuthorizationSpecified = true;
+                GroupServiceAuthorizationSpecified = (value != null);
                 _groupServiceAuthorization = value;
             }
         }
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userServiceAuthorization;
             set
             {
-                UserServiceAuthorizationSpecified = true;
+                UserServiceAuthorizationSpecified = (value != null);
                 _userServiceAuthorization = value;
             }
         }

@@ -36,17 +36,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool LineTypeSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.LegacyAutomaticCallbackLineMatchAction _matchAction;
+        protected BroadWorksConnector.Ocip.Models.LegacyAutomaticCallbackLineMatchAction? _matchAction;
 
         [XmlElement(ElementName = "matchAction", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:117")]
-        public BroadWorksConnector.Ocip.Models.LegacyAutomaticCallbackLineMatchAction MatchAction
+        public BroadWorksConnector.Ocip.Models.LegacyAutomaticCallbackLineMatchAction? MatchAction
         {
             get => _matchAction;
             set
             {
-                MatchActionSpecified = true;
+                MatchActionSpecified = (value != null);
                 _matchAction = value;
             }
         }
@@ -54,17 +54,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MatchActionSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.LegacyAutomaticCallbackLineMatchAction _noMatchAction;
+        protected BroadWorksConnector.Ocip.Models.LegacyAutomaticCallbackLineMatchAction? _noMatchAction;
 
         [XmlElement(ElementName = "noMatchAction", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:117")]
-        public BroadWorksConnector.Ocip.Models.LegacyAutomaticCallbackLineMatchAction NoMatchAction
+        public BroadWorksConnector.Ocip.Models.LegacyAutomaticCallbackLineMatchAction? NoMatchAction
         {
             get => _noMatchAction;
             set
             {
-                NoMatchActionSpecified = true;
+                NoMatchActionSpecified = (value != null);
                 _noMatchAction = value;
             }
         }

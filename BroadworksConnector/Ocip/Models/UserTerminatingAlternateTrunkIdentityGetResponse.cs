@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _terminatingTrunkIdentity;
             set
             {
-                TerminatingTrunkIdentitySpecified = true;
+                TerminatingTrunkIdentitySpecified = (value != null);
                 _terminatingTrunkIdentity = value;
             }
         }

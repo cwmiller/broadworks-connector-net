@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _playToneToAgentForSilentMonitoring;
+        protected bool? _playToneToAgentForSilentMonitoring;
 
         [XmlElement(ElementName = "playToneToAgentForSilentMonitoring", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"b5e86c5d60603bdb61de308d278500d9:181")]
-        public bool PlayToneToAgentForSilentMonitoring
+        public bool? PlayToneToAgentForSilentMonitoring
         {
             get => _playToneToAgentForSilentMonitoring;
             set
             {
-                PlayToneToAgentForSilentMonitoringSpecified = true;
+                PlayToneToAgentForSilentMonitoringSpecified = (value != null);
                 _playToneToAgentForSilentMonitoring = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PlayToneToAgentForSilentMonitoringSpecified { get; set; }
 
-        protected bool _playToneToAgentForSupervisorCoaching;
+        protected bool? _playToneToAgentForSupervisorCoaching;
 
         [XmlElement(ElementName = "playToneToAgentForSupervisorCoaching", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"b5e86c5d60603bdb61de308d278500d9:181")]
-        public bool PlayToneToAgentForSupervisorCoaching
+        public bool? PlayToneToAgentForSupervisorCoaching
         {
             get => _playToneToAgentForSupervisorCoaching;
             set
             {
-                PlayToneToAgentForSupervisorCoachingSpecified = true;
+                PlayToneToAgentForSupervisorCoachingSpecified = (value != null);
                 _playToneToAgentForSupervisorCoaching = value;
             }
         }

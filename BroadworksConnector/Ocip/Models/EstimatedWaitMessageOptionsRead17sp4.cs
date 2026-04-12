@@ -158,19 +158,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PlayUpdatedEWMSpecified { get; set; }
 
-        protected int _timeBetweenEWMUpdatesSeconds;
+        protected int? _timeBetweenEWMUpdatesSeconds;
 
         [XmlElement(ElementName = "timeBetweenEWMUpdatesSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:3135")]
         [MinInclusive(10)]
         [MaxInclusive(600)]
-        public int TimeBetweenEWMUpdatesSeconds
+        public int? TimeBetweenEWMUpdatesSeconds
         {
             get => _timeBetweenEWMUpdatesSeconds;
             set
             {
-                TimeBetweenEWMUpdatesSecondsSpecified = true;
+                TimeBetweenEWMUpdatesSecondsSpecified = (value != null);
                 _timeBetweenEWMUpdatesSeconds = value;
             }
         }

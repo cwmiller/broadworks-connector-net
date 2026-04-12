@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callToNumber;
             set
             {
-                CallToNumberSpecified = true;
+                CallToNumberSpecified = (value != null);
                 _callToNumber = value;
             }
         }

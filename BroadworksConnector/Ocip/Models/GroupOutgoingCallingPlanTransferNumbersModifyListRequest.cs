@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupNumbers;
             set
             {
-                GroupNumbersSpecified = true;
+                GroupNumbersSpecified = (value != null);
                 _groupNumbers = value;
             }
         }
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _departmentNumbers;
             set
             {
-                DepartmentNumbersSpecified = true;
+                DepartmentNumbersSpecified = (value != null);
                 _departmentNumbers = value;
             }
         }

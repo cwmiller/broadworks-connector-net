@@ -53,17 +53,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberOfRingsBeforeBouncingCallSpecified { get; set; }
 
-        protected bool _enableTransfer;
+        protected bool? _enableTransfer;
 
         [XmlElement(ElementName = "enableTransfer", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:4787")]
-        public bool EnableTransfer
+        public bool? EnableTransfer
         {
             get => _enableTransfer;
             set
             {
-                EnableTransferSpecified = true;
+                EnableTransferSpecified = (value != null);
                 _enableTransfer = value;
             }
         }
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _transferPhoneNumber;
             set
             {
-                TransferPhoneNumberSpecified = true;
+                TransferPhoneNumberSpecified = (value != null);
                 _transferPhoneNumber = value;
             }
         }

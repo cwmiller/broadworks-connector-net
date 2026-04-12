@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemCustomerOriginatedTraceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _screenMaliciousCallers;
+        protected bool? _screenMaliciousCallers;
 
         [XmlElement(ElementName = "screenMaliciousCallers", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b879060a029bc884d4ec2c341a2783f:73")]
-        public bool ScreenMaliciousCallers
+        public bool? ScreenMaliciousCallers
         {
             get => _screenMaliciousCallers;
             set
             {
-                ScreenMaliciousCallersSpecified = true;
+                ScreenMaliciousCallersSpecified = (value != null);
                 _screenMaliciousCallers = value;
             }
         }

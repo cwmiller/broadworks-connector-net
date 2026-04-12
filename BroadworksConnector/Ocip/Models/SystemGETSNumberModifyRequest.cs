@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NumberSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.GETSNumberType _type;
+        protected BroadWorksConnector.Ocip.Models.GETSNumberType? _type;
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:11080")]
-        public BroadWorksConnector.Ocip.Models.GETSNumberType Type
+        public BroadWorksConnector.Ocip.Models.GETSNumberType? Type
         {
             get => _type;
             set
             {
-                TypeSpecified = true;
+                TypeSpecified = (value != null);
                 _type = value;
             }
         }

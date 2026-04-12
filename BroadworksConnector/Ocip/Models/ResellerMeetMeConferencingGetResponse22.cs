@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _conferenceFromAddress;
             set
             {
-                ConferenceFromAddressSpecified = true;
+                ConferenceFromAddressSpecified = (value != null);
                 _conferenceFromAddress = value;
             }
         }
@@ -37,19 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ConferenceFromAddressSpecified { get; set; }
 
-        protected int _maxAllocatedPorts;
+        protected int? _maxAllocatedPorts;
 
         [XmlElement(ElementName = "maxAllocatedPorts", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:355")]
         [MinInclusive(0)]
         [MaxInclusive(999999)]
-        public int MaxAllocatedPorts
+        public int? MaxAllocatedPorts
         {
             get => _maxAllocatedPorts;
             set
             {
-                MaxAllocatedPortsSpecified = true;
+                MaxAllocatedPortsSpecified = (value != null);
                 _maxAllocatedPorts = value;
             }
         }
@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxAllocatedPortsSpecified { get; set; }
 
-        protected bool _disableUnlimitedMeetMePorts;
+        protected bool? _disableUnlimitedMeetMePorts;
 
         [XmlElement(ElementName = "disableUnlimitedMeetMePorts", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:355")]
-        public bool DisableUnlimitedMeetMePorts
+        public bool? DisableUnlimitedMeetMePorts
         {
             get => _disableUnlimitedMeetMePorts;
             set
             {
-                DisableUnlimitedMeetMePortsSpecified = true;
+                DisableUnlimitedMeetMePortsSpecified = (value != null);
                 _disableUnlimitedMeetMePorts = value;
             }
         }
@@ -75,17 +75,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DisableUnlimitedMeetMePortsSpecified { get; set; }
 
-        protected bool _enableMaxAllocatedPorts;
+        protected bool? _enableMaxAllocatedPorts;
 
         [XmlElement(ElementName = "enableMaxAllocatedPorts", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:355")]
-        public bool EnableMaxAllocatedPorts
+        public bool? EnableMaxAllocatedPorts
         {
             get => _enableMaxAllocatedPorts;
             set
             {
-                EnableMaxAllocatedPortsSpecified = true;
+                EnableMaxAllocatedPortsSpecified = (value != null);
                 _enableMaxAllocatedPorts = value;
             }
         }

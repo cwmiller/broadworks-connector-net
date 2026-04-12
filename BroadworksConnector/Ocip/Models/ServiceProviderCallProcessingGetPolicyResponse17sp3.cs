@@ -210,7 +210,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _supportedMediaSetName;
             set
             {
-                SupportedMediaSetNameSpecified = true;
+                SupportedMediaSetNameSpecified = (value != null);
                 _supportedMediaSetName = value;
             }
         }
@@ -383,7 +383,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _conferenceURI;
             set
             {
-                ConferenceURISpecified = true;
+                ConferenceURISpecified = (value != null);
                 _conferenceURI = value;
             }
         }

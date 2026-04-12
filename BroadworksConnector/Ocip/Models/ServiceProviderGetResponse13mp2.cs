@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceProviderName;
             set
             {
-                ServiceProviderNameSpecified = true;
+                ServiceProviderNameSpecified = (value != null);
                 _serviceProviderName = value;
             }
         }
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _supportEmail;
             set
             {
-                SupportEmailSpecified = true;
+                SupportEmailSpecified = (value != null);
                 _supportEmail = value;
             }
         }
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _contact;
             set
             {
-                ContactSpecified = true;
+                ContactSpecified = (value != null);
                 _contact = value;
             }
         }
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _address;
             set
             {
-                AddressSpecified = true;
+                AddressSpecified = (value != null);
                 _address = value;
             }
         }

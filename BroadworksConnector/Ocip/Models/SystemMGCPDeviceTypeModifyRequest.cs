@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceTypeSpecified { get; set; }
 
-        protected bool _isObsolete;
+        protected bool? _isObsolete;
 
         [XmlElement(ElementName = "isObsolete", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:12359")]
-        public bool IsObsolete
+        public bool? IsObsolete
         {
             get => _isObsolete;
             set
             {
-                IsObsoleteSpecified = true;
+                IsObsoleteSpecified = (value != null);
                 _isObsolete = value;
             }
         }

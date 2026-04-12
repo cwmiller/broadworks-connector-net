@@ -26,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _extendedCallLog;
             set
             {
-                ExtendedCallLogSpecified = true;
+                ExtendedCallLogSpecified = (value != null);
                 _extendedCallLog = value;
             }
         }

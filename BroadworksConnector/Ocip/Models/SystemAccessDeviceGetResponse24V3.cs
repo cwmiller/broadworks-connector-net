@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _netAddress;
             set
             {
-                NetAddressSpecified = true;
+                NetAddressSpecified = (value != null);
                 _netAddress = value;
             }
         }
@@ -89,19 +89,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool NetAddressSpecified { get; set; }
 
-        protected int _port;
+        protected int? _port;
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:1412")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
-        public int Port
+        public int? Port
         {
             get => _port;
             set
             {
-                PortSpecified = true;
+                PortSpecified = (value != null);
                 _port = value;
             }
         }
@@ -121,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _outboundProxyServerNetAddress;
             set
             {
-                OutboundProxyServerNetAddressSpecified = true;
+                OutboundProxyServerNetAddressSpecified = (value != null);
                 _outboundProxyServerNetAddress = value;
             }
         }
@@ -141,7 +141,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _stunServerNetAddress;
             set
             {
-                StunServerNetAddressSpecified = true;
+                StunServerNetAddressSpecified = (value != null);
                 _stunServerNetAddress = value;
             }
         }
@@ -161,7 +161,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _macAddress;
             set
             {
-                MacAddressSpecified = true;
+                MacAddressSpecified = (value != null);
                 _macAddress = value;
             }
         }
@@ -181,7 +181,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serialNumber;
             set
             {
-                SerialNumberSpecified = true;
+                SerialNumberSpecified = (value != null);
                 _serialNumber = value;
             }
         }
@@ -201,7 +201,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _description;
             set
             {
-                DescriptionSpecified = true;
+                DescriptionSpecified = (value != null);
                 _description = value;
             }
         }
@@ -272,7 +272,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _physicalLocation;
             set
             {
-                PhysicalLocationSpecified = true;
+                PhysicalLocationSpecified = (value != null);
                 _physicalLocation = value;
             }
         }
@@ -280,17 +280,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PhysicalLocationSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol _transportProtocol;
+        protected BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol? _transportProtocol;
 
         [XmlElement(ElementName = "transportProtocol", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:1412")]
-        public BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol TransportProtocol
+        public BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol? TransportProtocol
         {
             get => _transportProtocol;
             set
             {
-                TransportProtocolSpecified = true;
+                TransportProtocolSpecified = (value != null);
                 _transportProtocol = value;
             }
         }
@@ -298,17 +298,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TransportProtocolSpecified { get; set; }
 
-        protected bool _useCustomUserNamePassword;
+        protected bool? _useCustomUserNamePassword;
 
         [XmlElement(ElementName = "useCustomUserNamePassword", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:1412")]
-        public bool UseCustomUserNamePassword
+        public bool? UseCustomUserNamePassword
         {
             get => _useCustomUserNamePassword;
             set
             {
-                UseCustomUserNamePasswordSpecified = true;
+                UseCustomUserNamePasswordSpecified = (value != null);
                 _useCustomUserNamePassword = value;
             }
         }
@@ -328,7 +328,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userName;
             set
             {
-                UserNameSpecified = true;
+                UserNameSpecified = (value != null);
                 _userName = value;
             }
         }
@@ -348,7 +348,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _version;
             set
             {
-                VersionSpecified = true;
+                VersionSpecified = (value != null);
                 _version = value;
             }
         }
@@ -356,17 +356,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VersionSpecified { get; set; }
 
-        protected bool _isWebexTeamsDevice;
+        protected bool? _isWebexTeamsDevice;
 
         [XmlElement(ElementName = "isWebexTeamsDevice", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:1412")]
-        public bool IsWebexTeamsDevice
+        public bool? IsWebexTeamsDevice
         {
             get => _isWebexTeamsDevice;
             set
             {
-                IsWebexTeamsDeviceSpecified = true;
+                IsWebexTeamsDeviceSpecified = (value != null);
                 _isWebexTeamsDevice = value;
             }
         }
@@ -386,7 +386,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultPathHeader;
             set
             {
-                DefaultPathHeaderSpecified = true;
+                DefaultPathHeaderSpecified = (value != null);
                 _defaultPathHeader = value;
             }
         }
@@ -424,7 +424,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deviceExternalId;
             set
             {
-                DeviceExternalIdSpecified = true;
+                DeviceExternalIdSpecified = (value != null);
                 _deviceExternalId = value;
             }
         }
@@ -444,7 +444,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deviceCode;
             set
             {
-                DeviceCodeSpecified = true;
+                DeviceCodeSpecified = (value != null);
                 _deviceCode = value;
             }
         }
@@ -464,7 +464,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _deviceIPEI;
             set
             {
-                DeviceIPEISpecified = true;
+                DeviceIPEISpecified = (value != null);
                 _deviceIPEI = value;
             }
         }
@@ -472,17 +472,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceIPEISpecified { get; set; }
 
-        protected int _deviceIndex;
+        protected int? _deviceIndex;
 
         [XmlElement(ElementName = "deviceIndex", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:1412")]
-        public int DeviceIndex
+        public int? DeviceIndex
         {
             get => _deviceIndex;
             set
             {
-                DeviceIndexSpecified = true;
+                DeviceIndexSpecified = (value != null);
                 _deviceIndex = value;
             }
         }
@@ -490,17 +490,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DeviceIndexSpecified { get; set; }
 
-        protected bool _useDeviceCode;
+        protected bool? _useDeviceCode;
 
         [XmlElement(ElementName = "useDeviceCode", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:1412")]
-        public bool UseDeviceCode
+        public bool? UseDeviceCode
         {
             get => _useDeviceCode;
             set
             {
-                UseDeviceCodeSpecified = true;
+                UseDeviceCodeSpecified = (value != null);
                 _useDeviceCode = value;
             }
         }
@@ -518,7 +518,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _authBearerSubject;
             set
             {
-                AuthBearerSubjectSpecified = true;
+                AuthBearerSubjectSpecified = (value != null);
                 _authBearerSubject = value;
             }
         }

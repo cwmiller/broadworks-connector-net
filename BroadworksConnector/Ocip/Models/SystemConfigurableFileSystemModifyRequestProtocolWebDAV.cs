@@ -16,17 +16,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemConfigurableFileSystemModifyRequestProtocolWebDAV
     {
 
-        protected bool _secure;
+        protected bool? _secure;
 
         [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6754")]
-        public bool Secure
+        public bool? Secure
         {
             get => _secure;
             set
             {
-                SecureSpecified = true;
+                SecureSpecified = (value != null);
                 _secure = value;
             }
         }
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _fileServerFQDN;
             set
             {
-                FileServerFQDNSpecified = true;
+                FileServerFQDNSpecified = (value != null);
                 _fileServerFQDN = value;
             }
         }

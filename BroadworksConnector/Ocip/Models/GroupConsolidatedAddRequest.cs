@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupId;
             set
             {
-                GroupIdSpecified = true;
+                GroupIdSpecified = (value != null);
                 _groupId = value;
             }
         }
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupExternalId;
             set
             {
-                GroupExternalIdSpecified = true;
+                GroupExternalIdSpecified = (value != null);
                 _groupExternalId = value;
             }
         }
@@ -194,7 +194,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupName;
             set
             {
-                GroupNameSpecified = true;
+                GroupNameSpecified = (value != null);
                 _groupName = value;
             }
         }
@@ -214,7 +214,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callingLineIdName;
             set
             {
-                CallingLineIdNameSpecified = true;
+                CallingLineIdNameSpecified = (value != null);
                 _callingLineIdName = value;
             }
         }
@@ -234,7 +234,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeZone;
             set
             {
-                TimeZoneSpecified = true;
+                TimeZoneSpecified = (value != null);
                 _timeZone = value;
             }
         }
@@ -254,7 +254,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _locationDialingCode;
             set
             {
-                LocationDialingCodeSpecified = true;
+                LocationDialingCodeSpecified = (value != null);
                 _locationDialingCode = value;
             }
         }
@@ -272,7 +272,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _contact;
             set
             {
-                ContactSpecified = true;
+                ContactSpecified = (value != null);
                 _contact = value;
             }
         }
@@ -290,7 +290,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _address;
             set
             {
-                AddressSpecified = true;
+                AddressSpecified = (value != null);
                 _address = value;
             }
         }
@@ -310,7 +310,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _servicePolicy;
             set
             {
-                ServicePolicySpecified = true;
+                ServicePolicySpecified = (value != null);
                 _servicePolicy = value;
             }
         }
@@ -330,7 +330,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callProcessingSliceId;
             set
             {
-                CallProcessingSliceIdSpecified = true;
+                CallProcessingSliceIdSpecified = (value != null);
                 _callProcessingSliceId = value;
             }
         }
@@ -350,7 +350,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _provisioningSliceId;
             set
             {
-                ProvisioningSliceIdSpecified = true;
+                ProvisioningSliceIdSpecified = (value != null);
                 _provisioningSliceId = value;
             }
         }
@@ -370,7 +370,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _subscriberPartition;
             set
             {
-                SubscriberPartitionSpecified = true;
+                SubscriberPartitionSpecified = (value != null);
                 _subscriberPartition = value;
             }
         }
@@ -390,7 +390,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _preferredDataCenter;
             set
             {
-                PreferredDataCenterSpecified = true;
+                PreferredDataCenterSpecified = (value != null);
                 _preferredDataCenter = value;
             }
         }
@@ -410,7 +410,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _defaultUserCallingLineIdPhoneNumber;
             set
             {
-                DefaultUserCallingLineIdPhoneNumberSpecified = true;
+                DefaultUserCallingLineIdPhoneNumberSpecified = (value != null);
                 _defaultUserCallingLineIdPhoneNumber = value;
             }
         }
@@ -430,7 +430,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _domain;
             set
             {
-                DomainSpecified = true;
+                DomainSpecified = (value != null);
                 _domain = value;
             }
         }
@@ -448,7 +448,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _admin;
             set
             {
-                AdminSpecified = true;
+                AdminSpecified = (value != null);
                 _admin = value;
             }
         }
@@ -456,19 +456,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AdminSpecified { get; set; }
 
-        protected int _minExtensionLength;
+        protected int? _minExtensionLength;
 
         [XmlElement(ElementName = "minExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:2897")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
-        public int MinExtensionLength
+        public int? MinExtensionLength
         {
             get => _minExtensionLength;
             set
             {
-                MinExtensionLengthSpecified = true;
+                MinExtensionLengthSpecified = (value != null);
                 _minExtensionLength = value;
             }
         }
@@ -476,19 +476,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MinExtensionLengthSpecified { get; set; }
 
-        protected int _maxExtensionLength;
+        protected int? _maxExtensionLength;
 
         [XmlElement(ElementName = "maxExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:2897")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
-        public int MaxExtensionLength
+        public int? MaxExtensionLength
         {
             get => _maxExtensionLength;
             set
             {
-                MaxExtensionLengthSpecified = true;
+                MaxExtensionLengthSpecified = (value != null);
                 _maxExtensionLength = value;
             }
         }
@@ -496,19 +496,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MaxExtensionLengthSpecified { get; set; }
 
-        protected int _defaultExtensionLength;
+        protected int? _defaultExtensionLength;
 
         [XmlElement(ElementName = "defaultExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:2897")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
-        public int DefaultExtensionLength
+        public int? DefaultExtensionLength
         {
             get => _defaultExtensionLength;
             set
             {
-                DefaultExtensionLengthSpecified = true;
+                DefaultExtensionLengthSpecified = (value != null);
                 _defaultExtensionLength = value;
             }
         }
@@ -526,7 +526,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupServiceAuthorizationAndAssignment;
             set
             {
-                GroupServiceAuthorizationAndAssignmentSpecified = true;
+                GroupServiceAuthorizationAndAssignmentSpecified = (value != null);
                 _groupServiceAuthorizationAndAssignment = value;
             }
         }
@@ -544,7 +544,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _userServiceAuthorization;
             set
             {
-                UserServiceAuthorizationSpecified = true;
+                UserServiceAuthorizationSpecified = (value != null);
                 _userServiceAuthorization = value;
             }
         }
@@ -562,7 +562,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _servicePackAuthorization;
             set
             {
-                ServicePackAuthorizationSpecified = true;
+                ServicePackAuthorizationSpecified = (value != null);
                 _servicePackAuthorization = value;
             }
         }
@@ -580,7 +580,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _activatablePhoneNumber;
             set
             {
-                ActivatablePhoneNumberSpecified = true;
+                ActivatablePhoneNumberSpecified = (value != null);
                 _activatablePhoneNumber = value;
             }
         }
@@ -598,7 +598,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _activatableDNRange;
             set
             {
-                ActivatableDNRangeSpecified = true;
+                ActivatableDNRangeSpecified = (value != null);
                 _activatableDNRange = value;
             }
         }
@@ -636,7 +636,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _meetMeConferencingAllocatedPorts;
             set
             {
-                MeetMeConferencingAllocatedPortsSpecified = true;
+                MeetMeConferencingAllocatedPortsSpecified = (value != null);
                 _meetMeConferencingAllocatedPorts = value;
             }
         }
@@ -644,17 +644,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool MeetMeConferencingAllocatedPortsSpecified { get; set; }
 
-        protected int _trunkGroupMaxActiveCalls;
+        protected int? _trunkGroupMaxActiveCalls;
 
         [XmlElement(ElementName = "trunkGroupMaxActiveCalls", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:2897")]
-        public int TrunkGroupMaxActiveCalls
+        public int? TrunkGroupMaxActiveCalls
         {
             get => _trunkGroupMaxActiveCalls;
             set
             {
-                TrunkGroupMaxActiveCallsSpecified = true;
+                TrunkGroupMaxActiveCallsSpecified = (value != null);
                 _trunkGroupMaxActiveCalls = value;
             }
         }
@@ -672,7 +672,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _trunkGroupBurstingMaxActiveCalls;
             set
             {
-                TrunkGroupBurstingMaxActiveCallsSpecified = true;
+                TrunkGroupBurstingMaxActiveCallsSpecified = (value != null);
                 _trunkGroupBurstingMaxActiveCalls = value;
             }
         }

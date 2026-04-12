@@ -16,17 +16,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class CallCenterMediaOnHoldSourceModify16
     {
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldMessageSelection _audioMessageSourceSelection;
+        protected BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldMessageSelection? _audioMessageSourceSelection;
 
         [XmlElement(ElementName = "audioMessageSourceSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:48541")]
-        public BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldMessageSelection AudioMessageSourceSelection
+        public BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldMessageSelection? AudioMessageSourceSelection
         {
             get => _audioMessageSourceSelection;
             set
             {
-                AudioMessageSourceSelectionSpecified = true;
+                AudioMessageSourceSelectionSpecified = (value != null);
                 _audioMessageSourceSelection = value;
             }
         }
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _audioFile;
             set
             {
-                AudioFileSpecified = true;
+                AudioFileSpecified = (value != null);
                 _audioFile = value;
             }
         }
@@ -70,17 +70,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ExternalAudioSourceSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldMessageSelection _videoMessageSourceSelection;
+        protected BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldMessageSelection? _videoMessageSourceSelection;
 
         [XmlElement(ElementName = "videoMessageSourceSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:48541")]
-        public BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldMessageSelection VideoMessageSourceSelection
+        public BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldMessageSelection? VideoMessageSourceSelection
         {
             get => _videoMessageSourceSelection;
             set
             {
-                VideoMessageSourceSelectionSpecified = true;
+                VideoMessageSourceSelectionSpecified = (value != null);
                 _videoMessageSourceSelection = value;
             }
         }
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _videoFile;
             set
             {
-                VideoFileSpecified = true;
+                VideoFileSpecified = (value != null);
                 _videoFile = value;
             }
         }

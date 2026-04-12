@@ -176,17 +176,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SortByGroupIdSpecified { get; set; }
 
-        protected bool _includeVirtualUsers;
+        protected bool? _includeVirtualUsers;
 
         [XmlElement(ElementName = "includeVirtualUsers", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:834")]
-        public bool IncludeVirtualUsers
+        public bool? IncludeVirtualUsers
         {
             get => _includeVirtualUsers;
             set
             {
-                IncludeVirtualUsersSpecified = true;
+                IncludeVirtualUsersSpecified = (value != null);
                 _includeVirtualUsers = value;
             }
         }
@@ -204,7 +204,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaUserLastName;
             set
             {
-                SearchCriteriaUserLastNameSpecified = true;
+                SearchCriteriaUserLastNameSpecified = (value != null);
                 _searchCriteriaUserLastName = value;
             }
         }
@@ -222,7 +222,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaUserFirstName;
             set
             {
-                SearchCriteriaUserFirstNameSpecified = true;
+                SearchCriteriaUserFirstNameSpecified = (value != null);
                 _searchCriteriaUserFirstName = value;
             }
         }
@@ -240,7 +240,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaUserId;
             set
             {
-                SearchCriteriaUserIdSpecified = true;
+                SearchCriteriaUserIdSpecified = (value != null);
                 _searchCriteriaUserId = value;
             }
         }
@@ -258,7 +258,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaDn;
             set
             {
-                SearchCriteriaDnSpecified = true;
+                SearchCriteriaDnSpecified = (value != null);
                 _searchCriteriaDn = value;
             }
         }
@@ -276,7 +276,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExtension;
             set
             {
-                SearchCriteriaExtensionSpecified = true;
+                SearchCriteriaExtensionSpecified = (value != null);
                 _searchCriteriaExtension = value;
             }
         }
@@ -294,7 +294,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaEmailAddress;
             set
             {
-                SearchCriteriaEmailAddressSpecified = true;
+                SearchCriteriaEmailAddressSpecified = (value != null);
                 _searchCriteriaEmailAddress = value;
             }
         }
@@ -312,7 +312,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactUserDepartment;
             set
             {
-                SearchCriteriaExactUserDepartmentSpecified = true;
+                SearchCriteriaExactUserDepartmentSpecified = (value != null);
                 _searchCriteriaExactUserDepartment = value;
             }
         }
@@ -330,7 +330,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactUserInTrunkGroup;
             set
             {
-                SearchCriteriaExactUserInTrunkGroupSpecified = true;
+                SearchCriteriaExactUserInTrunkGroupSpecified = (value != null);
                 _searchCriteriaExactUserInTrunkGroup = value;
             }
         }

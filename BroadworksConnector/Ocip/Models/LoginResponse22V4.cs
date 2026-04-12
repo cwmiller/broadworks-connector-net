@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _groupId;
             set
             {
-                GroupIdSpecified = true;
+                GroupIdSpecified = (value != null);
                 _groupId = value;
             }
         }
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceProviderId;
             set
             {
-                ServiceProviderIdSpecified = true;
+                ServiceProviderIdSpecified = (value != null);
                 _serviceProviderId = value;
             }
         }
@@ -136,17 +136,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsEnterpriseSpecified { get; set; }
 
-        protected int _passwordExpiresDays;
+        protected int? _passwordExpiresDays;
 
         [XmlElement(ElementName = "passwordExpiresDays", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16915")]
-        public int PasswordExpiresDays
+        public int? PasswordExpiresDays
         {
             get => _passwordExpiresDays;
             set
             {
-                PasswordExpiresDaysSpecified = true;
+                PasswordExpiresDaysSpecified = (value != null);
                 _passwordExpiresDays = value;
             }
         }
@@ -185,7 +185,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _resellerId;
             set
             {
-                ResellerIdSpecified = true;
+                ResellerIdSpecified = (value != null);
                 _resellerId = value;
             }
         }
@@ -203,7 +203,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _tokenRevocationTime;
             set
             {
-                TokenRevocationTimeSpecified = true;
+                TokenRevocationTimeSpecified = (value != null);
                 _tokenRevocationTime = value;
             }
         }

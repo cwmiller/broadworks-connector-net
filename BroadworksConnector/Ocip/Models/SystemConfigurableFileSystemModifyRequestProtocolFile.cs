@@ -16,17 +16,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemConfigurableFileSystemModifyRequestProtocolFile
     {
 
-        protected bool _replicated;
+        protected bool? _replicated;
 
         [XmlElement(ElementName = "replicated", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6745")]
-        public bool Replicated
+        public bool? Replicated
         {
             get => _replicated;
             set
             {
-                ReplicatedSpecified = true;
+                ReplicatedSpecified = (value != null);
                 _replicated = value;
             }
         }
@@ -34,17 +34,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ReplicatedSpecified { get; set; }
 
-        protected bool _secure;
+        protected bool? _secure;
 
         [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6745")]
-        public bool Secure
+        public bool? Secure
         {
             get => _secure;
             set
             {
-                SecureSpecified = true;
+                SecureSpecified = (value != null);
                 _secure = value;
             }
         }

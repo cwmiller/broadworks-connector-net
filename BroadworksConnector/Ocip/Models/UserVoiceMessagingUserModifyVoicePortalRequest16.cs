@@ -40,17 +40,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _usePersonalizedName;
+        protected bool? _usePersonalizedName;
 
         [XmlElement(ElementName = "usePersonalizedName", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9bff48d8661ff401ea11b6e32b924f02:560")]
-        public bool UsePersonalizedName
+        public bool? UsePersonalizedName
         {
             get => _usePersonalizedName;
             set
             {
-                UsePersonalizedNameSpecified = true;
+                UsePersonalizedNameSpecified = (value != null);
                 _usePersonalizedName = value;
             }
         }
@@ -58,17 +58,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UsePersonalizedNameSpecified { get; set; }
 
-        protected bool _voicePortalAutoLogin;
+        protected bool? _voicePortalAutoLogin;
 
         [XmlElement(ElementName = "voicePortalAutoLogin", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"9bff48d8661ff401ea11b6e32b924f02:560")]
-        public bool VoicePortalAutoLogin
+        public bool? VoicePortalAutoLogin
         {
             get => _voicePortalAutoLogin;
             set
             {
-                VoicePortalAutoLoginSpecified = true;
+                VoicePortalAutoLoginSpecified = (value != null);
                 _voicePortalAutoLogin = value;
             }
         }
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _personalizedNameAudioFile;
             set
             {
-                PersonalizedNameAudioFileSpecified = true;
+                PersonalizedNameAudioFileSpecified = (value != null);
                 _personalizedNameAudioFile = value;
             }
         }

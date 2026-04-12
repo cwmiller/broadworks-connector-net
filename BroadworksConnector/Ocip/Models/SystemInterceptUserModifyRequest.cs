@@ -19,17 +19,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemInterceptUserModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _emergencyAndRepairIntercept;
+        protected bool? _emergencyAndRepairIntercept;
 
         [XmlElement(ElementName = "emergencyAndRepairIntercept", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"2a762bb9361e88044885b796c1d6b979:252")]
-        public bool EmergencyAndRepairIntercept
+        public bool? EmergencyAndRepairIntercept
         {
             get => _emergencyAndRepairIntercept;
             set
             {
-                EmergencyAndRepairInterceptSpecified = true;
+                EmergencyAndRepairInterceptSpecified = (value != null);
                 _emergencyAndRepairIntercept = value;
             }
         }

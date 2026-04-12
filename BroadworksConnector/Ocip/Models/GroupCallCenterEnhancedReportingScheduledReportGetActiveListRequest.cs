@@ -57,18 +57,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:3642")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaCallCenterScheduledReportName;
             set
             {
-                SearchCriteriaCallCenterScheduledReportNameSpecified = true;
+                SearchCriteriaCallCenterScheduledReportNameSpecified = (value != null);
                 _searchCriteriaCallCenterScheduledReportName = value;
             }
         }
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactCallCenterScheduledReportCreatedBySupervisor;
             set
             {
-                SearchCriteriaExactCallCenterScheduledReportCreatedBySupervisorSpecified = true;
+                SearchCriteriaExactCallCenterScheduledReportCreatedBySupervisorSpecified = (value != null);
                 _searchCriteriaExactCallCenterScheduledReportCreatedBySupervisor = value;
             }
         }
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactCallCenterReportTemplateKey;
             set
             {
-                SearchCriteriaExactCallCenterReportTemplateKeySpecified = true;
+                SearchCriteriaExactCallCenterReportTemplateKeySpecified = (value != null);
                 _searchCriteriaExactCallCenterReportTemplateKey = value;
             }
         }

@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _currentUserId;
             set
             {
-                CurrentUserIdSpecified = true;
+                CurrentUserIdSpecified = (value != null);
                 _currentUserId = value;
             }
         }
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _pastUserId;
             set
             {
-                PastUserIdSpecified = true;
+                PastUserIdSpecified = (value != null);
                 _pastUserId = value;
             }
         }

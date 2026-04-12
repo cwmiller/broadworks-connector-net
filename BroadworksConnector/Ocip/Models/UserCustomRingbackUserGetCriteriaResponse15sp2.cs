@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _timeSchedule;
             set
             {
-                TimeScheduleSpecified = true;
+                TimeScheduleSpecified = (value != null);
                 _timeSchedule = value;
             }
         }
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _audioFileDescription;
             set
             {
-                AudioFileDescriptionSpecified = true;
+                AudioFileDescriptionSpecified = (value != null);
                 _audioFileDescription = value;
             }
         }
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _audioFileUrl;
             set
             {
-                AudioFileUrlSpecified = true;
+                AudioFileUrlSpecified = (value != null);
                 _audioFileUrl = value;
             }
         }
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _videoFileDescription;
             set
             {
-                VideoFileDescriptionSpecified = true;
+                VideoFileDescriptionSpecified = (value != null);
                 _videoFileDescription = value;
             }
         }
@@ -160,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _videoFileUrl;
             set
             {
-                VideoFileUrlSpecified = true;
+                VideoFileUrlSpecified = (value != null);
                 _videoFileUrl = value;
             }
         }
@@ -168,17 +168,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool VideoFileUrlSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _callWaitingAudioSelection;
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? _callWaitingAudioSelection;
 
         [XmlElement(ElementName = "callWaitingAudioSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:42725")]
-        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection CallWaitingAudioSelection
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? CallWaitingAudioSelection
         {
             get => _callWaitingAudioSelection;
             set
             {
-                CallWaitingAudioSelectionSpecified = true;
+                CallWaitingAudioSelectionSpecified = (value != null);
                 _callWaitingAudioSelection = value;
             }
         }
@@ -198,7 +198,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callWaitingAudioFileDescription;
             set
             {
-                CallWaitingAudioFileDescriptionSpecified = true;
+                CallWaitingAudioFileDescriptionSpecified = (value != null);
                 _callWaitingAudioFileDescription = value;
             }
         }
@@ -218,7 +218,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callWaitingAudioFileUrl;
             set
             {
-                CallWaitingAudioFileUrlSpecified = true;
+                CallWaitingAudioFileUrlSpecified = (value != null);
                 _callWaitingAudioFileUrl = value;
             }
         }
@@ -226,17 +226,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallWaitingAudioFileUrlSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _callWaitingVideoSelection;
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? _callWaitingVideoSelection;
 
         [XmlElement(ElementName = "callWaitingVideoSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:42725")]
-        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection CallWaitingVideoSelection
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? CallWaitingVideoSelection
         {
             get => _callWaitingVideoSelection;
             set
             {
-                CallWaitingVideoSelectionSpecified = true;
+                CallWaitingVideoSelectionSpecified = (value != null);
                 _callWaitingVideoSelection = value;
             }
         }
@@ -256,7 +256,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callWaitingVideoFileDescription;
             set
             {
-                CallWaitingVideoFileDescriptionSpecified = true;
+                CallWaitingVideoFileDescriptionSpecified = (value != null);
                 _callWaitingVideoFileDescription = value;
             }
         }
@@ -276,7 +276,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callWaitingVideoFileUrl;
             set
             {
-                CallWaitingVideoFileUrlSpecified = true;
+                CallWaitingVideoFileUrlSpecified = (value != null);
                 _callWaitingVideoFileUrl = value;
             }
         }

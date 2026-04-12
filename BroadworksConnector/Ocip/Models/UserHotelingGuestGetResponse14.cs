@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hostUserId;
             set
             {
-                HostUserIdSpecified = true;
+                HostUserIdSpecified = (value != null);
                 _hostUserId = value;
             }
         }
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hostLastName;
             set
             {
-                HostLastNameSpecified = true;
+                HostLastNameSpecified = (value != null);
                 _hostLastName = value;
             }
         }
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hostFirstName;
             set
             {
-                HostFirstNameSpecified = true;
+                HostFirstNameSpecified = (value != null);
                 _hostFirstName = value;
             }
         }
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _hostAssociationDateTime;
             set
             {
-                HostAssociationDateTimeSpecified = true;
+                HostAssociationDateTimeSpecified = (value != null);
                 _hostAssociationDateTime = value;
             }
         }

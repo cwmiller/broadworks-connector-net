@@ -22,17 +22,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemThirdPartyVoiceMailSupportModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected bool _overrideAltCallerIdForVMRetrieval;
+        protected bool? _overrideAltCallerIdForVMRetrieval;
 
         [XmlElement(ElementName = "overrideAltCallerIdForVMRetrieval", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"21e97b8199c6e7eff29a84874335b46e:224")]
-        public bool OverrideAltCallerIdForVMRetrieval
+        public bool? OverrideAltCallerIdForVMRetrieval
         {
             get => _overrideAltCallerIdForVMRetrieval;
             set
             {
-                OverrideAltCallerIdForVMRetrievalSpecified = true;
+                OverrideAltCallerIdForVMRetrievalSpecified = (value != null);
                 _overrideAltCallerIdForVMRetrieval = value;
             }
         }
@@ -40,17 +40,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OverrideAltCallerIdForVMRetrievalSpecified { get; set; }
 
-        protected bool _stripDiversionOnVMDestinationRetrieval;
+        protected bool? _stripDiversionOnVMDestinationRetrieval;
 
         [XmlElement(ElementName = "stripDiversionOnVMDestinationRetrieval", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"21e97b8199c6e7eff29a84874335b46e:224")]
-        public bool StripDiversionOnVMDestinationRetrieval
+        public bool? StripDiversionOnVMDestinationRetrieval
         {
             get => _stripDiversionOnVMDestinationRetrieval;
             set
             {
-                StripDiversionOnVMDestinationRetrievalSpecified = true;
+                StripDiversionOnVMDestinationRetrievalSpecified = (value != null);
                 _stripDiversionOnVMDestinationRetrieval = value;
             }
         }

@@ -34,17 +34,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableSupervisorCoachingSpecified { get; set; }
 
-        protected bool _bypassEnforcementOfSupervisorAgentRelationship;
+        protected bool? _bypassEnforcementOfSupervisorAgentRelationship;
 
         [XmlElement(ElementName = "bypassEnforcementOfSupervisorAgentRelationship", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"b5e86c5d60603bdb61de308d278500d9:63")]
-        public bool BypassEnforcementOfSupervisorAgentRelationship
+        public bool? BypassEnforcementOfSupervisorAgentRelationship
         {
             get => _bypassEnforcementOfSupervisorAgentRelationship;
             set
             {
-                BypassEnforcementOfSupervisorAgentRelationshipSpecified = true;
+                BypassEnforcementOfSupervisorAgentRelationshipSpecified = (value != null);
                 _bypassEnforcementOfSupervisorAgentRelationship = value;
             }
         }

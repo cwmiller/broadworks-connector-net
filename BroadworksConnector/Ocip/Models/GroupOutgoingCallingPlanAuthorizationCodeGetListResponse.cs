@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _departmentCodeList;
             set
             {
-                DepartmentCodeListSpecified = true;
+                DepartmentCodeListSpecified = (value != null);
                 _departmentCodeList = value;
             }
         }

@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _serviceInstanceProfile;
             set
             {
-                ServiceInstanceProfileSpecified = true;
+                ServiceInstanceProfileSpecified = (value != null);
                 _serviceInstanceProfile = value;
             }
         }
@@ -58,17 +58,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceInstanceProfileSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.BroadWorksAnywhereScope _broadWorksAnywhereScope;
+        protected BroadWorksConnector.Ocip.Models.BroadWorksAnywhereScope? _broadWorksAnywhereScope;
 
         [XmlElement(ElementName = "broadWorksAnywhereScope", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"f39163d0e42e05c4a1692a62f625df9f:196")]
-        public BroadWorksConnector.Ocip.Models.BroadWorksAnywhereScope BroadWorksAnywhereScope
+        public BroadWorksConnector.Ocip.Models.BroadWorksAnywhereScope? BroadWorksAnywhereScope
         {
             get => _broadWorksAnywhereScope;
             set
             {
-                BroadWorksAnywhereScopeSpecified = true;
+                BroadWorksAnywhereScopeSpecified = (value != null);
                 _broadWorksAnywhereScope = value;
             }
         }
@@ -76,17 +76,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BroadWorksAnywhereScopeSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.BroadWorksAnywhereCLIDPrompt _promptForCLID;
+        protected BroadWorksConnector.Ocip.Models.BroadWorksAnywhereCLIDPrompt? _promptForCLID;
 
         [XmlElement(ElementName = "promptForCLID", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"f39163d0e42e05c4a1692a62f625df9f:196")]
-        public BroadWorksConnector.Ocip.Models.BroadWorksAnywhereCLIDPrompt PromptForCLID
+        public BroadWorksConnector.Ocip.Models.BroadWorksAnywhereCLIDPrompt? PromptForCLID
         {
             get => _promptForCLID;
             set
             {
-                PromptForCLIDSpecified = true;
+                PromptForCLIDSpecified = (value != null);
                 _promptForCLID = value;
             }
         }
@@ -94,17 +94,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PromptForCLIDSpecified { get; set; }
 
-        protected bool _silentPromptMode;
+        protected bool? _silentPromptMode;
 
         [XmlElement(ElementName = "silentPromptMode", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"f39163d0e42e05c4a1692a62f625df9f:196")]
-        public bool SilentPromptMode
+        public bool? SilentPromptMode
         {
             get => _silentPromptMode;
             set
             {
-                SilentPromptModeSpecified = true;
+                SilentPromptModeSpecified = (value != null);
                 _silentPromptMode = value;
             }
         }
@@ -112,17 +112,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SilentPromptModeSpecified { get; set; }
 
-        protected bool _promptForPasscode;
+        protected bool? _promptForPasscode;
 
         [XmlElement(ElementName = "promptForPasscode", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"f39163d0e42e05c4a1692a62f625df9f:196")]
-        public bool PromptForPasscode
+        public bool? PromptForPasscode
         {
             get => _promptForPasscode;
             set
             {
-                PromptForPasscodeSpecified = true;
+                PromptForPasscodeSpecified = (value != null);
                 _promptForPasscode = value;
             }
         }
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkClassOfService;
             set
             {
-                NetworkClassOfServiceSpecified = true;
+                NetworkClassOfServiceSpecified = (value != null);
                 _networkClassOfService = value;
             }
         }

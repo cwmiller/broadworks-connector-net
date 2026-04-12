@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:1221")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -56,17 +56,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsActiveSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDefaultSelection _defaultSelection;
+        protected BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDefaultSelection? _defaultSelection;
 
         [XmlElement(ElementName = "defaultSelection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:1221")]
-        public BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDefaultSelection DefaultSelection
+        public BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDefaultSelection? DefaultSelection
         {
             get => _defaultSelection;
             set
             {
-                DefaultSelectionSpecified = true;
+                DefaultSelectionSpecified = (value != null);
                 _defaultSelection = value;
             }
         }
@@ -74,17 +74,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultSelectionSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNNonMatchingE164NumberSelection _e164Selection;
+        protected BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNNonMatchingE164NumberSelection? _e164Selection;
 
         [XmlElement(ElementName = "e164Selection", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:1221")]
-        public BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNNonMatchingE164NumberSelection E164Selection
+        public BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNNonMatchingE164NumberSelection? E164Selection
         {
             get => _e164Selection;
             set
             {
-                E164SelectionSpecified = true;
+                E164SelectionSpecified = (value != null);
                 _e164Selection = value;
             }
         }
@@ -92,17 +92,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool E164SelectionSpecified { get; set; }
 
-        protected bool _usePhoneContext;
+        protected bool? _usePhoneContext;
 
         [XmlElement(ElementName = "usePhoneContext", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:1221")]
-        public bool UsePhoneContext
+        public bool? UsePhoneContext
         {
             get => _usePhoneContext;
             set
             {
-                UsePhoneContextSpecified = true;
+                UsePhoneContextSpecified = (value != null);
                 _usePhoneContext = value;
             }
         }

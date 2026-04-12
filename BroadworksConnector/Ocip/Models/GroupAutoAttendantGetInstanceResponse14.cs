@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _businessHours;
             set
             {
-                BusinessHoursSpecified = true;
+                BusinessHoursSpecified = (value != null);
                 _businessHours = value;
             }
         }
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _holidayScheduleName;
             set
             {
-                HolidayScheduleNameSpecified = true;
+                HolidayScheduleNameSpecified = (value != null);
                 _holidayScheduleName = value;
             }
         }

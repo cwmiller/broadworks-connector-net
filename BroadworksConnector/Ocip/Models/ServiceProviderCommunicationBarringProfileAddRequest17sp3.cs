@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _description;
             set
             {
-                DescriptionSpecified = true;
+                DescriptionSpecified = (value != null);
                 _description = value;
             }
         }
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _originatingDefaultTreatmentId;
             set
             {
-                OriginatingDefaultTreatmentIdSpecified = true;
+                OriginatingDefaultTreatmentIdSpecified = (value != null);
                 _originatingDefaultTreatmentId = value;
             }
         }
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _originatingDefaultTransferNumber;
             set
             {
-                OriginatingDefaultTransferNumberSpecified = true;
+                OriginatingDefaultTransferNumberSpecified = (value != null);
                 _originatingDefaultTransferNumber = value;
             }
         }
@@ -143,19 +143,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OriginatingDefaultTransferNumberSpecified { get; set; }
 
-        protected int _originatingDefaultCallTimeout;
+        protected int? _originatingDefaultCallTimeout;
 
         [XmlElement(ElementName = "originatingDefaultCallTimeout", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:6449")]
         [MinInclusive(60)]
         [MaxInclusive(86400)]
-        public int OriginatingDefaultCallTimeout
+        public int? OriginatingDefaultCallTimeout
         {
             get => _originatingDefaultCallTimeout;
             set
             {
-                OriginatingDefaultCallTimeoutSpecified = true;
+                OriginatingDefaultCallTimeoutSpecified = (value != null);
                 _originatingDefaultCallTimeout = value;
             }
         }
@@ -173,7 +173,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _originatingRule;
             set
             {
-                OriginatingRuleSpecified = true;
+                OriginatingRuleSpecified = (value != null);
                 _originatingRule = value;
             }
         }
@@ -198,19 +198,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool RedirectingDefaultActionSpecified { get; set; }
 
-        protected int _redirectingDefaultCallTimeout;
+        protected int? _redirectingDefaultCallTimeout;
 
         [XmlElement(ElementName = "redirectingDefaultCallTimeout", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:6449")]
         [MinInclusive(60)]
         [MaxInclusive(86400)]
-        public int RedirectingDefaultCallTimeout
+        public int? RedirectingDefaultCallTimeout
         {
             get => _redirectingDefaultCallTimeout;
             set
             {
-                RedirectingDefaultCallTimeoutSpecified = true;
+                RedirectingDefaultCallTimeoutSpecified = (value != null);
                 _redirectingDefaultCallTimeout = value;
             }
         }
@@ -228,7 +228,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _redirectingRule;
             set
             {
-                RedirectingRuleSpecified = true;
+                RedirectingRuleSpecified = (value != null);
                 _redirectingRule = value;
             }
         }
@@ -253,19 +253,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallMeNowDefaultActionSpecified { get; set; }
 
-        protected int _callMeNowDefaultCallTimeout;
+        protected int? _callMeNowDefaultCallTimeout;
 
         [XmlElement(ElementName = "callMeNowDefaultCallTimeout", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:6449")]
         [MinInclusive(60)]
         [MaxInclusive(86400)]
-        public int CallMeNowDefaultCallTimeout
+        public int? CallMeNowDefaultCallTimeout
         {
             get => _callMeNowDefaultCallTimeout;
             set
             {
-                CallMeNowDefaultCallTimeoutSpecified = true;
+                CallMeNowDefaultCallTimeoutSpecified = (value != null);
                 _callMeNowDefaultCallTimeout = value;
             }
         }
@@ -283,7 +283,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _callMeNowRule;
             set
             {
-                CallMeNowRuleSpecified = true;
+                CallMeNowRuleSpecified = (value != null);
                 _callMeNowRule = value;
             }
         }
@@ -308,19 +308,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IncomingDefaultActionSpecified { get; set; }
 
-        protected int _incomingDefaultCallTimeout;
+        protected int? _incomingDefaultCallTimeout;
 
         [XmlElement(ElementName = "incomingDefaultCallTimeout", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:6449")]
         [MinInclusive(60)]
         [MaxInclusive(86400)]
-        public int IncomingDefaultCallTimeout
+        public int? IncomingDefaultCallTimeout
         {
             get => _incomingDefaultCallTimeout;
             set
             {
-                IncomingDefaultCallTimeoutSpecified = true;
+                IncomingDefaultCallTimeoutSpecified = (value != null);
                 _incomingDefaultCallTimeout = value;
             }
         }
@@ -338,7 +338,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _incomingRule;
             set
             {
-                IncomingRuleSpecified = true;
+                IncomingRuleSpecified = (value != null);
                 _incomingRule = value;
             }
         }

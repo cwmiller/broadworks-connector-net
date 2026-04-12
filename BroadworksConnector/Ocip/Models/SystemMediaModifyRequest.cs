@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _codecName;
             set
             {
-                CodecNameSpecified = true;
+                CodecNameSpecified = (value != null);
                 _codecName = value;
             }
         }
@@ -58,17 +58,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CodecNameSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.MediaBandwidthEnforcementType _bandwidthEnforcementType;
+        protected BroadWorksConnector.Ocip.Models.MediaBandwidthEnforcementType? _bandwidthEnforcementType;
 
         [XmlElement(ElementName = "bandwidthEnforcementType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:12028")]
-        public BroadWorksConnector.Ocip.Models.MediaBandwidthEnforcementType BandwidthEnforcementType
+        public BroadWorksConnector.Ocip.Models.MediaBandwidthEnforcementType? BandwidthEnforcementType
         {
             get => _bandwidthEnforcementType;
             set
             {
-                BandwidthEnforcementTypeSpecified = true;
+                BandwidthEnforcementTypeSpecified = (value != null);
                 _bandwidthEnforcementType = value;
             }
         }

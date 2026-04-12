@@ -53,19 +53,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool SampleIntervalSecondsSpecified { get; set; }
 
-        protected int _protectionRate;
+        protected int? _protectionRate;
 
         [XmlElement(ElementName = "protectionRate", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:9775")]
         [MinInclusive(1)]
         [MaxInclusive(10000)]
-        public int ProtectionRate
+        public int? ProtectionRate
         {
             get => _protectionRate;
             set
             {
-                ProtectionRateSpecified = true;
+                ProtectionRateSpecified = (value != null);
                 _protectionRate = value;
             }
         }

@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _alternateEntry01;
             set
             {
-                AlternateEntry01Specified = true;
+                AlternateEntry01Specified = (value != null);
                 _alternateEntry01 = value;
             }
         }
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _alternateEntry02;
             set
             {
-                AlternateEntry02Specified = true;
+                AlternateEntry02Specified = (value != null);
                 _alternateEntry02 = value;
             }
         }
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _alternateEntry03;
             set
             {
-                AlternateEntry03Specified = true;
+                AlternateEntry03Specified = (value != null);
                 _alternateEntry03 = value;
             }
         }
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _alternateEntry04;
             set
             {
-                AlternateEntry04Specified = true;
+                AlternateEntry04Specified = (value != null);
                 _alternateEntry04 = value;
             }
         }
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _alternateEntry05;
             set
             {
-                AlternateEntry05Specified = true;
+                AlternateEntry05Specified = (value != null);
                 _alternateEntry05 = value;
             }
         }
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _alternateEntry06;
             set
             {
-                AlternateEntry06Specified = true;
+                AlternateEntry06Specified = (value != null);
                 _alternateEntry06 = value;
             }
         }
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _alternateEntry07;
             set
             {
-                AlternateEntry07Specified = true;
+                AlternateEntry07Specified = (value != null);
                 _alternateEntry07 = value;
             }
         }
@@ -170,7 +170,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _alternateEntry08;
             set
             {
-                AlternateEntry08Specified = true;
+                AlternateEntry08Specified = (value != null);
                 _alternateEntry08 = value;
             }
         }
@@ -188,7 +188,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _alternateEntry09;
             set
             {
-                AlternateEntry09Specified = true;
+                AlternateEntry09Specified = (value != null);
                 _alternateEntry09 = value;
             }
         }
@@ -206,7 +206,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _alternateEntry10;
             set
             {
-                AlternateEntry10Specified = true;
+                AlternateEntry10Specified = (value != null);
                 _alternateEntry10 = value;
             }
         }

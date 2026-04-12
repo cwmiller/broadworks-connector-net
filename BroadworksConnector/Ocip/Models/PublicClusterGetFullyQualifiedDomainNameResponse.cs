@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _publicClusterFQDN;
             set
             {
-                PublicClusterFQDNSpecified = true;
+                PublicClusterFQDNSpecified = (value != null);
                 _publicClusterFQDN = value;
             }
         }

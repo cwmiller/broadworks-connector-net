@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _stateOrProvinceDisplayName;
             set
             {
-                StateOrProvinceDisplayNameSpecified = true;
+                StateOrProvinceDisplayNameSpecified = (value != null);
                 _stateOrProvinceDisplayName = value;
             }
         }

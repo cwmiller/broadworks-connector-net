@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _newSecurityClassificationName;
             set
             {
-                NewSecurityClassificationNameSpecified = true;
+                NewSecurityClassificationNameSpecified = (value != null);
                 _newSecurityClassificationName = value;
             }
         }
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _audioFile;
             set
             {
-                AudioFileSpecified = true;
+                AudioFileSpecified = (value != null);
                 _audioFile = value;
             }
         }

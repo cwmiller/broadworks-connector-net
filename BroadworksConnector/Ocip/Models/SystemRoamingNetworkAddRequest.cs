@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _networkTranslationIndex;
             set
             {
-                NetworkTranslationIndexSpecified = true;
+                NetworkTranslationIndexSpecified = (value != null);
                 _networkTranslationIndex = value;
             }
         }

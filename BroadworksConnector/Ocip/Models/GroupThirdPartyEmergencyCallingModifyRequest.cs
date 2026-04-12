@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected bool _enableDeviceManagement;
+        protected bool? _enableDeviceManagement;
 
         [XmlElement(ElementName = "enableDeviceManagement", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:8199")]
-        public bool EnableDeviceManagement
+        public bool? EnableDeviceManagement
         {
             get => _enableDeviceManagement;
             set
             {
-                EnableDeviceManagementSpecified = true;
+                EnableDeviceManagementSpecified = (value != null);
                 _enableDeviceManagement = value;
             }
         }
@@ -75,17 +75,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableDeviceManagementSpecified { get; set; }
 
-        protected bool _enableRouting;
+        protected bool? _enableRouting;
 
         [XmlElement(ElementName = "enableRouting", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:8199")]
-        public bool EnableRouting
+        public bool? EnableRouting
         {
             get => _enableRouting;
             set
             {
-                EnableRoutingSpecified = true;
+                EnableRoutingSpecified = (value != null);
                 _enableRouting = value;
             }
         }

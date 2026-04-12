@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected bool _enableExchangeIntegration;
+        protected bool? _enableExchangeIntegration;
 
         [XmlElement(ElementName = "enableExchangeIntegration", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:5411")]
-        public bool EnableExchangeIntegration
+        public bool? EnableExchangeIntegration
         {
             get => _enableExchangeIntegration;
             set
             {
-                EnableExchangeIntegrationSpecified = true;
+                EnableExchangeIntegrationSpecified = (value != null);
                 _enableExchangeIntegration = value;
             }
         }

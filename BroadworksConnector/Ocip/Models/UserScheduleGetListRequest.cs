@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.ScheduleType _scheduleType;
+        protected BroadWorksConnector.Ocip.Models.ScheduleType? _scheduleType;
 
         [XmlElement(ElementName = "scheduleType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:46638")]
-        public BroadWorksConnector.Ocip.Models.ScheduleType ScheduleType
+        public BroadWorksConnector.Ocip.Models.ScheduleType? ScheduleType
         {
             get => _scheduleType;
             set
             {
-                ScheduleTypeSpecified = true;
+                ScheduleTypeSpecified = (value != null);
                 _scheduleType = value;
             }
         }

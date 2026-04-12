@@ -277,17 +277,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DialableCallerIDAccessSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.GroupAdminCommunicationBarringUserProfileAccess _communicationBarringUserProfileAccess;
+        protected BroadWorksConnector.Ocip.Models.GroupAdminCommunicationBarringUserProfileAccess? _communicationBarringUserProfileAccess;
 
         [XmlElement(ElementName = "communicationBarringUserProfileAccess", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:1425")]
-        public BroadWorksConnector.Ocip.Models.GroupAdminCommunicationBarringUserProfileAccess CommunicationBarringUserProfileAccess
+        public BroadWorksConnector.Ocip.Models.GroupAdminCommunicationBarringUserProfileAccess? CommunicationBarringUserProfileAccess
         {
             get => _communicationBarringUserProfileAccess;
             set
             {
-                CommunicationBarringUserProfileAccessSpecified = true;
+                CommunicationBarringUserProfileAccessSpecified = (value != null);
                 _communicationBarringUserProfileAccess = value;
             }
         }

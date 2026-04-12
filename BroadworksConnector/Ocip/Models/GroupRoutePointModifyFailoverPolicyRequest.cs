@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceUserIdSpecified { get; set; }
 
-        protected bool _enableFailoverSupport;
+        protected bool? _enableFailoverSupport;
 
         [XmlElement(ElementName = "enableFailoverSupport", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e474d11df9a1d1d1041e589793e40de8:829")]
-        public bool EnableFailoverSupport
+        public bool? EnableFailoverSupport
         {
             get => _enableFailoverSupport;
             set
             {
-                EnableFailoverSupportSpecified = true;
+                EnableFailoverSupportSpecified = (value != null);
                 _enableFailoverSupport = value;
             }
         }
@@ -96,17 +96,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool FailoverPhoneNumberSpecified { get; set; }
 
-        protected bool _perCallEnableFailoverSupport;
+        protected bool? _perCallEnableFailoverSupport;
 
         [XmlElement(ElementName = "perCallEnableFailoverSupport", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e474d11df9a1d1d1041e589793e40de8:829")]
-        public bool PerCallEnableFailoverSupport
+        public bool? PerCallEnableFailoverSupport
         {
             get => _perCallEnableFailoverSupport;
             set
             {
-                PerCallEnableFailoverSupportSpecified = true;
+                PerCallEnableFailoverSupportSpecified = (value != null);
                 _perCallEnableFailoverSupport = value;
             }
         }
@@ -114,19 +114,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PerCallEnableFailoverSupportSpecified { get; set; }
 
-        protected int _perCallCallFailureTimeoutSeconds;
+        protected int? _perCallCallFailureTimeoutSeconds;
 
         [XmlElement(ElementName = "perCallCallFailureTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e474d11df9a1d1d1041e589793e40de8:829")]
         [MinInclusive(1)]
         [MaxInclusive(60)]
-        public int PerCallCallFailureTimeoutSeconds
+        public int? PerCallCallFailureTimeoutSeconds
         {
             get => _perCallCallFailureTimeoutSeconds;
             set
             {
-                PerCallCallFailureTimeoutSecondsSpecified = true;
+                PerCallCallFailureTimeoutSecondsSpecified = (value != null);
                 _perCallCallFailureTimeoutSeconds = value;
             }
         }
@@ -134,19 +134,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PerCallCallFailureTimeoutSecondsSpecified { get; set; }
 
-        protected int _perCallOutboundCallFailureTimeoutSeconds;
+        protected int? _perCallOutboundCallFailureTimeoutSeconds;
 
         [XmlElement(ElementName = "perCallOutboundCallFailureTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e474d11df9a1d1d1041e589793e40de8:829")]
         [MinInclusive(1)]
         [MaxInclusive(60)]
-        public int PerCallOutboundCallFailureTimeoutSeconds
+        public int? PerCallOutboundCallFailureTimeoutSeconds
         {
             get => _perCallOutboundCallFailureTimeoutSeconds;
             set
             {
-                PerCallOutboundCallFailureTimeoutSecondsSpecified = true;
+                PerCallOutboundCallFailureTimeoutSecondsSpecified = (value != null);
                 _perCallOutboundCallFailureTimeoutSeconds = value;
             }
         }

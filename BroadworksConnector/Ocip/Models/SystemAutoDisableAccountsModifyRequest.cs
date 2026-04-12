@@ -19,19 +19,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class SystemAutoDisableAccountsModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
-        protected int _accountInactivityTimeoutDays;
+        protected int? _accountInactivityTimeoutDays;
 
         [XmlElement(ElementName = "accountInactivityTimeoutDays", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2593")]
         [MinInclusive(30)]
         [MaxInclusive(365)]
-        public int AccountInactivityTimeoutDays
+        public int? AccountInactivityTimeoutDays
         {
             get => _accountInactivityTimeoutDays;
             set
             {
-                AccountInactivityTimeoutDaysSpecified = true;
+                AccountInactivityTimeoutDaysSpecified = (value != null);
                 _accountInactivityTimeoutDays = value;
             }
         }
@@ -39,17 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool AccountInactivityTimeoutDaysSpecified { get; set; }
 
-        protected bool _enableAutoDisableAccounts;
+        protected bool? _enableAutoDisableAccounts;
 
         [XmlElement(ElementName = "enableAutoDisableAccounts", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2593")]
-        public bool EnableAutoDisableAccounts
+        public bool? EnableAutoDisableAccounts
         {
             get => _enableAutoDisableAccounts;
             set
             {
-                EnableAutoDisableAccountsSpecified = true;
+                EnableAutoDisableAccountsSpecified = (value != null);
                 _enableAutoDisableAccounts = value;
             }
         }
@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableAutoDisableAccountsSpecified { get; set; }
 
-        protected bool _enableAutoDisableAccountsSystemAdminLevel;
+        protected bool? _enableAutoDisableAccountsSystemAdminLevel;
 
         [XmlElement(ElementName = "enableAutoDisableAccountsSystemAdminLevel", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2593")]
-        public bool EnableAutoDisableAccountsSystemAdminLevel
+        public bool? EnableAutoDisableAccountsSystemAdminLevel
         {
             get => _enableAutoDisableAccountsSystemAdminLevel;
             set
             {
-                EnableAutoDisableAccountsSystemAdminLevelSpecified = true;
+                EnableAutoDisableAccountsSystemAdminLevelSpecified = (value != null);
                 _enableAutoDisableAccountsSystemAdminLevel = value;
             }
         }
@@ -75,17 +75,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableAutoDisableAccountsSystemAdminLevelSpecified { get; set; }
 
-        protected bool _enableAutoDisableAccountsProvisioningAdminLevel;
+        protected bool? _enableAutoDisableAccountsProvisioningAdminLevel;
 
         [XmlElement(ElementName = "enableAutoDisableAccountsProvisioningAdminLevel", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2593")]
-        public bool EnableAutoDisableAccountsProvisioningAdminLevel
+        public bool? EnableAutoDisableAccountsProvisioningAdminLevel
         {
             get => _enableAutoDisableAccountsProvisioningAdminLevel;
             set
             {
-                EnableAutoDisableAccountsProvisioningAdminLevelSpecified = true;
+                EnableAutoDisableAccountsProvisioningAdminLevelSpecified = (value != null);
                 _enableAutoDisableAccountsProvisioningAdminLevel = value;
             }
         }
@@ -93,17 +93,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableAutoDisableAccountsProvisioningAdminLevelSpecified { get; set; }
 
-        protected bool _enableAutoDisableAccountsResellerAdminLevel;
+        protected bool? _enableAutoDisableAccountsResellerAdminLevel;
 
         [XmlElement(ElementName = "enableAutoDisableAccountsResellerAdminLevel", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2593")]
-        public bool EnableAutoDisableAccountsResellerAdminLevel
+        public bool? EnableAutoDisableAccountsResellerAdminLevel
         {
             get => _enableAutoDisableAccountsResellerAdminLevel;
             set
             {
-                EnableAutoDisableAccountsResellerAdminLevelSpecified = true;
+                EnableAutoDisableAccountsResellerAdminLevelSpecified = (value != null);
                 _enableAutoDisableAccountsResellerAdminLevel = value;
             }
         }
@@ -111,17 +111,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableAutoDisableAccountsResellerAdminLevelSpecified { get; set; }
 
-        protected bool _enableAutoDisableAccountsSvcProviderAdminLevel;
+        protected bool? _enableAutoDisableAccountsSvcProviderAdminLevel;
 
         [XmlElement(ElementName = "enableAutoDisableAccountsSvcProviderAdminLevel", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2593")]
-        public bool EnableAutoDisableAccountsSvcProviderAdminLevel
+        public bool? EnableAutoDisableAccountsSvcProviderAdminLevel
         {
             get => _enableAutoDisableAccountsSvcProviderAdminLevel;
             set
             {
-                EnableAutoDisableAccountsSvcProviderAdminLevelSpecified = true;
+                EnableAutoDisableAccountsSvcProviderAdminLevelSpecified = (value != null);
                 _enableAutoDisableAccountsSvcProviderAdminLevel = value;
             }
         }
@@ -129,17 +129,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableAutoDisableAccountsSvcProviderAdminLevelSpecified { get; set; }
 
-        protected bool _enableAutoDisableAccountsGroupAdminLevel;
+        protected bool? _enableAutoDisableAccountsGroupAdminLevel;
 
         [XmlElement(ElementName = "enableAutoDisableAccountsGroupAdminLevel", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2593")]
-        public bool EnableAutoDisableAccountsGroupAdminLevel
+        public bool? EnableAutoDisableAccountsGroupAdminLevel
         {
             get => _enableAutoDisableAccountsGroupAdminLevel;
             set
             {
-                EnableAutoDisableAccountsGroupAdminLevelSpecified = true;
+                EnableAutoDisableAccountsGroupAdminLevelSpecified = (value != null);
                 _enableAutoDisableAccountsGroupAdminLevel = value;
             }
         }
@@ -147,17 +147,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool EnableAutoDisableAccountsGroupAdminLevelSpecified { get; set; }
 
-        protected bool _enableAutoDisableAccountsDepartmentAdminLevel;
+        protected bool? _enableAutoDisableAccountsDepartmentAdminLevel;
 
         [XmlElement(ElementName = "enableAutoDisableAccountsDepartmentAdminLevel", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2593")]
-        public bool EnableAutoDisableAccountsDepartmentAdminLevel
+        public bool? EnableAutoDisableAccountsDepartmentAdminLevel
         {
             get => _enableAutoDisableAccountsDepartmentAdminLevel;
             set
             {
-                EnableAutoDisableAccountsDepartmentAdminLevelSpecified = true;
+                EnableAutoDisableAccountsDepartmentAdminLevelSpecified = (value != null);
                 _enableAutoDisableAccountsDepartmentAdminLevel = value;
             }
         }

@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _releaseCause;
             set
             {
-                ReleaseCauseSpecified = true;
+                ReleaseCauseSpecified = (value != null);
                 _releaseCause = value;
             }
         }

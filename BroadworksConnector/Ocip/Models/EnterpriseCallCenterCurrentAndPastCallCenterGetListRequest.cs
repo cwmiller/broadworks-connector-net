@@ -39,17 +39,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServiceProviderIdSpecified { get; set; }
 
-        protected bool _isPremiumOnly;
+        protected bool? _isPremiumOnly;
 
         [XmlElement(ElementName = "isPremiumOnly", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:1136")]
-        public bool IsPremiumOnly
+        public bool? IsPremiumOnly
         {
             get => _isPremiumOnly;
             set
             {
-                IsPremiumOnlySpecified = true;
+                IsPremiumOnlySpecified = (value != null);
                 _isPremiumOnly = value;
             }
         }
@@ -57,18 +57,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsPremiumOnlySpecified { get; set; }
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:1136")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaExactUserGroup;
             set
             {
-                SearchCriteriaExactUserGroupSpecified = true;
+                SearchCriteriaExactUserGroupSpecified = (value != null);
                 _searchCriteriaExactUserGroup = value;
             }
         }
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaCallCenterName;
             set
             {
-                SearchCriteriaCallCenterNameSpecified = true;
+                SearchCriteriaCallCenterNameSpecified = (value != null);
                 _searchCriteriaCallCenterName = value;
             }
         }

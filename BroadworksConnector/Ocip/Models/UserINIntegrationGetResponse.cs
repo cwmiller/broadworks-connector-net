@@ -17,19 +17,19 @@ namespace BroadWorksConnector.Ocip.Models
     public class UserINIntegrationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
-        protected int _originatingServiceKey;
+        protected int? _originatingServiceKey;
 
         [XmlElement(ElementName = "originatingServiceKey", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"841786e27ac49a43576369a93b4cc726:56")]
         [MinInclusive(0)]
         [MaxInclusive(999)]
-        public int OriginatingServiceKey
+        public int? OriginatingServiceKey
         {
             get => _originatingServiceKey;
             set
             {
-                OriginatingServiceKeySpecified = true;
+                OriginatingServiceKeySpecified = (value != null);
                 _originatingServiceKey = value;
             }
         }
@@ -37,19 +37,19 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool OriginatingServiceKeySpecified { get; set; }
 
-        protected int _terminatingServiceKey;
+        protected int? _terminatingServiceKey;
 
         [XmlElement(ElementName = "terminatingServiceKey", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"841786e27ac49a43576369a93b4cc726:56")]
         [MinInclusive(0)]
         [MaxInclusive(999)]
-        public int TerminatingServiceKey
+        public int? TerminatingServiceKey
         {
             get => _terminatingServiceKey;
             set
             {
-                TerminatingServiceKeySpecified = true;
+                TerminatingServiceKeySpecified = (value != null);
                 _terminatingServiceKey = value;
             }
         }

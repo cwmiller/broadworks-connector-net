@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _tagSetName;
             set
             {
-                TagSetNameSpecified = true;
+                TagSetNameSpecified = (value != null);
                 _tagSetName = value;
             }
         }

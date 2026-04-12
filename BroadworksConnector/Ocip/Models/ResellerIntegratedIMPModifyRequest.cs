@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ResellerIdSpecified { get; set; }
 
-        protected bool _useSystemServiceDomain;
+        protected bool? _useSystemServiceDomain;
 
         [XmlElement(ElementName = "useSystemServiceDomain", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"37cec25308bcc82fe5a80bf541c42c89:163")]
-        public bool UseSystemServiceDomain
+        public bool? UseSystemServiceDomain
         {
             get => _useSystemServiceDomain;
             set
             {
-                UseSystemServiceDomainSpecified = true;
+                UseSystemServiceDomainSpecified = (value != null);
                 _useSystemServiceDomain = value;
             }
         }
@@ -96,17 +96,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool ServicePortSpecified { get; set; }
 
-        protected bool _useSystemMessagingServer;
+        protected bool? _useSystemMessagingServer;
 
         [XmlElement(ElementName = "useSystemMessagingServer", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"37cec25308bcc82fe5a80bf541c42c89:163")]
-        public bool UseSystemMessagingServer
+        public bool? UseSystemMessagingServer
         {
             get => _useSystemMessagingServer;
             set
             {
-                UseSystemMessagingServerSpecified = true;
+                UseSystemMessagingServerSpecified = (value != null);
                 _useSystemMessagingServer = value;
             }
         }
@@ -194,17 +194,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool BoshURLSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.IntegratedIMPUserIDType _defaultImpIdType;
+        protected BroadWorksConnector.Ocip.Models.IntegratedIMPUserIDType? _defaultImpIdType;
 
         [XmlElement(ElementName = "defaultImpIdType", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"37cec25308bcc82fe5a80bf541c42c89:163")]
-        public BroadWorksConnector.Ocip.Models.IntegratedIMPUserIDType DefaultImpIdType
+        public BroadWorksConnector.Ocip.Models.IntegratedIMPUserIDType? DefaultImpIdType
         {
             get => _defaultImpIdType;
             set
             {
-                DefaultImpIdTypeSpecified = true;
+                DefaultImpIdTypeSpecified = (value != null);
                 _defaultImpIdType = value;
             }
         }

@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _enableAutomaticCollectCall;
+        protected bool? _enableAutomaticCollectCall;
 
         [XmlElement(ElementName = "enableAutomaticCollectCall", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"0d5db1a19a0aeda6f13d1f1c609efa0a:192")]
-        public bool EnableAutomaticCollectCall
+        public bool? EnableAutomaticCollectCall
         {
             get => _enableAutomaticCollectCall;
             set
             {
-                EnableAutomaticCollectCallSpecified = true;
+                EnableAutomaticCollectCallSpecified = (value != null);
                 _enableAutomaticCollectCall = value;
             }
         }

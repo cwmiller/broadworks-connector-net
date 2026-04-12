@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _externalRoutingAddress;
             set
             {
-                ExternalRoutingAddressSpecified = true;
+                ExternalRoutingAddressSpecified = (value != null);
                 _externalRoutingAddress = value;
             }
         }

@@ -38,17 +38,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _isActive;
+        protected bool? _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"a80d284dc33fadcf5b323133519ad1a8:205")]
-        public bool IsActive
+        public bool? IsActive
         {
             get => _isActive;
             set
             {
-                IsActiveSpecified = true;
+                IsActiveSpecified = (value != null);
                 _isActive = value;
             }
         }
@@ -76,17 +76,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool DefaultForwardToPhoneNumberSpecified { get; set; }
 
-        protected bool _playRingReminder;
+        protected bool? _playRingReminder;
 
         [XmlElement(ElementName = "playRingReminder", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"a80d284dc33fadcf5b323133519ad1a8:205")]
-        public bool PlayRingReminder
+        public bool? PlayRingReminder
         {
             get => _playRingReminder;
             set
             {
-                PlayRingReminderSpecified = true;
+                PlayRingReminderSpecified = (value != null);
                 _playRingReminder = value;
             }
         }
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _criteriaActivation;
             set
             {
-                CriteriaActivationSpecified = true;
+                CriteriaActivationSpecified = (value != null);
                 _criteriaActivation = value;
             }
         }

@@ -57,17 +57,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool GroupIdSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.CallCenterRoutingPolicy _routingPolicy;
+        protected BroadWorksConnector.Ocip.Models.CallCenterRoutingPolicy? _routingPolicy;
 
         [XmlElement(ElementName = "routingPolicy", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5295")]
-        public BroadWorksConnector.Ocip.Models.CallCenterRoutingPolicy RoutingPolicy
+        public BroadWorksConnector.Ocip.Models.CallCenterRoutingPolicy? RoutingPolicy
         {
             get => _routingPolicy;
             set
             {
-                RoutingPolicySpecified = true;
+                RoutingPolicySpecified = (value != null);
                 _routingPolicy = value;
             }
         }
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _routingPriorityOrder;
             set
             {
-                RoutingPriorityOrderSpecified = true;
+                RoutingPriorityOrderSpecified = (value != null);
                 _routingPriorityOrder = value;
             }
         }

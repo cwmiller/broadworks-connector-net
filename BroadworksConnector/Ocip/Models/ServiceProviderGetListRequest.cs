@@ -26,17 +26,17 @@ namespace BroadWorksConnector.Ocip.Models
     public class ServiceProviderGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ServiceProviderGetListResponse>
     {
 
-        protected bool _isEnterprise;
+        protected bool? _isEnterprise;
 
         [XmlElement(ElementName = "isEnterprise", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:4539")]
-        public bool IsEnterprise
+        public bool? IsEnterprise
         {
             get => _isEnterprise;
             set
             {
-                IsEnterpriseSpecified = true;
+                IsEnterpriseSpecified = (value != null);
                 _isEnterprise = value;
             }
         }
@@ -44,18 +44,18 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool IsEnterpriseSpecified { get; set; }
 
-        protected int _responseSizeLimit;
+        protected int? _responseSizeLimit;
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:4539")]
         [MinInclusive(1)]
-        public int ResponseSizeLimit
+        public int? ResponseSizeLimit
         {
             get => _responseSizeLimit;
             set
             {
-                ResponseSizeLimitSpecified = true;
+                ResponseSizeLimitSpecified = (value != null);
                 _responseSizeLimit = value;
             }
         }
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaServiceProviderId;
             set
             {
-                SearchCriteriaServiceProviderIdSpecified = true;
+                SearchCriteriaServiceProviderIdSpecified = (value != null);
                 _searchCriteriaServiceProviderId = value;
             }
         }
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaServiceProviderName;
             set
             {
-                SearchCriteriaServiceProviderNameSpecified = true;
+                SearchCriteriaServiceProviderNameSpecified = (value != null);
                 _searchCriteriaServiceProviderName = value;
             }
         }
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _searchCriteriaResellerId;
             set
             {
-                SearchCriteriaResellerIdSpecified = true;
+                SearchCriteriaResellerIdSpecified = (value != null);
                 _searchCriteriaResellerId = value;
             }
         }

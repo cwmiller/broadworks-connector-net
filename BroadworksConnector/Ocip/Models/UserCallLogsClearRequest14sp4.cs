@@ -40,17 +40,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool UserIdSpecified { get; set; }
 
-        protected bool _deleteAllCallLogs;
+        protected bool? _deleteAllCallLogs;
 
         [XmlElement(ElementName = "deleteAllCallLogs", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:861")]
-        public bool DeleteAllCallLogs
+        public bool? DeleteAllCallLogs
         {
             get => _deleteAllCallLogs;
             set
             {
-                DeleteAllCallLogsSpecified = true;
+                DeleteAllCallLogsSpecified = (value != null);
                 _deleteAllCallLogs = value;
             }
         }

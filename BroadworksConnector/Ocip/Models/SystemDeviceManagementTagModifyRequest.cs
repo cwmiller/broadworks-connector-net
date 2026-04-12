@@ -118,17 +118,17 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool TagValueToEncryptSpecified { get; set; }
 
-        protected bool _isTagValueOverridable;
+        protected bool? _isTagValueOverridable;
 
         [XmlElement(ElementName = "isTagValueOverridable", IsNullable = false, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:8160")]
-        public bool IsTagValueOverridable
+        public bool? IsTagValueOverridable
         {
             get => _isTagValueOverridable;
             set
             {
-                IsTagValueOverridableSpecified = true;
+                IsTagValueOverridableSpecified = (value != null);
                 _isTagValueOverridable = value;
             }
         }

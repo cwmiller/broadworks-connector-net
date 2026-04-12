@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _name;
             set
             {
-                NameSpecified = true;
+                NameSpecified = (value != null);
                 _name = value;
             }
         }
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _linePort;
             set
             {
-                LinePortSpecified = true;
+                LinePortSpecified = (value != null);
                 _linePort = value;
             }
         }

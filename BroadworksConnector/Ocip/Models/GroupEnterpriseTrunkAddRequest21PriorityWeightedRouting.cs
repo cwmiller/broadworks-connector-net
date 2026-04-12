@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
             get => _priorityWeightedTrunkGroup;
             set
             {
-                PriorityWeightedTrunkGroupSpecified = true;
+                PriorityWeightedTrunkGroupSpecified = (value != null);
                 _priorityWeightedTrunkGroup = value;
             }
         }
