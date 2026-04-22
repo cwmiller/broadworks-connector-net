@@ -60,6 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.CommunicationBarringProfileReplacementList _profileName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "profileName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:2832")]

@@ -59,6 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _contact;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "contact", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:91")]
@@ -137,6 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _hotlineContact;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "hotlineContact", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:91")]

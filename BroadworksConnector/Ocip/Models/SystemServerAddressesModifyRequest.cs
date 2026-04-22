@@ -21,6 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _webServerClusterPublicFQDN;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "webServerClusterPublicFQDN", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:16167")]
@@ -41,6 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _applicationServerClusterPrimaryPublicFQDN;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "applicationServerClusterPrimaryPublicFQDN", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:16167")]
@@ -61,6 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _applicationServerClusterSecondaryPublicFQDN;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "applicationServerClusterSecondaryPublicFQDN", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:16167")]
@@ -81,6 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _applicationServerClusterPrimaryPrivateFQDN;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "applicationServerClusterPrimaryPrivateFQDN", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:16167")]
@@ -101,6 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _applicationServerClusterSecondaryPrivateFQDN;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "applicationServerClusterSecondaryPrivateFQDN", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:16167")]

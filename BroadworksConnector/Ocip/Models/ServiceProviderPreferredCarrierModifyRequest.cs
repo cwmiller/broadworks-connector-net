@@ -65,6 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _intraLataCarrier;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "intraLataCarrier", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:298")]
@@ -85,6 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _interLataCarrier;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "interLataCarrier", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:298")]
@@ -105,6 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _internationalCarrier;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "internationalCarrier", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:298")]

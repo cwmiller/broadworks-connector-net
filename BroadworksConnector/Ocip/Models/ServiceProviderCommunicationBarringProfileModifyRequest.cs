@@ -85,6 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _description;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:2656")]
@@ -123,6 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _originatingDefaultTreatmentId;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "originatingDefaultTreatmentId", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:2656")]
@@ -143,6 +145,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _originatingDefaultTransferNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "originatingDefaultTransferNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:2656")]
@@ -163,6 +166,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _originatingDefaultCallTimeout;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "originatingDefaultCallTimeout", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:2656")]
@@ -183,6 +187,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ServiceProviderReplacementCommunicationBarringHierarchicalOriginatingRuleList _originatingRule;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "originatingRule", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:2656")]
@@ -219,6 +224,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _redirectingDefaultCallTimeout;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "redirectingDefaultCallTimeout", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:2656")]
@@ -239,6 +245,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ServiceProviderReplacementCommunicationBarringHierarchicalRedirectingRuleList _redirectingRule;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "redirectingRule", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:2656")]
@@ -275,6 +282,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _callMeNowDefaultCallTimeout;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "callMeNowDefaultCallTimeout", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:2656")]
@@ -295,6 +303,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ServiceProviderReplacementCommunicationBarringHierarchicalCallMeNowRuleList _callMeNowRule;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "callMeNowRule", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:2656")]
@@ -331,6 +340,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _incomingDefaultCallTimeout;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "incomingDefaultCallTimeout", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:2656")]
@@ -351,6 +361,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementCommunicationBarringIncomingRuleList19sp1 _incomingRule;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "incomingRule", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:2656")]

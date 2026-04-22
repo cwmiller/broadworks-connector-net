@@ -608,6 +608,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _routingProfile;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "routingProfile", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:2897")]

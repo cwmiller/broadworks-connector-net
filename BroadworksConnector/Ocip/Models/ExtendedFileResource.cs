@@ -37,6 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _url;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "url", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:3181")]

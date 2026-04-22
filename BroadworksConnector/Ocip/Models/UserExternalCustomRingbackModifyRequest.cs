@@ -81,6 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _sipRequestURI;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "sipRequestURI", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"2c9f194a3272e429f2e5215dd988b94a:139")]

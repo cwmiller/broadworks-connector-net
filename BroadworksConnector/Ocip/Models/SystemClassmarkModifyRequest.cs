@@ -60,6 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _webDisplayKey;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "webDisplayKey", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"bd23272215266344f26a1702c47ce590:154")]

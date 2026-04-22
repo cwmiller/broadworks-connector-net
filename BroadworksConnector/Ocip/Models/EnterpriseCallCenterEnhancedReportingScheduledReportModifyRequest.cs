@@ -80,6 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _description;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:1768")]
@@ -374,6 +375,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _serviceLevelObjectivePercentage;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "serviceLevelObjectivePercentage", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:1768")]

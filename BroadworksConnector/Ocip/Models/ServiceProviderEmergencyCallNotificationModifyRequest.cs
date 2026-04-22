@@ -58,6 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _emergencyCallNotifyEmailAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "emergencyCallNotifyEmailAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:4153")]

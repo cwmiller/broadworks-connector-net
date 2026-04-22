@@ -217,6 +217,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _macFormatInNonRequestURI;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "macFormatInNonRequestURI", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:17307")]

@@ -84,6 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _tagValue;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "tagValue", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:3284")]
@@ -104,6 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _tagValueToEncrypt;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "tagValueToEncrypt", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:3284")]

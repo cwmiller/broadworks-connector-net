@@ -95,6 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource20 _audioFile;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "audioFile", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"2e482dcb2fc2f9ef31621d21b9816a42:85")]
@@ -131,6 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ExtendedMediaFileResource20 _videoFile;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "videoFile", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"2e482dcb2fc2f9ef31621d21b9816a42:85")]

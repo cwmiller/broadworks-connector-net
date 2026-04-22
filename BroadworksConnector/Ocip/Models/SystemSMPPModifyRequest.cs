@@ -21,6 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _primarySMPPServerNetAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "primarySMPPServerNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
@@ -61,6 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _secondarySMPPServerNetAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "secondarySMPPServerNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
@@ -101,6 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _systemId;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "systemId", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
@@ -121,6 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _password;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "password", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
@@ -159,6 +163,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _systemType;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "systemType", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18021")]

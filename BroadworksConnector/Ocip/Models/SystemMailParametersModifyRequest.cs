@@ -21,6 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _primaryServerNetAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "primaryServerNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:11740")]
@@ -41,6 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _secondaryServerNetAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "secondaryServerNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:11740")]
@@ -81,6 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _defaultSubject;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultSubject", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:11740")]
@@ -137,6 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _port;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "port", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:11740")]

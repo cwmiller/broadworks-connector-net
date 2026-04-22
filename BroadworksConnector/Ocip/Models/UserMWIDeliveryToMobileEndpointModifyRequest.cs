@@ -58,6 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _mobilePhoneNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "mobilePhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:384")]

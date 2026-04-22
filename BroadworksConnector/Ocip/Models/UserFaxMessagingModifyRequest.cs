@@ -58,6 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _phoneNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "phoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"b2249333b9e085ee149c29960c00214e:133")]
@@ -78,6 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _extension;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "extension", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"b2249333b9e085ee149c29960c00214e:133")]
@@ -98,6 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementSIPAliasList _sipAliasList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "sipAliasList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"b2249333b9e085ee149c29960c00214e:133")]

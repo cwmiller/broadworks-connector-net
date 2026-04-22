@@ -58,6 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _forwardToPhoneNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "forwardToPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1deb5ba62a17faee2c6485bf47cec6d9:77")]

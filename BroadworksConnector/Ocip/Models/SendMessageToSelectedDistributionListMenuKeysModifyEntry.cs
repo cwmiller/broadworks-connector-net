@@ -18,6 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _confirmSendingToDistributionList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "confirmSendingToDistributionList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:3054")]

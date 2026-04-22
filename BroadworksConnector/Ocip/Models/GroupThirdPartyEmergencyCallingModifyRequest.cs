@@ -95,6 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _customerId;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "customerId", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:8199")]
@@ -115,6 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _secretKey;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "secretKey", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:8199")]

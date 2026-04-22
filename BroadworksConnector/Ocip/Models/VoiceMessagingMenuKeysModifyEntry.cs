@@ -18,6 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _playMessages;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "playMessages", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:3214")]
@@ -38,6 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _changeBusyGreeting;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "changeBusyGreeting", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:3214")]
@@ -58,6 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _changeNoAnswerGreeting;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "changeNoAnswerGreeting", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:3214")]
@@ -78,6 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _changeExtendedAwayGreeting;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "changeExtendedAwayGreeting", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:3214")]
@@ -98,6 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _composeMessage;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "composeMessage", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:3214")]
@@ -118,6 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _deleteAllMessages;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "deleteAllMessages", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:3214")]
@@ -138,6 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _passcode;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "passcode", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:3214")]
@@ -158,6 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _personalizedName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "personalizedName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:3214")]
@@ -178,6 +186,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _messageDeposit;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "messageDeposit", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:3214")]
@@ -218,6 +227,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _repeatMenu;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:3214")]

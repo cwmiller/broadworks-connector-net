@@ -40,6 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _description;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"103e8fba76512e5a1abfb373758f36e2:114")]

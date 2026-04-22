@@ -40,6 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _cpcValue;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "cpcValue", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d0efd2493d3062b292fd31759011925e:160")]
@@ -60,6 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _isupOliValue;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "isupOliValue", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d0efd2493d3062b292fd31759011925e:160")]
@@ -80,6 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _gtdOliValue;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "gtdOliValue", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d0efd2493d3062b292fd31759011925e:160")]
@@ -190,6 +193,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _webDisplayKey;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "webDisplayKey", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d0efd2493d3062b292fd31759011925e:160")]

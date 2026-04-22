@@ -76,6 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.CallingNameRetrievalWhiteListReplacementList _dnWhiteList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "dnWhiteList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"ba51f415ebda0240287c719bc767eadf:165")]

@@ -36,6 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _emailAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "emailAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"de7795e1833d459a7eb89116d772fd78:189")]

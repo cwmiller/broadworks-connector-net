@@ -21,6 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _primaryHELDServerURL;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "primaryHELDServerURL", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18796")]
@@ -41,6 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _secondaryHELDServerURL;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "secondaryHELDServerURL", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18796")]
@@ -61,6 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _emergencyRouteNetAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "emergencyRouteNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18796")]
@@ -81,6 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _emergencyRoutePort;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "emergencyRoutePort", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18796")]
@@ -101,6 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol? _emergencyRouteTransport;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "emergencyRouteTransport", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18796")]

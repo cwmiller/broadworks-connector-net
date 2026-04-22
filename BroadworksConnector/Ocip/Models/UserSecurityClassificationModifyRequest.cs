@@ -40,6 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _securityClassification;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "securityClassification", IsNullable = true, Namespace = "")]
         [Group(@"435c279b3e6710f4ada60ed66a93d278:346")]
         [MinLength(1)]

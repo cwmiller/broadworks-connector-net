@@ -79,6 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.TimeSchedule _timeSchedule;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "timeSchedule", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"adf9583170c1dc9ec6c152ba1238437a:201")]
@@ -97,6 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holidaySchedule", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"adf9583170c1dc9ec6c152ba1238437a:201")]

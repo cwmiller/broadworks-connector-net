@@ -18,6 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _sendToPerson;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "sendToPerson", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2594")]
@@ -38,6 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _sendToAllGroupMembers;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "sendToAllGroupMembers", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2594")]
@@ -58,6 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _sendToDistributionList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "sendToDistributionList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2594")]
@@ -78,6 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _changeCurrentIntroductionOrMessage;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "changeCurrentIntroductionOrMessage", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2594")]
@@ -98,6 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _listenToCurrentIntroductionOrMessage;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "listenToCurrentIntroductionOrMessage", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2594")]
@@ -118,6 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _setOrClearUrgentIndicator;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "setOrClearUrgentIndicator", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2594")]
@@ -138,6 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _setOrClearConfidentialIndicator;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "setOrClearConfidentialIndicator", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2594")]
@@ -178,6 +185,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _repeatMenu;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2594")]

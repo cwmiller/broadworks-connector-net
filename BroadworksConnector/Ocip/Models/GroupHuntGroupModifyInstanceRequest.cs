@@ -157,6 +157,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _forwardToPhoneNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "forwardToPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"781bbab86d937537938d4fe917029d5c:529")]
@@ -177,6 +178,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _agentUserIdList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "agentUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"781bbab86d937537938d4fe917029d5c:529")]
@@ -267,6 +269,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _notReachableForwardToPhoneNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "notReachableForwardToPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"781bbab86d937537938d4fe917029d5c:529")]

@@ -79,6 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.EnterpriseDepartmentKey _newParentDepartmentKey;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "newParentDepartmentKey", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:401")]

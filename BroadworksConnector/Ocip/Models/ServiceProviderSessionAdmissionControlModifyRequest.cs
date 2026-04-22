@@ -58,6 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _maxSessions;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "maxSessions", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6741")]
@@ -77,6 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _maxUserOriginatingSessions;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "maxUserOriginatingSessions", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6741")]
@@ -96,6 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _maxUserTerminatingSessions;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "maxUserTerminatingSessions", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6741")]

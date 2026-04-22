@@ -40,6 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementOCICallControlApplicationIdList _applicationIdList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "applicationIdList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2688")]

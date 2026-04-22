@@ -18,6 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _url1;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "url1", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:1035")]
@@ -38,6 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _url2;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "url2", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:1035")]
@@ -58,6 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _url3;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "url3", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:1035")]
@@ -78,6 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _url4;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "url4", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:1035")]

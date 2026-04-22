@@ -57,6 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _ipAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "ipAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2826")]

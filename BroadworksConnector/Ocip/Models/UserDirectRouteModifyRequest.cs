@@ -76,6 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.DirectRouteReplacementIdentityList _directRouteIdentityList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "directRouteIdentityList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"448c1807ef39a1a06e7d8d4d16ecaa31:75")]

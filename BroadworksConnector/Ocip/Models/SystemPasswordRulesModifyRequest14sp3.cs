@@ -347,6 +347,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _loginDisabledNotifyEmailAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "loginDisabledNotifyEmailAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:11089")]

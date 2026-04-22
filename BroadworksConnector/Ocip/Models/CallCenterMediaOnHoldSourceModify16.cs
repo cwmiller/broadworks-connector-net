@@ -54,6 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.AccessDeviceEndpointModify _externalAudioSource;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "externalAudioSource", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:48541")]
@@ -108,6 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.AccessDeviceEndpointModify _externalVideoSource;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "externalVideoSource", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:48541")]

@@ -37,6 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _excludedPhoneNumber01;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "excludedPhoneNumber01", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"de7795e1833d459a7eb89116d772fd78:244")]
@@ -57,6 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _excludedPhoneNumber02;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "excludedPhoneNumber02", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"de7795e1833d459a7eb89116d772fd78:244")]
@@ -77,6 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _excludedPhoneNumber03;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "excludedPhoneNumber03", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"de7795e1833d459a7eb89116d772fd78:244")]
@@ -97,6 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _forwardExcludedNumbersTo;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "forwardExcludedNumbersTo", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"de7795e1833d459a7eb89116d772fd78:244")]

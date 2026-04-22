@@ -83,6 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.TimeSchedule _timeSchedule;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "timeSchedule", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"b3553d7704f59ff8de2f730be450316f:196")]
@@ -119,6 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holidaySchedule", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"b3553d7704f59ff8de2f730be450316f:196")]
@@ -155,6 +157,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementCallToNumberList _callToNumberList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "callToNumberList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"b3553d7704f59ff8de2f730be450316f:196")]

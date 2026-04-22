@@ -40,6 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _prefixDigits;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "prefixDigits", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"2c9f194a3272e429f2e5215dd988b94a:80")]
@@ -60,6 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _serverNetAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "serverNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"2c9f194a3272e429f2e5215dd988b94a:80")]
@@ -80,6 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _serverPort;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "serverPort", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"2c9f194a3272e429f2e5215dd988b94a:80")]

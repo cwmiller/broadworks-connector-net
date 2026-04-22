@@ -66,6 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _port;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "port", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:9322")]
@@ -160,6 +161,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _description;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:9322")]

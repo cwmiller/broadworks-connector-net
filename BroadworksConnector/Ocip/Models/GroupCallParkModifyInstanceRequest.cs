@@ -99,6 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _userIdList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "userIdList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:497")]
@@ -117,6 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _recallAlternateUserId;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "recallAlternateUserId", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:497")]

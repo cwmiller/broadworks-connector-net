@@ -79,6 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _alertingGroupDescription;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "alertingGroupDescription", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"146ca46a7097f08aed7a73ab65f17df8:444")]
@@ -155,6 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.FindMeFollowMeAlertingGroupReplacementOutgoingDNSIPURIorUserIdList _phoneNumberOrUserList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "phoneNumberOrUserList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"146ca46a7097f08aed7a73ab65f17df8:444")]

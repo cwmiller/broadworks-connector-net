@@ -72,6 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.CriteriaReplacementDNList _phoneNumberList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "phoneNumberList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"48b0abc609ecbfab1fb1ee61c1de62ea:219")]

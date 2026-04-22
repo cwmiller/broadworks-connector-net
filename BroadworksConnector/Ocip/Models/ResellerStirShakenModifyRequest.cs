@@ -130,6 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _signingServiceURL;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "signingServiceURL", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d45e381d6dbac771631649063122a42e:920")]
@@ -204,6 +205,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _origUUID;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "origUUID", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d45e381d6dbac771631649063122a42e:920")]
@@ -259,6 +261,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _verificationServiceURL;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "verificationServiceURL", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d45e381d6dbac771631649063122a42e:920")]

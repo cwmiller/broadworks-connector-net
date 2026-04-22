@@ -40,6 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _deliveryFromAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "deliveryFromAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:354")]
@@ -60,6 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _notificationFromAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "notificationFromAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:354")]
@@ -80,6 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _voicePortalLockoutFromAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "voicePortalLockoutFromAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:354")]

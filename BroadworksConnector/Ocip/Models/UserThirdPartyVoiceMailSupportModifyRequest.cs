@@ -112,6 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _userServer;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "userServer", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"21e97b8199c6e7eff29a84874335b46e:282")]
@@ -150,6 +151,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _mailboxURL;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "mailboxURL", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"21e97b8199c6e7eff29a84874335b46e:282")]

@@ -43,6 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _enableProfile;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "enableProfile", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6844af6fc359ada5d958622d62cbd13f:134")]

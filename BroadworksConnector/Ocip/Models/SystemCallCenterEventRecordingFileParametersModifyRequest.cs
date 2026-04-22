@@ -79,6 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _remoteUrl;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "remoteUrl", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:6502")]
@@ -99,6 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _remoteUserId;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "remoteUserId", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:6502")]
@@ -119,6 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _remotePassword;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "remotePassword", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:6502")]

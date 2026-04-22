@@ -18,6 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _checkHostStatus;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "checkHostStatus", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39650")]
@@ -38,6 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _associateWithHost;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "associateWithHost", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39650")]
@@ -58,6 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _disassociateFromHost;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "disassociateFromHost", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39650")]
@@ -98,6 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _repeatMenu;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39650")]

@@ -35,6 +35,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _endTime;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "endTime", IsNullable = true, Namespace = "")]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:975")]
         public string EndTime

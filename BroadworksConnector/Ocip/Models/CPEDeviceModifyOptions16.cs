@@ -40,6 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.CPEDeviceResetEventType? _resetEvent;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "resetEvent", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:48725")]

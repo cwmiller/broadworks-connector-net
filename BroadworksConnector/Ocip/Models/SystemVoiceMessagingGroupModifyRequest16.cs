@@ -178,6 +178,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _mailServerNetAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "mailServerNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1170")]
@@ -368,6 +369,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _defaultExternalRoutingAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultExternalRoutingAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1170")]
@@ -480,6 +482,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _vmBucketName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "vmBucketName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1170")]

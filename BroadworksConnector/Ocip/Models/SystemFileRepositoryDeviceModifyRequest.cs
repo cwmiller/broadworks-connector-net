@@ -40,6 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _rootDirectory;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "rootDirectory", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:27385")]
@@ -134,6 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _port;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "port", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:27385")]

@@ -76,6 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _fQDN;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "FQDN", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"0731150ec7515df8cd710f04d8f62f66:88")]

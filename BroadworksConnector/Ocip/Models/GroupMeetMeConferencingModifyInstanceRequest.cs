@@ -134,6 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _operatorNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "operatorNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:288")]
@@ -154,6 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _conferenceHostUserIdList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "conferenceHostUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:288")]

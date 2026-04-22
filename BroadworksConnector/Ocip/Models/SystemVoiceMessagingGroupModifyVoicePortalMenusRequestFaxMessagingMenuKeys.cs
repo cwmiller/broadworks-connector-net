@@ -18,6 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _saveFaxMessageAndSkipToNext;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "saveFaxMessageAndSkipToNext", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39827")]
@@ -38,6 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _previousFaxMessage;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "previousFaxMessage", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39827")]
@@ -58,6 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _playEnvelope;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "playEnvelope", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39827")]
@@ -78,6 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _nextFaxMessage;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "nextFaxMessage", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39827")]
@@ -98,6 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _deleteFaxMessage;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "deleteFaxMessage", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39827")]
@@ -118,6 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _printFaxMessage;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "printFaxMessage", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39827")]
@@ -138,6 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _returnToPreviousMenu;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39827")]

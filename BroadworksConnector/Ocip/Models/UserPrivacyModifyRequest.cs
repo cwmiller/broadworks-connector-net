@@ -113,6 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _permittedMonitorUserIdList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "permittedMonitorUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"f0850ccc76fd27f9c07cb7218b2c1f84:189")]

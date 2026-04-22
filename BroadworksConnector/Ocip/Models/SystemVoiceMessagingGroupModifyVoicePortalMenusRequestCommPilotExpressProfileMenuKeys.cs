@@ -18,6 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _activateAvailableInOfficeProfile;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "activateAvailableInOfficeProfile", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39594")]
@@ -38,6 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _activateAvailableOutOfOfficeProfile;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "activateAvailableOutOfOfficeProfile", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39594")]
@@ -58,6 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _activateBusyProfile;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "activateBusyProfile", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39594")]
@@ -78,6 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _activateUnavailableProfile;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "activateUnavailableProfile", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39594")]
@@ -98,6 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _noProfile;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "noProfile", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39594")]
@@ -138,6 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _repeatMenu;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39594")]

@@ -22,6 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.TrunkGroupDeviceMultipleContactEndpointModify22 _trunkGroupDeviceEndpoint;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "trunkGroupDeviceEndpoint", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:5352")]
@@ -40,6 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _enterpriseTrunkName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "enterpriseTrunkName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:5352")]
@@ -60,6 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _alternateTrunkIdentity;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "alternateTrunkIdentity", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:5352")]
@@ -80,6 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _alternateTrunkIdentityDomain;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "alternateTrunkIdentityDomain", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:5352")]
@@ -100,6 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _physicalLocation;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "physicalLocation", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:5352")]

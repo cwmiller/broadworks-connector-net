@@ -221,6 +221,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _webBasedConfigURL;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "webBasedConfigURL", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:35208")]
@@ -475,6 +476,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.AccessDeviceResetEvent? _resetEvent;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "resetEvent", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:35208")]

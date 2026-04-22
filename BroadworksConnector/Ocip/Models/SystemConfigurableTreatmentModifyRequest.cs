@@ -64,6 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _description;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6927")]
@@ -84,6 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _accessSIPStatusCode;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "accessSIPStatusCode", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6927")]
@@ -104,6 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _accessSIPStatusMessage;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "accessSIPStatusMessage", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6927")]
@@ -124,6 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _networkSIPStatusCode;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "networkSIPStatusCode", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6927")]
@@ -144,6 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _networkSIPStatusMessage;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "networkSIPStatusMessage", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6927")]
@@ -164,6 +169,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _q850CauseValue;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "q850CauseValue", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6927")]
@@ -184,6 +190,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _q850Text;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "q850Text", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6927")]
@@ -204,6 +211,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _accessTreatmentAudioFile;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "accessTreatmentAudioFile", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6927")]
@@ -224,6 +232,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _accessTreatmentVideoFile;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "accessTreatmentVideoFile", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6927")]
@@ -244,6 +253,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _networkTreatmentAudioFile;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "networkTreatmentAudioFile", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6927")]
@@ -264,6 +274,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _networkTreatmentVideoFile;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "networkTreatmentVideoFile", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6927")]
@@ -284,6 +295,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _cdrTerminationCause;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "cdrTerminationCause", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6927")]
@@ -322,6 +334,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.InternalReleaseCause16? _internalReleaseCause;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "internalReleaseCause", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6927")]
@@ -376,6 +389,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _warnCode;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "warnCode", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6927")]
@@ -396,6 +410,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _warnText;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "warnText", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:6927")]

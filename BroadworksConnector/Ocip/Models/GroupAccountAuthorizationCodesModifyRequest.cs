@@ -115,6 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _mandatoryUsageUserIdList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "mandatoryUsageUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"fcf43b3a58ff66521262b4426bab8748:196")]
@@ -133,6 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _optionalUsageUserIdList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "optionalUsageUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"fcf43b3a58ff66521262b4426bab8748:196")]

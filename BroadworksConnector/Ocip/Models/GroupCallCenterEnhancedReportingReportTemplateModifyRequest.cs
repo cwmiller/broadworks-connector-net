@@ -98,6 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _description;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:3557")]
@@ -190,6 +191,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _filterNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "filterNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:3557")]
@@ -210,6 +212,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateQueryFilterValueReplacementList _filterValue;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "filterValue", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:3557")]

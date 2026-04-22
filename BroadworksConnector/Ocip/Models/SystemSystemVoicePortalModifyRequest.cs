@@ -143,6 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _phoneNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "phoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18697")]
@@ -163,6 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _publicUserIdentity;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "publicUserIdentity", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18697")]
@@ -183,6 +185,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _networkVoicePortalNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "networkVoicePortalNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:18697")]

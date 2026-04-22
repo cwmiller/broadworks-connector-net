@@ -41,6 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.CommPilotExpressProfile? _profile;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "profile", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"de7795e1833d459a7eb89116d772fd78:77")]

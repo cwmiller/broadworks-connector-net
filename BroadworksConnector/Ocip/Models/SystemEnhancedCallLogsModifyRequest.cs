@@ -54,6 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _server1NetAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "server1NetAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:27058")]
@@ -114,6 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _server2NetAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "server2NetAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:27058")]
@@ -174,6 +176,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _sharedSecret;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "sharedSecret", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:27058")]
@@ -292,6 +295,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _eclQueryApplicationURL;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "eclQueryApplicationURL", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:27058")]
@@ -312,6 +316,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _eclQueryDataRepositoryURL;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "eclQueryDataRepositoryURL", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:27058")]

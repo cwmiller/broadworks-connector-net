@@ -60,6 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementDeviceTypeList _deviceTypeList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "deviceTypeList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:7706")]
@@ -78,6 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementTagSetList _tagSetList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "tagSetList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:7706")]

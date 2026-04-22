@@ -275,6 +275,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _greetingOnlyForwardDestination;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "greetingOnlyForwardDestination", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"0b10bca40a55275de6ba2076c583b7fd:128")]

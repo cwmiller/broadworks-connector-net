@@ -113,6 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _sipExternalDatabaseNetAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "sipExternalDatabaseNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"ba51f415ebda0240287c719bc767eadf:104")]
@@ -133,6 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _sipExternalDatabasePort;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "sipExternalDatabasePort", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"ba51f415ebda0240287c719bc767eadf:104")]
@@ -171,6 +173,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _soapExternalDatabaseNetAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "soapExternalDatabaseNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"ba51f415ebda0240287c719bc767eadf:104")]

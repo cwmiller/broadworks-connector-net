@@ -77,6 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _groupServer;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "groupServer", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"21e97b8199c6e7eff29a84874335b46e:86")]

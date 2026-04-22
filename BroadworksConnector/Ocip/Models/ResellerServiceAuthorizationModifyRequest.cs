@@ -40,6 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.FileResource _serviceOffering;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "serviceOffering", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d45e381d6dbac771631649063122a42e:849")]

@@ -18,6 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _addressLine1;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "addressLine1", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:5161")]
@@ -38,6 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _addressLine2;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "addressLine2", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:5161")]
@@ -58,6 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _city;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "city", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:5161")]
@@ -78,6 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _stateOrProvince;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "stateOrProvince", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:5161")]
@@ -118,6 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _zipOrPostalCode;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "zipOrPostalCode", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:5161")]
@@ -138,6 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _country;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "country", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:5161")]

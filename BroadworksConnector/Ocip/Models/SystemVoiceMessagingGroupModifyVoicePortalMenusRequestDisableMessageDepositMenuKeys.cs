@@ -18,6 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _disconnectAfterGreeting;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "disconnectAfterGreeting", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39853")]
@@ -38,6 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _forwardAfterGreeting;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "forwardAfterGreeting", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39853")]
@@ -58,6 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _changeForwardingDestination;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "changeForwardingDestination", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39853")]
@@ -98,6 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _repeatMenu;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39853")]

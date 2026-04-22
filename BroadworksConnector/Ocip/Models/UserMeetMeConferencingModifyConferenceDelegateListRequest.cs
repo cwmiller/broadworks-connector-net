@@ -57,6 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _conferenceDelegateUserList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "conferenceDelegateUserList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:869")]

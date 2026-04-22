@@ -257,6 +257,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _networkTranslationIndex;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "networkTranslationIndex", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:467")]
@@ -295,6 +296,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.TrunkGroupKey _pbxRouteIdentity;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "pbxRouteIdentity", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:467")]

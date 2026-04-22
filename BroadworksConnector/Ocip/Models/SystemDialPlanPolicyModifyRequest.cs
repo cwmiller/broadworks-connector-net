@@ -101,6 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _privateDigitMap;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "privateDigitMap", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:9332")]
@@ -139,6 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _deviceDigitMap;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "deviceDigitMap", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:9332")]

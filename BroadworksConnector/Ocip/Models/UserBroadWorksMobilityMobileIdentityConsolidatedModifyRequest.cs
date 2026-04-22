@@ -83,6 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _description;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1692")]
@@ -391,6 +392,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.BroadWorksMobilityAlertingMobileNumberReplacementList _mobileNumbersAlerted;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "mobileNumbersAlerted", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1692")]
@@ -427,6 +429,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ScheduleGlobalKey _timeSchedule;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "timeSchedule", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1692")]
@@ -445,6 +448,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ScheduleGlobalKey _holidaySchedule;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holidaySchedule", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1692")]
@@ -463,6 +467,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ConsolidatedSharedCallAppearanceAccessDeviceMultipleIdentityEndpoint _accessDeviceEndpoint;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = true, Namespace = "")]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1717")]
         public BroadWorksConnector.Ocip.Models.ConsolidatedSharedCallAppearanceAccessDeviceMultipleIdentityEndpoint AccessDeviceEndpoint
@@ -480,6 +485,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _outboundAlternateNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "outboundAlternateNumber", IsNullable = true, Namespace = "")]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1717")]
         [MinLength(1)]
@@ -553,6 +559,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _networkTranslationIndex;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "networkTranslationIndex", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1692")]

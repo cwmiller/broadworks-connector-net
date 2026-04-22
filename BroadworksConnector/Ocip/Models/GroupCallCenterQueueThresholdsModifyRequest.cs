@@ -58,6 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _thresholdCurrentCallsInQueueYellow;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "thresholdCurrentCallsInQueueYellow", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5761")]
@@ -78,6 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _thresholdCurrentCallsInQueueRed;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "thresholdCurrentCallsInQueueRed", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5761")]
@@ -98,6 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _thresholdCurrentLongestWaitingCallYellow;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "thresholdCurrentLongestWaitingCallYellow", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5761")]
@@ -118,6 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _thresholdCurrentLongestWaitingCallRed;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "thresholdCurrentLongestWaitingCallRed", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5761")]
@@ -138,6 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _thresholdAverageEstimatedWaitTimeYellow;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "thresholdAverageEstimatedWaitTimeYellow", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5761")]
@@ -158,6 +163,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _thresholdAverageEstimatedWaitTimeRed;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "thresholdAverageEstimatedWaitTimeRed", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5761")]
@@ -178,6 +184,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _thresholdAverageHandlingTimeYellow;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "thresholdAverageHandlingTimeYellow", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5761")]
@@ -198,6 +205,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _thresholdAverageHandlingTimeRed;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "thresholdAverageHandlingTimeRed", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5761")]
@@ -218,6 +226,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _thresholdAverageSpeedOfAnswerYellow;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "thresholdAverageSpeedOfAnswerYellow", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5761")]
@@ -238,6 +247,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _thresholdAverageSpeedOfAnswerRed;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "thresholdAverageSpeedOfAnswerRed", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5761")]
@@ -276,6 +286,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.CallCenterQueueThresholdReplacementNotificationEmailList _notificationEmailAddressList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "notificationEmailAddressList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5761")]

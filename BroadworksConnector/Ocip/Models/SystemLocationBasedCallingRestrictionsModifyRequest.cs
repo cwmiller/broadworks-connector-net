@@ -111,6 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _mccMncRoamingNetworkTranslationIndex;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "mccMncRoamingNetworkTranslationIndex", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4489f4baeefa41b8df0a86def4c05cd8:81")]

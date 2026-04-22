@@ -58,6 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _messageDeskNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "messageDeskNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"aa3a240fa755015613cfb9259eccafef:324")]

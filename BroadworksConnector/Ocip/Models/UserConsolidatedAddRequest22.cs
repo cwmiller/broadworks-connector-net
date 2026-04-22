@@ -812,6 +812,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _thirdPartyVoiceMailServerUserServer;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "thirdPartyVoiceMailServerUserServer", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1334")]
@@ -850,6 +851,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _thirdPartyVoiceMailMailboxURL;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "thirdPartyVoiceMailMailboxURL", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1334")]

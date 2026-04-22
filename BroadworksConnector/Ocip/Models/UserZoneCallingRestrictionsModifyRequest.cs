@@ -40,6 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _homeZoneName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "homeZoneName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1d57523802a1435faa76c4035da1e4dc:132")]

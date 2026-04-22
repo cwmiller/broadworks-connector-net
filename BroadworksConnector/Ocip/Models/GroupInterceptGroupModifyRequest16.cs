@@ -152,6 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _newPhoneNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "newPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:3437")]
@@ -190,6 +191,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _transferPhoneNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "transferPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:3437")]
@@ -228,6 +230,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _outboundReroutePhoneNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "outboundReroutePhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:3437")]

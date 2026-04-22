@@ -54,6 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _note;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "note", IsNullable = true, Namespace = "")]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:4084")]
         [MinLength(1)]

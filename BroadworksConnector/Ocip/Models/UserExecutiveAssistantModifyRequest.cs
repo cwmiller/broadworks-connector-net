@@ -58,6 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _divertToPhoneNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "divertToPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d531efc7ebfdf83cc344962728505dd5:80")]

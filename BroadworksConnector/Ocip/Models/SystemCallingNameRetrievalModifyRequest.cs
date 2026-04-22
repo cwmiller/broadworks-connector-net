@@ -44,6 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _serverNetAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "serverNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:21935")]
@@ -64,6 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _serverPort;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "serverPort", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:21935")]

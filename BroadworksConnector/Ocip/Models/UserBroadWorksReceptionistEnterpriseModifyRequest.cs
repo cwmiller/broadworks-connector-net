@@ -40,6 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _monitoredUserIdList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "monitoredUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"44477d346d2631b033071e12af214ac8:216")]

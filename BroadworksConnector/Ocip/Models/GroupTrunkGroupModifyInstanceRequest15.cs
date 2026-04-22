@@ -64,6 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _pilotUserId;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "pilotUserId", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
@@ -84,6 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.DepartmentKey _department;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "department", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
@@ -102,6 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "accessDevice", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
@@ -139,6 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _maxIncomingCalls;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "maxIncomingCalls", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
@@ -159,6 +163,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _maxOutgoingCalls;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "maxOutgoingCalls", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
@@ -197,6 +202,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _burstingMaxActiveCalls;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "burstingMaxActiveCalls", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
@@ -217,6 +223,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _burstingMaxIncomingCalls;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "burstingMaxIncomingCalls", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
@@ -237,6 +244,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _burstingMaxOutgoingCalls;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "burstingMaxOutgoingCalls", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
@@ -257,6 +265,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.TrunkGroupCapacityExceededAction? _capacityExceededAction;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "capacityExceededAction", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
@@ -275,6 +284,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _capacityExceededForwardAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "capacityExceededForwardAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
@@ -295,6 +305,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.TrunkGroupKey _capacityExceededRerouteTrunkGroupKey;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "capacityExceededRerouteTrunkGroupKey", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
@@ -351,6 +362,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.TrunkGroupUnreachableDestinationAction? _unreachableDestinationAction;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "unreachableDestinationAction", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
@@ -369,6 +381,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _unreachableDestinationForwardAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "unreachableDestinationForwardAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
@@ -389,6 +402,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.TrunkGroupKey _unreachableDestinationRerouteTrunkGroupKey;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "unreachableDestinationRerouteTrunkGroupKey", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
@@ -445,6 +459,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _sipAuthenticationUserName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "sipAuthenticationUserName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
@@ -465,6 +480,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _sipAuthenticationPassword;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "sipAuthenticationPassword", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
@@ -485,6 +501,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _hostedUserIdList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "hostedUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
@@ -503,6 +520,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _trunkGroupIdentity;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "trunkGroupIdentity", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
@@ -523,6 +541,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _otgDtgIdentity;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "otgDtgIdentity", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
@@ -741,6 +760,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.TrunkGroupCallForwardingAlwaysAction? _callForwardingAlwaysAction;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "callForwardingAlwaysAction", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
@@ -759,6 +779,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _callForwardingAlwaysForwardAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "callForwardingAlwaysForwardAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
@@ -779,6 +800,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.TrunkGroupKey _callForwardingAlwaysRerouteTrunkGroupKey;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "callForwardingAlwaysRerouteTrunkGroupKey", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
@@ -797,6 +819,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _peeringDomain;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "peeringDomain", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]
@@ -853,6 +876,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _prefix;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "prefix", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:16178")]

@@ -370,6 +370,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _supportedMediaSetName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "supportedMediaSetName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:2446")]
@@ -958,6 +959,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _routeOverrideDomain;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "routeOverrideDomain", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:2446")]
@@ -978,6 +980,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _routeOverridePrefix;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "routeOverridePrefix", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:2446")]
@@ -1034,6 +1037,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _networkCallsGatewayRouteIdentity;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "networkCallsGatewayRouteIdentity", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:2446")]
@@ -1054,6 +1058,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _networkURLCallsGatewayRouteIdentity;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "networkURLCallsGatewayRouteIdentity", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:2446")]
@@ -1074,6 +1079,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _emergencyCallsGatewayRouteIdentity;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "emergencyCallsGatewayRouteIdentity", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:2446")]
@@ -1094,6 +1100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _repairCallsGatewayRouteIdentity;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "repairCallsGatewayRouteIdentity", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:2446")]
@@ -1114,6 +1121,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _callTypingErrorsGatewayRouteIdentity;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "callTypingErrorsGatewayRouteIdentity", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:2446")]

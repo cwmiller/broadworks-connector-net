@@ -102,6 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _deviceAccessAppServerClusterName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "deviceAccessAppServerClusterName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:7215")]

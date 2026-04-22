@@ -153,6 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _reportingServerName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "reportingServerName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:6822")]
@@ -300,6 +301,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _wrapUpSeconds;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "wrapUpSeconds", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:6822")]
@@ -338,6 +340,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _forceDeliveryWaitTimeSeconds;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "forceDeliveryWaitTimeSeconds", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:6822")]
@@ -394,6 +397,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _agentUnavailableCode;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "agentUnavailableCode", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:6822")]

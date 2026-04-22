@@ -249,6 +249,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _supportedMediaSetName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "supportedMediaSetName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:8748")]

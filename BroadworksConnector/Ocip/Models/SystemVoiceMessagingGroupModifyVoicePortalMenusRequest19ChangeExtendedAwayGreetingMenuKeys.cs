@@ -18,6 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _activateExtendedAwayGreeting;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "activateExtendedAwayGreeting", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1323")]
@@ -38,6 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _deactivateExtendedAwayGreeting;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "deactivateExtendedAwayGreeting", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1323")]
@@ -58,6 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _recordNewGreeting;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "recordNewGreeting", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1323")]
@@ -78,6 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _listenToCurrentGreeting;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "listenToCurrentGreeting", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1323")]
@@ -98,6 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _enableMessageDeposit;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "enableMessageDeposit", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1323")]
@@ -118,6 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _disableMessageDeposit;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "disableMessageDeposit", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1323")]
@@ -158,6 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _repeatMenu;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1323")]

@@ -196,6 +196,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _collaborateFromAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "collaborateFromAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:25294")]

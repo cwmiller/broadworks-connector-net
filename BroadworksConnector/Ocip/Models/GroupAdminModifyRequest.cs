@@ -45,6 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _firstName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "firstName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:1827")]
@@ -65,6 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _lastName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "lastName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:1827")]
@@ -85,6 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _password;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "password", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:1827")]

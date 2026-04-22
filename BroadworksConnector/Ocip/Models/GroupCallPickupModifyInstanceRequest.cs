@@ -98,6 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _userIdList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "userIdList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e52f623f7e5f77c5ed7bb6ba0012d5cd:355")]

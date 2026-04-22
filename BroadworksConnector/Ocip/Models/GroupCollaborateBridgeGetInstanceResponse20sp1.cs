@@ -134,6 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _collaborateOwnerUserTable;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "collaborateOwnerUserTable", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"bc805893b9cc7e3e01eec64e9ad62768:416")]

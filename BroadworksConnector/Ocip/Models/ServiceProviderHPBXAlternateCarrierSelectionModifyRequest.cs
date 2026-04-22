@@ -58,6 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _preselectedLocalCarrier;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "preselectedLocalCarrier", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:4727")]
@@ -78,6 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _preselectedDistantCarrier;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "preselectedDistantCarrier", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:4727")]

@@ -98,6 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.Holiday _holiday01;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holiday01", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:10430")]
@@ -116,6 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.Holiday _holiday02;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holiday02", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:10430")]
@@ -134,6 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.Holiday _holiday03;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holiday03", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:10430")]
@@ -152,6 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.Holiday _holiday04;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holiday04", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:10430")]
@@ -170,6 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.Holiday _holiday05;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holiday05", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:10430")]
@@ -188,6 +193,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.Holiday _holiday06;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holiday06", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:10430")]
@@ -206,6 +212,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.Holiday _holiday07;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holiday07", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:10430")]
@@ -224,6 +231,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.Holiday _holiday08;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holiday08", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:10430")]
@@ -242,6 +250,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.Holiday _holiday09;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holiday09", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:10430")]
@@ -260,6 +269,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.Holiday _holiday10;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holiday10", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:10430")]
@@ -278,6 +288,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.Holiday _holiday11;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holiday11", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:10430")]
@@ -296,6 +307,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.Holiday _holiday12;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holiday12", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:10430")]
@@ -314,6 +326,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.Holiday _holiday13;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holiday13", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:10430")]
@@ -332,6 +345,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.Holiday _holiday14;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holiday14", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:10430")]
@@ -350,6 +364,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.Holiday _holiday15;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holiday15", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:10430")]
@@ -368,6 +383,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.Holiday _holiday16;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holiday16", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:10430")]
@@ -386,6 +402,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.Holiday _holiday17;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holiday17", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:10430")]
@@ -404,6 +421,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.Holiday _holiday18;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holiday18", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:10430")]
@@ -422,6 +440,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.Holiday _holiday19;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holiday19", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:10430")]
@@ -440,6 +459,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.Holiday _holiday20;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holiday20", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:10430")]

@@ -54,6 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _treatmentId;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "treatmentId", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:1536")]
@@ -74,6 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _transferNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "transferNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:1536")]
@@ -94,6 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _callTimeoutSeconds;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "callTimeoutSeconds", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:1536")]

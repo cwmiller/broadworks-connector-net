@@ -37,6 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _carrier;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "carrier", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:608")]

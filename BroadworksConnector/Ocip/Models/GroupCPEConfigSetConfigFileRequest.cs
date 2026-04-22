@@ -81,6 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.FileResource _configFile;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "configFile", IsNullable = true, Namespace = "")]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:3199")]
         public BroadWorksConnector.Ocip.Models.FileResource ConfigFile

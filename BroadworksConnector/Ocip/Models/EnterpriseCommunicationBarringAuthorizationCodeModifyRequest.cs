@@ -59,6 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _description;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:274")]
@@ -79,6 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _networkClassOfService;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "networkClassOfService", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:274")]

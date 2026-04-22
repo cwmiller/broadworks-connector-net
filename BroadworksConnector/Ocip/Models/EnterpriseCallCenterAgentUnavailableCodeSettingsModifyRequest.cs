@@ -58,6 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _defaultAgentUnavailableCodeOnDND;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultAgentUnavailableCodeOnDND", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:898")]
@@ -78,6 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _defaultAgentUnavailableCodeOnPersonalCalls;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultAgentUnavailableCodeOnPersonalCalls", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:898")]
@@ -98,6 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _defaultAgentUnavailableCodeOnConsecutiveBounces;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultAgentUnavailableCodeOnConsecutiveBounces", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:898")]
@@ -118,6 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _defaultAgentUnavailableCodeOnNotReachable;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultAgentUnavailableCodeOnNotReachable", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:898")]
@@ -156,6 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _defaultAgentUnavailableCode;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultAgentUnavailableCode", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:898")]

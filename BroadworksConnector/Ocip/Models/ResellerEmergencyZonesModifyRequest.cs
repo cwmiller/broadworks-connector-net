@@ -40,6 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _defaultFromAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultFromAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"993492ea5726d0f3ec8743f5cef40e23:243")]

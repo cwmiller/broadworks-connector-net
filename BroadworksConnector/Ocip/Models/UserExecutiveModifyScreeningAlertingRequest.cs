@@ -167,6 +167,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _alertingCustomCallingLineIdName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "alertingCustomCallingLineIdName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:422")]
@@ -187,6 +188,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _unicodeAlertingCustomCallingLineIdName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "unicodeAlertingCustomCallingLineIdName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:422")]
@@ -225,6 +227,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _alertingCustomCallingLineIdPhoneNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "alertingCustomCallingLineIdPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:422")]
@@ -303,6 +306,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _rolloverWaitTimeSeconds;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "rolloverWaitTimeSeconds", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:422")]
@@ -341,6 +345,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _rolloverForwardToPhoneNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "rolloverForwardToPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:422")]

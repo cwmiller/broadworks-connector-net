@@ -40,6 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _originatingServiceKey;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "originatingServiceKey", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"841786e27ac49a43576369a93b4cc726:73")]
@@ -60,6 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _terminatingServiceKey;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "terminatingServiceKey", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"841786e27ac49a43576369a93b4cc726:73")]

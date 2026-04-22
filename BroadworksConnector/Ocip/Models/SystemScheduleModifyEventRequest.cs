@@ -166,6 +166,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.Recurrence _recurrence;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "recurrence", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:16031")]

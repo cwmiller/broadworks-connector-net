@@ -75,6 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _confirmationKey;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "confirmationKey", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"00df0beea0b5305e1c9d56717c27f995:76")]

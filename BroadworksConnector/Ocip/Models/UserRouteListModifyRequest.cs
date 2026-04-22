@@ -112,6 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementDNList _assignedNumberRangeStartList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "assignedNumberRangeStartList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"500f9871ed90b8ab3fbd262883ab503b:858")]
@@ -130,6 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.EnterpriseTrunkReplacementNumberPrefixList _assignedNumberPrefixList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "assignedNumberPrefixList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"500f9871ed90b8ab3fbd262883ab503b:858")]

@@ -21,6 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _serviceNetAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "serviceNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"b1b5afcbe1032212748a9c624f00158f:71")]
@@ -41,6 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _servicePort;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "servicePort", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"b1b5afcbe1032212748a9c624f00158f:71")]
@@ -61,6 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _boshURL;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "boshURL", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"b1b5afcbe1032212748a9c624f00158f:71")]

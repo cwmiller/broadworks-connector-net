@@ -116,6 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _groupName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "groupName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:6171")]
@@ -136,6 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _callingLineIdName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "callingLineIdName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:6171")]
@@ -156,6 +158,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _callingLineIdPhoneNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "callingLineIdPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:6171")]
@@ -196,6 +199,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _locationDialingCode;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "locationDialingCode", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:6171")]
@@ -252,6 +256,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _servicePolicy;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "servicePolicy", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:6171")]
@@ -272,6 +277,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _callProcessingSliceId;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "callProcessingSliceId", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:6171")]
@@ -292,6 +298,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _provisioningSliceId;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "provisioningSliceId", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:6171")]
@@ -312,6 +319,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _subscriberPartition;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "subscriberPartition", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:6171")]
@@ -332,6 +340,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _preferredDataCenter;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "preferredDataCenter", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:6171")]
@@ -352,6 +361,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _defaultUserCallingLineIdPhoneNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultUserCallingLineIdPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:6171")]
@@ -390,6 +400,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.DialPlanPolicyAccessCode _dialPlanAccessCode;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "dialPlanAccessCode", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:6171")]

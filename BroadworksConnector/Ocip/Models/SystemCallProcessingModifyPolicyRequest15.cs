@@ -213,6 +213,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _supportedMediaSetName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "supportedMediaSetName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:3141")]
@@ -377,6 +378,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _conferenceURI;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "conferenceURI", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:3141")]
@@ -843,6 +845,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _routeOverrideDomain;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "routeOverrideDomain", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:3141")]
@@ -863,6 +866,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _routeOverridePrefix;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "routeOverridePrefix", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:3141")]

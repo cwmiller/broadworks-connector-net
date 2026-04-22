@@ -90,6 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _publicDigitMap;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "publicDigitMap", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:2899")]
@@ -110,6 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _privateDigitMap;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "privateDigitMap", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:2899")]

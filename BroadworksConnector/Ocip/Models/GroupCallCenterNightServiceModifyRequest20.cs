@@ -59,6 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.TimeSchedule _businessHours;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "businessHours", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5381")]
@@ -113,6 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _transferPhoneNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "transferPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5381")]

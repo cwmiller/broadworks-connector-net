@@ -18,6 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _activateCallForwarding;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "activateCallForwarding", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1381")]
@@ -38,6 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _deactivateCallForwarding;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "deactivateCallForwarding", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1381")]
@@ -58,6 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _changeCallForwardingDestination;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "changeCallForwardingDestination", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1381")]
@@ -78,6 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _listenToCallForwardingStatus;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "listenToCallForwardingStatus", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1381")]
@@ -118,6 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _repeatMenu;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1381")]

@@ -38,6 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _repeatMenuOrFinishEnteringDistributionListNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "repeatMenuOrFinishEnteringDistributionListNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39765")]

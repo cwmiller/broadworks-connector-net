@@ -210,6 +210,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _supportedMediaSetName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "supportedMediaSetName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:18982")]
@@ -374,6 +375,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _conferenceURI;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "conferenceURI", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:18982")]

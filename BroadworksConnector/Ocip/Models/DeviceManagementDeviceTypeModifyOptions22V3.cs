@@ -62,6 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _tagSet;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "tagSet", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:2300")]
@@ -154,6 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _deviceAccessNetAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "deviceAccessNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:2300")]
@@ -174,6 +176,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _deviceAccessPort;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "deviceAccessPort", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:2300")]
@@ -194,6 +197,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _deviceAccessContext;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "deviceAccessContext", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:2300")]
@@ -214,6 +218,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _defaultDeviceLanguage;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultDeviceLanguage", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:2300")]
@@ -234,6 +239,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _defaultDeviceEncoding;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultDeviceEncoding", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:2300")]
@@ -254,6 +260,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.DeviceManagementUserNamePassword16 _accessDeviceCredentials;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "accessDeviceCredentials", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:2300")]
@@ -362,6 +369,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _macFormatInNonRequestURI;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "macFormatInNonRequestURI", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:2300")]
@@ -400,6 +408,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _deviceModel;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "deviceModel", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:2300")]
@@ -420,6 +429,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _autoLinkingDeviceType;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "autoLinkingDeviceType", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:2300")]

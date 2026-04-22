@@ -308,6 +308,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _busyPersonalAudioFile;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "busyPersonalAudioFile", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2081")]
@@ -326,6 +327,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _busyPersonalVideoFile;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "busyPersonalVideoFile", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2081")]
@@ -362,6 +364,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _noAnswerPersonalAudioFile;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "noAnswerPersonalAudioFile", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2081")]
@@ -380,6 +383,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _noAnswerPersonalVideoFile;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "noAnswerPersonalVideoFile", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2081")]
@@ -488,6 +492,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _extendedAwayAudioFile;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "extendedAwayAudioFile", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2081")]
@@ -506,6 +511,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _extendedAwayVideoFile;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "extendedAwayVideoFile", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2081")]
@@ -578,6 +584,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _greetingOnlyForwardDestination;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "greetingOnlyForwardDestination", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2081")]
@@ -616,6 +623,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementOutgoingDNList _outgoingSMDIMWIPhoneNumberList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "outgoingSMDIMWIPhoneNumberList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2081")]
@@ -670,6 +678,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.EmailAddressList _voiceMessageDeliveryEmailAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "voiceMessageDeliveryEmailAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2081")]
@@ -724,6 +733,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _voiceMessageNotifyEmailAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "voiceMessageNotifyEmailAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2081")]
@@ -762,6 +772,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _voiceMessageCarbonCopyEmailAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "voiceMessageCarbonCopyEmailAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2081")]
@@ -800,6 +811,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _transferPhoneNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "transferPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2081")]
@@ -928,6 +940,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _personalizedNameAudioFile;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "personalizedNameAudioFile", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2081")]
@@ -946,6 +959,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.VoiceMessagingAliasReplacementList _userMessagingAliasList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "userMessagingAliasList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2081")]

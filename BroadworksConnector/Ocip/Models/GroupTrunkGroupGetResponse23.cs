@@ -95,13 +95,13 @@ namespace BroadWorksConnector.Ocip.Models
             get => _maxAvailableNumberOfBurstingBTLUs;
             set
             {
-                MaxAvailableNumberOfBurstingBTLUsSpecified = true;
+                MaxAvailableNumberOfBurstingBTLUs Specified = true;
                 _maxAvailableNumberOfBurstingBTLUs = value;
             }
         }
 
         [XmlIgnore]
-        protected bool MaxAvailableNumberOfBurstingBTLUsSpecified { get; set; }
+        protected bool MaxAvailableNumberOfBurstingBTLUs Specified { get; set; }
 
         protected int? _numberOfBurstingBTLUs;
 

@@ -40,6 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _listURI;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "listURI", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"b1745b5f688013b73224574a66f4f4b2:210")]
@@ -60,6 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _monitoredUserIdList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "monitoredUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"b1745b5f688013b73224574a66f4f4b2:210")]

@@ -99,6 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _originatorCLIDPrefix;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "originatorCLIDPrefix", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"8ede928f2a9c1318573ba9c7a105655c:422")]

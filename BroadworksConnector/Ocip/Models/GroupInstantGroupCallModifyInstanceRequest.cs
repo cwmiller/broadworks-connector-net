@@ -58,6 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementOutgoingDNorSIPURIList _destinationPhoneNumberList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "destinationPhoneNumberList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6c8b59f80404b6283b25be24c263cb12:174")]
@@ -94,6 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _answerTimeoutMinutes;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "answerTimeoutMinutes", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6c8b59f80404b6283b25be24c263cb12:174")]

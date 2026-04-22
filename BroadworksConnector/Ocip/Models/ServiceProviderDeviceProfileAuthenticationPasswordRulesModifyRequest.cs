@@ -302,6 +302,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _permanentLockoutNotifyEmailAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "permanentLockoutNotifyEmailAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:3150")]

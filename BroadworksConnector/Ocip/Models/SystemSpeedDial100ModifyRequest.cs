@@ -21,6 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _prefix;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "prefix", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e084de202cf726c3202fca43390f9ec5:127")]

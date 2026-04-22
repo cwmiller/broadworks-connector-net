@@ -40,6 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _defaultExtensionLength;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultExtensionLength", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:4253")]
@@ -60,6 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _locationRoutingPrefixDigit;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "locationRoutingPrefixDigit", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:4253")]
@@ -80,6 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _locationCodeLength;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "locationCodeLength", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:4253")]

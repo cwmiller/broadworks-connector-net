@@ -100,6 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _hostUserId;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "hostUserId", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:18227")]

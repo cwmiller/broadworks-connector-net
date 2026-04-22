@@ -78,6 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementOutgoingDNorSIPURIList _simRingPhoneNumberList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "simRingPhoneNumberList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:47469")]

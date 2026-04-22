@@ -40,6 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _classmark;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "classmark", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"bd23272215266344f26a1702c47ce590:204")]

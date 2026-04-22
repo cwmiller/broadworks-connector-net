@@ -102,6 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.DepartmentKey _newParentDepartmentKey;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "newParentDepartmentKey", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:3751")]
@@ -120,6 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _callingLineIdName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "callingLineIdName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:3751")]
@@ -140,6 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _callingLineIdPhoneNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "callingLineIdPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4b0e7857796c636464362260a2f8e5ee:3751")]

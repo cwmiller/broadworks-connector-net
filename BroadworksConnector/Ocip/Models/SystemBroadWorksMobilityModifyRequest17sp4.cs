@@ -133,6 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _scfSignalingNetAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "scfSignalingNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:21180")]
@@ -153,6 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _scfSignalingPort;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "scfSignalingPort", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:21180")]

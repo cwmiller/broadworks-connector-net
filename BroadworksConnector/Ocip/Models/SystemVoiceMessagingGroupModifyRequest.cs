@@ -169,6 +169,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _mailServerNetAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "mailServerNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39464")]
@@ -359,6 +360,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _defaultExternalRoutingAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultExternalRoutingAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39464")]

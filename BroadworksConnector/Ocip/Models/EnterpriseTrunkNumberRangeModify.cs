@@ -37,6 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _extensionLength;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "extensionLength", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:3104")]

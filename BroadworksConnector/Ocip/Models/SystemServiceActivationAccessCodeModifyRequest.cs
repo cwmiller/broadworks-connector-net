@@ -39,6 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _terminatingAccessCode;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "terminatingAccessCode", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:16220")]
@@ -59,6 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _redirectingAccessCode;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "redirectingAccessCode", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:16220")]
@@ -79,6 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _clickToDialAccessCode;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "clickToDialAccessCode", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:16220")]

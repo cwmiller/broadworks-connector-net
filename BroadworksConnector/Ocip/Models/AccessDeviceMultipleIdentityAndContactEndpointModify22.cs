@@ -64,6 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _privateIdentity;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "privateIdentity", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:376")]
@@ -84,6 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementContactList22 _contactList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "contactList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:376")]
@@ -140,6 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _hotlineContact;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "hotlineContact", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:376")]

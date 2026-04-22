@@ -82,6 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _description;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"f39163d0e42e05c4a1692a62f625df9f:559")]
@@ -120,6 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _outboundAlternateNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "outboundAlternateNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"f39163d0e42e05c4a1692a62f625df9f:559")]

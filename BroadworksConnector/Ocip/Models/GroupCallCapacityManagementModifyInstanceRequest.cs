@@ -118,6 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _maxIncomingActiveCallsAllowed;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "maxIncomingActiveCallsAllowed", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"f7e3b48428e45d35b1edd744adc90f9b:246")]
@@ -138,6 +139,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _maxOutgoingActiveCallsAllowed;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "maxOutgoingActiveCallsAllowed", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"f7e3b48428e45d35b1edd744adc90f9b:246")]
@@ -176,6 +178,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _userIdList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "userIdList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"f7e3b48428e45d35b1edd744adc90f9b:246")]

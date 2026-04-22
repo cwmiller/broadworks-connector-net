@@ -21,6 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _provisioningUrl;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "provisioningUrl", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2648")]
@@ -41,6 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _provisioningUserId;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "provisioningUserId", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2648")]
@@ -61,6 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _provisioningPassword;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "provisioningPassword", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2648")]
@@ -99,6 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _proxyHost;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "proxyHost", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2648")]

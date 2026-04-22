@@ -37,6 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _deviceLanguage;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "deviceLanguage", IsNullable = true, Namespace = "")]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:2839")]
         [MinLength(1)]

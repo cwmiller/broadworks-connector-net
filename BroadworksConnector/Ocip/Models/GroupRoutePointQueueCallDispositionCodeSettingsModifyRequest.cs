@@ -94,6 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.CallDispositionCodeWithLevel _defaultCallDispositionCode;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultCallDispositionCode", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e474d11df9a1d1d1041e589793e40de8:1196")]

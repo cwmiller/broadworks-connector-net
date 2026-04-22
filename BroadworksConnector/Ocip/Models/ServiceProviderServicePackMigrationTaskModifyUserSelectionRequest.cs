@@ -78,6 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementUserServiceList _userServiceNameList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "userServiceNameList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6611")]
@@ -96,6 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementServicePackNameList _servicePackNameList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "servicePackNameList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6611")]

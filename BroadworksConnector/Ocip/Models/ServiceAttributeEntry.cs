@@ -37,6 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _value;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "value", IsNullable = true, Namespace = "")]
         [Group(@"da582a1f8028404e70d260cf1f891033:20254")]
         [MinLength(1)]

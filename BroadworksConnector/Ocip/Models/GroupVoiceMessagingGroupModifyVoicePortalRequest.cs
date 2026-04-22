@@ -190,6 +190,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _externalRoutingAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "externalRoutingAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:292")]
@@ -210,6 +211,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _homeZoneName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "homeZoneName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:292")]

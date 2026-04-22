@@ -117,6 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _routeExhaustionForwardAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "routeExhaustionForwardAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:429")]
@@ -189,6 +190,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _maxActiveCalls;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "maxActiveCalls", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:429")]
@@ -208,6 +210,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _capacityExceededTrapInitialCalls;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "capacityExceededTrapInitialCalls", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:429")]
@@ -227,6 +230,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _capacityExceededTrapOffsetCalls;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "capacityExceededTrapOffsetCalls", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:429")]
@@ -246,6 +250,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _maximumActiveIncomingCallsAllowed;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "maximumActiveIncomingCallsAllowed", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:429")]
@@ -265,6 +270,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _maximumActiveOutgoingCallsAllowed;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "maximumActiveOutgoingCallsAllowed", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:429")]
@@ -284,6 +290,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _minimumActiveCallsReserved;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "minimumActiveCallsReserved", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"090e91b2d78e873f5d76a2f16af08d3a:429")]

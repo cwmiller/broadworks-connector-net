@@ -44,6 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _reportingServerName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "reportingServerName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:7444")]
@@ -64,6 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _supervisorUserIdList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "supervisorUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:7444")]

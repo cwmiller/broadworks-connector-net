@@ -58,6 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _dnisPhoneNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "dnisPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5140")]
@@ -78,6 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _extension;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "extension", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5140")]
@@ -116,6 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _callingLineIdPhoneNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "callingLineIdPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5140")]
@@ -136,6 +139,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _callingLineIdLastName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "callingLineIdLastName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5140")]
@@ -156,6 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _callingLineIdFirstName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "callingLineIdFirstName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:5140")]

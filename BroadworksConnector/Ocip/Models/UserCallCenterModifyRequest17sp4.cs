@@ -83,6 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _agentUnavailableCode;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "agentUnavailableCode", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:41307")]
@@ -287,6 +288,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.DNISKey _outgoingCallDNIS;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "outgoingCallDNIS", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:41307")]

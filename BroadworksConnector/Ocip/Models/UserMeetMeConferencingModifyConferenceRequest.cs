@@ -79,6 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _estimatedParticipants;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "estimatedParticipants", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:908")]
@@ -135,6 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _accountCode;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "accountCode", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:908")]

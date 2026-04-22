@@ -45,6 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _conferenceFromAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "conferenceFromAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:379")]

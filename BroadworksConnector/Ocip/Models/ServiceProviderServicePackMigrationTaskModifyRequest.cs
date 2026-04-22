@@ -156,6 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _reportDeliveryEmailAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "reportDeliveryEmailAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6583")]
@@ -194,6 +195,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _abortErrorThreshold;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "abortErrorThreshold", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6583")]

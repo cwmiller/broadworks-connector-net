@@ -72,6 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _abandonedCallIntervalSeconds;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "abandonedCallIntervalSeconds", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:7684")]

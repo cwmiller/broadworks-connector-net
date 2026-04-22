@@ -18,6 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _activateConfGreeting;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "activateConfGreeting", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1268")]
@@ -38,6 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _deactivateConfGreeting;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "deactivateConfGreeting", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1268")]
@@ -58,6 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _recordNewConfGreeting;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "recordNewConfGreeting", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1268")]
@@ -78,6 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _listenToCurrentConfGreeting;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "listenToCurrentConfGreeting", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1268")]
@@ -118,6 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _repeatMenu;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1268")]

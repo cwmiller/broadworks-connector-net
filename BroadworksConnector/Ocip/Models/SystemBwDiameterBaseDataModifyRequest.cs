@@ -21,6 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _xsRealm;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "xsRealm", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2721")]
@@ -117,6 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _psRealm;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "psRealm", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:2721")]

@@ -76,6 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.SimultaneousRingReplacementNumberList _simultaneousRingNumberList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "simultaneousRingNumberList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d6190622c16e29d798f0976799563da5:177")]

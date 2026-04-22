@@ -95,6 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _groupCustomContactDirectory;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "groupCustomContactDirectory", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:80")]

@@ -58,6 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementContactList22 _contactList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "contactList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:5514")]

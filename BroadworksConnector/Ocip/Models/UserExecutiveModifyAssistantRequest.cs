@@ -58,6 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _assistantUserIdList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "assistantUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:357")]

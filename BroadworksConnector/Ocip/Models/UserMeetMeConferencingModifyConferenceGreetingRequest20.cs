@@ -75,6 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.AnnouncementFileKey _entranceGreetingFile;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "entranceGreetingFile", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"adf25df72505d1c476ebb480b6cce18d:887")]

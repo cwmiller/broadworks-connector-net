@@ -76,6 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _voiceMessageDeliveryEmailAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "voiceMessageDeliveryEmailAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:19082")]
@@ -132,6 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _voiceMessageNotifyEmailAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "voiceMessageNotifyEmailAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:19082")]
@@ -170,6 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _voiceMessageCarbonCopyEmailAddress;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "voiceMessageCarbonCopyEmailAddress", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:19082")]
@@ -208,6 +211,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _transferPhoneNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "transferPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"240b50f54d060859e5e275082fdf49f9:19082")]

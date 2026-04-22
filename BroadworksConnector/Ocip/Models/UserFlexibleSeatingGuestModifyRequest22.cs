@@ -100,6 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _unlockPhonePINCode;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "unlockPhonePINCode", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1d4e390f8cd01ca6f92589024d74dac6:449")]
@@ -120,6 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointModify22 _accessDeviceEndpoint;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1d4e390f8cd01ca6f92589024d74dac6:449")]
@@ -138,6 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _hostUserId;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "hostUserId", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1d4e390f8cd01ca6f92589024d74dac6:449")]

@@ -18,6 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.TrunkGroupDeviceEndpointModify _trunkGroupDeviceEndpoint;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "trunkGroupDeviceEndpoint", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:5278")]
@@ -36,6 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _enterpriseTrunkName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "enterpriseTrunkName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:5278")]
@@ -56,6 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _alternateTrunkIdentity;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "alternateTrunkIdentity", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:5278")]

@@ -79,6 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _servicePackDescription;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "servicePackDescription", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"e19a9072c2dad499e9f28837da5768db:6649")]

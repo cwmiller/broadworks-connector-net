@@ -37,6 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementUserIdList _agents;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "agents", IsNullable = true, Namespace = "")]
         [Group(@"4d65d3449061c568639c8cc1e2492285:7383")]
         public BroadWorksConnector.Ocip.Models.ReplacementUserIdList Agents

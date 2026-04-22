@@ -94,6 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.MaliciousCallTraceTimePeriod _traceTimePeriod;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "traceTimePeriod", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"be7f3162f133f8d7fcc75e712b0258e6:187")]

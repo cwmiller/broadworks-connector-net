@@ -36,6 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.AutoAttendantKeyConfigurationModifyEntry _entry;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "entry", IsNullable = true, Namespace = "")]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:823")]
         public BroadWorksConnector.Ocip.Models.AutoAttendantKeyConfigurationModifyEntry Entry

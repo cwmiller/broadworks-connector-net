@@ -72,6 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _serviceDomain;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "serviceDomain", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"37cec25308bcc82fe5a80bf541c42c89:247")]
@@ -92,6 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _servicePort;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "servicePort", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"37cec25308bcc82fe5a80bf541c42c89:247")]
@@ -130,6 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _provisioningUrl;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "provisioningUrl", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"37cec25308bcc82fe5a80bf541c42c89:247")]
@@ -150,6 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _provisioningUserId;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "provisioningUserId", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"37cec25308bcc82fe5a80bf541c42c89:247")]
@@ -170,6 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _provisioningPassword;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "provisioningPassword", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"37cec25308bcc82fe5a80bf541c42c89:247")]
@@ -190,6 +195,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _boshURL;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "boshURL", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"37cec25308bcc82fe5a80bf541c42c89:247")]

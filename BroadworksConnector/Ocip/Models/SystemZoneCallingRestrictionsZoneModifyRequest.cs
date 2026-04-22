@@ -44,6 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _physicalLocation;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "physicalLocation", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:40027")]

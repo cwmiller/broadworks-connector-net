@@ -100,6 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _maxUserOriginatingSessions;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "maxUserOriginatingSessions", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:740")]
@@ -119,6 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _maxUserTerminatingSessions;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "maxUserTerminatingSessions", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:740")]
@@ -157,6 +159,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _reservedUserOriginatingSessions;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "reservedUserOriginatingSessions", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:740")]
@@ -176,6 +179,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _reservedUserTerminatingSessions;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "reservedUserTerminatingSessions", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:740")]
@@ -231,6 +235,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.ReplacementEnterpriseDeviceList _deviceList;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "deviceList", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:740")]
@@ -267,6 +272,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _mediaGroupName;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "mediaGroupName", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:740")]
@@ -287,6 +293,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _accessInfoPattern;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "accessInfoPattern", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"405ec18fe08719ecf74e749d7e18c88f:740")]

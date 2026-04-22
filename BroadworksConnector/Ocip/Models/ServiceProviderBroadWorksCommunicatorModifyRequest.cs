@@ -40,6 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _configurationServerURL;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "configurationServerURL", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"b4095e83c8aa84e850615ffe7d48b0d6:72")]

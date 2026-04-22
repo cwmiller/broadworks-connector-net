@@ -38,6 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _changeCurrentReply;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "changeCurrentReply", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39739")]
@@ -58,6 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _listenToCurrentReply;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "listenToCurrentReply", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39739")]
@@ -78,6 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _setOrClearUrgentIndicator;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "setOrClearUrgentIndicator", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39739")]
@@ -98,6 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _setOrClearConfidentialIndicator;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "setOrClearConfidentialIndicator", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39739")]
@@ -138,6 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _repeatMenu;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:39739")]

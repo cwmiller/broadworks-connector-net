@@ -96,6 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _reportingEmailAddress1;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "reportingEmailAddress1", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:6902")]
@@ -116,6 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _reportingEmailAddress2;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "reportingEmailAddress2", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d8f04177e438f303b41c211e518706bf:6902")]

@@ -58,6 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _remoteOfficePhoneNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "remoteOfficePhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"dbef84b1c59b67471031e429db8fd980:73")]

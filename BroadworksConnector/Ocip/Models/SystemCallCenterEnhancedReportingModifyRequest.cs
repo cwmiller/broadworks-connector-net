@@ -39,6 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _reportApplicationURL;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "reportApplicationURL", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:6076")]
@@ -59,6 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _repositoryApplicationURL;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "repositoryApplicationURL", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"4d65d3449061c568639c8cc1e2492285:6076")]

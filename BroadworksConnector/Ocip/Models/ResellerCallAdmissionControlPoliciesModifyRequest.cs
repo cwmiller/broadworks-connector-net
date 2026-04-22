@@ -78,6 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _maxConcurrentNetworkSessionsThreshold;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "maxConcurrentNetworkSessionsThreshold", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d45e381d6dbac771631649063122a42e:351")]
@@ -118,6 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _maxNetworkCallsPerSecondThreshold;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "maxNetworkCallsPerSecondThreshold", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d45e381d6dbac771631649063122a42e:351")]
@@ -158,6 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected int? _maxConcurrentExternalSIPRECSessionsThreshold;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "maxConcurrentExternalSIPRECSessionsThreshold", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"d45e381d6dbac771631649063122a42e:351")]

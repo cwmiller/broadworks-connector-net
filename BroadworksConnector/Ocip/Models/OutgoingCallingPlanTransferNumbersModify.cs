@@ -18,6 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _phoneNumber01;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "phoneNumber01", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"a63afa661ee5c74f4700e562e88c66d0:2220")]
@@ -38,6 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _phoneNumber02;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "phoneNumber02", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"a63afa661ee5c74f4700e562e88c66d0:2220")]
@@ -58,6 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _phoneNumber03;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "phoneNumber03", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"a63afa661ee5c74f4700e562e88c66d0:2220")]

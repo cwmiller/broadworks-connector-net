@@ -102,6 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _dnsTypeDefaultValue;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "dnsTypeDefaultValue", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14268")]
@@ -122,6 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _useDnsSrvDefaultValue;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "useDnsSrvDefaultValue", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14268")]
@@ -142,6 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _srvPrefixDefaultValue;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "srvPrefixDefaultValue", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14268")]
@@ -162,6 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _outboundProxyDefaultValue;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "outboundProxyDefaultValue", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14268")]
@@ -182,6 +186,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _transportTypeDefaultValue;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "transportTypeDefaultValue", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14268")]
@@ -202,6 +207,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _secureRtpDefaultValue;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "secureRtpDefaultValue", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"da582a1f8028404e70d260cf1f891033:14268")]

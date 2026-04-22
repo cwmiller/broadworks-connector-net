@@ -41,6 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _eclQueryApplicationURL;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "eclQueryApplicationURL", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:268")]
@@ -61,6 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _eclQueryDataRepositoryURL;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "eclQueryDataRepositoryURL", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:268")]
@@ -81,6 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _defaultSchema;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultSchema", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:268")]

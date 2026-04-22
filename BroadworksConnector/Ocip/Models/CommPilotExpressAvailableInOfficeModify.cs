@@ -18,6 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _additionalPhoneNumberToRing;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "additionalPhoneNumberToRing", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"de7795e1833d459a7eb89116d772fd78:116")]

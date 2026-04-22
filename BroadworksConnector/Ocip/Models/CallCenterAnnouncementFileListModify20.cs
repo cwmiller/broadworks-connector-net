@@ -18,6 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _file1;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "file1", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:979")]
@@ -36,6 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _file2;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "file2", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:979")]
@@ -54,6 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _file3;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "file3", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:979")]
@@ -72,6 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _file4;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "file4", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6337d0cfba4de1c83587203c5b0bae54:979")]

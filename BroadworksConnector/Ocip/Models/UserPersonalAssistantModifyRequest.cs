@@ -76,6 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _attendantNumber;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "attendantNumber", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:460")]
@@ -132,6 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _expirationTime;
 
+        /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "expirationTime", IsNullable = true, Namespace = "")]
         [Optional]
         [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:460")]
