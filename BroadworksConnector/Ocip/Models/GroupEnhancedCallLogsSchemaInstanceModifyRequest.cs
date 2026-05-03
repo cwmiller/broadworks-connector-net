@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1b5ee40628a3f2b1bcab94a53dec91e7:84""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1b5ee40628a3f2b1bcab94a53dec91e7:87""}]")]
     public class GroupEnhancedCallLogsSchemaInstanceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:84")]
+        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:87")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:84")]
+        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:87")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "name", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:84")]
+        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:87")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name

@@ -8,21 +8,21 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Gets a list of physical locations assigned to a zone.
-    /// The response is either a SystemZoneLocationBasedPhysicalLocationGetListResponse or an ErrorResponse.
+    /// Response is SystemZoneLocationBasedPhysicalLocationGetListResponse or an ErrorResponse.
     /// <see cref="SystemZoneLocationBasedPhysicalLocationGetListResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:20060""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:20408""}]")]
     public class SystemZoneLocationBasedPhysicalLocationGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemZoneLocationBasedPhysicalLocationGetListResponse>
     {
 
         protected string _zoneName;
 
         [XmlElement(ElementName = "zoneName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:20060")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:20408")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ZoneName
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:20060")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:20408")]
         [MinInclusive(1)]
         public int? ResponseSizeLimit
         {
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaPhysicalLocation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:20060")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:20408")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaPhysicalLocation> SearchCriteriaPhysicalLocation
         {
             get => _searchCriteriaPhysicalLocation;

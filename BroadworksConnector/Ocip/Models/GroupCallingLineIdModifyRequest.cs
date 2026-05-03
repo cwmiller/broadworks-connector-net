@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:7498""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:8231""}]")]
     public class GroupCallingLineIdModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:7498")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:8231")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:7498")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:8231")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useGroupNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:7498")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:8231")]
         public bool? UseGroupNumber
         {
             get => _useGroupNumber;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useGroupName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:7498")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:8231")]
         public bool? UseGroupName
         {
             get => _useGroupName;
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "callingLineIdPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:7498")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:8231")]
         [MinLength(1)]
         [MaxLength(23)]
         public string CallingLineIdPhoneNumber

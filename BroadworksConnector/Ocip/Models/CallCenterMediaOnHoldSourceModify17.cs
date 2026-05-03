@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:19131""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:22377""}]")]
     public class CallCenterMediaOnHoldSourceModify17
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioMessageSourceSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:19131")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:22377")]
         public BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldMessageSelection? AudioMessageSourceSelection
         {
             get => _audioMessageSourceSelection;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioUrlList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:19131")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:22377")]
         public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementURLListModify AudioUrlList
         {
             get => _audioUrlList;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFileList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:19131")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:22377")]
         public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementFileListModify AudioFileList
         {
             get => _audioFileList;
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "externalAudioSource", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:19131")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:22377")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointModify ExternalAudioSource
         {
             get => _externalAudioSource;
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoMessageSourceSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:19131")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:22377")]
         public BroadWorksConnector.Ocip.Models.CallCenterMediaOnHoldMessageSelection? VideoMessageSourceSelection
         {
             get => _videoMessageSourceSelection;
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoUrlList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:19131")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:22377")]
         public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementURLListModify VideoUrlList
         {
             get => _videoUrlList;
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoFileList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:19131")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:22377")]
         public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementFileListModify VideoFileList
         {
             get => _videoFileList;
@@ -149,7 +149,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "externalVideoSource", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:19131")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:22377")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointModify ExternalVideoSource
         {
             get => _externalVideoSource;

@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10067""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10122""}]")]
     public class SystemExportBroadCloudDataRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _fileName;
 
         [XmlElement(ElementName = "fileName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10067")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10122")]
         [MinLength(1)]
         public string FileName
         {

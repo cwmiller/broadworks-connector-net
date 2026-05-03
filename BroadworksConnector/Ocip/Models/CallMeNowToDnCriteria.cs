@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""adf9583170c1dc9ec6c152ba1238437a:247""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""adf9583170c1dc9ec6c152ba1238437a:254""}]")]
     public class CallMeNowToDnCriteria
     {
 
         protected BroadWorksConnector.Ocip.Models.CriteriaDnSelection _toDnCriteriaSelection;
 
         [XmlElement(ElementName = "toDnCriteriaSelection", IsNullable = false, Namespace = "")]
-        [Group(@"adf9583170c1dc9ec6c152ba1238437a:247")]
+        [Group(@"adf9583170c1dc9ec6c152ba1238437a:254")]
         public BroadWorksConnector.Ocip.Models.CriteriaDnSelection ToDnCriteriaSelection
         {
             get => _toDnCriteriaSelection;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"adf9583170c1dc9ec6c152ba1238437a:247")]
+        [Group(@"adf9583170c1dc9ec6c152ba1238437a:254")]
         [MinLength(1)]
         [MaxLength(23)]
         public List<string> PhoneNumber

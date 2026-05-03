@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4286""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:5060""}]")]
     public class ReplacementCombinedUserServiceAssignmentList
     {
 
         protected List<BroadWorksConnector.Ocip.Models.CombinedUserServiceAssignment> _serviceName = new List<BroadWorksConnector.Ocip.Models.CombinedUserServiceAssignment>();
 
         [XmlElement(ElementName = "serviceName", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4286")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5060")]
         public List<BroadWorksConnector.Ocip.Models.CombinedUserServiceAssignment> ServiceName
         {
             get => _serviceName;

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""8ede928f2a9c1318573ba9c7a105655c:460""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""8ede928f2a9c1318573ba9c7a105655c:465""}]")]
     public class GroupGroupPagingModifyTargetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"8ede928f2a9c1318573ba9c7a105655c:460")]
+        [Group(@"8ede928f2a9c1318573ba9c7a105655c:465")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "targetUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"8ede928f2a9c1318573ba9c7a105655c:460")]
+        [Group(@"8ede928f2a9c1318573ba9c7a105655c:465")]
         public BroadWorksConnector.Ocip.Models.ReplacementUserIdList TargetUserIdList
         {
             get => _targetUserIdList;

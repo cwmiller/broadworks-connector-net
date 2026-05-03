@@ -8,14 +8,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Request to get the Xsi application Id system parameters.
-    /// The response is either SystemXsiApplicationIdParameterGetResponse or ErrorResponse.
-    /// <see cref="SystemXsiApplicationIdParameterGetResponse"/>
+    /// The response is either SystemXsiApplictionIdParameterGetResponse or ErrorResponse.
+    /// <see cref="SystemXsiApplictionIdParameterGetResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:19709""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:20057""}]")]
     public class SystemXsiApplicationIdParameterGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemXsiApplicationIdParameterGetResponse>
     {
 

@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:49345""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:53786""}]")]
     public class EnhancedCallLogsRedirectedCallSelection21
     {
 
         protected bool _redirectedCall;
 
         [XmlElement(ElementName = "redirectedCall", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:49345")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:53786")]
         public bool RedirectedCall
         {
             get => _redirectedCall;
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "redirectType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:49345")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:53786")]
         public List<BroadWorksConnector.Ocip.Models.ServiceInvocationDisposition21> RedirectType
         {
             get => _redirectType;

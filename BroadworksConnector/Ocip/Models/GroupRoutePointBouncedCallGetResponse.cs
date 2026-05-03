@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e474d11df9a1d1d1041e589793e40de8:165""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e474d11df9a1d1d1041e589793e40de8:168""}]")]
     public class GroupRoutePointBouncedCallGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"e474d11df9a1d1d1041e589793e40de8:165")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:168")]
         public bool IsActive
         {
             get => _isActive;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _numberOfRingsBeforeBouncingCall;
 
         [XmlElement(ElementName = "numberOfRingsBeforeBouncingCall", IsNullable = false, Namespace = "")]
-        [Group(@"e474d11df9a1d1d1041e589793e40de8:165")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:168")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
         public int NumberOfRingsBeforeBouncingCall
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableTransfer", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e474d11df9a1d1d1041e589793e40de8:165")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:168")]
         public bool? EnableTransfer
         {
             get => _enableTransfer;
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "transferPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e474d11df9a1d1d1041e589793e40de8:165")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:168")]
         [MinLength(1)]
         [MaxLength(161)]
         public string TransferPhoneNumber
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _bounceCallWhenAgentUnavailable;
 
         [XmlElement(ElementName = "bounceCallWhenAgentUnavailable", IsNullable = false, Namespace = "")]
-        [Group(@"e474d11df9a1d1d1041e589793e40de8:165")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:168")]
         public bool BounceCallWhenAgentUnavailable
         {
             get => _bounceCallWhenAgentUnavailable;

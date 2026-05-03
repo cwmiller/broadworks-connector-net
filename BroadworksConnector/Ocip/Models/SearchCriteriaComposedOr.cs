@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaComposedOrDnExtension))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaComposedOrUserName))]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:366""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:370""}]")]
     public abstract class SearchCriteriaComposedOr
     {
 

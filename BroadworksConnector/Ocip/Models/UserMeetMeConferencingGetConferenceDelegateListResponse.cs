@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""adf25df72505d1c476ebb480b6cce18d:700""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""adf25df72505d1c476ebb480b6cce18d:703""}]")]
     public class UserMeetMeConferencingGetConferenceDelegateListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _conferenceDelegateUserTable;
 
         [XmlElement(ElementName = "conferenceDelegateUserTable", IsNullable = false, Namespace = "")]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:700")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:703")]
         public BroadWorksConnector.Ocip.Models.C.OCITable ConferenceDelegateUserTable
         {
             get => _conferenceDelegateUserTable;

@@ -21,14 +21,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:3280"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:3284""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:3328"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:3332""}]}]")]
     public class ServiceProviderDeviceTypeCustomTagModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:3280")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:3328")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:3280")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:3328")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceType
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _tagName;
 
         [XmlElement(ElementName = "tagName", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:3280")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:3328")]
         [MinLength(1)]
         [MaxLength(64)]
         public string TagName
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "tagValue", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:3284")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:3332")]
         [MinLength(1)]
         [MaxLength(256)]
         public string TagValue
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "tagValueToEncrypt", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:3284")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:3332")]
         [MinLength(1)]
         [MaxLength(256)]
         public string TagValueToEncrypt

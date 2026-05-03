@@ -10,20 +10,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// Requests to change the group's service authorization status.
     /// The boolean flags are used to authorize or unauthorize services and packs.
     /// The response is either SuccessResponse or ErrorResponse.
+    /// The following element is only used in AS data mode:
+    /// allowVsubInstanceDeletion.
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:7633""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:7729""}]")]
     public class GroupServiceModifyAuthorizationListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:7633")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:7729")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:7633")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:7729")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -62,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "servicePackAuthorization", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:7633")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:7729")]
         public List<BroadWorksConnector.Ocip.Models.ServicePackAuthorization> ServicePackAuthorization
         {
             get => _servicePackAuthorization;
@@ -80,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "groupServiceAuthorization", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:7633")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:7729")]
         public List<BroadWorksConnector.Ocip.Models.GroupServiceAuthorization> GroupServiceAuthorization
         {
             get => _groupServiceAuthorization;
@@ -98,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userServiceAuthorization", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:7633")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:7729")]
         public List<BroadWorksConnector.Ocip.Models.UserServiceAuthorization> UserServiceAuthorization
         {
             get => _userServiceAuthorization;
@@ -111,6 +113,24 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool UserServiceAuthorizationSpecified { get; set; }
+
+        protected bool? _allowVsubInstanceDeletion;
+
+        [XmlElement(ElementName = "allowVsubInstanceDeletion", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:7729")]
+        public bool? AllowVsubInstanceDeletion
+        {
+            get => _allowVsubInstanceDeletion;
+            set
+            {
+                AllowVsubInstanceDeletionSpecified = (value != null);
+                _allowVsubInstanceDeletion = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool AllowVsubInstanceDeletionSpecified { get; set; }
 
     }
 }

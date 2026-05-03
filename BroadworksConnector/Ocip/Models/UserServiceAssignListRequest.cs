@@ -14,21 +14,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// In XS data mode, a Warning ErrorResponse is always sent when there is at least one error.
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="ErrorResponse"/>
-    /// <see cref="ErrorResponse"/>
-    /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:3856""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:4001""}]")]
     public class UserServiceAssignListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3856")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:4001")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -48,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3856")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:4001")]
         public List<BroadWorksConnector.Ocip.Models.UserService> ServiceName
         {
             get => _serviceName;
@@ -66,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "servicePackName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3856")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:4001")]
         [MinLength(1)]
         [MaxLength(80)]
         public List<string> ServicePackName

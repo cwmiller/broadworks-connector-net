@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:2518""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:2604""}]")]
     public class UserModifyGroupIdResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "error", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2518")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2604")]
         public List<BroadWorksConnector.Ocip.Models.UserMoveMessage> Error
         {
             get => _error;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "impact", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2518")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2604")]
         public List<BroadWorksConnector.Ocip.Models.UserMoveMessage> Impact
         {
             get => _impact;

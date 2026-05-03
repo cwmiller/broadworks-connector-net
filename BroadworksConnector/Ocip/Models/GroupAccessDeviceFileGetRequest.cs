@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced By: GroupAccessDeviceFileGetRequest14sp8
     /// <see cref="GroupAccessDeviceFileGetResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="GroupAccessDeviceFileGetRequest14sp8"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:2946""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:3147""}]")]
     public class GroupAccessDeviceFileGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupAccessDeviceFileGetResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:2946")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:3147")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -43,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:2946")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:3147")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -62,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:2946")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:3147")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName
@@ -81,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _fileType;
 
         [XmlElement(ElementName = "fileType", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:2946")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:3147")]
         [MinLength(1)]
         [MaxLength(40)]
         public string FileType

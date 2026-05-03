@@ -22,14 +22,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ec63a55bc41262b2dd33a1f4e8e84674:323""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ec63a55bc41262b2dd33a1f4e8e84674:326""}]")]
     public class GroupAutoAttendantGetInstancePagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _autoAttendantTable;
 
         [XmlElement(ElementName = "autoAttendantTable", IsNullable = false, Namespace = "")]
-        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:323")]
+        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:326")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AutoAttendantTable
         {
             get => _autoAttendantTable;

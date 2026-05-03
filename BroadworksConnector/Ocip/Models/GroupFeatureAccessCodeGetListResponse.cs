@@ -10,12 +10,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to the GroupFeatureAccessCodeGetListRequest.
     /// Replaced by: GroupFeatureAccessCodeGetResponse
     /// <see cref="GroupFeatureAccessCodeGetListRequest"/>
-    /// <see cref="GroupFeatureAccessCodeGetResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:9820""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:10665""}]")]
     public class GroupFeatureAccessCodeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -23,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "featureAccessCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9820")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10665")]
         public List<BroadWorksConnector.Ocip.Models.FeatureAccessCodeEntry> FeatureAccessCode
         {
             get => _featureAccessCode;

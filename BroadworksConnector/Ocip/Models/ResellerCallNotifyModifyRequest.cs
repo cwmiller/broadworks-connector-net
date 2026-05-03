@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ec1be3ca6e990aac87b6fcf39d5e3445:81""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ec1be3ca6e990aac87b6fcf39d5e3445:84""}]")]
     public class ResellerCallNotifyModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        [Group(@"ec1be3ca6e990aac87b6fcf39d5e3445:81")]
+        [Group(@"ec1be3ca6e990aac87b6fcf39d5e3445:84")]
         [MinLength(1)]
         [MaxLength(36)]
         public string ResellerId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultFromAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ec1be3ca6e990aac87b6fcf39d5e3445:81")]
+        [Group(@"ec1be3ca6e990aac87b6fcf39d5e3445:84")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DefaultFromAddress

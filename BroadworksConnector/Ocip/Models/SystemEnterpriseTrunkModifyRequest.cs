@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""090e91b2d78e873f5d76a2f16af08d3a:1699""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""090e91b2d78e873f5d76a2f16af08d3a:1688""}]")]
     public class SystemEnterpriseTrunkModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableHoldoverOfHighwaterCallCounts", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1699")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1688")]
         public bool? EnableHoldoverOfHighwaterCallCounts
         {
             get => _enableHoldoverOfHighwaterCallCounts;
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "holdoverPeriod", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1699")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1688")]
         public BroadWorksConnector.Ocip.Models.EnterpriseTrunkHighwateCallCountHoldoverPeriodMinutes? HoldoverPeriod
         {
             get => _holdoverPeriod;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeZoneOffsetMinutes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1699")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1688")]
         public BroadWorksConnector.Ocip.Models.EnterpriseTrunkTimeZoneOffsetMinutes? TimeZoneOffsetMinutes
         {
             get => _timeZoneOffsetMinutes;

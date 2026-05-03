@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de7795e1833d459a7eb89116d772fd78:244""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de7795e1833d459a7eb89116d772fd78:251""}]")]
     public class CommPilotExpressRedirectionWithExceptionModify
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sendCallsToVoiceMailExceptExcludedNumbers", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de7795e1833d459a7eb89116d772fd78:244")]
+        [Group(@"de7795e1833d459a7eb89116d772fd78:251")]
         public bool? SendCallsToVoiceMailExceptExcludedNumbers
         {
             get => _sendCallsToVoiceMailExceptExcludedNumbers;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "excludedPhoneNumber01", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"de7795e1833d459a7eb89116d772fd78:244")]
+        [Group(@"de7795e1833d459a7eb89116d772fd78:251")]
         [MinLength(1)]
         [MaxLength(23)]
         public string ExcludedPhoneNumber01
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "excludedPhoneNumber02", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"de7795e1833d459a7eb89116d772fd78:244")]
+        [Group(@"de7795e1833d459a7eb89116d772fd78:251")]
         [MinLength(1)]
         [MaxLength(23)]
         public string ExcludedPhoneNumber02
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "excludedPhoneNumber03", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"de7795e1833d459a7eb89116d772fd78:244")]
+        [Group(@"de7795e1833d459a7eb89116d772fd78:251")]
         [MinLength(1)]
         [MaxLength(23)]
         public string ExcludedPhoneNumber03
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "forwardExcludedNumbersTo", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"de7795e1833d459a7eb89116d772fd78:244")]
+        [Group(@"de7795e1833d459a7eb89116d772fd78:251")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ForwardExcludedNumbersTo

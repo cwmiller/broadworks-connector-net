@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:808""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:812""}]")]
     public class ServiceProviderAccessDeviceGetLinkedTreeDeviceResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "treeDeviceInfo", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:808")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:812")]
         public BroadWorksConnector.Ocip.Models.TreeDeviceInfo TreeDeviceInfo
         {
             get => _treeDeviceInfo;

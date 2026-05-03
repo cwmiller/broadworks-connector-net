@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:735""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:733""}]")]
     public class SystemVoiceMessagingGroupGetVoicePortalMenusResponse21GreetingsMenuKeys
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "personalizedName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:735")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:733")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string PersonalizedName
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "conferenceGreeting", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:735")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:733")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ConferenceGreeting
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _returnToPreviousMenu;
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:735")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:733")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ReturnToPreviousMenu
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "repeatMenu", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:735")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:733")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string RepeatMenu

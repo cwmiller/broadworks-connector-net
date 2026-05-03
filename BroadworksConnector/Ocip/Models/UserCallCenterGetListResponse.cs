@@ -15,19 +15,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// *****       the column heading "Service User Id".
     /// Replaced By: UserCallCenterGetResponse
     /// <see cref="UserCallCentersLoginGetListRequest"/>
-    /// <see cref="UserCallCenterGetResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:41050""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:45093""}]")]
     public class UserCallCenterGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:41050")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:45093")]
         public BroadWorksConnector.Ocip.Models.C.OCITable UserTable
         {
             get => _userTable;

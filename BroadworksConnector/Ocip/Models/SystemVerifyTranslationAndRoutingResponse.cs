@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:19356""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:19704""}]")]
     public class SystemVerifyTranslationAndRoutingResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _result;
 
         [XmlElement(ElementName = "Result", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:19356")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:19704")]
         public string Result
         {
             get => _result;

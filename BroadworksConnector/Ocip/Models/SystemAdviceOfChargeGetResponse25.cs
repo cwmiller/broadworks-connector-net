@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9975efc7f5883a0595f811ee72ba4df5:248""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9975efc7f5883a0595f811ee72ba4df5:251""}]")]
     public class SystemAdviceOfChargeGetResponse25 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected int _delayBetweenNotificationSeconds;
 
         [XmlElement(ElementName = "delayBetweenNotificationSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"9975efc7f5883a0595f811ee72ba4df5:248")]
+        [Group(@"9975efc7f5883a0595f811ee72ba4df5:251")]
         [MinInclusive(5)]
         [MaxInclusive(1800)]
         public int DelayBetweenNotificationSeconds
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling _incomingAocHandling;
 
         [XmlElement(ElementName = "incomingAocHandling", IsNullable = false, Namespace = "")]
-        [Group(@"9975efc7f5883a0595f811ee72ba4df5:248")]
+        [Group(@"9975efc7f5883a0595f811ee72ba4df5:251")]
         public BroadWorksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling IncomingAocHandling
         {
             get => _incomingAocHandling;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useOCSEnquiry;
 
         [XmlElement(ElementName = "useOCSEnquiry", IsNullable = false, Namespace = "")]
-        [Group(@"9975efc7f5883a0595f811ee72ba4df5:248")]
+        [Group(@"9975efc7f5883a0595f811ee72ba4df5:251")]
         public bool UseOCSEnquiry
         {
             get => _useOCSEnquiry;
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.AdviceOfChargeOCSEnquiryType _oCSEnquiryType;
 
         [XmlElement(ElementName = "OCSEnquiryType", IsNullable = false, Namespace = "")]
-        [Group(@"9975efc7f5883a0595f811ee72ba4df5:248")]
+        [Group(@"9975efc7f5883a0595f811ee72ba4df5:251")]
         public BroadWorksConnector.Ocip.Models.AdviceOfChargeOCSEnquiryType OCSEnquiryType
         {
             get => _oCSEnquiryType;
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _proxyAoCBody;
 
         [XmlElement(ElementName = "proxyAoCBody", IsNullable = false, Namespace = "")]
-        [Group(@"9975efc7f5883a0595f811ee72ba4df5:248")]
+        [Group(@"9975efc7f5883a0595f811ee72ba4df5:251")]
         public bool ProxyAoCBody
         {
             get => _proxyAoCBody;

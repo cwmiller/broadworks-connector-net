@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:3406""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:3400""}]")]
     public class GroupCallCenterEnhancedReportingModifyRequest19 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:3406")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:3400")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:3406")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:3400")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "reportingServer", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:3406")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:3400")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice19? ReportingServer
         {
             get => _reportingServer;

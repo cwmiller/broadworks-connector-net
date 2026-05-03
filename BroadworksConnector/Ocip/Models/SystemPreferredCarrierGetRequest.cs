@@ -8,21 +8,21 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Requests the attributes of carrier.
-    /// The response is either a SystemPreferredCarrierGetResponse or an ErrorResponse.
-    /// <see cref="SystemPreferredCarrierGetResponse"/>
+    /// The response is either a SystemPreferreredCarrierGetResponse or an ErrorResponse.
+    /// <see cref="SystemPreferreredCarrierGetResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""31dec625cdd18e8228eb61ffb34ddc0e:432""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""31dec625cdd18e8228eb61ffb34ddc0e:435""}]")]
     public class SystemPreferredCarrierGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemPreferredCarrierGetResponse>
     {
 
         protected string _carrier;
 
         [XmlElement(ElementName = "carrier", IsNullable = false, Namespace = "")]
-        [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:432")]
+        [Group(@"31dec625cdd18e8228eb61ffb34ddc0e:435")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Carrier

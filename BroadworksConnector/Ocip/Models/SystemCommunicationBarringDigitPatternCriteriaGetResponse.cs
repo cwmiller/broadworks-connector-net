@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:6115""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:6166""}]")]
     public class SystemCommunicationBarringDigitPatternCriteriaGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:6115")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6166")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "digitPattern", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:6115")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6166")]
         [MinLength(1)]
         [MaxLength(160)]
         public List<string> DigitPattern

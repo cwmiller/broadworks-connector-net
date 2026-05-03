@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:4044""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:4101""}]")]
     public class SystemCallProcessingPolicyProfileGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _callProcessingPolicyProfilesTable;
 
         [XmlElement(ElementName = "callProcessingPolicyProfilesTable", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:4044")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:4101")]
         public BroadWorksConnector.Ocip.Models.C.OCITable CallProcessingPolicyProfilesTable
         {
             get => _callProcessingPolicyProfilesTable;

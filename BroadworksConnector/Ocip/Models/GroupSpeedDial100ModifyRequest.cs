@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e084de202cf726c3202fca43390f9ec5:80""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e084de202cf726c3202fca43390f9ec5:83""}]")]
     public class GroupSpeedDial100ModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"e084de202cf726c3202fca43390f9ec5:80")]
+        [Group(@"e084de202cf726c3202fca43390f9ec5:83")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"e084de202cf726c3202fca43390f9ec5:80")]
+        [Group(@"e084de202cf726c3202fca43390f9ec5:83")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "prefix", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"e084de202cf726c3202fca43390f9ec5:80")]
+        [Group(@"e084de202cf726c3202fca43390f9ec5:83")]
         [MinLength(1)]
         [MaxLength(2)]
         public string Prefix

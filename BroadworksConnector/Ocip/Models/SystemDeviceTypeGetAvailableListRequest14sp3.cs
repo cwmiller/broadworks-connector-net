@@ -11,26 +11,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// to get either all conference device types or all non-conferernce types. This command is similar
     /// to the SystemSIPDeviceTypeGetListRequest and SystemMGCPDeviceTypeGetListRequest
     /// but gets both SIP and MGCP types.
-    /// The response is either SystemDeviceTypeGetAvailableListResponse14sp3 or ErrorResponse.
+    /// The response is either SystemDeviceTypeGetlAvailableListResponse14sp1 or ErrorResponse.
     /// 
     /// Replaced by: SystemDeviceTypeGetAvailableListRequest19.
     /// <see cref="SystemSIPDeviceTypeGetListRequest"/>
     /// <see cref="SystemMGCPDeviceTypeGetListRequest"/>
-    /// <see cref="SystemDeviceTypeGetAvailableListResponse14sp3"/>
+    /// <see cref="SystemDeviceTypeGetlAvailableListResponse14sp1"/>
     /// <see cref="ErrorResponse"/>
     /// <see cref="SystemDeviceTypeGetAvailableListRequest19"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:26242""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:29859""}]")]
     public class SystemDeviceTypeGetAvailableListRequest14sp3 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemDeviceTypeGetAvailableListResponse14sp3>
     {
 
         protected bool _allowConference;
 
         [XmlElement(ElementName = "allowConference", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:26242")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29859")]
         public bool AllowConference
         {
             get => _allowConference;
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowMusicOnHold;
 
         [XmlElement(ElementName = "allowMusicOnHold", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:26242")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29859")]
         public bool AllowMusicOnHold
         {
             get => _allowMusicOnHold;
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _onlyConference;
 
         [XmlElement(ElementName = "onlyConference", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:26242")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29859")]
         public bool OnlyConference
         {
             get => _onlyConference;
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _onlyVideoCapable;
 
         [XmlElement(ElementName = "onlyVideoCapable", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:26242")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29859")]
         public bool OnlyVideoCapable
         {
             get => _onlyVideoCapable;
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _onlyOptionalIpAddress;
 
         [XmlElement(ElementName = "onlyOptionalIpAddress", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:26242")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29859")]
         public bool OnlyOptionalIpAddress
         {
             get => _onlyOptionalIpAddress;

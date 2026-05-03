@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10943""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:11002""}]")]
     public class SystemGETSAvpCodeMapGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _avpCodeTable;
 
         [XmlElement(ElementName = "avpCodeTable", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10943")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11002")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AvpCodeTable
         {
             get => _avpCodeTable;

@@ -22,19 +22,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// includeHuntGroupNameInCLID
     /// <see cref="ErrorResponse"/>
     /// <see cref="SuccessResponse"/>
-    /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""781bbab86d937537938d4fe917029d5c:187"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""781bbab86d937537938d4fe917029d5c:198""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""781bbab86d937537938d4fe917029d5c:190"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""781bbab86d937537938d4fe917029d5c:201""}]}]")]
     public class GroupHuntGroupConsolidatedModifyInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -54,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "unassignPhoneNumbers", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         public BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel? UnassignPhoneNumbers
         {
             get => _unassignPhoneNumbers;
@@ -72,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "addPhoneNumberToGroup", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         public bool? AddPhoneNumberToGroup
         {
             get => _addPhoneNumberToGroup;
@@ -90,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -108,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "policy", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         public BroadWorksConnector.Ocip.Models.HuntPolicy? Policy
         {
             get => _policy;
@@ -126,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "huntAfterNoAnswer", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         public bool? HuntAfterNoAnswer
         {
             get => _huntAfterNoAnswer;
@@ -144,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "noAnswerNumberOfRings", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
         public int? NoAnswerNumberOfRings
@@ -164,7 +163,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forwardAfterTimeout", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         public bool? ForwardAfterTimeout
         {
             get => _forwardAfterTimeout;
@@ -182,7 +181,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forwardTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         [MinInclusive(0)]
         [MaxInclusive(7200)]
         public int? ForwardTimeoutSeconds
@@ -203,7 +202,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "forwardToPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ForwardToPhoneNumber
@@ -224,7 +223,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "agentUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:198")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:201")]
         public BroadWorksConnector.Ocip.Models.ReplacementUserIdList AgentUserIdList
         {
             get => _agentUserIdList;
@@ -243,7 +242,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "agentWeightList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:198")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:201")]
         public BroadWorksConnector.Ocip.Models.ReplacementAgentWeightList AgentWeightList
         {
             get => _agentWeightList;
@@ -261,7 +260,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowCallWaitingForAgents", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         public bool? AllowCallWaitingForAgents
         {
             get => _allowCallWaitingForAgents;
@@ -279,7 +278,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useSystemHuntGroupCLIDSetting", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         public bool? UseSystemHuntGroupCLIDSetting
         {
             get => _useSystemHuntGroupCLIDSetting;
@@ -297,7 +296,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "includeHuntGroupNameInCLID", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         public bool? IncludeHuntGroupNameInCLID
         {
             get => _includeHuntGroupNameInCLID;
@@ -315,7 +314,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableNotReachableForwarding", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         public bool? EnableNotReachableForwarding
         {
             get => _enableNotReachableForwarding;
@@ -334,7 +333,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "notReachableForwardToPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         [MinLength(1)]
         [MaxLength(161)]
         public string NotReachableForwardToPhoneNumber
@@ -354,7 +353,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "makeBusyWhenNotReachable", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         public bool? MakeBusyWhenNotReachable
         {
             get => _makeBusyWhenNotReachable;
@@ -372,7 +371,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowMembersToControlGroupBusy", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         public bool? AllowMembersToControlGroupBusy
         {
             get => _allowMembersToControlGroupBusy;
@@ -390,7 +389,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableGroupBusy", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         public bool? EnableGroupBusy
         {
             get => _enableGroupBusy;
@@ -408,7 +407,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "applyGroupBusyWhenTerminatingToAgent", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         public bool? ApplyGroupBusyWhenTerminatingToAgent
         {
             get => _applyGroupBusyWhenTerminatingToAgent;
@@ -426,7 +425,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService
@@ -447,7 +446,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "serviceList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         public BroadWorksConnector.Ocip.Models.ReplacementConsolidatedUserServiceAssignmentList ServiceList
         {
             get => _serviceList;
@@ -465,7 +464,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         public bool? IsActive
         {
             get => _isActive;
@@ -484,7 +483,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "directoryNumberHuntingAgentUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         public BroadWorksConnector.Ocip.Models.ReplacementUserIdList DirectoryNumberHuntingAgentUserIdList
         {
             get => _directoryNumberHuntingAgentUserIdList;
@@ -502,7 +501,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "directoryNumberHuntingUseTerminateCallToAgentFirst", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         public bool? DirectoryNumberHuntingUseTerminateCallToAgentFirst
         {
             get => _directoryNumberHuntingUseTerminateCallToAgentFirst;
@@ -520,7 +519,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "directoryNumberHuntingUseOriginalAgentServicesForBusyAndNoAnswerCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"781bbab86d937537938d4fe917029d5c:187")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:190")]
         public bool? DirectoryNumberHuntingUseOriginalAgentServicesForBusyAndNoAnswerCalls
         {
             get => _directoryNumberHuntingUseOriginalAgentServicesForBusyAndNoAnswerCalls;

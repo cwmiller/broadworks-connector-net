@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:1024""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:1028""}]")]
     public class GroupAccessDeviceGetNativeTagsWithLogicListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _deviceNativeTagsWithLogicTable;
 
         [XmlElement(ElementName = "deviceNativeTagsWithLogicTable", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1024")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1028")]
         public BroadWorksConnector.Ocip.Models.C.OCITable DeviceNativeTagsWithLogicTable
         {
             get => _deviceNativeTagsWithLogicTable;

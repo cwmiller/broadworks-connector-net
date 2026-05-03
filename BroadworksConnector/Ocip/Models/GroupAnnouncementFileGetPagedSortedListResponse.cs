@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:2067""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:2110""}]")]
     public class GroupAnnouncementFileGetPagedSortedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -33,7 +33,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "announcementTable", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:2067")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:2110")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AnnouncementTable
         {
             get => _announcementTable;

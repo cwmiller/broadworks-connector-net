@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:1559""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:1598""}]")]
     public class GroupAdminGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _groupAdminTable;
 
         [XmlElement(ElementName = "groupAdminTable", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1559")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1598")]
         public BroadWorksConnector.Ocip.Models.C.OCITable GroupAdminTable
         {
             get => _groupAdminTable;

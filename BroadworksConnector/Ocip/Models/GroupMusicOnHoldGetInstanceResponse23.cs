@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:3814""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:4064""}]")]
     public class GroupMusicOnHoldGetInstanceResponse23 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:3814")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:4064")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isActiveDuringCallHold;
 
         [XmlElement(ElementName = "isActiveDuringCallHold", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:3814")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:4064")]
         public bool IsActiveDuringCallHold
         {
             get => _isActiveDuringCallHold;
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isActiveDuringCallPark;
 
         [XmlElement(ElementName = "isActiveDuringCallPark", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:3814")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:4064")]
         public bool IsActiveDuringCallPark
         {
             get => _isActiveDuringCallPark;
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isActiveDuringBusyCampOn;
 
         [XmlElement(ElementName = "isActiveDuringBusyCampOn", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:3814")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:4064")]
         public bool IsActiveDuringBusyCampOn
         {
             get => _isActiveDuringBusyCampOn;
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableVideo;
 
         [XmlElement(ElementName = "enableVideo", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:3814")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:4064")]
         public bool EnableVideo
         {
             get => _enableVideo;
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.MusicOnHoldSourceRead22V2 _source;
 
         [XmlElement(ElementName = "source", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:3814")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:4064")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceRead22V2 Source
         {
             get => _source;
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useAlternateSourceForInternalCalls;
 
         [XmlElement(ElementName = "useAlternateSourceForInternalCalls", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:3814")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:4064")]
         public bool UseAlternateSourceForInternalCalls
         {
             get => _useAlternateSourceForInternalCalls;
@@ -143,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.MusicOnHoldSourceRead22V2 _internalSource;
 
         [XmlElement(ElementName = "internalSource", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:3814")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:4064")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceRead22V2 InternalSource
         {
             get => _internalSource;
@@ -160,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useDynamicMOHDuringCallHold;
 
         [XmlElement(ElementName = "useDynamicMOHDuringCallHold", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:3814")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:4064")]
         public bool UseDynamicMOHDuringCallHold
         {
             get => _useDynamicMOHDuringCallHold;

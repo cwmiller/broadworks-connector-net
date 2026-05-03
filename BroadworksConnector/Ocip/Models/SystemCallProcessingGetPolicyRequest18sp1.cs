@@ -13,12 +13,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: SystemCallProcessingGetPolicyRequest19sp1
     /// <see cref="SystemCallProcessingGetPolicyResponse18sp1"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemCallProcessingGetPolicyRequest19sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:22152""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:24736""}]")]
     public class SystemCallProcessingGetPolicyRequest18sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemCallProcessingGetPolicyResponse18sp1>
     {
 

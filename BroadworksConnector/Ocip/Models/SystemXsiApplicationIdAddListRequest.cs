@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:19630""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:19978""}]")]
     public class SystemXsiApplicationIdAddListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected List<BroadWorksConnector.Ocip.Models.XsiApplicationIdEntry> _xsiApplicationIdEntry = new List<BroadWorksConnector.Ocip.Models.XsiApplicationIdEntry>();
 
         [XmlElement(ElementName = "xsiApplicationIdEntry", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:19630")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:19978")]
         public List<BroadWorksConnector.Ocip.Models.XsiApplicationIdEntry> XsiApplicationIdEntry
         {
             get => _xsiApplicationIdEntry;

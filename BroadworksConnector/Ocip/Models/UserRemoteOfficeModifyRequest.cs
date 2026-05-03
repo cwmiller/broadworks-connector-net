@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""dbef84b1c59b67471031e429db8fd980:73""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""dbef84b1c59b67471031e429db8fd980:76""}]")]
     public class UserRemoteOfficeModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"dbef84b1c59b67471031e429db8fd980:73")]
+        [Group(@"dbef84b1c59b67471031e429db8fd980:76")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"dbef84b1c59b67471031e429db8fd980:73")]
+        [Group(@"dbef84b1c59b67471031e429db8fd980:76")]
         public bool? IsActive
         {
             get => _isActive;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "remoteOfficePhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"dbef84b1c59b67471031e429db8fd980:73")]
+        [Group(@"dbef84b1c59b67471031e429db8fd980:76")]
         [MinLength(1)]
         [MaxLength(161)]
         public string RemoteOfficePhoneNumber

@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4297""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:5071""}]")]
     public class ReplacementCombinedUserServiceAuthorizationList
     {
 
         protected List<BroadWorksConnector.Ocip.Models.CombinedUserServiceAuthorization> _userServiceAuthorization = new List<BroadWorksConnector.Ocip.Models.CombinedUserServiceAuthorization>();
 
         [XmlElement(ElementName = "userServiceAuthorization", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4297")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5071")]
         public List<BroadWorksConnector.Ocip.Models.CombinedUserServiceAuthorization> UserServiceAuthorization
         {
             get => _userServiceAuthorization;

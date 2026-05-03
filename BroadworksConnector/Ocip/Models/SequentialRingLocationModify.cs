@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""15725c7b98a01f80f88e9d5af56d48a5:225""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""15725c7b98a01f80f88e9d5af56d48a5:232""}]")]
     public class SequentialRingLocationModify
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "phoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"15725c7b98a01f80f88e9d5af56d48a5:225")]
+        [Group(@"15725c7b98a01f80f88e9d5af56d48a5:232")]
         [MinLength(1)]
         [MaxLength(161)]
         public string PhoneNumber
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "numberOfRings", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"15725c7b98a01f80f88e9d5af56d48a5:225")]
+        [Group(@"15725c7b98a01f80f88e9d5af56d48a5:232")]
         public BroadWorksConnector.Ocip.Models.SequentialRingNumberOfRings? NumberOfRings
         {
             get => _numberOfRings;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "answerConfirmationRequired", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"15725c7b98a01f80f88e9d5af56d48a5:225")]
+        [Group(@"15725c7b98a01f80f88e9d5af56d48a5:232")]
         public bool? AnswerConfirmationRequired
         {
             get => _answerConfirmationRequired;

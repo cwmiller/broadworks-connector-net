@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""cf382feccaa0287c41bdaf00086b6ffd:73""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""cf382feccaa0287c41bdaf00086b6ffd:76""}]")]
     public class UserSpeedDial8ModifyListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"cf382feccaa0287c41bdaf00086b6ffd:73")]
+        [Group(@"cf382feccaa0287c41bdaf00086b6ffd:76")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "speedDialEntry", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"cf382feccaa0287c41bdaf00086b6ffd:73")]
+        [Group(@"cf382feccaa0287c41bdaf00086b6ffd:76")]
         public List<BroadWorksConnector.Ocip.Models.SpeedDial8Entry> SpeedDialEntry
         {
             get => _speedDialEntry;

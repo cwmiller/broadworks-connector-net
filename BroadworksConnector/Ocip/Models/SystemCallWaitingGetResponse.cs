@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""08ee5b5ec09321975436b908fd540e7f:57""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""08ee5b5ec09321975436b908fd540e7f:60""}]")]
     public class SystemCallWaitingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _playDistinctiveRingback;
 
         [XmlElement(ElementName = "playDistinctiveRingback", IsNullable = false, Namespace = "")]
-        [Group(@"08ee5b5ec09321975436b908fd540e7f:57")]
+        [Group(@"08ee5b5ec09321975436b908fd540e7f:60")]
         public bool PlayDistinctiveRingback
         {
             get => _playDistinctiveRingback;

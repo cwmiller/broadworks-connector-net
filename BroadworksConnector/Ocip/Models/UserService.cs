@@ -92,6 +92,8 @@ namespace BroadWorksConnector.Ocip.Models
         CallNotify,
         [XmlEnum(Name = "Call Recording")]
         CallRecording,
+        [XmlEnum(Name = "Call Recording Caller Control")]
+        CallRecordingCallerControl,
         [XmlEnum(Name = "Call Return")]
         CallReturn,
         [XmlEnum(Name = "Call Transfer")]

@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:5999""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:5968""}]")]
     public class SystemCallCenterEnhancedReportingBrandingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "brandingChoice", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:5999")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5968")]
         public BroadWorksConnector.Ocip.Models.CallCenterEnhancedReportingSystemBrandingChoice? BrandingChoice
         {
             get => _brandingChoice;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "customBrandingFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:5999")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5968")]
         public BroadWorksConnector.Ocip.Models.LabeledFileResource CustomBrandingFile
         {
             get => _customBrandingFile;

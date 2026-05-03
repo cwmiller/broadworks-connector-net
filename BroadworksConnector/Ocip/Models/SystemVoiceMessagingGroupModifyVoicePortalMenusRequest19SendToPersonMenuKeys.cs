@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:1562""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:1499""}]")]
     public class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19SendToPersonMenuKeys
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "confirmSendingMessage", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1562")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1499")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ConfirmSendingMessage
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "cancelSendingMessage", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1562")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1499")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string CancelSendingMessage
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "finishEnteringNumberWhereToSendMessageTo", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1562")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1499")]
         [Length(1)]
         [RegularExpression(@"\*|#")]
         public string FinishEnteringNumberWhereToSendMessageTo
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "finishForwardingOrSendingMessage", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1562")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1499")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string FinishForwardingOrSendingMessage

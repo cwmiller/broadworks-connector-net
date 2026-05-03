@@ -11,19 +11,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Contains the service profile information.
     /// Replaced by: GroupFindMeFollowMeGetInstanceResponse19sp1
     /// <see cref="GroupFindMeFollowMeGetInstanceRequest"/>
-    /// <see cref="GroupFindMeFollowMeGetInstanceResponse19sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:9985""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:10830""}]")]
     public class GroupFindMeFollowMeGetInstanceResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile17sp4 _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9985")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10830")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile17sp4 ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -41,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9985")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10830")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService

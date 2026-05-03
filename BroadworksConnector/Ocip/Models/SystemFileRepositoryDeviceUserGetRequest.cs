@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10568""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10627""}]")]
     public class SystemFileRepositoryDeviceUserGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemFileRepositoryDeviceUserGetResponse>
     {
 
         protected string _fileRepositoryName;
 
         [XmlElement(ElementName = "fileRepositoryName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10568")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10627")]
         [MinLength(1)]
         [MaxLength(40)]
         public string FileRepositoryName
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _userName;
 
         [XmlElement(ElementName = "userName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10568")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10627")]
         [MinLength(1)]
         [MaxLength(30)]
         public string UserName

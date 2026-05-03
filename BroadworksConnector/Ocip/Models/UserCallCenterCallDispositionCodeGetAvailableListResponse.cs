@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:6715""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:6684""}]")]
     public class UserCallCenterCallDispositionCodeGetAvailableListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _dispositionCodesTable;
 
         [XmlElement(ElementName = "dispositionCodesTable", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:6715")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6684")]
         public BroadWorksConnector.Ocip.Models.C.OCITable DispositionCodesTable
         {
             get => _dispositionCodesTable;

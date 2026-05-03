@@ -13,12 +13,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: SystemCPEConfigParametersGetRequest20
     /// <see cref="SystemCPEConfigParametersGetResponse14sp6"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemCPEConfigParametersGetRequest20"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:25848""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:29421""}]")]
     public class SystemCPEConfigParametersGetRequest14sp6 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemCPEConfigParametersGetResponse14sp6>
     {
 

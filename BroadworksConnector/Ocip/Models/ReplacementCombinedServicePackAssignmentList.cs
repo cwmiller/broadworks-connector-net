@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4251""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:5025""}]")]
     public class ReplacementCombinedServicePackAssignmentList
     {
 
         protected List<BroadWorksConnector.Ocip.Models.CombinedServicePackAssignment> _servicePack = new List<BroadWorksConnector.Ocip.Models.CombinedServicePackAssignment>();
 
         [XmlElement(ElementName = "servicePack", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4251")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5025")]
         public List<BroadWorksConnector.Ocip.Models.CombinedServicePackAssignment> ServicePack
         {
             get => _servicePack;

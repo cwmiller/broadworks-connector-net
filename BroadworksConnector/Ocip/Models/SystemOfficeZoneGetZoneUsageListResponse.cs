@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:14189""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:14358""}]")]
     public class SystemOfficeZoneGetZoneUsageListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _officeZoneTable;
 
         [XmlElement(ElementName = "officeZoneTable", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:14189")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14358")]
         public BroadWorksConnector.Ocip.Models.C.OCITable OfficeZoneTable
         {
             get => _officeZoneTable;

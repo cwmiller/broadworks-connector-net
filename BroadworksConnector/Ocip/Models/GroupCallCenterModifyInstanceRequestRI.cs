@@ -1,0 +1,488 @@
+using System;
+using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
+using System.Collections.Generic;
+
+namespace BroadWorksConnector.Ocip.Models
+{
+    /// <summary>
+    /// Request to modify a Call Center instance.
+    /// The response is either SuccessResponse or ErrorResponse.
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:5149""}]")]
+    public class GroupCallCenterModifyInstanceRequestRI : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
+    {
+
+        protected string _serviceUserId;
+
+        [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        [MinLength(1)]
+        [MaxLength(161)]
+        public string ServiceUserId
+        {
+            get => _serviceUserId;
+            set
+            {
+                ServiceUserIdSpecified = true;
+                _serviceUserId = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool ServiceUserIdSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile _serviceInstanceProfile;
+
+        [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile
+        {
+            get => _serviceInstanceProfile;
+            set
+            {
+                ServiceInstanceProfileSpecified = (value != null);
+                _serviceInstanceProfile = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool ServiceInstanceProfileSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.CallCenterType? _type;
+
+        [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        public BroadWorksConnector.Ocip.Models.CallCenterType? Type
+        {
+            get => _type;
+            set
+            {
+                TypeSpecified = (value != null);
+                _type = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool TypeSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.CallCenterRoutingType? _routingType;
+
+        [XmlElement(ElementName = "routingType", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        public BroadWorksConnector.Ocip.Models.CallCenterRoutingType? RoutingType
+        {
+            get => _routingType;
+            set
+            {
+                RoutingTypeSpecified = (value != null);
+                _routingType = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool RoutingTypeSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.HuntPolicy? _policy;
+
+        [XmlElement(ElementName = "policy", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        public BroadWorksConnector.Ocip.Models.HuntPolicy? Policy
+        {
+            get => _policy;
+            set
+            {
+                PolicySpecified = (value != null);
+                _policy = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool PolicySpecified { get; set; }
+
+        protected bool? _enableVideo;
+
+        [XmlElement(ElementName = "enableVideo", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        public bool? EnableVideo
+        {
+            get => _enableVideo;
+            set
+            {
+                EnableVideoSpecified = (value != null);
+                _enableVideo = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool EnableVideoSpecified { get; set; }
+
+        protected int? _queueLength;
+
+        [XmlElement(ElementName = "queueLength", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        [MinInclusive(0)]
+        [MaxInclusive(525)]
+        public int? QueueLength
+        {
+            get => _queueLength;
+            set
+            {
+                QueueLengthSpecified = (value != null);
+                _queueLength = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool QueueLengthSpecified { get; set; }
+
+        protected bool? _enableReporting;
+
+        [XmlElement(ElementName = "enableReporting", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        public bool? EnableReporting
+        {
+            get => _enableReporting;
+            set
+            {
+                EnableReportingSpecified = (value != null);
+                _enableReporting = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool EnableReportingSpecified { get; set; }
+
+        protected bool? _allowCallerToDialEscapeDigit;
+
+        [XmlElement(ElementName = "allowCallerToDialEscapeDigit", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        public bool? AllowCallerToDialEscapeDigit
+        {
+            get => _allowCallerToDialEscapeDigit;
+            set
+            {
+                AllowCallerToDialEscapeDigitSpecified = (value != null);
+                _allowCallerToDialEscapeDigit = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool AllowCallerToDialEscapeDigitSpecified { get; set; }
+
+        protected string _escapeDigit;
+
+        [XmlElement(ElementName = "escapeDigit", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        [Length(1)]
+        public string EscapeDigit
+        {
+            get => _escapeDigit;
+            set
+            {
+                EscapeDigitSpecified = (value != null);
+                _escapeDigit = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool EscapeDigitSpecified { get; set; }
+
+        protected bool? _resetCallStatisticsUponEntryInQueue;
+
+        [XmlElement(ElementName = "resetCallStatisticsUponEntryInQueue", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        public bool? ResetCallStatisticsUponEntryInQueue
+        {
+            get => _resetCallStatisticsUponEntryInQueue;
+            set
+            {
+                ResetCallStatisticsUponEntryInQueueSpecified = (value != null);
+                _resetCallStatisticsUponEntryInQueue = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool ResetCallStatisticsUponEntryInQueueSpecified { get; set; }
+
+        protected bool? _allowAgentLogoff;
+
+        [XmlElement(ElementName = "allowAgentLogoff", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        public bool? AllowAgentLogoff
+        {
+            get => _allowAgentLogoff;
+            set
+            {
+                AllowAgentLogoffSpecified = (value != null);
+                _allowAgentLogoff = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool AllowAgentLogoffSpecified { get; set; }
+
+        protected bool? _allowCallWaitingForAgents;
+
+        [XmlElement(ElementName = "allowCallWaitingForAgents", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        public bool? AllowCallWaitingForAgents
+        {
+            get => _allowCallWaitingForAgents;
+            set
+            {
+                AllowCallWaitingForAgentsSpecified = (value != null);
+                _allowCallWaitingForAgents = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool AllowCallWaitingForAgentsSpecified { get; set; }
+
+        protected bool? _allowCallsToAgentsInWrapUp;
+
+        [XmlElement(ElementName = "allowCallsToAgentsInWrapUp", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        public bool? AllowCallsToAgentsInWrapUp
+        {
+            get => _allowCallsToAgentsInWrapUp;
+            set
+            {
+                AllowCallsToAgentsInWrapUpSpecified = (value != null);
+                _allowCallsToAgentsInWrapUp = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool AllowCallsToAgentsInWrapUpSpecified { get; set; }
+
+        protected bool? _overrideAgentWrapUpTime;
+
+        [XmlElement(ElementName = "overrideAgentWrapUpTime", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        public bool? OverrideAgentWrapUpTime
+        {
+            get => _overrideAgentWrapUpTime;
+            set
+            {
+                OverrideAgentWrapUpTimeSpecified = (value != null);
+                _overrideAgentWrapUpTime = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool OverrideAgentWrapUpTimeSpecified { get; set; }
+
+        protected int? _wrapUpSeconds;
+
+        /// <remarks>Eraseable</remarks>
+        [XmlElement(ElementName = "wrapUpSeconds", IsNullable = true, Namespace = "")]
+        [Optional]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        [MinInclusive(1)]
+        [MaxInclusive(3600)]
+        public int? WrapUpSeconds
+        {
+            get => _wrapUpSeconds;
+            set
+            {
+                WrapUpSecondsSpecified = true;
+                _wrapUpSeconds = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool WrapUpSecondsSpecified { get; set; }
+
+        protected bool? _forceDeliveryOfCalls;
+
+        [XmlElement(ElementName = "forceDeliveryOfCalls", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        public bool? ForceDeliveryOfCalls
+        {
+            get => _forceDeliveryOfCalls;
+            set
+            {
+                ForceDeliveryOfCallsSpecified = (value != null);
+                _forceDeliveryOfCalls = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool ForceDeliveryOfCallsSpecified { get; set; }
+
+        protected int? _forceDeliveryWaitTimeSeconds;
+
+        /// <remarks>Eraseable</remarks>
+        [XmlElement(ElementName = "forceDeliveryWaitTimeSeconds", IsNullable = true, Namespace = "")]
+        [Optional]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        [MinInclusive(1)]
+        [MaxInclusive(10)]
+        public int? ForceDeliveryWaitTimeSeconds
+        {
+            get => _forceDeliveryWaitTimeSeconds;
+            set
+            {
+                ForceDeliveryWaitTimeSecondsSpecified = true;
+                _forceDeliveryWaitTimeSeconds = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool ForceDeliveryWaitTimeSecondsSpecified { get; set; }
+
+        protected bool? _enableAutomaticStateChangeForAgents;
+
+        [XmlElement(ElementName = "enableAutomaticStateChangeForAgents", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        public bool? EnableAutomaticStateChangeForAgents
+        {
+            get => _enableAutomaticStateChangeForAgents;
+            set
+            {
+                EnableAutomaticStateChangeForAgentsSpecified = (value != null);
+                _enableAutomaticStateChangeForAgents = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool EnableAutomaticStateChangeForAgentsSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.AgentACDAutomaticState? _agentStateAfterCall;
+
+        [XmlElement(ElementName = "agentStateAfterCall", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        public BroadWorksConnector.Ocip.Models.AgentACDAutomaticState? AgentStateAfterCall
+        {
+            get => _agentStateAfterCall;
+            set
+            {
+                AgentStateAfterCallSpecified = (value != null);
+                _agentStateAfterCall = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool AgentStateAfterCallSpecified { get; set; }
+
+        protected string _agentUnavailableCode;
+
+        /// <remarks>Eraseable</remarks>
+        [XmlElement(ElementName = "agentUnavailableCode", IsNullable = true, Namespace = "")]
+        [Optional]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        [MinLength(1)]
+        [MaxLength(10)]
+        public string AgentUnavailableCode
+        {
+            get => _agentUnavailableCode;
+            set
+            {
+                AgentUnavailableCodeSpecified = true;
+                _agentUnavailableCode = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool AgentUnavailableCodeSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.AudioFileCodecRI? _externalPreferredAudioCodec;
+
+        [XmlElement(ElementName = "externalPreferredAudioCodec", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        public BroadWorksConnector.Ocip.Models.AudioFileCodecRI? ExternalPreferredAudioCodec
+        {
+            get => _externalPreferredAudioCodec;
+            set
+            {
+                ExternalPreferredAudioCodecSpecified = (value != null);
+                _externalPreferredAudioCodec = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool ExternalPreferredAudioCodecSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.AudioFileCodecRI? _internalPreferredAudioCodec;
+
+        [XmlElement(ElementName = "internalPreferredAudioCodec", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        public BroadWorksConnector.Ocip.Models.AudioFileCodecRI? InternalPreferredAudioCodec
+        {
+            get => _internalPreferredAudioCodec;
+            set
+            {
+                InternalPreferredAudioCodecSpecified = (value != null);
+                _internalPreferredAudioCodec = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool InternalPreferredAudioCodecSpecified { get; set; }
+
+        protected bool? _playRingingWhenOfferingCall;
+
+        [XmlElement(ElementName = "playRingingWhenOfferingCall", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        public bool? PlayRingingWhenOfferingCall
+        {
+            get => _playRingingWhenOfferingCall;
+            set
+            {
+                PlayRingingWhenOfferingCallSpecified = (value != null);
+                _playRingingWhenOfferingCall = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool PlayRingingWhenOfferingCallSpecified { get; set; }
+
+        protected string _networkClassOfService;
+
+        [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5149")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string NetworkClassOfService
+        {
+            get => _networkClassOfService;
+            set
+            {
+                NetworkClassOfServiceSpecified = (value != null);
+                _networkClassOfService = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool NetworkClassOfServiceSpecified { get; set; }
+
+    }
+}

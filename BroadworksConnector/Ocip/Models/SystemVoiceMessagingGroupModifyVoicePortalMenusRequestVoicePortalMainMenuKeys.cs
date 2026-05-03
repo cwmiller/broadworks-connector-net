@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:39503""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:43576""}]")]
     public class SystemVoiceMessagingGroupModifyVoicePortalMenusRequestVoicePortalMainMenuKeys
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "voiceMessaging", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:39503")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43576")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string VoiceMessaging
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "commPilotExpressProfile", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:39503")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43576")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string CommPilotExpressProfile
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "personalizedName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:39503")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43576")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string PersonalizedName
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "callForwardingOptions", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:39503")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43576")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string CallForwardingOptions
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "voicePortalCalling", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:39503")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43576")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string VoicePortalCalling
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "hoteling", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:39503")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43576")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string Hoteling
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "passcode", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:39503")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43576")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string Passcode
@@ -168,7 +168,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "exitVoicePortal", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:39503")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43576")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ExitVoicePortal
@@ -189,7 +189,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:39503")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43576")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string RepeatMenu
@@ -210,7 +210,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "externalRouting", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:39503")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43576")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ExternalRouting

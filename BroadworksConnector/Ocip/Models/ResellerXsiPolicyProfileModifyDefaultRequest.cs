@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d45e381d6dbac771631649063122a42e:1056""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d45e381d6dbac771631649063122a42e:1071""}]")]
     public class ResellerXsiPolicyProfileModifyDefaultRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        [Group(@"d45e381d6dbac771631649063122a42e:1056")]
+        [Group(@"d45e381d6dbac771631649063122a42e:1071")]
         [MinLength(1)]
         [MaxLength(36)]
         public string ResellerId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "spDefaultXsiPolicyProfile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d45e381d6dbac771631649063122a42e:1056")]
+        [Group(@"d45e381d6dbac771631649063122a42e:1071")]
         [MinLength(1)]
         [MaxLength(40)]
         public string SpDefaultXsiPolicyProfile
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "groupDefaultXsiPolicyProfile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d45e381d6dbac771631649063122a42e:1056")]
+        [Group(@"d45e381d6dbac771631649063122a42e:1071")]
         [MinLength(1)]
         [MaxLength(40)]
         public string GroupDefaultXsiPolicyProfile
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userDefaultXsiPolicyProfile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d45e381d6dbac771631649063122a42e:1056")]
+        [Group(@"d45e381d6dbac771631649063122a42e:1071")]
         [MinLength(1)]
         [MaxLength(40)]
         public string UserDefaultXsiPolicyProfile

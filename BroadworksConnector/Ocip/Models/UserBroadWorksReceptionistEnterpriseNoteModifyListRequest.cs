@@ -17,19 +17,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
     /// <see cref="WarningResponse"/>
-    /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""44477d346d2631b033071e12af214ac8:275""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""44477d346d2631b033071e12af214ac8:279""}]")]
     public class UserBroadWorksReceptionistEnterpriseNoteModifyListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _receptionistUserId;
 
         [XmlElement(ElementName = "receptionistUserId", IsNullable = false, Namespace = "")]
-        [Group(@"44477d346d2631b033071e12af214ac8:275")]
+        [Group(@"44477d346d2631b033071e12af214ac8:279")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ReceptionistUserId
@@ -48,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected List<BroadWorksConnector.Ocip.Models.ReceptionistContactUserAndNote> _receptionistUserAndNote = new List<BroadWorksConnector.Ocip.Models.ReceptionistContactUserAndNote>();
 
         [XmlElement(ElementName = "receptionistUserAndNote", IsNullable = false, Namespace = "")]
-        [Group(@"44477d346d2631b033071e12af214ac8:275")]
+        [Group(@"44477d346d2631b033071e12af214ac8:279")]
         public List<BroadWorksConnector.Ocip.Models.ReceptionistContactUserAndNote> ReceptionistUserAndNote
         {
             get => _receptionistUserAndNote;

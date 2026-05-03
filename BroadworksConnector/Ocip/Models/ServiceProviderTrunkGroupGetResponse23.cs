@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""090e91b2d78e873f5d76a2f16af08d3a:1630""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""090e91b2d78e873f5d76a2f16af08d3a:1619""}]")]
     public class ServiceProviderTrunkGroupGetResponse23 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _maxActiveCalls;
 
         [XmlElement(ElementName = "maxActiveCalls", IsNullable = false, Namespace = "")]
-        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1630")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1619")]
         public BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt MaxActiveCalls
         {
             get => _maxActiveCalls;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _burstingMaxActiveCalls;
 
         [XmlElement(ElementName = "burstingMaxActiveCalls", IsNullable = false, Namespace = "")]
-        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1630")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1619")]
         public BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt BurstingMaxActiveCalls
         {
             get => _burstingMaxActiveCalls;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt _numberOfBurstingBTLUs;
 
         [XmlElement(ElementName = "numberOfBurstingBTLUs", IsNullable = false, Namespace = "")]
-        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1630")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1619")]
         public BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt NumberOfBurstingBTLUs
         {
             get => _numberOfBurstingBTLUs;

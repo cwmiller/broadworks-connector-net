@@ -12,22 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// The following data element is only used in XS data mode and will be ignored in AS data mode:
     /// signedPassword, ignored in AS data mode unless the password element is not present then an error is returned.
-    /// 
-    /// The response is either an LoginResponse22V5 or ErrorResponse
-    /// <see cref="LoginResponse22V5"/>
-    /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ef3c4f453d01f7ce750331de83ebc765:295""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ef3c4f453d01f7ce750331de83ebc765:296""}]")]
     public class LoginRequest22V5 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.LoginResponse22V5>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"ef3c4f453d01f7ce750331de83ebc765:295")]
+        [Group(@"ef3c4f453d01f7ce750331de83ebc765:296")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -47,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ef3c4f453d01f7ce750331de83ebc765:295")]
+        [Group(@"ef3c4f453d01f7ce750331de83ebc765:296")]
         [MinLength(1)]
         [MaxLength(60)]
         public string Password
@@ -67,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "signedPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ef3c4f453d01f7ce750331de83ebc765:295")]
+        [Group(@"ef3c4f453d01f7ce750331de83ebc765:296")]
         [MinLength(1)]
         public string SignedPassword
         {

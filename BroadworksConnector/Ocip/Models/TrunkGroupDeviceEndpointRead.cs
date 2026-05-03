@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:50406""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:54883""}]")]
     public class TrunkGroupDeviceEndpointRead
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:50406")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:54883")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:50406")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:54883")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:50406")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:54883")]
         [MinLength(1)]
         [MaxLength(161)]
         public string LinePort
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:50406")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:54883")]
         [MinLength(1)]
         [MaxLength(1020)]
         public string Contact
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _staticRegistrationCapable;
 
         [XmlElement(ElementName = "staticRegistrationCapable", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:50406")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:54883")]
         public bool StaticRegistrationCapable
         {
             get => _staticRegistrationCapable;
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useDomain;
 
         [XmlElement(ElementName = "useDomain", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:50406")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:54883")]
         public bool UseDomain
         {
             get => _useDomain;

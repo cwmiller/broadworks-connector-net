@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""448c1807ef39a1a06e7d8d4d16ecaa31:113"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""448c1807ef39a1a06e7d8d4d16ecaa31:114"",""optional"":true}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""448c1807ef39a1a06e7d8d4d16ecaa31:120"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""448c1807ef39a1a06e7d8d4d16ecaa31:121"",""optional"":true}]}]")]
     public class DirectRouteReplacementIdentityList
     {
 
         protected string _dtgIdentity;
 
         [XmlElement(ElementName = "dtgIdentity", IsNullable = false, Namespace = "")]
-        [Group(@"448c1807ef39a1a06e7d8d4d16ecaa31:114")]
+        [Group(@"448c1807ef39a1a06e7d8d4d16ecaa31:121")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DtgIdentity
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _trunkIdentity;
 
         [XmlElement(ElementName = "trunkIdentity", IsNullable = false, Namespace = "")]
-        [Group(@"448c1807ef39a1a06e7d8d4d16ecaa31:114")]
+        [Group(@"448c1807ef39a1a06e7d8d4d16ecaa31:121")]
         [MinLength(1)]
         [MaxLength(161)]
         public string TrunkIdentity

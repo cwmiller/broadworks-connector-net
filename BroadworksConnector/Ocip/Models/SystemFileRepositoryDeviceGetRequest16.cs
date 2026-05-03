@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: SystemFileRepositoryDeviceGetRequest20
     /// <see cref="SystemFileRepositoryDeviceGetResponse16"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemFileRepositoryDeviceGetRequest20"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:27292""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:30934""}]")]
     public class SystemFileRepositoryDeviceGetRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemFileRepositoryDeviceGetResponse16>
     {
 
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:27292")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:30934")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name

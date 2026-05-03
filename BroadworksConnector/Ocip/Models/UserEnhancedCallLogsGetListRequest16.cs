@@ -15,19 +15,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by UserEnhancedCallLogsGetListRequest17sp4
     /// <see cref="UserEnhancedCallLogsGetListResponse16"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="UserEnhancedCallLogsGetListRequest17sp4"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:43010""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:47052""}]")]
     public class UserEnhancedCallLogsGetListRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse16>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:43010")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:47052")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -47,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callLogType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:43010")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:47052")]
         public BroadWorksConnector.Ocip.Models.CallLogsType? CallLogType
         {
             get => _callLogType;
@@ -65,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:43010")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:47052")]
         public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl
         {
             get => _responsePagingControl;

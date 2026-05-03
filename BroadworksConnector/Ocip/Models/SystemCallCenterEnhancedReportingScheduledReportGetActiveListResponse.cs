@@ -20,14 +20,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:6270""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:6239""}]")]
     public class SystemCallCenterEnhancedReportingScheduledReportGetActiveListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _scheduledReportTable;
 
         [XmlElement(ElementName = "scheduledReportTable", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:6270")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6239")]
         public BroadWorksConnector.Ocip.Models.C.OCITable ScheduledReportTable
         {
             get => _scheduledReportTable;

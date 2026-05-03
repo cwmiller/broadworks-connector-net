@@ -8,21 +8,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get an existing Dialable Caller ID Criteria.
-    /// The response is either a SystemDialableCallerIDCriteriaGetResponse or an ErrorResponse.
-    /// <see cref="SystemDialableCallerIDCriteriaGetResponse"/>
+    /// The response is either a
+    /// SystemDialableCallerIDCriteriaGetRequest or an ErrorResponse.
+    /// <see cref="SystemDialableCallerIDCriteriaGetRequest"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:9043""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:9096""}]")]
     public class SystemDialableCallerIDCriteriaGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemDialableCallerIDCriteriaGetResponse>
     {
 
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:9043")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9096")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name

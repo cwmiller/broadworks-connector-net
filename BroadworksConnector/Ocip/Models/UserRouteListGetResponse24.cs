@@ -9,21 +9,21 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to UserRouteListGetRequest24.
     /// Contains the route list setting and a list of assigned number ranges and number prefixes.
-    /// The column headings for assignedNumberRangeTable are "Number Range Start", "Number Range End", "Is Active" and “Extension Length”.
-    /// The column headings for assignedNumberPrefixTable are "Number Prefix" ","Is Active", “Extension Range Start” and “Extension Range End”.
+    /// The column headings for assignedNumberRangeTable are "Number Range Start", "Number Range End", "Is Active" and "Extension Length".
+    /// The column headings for assignedNumberPrefixTable are "Number Prefix" ","Is Active", "Extension Range Start" and "Extension Range End".
     /// <see cref="UserRouteListGetRequest24"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""500f9871ed90b8ab3fbd262883ab503b:837""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""500f9871ed90b8ab3fbd262883ab503b:840""}]")]
     public class UserRouteListGetResponse24 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _treatOriginationsAndPBXRedirectionsAsScreened;
 
         [XmlElement(ElementName = "treatOriginationsAndPBXRedirectionsAsScreened", IsNullable = false, Namespace = "")]
-        [Group(@"500f9871ed90b8ab3fbd262883ab503b:837")]
+        [Group(@"500f9871ed90b8ab3fbd262883ab503b:840")]
         public bool TreatOriginationsAndPBXRedirectionsAsScreened
         {
             get => _treatOriginationsAndPBXRedirectionsAsScreened;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useRouteListIdentityForNonEmergencyCalls;
 
         [XmlElement(ElementName = "useRouteListIdentityForNonEmergencyCalls", IsNullable = false, Namespace = "")]
-        [Group(@"500f9871ed90b8ab3fbd262883ab503b:837")]
+        [Group(@"500f9871ed90b8ab3fbd262883ab503b:840")]
         public bool UseRouteListIdentityForNonEmergencyCalls
         {
             get => _useRouteListIdentityForNonEmergencyCalls;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useRouteListIdentityForEmergencyCalls;
 
         [XmlElement(ElementName = "useRouteListIdentityForEmergencyCalls", IsNullable = false, Namespace = "")]
-        [Group(@"500f9871ed90b8ab3fbd262883ab503b:837")]
+        [Group(@"500f9871ed90b8ab3fbd262883ab503b:840")]
         public bool UseRouteListIdentityForEmergencyCalls
         {
             get => _useRouteListIdentityForEmergencyCalls;
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _ignoreCallingNameForCallProcessing;
 
         [XmlElement(ElementName = "ignoreCallingNameForCallProcessing", IsNullable = false, Namespace = "")]
-        [Group(@"500f9871ed90b8ab3fbd262883ab503b:837")]
+        [Group(@"500f9871ed90b8ab3fbd262883ab503b:840")]
         public bool IgnoreCallingNameForCallProcessing
         {
             get => _ignoreCallingNameForCallProcessing;
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _assignedNumberRangeTable;
 
         [XmlElement(ElementName = "assignedNumberRangeTable", IsNullable = false, Namespace = "")]
-        [Group(@"500f9871ed90b8ab3fbd262883ab503b:837")]
+        [Group(@"500f9871ed90b8ab3fbd262883ab503b:840")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AssignedNumberRangeTable
         {
             get => _assignedNumberRangeTable;
@@ -108,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _assignedNumberPrefixTable;
 
         [XmlElement(ElementName = "assignedNumberPrefixTable", IsNullable = false, Namespace = "")]
-        [Group(@"500f9871ed90b8ab3fbd262883ab503b:837")]
+        [Group(@"500f9871ed90b8ab3fbd262883ab503b:840")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AssignedNumberPrefixTable
         {
             get => _assignedNumberPrefixTable;

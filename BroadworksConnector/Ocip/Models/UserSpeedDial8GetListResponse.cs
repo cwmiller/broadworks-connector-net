@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""cf382feccaa0287c41bdaf00086b6ffd:56""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""cf382feccaa0287c41bdaf00086b6ffd:59""}]")]
     public class UserSpeedDial8GetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected List<BroadWorksConnector.Ocip.Models.SpeedDial8Entry> _speedDialEntry = new List<BroadWorksConnector.Ocip.Models.SpeedDial8Entry>();
 
         [XmlElement(ElementName = "speedDialEntry", IsNullable = false, Namespace = "")]
-        [Group(@"cf382feccaa0287c41bdaf00086b6ffd:56")]
+        [Group(@"cf382feccaa0287c41bdaf00086b6ffd:59")]
         public List<BroadWorksConnector.Ocip.Models.SpeedDial8Entry> SpeedDialEntry
         {
             get => _speedDialEntry;

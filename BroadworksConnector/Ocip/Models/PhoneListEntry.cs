@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3964""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4744""}]")]
     public class PhoneListEntry
     {
 
         protected string _entryName;
 
         [XmlElement(ElementName = "entryName", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3964")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4744")]
         [MinLength(1)]
         [MaxLength(50)]
         public string EntryName
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3964")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4744")]
         [MinLength(1)]
         [MaxLength(30)]
         public string PhoneNumber

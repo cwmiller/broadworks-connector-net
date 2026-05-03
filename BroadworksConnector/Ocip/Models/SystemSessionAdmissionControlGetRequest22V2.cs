@@ -13,12 +13,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: SystemSessionAdmissionControlGetRequest22V3
     /// <see cref="SystemSessionAdmissionControlGetResponse22V2"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemSessionAdmissionControlGetRequest22V3"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:29706""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:33608""}]")]
     public class SystemSessionAdmissionControlGetRequest22V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemSessionAdmissionControlGetResponse22V2>
     {
 

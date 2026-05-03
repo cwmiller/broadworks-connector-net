@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2256aa4d4c7d3679ce18e4f471895147:56""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2256aa4d4c7d3679ce18e4f471895147:62""}]")]
     public class SystemConnectedLineIdentificationPresentationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enforceUserServiceAssignment;
 
         [XmlElement(ElementName = "enforceUserServiceAssignment", IsNullable = false, Namespace = "")]
-        [Group(@"2256aa4d4c7d3679ce18e4f471895147:56")]
+        [Group(@"2256aa4d4c7d3679ce18e4f471895147:62")]
         public bool EnforceUserServiceAssignment
         {
             get => _enforceUserServiceAssignment;

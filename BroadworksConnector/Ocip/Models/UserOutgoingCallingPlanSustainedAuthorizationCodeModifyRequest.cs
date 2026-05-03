@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a63afa661ee5c74f4700e562e88c66d0:1664""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a63afa661ee5c74f4700e562e88c66d0:1668""}]")]
     public class UserOutgoingCallingPlanSustainedAuthorizationCodeModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"a63afa661ee5c74f4700e562e88c66d0:1664")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:1668")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "code", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"a63afa661ee5c74f4700e562e88c66d0:1664")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:1668")]
         [MinLength(2)]
         [MaxLength(14)]
         public string Code

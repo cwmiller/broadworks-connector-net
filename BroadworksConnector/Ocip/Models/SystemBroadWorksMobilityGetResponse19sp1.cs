@@ -10,19 +10,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response to a SystemBroadWorksMobilityGetRequest19sp1.
     /// Replaced by SystemBroadWorksMobilityGetResponse21
     /// <see cref="SystemBroadWorksMobilityGetRequest19sp1"/>
-    /// <see cref="SystemBroadWorksMobilityGetResponse21"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:21006""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:23562""}]")]
     public class SystemBroadWorksMobilityGetResponse19sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enableLocationServices;
 
         [XmlElement(ElementName = "enableLocationServices", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:21006")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:23562")]
         public bool EnableLocationServices
         {
             get => _enableLocationServices;
@@ -39,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableMSRNLookup;
 
         [XmlElement(ElementName = "enableMSRNLookup", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:21006")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:23562")]
         public bool EnableMSRNLookup
         {
             get => _enableMSRNLookup;
@@ -56,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableMobileStateChecking;
 
         [XmlElement(ElementName = "enableMobileStateChecking", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:21006")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:23562")]
         public bool EnableMobileStateChecking
         {
             get => _enableMobileStateChecking;
@@ -73,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _denyCallOriginations;
 
         [XmlElement(ElementName = "denyCallOriginations", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:21006")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:23562")]
         public bool DenyCallOriginations
         {
             get => _denyCallOriginations;
@@ -90,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _denyCallTerminations;
 
         [XmlElement(ElementName = "denyCallTerminations", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:21006")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:23562")]
         public bool DenyCallTerminations
         {
             get => _denyCallTerminations;
@@ -107,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _imrnTimeoutMillisecnds;
 
         [XmlElement(ElementName = "imrnTimeoutMillisecnds", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:21006")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:23562")]
         [MinInclusive(100)]
         [MaxInclusive(60000)]
         public int ImrnTimeoutMillisecnds
@@ -127,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "scfSignalingNetAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:21006")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:23562")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ScfSignalingNetAddress
@@ -147,7 +146,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "scfSignalingPort", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:21006")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:23562")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int? ScfSignalingPort
@@ -166,7 +165,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _refreshPeriodSeconds;
 
         [XmlElement(ElementName = "refreshPeriodSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:21006")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:23562")]
         [MinInclusive(10)]
         [MaxInclusive(1800)]
         public int RefreshPeriodSeconds
@@ -185,7 +184,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxConsecutiveFailures;
 
         [XmlElement(ElementName = "maxConsecutiveFailures", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:21006")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:23562")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int MaxConsecutiveFailures
@@ -204,7 +203,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxResponseWaitTimeMilliseconds;
 
         [XmlElement(ElementName = "maxResponseWaitTimeMilliseconds", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:21006")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:23562")]
         [MinInclusive(100)]
         [MaxInclusive(10000)]
         public int MaxResponseWaitTimeMilliseconds
@@ -223,7 +222,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableAnnouncementSuppression;
 
         [XmlElement(ElementName = "enableAnnouncementSuppression", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:21006")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:23562")]
         public bool EnableAnnouncementSuppression
         {
             get => _enableAnnouncementSuppression;

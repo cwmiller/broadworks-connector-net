@@ -11,19 +11,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response contains the reseller administrators profile information.
     /// Replaced by ResellerAdminGetResponse22
     /// <see cref="ResellerAdminGetRequest"/>
-    /// <see cref="ResellerAdminGetResponse22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:5011""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:5503""}]")]
     public class ResellerAdminGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:5011")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5503")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ResellerId
@@ -43,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:5011")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5503")]
         [MinLength(1)]
         [MaxLength(30)]
         public string FirstName
@@ -63,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:5011")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5503")]
         [MinLength(1)]
         [MaxLength(30)]
         public string LastName
@@ -82,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _language;
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:5011")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5503")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Language

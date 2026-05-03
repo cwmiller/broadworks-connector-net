@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""aa3a240fa755015613cfb9259eccafef:71""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""aa3a240fa755015613cfb9259eccafef:74""}]")]
     public class SystemSMDIMessageDeskAddServerRouteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _routeDestination;
 
         [XmlElement(ElementName = "routeDestination", IsNullable = false, Namespace = "")]
-        [Group(@"aa3a240fa755015613cfb9259eccafef:71")]
+        [Group(@"aa3a240fa755015613cfb9259eccafef:74")]
         [MinLength(1)]
         [MaxLength(10)]
         public string RouteDestination
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected List<string> _deviceName = new List<string>();
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"aa3a240fa755015613cfb9259eccafef:71")]
+        [Group(@"aa3a240fa755015613cfb9259eccafef:74")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> DeviceName

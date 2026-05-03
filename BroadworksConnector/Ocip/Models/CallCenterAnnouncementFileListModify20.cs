@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:979""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:1143""}]")]
     public class CallCenterAnnouncementFileListModify20
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "file1", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:979")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1143")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey File1
         {
             get => _file1;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "file2", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:979")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1143")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey File2
         {
             get => _file2;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "file3", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:979")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1143")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey File3
         {
             get => _file3;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "file4", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:979")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1143")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey File4
         {
             get => _file4;

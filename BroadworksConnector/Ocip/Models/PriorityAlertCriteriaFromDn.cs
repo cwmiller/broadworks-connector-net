@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3994""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4774""}]")]
     public class PriorityAlertCriteriaFromDn
     {
 
         protected BroadWorksConnector.Ocip.Models.PriorityAlertCriteriaFromDnSelection _fromDnCriteriaSelection;
 
         [XmlElement(ElementName = "fromDnCriteriaSelection", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3994")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4774")]
         public BroadWorksConnector.Ocip.Models.PriorityAlertCriteriaFromDnSelection FromDnCriteriaSelection
         {
             get => _fromDnCriteriaSelection;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _includeAnonymousCallers;
 
         [XmlElement(ElementName = "includeAnonymousCallers", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3994")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4774")]
         public bool IncludeAnonymousCallers
         {
             get => _includeAnonymousCallers;
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _includeUnavailableCallers;
 
         [XmlElement(ElementName = "includeUnavailableCallers", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3994")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4774")]
         public bool IncludeUnavailableCallers
         {
             get => _includeUnavailableCallers;
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3994")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4774")]
         [MinLength(1)]
         [MaxLength(23)]
         public List<string> PhoneNumber

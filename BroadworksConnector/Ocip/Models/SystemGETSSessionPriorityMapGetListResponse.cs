@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:11303""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:11362""}]")]
     public class SystemGETSSessionPriorityMapGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _sessionPriorityTable;
 
         [XmlElement(ElementName = "sessionPriorityTable", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:11303")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11362")]
         public BroadWorksConnector.Ocip.Models.C.OCITable SessionPriorityTable
         {
             get => _sessionPriorityTable;

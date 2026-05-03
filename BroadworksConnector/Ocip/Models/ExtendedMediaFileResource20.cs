@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3220""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3481""}]")]
     public class ExtendedMediaFileResource20
     {
 
@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "file", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3220")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3481")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileKey File
         {
             get => _file;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "url", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3220")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3481")]
         [MinLength(1)]
         [MaxLength(256)]
         public string Url

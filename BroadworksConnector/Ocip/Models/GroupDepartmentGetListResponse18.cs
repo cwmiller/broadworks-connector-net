@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:3693""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:3733""}]")]
     public class GroupDepartmentGetListResponse18 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _departmentTable;
 
         [XmlElement(ElementName = "departmentTable", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:3693")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:3733")]
         public BroadWorksConnector.Ocip.Models.C.OCITable DepartmentTable
         {
             get => _departmentTable;

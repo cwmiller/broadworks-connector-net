@@ -13,20 +13,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// For the callToNumbers in the callToNumberList, the extension element is not used and the number element is only used when the type is BroadWorks Mobility.
     /// The response is either a SuccessResponse or an ErrorResponse.
+    /// 
+    /// Replaced by: UserCallNotifyModifyCriteriaRequestRI in AS data mode
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ec1be3ca6e990aac87b6fcf39d5e3445:278""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:18866""}]")]
     public class UserCallNotifyModifyCriteriaRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"ec1be3ca6e990aac87b6fcf39d5e3445:278")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:18866")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -45,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _criteriaName;
 
         [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
-        [Group(@"ec1be3ca6e990aac87b6fcf39d5e3445:278")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:18866")]
         [MinLength(1)]
         [MaxLength(50)]
         public string CriteriaName
@@ -65,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newCriteriaName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ec1be3ca6e990aac87b6fcf39d5e3445:278")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:18866")]
         [MinLength(1)]
         [MaxLength(50)]
         public string NewCriteriaName
@@ -86,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "timeSchedule", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ec1be3ca6e990aac87b6fcf39d5e3445:278")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:18866")]
         public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule
         {
             get => _timeSchedule;
@@ -104,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ec1be3ca6e990aac87b6fcf39d5e3445:278")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:18866")]
         public BroadWorksConnector.Ocip.Models.CriteriaFromDnModify FromDnCriteria
         {
             get => _fromDnCriteria;
@@ -123,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holidaySchedule", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ec1be3ca6e990aac87b6fcf39d5e3445:278")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:18866")]
         public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule
         {
             get => _holidaySchedule;
@@ -141,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "blacklisted", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ec1be3ca6e990aac87b6fcf39d5e3445:278")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:18866")]
         public bool? Blacklisted
         {
             get => _blacklisted;
@@ -160,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "callToNumberList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ec1be3ca6e990aac87b6fcf39d5e3445:278")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:18866")]
         public BroadWorksConnector.Ocip.Models.ReplacementCallToNumberList CallToNumberList
         {
             get => _callToNumberList;

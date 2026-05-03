@@ -16,19 +16,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Replaced by: GroupDnGetAssignmentListResponse18
     /// <see cref="GroupDnGetAssignmentListRequest"/>
-    /// <see cref="GroupDnGetAssignmentListResponse18"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:9578""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:10429""}]")]
     public class GroupDnGetAssignmentListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _dnTable;
 
         [XmlElement(ElementName = "dnTable", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9578")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10429")]
         public BroadWorksConnector.Ocip.Models.C.OCITable DnTable
         {
             get => _dnTable;

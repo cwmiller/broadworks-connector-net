@@ -24,26 +24,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// resellerId
     /// excludeLeafDeviceTypes
     /// onlyTreeDeviceTypes
-    /// The response is either SystemDeviceTypeGetAvailableListResponse22 or ErrorResponse.
+    /// The response is either SystemDeviceTypeGetlAvailableListResponse22 or ErrorResponse.
     /// 
     /// Replaced by: SystemDeviceTypeGetAvailableListRequest22V2 in AS data mode.
     /// <see cref="SystemSIPDeviceTypeGetListRequest"/>
     /// <see cref="SystemMGCPDeviceTypeGetListRequest"/>
-    /// <see cref="SystemDeviceTypeGetAvailableListResponse22"/>
+    /// <see cref="SystemDeviceTypeGetlAvailableListResponse22"/>
     /// <see cref="ErrorResponse"/>
     /// <see cref="SystemDeviceTypeGetAvailableListRequest22V2"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:9905"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:9911""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:10676"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:10682""}]}]")]
     public class SystemDeviceTypeGetAvailableListRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemDeviceTypeGetAvailableListResponse22>
     {
 
         protected bool _allowConference;
 
         [XmlElement(ElementName = "allowConference", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:9905")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10676")]
         public bool AllowConference
         {
             get => _allowConference;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowMusicOnHold;
 
         [XmlElement(ElementName = "allowMusicOnHold", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:9905")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10676")]
         public bool AllowMusicOnHold
         {
             get => _allowMusicOnHold;
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _onlyConference;
 
         [XmlElement(ElementName = "onlyConference", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:9905")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10676")]
         public bool OnlyConference
         {
             get => _onlyConference;
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _onlyVideoCapable;
 
         [XmlElement(ElementName = "onlyVideoCapable", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:9905")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10676")]
         public bool OnlyVideoCapable
         {
             get => _onlyVideoCapable;
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _onlyOptionalIpAddress;
 
         [XmlElement(ElementName = "onlyOptionalIpAddress", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:9905")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10676")]
         public bool OnlyOptionalIpAddress
         {
             get => _onlyOptionalIpAddress;
@@ -129,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "excludeReseller", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:9911")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10682")]
         public bool? ExcludeReseller
         {
             get => _excludeReseller;
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:9911")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10682")]
         [MinLength(1)]
         [MaxLength(36)]
         public string ResellerId
@@ -167,7 +167,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "excludeLeafDeviceTypes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:9905")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10676")]
         public bool? ExcludeLeafDeviceTypes
         {
             get => _excludeLeafDeviceTypes;
@@ -185,7 +185,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "onlyTreeDeviceTypes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:9905")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10676")]
         public bool? OnlyTreeDeviceTypes
         {
             get => _onlyTreeDeviceTypes;

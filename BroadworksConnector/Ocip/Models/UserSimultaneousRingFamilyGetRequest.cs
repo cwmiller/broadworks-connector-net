@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced By: UserSimultaneousRingFamilyGetRequest14sp4
     /// <see cref="UserSimultaneousRingFamilyGetResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="UserSimultaneousRingFamilyGetRequest14sp4"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:47190""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:51570""}]")]
     public class UserSimultaneousRingFamilyGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserSimultaneousRingFamilyGetResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:47190")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:51570")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

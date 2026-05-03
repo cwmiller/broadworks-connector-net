@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:2246""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:2180""}]")]
     public class AnnouncementMenuKeysModifyEntry
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "recordAudio", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2246")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2180")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string RecordAudio
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "recordAudioVideo", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2246")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2180")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string RecordAudioVideo
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2246")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2180")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ReturnToPreviousMenu
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2246")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2180")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string RepeatMenu

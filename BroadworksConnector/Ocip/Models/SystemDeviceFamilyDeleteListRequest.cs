@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:7511""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:7563""}]")]
     public class SystemDeviceFamilyDeleteListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected List<string> _deviceFamilyName = new List<string>();
 
         [XmlElement(ElementName = "deviceFamilyName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:7511")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7563")]
         [MinLength(1)]
         [MaxLength(30)]
         public List<string> DeviceFamilyName

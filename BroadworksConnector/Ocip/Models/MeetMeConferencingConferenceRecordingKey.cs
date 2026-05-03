@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""adf25df72505d1c476ebb480b6cce18d:957""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""adf25df72505d1c476ebb480b6cce18d:964""}]")]
     public class MeetMeConferencingConferenceRecordingKey
     {
 
         protected string _bridgeId;
 
         [XmlElement(ElementName = "bridgeId", IsNullable = false, Namespace = "")]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:957")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:964")]
         [MinLength(1)]
         [MaxLength(161)]
         public string BridgeId
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _conferenceId;
 
         [XmlElement(ElementName = "conferenceId", IsNullable = false, Namespace = "")]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:957")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:964")]
         [MinLength(6)]
         [MaxLength(12)]
         public string ConferenceId
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _startTime;
 
         [XmlElement(ElementName = "startTime", IsNullable = false, Namespace = "")]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:957")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:964")]
         public string StartTime
         {
             get => _startTime;

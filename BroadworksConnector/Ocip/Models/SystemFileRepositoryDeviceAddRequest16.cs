@@ -13,19 +13,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: SystemFileRepositoryDeviceAddRequest20
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemFileRepositoryDeviceAddRequest20"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:27251"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:27255""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:30893"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:30897""}]}]")]
     public class SystemFileRepositoryDeviceAddRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:27251")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:30893")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name
@@ -45,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "rootDirectory", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:27251")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:30893")]
         [MinLength(1)]
         [MaxLength(256)]
         public string RootDirectory
@@ -65,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:27251")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:30893")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int? Port
@@ -84,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.FileRepositoryProtocolWebDAV _protocolWebDAV;
 
         [XmlElement(ElementName = "protocolWebDAV", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:27255")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:30897")]
         public BroadWorksConnector.Ocip.Models.FileRepositoryProtocolWebDAV ProtocolWebDAV
         {
             get => _protocolWebDAV;
@@ -101,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.FileRepositoryProtocolFTP16 _protocolFTP;
 
         [XmlElement(ElementName = "protocolFTP", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:27255")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:30897")]
         public BroadWorksConnector.Ocip.Models.FileRepositoryProtocolFTP16 ProtocolFTP
         {
             get => _protocolFTP;

@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b1b5afcbe1032212748a9c624f00158f:71""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b1b5afcbe1032212748a9c624f00158f:74""}]")]
     public class SystemThirdPartyIMPModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "serviceNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"b1b5afcbe1032212748a9c624f00158f:71")]
+        [Group(@"b1b5afcbe1032212748a9c624f00158f:74")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServiceNetAddress
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "servicePort", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"b1b5afcbe1032212748a9c624f00158f:71")]
+        [Group(@"b1b5afcbe1032212748a9c624f00158f:74")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int? ServicePort
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "boshURL", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"b1b5afcbe1032212748a9c624f00158f:71")]
+        [Group(@"b1b5afcbe1032212748a9c624f00158f:74")]
         [MinLength(1)]
         [MaxLength(256)]
         public string BoshURL

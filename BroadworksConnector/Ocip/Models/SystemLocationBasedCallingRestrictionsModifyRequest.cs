@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4489f4baeefa41b8df0a86def4c05cd8:81""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4489f4baeefa41b8df0a86def4c05cd8:85""}]")]
     public class SystemLocationBasedCallingRestrictionsModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "physicalLocationIndicator", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4489f4baeefa41b8df0a86def4c05cd8:81")]
+        [Group(@"4489f4baeefa41b8df0a86def4c05cd8:85")]
         public BroadWorksConnector.Ocip.Models.PhysicalLocationIndicator? PhysicalLocationIndicator
         {
             get => _physicalLocationIndicator;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enforceMscValidation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4489f4baeefa41b8df0a86def4c05cd8:81")]
+        [Group(@"4489f4baeefa41b8df0a86def4c05cd8:85")]
         public bool? EnforceMscValidation
         {
             get => _enforceMscValidation;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableOfficeZoneAnnouncement", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4489f4baeefa41b8df0a86def4c05cd8:81")]
+        [Group(@"4489f4baeefa41b8df0a86def4c05cd8:85")]
         public bool? EnableOfficeZoneAnnouncement
         {
             get => _enableOfficeZoneAnnouncement;
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enhanceOfficeZone", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4489f4baeefa41b8df0a86def4c05cd8:81")]
+        [Group(@"4489f4baeefa41b8df0a86def4c05cd8:85")]
         public bool? EnhanceOfficeZone
         {
             get => _enhanceOfficeZone;
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableMccMncBasedLocation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4489f4baeefa41b8df0a86def4c05cd8:81")]
+        [Group(@"4489f4baeefa41b8df0a86def4c05cd8:85")]
         public bool? EnableMccMncBasedLocation
         {
             get => _enableMccMncBasedLocation;
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "mccMncRoamingNetworkTranslationIndex", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4489f4baeefa41b8df0a86def4c05cd8:81")]
+        [Group(@"4489f4baeefa41b8df0a86def4c05cd8:85")]
         [MinLength(1)]
         [MaxLength(128)]
         public string MccMncRoamingNetworkTranslationIndex
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultMccMncBasedLocation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4489f4baeefa41b8df0a86def4c05cd8:81")]
+        [Group(@"4489f4baeefa41b8df0a86def4c05cd8:85")]
         public BroadWorksConnector.Ocip.Models.DefaultMccMncBasedLocation? DefaultMccMncBasedLocation
         {
             get => _defaultMccMncBasedLocation;

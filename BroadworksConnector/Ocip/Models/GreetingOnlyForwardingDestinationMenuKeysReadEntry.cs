@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:2643""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:2576""}]")]
     public class GreetingOnlyForwardingDestinationMenuKeysReadEntry
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "greetingOnlyForwardingDestination", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2643")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2576")]
         [Length(1)]
         [RegularExpression(@"\*|#")]
         public string GreetingOnlyForwardingDestination

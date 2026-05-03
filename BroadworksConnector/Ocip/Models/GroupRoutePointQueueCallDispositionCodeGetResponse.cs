@@ -8,19 +8,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to the GroupRoutePointQueueCallDispositionCodeGetRequest
-    /// <see cref="GroupRoutePointQueueCallDispositionCodeGetRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e474d11df9a1d1d1041e589793e40de8:1125""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e474d11df9a1d1d1041e589793e40de8:1128""}]")]
     public class GroupRoutePointQueueCallDispositionCodeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"e474d11df9a1d1d1041e589793e40de8:1125")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:1128")]
         public bool IsActive
         {
             get => _isActive;
@@ -38,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e474d11df9a1d1d1041e589793e40de8:1125")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:1128")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Description

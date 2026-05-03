@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:3199""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:3239""}]")]
     public class GroupCPEConfigSetConfigFileRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:3199")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:3239")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:3199")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:3239")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:3199")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:3239")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceType
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "configFile", IsNullable = true, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:3199")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:3239")]
         public BroadWorksConnector.Ocip.Models.FileResource ConfigFile
         {
             get => _configFile;

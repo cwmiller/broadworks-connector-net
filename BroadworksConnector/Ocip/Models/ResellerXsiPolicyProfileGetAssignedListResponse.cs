@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d45e381d6dbac771631649063122a42e:1000""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d45e381d6dbac771631649063122a42e:1015""}]")]
     public class ResellerXsiPolicyProfileGetAssignedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _assignedTable;
 
         [XmlElement(ElementName = "assignedTable", IsNullable = false, Namespace = "")]
-        [Group(@"d45e381d6dbac771631649063122a42e:1000")]
+        [Group(@"d45e381d6dbac771631649063122a42e:1015")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AssignedTable
         {
             get => _assignedTable;

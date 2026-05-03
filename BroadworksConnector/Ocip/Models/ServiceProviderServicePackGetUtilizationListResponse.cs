@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:6297""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:6360""}]")]
     public class ServiceProviderServicePackGetUtilizationListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "servicePackName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:6297")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:6360")]
         [MinLength(1)]
         [MaxLength(80)]
         public List<string> ServicePackName
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceUtilizationTable", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:6297")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:6360")]
         public List<BroadWorksConnector.Ocip.Models.C.OCITable> ServiceUtilizationTable
         {
             get => _serviceUtilizationTable;

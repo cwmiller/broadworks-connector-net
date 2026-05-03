@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:1188""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:1195""}]")]
     public class EnterpriseCallCenterCurrentAndPastDNISGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:1188")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:1195")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> Name
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deletedName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:1188")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:1195")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> DeletedName

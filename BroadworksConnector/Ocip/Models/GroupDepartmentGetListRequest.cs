@@ -16,19 +16,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: GroupDepartmentGetListRequest18
     /// <see cref="GroupDepartmentGetListResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="GroupDepartmentGetListRequest18"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:9178""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:10029""}]")]
     public class GroupDepartmentGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupDepartmentGetListResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9178")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10029")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -47,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9178")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10029")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -66,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _includeEnterpriseDepartments;
 
         [XmlElement(ElementName = "includeEnterpriseDepartments", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9178")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10029")]
         public bool IncludeEnterpriseDepartments
         {
             get => _includeEnterpriseDepartments;

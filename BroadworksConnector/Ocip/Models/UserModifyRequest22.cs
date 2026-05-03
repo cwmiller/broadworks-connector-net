@@ -16,6 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     /// nameDialingName
     /// alternateUserIdList
     /// newUserExternalId
+    /// emergencyCallbackNumber
     /// 
     /// The following elements are only used in XS data mode and ignored in AS data mode:
     /// allowVideo
@@ -25,21 +26,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// The impId and impPassword are accepted when the Third-Party IMP service is assigned to the user;
     /// when Integrated IMP service is assigned to the user and active, only the impPassword is accepted;
     /// all other cases, the request fails if either field is changed.
-    /// The response is either a SuccessResponse or ErrorResponse
-    /// <see cref="SuccessResponse"/>
-    /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:2552""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:2638""}]")]
     public class UserModifyRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -59,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(1)]
         [MaxLength(30)]
         public string LastName
@@ -79,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(1)]
         [MaxLength(30)]
         public string FirstName
@@ -99,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callingLineIdLastName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(1)]
         [MaxLength(30)]
         public string CallingLineIdLastName
@@ -119,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callingLineIdFirstName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(1)]
         [MaxLength(30)]
         public string CallingLineIdFirstName
@@ -140,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "nameDialingName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         public BroadWorksConnector.Ocip.Models.NameDialingName NameDialingName
         {
             get => _nameDialingName;
@@ -158,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hiraganaLastName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(1)]
         [MaxLength(30)]
         public string HiraganaLastName
@@ -178,7 +176,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hiraganaFirstName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(1)]
         [MaxLength(30)]
         public string HiraganaFirstName
@@ -199,7 +197,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "phoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(1)]
         [MaxLength(23)]
         public string PhoneNumber
@@ -220,7 +218,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "extension", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(2)]
         [MaxLength(20)]
         public string Extension
@@ -241,7 +239,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "callingLineIdPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(1)]
         [MaxLength(23)]
         public string CallingLineIdPhoneNumber
@@ -257,11 +255,32 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool CallingLineIdPhoneNumberSpecified { get; set; }
 
+        protected string _emergencyCallbackNumber;
+
+        /// <remarks>Eraseable</remarks>
+        [XmlElement(ElementName = "emergencyCallbackNumber", IsNullable = true, Namespace = "")]
+        [Optional]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public string EmergencyCallbackNumber
+        {
+            get => _emergencyCallbackNumber;
+            set
+            {
+                EmergencyCallbackNumberSpecified = true;
+                _emergencyCallbackNumber = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool EmergencyCallbackNumberSpecified { get; set; }
+
         protected string _oldPassword;
 
         [XmlElement(ElementName = "oldPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(1)]
         [MaxLength(60)]
         public string OldPassword
@@ -282,7 +301,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "newPassword", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(1)]
         [MaxLength(60)]
         public string NewPassword
@@ -303,7 +322,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "department", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         public BroadWorksConnector.Ocip.Models.DepartmentKey Department
         {
             get => _department;
@@ -321,7 +340,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Language
@@ -341,7 +360,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeZone", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(1)]
         [MaxLength(127)]
         public string TimeZone
@@ -362,7 +381,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "sipAliasList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         public BroadWorksConnector.Ocip.Models.ReplacementSIPAliasList SipAliasList
         {
             get => _sipAliasList;
@@ -381,7 +400,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "endpoint", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         public BroadWorksConnector.Ocip.Models.UserModifyRequest22Endpoint Endpoint
         {
             get => _endpoint;
@@ -400,7 +419,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "title", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(1)]
         [MaxLength(50)]
         public string Title
@@ -421,7 +440,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "pagerPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(1)]
         [MaxLength(30)]
         public string PagerPhoneNumber
@@ -442,7 +461,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "mobilePhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(1)]
         [MaxLength(30)]
         public string MobilePhoneNumber
@@ -463,7 +482,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "emailAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(1)]
         [MaxLength(80)]
         public string EmailAddress
@@ -484,7 +503,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "yahooId", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(1)]
         [MaxLength(50)]
         public string YahooId
@@ -505,7 +524,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "addressLocation", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(1)]
         [MaxLength(80)]
         public string AddressLocation
@@ -525,7 +544,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "address", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         public BroadWorksConnector.Ocip.Models.StreetAddress Address
         {
             get => _address;
@@ -543,7 +562,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService
@@ -563,7 +582,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "officeZoneName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(1)]
         [MaxLength(40)]
         public string OfficeZoneName
@@ -583,7 +602,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "primaryZoneName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(1)]
         [MaxLength(80)]
         public string PrimaryZoneName
@@ -604,7 +623,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "impId", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(1)]
         [MaxLength(196)]
         public string ImpId
@@ -625,7 +644,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "impPassword", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MinLength(1)]
         [MaxLength(60)]
         public string ImpPassword
@@ -646,7 +665,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "alternateUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         public BroadWorksConnector.Ocip.Models.ReplacementAlternateUserIdEntryList AlternateUserIdList
         {
             get => _alternateUserIdList;
@@ -664,7 +683,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowVideo", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         public bool? AllowVideo
         {
             get => _allowVideo;
@@ -680,22 +699,43 @@ namespace BroadWorksConnector.Ocip.Models
 
         protected string _newUserExternalId;
 
-        [XmlElement(ElementName = "newUserExternalId", IsNullable = false, Namespace = "")]
+        /// <remarks>Eraseable</remarks>
+        [XmlElement(ElementName = "newUserExternalId", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2552")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
         [MaxLength(36)]
         public string NewUserExternalId
         {
             get => _newUserExternalId;
             set
             {
-                NewUserExternalIdSpecified = (value != null);
+                NewUserExternalIdSpecified = true;
                 _newUserExternalId = value;
             }
         }
 
         [XmlIgnore]
         protected bool NewUserExternalIdSpecified { get; set; }
+
+        protected string _newUserPersonId;
+
+        /// <remarks>Eraseable</remarks>
+        [XmlElement(ElementName = "newUserPersonId", IsNullable = true, Namespace = "")]
+        [Optional]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2638")]
+        [MaxLength(82)]
+        public string NewUserPersonId
+        {
+            get => _newUserPersonId;
+            set
+            {
+                NewUserPersonIdSpecified = true;
+                _newUserPersonId = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool NewUserPersonIdSpecified { get; set; }
 
     }
 }

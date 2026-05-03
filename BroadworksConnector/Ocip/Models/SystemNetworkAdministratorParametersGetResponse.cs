@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:12471""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:12586""}]")]
     public class SystemNetworkAdministratorParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enabled;
 
         [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:12471")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:12586")]
         public bool Enabled
         {
             get => _enabled;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _cacheRefreshIntervalInMinutes;
 
         [XmlElement(ElementName = "cacheRefreshIntervalInMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:12471")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:12586")]
         [MinInclusive(1)]
         [MaxInclusive(1440)]
         public int CacheRefreshIntervalInMinutes

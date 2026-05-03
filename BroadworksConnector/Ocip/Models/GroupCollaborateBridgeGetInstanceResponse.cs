@@ -17,19 +17,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Replaced by: GroupCollaborateBridgeGetInstanceResponse20sp1
     /// <see cref="GroupCollaborateBridgeGetInstanceRequest"/>
-    /// <see cref="GroupCollaborateBridgeGetInstanceResponse20sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:8943""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:9693""}]")]
     public class GroupCollaborateBridgeGetInstanceResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:8943")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:9693")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -46,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CollaborateBridgeMaximumParticipants _maximumBridgeParticipants;
 
         [XmlElement(ElementName = "maximumBridgeParticipants", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:8943")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:9693")]
         public BroadWorksConnector.Ocip.Models.CollaborateBridgeMaximumParticipants MaximumBridgeParticipants
         {
             get => _maximumBridgeParticipants;
@@ -64,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:8943")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:9693")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService
@@ -83,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isDefault;
 
         [XmlElement(ElementName = "isDefault", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:8943")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:9693")]
         public bool IsDefault
         {
             get => _isDefault;
@@ -100,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxCollaborateRoomParticipants;
 
         [XmlElement(ElementName = "maxCollaborateRoomParticipants", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:8943")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:9693")]
         [MinInclusive(3)]
         [MaxInclusive(30)]
         public int MaxCollaborateRoomParticipants
@@ -119,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _supportOutdial;
 
         [XmlElement(ElementName = "supportOutdial", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:8943")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:9693")]
         public bool SupportOutdial
         {
             get => _supportOutdial;
@@ -138,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "collaborateOwnerUserTable", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:8943")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:9693")]
         public BroadWorksConnector.Ocip.Models.C.OCITable CollaborateOwnerUserTable
         {
             get => _collaborateOwnerUserTable;

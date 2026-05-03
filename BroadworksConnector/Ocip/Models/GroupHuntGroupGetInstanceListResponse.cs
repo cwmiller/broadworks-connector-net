@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""781bbab86d937537938d4fe917029d5c:369""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""781bbab86d937537938d4fe917029d5c:372""}]")]
     public class GroupHuntGroupGetInstanceListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _huntGroupTable;
 
         [XmlElement(ElementName = "huntGroupTable", IsNullable = false, Namespace = "")]
-        [Group(@"781bbab86d937537938d4fe917029d5c:369")]
+        [Group(@"781bbab86d937537938d4fe917029d5c:372")]
         public BroadWorksConnector.Ocip.Models.C.OCITable HuntGroupTable
         {
             get => _huntGroupTable;

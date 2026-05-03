@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fea5a8405f72fc444317772d796b65fb:44""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fea5a8405f72fc444317772d796b65fb:48""}]")]
     public class UserCallForwardingNotReachableGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserCallForwardingNotReachableGetResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"fea5a8405f72fc444317772d796b65fb:44")]
+        [Group(@"fea5a8405f72fc444317772d796b65fb:48")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

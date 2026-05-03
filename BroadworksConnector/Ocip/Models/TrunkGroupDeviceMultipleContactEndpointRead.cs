@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:5527""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:6344""}]")]
     public class TrunkGroupDeviceMultipleContactEndpointRead
     {
 
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5527")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6344")]
         [MinLength(1)]
         [MaxLength(30)]
         public string Name
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5527")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6344")]
         [MinLength(1)]
         [MaxLength(161)]
         public string LinePort
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5527")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6344")]
         [MinLength(1)]
         [MaxLength(1020)]
         public List<string> Contact
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _staticRegistrationCapable;
 
         [XmlElement(ElementName = "staticRegistrationCapable", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5527")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6344")]
         public bool StaticRegistrationCapable
         {
             get => _staticRegistrationCapable;
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useDomain;
 
         [XmlElement(ElementName = "useDomain", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5527")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6344")]
         public bool UseDomain
         {
             get => _useDomain;
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isPilotUser;
 
         [XmlElement(ElementName = "isPilotUser", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5527")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6344")]
         public bool IsPilotUser
         {
             get => _isPilotUser;

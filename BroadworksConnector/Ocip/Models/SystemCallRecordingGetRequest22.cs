@@ -14,12 +14,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: SystemCallRecordingGetRequest23
     /// <see cref="SystemCallRecordingGetResponse22"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemCallRecordingGetRequest23"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:9263""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:10039""}]")]
     public class SystemCallRecordingGetRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemCallRecordingGetResponse22>
     {
 

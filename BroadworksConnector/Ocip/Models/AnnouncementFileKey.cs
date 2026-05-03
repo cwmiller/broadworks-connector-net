@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:601""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:605""}]")]
     public class AnnouncementFileKey
     {
 
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:601")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:605")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.MediaFileType _mediaFileType;
 
         [XmlElement(ElementName = "mediaFileType", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:601")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:605")]
         public BroadWorksConnector.Ocip.Models.MediaFileType MediaFileType
         {
             get => _mediaFileType;

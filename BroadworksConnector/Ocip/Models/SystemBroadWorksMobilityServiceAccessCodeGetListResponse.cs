@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:21260""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:23844""}]")]
     public class SystemBroadWorksMobilityServiceAccessCodeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _serviceAccessCodeTable;
 
         [XmlElement(ElementName = "serviceAccessCodeTable", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:21260")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:23844")]
         public BroadWorksConnector.Ocip.Models.C.OCITable ServiceAccessCodeTable
         {
             get => _serviceAccessCodeTable;

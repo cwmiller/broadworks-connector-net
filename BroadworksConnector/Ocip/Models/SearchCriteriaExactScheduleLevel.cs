@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:1198""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:1201""}]")]
     public class SearchCriteriaExactScheduleLevel : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         protected BroadWorksConnector.Ocip.Models.ScheduleLevel _level;
 
         [XmlElement(ElementName = "level", IsNullable = false, Namespace = "")]
-        [Group(@"972fbf832439609ec8f2765c5637c3f1:1198")]
+        [Group(@"972fbf832439609ec8f2765c5637c3f1:1201")]
         public BroadWorksConnector.Ocip.Models.ScheduleLevel Level
         {
             get => _level;

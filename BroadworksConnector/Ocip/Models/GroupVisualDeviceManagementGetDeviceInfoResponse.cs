@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:8611""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:8728""}]")]
     public class GroupVisualDeviceManagementGetDeviceInfoResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:8611")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:8728")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceType
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _supportVisualDeviceManagement;
 
         [XmlElement(ElementName = "supportVisualDeviceManagement", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:8611")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:8728")]
         public bool SupportVisualDeviceManagement
         {
             get => _supportVisualDeviceManagement;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "macAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:8611")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:8728")]
         [MinLength(1)]
         [MaxLength(12)]
         public string MacAddress
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "primaryUser", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:8611")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:8728")]
         public BroadWorksConnector.Ocip.Models.PrimaryUserInfo PrimaryUser
         {
             get => _primaryUser;

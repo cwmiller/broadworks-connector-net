@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:3942""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:3982""}]")]
     public class GroupDeviceManagementGetAccessDeviceCountForDeviceTypeGroupResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected int _accessDeviceCount;
 
         [XmlElement(ElementName = "accessDeviceCount", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:3942")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:3982")]
         public int AccessDeviceCount
         {
             get => _accessDeviceCount;

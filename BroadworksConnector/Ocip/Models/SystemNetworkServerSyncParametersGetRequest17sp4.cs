@@ -13,12 +13,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: SystemNetworkServerSyncParametersGetRequest24
     /// <see cref="SystemNetworkServerSyncParametersGetResponse17sp4"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemNetworkServerSyncParametersGetRequest24"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:10743""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:11544""}]")]
     public class SystemNetworkServerSyncParametersGetRequest17sp4 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemNetworkServerSyncParametersGetResponse17sp4>
     {
 

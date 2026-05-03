@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7383""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7356""}]")]
     public class CallCenterReplacementSkilledAgents
     {
 
         protected int _skillLevel;
 
         [XmlElement(ElementName = "skillLevel", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:7383")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7356")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
         public int SkillLevel
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "agents", IsNullable = true, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:7383")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7356")]
         public BroadWorksConnector.Ocip.Models.ReplacementUserIdList Agents
         {
             get => _agents;

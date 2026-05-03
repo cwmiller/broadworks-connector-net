@@ -11,12 +11,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response contains the system or provisioning administrators profile information.
     /// Replaced by: SystemAdminGetResponse22
     /// <see cref="SystemAdminGetRequest"/>
-    /// <see cref="SystemAdminGetResponse22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:8239""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:8803""}]")]
     public class SystemAdminGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -24,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:8239")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:8803")]
         [MinLength(1)]
         [MaxLength(30)]
         public string FirstName
@@ -44,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:8239")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:8803")]
         [MinLength(1)]
         [MaxLength(30)]
         public string LastName
@@ -63,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _language;
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:8239")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:8803")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Language
@@ -82,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SystemAdminType _adminType;
 
         [XmlElement(ElementName = "adminType", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:8239")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:8803")]
         public BroadWorksConnector.Ocip.Models.SystemAdminType AdminType
         {
             get => _adminType;
@@ -99,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _readOnly;
 
         [XmlElement(ElementName = "readOnly", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:8239")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:8803")]
         public bool ReadOnly
         {
             get => _readOnly;

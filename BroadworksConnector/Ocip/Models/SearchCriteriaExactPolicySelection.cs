@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:1168""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:1171""}]")]
     public class SearchCriteriaExactPolicySelection : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         protected BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection _policySelection;
 
         [XmlElement(ElementName = "policySelection", IsNullable = false, Namespace = "")]
-        [Group(@"972fbf832439609ec8f2765c5637c3f1:1168")]
+        [Group(@"972fbf832439609ec8f2765c5637c3f1:1171")]
         public BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNPolicySelection PolicySelection
         {
             get => _policySelection;

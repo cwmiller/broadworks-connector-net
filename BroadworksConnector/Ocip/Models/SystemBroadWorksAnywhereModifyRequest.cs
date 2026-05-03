@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f39163d0e42e05c4a1692a62f625df9f:254""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f39163d0e42e05c4a1692a62f625df9f:257""}]")]
     public class SystemBroadWorksAnywhereModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableTransferNotification", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f39163d0e42e05c4a1692a62f625df9f:254")]
+        [Group(@"f39163d0e42e05c4a1692a62f625df9f:257")]
         public bool? EnableTransferNotification
         {
             get => _enableTransferNotification;
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "blockProvisioningOfDNAsBALocation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f39163d0e42e05c4a1692a62f625df9f:254")]
+        [Group(@"f39163d0e42e05c4a1692a62f625df9f:257")]
         public bool? BlockProvisioningOfDNAsBALocation
         {
             get => _blockProvisioningOfDNAsBALocation;

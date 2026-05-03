@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""405ec18fe08719ecf74e749d7e18c88f:401""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""405ec18fe08719ecf74e749d7e18c88f:405""}]")]
     public class EnterpriseDepartmentModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _enterpriseId;
 
         [XmlElement(ElementName = "enterpriseId", IsNullable = false, Namespace = "")]
-        [Group(@"405ec18fe08719ecf74e749d7e18c88f:401")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:405")]
         [MinLength(1)]
         [MaxLength(30)]
         public string EnterpriseId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _departmentName;
 
         [XmlElement(ElementName = "departmentName", IsNullable = false, Namespace = "")]
-        [Group(@"405ec18fe08719ecf74e749d7e18c88f:401")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:405")]
         [MinLength(1)]
         [MaxLength(50)]
         public string DepartmentName
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newDepartmentName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"405ec18fe08719ecf74e749d7e18c88f:401")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:405")]
         [MinLength(1)]
         [MaxLength(50)]
         public string NewDepartmentName
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "newParentDepartmentKey", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"405ec18fe08719ecf74e749d7e18c88f:401")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:405")]
         public BroadWorksConnector.Ocip.Models.EnterpriseDepartmentKey NewParentDepartmentKey
         {
             get => _newParentDepartmentKey;

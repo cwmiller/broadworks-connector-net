@@ -8,21 +8,21 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get a call center's queue Thresholds settings.
-    /// The response is either a GroupCallCenterQueueThresholdsGetResponse or an ErrorResponse.
-    /// <see cref="GroupCallCenterQueueThresholdsGetResponse"/>
+    /// The response is either a GroupCallCenterQueueThresholdsGetRequest or an ErrorResponse.
+    /// <see cref="GroupCallCenterQueueThresholdsGetRequest"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:5718""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:5687""}]")]
     public class GroupCallCenterQueueThresholdsGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupCallCenterQueueThresholdsGetResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:5718")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5687")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId

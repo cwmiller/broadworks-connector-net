@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:48678""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:53119""}]")]
     public class CommunicationBarringOriginatingRule15sp2
     {
 
         protected string _criteria;
 
         [XmlElement(ElementName = "criteria", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:48678")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:53119")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Criteria
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction15sp2 _action;
 
         [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:48678")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:53119")]
         public BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingAction15sp2 Action
         {
             get => _action;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "treatmentId", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:48678")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:53119")]
         [MinLength(1)]
         [MaxLength(40)]
         public string TreatmentId
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "transferNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:48678")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:53119")]
         [MinLength(1)]
         [MaxLength(30)]
         public string TransferNumber

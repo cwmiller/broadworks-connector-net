@@ -12,12 +12,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// "Call Recording Start".
     /// Replaced by: UserFeatureAccessCodeGetListResponse21
     /// <see cref="UserFeatureAccessCodeGetListRequest20"/>
-    /// <see cref="UserFeatureAccessCodeGetListResponse21"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:43587""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:47619""}]")]
     public class UserFeatureAccessCodeGetListResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -25,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "featureAccessCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:43587")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:47619")]
         public List<BroadWorksConnector.Ocip.Models.FeatureAccessCodeEntry> FeatureAccessCode
         {
             get => _featureAccessCode;

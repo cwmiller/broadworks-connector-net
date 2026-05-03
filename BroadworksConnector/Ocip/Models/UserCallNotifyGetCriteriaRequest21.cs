@@ -9,20 +9,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get a criteria for the user's call notify service.
     /// The response is either a UserCallNotifyGetCriteriaResponse21 or an ErrorResponse.
+    /// 
+    /// Replaced by: UserCallNotifyGetCriteriaRequestRI in AS data mode
     /// <see cref="UserCallNotifyGetCriteriaResponse21"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ec1be3ca6e990aac87b6fcf39d5e3445:191""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:18803""}]")]
     public class UserCallNotifyGetCriteriaRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserCallNotifyGetCriteriaResponse21>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"ec1be3ca6e990aac87b6fcf39d5e3445:191")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:18803")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -41,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _criteriaName;
 
         [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
-        [Group(@"ec1be3ca6e990aac87b6fcf39d5e3445:191")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:18803")]
         [MinLength(1)]
         [MaxLength(50)]
         public string CriteriaName

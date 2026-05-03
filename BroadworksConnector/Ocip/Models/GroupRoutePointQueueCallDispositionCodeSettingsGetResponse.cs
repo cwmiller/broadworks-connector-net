@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e474d11df9a1d1d1041e589793e40de8:1177""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e474d11df9a1d1d1041e589793e40de8:1180""}]")]
     public class GroupRoutePointQueueCallDispositionCodeSettingsGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enableCallDispositionCodes;
 
         [XmlElement(ElementName = "enableCallDispositionCodes", IsNullable = false, Namespace = "")]
-        [Group(@"e474d11df9a1d1d1041e589793e40de8:1177")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:1180")]
         public bool EnableCallDispositionCodes
         {
             get => _enableCallDispositionCodes;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _includeOrganizationCodes;
 
         [XmlElement(ElementName = "includeOrganizationCodes", IsNullable = false, Namespace = "")]
-        [Group(@"e474d11df9a1d1d1041e589793e40de8:1177")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:1180")]
         public bool IncludeOrganizationCodes
         {
             get => _includeOrganizationCodes;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _forceUseOfCallDispositionCodes;
 
         [XmlElement(ElementName = "forceUseOfCallDispositionCodes", IsNullable = false, Namespace = "")]
-        [Group(@"e474d11df9a1d1d1041e589793e40de8:1177")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:1180")]
         public bool ForceUseOfCallDispositionCodes
         {
             get => _forceUseOfCallDispositionCodes;
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultCallDispositionCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e474d11df9a1d1d1041e589793e40de8:1177")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:1180")]
         public BroadWorksConnector.Ocip.Models.CallDispositionCodeWithLevel DefaultCallDispositionCode
         {
             get => _defaultCallDispositionCode;

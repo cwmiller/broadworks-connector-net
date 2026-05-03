@@ -10,19 +10,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to the GroupMusicOnHoldGetInstanceRequest14sp6.
     /// Replaced By: GroupMusicOnHoldGetInstanceResponse16
     /// <see cref="GroupMusicOnHoldGetInstanceRequest14sp6"/>
-    /// <see cref="GroupMusicOnHoldGetInstanceResponse16"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:11683""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:12743""}]")]
     public class GroupMusicOnHoldGetInstanceResponse14sp6 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:11683")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12743")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -41,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isActiveDuringCallHold;
 
         [XmlElement(ElementName = "isActiveDuringCallHold", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:11683")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12743")]
         public bool IsActiveDuringCallHold
         {
             get => _isActiveDuringCallHold;
@@ -58,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isActiveDuringCallPark;
 
         [XmlElement(ElementName = "isActiveDuringCallPark", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:11683")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12743")]
         public bool IsActiveDuringCallPark
         {
             get => _isActiveDuringCallPark;
@@ -75,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isActiveDuringBusyCampOn;
 
         [XmlElement(ElementName = "isActiveDuringBusyCampOn", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:11683")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12743")]
         public bool IsActiveDuringBusyCampOn
         {
             get => _isActiveDuringBusyCampOn;
@@ -92,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableVideo;
 
         [XmlElement(ElementName = "enableVideo", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:11683")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12743")]
         public bool EnableVideo
         {
             get => _enableVideo;
@@ -109,7 +108,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.MusicOnHoldSourceRead _source;
 
         [XmlElement(ElementName = "source", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:11683")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12743")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceRead Source
         {
             get => _source;
@@ -126,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useAlternateSourceForInternalCalls;
 
         [XmlElement(ElementName = "useAlternateSourceForInternalCalls", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:11683")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12743")]
         public bool UseAlternateSourceForInternalCalls
         {
             get => _useAlternateSourceForInternalCalls;
@@ -144,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "internalSource", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:11683")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12743")]
         public BroadWorksConnector.Ocip.Models.MusicOnHoldSourceRead InternalSource
         {
             get => _internalSource;

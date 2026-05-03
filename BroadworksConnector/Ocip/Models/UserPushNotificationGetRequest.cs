@@ -13,19 +13,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: UserPushNotificationRequest24
     /// <see cref="UserPushNotificationGetResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="UserPushNotificationRequest24"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:46381""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:50761""}]")]
     public class UserPushNotificationGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserPushNotificationGetResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:46381")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:50761")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

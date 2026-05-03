@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4638""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:5428""}]")]
     public class ServiceInstanceAddProfile
     {
 
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4638")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5428")]
         [MinLength(1)]
         [MaxLength(30)]
         public string Name
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _callingLineIdLastName;
 
         [XmlElement(ElementName = "callingLineIdLastName", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4638")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5428")]
         [MinLength(1)]
         [MaxLength(30)]
         public string CallingLineIdLastName
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _callingLineIdFirstName;
 
         [XmlElement(ElementName = "callingLineIdFirstName", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4638")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5428")]
         [MinLength(1)]
         [MaxLength(30)]
         public string CallingLineIdFirstName
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hiraganaLastName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4638")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5428")]
         [MinLength(1)]
         [MaxLength(30)]
         public string HiraganaLastName
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hiraganaFirstName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4638")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5428")]
         [MinLength(1)]
         [MaxLength(30)]
         public string HiraganaFirstName
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4638")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5428")]
         [MinLength(1)]
         [MaxLength(23)]
         public string PhoneNumber
@@ -137,7 +137,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "extension", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4638")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5428")]
         [MinLength(2)]
         [MaxLength(20)]
         public string Extension
@@ -157,7 +157,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4638")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5428")]
         [MinLength(1)]
         [MaxLength(60)]
         public string Password
@@ -177,7 +177,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "department", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4638")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5428")]
         public BroadWorksConnector.Ocip.Models.DepartmentKey Department
         {
             get => _department;
@@ -195,7 +195,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4638")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5428")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Language
@@ -215,7 +215,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeZone", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4638")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5428")]
         [MinLength(1)]
         [MaxLength(127)]
         public string TimeZone
@@ -235,7 +235,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alias", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4638")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5428")]
         [MinLength(1)]
         [MaxLength(161)]
         public List<string> Alias
@@ -255,7 +255,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "publicUserIdentity", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4638")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5428")]
         [MinLength(1)]
         [MaxLength(161)]
         public string PublicUserIdentity
@@ -275,7 +275,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callingLineIdPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4638")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5428")]
         [MinLength(1)]
         [MaxLength(23)]
         public string CallingLineIdPhoneNumber
@@ -290,6 +290,26 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool CallingLineIdPhoneNumberSpecified { get; set; }
+
+        protected string _emergencyCallbackNumber;
+
+        [XmlElement(ElementName = "emergencyCallbackNumber", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5428")]
+        [MinLength(1)]
+        [MaxLength(23)]
+        public string EmergencyCallbackNumber
+        {
+            get => _emergencyCallbackNumber;
+            set
+            {
+                EmergencyCallbackNumberSpecified = (value != null);
+                _emergencyCallbackNumber = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool EmergencyCallbackNumberSpecified { get; set; }
 
     }
 }

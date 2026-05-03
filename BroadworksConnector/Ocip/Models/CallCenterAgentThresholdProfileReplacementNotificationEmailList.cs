@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7330""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7303""}]")]
     public class CallCenterAgentThresholdProfileReplacementNotificationEmailList
     {
 
         protected List<string> _emailAddress = new List<string>();
 
         [XmlElement(ElementName = "emailAddress", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:7330")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7303")]
         [MinLength(1)]
         [MaxLength(80)]
         public List<string> EmailAddress

@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""08ee5b5ec09321975436b908fd540e7f:73""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""08ee5b5ec09321975436b908fd540e7f:76""}]")]
     public class SystemCallWaitingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "playDistinctiveRingback", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"08ee5b5ec09321975436b908fd540e7f:73")]
+        [Group(@"08ee5b5ec09321975436b908fd540e7f:76")]
         public bool? PlayDistinctiveRingback
         {
             get => _playDistinctiveRingback;

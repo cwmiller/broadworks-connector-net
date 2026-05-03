@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced By: SystemAccessDeviceFileGetListRequest14sp8
     /// <see cref="SystemAccessDeviceFileGetListResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemAccessDeviceFileGetListRequest14sp8"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:20028""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:22568""}]")]
     public class SystemAccessDeviceFileGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemAccessDeviceFileGetListResponse>
     {
 
         protected string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:20028")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:22568")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName

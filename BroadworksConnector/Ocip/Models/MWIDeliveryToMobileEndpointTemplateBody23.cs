@@ -1,0 +1,37 @@
+using System;
+using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
+using System.Collections.Generic;
+
+namespace BroadWorksConnector.Ocip.Models
+{
+    /// <summary>
+    /// MWI Delivery To Mobile Endpoint template body.
+    /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1ea80c1e18c25d0eed23dbc7bd18f1dc:442""}]")]
+    public class MWIDeliveryToMobileEndpointTemplateBody23
+    {
+
+        protected List<BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateLine23> _line = new List<BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateLine23>();
+
+        [XmlElement(ElementName = "line", IsNullable = false, Namespace = "")]
+        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:442")]
+        public List<BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateLine23> Line
+        {
+            get => _line;
+            set
+            {
+                LineSpecified = true;
+                _line = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool LineSpecified { get; set; }
+
+    }
+}

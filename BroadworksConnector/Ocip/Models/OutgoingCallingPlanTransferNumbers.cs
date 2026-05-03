@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a63afa661ee5c74f4700e562e88c66d0:2207""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a63afa661ee5c74f4700e562e88c66d0:2215""}]")]
     public class OutgoingCallingPlanTransferNumbers
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumber01", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a63afa661ee5c74f4700e562e88c66d0:2207")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:2215")]
         [MinLength(1)]
         [MaxLength(30)]
         public string PhoneNumber01
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumber02", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a63afa661ee5c74f4700e562e88c66d0:2207")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:2215")]
         [MinLength(1)]
         [MaxLength(30)]
         public string PhoneNumber02
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumber03", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a63afa661ee5c74f4700e562e88c66d0:2207")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:2215")]
         [MinLength(1)]
         [MaxLength(30)]
         public string PhoneNumber03

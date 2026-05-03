@@ -8,21 +8,21 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Request the user's incoming calling plan settings.
-    /// The response is either a UserIncomingCallingPlanGetResponse or an ErrorResponse.
-    /// <see cref="UserIncomingCallingPlanGetResponse"/>
+    /// The response is either a UserIncomingCallingPlanGetListResponse or an ErrorResponse.
+    /// <see cref="UserIncomingCallingPlanGetListResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""22e19489d2787693c01f531be4452169:97""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""22e19489d2787693c01f531be4452169:101""}]")]
     public class UserIncomingCallingPlanGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserIncomingCallingPlanGetResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"22e19489d2787693c01f531be4452169:97")]
+        [Group(@"22e19489d2787693c01f531be4452169:101")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

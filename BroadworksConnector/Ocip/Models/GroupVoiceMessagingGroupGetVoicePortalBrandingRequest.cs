@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced By: GroupVoiceMessagingGroupGetVoicePortalBrandingRequest16
     /// <see cref="GroupVoiceMessagingGroupGetVoicePortalBrandingResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="GroupVoiceMessagingGroupGetVoicePortalBrandingRequest16"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:16596""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:18355""}]")]
     public class GroupVoiceMessagingGroupGetVoicePortalBrandingRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupVoiceMessagingGroupGetVoicePortalBrandingResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:16596")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18355")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -43,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:16596")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18355")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId

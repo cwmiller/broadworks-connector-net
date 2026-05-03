@@ -20,19 +20,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either SuccessResponse or ErrorResponse.
     /// <see cref="ErrorResponse"/>
     /// <see cref="SuccessResponse"/>
-    /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bc805893b9cc7e3e01eec64e9ad62768:161""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bc805893b9cc7e3e01eec64e9ad62768:164""}]")]
     public class GroupCollaborateBridgeConsolidatedModifyInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:161")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:164")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -52,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "unassignPhoneNumbers", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:161")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:164")]
         public BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel? UnassignPhoneNumbers
         {
             get => _unassignPhoneNumbers;
@@ -70,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "addPhoneNumberToGroup", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:161")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:164")]
         public bool? AddPhoneNumberToGroup
         {
             get => _addPhoneNumberToGroup;
@@ -88,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:161")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:164")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfile ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -106,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maximumBridgeParticipants", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:161")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:164")]
         public BroadWorksConnector.Ocip.Models.CollaborateBridgeMaximumParticipants MaximumBridgeParticipants
         {
             get => _maximumBridgeParticipants;
@@ -124,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:161")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:164")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService
@@ -144,7 +143,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxCollaborateRoomParticipants", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:161")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:164")]
         [MinInclusive(3)]
         [MaxInclusive(145)]
         public int? MaxCollaborateRoomParticipants
@@ -164,7 +163,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "supportOutdial", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:161")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:164")]
         public bool? SupportOutdial
         {
             get => _supportOutdial;
@@ -183,7 +182,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "collaborateOwnerUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:161")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:164")]
         public BroadWorksConnector.Ocip.Models.ReplacementUserIdList CollaborateOwnerUserIdList
         {
             get => _collaborateOwnerUserIdList;
@@ -202,7 +201,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "serviceList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:161")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:164")]
         public BroadWorksConnector.Ocip.Models.ReplacementConsolidatedUserServiceAssignmentList ServiceList
         {
             get => _serviceList;

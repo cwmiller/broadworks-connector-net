@@ -16,19 +16,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Replaced by: SystemTreatmentMappingCallBlockingServiceGetListResponse22
     /// <see cref="SystemTreatmentMappingCallBlockingServiceGetListRequest19sp1"/>
-    /// <see cref="SystemTreatmentMappingCallBlockingServiceGetListResponse22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:36469""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:40730""}]")]
     public class SystemTreatmentMappingCallBlockingServiceGetListResponse19sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _treatmentMappingTable;
 
         [XmlElement(ElementName = "treatmentMappingTable", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36469")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40730")]
         public BroadWorksConnector.Ocip.Models.C.OCITable TreatmentMappingTable
         {
             get => _treatmentMappingTable;

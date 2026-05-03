@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:1515""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:1457""}]")]
     public class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19SendToDistributionListMenuKeys
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sendMessageToSelectedDistributionList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1515")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1457")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SendMessageToSelectedDistributionList
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "selectDistributionList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1515")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1457")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SelectDistributionList
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "reviewSelectedDistributionList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1515")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1457")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ReviewSelectedDistributionList
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1515")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1457")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ReturnToPreviousMenu
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "repeatMenu", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1515")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1457")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string RepeatMenu

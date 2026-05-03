@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:18983""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:19331""}]")]
     public class SystemTreatmentMappingCallBlockingServiceGetListResponse24V2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _treatmentMappingTable;
 
         [XmlElement(ElementName = "treatmentMappingTable", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:18983")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:19331")]
         public BroadWorksConnector.Ocip.Models.C.OCITable TreatmentMappingTable
         {
             get => _treatmentMappingTable;

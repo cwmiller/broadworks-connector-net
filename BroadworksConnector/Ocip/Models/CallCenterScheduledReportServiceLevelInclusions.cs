@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7670""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7643""}]")]
     public class CallCenterScheduledReportServiceLevelInclusions
     {
 
         protected bool _includeOverflowTimeTransferedInServiceLevel;
 
         [XmlElement(ElementName = "includeOverflowTimeTransferedInServiceLevel", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:7670")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7643")]
         public bool IncludeOverflowTimeTransferedInServiceLevel
         {
             get => _includeOverflowTimeTransferedInServiceLevel;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _includeOtherTransfersInServiceLevel;
 
         [XmlElement(ElementName = "includeOtherTransfersInServiceLevel", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:7670")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7643")]
         public bool IncludeOtherTransfersInServiceLevel
         {
             get => _includeOtherTransfersInServiceLevel;
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CallCenterReportAbadonedCallsInServiceLevel _abandonedCallsInServiceLevel;
 
         [XmlElement(ElementName = "abandonedCallsInServiceLevel", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:7670")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7643")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportAbadonedCallsInServiceLevel AbandonedCallsInServiceLevel
         {
             get => _abandonedCallsInServiceLevel;
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "abandonedCallIntervalSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:7670")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7643")]
         [MinInclusive(1)]
         [MaxInclusive(7200)]
         public int? AbandonedCallIntervalSeconds

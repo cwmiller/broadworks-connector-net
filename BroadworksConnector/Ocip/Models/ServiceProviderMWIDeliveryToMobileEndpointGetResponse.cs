@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1ea80c1e18c25d0eed23dbc7bd18f1dc:319""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1ea80c1e18c25d0eed23dbc7bd18f1dc:329""}]")]
     public class ServiceProviderMWIDeliveryToMobileEndpointGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _templateActivationTable;
 
         [XmlElement(ElementName = "templateActivationTable", IsNullable = false, Namespace = "")]
-        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:319")]
+        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:329")]
         public BroadWorksConnector.Ocip.Models.C.OCITable TemplateActivationTable
         {
             get => _templateActivationTable;

@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9ae9f7d53e566e21347e23e20e2a2a39:998""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9ae9f7d53e566e21347e23e20e2a2a39:1001""}]")]
     public class SystemBroadWorksMobilityGetMobileNetworkIMRNListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemBroadWorksMobilityGetMobileNetworkIMRNListResponse>
     {
 
         protected string _mobileNetworkName;
 
         [XmlElement(ElementName = "mobileNetworkName", IsNullable = false, Namespace = "")]
-        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:998")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1001")]
         [MinLength(1)]
         [MaxLength(80)]
         public string MobileNetworkName
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaIMRN", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:998")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1001")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaIMRN> SearchCriteriaIMRN
         {
             get => _searchCriteriaIMRN;

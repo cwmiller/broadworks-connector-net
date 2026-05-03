@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:6263""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:6326""}]")]
     public class ServiceProviderServicePackGetServiceUsageListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _serviceUsageTable;
 
         [XmlElement(ElementName = "serviceUsageTable", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:6263")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:6326")]
         public BroadWorksConnector.Ocip.Models.C.OCITable ServiceUsageTable
         {
             get => _serviceUsageTable;

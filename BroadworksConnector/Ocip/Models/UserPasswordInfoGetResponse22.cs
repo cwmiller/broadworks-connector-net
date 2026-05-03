@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:2723"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:2725""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:2810"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:2812""}]}]")]
     public class UserPasswordInfoGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isLoginDisabled;
 
         [XmlElement(ElementName = "isLoginDisabled", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2723")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2810")]
         public bool IsLoginDisabled
         {
             get => _isLoginDisabled;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _expirationDays;
 
         [XmlElement(ElementName = "expirationDays", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2725")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2812")]
         public int ExpirationDays
         {
             get => _expirationDays;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _doesNotExpire;
 
         [XmlElement(ElementName = "doesNotExpire", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2725")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2812")]
         public bool DoesNotExpire
         {
             get => _doesNotExpire;
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _hasPassword;
 
         [XmlElement(ElementName = "hasPassword", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2723")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2810")]
         public bool HasPassword
         {
             get => _hasPassword;

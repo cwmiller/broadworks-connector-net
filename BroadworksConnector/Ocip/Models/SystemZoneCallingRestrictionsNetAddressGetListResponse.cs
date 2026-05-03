@@ -10,12 +10,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to SystemZoneCallingRestrictionsNetAddressGetListRequest.
     /// Replaced by: SystemZoneNetAddressGetListResponse
     /// <see cref="SystemZoneCallingRestrictionsNetAddressGetListRequest"/>
-    /// <see cref="SystemZoneNetAddressGetListResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:39941""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:43984""}]")]
     public class SystemZoneCallingRestrictionsNetAddressGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -23,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:39941")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43984")]
         [MinLength(1)]
         [MaxLength(39)]
         public List<string> NetAddress
@@ -43,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "netAddressRange", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:39941")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43984")]
         public List<BroadWorksConnector.Ocip.Models.IPAddressRange> NetAddressRange
         {
             get => _netAddressRange;

@@ -13,12 +13,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: SystemCallingNameRetrievalModifyRequest16sp1
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemCallingNameRetrievalModifyRequest16sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:21935""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:24519""}]")]
     public class SystemCallingNameRetrievalModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -26,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "queryTimerMilliSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:21935")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:24519")]
         [MinInclusive(500)]
         [MaxInclusive(5000)]
         public int? QueryTimerMilliSeconds
@@ -47,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "serverNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:21935")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:24519")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServerNetAddress
@@ -68,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "serverPort", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:21935")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:24519")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int? ServerPort
@@ -88,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serverTransportProtocol", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:21935")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:24519")]
         public BroadWorksConnector.Ocip.Models.TransportProtocol? ServerTransportProtocol
         {
             get => _serverTransportProtocol;

@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:7662""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:7714""}]")]
     public class SystemDeviceFamilyImportDryRunResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _file;
 
         [XmlElement(ElementName = "file", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:7662")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7714")]
         [MinLength(1)]
         [MaxLength(256)]
         public string File
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _differenceFound;
 
         [XmlElement(ElementName = "differenceFound", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:7662")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7714")]
         public bool DifferenceFound
         {
             get => _differenceFound;

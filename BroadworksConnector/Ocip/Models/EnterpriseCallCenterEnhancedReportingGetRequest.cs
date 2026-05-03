@@ -13,19 +13,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by EnterpriseCallCenterEnhancedReportingGetRequest19
     /// <see cref="EnterpriseCallCenterEnhancedReportingGetResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="EnterpriseCallCenterEnhancedReportingGetRequest19"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:2196""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:2403""}]")]
     public class EnterpriseCallCenterEnhancedReportingGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.EnterpriseCallCenterEnhancedReportingGetResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:2196")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:2403")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId

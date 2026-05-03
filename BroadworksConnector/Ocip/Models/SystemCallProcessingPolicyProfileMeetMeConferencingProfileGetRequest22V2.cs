@@ -10,20 +10,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// Request to get the configuration for a call processing policy profile Meet-Me Conferencing subscriber type profile.
     /// The response is either a SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetResponse22V2 or an
     /// ErrorResponse.
+    /// 
+    /// Replaced by: SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetRequest24
     /// <see cref="SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetResponse22V2"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:4434""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:26960""}]")]
     public class SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetRequest22V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemCallProcessingPolicyProfileMeetMeConferencingProfileGetResponse22V2>
     {
 
         protected string _callProcessingPolicyProfileName;
 
         [XmlElement(ElementName = "callProcessingPolicyProfileName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:4434")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:26960")]
         [MinLength(1)]
         [MaxLength(40)]
         public string CallProcessingPolicyProfileName

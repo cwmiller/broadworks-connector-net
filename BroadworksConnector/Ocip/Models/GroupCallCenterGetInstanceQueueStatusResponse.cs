@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:4591""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:4587""}]")]
     public class GroupCallCenterGetInstanceQueueStatusResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected int _numberOfCallsQueuedNow;
 
         [XmlElement(ElementName = "numberOfCallsQueuedNow", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:4591")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:4587")]
         public int NumberOfCallsQueuedNow
         {
             get => _numberOfCallsQueuedNow;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _agentsCurrentlyStaffed;
 
         [XmlElement(ElementName = "agentsCurrentlyStaffed", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:4591")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:4587")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AgentsCurrentlyStaffed
         {
             get => _agentsCurrentlyStaffed;

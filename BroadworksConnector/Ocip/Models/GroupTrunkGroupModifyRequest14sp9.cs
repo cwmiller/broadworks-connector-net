@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""090e91b2d78e873f5d76a2f16af08d3a:1432""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""090e91b2d78e873f5d76a2f16af08d3a:1423""}]")]
     public class GroupTrunkGroupModifyRequest14sp9 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1432")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1423")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1432")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1423")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxActiveCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1432")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1423")]
         public int? MaxActiveCalls
         {
             get => _maxActiveCalls;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "burstingMaxActiveCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1432")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1423")]
         public BroadWorksConnector.Ocip.Models.UnboundedNonNegativeInt BurstingMaxActiveCalls
         {
             get => _burstingMaxActiveCalls;
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "numberOfBurstingBTLUs", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1432")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1423")]
         public int? NumberOfBurstingBTLUs
         {
             get => _numberOfBurstingBTLUs;

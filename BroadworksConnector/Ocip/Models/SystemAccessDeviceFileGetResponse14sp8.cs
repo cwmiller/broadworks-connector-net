@@ -10,19 +10,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to SystemAccessDeviceFileGetRequest14sp8.
     /// Replaced by: SystemAccessDeviceFileGetResponse16sp1
     /// <see cref="SystemAccessDeviceFileGetRequest14sp8"/>
-    /// <see cref="SystemAccessDeviceFileGetResponse16sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:20134""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:22674""}]")]
     public class SystemAccessDeviceFileGetResponse14sp8 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode _fileSource;
 
         [XmlElement(ElementName = "fileSource", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:20134")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:22674")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode FileSource
         {
             get => _fileSource;
@@ -40,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "configurationFileName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:20134")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:22674")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ConfigurationFileName

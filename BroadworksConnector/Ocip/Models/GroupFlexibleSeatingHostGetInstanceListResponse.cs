@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1d4e390f8cd01ca6f92589024d74dac6:166""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1d4e390f8cd01ca6f92589024d74dac6:169""}]")]
     public class GroupFlexibleSeatingHostGetInstanceListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _flexibleSeatingHostTable;
 
         [XmlElement(ElementName = "flexibleSeatingHostTable", IsNullable = false, Namespace = "")]
-        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:166")]
+        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:169")]
         public BroadWorksConnector.Ocip.Models.C.OCITable FlexibleSeatingHostTable
         {
             get => _flexibleSeatingHostTable;

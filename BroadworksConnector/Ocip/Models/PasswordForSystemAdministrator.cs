@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ef3c4f453d01f7ce750331de83ebc765:701""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ef3c4f453d01f7ce750331de83ebc765:709""}]")]
     public class PasswordForSystemAdministrator
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "administratorId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ef3c4f453d01f7ce750331de83ebc765:701")]
+        [Group(@"ef3c4f453d01f7ce750331de83ebc765:709")]
         [MinLength(1)]
         [MaxLength(161)]
         public string AdministratorId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _generatePassword;
 
         [XmlElement(ElementName = "generatePassword", IsNullable = false, Namespace = "")]
-        [Group(@"ef3c4f453d01f7ce750331de83ebc765:701")]
+        [Group(@"ef3c4f453d01f7ce750331de83ebc765:709")]
         public bool GeneratePassword
         {
             get => _generatePassword;

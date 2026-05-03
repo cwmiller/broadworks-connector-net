@@ -8,21 +8,23 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Request a list of NCOSs that have a given CallP Policy Profile assigned.
-    /// The response is either a SystemCallProcessingPolicyProfileGetAssignedNCOSListResponse or ErrorResponse.
+    /// The response is either a
+    /// SystemCallProcessingPolicyProfileGetAssignedNCOSListResponse or
+    /// ErrorResponse.
     /// <see cref="SystemCallProcessingPolicyProfileGetAssignedNCOSListResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:3993""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:4050""}]")]
     public class SystemCallProcessingPolicyProfileGetAssignedNCOSListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemCallProcessingPolicyProfileGetAssignedNCOSListResponse>
     {
 
         protected string _profileName;
 
         [XmlElement(ElementName = "profileName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:3993")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:4050")]
         [MinLength(1)]
         [MaxLength(40)]
         public string ProfileName

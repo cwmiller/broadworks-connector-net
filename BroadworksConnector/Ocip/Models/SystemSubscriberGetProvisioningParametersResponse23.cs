@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:35974""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:40197""}]")]
     public class SystemSubscriberGetProvisioningParametersResponse23 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _configurableCLIDNormalization;
 
         [XmlElement(ElementName = "configurableCLIDNormalization", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35974")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40197")]
         public bool ConfigurableCLIDNormalization
         {
             get => _configurableCLIDNormalization;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.AuthorizationLevelToProvisionAlternateUserID _minAuthLevelToProvisionAltUserID;
 
         [XmlElement(ElementName = "minAuthLevelToProvisionAltUserID", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35974")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40197")]
         public BroadWorksConnector.Ocip.Models.AuthorizationLevelToProvisionAlternateUserID MinAuthLevelToProvisionAltUserID
         {
             get => _minAuthLevelToProvisionAltUserID;

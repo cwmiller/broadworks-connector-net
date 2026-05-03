@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:18092""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:18321""}]")]
     public class SystemStateOrProvinceGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _stateOrProvinceTable;
 
         [XmlElement(ElementName = "stateOrProvinceTable", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:18092")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18321")]
         public BroadWorksConnector.Ocip.Models.C.OCITable StateOrProvinceTable
         {
             get => _stateOrProvinceTable;

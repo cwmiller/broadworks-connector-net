@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:1488""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:1712""}]")]
     public class CommunicationBarringCallMeNowRule
     {
 
         protected string _criteria;
 
         [XmlElement(ElementName = "criteria", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1488")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1712")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Criteria
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowAction _action;
 
         [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1488")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1712")]
         public BroadWorksConnector.Ocip.Models.CommunicationBarringCallMeNowAction Action
         {
             get => _action;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "callTimeoutSeconds", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1488")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1712")]
         [MinInclusive(60)]
         [MaxInclusive(86400)]
         public int? CallTimeoutSeconds

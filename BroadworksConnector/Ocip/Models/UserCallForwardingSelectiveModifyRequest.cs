@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a80d284dc33fadcf5b323133519ad1a8:205""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a80d284dc33fadcf5b323133519ad1a8:209""}]")]
     public class UserCallForwardingSelectiveModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"a80d284dc33fadcf5b323133519ad1a8:205")]
+        [Group(@"a80d284dc33fadcf5b323133519ad1a8:209")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a80d284dc33fadcf5b323133519ad1a8:205")]
+        [Group(@"a80d284dc33fadcf5b323133519ad1a8:209")]
         public bool? IsActive
         {
             get => _isActive;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultForwardToPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"a80d284dc33fadcf5b323133519ad1a8:205")]
+        [Group(@"a80d284dc33fadcf5b323133519ad1a8:209")]
         [MinLength(1)]
         [MaxLength(161)]
         public string DefaultForwardToPhoneNumber
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "playRingReminder", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a80d284dc33fadcf5b323133519ad1a8:205")]
+        [Group(@"a80d284dc33fadcf5b323133519ad1a8:209")]
         public bool? PlayRingReminder
         {
             get => _playRingReminder;
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "criteriaActivation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a80d284dc33fadcf5b323133519ad1a8:205")]
+        [Group(@"a80d284dc33fadcf5b323133519ad1a8:209")]
         public List<BroadWorksConnector.Ocip.Models.CriteriaActivation> CriteriaActivation
         {
             get => _criteriaActivation;

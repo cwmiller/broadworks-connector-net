@@ -13,12 +13,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// Element "reportingServerURL"" will always be blank.
     /// Replaced By: GroupCallCenterSupervisorReportingGetResponse
     /// <see cref="GroupCallCenterGetSupervisorListRequest"/>
-    /// <see cref="GroupCallCenterSupervisorReportingGetResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:6396""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:6951""}]")]
     public class GroupCallCenterGetSupervisorListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -26,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "reportingServerURL", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:6396")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:6951")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ReportingServerURL
@@ -45,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _supervisorTable;
 
         [XmlElement(ElementName = "supervisorTable", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:6396")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:6951")]
         public BroadWorksConnector.Ocip.Models.C.OCITable SupervisorTable
         {
             get => _supervisorTable;

@@ -21,14 +21,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:1258"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:1259"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:1260""}]}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:1297"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:1298"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:1299""}]}]}]")]
     public class GroupAccessDeviceModifyRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1260")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1299")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1260")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1299")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1260")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1299")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _deviceExternalId;
 
         [XmlElement(ElementName = "deviceExternalId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1259")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1298")]
         [MaxLength(36)]
         public string DeviceExternalId
         {
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "protocol", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1258")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1297")]
         [MinLength(1)]
         [MaxLength(20)]
         public string Protocol
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "netAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1258")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1297")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NetAddress
@@ -146,7 +146,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "port", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1258")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1297")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int? Port
@@ -167,7 +167,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "outboundProxyServerNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1258")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1297")]
         [MinLength(1)]
         [MaxLength(80)]
         public string OutboundProxyServerNetAddress
@@ -188,7 +188,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "stunServerNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1258")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1297")]
         [MinLength(1)]
         [MaxLength(80)]
         public string StunServerNetAddress
@@ -209,7 +209,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "macAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1258")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1297")]
         [MinLength(1)]
         [MaxLength(12)]
         public string MacAddress
@@ -230,7 +230,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "serialNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1258")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1297")]
         [MinLength(1)]
         [MaxLength(80)]
         public string SerialNumber
@@ -251,7 +251,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1258")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1297")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -272,7 +272,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "configurationMode", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1258")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1297")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode? ConfigurationMode
         {
             get => _configurationMode;
@@ -290,7 +290,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "configurationFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1258")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1297")]
         public BroadWorksConnector.Ocip.Models.FileResource ConfigurationFile
         {
             get => _configurationFile;
@@ -309,7 +309,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "physicalLocation", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1258")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1297")]
         [MinLength(1)]
         [MaxLength(1024)]
         public string PhysicalLocation
@@ -329,7 +329,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "transportProtocol", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1258")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1297")]
         public BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol? TransportProtocol
         {
             get => _transportProtocol;
@@ -347,7 +347,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useCustomUserNamePassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1258")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1297")]
         public bool? UseCustomUserNamePassword
         {
             get => _useCustomUserNamePassword;
@@ -366,7 +366,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "accessDeviceCredentials", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1258")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1297")]
         public BroadWorksConnector.Ocip.Models.DeviceManagementUserNamePassword16 AccessDeviceCredentials
         {
             get => _accessDeviceCredentials;
@@ -385,7 +385,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "deviceIPEI", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1258")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1297")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DeviceIPEI
@@ -405,7 +405,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useDeviceCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1258")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1297")]
         public bool? UseDeviceCode
         {
             get => _useDeviceCode;
@@ -424,7 +424,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "deviceCode", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1258")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1297")]
         [Length(4)]
         [RegularExpression(@"[0-9][0-9][0-9][0-9]")]
         public string DeviceCode

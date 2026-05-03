@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f39163d0e42e05c4a1692a62f625df9f:375""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f39163d0e42e05c4a1692a62f625df9f:378""}]")]
     public class UserBroadWorksAnywhereGetAvailablePortalListResponse21sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _portalTable;
 
         [XmlElement(ElementName = "portalTable", IsNullable = false, Namespace = "")]
-        [Group(@"f39163d0e42e05c4a1692a62f625df9f:375")]
+        [Group(@"f39163d0e42e05c4a1692a62f625df9f:378")]
         public BroadWorksConnector.Ocip.Models.C.OCITable PortalTable
         {
             get => _portalTable;

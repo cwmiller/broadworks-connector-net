@@ -12,12 +12,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: SystemConfigurableFileSystemGetRequest23
     /// <see cref="SystemConfigurableFileSystemGetResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemConfigurableFileSystemGetRequest23"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:9621""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:10398""}]")]
     public class SystemConfigurableFileSystemGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemConfigurableFileSystemGetResponse>
     {
 

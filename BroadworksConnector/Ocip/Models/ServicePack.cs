@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4868""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:5690""}]")]
     public class ServicePack
     {
 
         protected string _servicePackName;
 
         [XmlElement(ElementName = "servicePackName", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4868")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5690")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServicePackName
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "servicePackDescription", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4868")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5690")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ServicePackDescription
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isAvailableForUse;
 
         [XmlElement(ElementName = "isAvailableForUse", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4868")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5690")]
         public bool IsAvailableForUse
         {
             get => _isAvailableForUse;
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.UnboundedPositiveInt _servicePackQuantity;
 
         [XmlElement(ElementName = "servicePackQuantity", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4868")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5690")]
         public BroadWorksConnector.Ocip.Models.UnboundedPositiveInt ServicePackQuantity
         {
             get => _servicePackQuantity;
@@ -93,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4868")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5690")]
         public List<BroadWorksConnector.Ocip.Models.UserService> ServiceName
         {
             get => _serviceName;

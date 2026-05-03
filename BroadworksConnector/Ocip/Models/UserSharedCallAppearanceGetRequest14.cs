@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced By: UserSharedCallAppearanceGetRequest14sp2
     /// <see cref="UserSharedCallAppearanceGetResponse14"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="UserSharedCallAppearanceGetRequest14sp2"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:47040""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:51420""}]")]
     public class UserSharedCallAppearanceGetRequest14 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserSharedCallAppearanceGetResponse14>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:47040")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:51420")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""090e91b2d78e873f5d76a2f16af08d3a:925""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""090e91b2d78e873f5d76a2f16af08d3a:917""}]")]
     public class GroupEnterpriseTrunkModifyRequestOrderedRouting
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "trunkGroupList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:925")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:917")]
         public BroadWorksConnector.Ocip.Models.ReplacementGroupEnterpriseTrunkTrunkGroupList TrunkGroupList
         {
             get => _trunkGroupList;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "orderingAlgorithm", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:925")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:917")]
         public BroadWorksConnector.Ocip.Models.EnterpriseTrunkOrderingAlgorithm? OrderingAlgorithm
         {
             get => _orderingAlgorithm;

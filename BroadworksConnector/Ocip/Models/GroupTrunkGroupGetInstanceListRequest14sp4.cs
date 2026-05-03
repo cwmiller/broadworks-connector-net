@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""090e91b2d78e873f5d76a2f16af08d3a:1110"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""090e91b2d78e873f5d76a2f16af08d3a:1113"",""optional"":true}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""090e91b2d78e873f5d76a2f16af08d3a:1101"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""090e91b2d78e873f5d76a2f16af08d3a:1104"",""optional"":true}]}]")]
     public class GroupTrunkGroupGetInstanceListRequest14sp4 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupTrunkGroupGetInstanceListResponse14sp4>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1110")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1101")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1110")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1101")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupDepartmentName;
 
         [XmlElement(ElementName = "groupDepartmentName", IsNullable = false, Namespace = "")]
-        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1113")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1104")]
         [MinLength(1)]
         [MaxLength(50)]
         public string GroupDepartmentName
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _includeEnterpriseTrunkGroups;
 
         [XmlElement(ElementName = "includeEnterpriseTrunkGroups", IsNullable = false, Namespace = "")]
-        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1113")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1104")]
         public bool IncludeEnterpriseTrunkGroups
         {
             get => _includeEnterpriseTrunkGroups;
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "onlyTrunkGroupsWithDevice", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1110")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1101")]
         public bool? OnlyTrunkGroupsWithDevice
         {
             get => _onlyTrunkGroupsWithDevice;

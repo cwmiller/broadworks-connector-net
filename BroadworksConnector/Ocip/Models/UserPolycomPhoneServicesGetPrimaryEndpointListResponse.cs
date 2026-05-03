@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ff29a940e42c5c9737f7438c4e6eea9d:116""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ff29a940e42c5c9737f7438c4e6eea9d:120""}]")]
     public class UserPolycomPhoneServicesGetPrimaryEndpointListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _deviceUserTable;
 
         [XmlElement(ElementName = "deviceUserTable", IsNullable = false, Namespace = "")]
-        [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:116")]
+        [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:120")]
         public BroadWorksConnector.Ocip.Models.C.OCITable DeviceUserTable
         {
             get => _deviceUserTable;

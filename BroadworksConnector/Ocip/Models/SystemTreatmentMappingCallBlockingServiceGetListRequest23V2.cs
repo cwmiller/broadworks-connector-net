@@ -8,15 +8,15 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Requests a table of all the existing Call Blocking Service Mappings in the system.
-    /// The response is either a SystemTreatmentMappingCallBlockingServiceGetListResponse23V2
+    /// The response is either a SystemTreatmentMappingCallBlockingServicesGetListResponse23V2
     /// or an ErrorResponse.
-    /// <see cref="SystemTreatmentMappingCallBlockingServiceGetListResponse23V2"/>
+    /// <see cref="SystemTreatmentMappingCallBlockingServicesGetListResponse23V2"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:15826""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:17039""}]")]
     public class SystemTreatmentMappingCallBlockingServiceGetListRequest23V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemTreatmentMappingCallBlockingServiceGetListResponse23V2>
     {
 

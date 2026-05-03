@@ -9,20 +9,21 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get a call center's announcement settings.
     /// The response is either a GroupCallCenterGetAnnouncementResponse22 or an ErrorResponse.
+    /// Replaced by: GroupCallCenterGetAnnouncementRequestRI in AS Data mode
     /// <see cref="GroupCallCenterGetAnnouncementResponse22"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:4069""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:1925""}]")]
     public class GroupCallCenterGetAnnouncementRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupCallCenterGetAnnouncementResponse22>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:4069")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:1925")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId

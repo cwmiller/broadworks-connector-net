@@ -11,6 +11,7 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either a SuccessResponse or an ErrorResponse.
     /// 
     /// Replaced by: GroupVoiceMessagingGroupModifyVoicePortalBrandingRequest20 in AS data mode
+    /// Replaced by: GroupVoiceMessagingGroupModifyVoicePortalBrandingRequestXS in XS data mode
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
     /// <see cref="GroupVoiceMessagingGroupModifyVoicePortalBrandingRequest20"/>
@@ -18,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:4690""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:18612""}]")]
     public class GroupVoiceMessagingGroupModifyVoicePortalBrandingRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4690")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18612")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -44,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4690")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18612")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -64,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "voicePortalGreetingSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4690")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18612")]
         public BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection? VoicePortalGreetingSelection
         {
             get => _voicePortalGreetingSelection;
@@ -82,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "voicePortalGreetingFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4690")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18612")]
         public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource VoicePortalGreetingFile
         {
             get => _voicePortalGreetingFile;
@@ -100,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "voiceMessagingGreetingSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4690")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18612")]
         public BroadWorksConnector.Ocip.Models.VoiceMessagingBrandingSelection? VoiceMessagingGreetingSelection
         {
             get => _voiceMessagingGreetingSelection;
@@ -118,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "voiceMessagingGreetingFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4690")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18612")]
         public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource VoiceMessagingGreetingFile
         {
             get => _voiceMessagingGreetingFile;

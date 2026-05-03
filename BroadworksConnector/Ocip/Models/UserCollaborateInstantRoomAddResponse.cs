@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bc805893b9cc7e3e01eec64e9ad62768:650""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bc805893b9cc7e3e01eec64e9ad62768:653""}]")]
     public class UserCollaborateInstantRoomAddResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _roomId;
 
         [XmlElement(ElementName = "roomId", IsNullable = false, Namespace = "")]
-        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:650")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:653")]
         [MinLength(4)]
         [MaxLength(15)]
         public string RoomId

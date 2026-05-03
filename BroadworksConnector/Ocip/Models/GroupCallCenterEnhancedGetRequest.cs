@@ -15,19 +15,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced By: GroupCallCenterGetInstanceResponse16
     /// <see cref="GroupCallCenterEnhancedGetResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="GroupCallCenterGetInstanceResponse16"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:4952""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:5379""}]")]
     public class GroupCallCenterEnhancedGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupCallCenterEnhancedGetResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:4952")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:5379")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId

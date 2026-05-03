@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""405ec18fe08719ecf74e749d7e18c88f:874""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""405ec18fe08719ecf74e749d7e18c88f:878""}]")]
     public class EnterpriseUserCallingPlanSettingsGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _userCallingPlanTable;
 
         [XmlElement(ElementName = "userCallingPlanTable", IsNullable = false, Namespace = "")]
-        [Group(@"405ec18fe08719ecf74e749d7e18c88f:874")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:878")]
         public BroadWorksConnector.Ocip.Models.C.OCITable UserCallingPlanTable
         {
             get => _userCallingPlanTable;

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:6749""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:6718""}]")]
     public class UserCallCenterEnhancedReportingReportTemplateParamInfoGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserCallCenterEnhancedReportingReportTemplateParamInfoGetResponse>
     {
 
         protected BroadWorksConnector.Ocip.Models.CallCenterReportTemplateKey _reportTemplate;
 
         [XmlElement(ElementName = "reportTemplate", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:6749")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6718")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportTemplateKey ReportTemplate
         {
             get => _reportTemplate;

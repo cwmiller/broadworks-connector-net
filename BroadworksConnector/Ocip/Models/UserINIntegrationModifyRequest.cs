@@ -8,21 +8,20 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Request to modify the user level IN Integration service attributes
-    /// The response is either a SuccessResponse or ErrorResponse
+    /// Response is either SuccessResponse or ErrorResponse
     /// <see cref="SuccessResponse"/>
-    /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""841786e27ac49a43576369a93b4cc726:73""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""841786e27ac49a43576369a93b4cc726:76""}]")]
     public class UserINIntegrationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"841786e27ac49a43576369a93b4cc726:73")]
+        [Group(@"841786e27ac49a43576369a93b4cc726:76")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -43,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "originatingServiceKey", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"841786e27ac49a43576369a93b4cc726:73")]
+        [Group(@"841786e27ac49a43576369a93b4cc726:76")]
         [MinInclusive(0)]
         [MaxInclusive(999)]
         public int? OriginatingServiceKey
@@ -64,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "terminatingServiceKey", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"841786e27ac49a43576369a93b4cc726:73")]
+        [Group(@"841786e27ac49a43576369a93b4cc726:76")]
         [MinInclusive(0)]
         [MaxInclusive(999)]
         public int? TerminatingServiceKey

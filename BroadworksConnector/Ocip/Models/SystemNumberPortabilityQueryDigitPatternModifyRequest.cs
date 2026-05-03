@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:13310""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:13479""}]")]
     public class SystemNumberPortabilityQueryDigitPatternModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _digitPattern;
 
         [XmlElement(ElementName = "digitPattern", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:13310")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:13479")]
         [MinLength(1)]
         [MaxLength(160)]
         public string DigitPattern
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newDigitPattern", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:13310")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:13479")]
         [MinLength(1)]
         [MaxLength(160)]
         public string NewDigitPattern
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "status", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:13310")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:13479")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Status

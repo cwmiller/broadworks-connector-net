@@ -31,14 +31,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10843"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10844"",""optional"":true,""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10847""}]}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10902"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10903"",""optional"":true,""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10906""}]}]}]")]
     public class SystemGetRegistrationContactListRequest21sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemGetRegistrationContactListResponse21sp1>
     {
 
         protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10844")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10903")]
         [MinLength(1)]
         [MaxLength(36)]
         public string ResellerId
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10844")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10903")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _svcProviderId;
 
         [XmlElement(ElementName = "svcProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10847")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10906")]
         [MinLength(1)]
         [MaxLength(30)]
         public string SvcProviderId
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10847")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10906")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10844")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10903")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10844")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10903")]
         [MinLength(1)]
         [MaxLength(161)]
         public string LinePort
@@ -153,7 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceLevel", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10843")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10902")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceLevel? DeviceLevel
         {
             get => _deviceLevel;
@@ -171,7 +171,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10843")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10902")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName
@@ -191,7 +191,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10843")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10902")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceType
@@ -211,7 +211,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaRegistrationURI", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10843")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10902")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaRegistrationURI> SearchCriteriaRegistrationURI
         {
             get => _searchCriteriaRegistrationURI;
@@ -229,7 +229,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaSIPContact", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10843")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10902")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaSIPContact> SearchCriteriaSIPContact
         {
             get => _searchCriteriaSIPContact;
@@ -247,7 +247,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "endpointType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10843")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10902")]
         public BroadWorksConnector.Ocip.Models.RegistrationEndpointType21sp1? EndpointType
         {
             get => _endpointType;
@@ -265,7 +265,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "expired", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10843")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10902")]
         public bool? Expired
         {
             get => _expired;

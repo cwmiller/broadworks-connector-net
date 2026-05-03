@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:5295""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:6112""}]")]
     public class TrunkAddressingMultipleContactAdd
     {
 
@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "trunkGroupDeviceEndpoint", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5295")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6112")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupDeviceMultipleContactEndpointAdd TrunkGroupDeviceEndpoint
         {
             get => _trunkGroupDeviceEndpoint;
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enterpriseTrunkName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5295")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6112")]
         [MinLength(1)]
         [MaxLength(30)]
         public string EnterpriseTrunkName
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alternateTrunkIdentity", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5295")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6112")]
         [MinLength(1)]
         [MaxLength(80)]
         public string AlternateTrunkIdentity
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alternateTrunkIdentityDomain", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5295")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6112")]
         [MinLength(1)]
         [MaxLength(80)]
         public string AlternateTrunkIdentityDomain
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "physicalLocation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5295")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6112")]
         [MinLength(1)]
         [MaxLength(1024)]
         public string PhysicalLocation

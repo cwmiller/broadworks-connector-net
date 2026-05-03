@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ef3c4f453d01f7ce750331de83ebc765:717""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ef3c4f453d01f7ce750331de83ebc765:725""}]")]
     public class PasswordForTrunkGroup
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"ef3c4f453d01f7ce750331de83ebc765:717")]
+        [Group(@"ef3c4f453d01f7ce750331de83ebc765:725")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"ef3c4f453d01f7ce750331de83ebc765:717")]
+        [Group(@"ef3c4f453d01f7ce750331de83ebc765:725")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ef3c4f453d01f7ce750331de83ebc765:717")]
+        [Group(@"ef3c4f453d01f7ce750331de83ebc765:725")]
         [MinLength(1)]
         [MaxLength(30)]
         public string Name
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _generateTrunkGroupAuthenticationPassword;
 
         [XmlElement(ElementName = "generateTrunkGroupAuthenticationPassword", IsNullable = false, Namespace = "")]
-        [Group(@"ef3c4f453d01f7ce750331de83ebc765:717")]
+        [Group(@"ef3c4f453d01f7ce750331de83ebc765:725")]
         public bool GenerateTrunkGroupAuthenticationPassword
         {
             get => _generateTrunkGroupAuthenticationPassword;

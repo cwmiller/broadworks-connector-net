@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e084de202cf726c3202fca43390f9ec5:160""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e084de202cf726c3202fca43390f9ec5:163""}]")]
     public class UserSpeedDial100DeleteListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"e084de202cf726c3202fca43390f9ec5:160")]
+        [Group(@"e084de202cf726c3202fca43390f9ec5:163")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "speedCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e084de202cf726c3202fca43390f9ec5:160")]
+        [Group(@"e084de202cf726c3202fca43390f9ec5:163")]
         [MinInclusive(0)]
         [MaxInclusive(99)]
         public List<int> SpeedCode

@@ -15,19 +15,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: SystemAccessDeviceGetRequest24V3
     /// <see cref="SystemAccessDeviceGetResponse22V6"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemAccessDeviceGetRequest24V3"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:7625"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:7626""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:8189"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:8190""}]}]")]
     public class SystemAccessDeviceGetRequest22V6 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemAccessDeviceGetResponse22V6>
     {
 
         protected string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:7626")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:8190")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName
@@ -46,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _deviceExternalId;
 
         [XmlElement(ElementName = "deviceExternalId", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:7626")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:8190")]
         [MaxLength(36)]
         public string DeviceExternalId
         {

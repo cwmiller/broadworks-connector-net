@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""37cec25308bcc82fe5a80bf541c42c89:207"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""37cec25308bcc82fe5a80bf541c42c89:215""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""37cec25308bcc82fe5a80bf541c42c89:210"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""37cec25308bcc82fe5a80bf541c42c89:218""}]}]")]
     public class ServiceProviderIntegratedIMPGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _useSystemServiceDomain;
 
         [XmlElement(ElementName = "useSystemServiceDomain", IsNullable = false, Namespace = "")]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:207")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:210")]
         public bool UseSystemServiceDomain
         {
             get => _useSystemServiceDomain;
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceDomain", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:207")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:210")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServiceDomain
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "servicePort", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:207")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:210")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int? ServicePort
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useSystemMessagingServer;
 
         [XmlElement(ElementName = "useSystemMessagingServer", IsNullable = false, Namespace = "")]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:207")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:210")]
         public bool UseSystemMessagingServer
         {
             get => _useSystemMessagingServer;
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "provisioningUrl", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:207")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:210")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ProvisioningUrl
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "provisioningUserId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:207")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:210")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ProvisioningUserId
@@ -139,7 +139,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "boshURL", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:207")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:210")]
         [MinLength(1)]
         [MaxLength(256)]
         public string BoshURL
@@ -158,7 +158,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.IntegratedIMPUserIDType _defaultImpIdType;
 
         [XmlElement(ElementName = "defaultImpIdType", IsNullable = false, Namespace = "")]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:215")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:218")]
         public BroadWorksConnector.Ocip.Models.IntegratedIMPUserIDType DefaultImpIdType
         {
             get => _defaultImpIdType;
@@ -175,7 +175,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useResellerIMPIdSetting;
 
         [XmlElement(ElementName = "useResellerIMPIdSetting", IsNullable = false, Namespace = "")]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:215")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:218")]
         public bool UseResellerIMPIdSetting
         {
             get => _useResellerIMPIdSetting;

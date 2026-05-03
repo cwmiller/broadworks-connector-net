@@ -8,21 +8,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Request to get the list of countries within the region of a static configuration tag set for per-region tags override.
-    /// The response is either a SuccessResponse or an ErrorResponse.
-    /// <see cref="SuccessResponse"/>
-    /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:8243""}]")]
-    public class SystemDeviceManagementTagSetCountryGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:8293""}]")]
+    public class SystemDeviceManagementTagSetCountryGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemDeviceManagementTagSetCountryGetListResponse>
     {
 
         protected string _tagSetName;
 
         [XmlElement(ElementName = "tagSetName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8243")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8293")]
         [MinLength(1)]
         [MaxLength(30)]
         public string TagSetName
@@ -41,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _regionName;
 
         [XmlElement(ElementName = "regionName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8243")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8293")]
         [MinLength(1)]
         [MaxLength(64)]
         public string RegionName

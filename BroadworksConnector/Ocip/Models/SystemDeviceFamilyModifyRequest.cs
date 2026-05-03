@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:7706""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:7758""}]")]
     public class SystemDeviceFamilyModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _deviceFamilyName;
 
         [XmlElement(ElementName = "deviceFamilyName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:7706")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7758")]
         [MinLength(1)]
         [MaxLength(30)]
         public string DeviceFamilyName
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newDeviceFamilyName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:7706")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7758")]
         [MinLength(1)]
         [MaxLength(30)]
         public string NewDeviceFamilyName
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "deviceTypeList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:7706")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7758")]
         public BroadWorksConnector.Ocip.Models.ReplacementDeviceTypeList DeviceTypeList
         {
             get => _deviceTypeList;
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "tagSetList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:7706")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7758")]
         public BroadWorksConnector.Ocip.Models.ReplacementTagSetList TagSetList
         {
             get => _tagSetList;

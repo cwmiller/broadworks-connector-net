@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced By: UserCustomRingbackUserGetCriteriaRequest16
     /// <see cref="UserCustomRingbackUserGetCriteriaResponse15sp2"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="UserCustomRingbackUserGetCriteriaRequest16"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:42668""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:46710""}]")]
     public class UserCustomRingbackUserGetCriteriaRequest15sp2 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserCustomRingbackUserGetCriteriaResponse15sp2>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:42668")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:46710")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -43,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _criteriaName;
 
         [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:42668")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:46710")]
         [MinLength(1)]
         [MaxLength(50)]
         public string CriteriaName

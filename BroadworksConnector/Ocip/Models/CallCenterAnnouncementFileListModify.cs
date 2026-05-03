@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:965""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:1129""}]")]
     public class CallCenterAnnouncementFileListModify
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "file1", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:965")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1129")]
         public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource File1
         {
             get => _file1;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "file2", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:965")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1129")]
         public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource File2
         {
             get => _file2;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "file3", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:965")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1129")]
         public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource File3
         {
             get => _file3;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "file4", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:965")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1129")]
         public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource File4
         {
             get => _file4;

@@ -9,20 +9,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to modify the group's voice messaging settings.
     /// The response is either SuccessResponse or ErrorResponse.
+    /// 
+    /// Replaced by: GroupVoiceMessagingGroupModifyRequestRI in AS data mode.
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:239""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:5109""}]")]
     public class GroupVoiceMessagingGroupModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:239")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5109")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:239")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5109")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useMailServerSetting", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:239")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5109")]
         public BroadWorksConnector.Ocip.Models.VoiceMessagingGroupMailServerChoices? UseMailServerSetting
         {
             get => _useMailServerSetting;
@@ -79,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "warnCallerBeforeRecordingVoiceMessage", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:239")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5109")]
         public bool? WarnCallerBeforeRecordingVoiceMessage
         {
             get => _warnCallerBeforeRecordingVoiceMessage;
@@ -97,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowUsersConfiguringAdvancedSettings", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:239")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5109")]
         public bool? AllowUsersConfiguringAdvancedSettings
         {
             get => _allowUsersConfiguringAdvancedSettings;
@@ -115,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowComposeOrForwardMessageToEntireGroup", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:239")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5109")]
         public bool? AllowComposeOrForwardMessageToEntireGroup
         {
             get => _allowComposeOrForwardMessageToEntireGroup;
@@ -134,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "mailServerNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:239")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5109")]
         [MinLength(1)]
         [MaxLength(80)]
         public string MailServerNetAddress
@@ -154,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mailServerProtocol", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:239")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5109")]
         public BroadWorksConnector.Ocip.Models.VoiceMessagingMailServerProtocol? MailServerProtocol
         {
             get => _mailServerProtocol;
@@ -172,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "realDeleteForImap", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:239")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5109")]
         public bool? RealDeleteForImap
         {
             get => _realDeleteForImap;
@@ -190,7 +192,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxMailboxLengthMinutes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:239")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5109")]
         public BroadWorksConnector.Ocip.Models.VoiceMessagingMailboxLengthMinutes? MaxMailboxLengthMinutes
         {
             get => _maxMailboxLengthMinutes;
@@ -208,7 +210,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "doesMessageAge", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:239")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5109")]
         public bool? DoesMessageAge
         {
             get => _doesMessageAge;
@@ -226,7 +228,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "holdPeriodDays", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:239")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5109")]
         public BroadWorksConnector.Ocip.Models.VoiceMessagingHoldPeriodDays? HoldPeriodDays
         {
             get => _holdPeriodDays;

@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Replaced by: UserIntegratedIMPGetResponse21sp1
     /// <see cref="UserIntegratedIMPGetRequest"/>
-    /// <see cref="UserIntegratedIMPGetResponse21sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:18267""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:20997""}]")]
     public class UserIntegratedIMPGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:18267")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:20997")]
         public bool IsActive
         {
             get => _isActive;

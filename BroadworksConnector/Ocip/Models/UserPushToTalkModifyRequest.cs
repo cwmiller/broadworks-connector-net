@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""22c82692327758edb5adf1f1db18fc71:123""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""22c82692327758edb5adf1f1db18fc71:126""}]")]
     public class UserPushToTalkModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"22c82692327758edb5adf1f1db18fc71:123")]
+        [Group(@"22c82692327758edb5adf1f1db18fc71:126")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowAutoAnswer", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"22c82692327758edb5adf1f1db18fc71:123")]
+        [Group(@"22c82692327758edb5adf1f1db18fc71:126")]
         public bool? AllowAutoAnswer
         {
             get => _allowAutoAnswer;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "outgoingConnectionSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"22c82692327758edb5adf1f1db18fc71:123")]
+        [Group(@"22c82692327758edb5adf1f1db18fc71:126")]
         public BroadWorksConnector.Ocip.Models.PushToTalkOutgoingConnectionSelection? OutgoingConnectionSelection
         {
             get => _outgoingConnectionSelection;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessListSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"22c82692327758edb5adf1f1db18fc71:123")]
+        [Group(@"22c82692327758edb5adf1f1db18fc71:126")]
         public BroadWorksConnector.Ocip.Models.PushToTalkAccessListSelection? AccessListSelection
         {
             get => _accessListSelection;
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "selectedUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"22c82692327758edb5adf1f1db18fc71:123")]
+        [Group(@"22c82692327758edb5adf1f1db18fc71:126")]
         public BroadWorksConnector.Ocip.Models.ReplacementUserIdList SelectedUserIdList
         {
             get => _selectedUserIdList;

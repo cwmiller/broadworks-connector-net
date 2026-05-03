@@ -16,19 +16,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: GroupDirectoryNumberHuntingGetRequest17sp1
     /// <see cref="GroupDirectoryNumberHuntingGetResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="GroupDirectoryNumberHuntingGetRequest17sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:9510""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:10361""}]")]
     public class GroupDirectoryNumberHuntingGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupDirectoryNumberHuntingGetResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9510")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10361")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId

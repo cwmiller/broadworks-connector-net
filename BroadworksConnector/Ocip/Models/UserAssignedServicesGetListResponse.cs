@@ -14,7 +14,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:840""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:849""}]")]
     public class UserAssignedServicesGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "groupServiceEntry", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:840")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:849")]
         public List<BroadWorksConnector.Ocip.Models.AssignedGroupServicesEntry> GroupServiceEntry
         {
             get => _groupServiceEntry;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userServiceEntry", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:840")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:849")]
         public List<BroadWorksConnector.Ocip.Models.AssignedUserServicesEntry> UserServiceEntry
         {
             get => _userServiceEntry;

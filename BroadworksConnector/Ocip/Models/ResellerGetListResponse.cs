@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d45e381d6dbac771631649063122a42e:570""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d45e381d6dbac771631649063122a42e:574""}]")]
     public class ResellerGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _resellerTable;
 
         [XmlElement(ElementName = "resellerTable", IsNullable = false, Namespace = "")]
-        [Group(@"d45e381d6dbac771631649063122a42e:570")]
+        [Group(@"d45e381d6dbac771631649063122a42e:574")]
         public BroadWorksConnector.Ocip.Models.C.OCITable ResellerTable
         {
             get => _resellerTable;

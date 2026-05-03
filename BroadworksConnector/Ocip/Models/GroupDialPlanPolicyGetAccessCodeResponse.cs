@@ -8,19 +8,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to GroupDialPlanPolicyGetAccessCodeRequest
-    /// <see cref="GroupDialPlanPolicyGetAccessCodeRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:4501""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:4543""}]")]
     public class GroupDialPlanPolicyGetAccessCodeResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _includeCodeForNetworkTranslationsAndRouting;
 
         [XmlElement(ElementName = "includeCodeForNetworkTranslationsAndRouting", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:4501")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:4543")]
         public bool IncludeCodeForNetworkTranslationsAndRouting
         {
             get => _includeCodeForNetworkTranslationsAndRouting;
@@ -37,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _includeCodeForScreeningServices;
 
         [XmlElement(ElementName = "includeCodeForScreeningServices", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:4501")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:4543")]
         public bool IncludeCodeForScreeningServices
         {
             get => _includeCodeForScreeningServices;
@@ -54,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableSecondaryDialTone;
 
         [XmlElement(ElementName = "enableSecondaryDialTone", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:4501")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:4543")]
         public bool EnableSecondaryDialTone
         {
             get => _enableSecondaryDialTone;
@@ -72,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:4501")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:4543")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:1857""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:2088""}]")]
     public class ConsolidatedUserServiceAssignment
     {
 
         protected BroadWorksConnector.Ocip.Models.UserService _userServiceName;
 
         [XmlElement(ElementName = "userServiceName", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1857")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2088")]
         public BroadWorksConnector.Ocip.Models.UserService UserServiceName
         {
             get => _userServiceName;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "authorizedQuantity", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1857")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2088")]
         public BroadWorksConnector.Ocip.Models.UnboundedPositiveInt AuthorizedQuantity
         {
             get => _authorizedQuantity;

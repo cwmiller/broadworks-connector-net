@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""405ec18fe08719ecf74e749d7e18c88f:1085""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""405ec18fe08719ecf74e749d7e18c88f:1089""}]")]
     public class EnterpriseVoiceVPNGetPolicyListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNGetPolicyListResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1085")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1089")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1085")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1089")]
         [MinInclusive(1)]
         public int? ResponseSizeLimit
         {
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaGroupLocationCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1085")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1089")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupLocationCode> SearchCriteriaGroupLocationCode
         {
             get => _searchCriteriaGroupLocationCode;
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaExactPolicySelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1085")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1089")]
         public BroadWorksConnector.Ocip.Models.SearchCriteriaExactPolicySelection SearchCriteriaExactPolicySelection
         {
             get => _searchCriteriaExactPolicySelection;

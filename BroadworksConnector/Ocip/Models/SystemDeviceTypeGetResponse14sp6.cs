@@ -10,19 +10,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to SystemDeviceTypeGetRequest14sp6.
     /// Replaced by: SystemDeviceTypeGetResponse16
     /// <see cref="SystemDeviceTypeGetRequest14sp6"/>
-    /// <see cref="SystemDeviceTypeGetResponse16"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:26560""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:30174""}]")]
     public class SystemDeviceTypeGetResponse14sp6 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isObsolete;
 
         [XmlElement(ElementName = "isObsolete", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:26560")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:30174")]
         public bool IsObsolete
         {
             get => _isObsolete;
@@ -39,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SignalingAddressType _profile;
 
         [XmlElement(ElementName = "profile", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:26560")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:30174")]
         public BroadWorksConnector.Ocip.Models.SignalingAddressType Profile
         {
             get => _profile;
@@ -57,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "webBasedConfigURL", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:26560")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:30174")]
         [MinLength(1)]
         [MaxLength(80)]
         public string WebBasedConfigURL
@@ -76,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _staticRegistrationCapable;
 
         [XmlElement(ElementName = "staticRegistrationCapable", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:26560")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:30174")]
         public bool StaticRegistrationCapable
         {
             get => _staticRegistrationCapable;
@@ -94,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "cpeDeviceOptions", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:26560")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:30174")]
         public BroadWorksConnector.Ocip.Models.CPEDeviceOptionsRead CpeDeviceOptions
         {
             get => _cpeDeviceOptions;
@@ -111,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected List<string> _protocolChoice = new List<string>();
 
         [XmlElement(ElementName = "protocolChoice", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:26560")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:30174")]
         [MinLength(1)]
         [MaxLength(20)]
         public List<string> ProtocolChoice
@@ -130,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isIpAddressOptional;
 
         [XmlElement(ElementName = "isIpAddressOptional", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:26560")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:30174")]
         public bool IsIpAddressOptional
         {
             get => _isIpAddressOptional;
@@ -147,7 +146,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useDomain;
 
         [XmlElement(ElementName = "useDomain", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:26560")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:30174")]
         public bool UseDomain
         {
             get => _useDomain;
@@ -164,7 +163,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isMobilityManagerDevice;
 
         [XmlElement(ElementName = "isMobilityManagerDevice", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:26560")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:30174")]
         public bool IsMobilityManagerDevice
         {
             get => _isMobilityManagerDevice;

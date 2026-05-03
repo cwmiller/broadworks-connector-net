@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a63afa661ee5c74f4700e562e88c66d0:1546""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a63afa661ee5c74f4700e562e88c66d0:1550""}]")]
     public class UserOutgoingCallingPlanRedirectedGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _useCustomSettings;
 
         [XmlElement(ElementName = "useCustomSettings", IsNullable = false, Namespace = "")]
-        [Group(@"a63afa661ee5c74f4700e562e88c66d0:1546")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:1550")]
         public bool UseCustomSettings
         {
             get => _useCustomSettings;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.OutgoingCallingPlanRedirectedPermissions _userPermissions;
 
         [XmlElement(ElementName = "userPermissions", IsNullable = false, Namespace = "")]
-        [Group(@"a63afa661ee5c74f4700e562e88c66d0:1546")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:1550")]
         public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanRedirectedPermissions UserPermissions
         {
             get => _userPermissions;

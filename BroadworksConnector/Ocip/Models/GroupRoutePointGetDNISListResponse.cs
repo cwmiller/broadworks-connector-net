@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e474d11df9a1d1d1041e589793e40de8:468""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e474d11df9a1d1d1041e589793e40de8:471""}]")]
     public class GroupRoutePointGetDNISListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _displayDNISNumber;
 
         [XmlElement(ElementName = "displayDNISNumber", IsNullable = false, Namespace = "")]
-        [Group(@"e474d11df9a1d1d1041e589793e40de8:468")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:471")]
         public bool DisplayDNISNumber
         {
             get => _displayDNISNumber;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _displayDNISName;
 
         [XmlElement(ElementName = "displayDNISName", IsNullable = false, Namespace = "")]
-        [Group(@"e474d11df9a1d1d1041e589793e40de8:468")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:471")]
         public bool DisplayDNISName
         {
             get => _displayDNISName;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _dnisTable;
 
         [XmlElement(ElementName = "dnisTable", IsNullable = false, Namespace = "")]
-        [Group(@"e474d11df9a1d1d1041e589793e40de8:468")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:471")]
         public BroadWorksConnector.Ocip.Models.C.OCITable DnisTable
         {
             get => _dnisTable;

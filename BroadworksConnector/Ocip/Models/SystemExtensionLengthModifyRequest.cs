@@ -9,13 +9,16 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify the group's extension length range.
     /// The response is either a SuccessResponse or an ErrorResponse.
+    /// 
+    /// The following elements are only used in XS data mode and ignored in AS data mode:
+    /// autoGenerateExtensionWithDefaultLength
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10129""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10187""}]")]
     public class SystemExtensionLengthModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "minExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10129")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10187")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
         public int? MinExtensionLength
@@ -43,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10129")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10187")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
         public int? MaxExtensionLength
@@ -58,6 +61,24 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool MaxExtensionLengthSpecified { get; set; }
+
+        protected bool? _autoGenerateExtensionWithDefaultLength;
+
+        [XmlElement(ElementName = "autoGenerateExtensionWithDefaultLength", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10187")]
+        public bool? AutoGenerateExtensionWithDefaultLength
+        {
+            get => _autoGenerateExtensionWithDefaultLength;
+            set
+            {
+                AutoGenerateExtensionWithDefaultLengthSpecified = (value != null);
+                _autoGenerateExtensionWithDefaultLength = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool AutoGenerateExtensionWithDefaultLengthSpecified { get; set; }
 
     }
 }

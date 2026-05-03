@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:1761""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:1806""}]")]
     public class ServiceProviderAnswerConfirmationGetResponse16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.AnswerConfirmationAnnouncementSelection _announcementMessageSelection;
 
         [XmlElement(ElementName = "announcementMessageSelection", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:1761")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:1806")]
         public BroadWorksConnector.Ocip.Models.AnswerConfirmationAnnouncementSelection AnnouncementMessageSelection
         {
             get => _announcementMessageSelection;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "confirmationMessageAudioFileDescription", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:1761")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:1806")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ConfirmationMessageAudioFileDescription
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "confirmationMessageMediaType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:1761")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:1806")]
         public BroadWorksConnector.Ocip.Models.MediaFileType? ConfirmationMessageMediaType
         {
             get => _confirmationMessageMediaType;
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _confirmationTimoutSeconds;
 
         [XmlElement(ElementName = "confirmationTimoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:1761")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:1806")]
         [MinInclusive(2)]
         [MaxInclusive(30)]
         public int ConfirmationTimoutSeconds

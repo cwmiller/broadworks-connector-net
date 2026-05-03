@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:7150""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:7202""}]")]
     public class SystemCPEConfigModifyFileServerRequest14sp6 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:7150")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7202")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceType
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "fileRepositoryName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:7150")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7202")]
         [MinLength(1)]
         [MaxLength(40)]
         public string FileRepositoryName
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "cpeFileDirectory", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:7150")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7202")]
         [MinLength(1)]
         [MaxLength(256)]
         public string CpeFileDirectory
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "extendedCaptureFileRepositoryName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:7150")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7202")]
         [MinLength(1)]
         [MaxLength(40)]
         public string ExtendedCaptureFileRepositoryName

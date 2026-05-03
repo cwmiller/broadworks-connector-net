@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:8207""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:8258""}]")]
     public class SystemDeviceManagementTagSetCountryAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _tagSetName;
 
         [XmlElement(ElementName = "tagSetName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8207")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8258")]
         [MinLength(1)]
         [MaxLength(30)]
         public string TagSetName
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _regionName;
 
         [XmlElement(ElementName = "regionName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8207")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8258")]
         [MinLength(1)]
         [MaxLength(64)]
         public string RegionName
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _countryName;
 
         [XmlElement(ElementName = "countryName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8207")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8258")]
         [MinLength(1)]
         [MaxLength(80)]
         public string CountryName

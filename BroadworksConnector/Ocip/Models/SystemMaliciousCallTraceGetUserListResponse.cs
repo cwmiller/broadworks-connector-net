@@ -13,19 +13,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Replaced By: SystemMaliciousCallTraceGetResponse
     /// <see cref="SystemMaliciousCallTraceGetUserListRequest"/>
-    /// <see cref="SystemMaliciousCallTraceGetResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:28107""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:31749""}]")]
     public class SystemMaliciousCallTraceGetUserListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:28107")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:31749")]
         public BroadWorksConnector.Ocip.Models.C.OCITable UserTable
         {
             get => _userTable;

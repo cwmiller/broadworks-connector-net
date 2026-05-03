@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3355""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3629""}]")]
     public class GroupExtensionLengthSettings
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "minExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3355")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3629")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
         public int? MinExtensionLength
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3355")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3629")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
         public int? MaxExtensionLength
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3355")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3629")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
         public int? DefaultExtensionLength
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useEnterpriseExtensionLengthSetting", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3355")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3629")]
         public bool? UseEnterpriseExtensionLengthSetting
         {
             get => _useEnterpriseExtensionLengthSetting;

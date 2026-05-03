@@ -8,21 +8,21 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Request the Call Me Now permissions for Pinhole digit patterns for a user.
-    /// The response is either a UserOutgoingCallingPlanPinholeDigitPlanCallMeNowGetResponse or an ErrorResponse.
-    /// <see cref="UserOutgoingCallingPlanPinholeDigitPlanCallMeNowGetResponse"/>
+    /// The response is either a UserOutgoingCallingPlanPinholeDigitPlanCallMeNowgGetResponse or an ErrorResponse.
+    /// <see cref="UserOutgoingCallingPlanPinholeDigitPlanCallMeNowgGetResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a63afa661ee5c74f4700e562e88c66d0:1381""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a63afa661ee5c74f4700e562e88c66d0:1385""}]")]
     public class UserOutgoingCallingPlanPinholeDigitPlanCallMeNowGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserOutgoingCallingPlanPinholeDigitPlanCallMeNowGetResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"a63afa661ee5c74f4700e562e88c66d0:1381")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:1385")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

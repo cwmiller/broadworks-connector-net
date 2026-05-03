@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:17535""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:17754""}]")]
     public class SystemSIPDeviceTypeLanguageMappingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:17535")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:17754")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceType
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "languageMapping", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:17535")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:17754")]
         public List<BroadWorksConnector.Ocip.Models.DeviceManagementLanguageMapping> LanguageMapping
         {
             get => _languageMapping;

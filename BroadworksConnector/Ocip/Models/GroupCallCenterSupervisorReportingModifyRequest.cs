@@ -14,19 +14,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced By: GroupCallCenterModifySupervisorListRequest16
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="GroupCallCenterModifySupervisorListRequest16"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:7444""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:8177""}]")]
     public class GroupCallCenterSupervisorReportingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:7444")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:8177")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -47,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "reportingServerName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:7444")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:8177")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ReportingServerName
@@ -68,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "supervisorUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:7444")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:8177")]
         public BroadWorksConnector.Ocip.Models.ReplacementUserIdList SupervisorUserIdList
         {
             get => _supervisorUserIdList;

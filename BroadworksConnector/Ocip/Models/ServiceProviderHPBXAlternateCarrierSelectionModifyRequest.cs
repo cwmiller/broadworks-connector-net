@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:4727""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:4777""}]")]
     public class ServiceProviderHPBXAlternateCarrierSelectionModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:4727")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:4777")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "processCbcCarrierSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:4727")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:4777")]
         public bool? ProcessCbcCarrierSelection
         {
             get => _processCbcCarrierSelection;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "preselectedLocalCarrier", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:4727")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:4777")]
         [MinLength(1)]
         [MaxLength(80)]
         public string PreselectedLocalCarrier
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "preselectedDistantCarrier", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:4727")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:4777")]
         [MinLength(1)]
         [MaxLength(80)]
         public string PreselectedDistantCarrier

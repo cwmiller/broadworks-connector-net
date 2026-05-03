@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""405ec18fe08719ecf74e749d7e18c88f:1269""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""405ec18fe08719ecf74e749d7e18c88f:1277""}]")]
     public class EnterpriseVoiceVPNDigitManipulationNoValue : BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulation
     {
 
         protected BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulationOperationNoValue _operation;
 
         [XmlElement(ElementName = "operation", IsNullable = false, Namespace = "")]
-        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1269")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:1277")]
         public BroadWorksConnector.Ocip.Models.EnterpriseVoiceVPNDigitManipulationOperationNoValue Operation
         {
             get => _operation;

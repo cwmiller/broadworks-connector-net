@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:3320""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:3368""}]")]
     public class ServiceProviderDeviceTypeFileGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _serviceProviderDeviceTypeFilesTable;
 
         [XmlElement(ElementName = "serviceProviderDeviceTypeFilesTable", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:3320")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:3368")]
         public BroadWorksConnector.Ocip.Models.C.OCITable ServiceProviderDeviceTypeFilesTable
         {
             get => _serviceProviderDeviceTypeFilesTable;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _serviceProviderHasCustomizableDynamicFiles;
 
         [XmlElement(ElementName = "serviceProviderHasCustomizableDynamicFiles", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:3320")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:3368")]
         public bool ServiceProviderHasCustomizableDynamicFiles
         {
             get => _serviceProviderHasCustomizableDynamicFiles;

@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b5e86c5d60603bdb61de308d278500d9:115""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b5e86c5d60603bdb61de308d278500d9:119""}]")]
     public class GroupCallCenterMonitoringGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enableSupervisorCoaching;
 
         [XmlElement(ElementName = "enableSupervisorCoaching", IsNullable = false, Namespace = "")]
-        [Group(@"b5e86c5d60603bdb61de308d278500d9:115")]
+        [Group(@"b5e86c5d60603bdb61de308d278500d9:119")]
         public bool EnableSupervisorCoaching
         {
             get => _enableSupervisorCoaching;

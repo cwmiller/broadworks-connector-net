@@ -13,19 +13,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Deprecated by ServiceProviderTrunkGroupGetRequest23
     /// <see cref="ServiceProviderTrunkGroupGetResponse14sp1"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="ServiceProviderTrunkGroupGetRequest23"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:19845""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:22385""}]")]
     public class ServiceProviderTrunkGroupGetRequest14sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ServiceProviderTrunkGroupGetResponse14sp1>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:19845")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:22385")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId

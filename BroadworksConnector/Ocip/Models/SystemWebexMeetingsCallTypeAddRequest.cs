@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:19547""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:19895""}]")]
     public class SystemWebexMeetingsCallTypeAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:19547")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:19895")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _networkServerCallType;
 
         [XmlElement(ElementName = "networkServerCallType", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:19547")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:19895")]
         [MinLength(1)]
         [MaxLength(4)]
         public string NetworkServerCallType
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enforceNSChargeField;
 
         [XmlElement(ElementName = "enforceNSChargeField", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:19547")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:19895")]
         public bool EnforceNSChargeField
         {
             get => _enforceNSChargeField;
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _processAsInternalForSACSubscriber;
 
         [XmlElement(ElementName = "processAsInternalForSACSubscriber", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:19547")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:19895")]
         public bool ProcessAsInternalForSACSubscriber
         {
             get => _processAsInternalForSACSubscriber;

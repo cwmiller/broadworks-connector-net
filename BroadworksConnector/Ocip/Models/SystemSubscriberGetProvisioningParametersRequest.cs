@@ -14,12 +14,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: SystemSubscriberGetProvisioningParametersRequest24
     /// <see cref="SystemSubscriberGetProvisioningParametersResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemSubscriberGetProvisioningParametersRequest24"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:35908""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:40097""}]")]
     public class SystemSubscriberGetProvisioningParametersRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemSubscriberGetProvisioningParametersResponse>
     {
 

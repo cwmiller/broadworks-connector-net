@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9ae9f7d53e566e21347e23e20e2a2a39:1176""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9ae9f7d53e566e21347e23e20e2a2a39:1182""}]")]
     public class SystemBroadWorksMobilityMobileNetworkModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1176")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1182")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1176")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1182")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NewName
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "scfSignalingNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1176")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1182")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ScfSignalingNetAddress
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "scfSignalingPort", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1176")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1182")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int? ScfSignalingPort
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "refreshPeriodSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1176")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1182")]
         [MinInclusive(10)]
         [MaxInclusive(1800)]
         public int? RefreshPeriodSeconds
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxConsecutiveFailures", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1176")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1182")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int? MaxConsecutiveFailures
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxResponseWaitTimeMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1176")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1182")]
         [MinInclusive(100)]
         [MaxInclusive(10000)]
         public int? MaxResponseWaitTimeMilliseconds
@@ -164,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableAnnouncementSuppression", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1176")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1182")]
         public bool? EnableAnnouncementSuppression
         {
             get => _enableAnnouncementSuppression;
@@ -183,7 +183,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "serviceAccessCodeListName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1176")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1182")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServiceAccessCodeListName

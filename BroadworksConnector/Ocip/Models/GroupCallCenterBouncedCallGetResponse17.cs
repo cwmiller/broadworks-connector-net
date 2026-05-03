@@ -22,14 +22,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:2739""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:2733""}]")]
     public class GroupCallCenterBouncedCallGetResponse17 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:2739")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2733")]
         public bool IsActive
         {
             get => _isActive;
@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _numberOfRingsBeforeBouncingCall;
 
         [XmlElement(ElementName = "numberOfRingsBeforeBouncingCall", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:2739")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2733")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
         public int NumberOfRingsBeforeBouncingCall
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableTransfer", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:2739")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2733")]
         public bool? EnableTransfer
         {
             get => _enableTransfer;
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "transferPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:2739")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2733")]
         [MinLength(1)]
         [MaxLength(161)]
         public string TransferPhoneNumber
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "bounceCallWhenAgentUnavailable", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:2739")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2733")]
         public bool? BounceCallWhenAgentUnavailable
         {
             get => _bounceCallWhenAgentUnavailable;
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alertCallCenterCallOnHold", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:2739")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2733")]
         public bool? AlertCallCenterCallOnHold
         {
             get => _alertCallCenterCallOnHold;
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alertCallCenterCallOnHoldSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:2739")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2733")]
         [MinInclusive(30)]
         [MaxInclusive(600)]
         public int? AlertCallCenterCallOnHoldSeconds
@@ -160,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "bounceCallCenterCallOnHold", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:2739")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2733")]
         public bool? BounceCallCenterCallOnHold
         {
             get => _bounceCallCenterCallOnHold;
@@ -178,7 +178,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "bounceCallCenterCallOnHoldSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:2739")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2733")]
         [MinInclusive(30)]
         [MaxInclusive(600)]
         public int? BounceCallCenterCallOnHoldSeconds

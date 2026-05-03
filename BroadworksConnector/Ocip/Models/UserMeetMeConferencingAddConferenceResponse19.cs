@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Replaced by: UserMeetMeConferencingAddConferenceResponse23
     /// <see cref="UserMeetMeConferencingAddConferenceRequest19"/>
-    /// <see cref="UserMeetMeConferencingAddConferenceResponse23"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:45722""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:49971""}]")]
     public class UserMeetMeConferencingAddConferenceResponse19 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _conferenceId;
 
         [XmlElement(ElementName = "conferenceId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:45722")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:49971")]
         [MinLength(6)]
         [MaxLength(12)]
         public string ConferenceId
@@ -43,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _moderatorPin;
 
         [XmlElement(ElementName = "moderatorPin", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:45722")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:49971")]
         [MinLength(6)]
         [MaxLength(12)]
         public string ModeratorPin
@@ -63,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "securityPin", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:45722")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:49971")]
         [MinLength(4)]
         [MaxLength(12)]
         public string SecurityPin

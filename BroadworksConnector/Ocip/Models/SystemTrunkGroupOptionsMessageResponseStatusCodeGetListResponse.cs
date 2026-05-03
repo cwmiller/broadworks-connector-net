@@ -14,7 +14,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""090e91b2d78e873f5d76a2f16af08d3a:1855""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""090e91b2d78e873f5d76a2f16af08d3a:1844""}]")]
     public class SystemTrunkGroupOptionsMessageResponseStatusCodeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "statusCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1855")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1844")]
         [MinLength(3)]
         [MaxLength(40)]
         public List<string> StatusCode

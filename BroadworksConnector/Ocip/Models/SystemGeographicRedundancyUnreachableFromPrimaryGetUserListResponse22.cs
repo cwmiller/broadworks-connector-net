@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10737""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10796""}]")]
     public class SystemGeographicRedundancyUnreachableFromPrimaryGetUserListResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _unreachableFromPrimaryUserTable;
 
         [XmlElement(ElementName = "unreachableFromPrimaryUserTable", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10737")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10796")]
         public BroadWorksConnector.Ocip.Models.C.OCITable UnreachableFromPrimaryUserTable
         {
             get => _unreachableFromPrimaryUserTable;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "totalNumberOfUnreachableFromPrimaryUsers", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10737")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10796")]
         public int? TotalNumberOfUnreachableFromPrimaryUsers
         {
             get => _totalNumberOfUnreachableFromPrimaryUsers;

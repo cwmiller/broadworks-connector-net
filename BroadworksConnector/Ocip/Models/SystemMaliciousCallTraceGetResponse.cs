@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""be7f3162f133f8d7fcc75e712b0258e6:119""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""be7f3162f133f8d7fcc75e712b0258e6:122""}]")]
     public class SystemMaliciousCallTraceGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _playMCTWarningAnnouncement;
 
         [XmlElement(ElementName = "playMCTWarningAnnouncement", IsNullable = false, Namespace = "")]
-        [Group(@"be7f3162f133f8d7fcc75e712b0258e6:119")]
+        [Group(@"be7f3162f133f8d7fcc75e712b0258e6:122")]
         public bool PlayMCTWarningAnnouncement
         {
             get => _playMCTWarningAnnouncement;
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
-        [Group(@"be7f3162f133f8d7fcc75e712b0258e6:119")]
+        [Group(@"be7f3162f133f8d7fcc75e712b0258e6:122")]
         public BroadWorksConnector.Ocip.Models.C.OCITable UserTable
         {
             get => _userTable;

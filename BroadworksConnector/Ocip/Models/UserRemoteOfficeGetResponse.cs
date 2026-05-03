@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""dbef84b1c59b67471031e429db8fd980:56""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""dbef84b1c59b67471031e429db8fd980:59""}]")]
     public class UserRemoteOfficeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"dbef84b1c59b67471031e429db8fd980:56")]
+        [Group(@"dbef84b1c59b67471031e429db8fd980:59")]
         public bool IsActive
         {
             get => _isActive;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "remoteOfficePhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"dbef84b1c59b67471031e429db8fd980:56")]
+        [Group(@"dbef84b1c59b67471031e429db8fd980:59")]
         [MinLength(1)]
         [MaxLength(161)]
         public string RemoteOfficePhoneNumber

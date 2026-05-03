@@ -8,12 +8,11 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to the UserPersonalAssistantExclusionNumberGetRequest
-    /// <see cref="UserPersonalAssistantExclusionNumberGetRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6bd221784ebf8af2fe1169d36a6ac2dd:319""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6bd221784ebf8af2fe1169d36a6ac2dd:322""}]")]
     public class UserPersonalAssistantExclusionNumberGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -22,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:319")]
+        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:322")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

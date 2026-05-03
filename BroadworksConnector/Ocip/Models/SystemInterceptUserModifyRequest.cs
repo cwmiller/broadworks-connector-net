@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2a762bb9361e88044885b796c1d6b979:252""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2a762bb9361e88044885b796c1d6b979:255""}]")]
     public class SystemInterceptUserModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "emergencyAndRepairIntercept", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"2a762bb9361e88044885b796c1d6b979:252")]
+        [Group(@"2a762bb9361e88044885b796c1d6b979:255")]
         public bool? EmergencyAndRepairIntercept
         {
             get => _emergencyAndRepairIntercept;

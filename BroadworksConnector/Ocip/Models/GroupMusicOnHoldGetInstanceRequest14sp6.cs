@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced By: GroupMusicOnHoldGetInstanceRequest16
     /// <see cref="GroupMusicOnHoldGetInstanceResponse14sp6"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="GroupMusicOnHoldGetInstanceRequest16"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:11600""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:12640""}]")]
     public class GroupMusicOnHoldGetInstanceRequest14sp6 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupMusicOnHoldGetInstanceResponse14sp6>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:11600")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12640")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -43,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:11600")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12640")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -63,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "department", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:11600")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12640")]
         public BroadWorksConnector.Ocip.Models.DepartmentKey Department
         {
             get => _department;

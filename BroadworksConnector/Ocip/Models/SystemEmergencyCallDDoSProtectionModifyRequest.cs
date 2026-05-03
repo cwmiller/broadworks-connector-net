@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:9794""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:9849""}]")]
     public class SystemEmergencyCallDDoSProtectionModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:9794")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9849")]
         public bool? Enabled
         {
             get => _enabled;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sampleIntervalSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:9794")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9849")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
         public int? SampleIntervalSeconds
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "protectionRate", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:9794")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9849")]
         [MinInclusive(1)]
         [MaxInclusive(10000)]
         public int? ProtectionRate
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "protectionAction", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:9794")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9849")]
         public BroadWorksConnector.Ocip.Models.ProtectionAction? ProtectionAction
         {
             get => _protectionAction;

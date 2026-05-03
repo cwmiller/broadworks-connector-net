@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:835""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:933""}]")]
     public class AutoAttendantKeyModifyConfiguration20
     {
 
         protected BroadWorksConnector.Ocip.Models.AutoAttendantMenuKey _key;
 
         [XmlElement(ElementName = "key", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:835")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:933")]
         public BroadWorksConnector.Ocip.Models.AutoAttendantMenuKey Key
         {
             get => _key;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "entry", IsNullable = true, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:835")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:933")]
         public BroadWorksConnector.Ocip.Models.AutoAttendantKeyConfigurationModifyEntry20 Entry
         {
             get => _entry;

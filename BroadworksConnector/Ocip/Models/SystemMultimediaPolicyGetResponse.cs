@@ -8,19 +8,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to SystemMultimediaPolicyGetRequest
-    /// <see cref="SystemMultimediaPolicyGetRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:12425""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:11478""}]")]
     public class SystemMultimediaPolicyGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _restrictNonAudioVideoMediaTypes;
 
         [XmlElement(ElementName = "restrictNonAudioVideoMediaTypes", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:12425")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:11478")]
         public bool RestrictNonAudioVideoMediaTypes
         {
             get => _restrictNonAudioVideoMediaTypes;

@@ -18,19 +18,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Replaced by: EnterprisePhoneDirectoryGetListResponse18
     /// <see cref="EnterprisePhoneDirectoryGetListRequest17"/>
-    /// <see cref="EnterprisePhoneDirectoryGetListResponse18"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:2608""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:2809""}]")]
     public class EnterprisePhoneDirectoryGetListResponse17 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _directoryTable;
 
         [XmlElement(ElementName = "directoryTable", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:2608")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:2809")]
         public BroadWorksConnector.Ocip.Models.C.OCITable DirectoryTable
         {
             get => _directoryTable;

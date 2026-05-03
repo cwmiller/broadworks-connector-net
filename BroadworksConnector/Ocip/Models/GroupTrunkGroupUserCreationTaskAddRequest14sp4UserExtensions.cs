@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""090e91b2d78e873f5d76a2f16af08d3a:1493""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""090e91b2d78e873f5d76a2f16af08d3a:1482""}]")]
     public class GroupTrunkGroupUserCreationTaskAddRequest14sp4UserExtensions
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "extension", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1493")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1482")]
         [MinLength(2)]
         [MaxLength(20)]
         public List<string> Extension
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "extensionRange", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1493")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:1482")]
         public List<BroadWorksConnector.Ocip.Models.ExtensionRange17> ExtensionRange
         {
             get => _extensionRange;

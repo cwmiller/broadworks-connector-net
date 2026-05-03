@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:249""}]")]
-    public class CallCenterAgentAvailability
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:253""}]")]
+    public class CallCenterAgentAvailability : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.CallCenterAgentAvailability>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:249")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:253")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _available;
 
         [XmlElement(ElementName = "available", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:249")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:253")]
         public bool Available
         {
             get => _available;

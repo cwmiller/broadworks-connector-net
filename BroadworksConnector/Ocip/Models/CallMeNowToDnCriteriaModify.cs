@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""adf9583170c1dc9ec6c152ba1238437a:259""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""adf9583170c1dc9ec6c152ba1238437a:266""}]")]
     public class CallMeNowToDnCriteriaModify
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "toDnCriteriaSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"adf9583170c1dc9ec6c152ba1238437a:259")]
+        [Group(@"adf9583170c1dc9ec6c152ba1238437a:266")]
         public BroadWorksConnector.Ocip.Models.CriteriaDnSelection? ToDnCriteriaSelection
         {
             get => _toDnCriteriaSelection;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "phoneNumberList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"adf9583170c1dc9ec6c152ba1238437a:259")]
+        [Group(@"adf9583170c1dc9ec6c152ba1238437a:266")]
         public BroadWorksConnector.Ocip.Models.CriteriaReplacementDNList PhoneNumberList
         {
             get => _phoneNumberList;

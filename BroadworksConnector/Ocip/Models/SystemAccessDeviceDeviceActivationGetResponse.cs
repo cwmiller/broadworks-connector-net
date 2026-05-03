@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:916""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:928""}]")]
     public class SystemAccessDeviceDeviceActivationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "activationCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:916")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:928")]
         [MinLength(16)]
         [MaxLength(16)]
         public string ActivationCode
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "expiryTime", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:916")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:928")]
         public string ExpiryTime
         {
             get => _expiryTime;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.DeviceActivationState _activationState;
 
         [XmlElement(ElementName = "activationState", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:916")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:928")]
         public BroadWorksConnector.Ocip.Models.DeviceActivationState ActivationState
         {
             get => _activationState;

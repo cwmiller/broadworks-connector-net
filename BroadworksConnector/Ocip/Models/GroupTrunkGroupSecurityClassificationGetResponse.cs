@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""435c279b3e6710f4ada60ed66a93d278:69""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""435c279b3e6710f4ada60ed66a93d278:73""}]")]
     public class GroupTrunkGroupSecurityClassificationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultSecurityClassification", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"435c279b3e6710f4ada60ed66a93d278:69")]
+        [Group(@"435c279b3e6710f4ada60ed66a93d278:73")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DefaultSecurityClassification

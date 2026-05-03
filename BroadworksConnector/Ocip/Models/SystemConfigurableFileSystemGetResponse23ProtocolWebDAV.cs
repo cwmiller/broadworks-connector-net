@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:9758""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:10529""}]")]
     public class SystemConfigurableFileSystemGetResponse23ProtocolWebDAV
     {
 
         protected bool _secure;
 
         [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:9758")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10529")]
         public bool Secure
         {
             get => _secure;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:9758")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10529")]
         [MinLength(1)]
         [MaxLength(40)]
         public string UserName
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _fileServerFQDN;
 
         [XmlElement(ElementName = "fileServerFQDN", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:9758")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10529")]
         [MinLength(1)]
         [MaxLength(80)]
         public string FileServerFQDN

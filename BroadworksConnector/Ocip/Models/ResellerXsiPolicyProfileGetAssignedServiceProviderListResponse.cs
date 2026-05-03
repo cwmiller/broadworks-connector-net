@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d45e381d6dbac771631649063122a42e:1040""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d45e381d6dbac771631649063122a42e:1055""}]")]
     public class ResellerXsiPolicyProfileGetAssignedServiceProviderListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _svcProviderTable;
 
         [XmlElement(ElementName = "svcProviderTable", IsNullable = false, Namespace = "")]
-        [Group(@"d45e381d6dbac771631649063122a42e:1040")]
+        [Group(@"d45e381d6dbac771631649063122a42e:1055")]
         public BroadWorksConnector.Ocip.Models.C.OCITable SvcProviderTable
         {
             get => _svcProviderTable;

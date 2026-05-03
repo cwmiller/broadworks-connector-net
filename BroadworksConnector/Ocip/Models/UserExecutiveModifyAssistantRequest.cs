@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3a54ac906cb7002cc1a30fbb0efadb0a:357""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3a54ac906cb7002cc1a30fbb0efadb0a:362""}]")]
     public class UserExecutiveModifyAssistantRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:357")]
+        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:362")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowOptInOut", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:357")]
+        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:362")]
         public bool? AllowOptInOut
         {
             get => _allowOptInOut;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "assistantUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:357")]
+        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:362")]
         public BroadWorksConnector.Ocip.Models.ReplacementUserIdList AssistantUserIdList
         {
             get => _assistantUserIdList;

@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Replaced by: GroupGroupPagingGetInstanceResponse19sp1
     /// <see cref="GroupGroupPagingGetInstanceRequest17sp3"/>
-    /// <see cref="GroupGroupPagingGetInstanceResponse19sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:10268""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:11150""}]")]
     public class GroupGroupPagingGetInstanceResponse17sp3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile17 _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:10268")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:11150")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile17 ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -41,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _confirmationToneTimeoutSeconds;
 
         [XmlElement(ElementName = "confirmationToneTimeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:10268")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:11150")]
         [MinInclusive(1)]
         [MaxInclusive(20)]
         public int ConfirmationToneTimeoutSeconds
@@ -60,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _deliverOriginatorCLIDInstead;
 
         [XmlElement(ElementName = "deliverOriginatorCLIDInstead", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:10268")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:11150")]
         public bool DeliverOriginatorCLIDInstead
         {
             get => _deliverOriginatorCLIDInstead;
@@ -78,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "originatorCLIDPrefix", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:10268")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:11150")]
         [MinLength(1)]
         [MaxLength(30)]
         public string OriginatorCLIDPrefix

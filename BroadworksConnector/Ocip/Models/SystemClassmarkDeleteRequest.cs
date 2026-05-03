@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bd23272215266344f26a1702c47ce590:65""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bd23272215266344f26a1702c47ce590:68""}]")]
     public class SystemClassmarkDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _classmark;
 
         [XmlElement(ElementName = "classmark", IsNullable = false, Namespace = "")]
-        [Group(@"bd23272215266344f26a1702c47ce590:65")]
+        [Group(@"bd23272215266344f26a1702c47ce590:68")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Classmark

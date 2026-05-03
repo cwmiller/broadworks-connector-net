@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""dd4a5e667a0f0e4bd6363152331d07ab:62""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""dd4a5e667a0f0e4bd6363152331d07ab:67""}]")]
     public class SystemLegacyAutomaticCallbackGetLineTypeListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _lineTypeTable;
 
         [XmlElement(ElementName = "lineTypeTable", IsNullable = false, Namespace = "")]
-        [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:62")]
+        [Group(@"dd4a5e667a0f0e4bd6363152331d07ab:67")]
         public BroadWorksConnector.Ocip.Models.C.OCITable LineTypeTable
         {
             get => _lineTypeTable;

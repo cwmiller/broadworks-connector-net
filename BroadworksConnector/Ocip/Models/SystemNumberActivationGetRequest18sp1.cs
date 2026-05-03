@@ -12,12 +12,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: SystemNumberActivationGetRequest21
     /// <see cref="SystemNumberActivationGetResponse18sp1"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemNumberActivationGetRequest21"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:10861""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:11662""}]")]
     public class SystemNumberActivationGetRequest18sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemNumberActivationGetResponse18sp1>
     {
 

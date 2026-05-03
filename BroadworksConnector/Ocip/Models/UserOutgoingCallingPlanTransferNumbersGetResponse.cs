@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a63afa661ee5c74f4700e562e88c66d0:1696""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a63afa661ee5c74f4700e562e88c66d0:1700""}]")]
     public class UserOutgoingCallingPlanTransferNumbersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _useCustomSettings;
 
         [XmlElement(ElementName = "useCustomSettings", IsNullable = false, Namespace = "")]
-        [Group(@"a63afa661ee5c74f4700e562e88c66d0:1696")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:1700")]
         public bool UseCustomSettings
         {
             get => _useCustomSettings;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbers _userNumbers;
 
         [XmlElement(ElementName = "userNumbers", IsNullable = false, Namespace = "")]
-        [Group(@"a63afa661ee5c74f4700e562e88c66d0:1696")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:1700")]
         public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbers UserNumbers
         {
             get => _userNumbers;

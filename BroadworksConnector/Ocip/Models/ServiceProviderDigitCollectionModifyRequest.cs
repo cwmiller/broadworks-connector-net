@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:3845""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:3895""}]")]
     public class ServiceProviderDigitCollectionModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:3845")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:3895")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "accessCode", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:3845")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:3895")]
         [MinLength(1)]
         [MaxLength(1)]
         public string AccessCode
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "publicDigitMap", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:3845")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:3895")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string PublicDigitMap
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "privateDigitMap", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:3845")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:3895")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string PrivateDigitMap

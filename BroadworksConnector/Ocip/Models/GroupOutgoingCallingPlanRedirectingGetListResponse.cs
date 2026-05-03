@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a63afa661ee5c74f4700e562e88c66d0:787""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a63afa661ee5c74f4700e562e88c66d0:791""}]")]
     public class GroupOutgoingCallingPlanRedirectingGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.OutgoingCallingPlanRedirectingPermissions _groupPermissions;
 
         [XmlElement(ElementName = "groupPermissions", IsNullable = false, Namespace = "")]
-        [Group(@"a63afa661ee5c74f4700e562e88c66d0:787")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:791")]
         public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanRedirectingPermissions GroupPermissions
         {
             get => _groupPermissions;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "departmentPermissions", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"a63afa661ee5c74f4700e562e88c66d0:787")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:791")]
         public List<BroadWorksConnector.Ocip.Models.OutgoingCallingPlanRedirectingDepartmentPermissions> DepartmentPermissions
         {
             get => _departmentPermissions;

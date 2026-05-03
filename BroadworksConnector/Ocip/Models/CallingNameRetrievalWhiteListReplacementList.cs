@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:1098""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:1326""}]")]
     public class CallingNameRetrievalWhiteListReplacementList
     {
 
         protected List<string> _number = new List<string>();
 
         [XmlElement(ElementName = "number", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1098")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1326")]
         [MinLength(1)]
         [MaxLength(23)]
         public List<string> Number

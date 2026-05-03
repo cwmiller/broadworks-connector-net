@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7341""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7314""}]")]
     public class CallCenterAgentUnavailableCodeStateModify
     {
 
         protected string _code;
 
         [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:7341")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7314")]
         [MinLength(1)]
         [MaxLength(10)]
         public string Code
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:7341")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7314")]
         public bool IsActive
         {
             get => _isActive;

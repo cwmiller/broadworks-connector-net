@@ -9,20 +9,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get Group Trunk Group Stir Shaken service settings.
     /// The response is either GroupTrunkGroupStirShakenGetResponse23 or ErrorResponse.
+    /// Replaced by GroupTrunkGroupStirShakenGetRequest23V2.
     /// <see cref="GroupTrunkGroupStirShakenGetResponse23"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="GroupTrunkGroupStirShakenGetRequest23V2"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:8262""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:17997""}]")]
     public class GroupTrunkGroupStirShakenGetRequest23 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupTrunkGroupStirShakenGetResponse23>
     {
 
         protected BroadWorksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
 
         [XmlElement(ElementName = "trunkGroupKey", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:8262")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:17997")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupKey TrunkGroupKey
         {
             get => _trunkGroupKey;

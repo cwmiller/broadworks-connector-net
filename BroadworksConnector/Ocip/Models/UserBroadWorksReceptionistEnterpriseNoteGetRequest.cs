@@ -13,19 +13,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Receptionist Note, then an ErrorResponse will be returned.
     /// <see cref="UserBroadWorksReceptionistEnterpriseNoteGetResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""44477d346d2631b033071e12af214ac8:235"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""44477d346d2631b033071e12af214ac8:237""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""44477d346d2631b033071e12af214ac8:239"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""44477d346d2631b033071e12af214ac8:241""}]}]")]
     public class UserBroadWorksReceptionistEnterpriseNoteGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserBroadWorksReceptionistEnterpriseNoteGetResponse>
     {
 
         protected string _receptionistUserId;
 
         [XmlElement(ElementName = "receptionistUserId", IsNullable = false, Namespace = "")]
-        [Group(@"44477d346d2631b033071e12af214ac8:235")]
+        [Group(@"44477d346d2631b033071e12af214ac8:239")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ReceptionistUserId
@@ -44,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _contactUserId;
 
         [XmlElement(ElementName = "contactUserId", IsNullable = false, Namespace = "")]
-        [Group(@"44477d346d2631b033071e12af214ac8:237")]
+        [Group(@"44477d346d2631b033071e12af214ac8:241")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ContactUserId
@@ -63,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.VirtualOnNetUserKey _vonUser;
 
         [XmlElement(ElementName = "vonUser", IsNullable = false, Namespace = "")]
-        [Group(@"44477d346d2631b033071e12af214ac8:237")]
+        [Group(@"44477d346d2631b033071e12af214ac8:241")]
         public BroadWorksConnector.Ocip.Models.VirtualOnNetUserKey VonUser
         {
             get => _vonUser;

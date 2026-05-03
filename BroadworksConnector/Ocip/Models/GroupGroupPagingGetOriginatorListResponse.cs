@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""8ede928f2a9c1318573ba9c7a105655c:353""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""8ede928f2a9c1318573ba9c7a105655c:357""}]")]
     public class GroupGroupPagingGetOriginatorListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _originatorTable;
 
         [XmlElement(ElementName = "originatorTable", IsNullable = false, Namespace = "")]
-        [Group(@"8ede928f2a9c1318573ba9c7a105655c:353")]
+        [Group(@"8ede928f2a9c1318573ba9c7a105655c:357")]
         public BroadWorksConnector.Ocip.Models.C.OCITable OriginatorTable
         {
             get => _originatorTable;

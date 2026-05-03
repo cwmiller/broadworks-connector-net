@@ -9,21 +9,21 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get a list of Network Classes of Service assigned to a reseller.
     /// The response is either a ResellerNetworkClassOfServiceGetAssignedListResponse
-    /// or an ErorResponse.
+    /// or an ErrorResponse.
     /// <see cref="ResellerNetworkClassOfServiceGetAssignedListResponse"/>
-    /// <see cref="ErorResponse"/>
+    /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d45e381d6dbac771631649063122a42e:711""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d45e381d6dbac771631649063122a42e:715""}]")]
     public class ResellerNetworkClassOfServiceGetAssignedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ResellerNetworkClassOfServiceGetAssignedListResponse>
     {
 
         protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        [Group(@"d45e381d6dbac771631649063122a42e:711")]
+        [Group(@"d45e381d6dbac771631649063122a42e:715")]
         [MinLength(1)]
         [MaxLength(36)]
         public string ResellerId

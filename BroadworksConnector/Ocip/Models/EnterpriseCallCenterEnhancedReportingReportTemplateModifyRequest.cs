@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:1476""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:1483""}]")]
     public class EnterpriseCallCenterEnhancedReportingReportTemplateModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:1476")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:1483")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:1476")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:1483")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:1476")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:1483")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NewName
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:1476")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:1483")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "xsltTemplate", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:1476")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:1483")]
         public BroadWorksConnector.Ocip.Models.LabeledFileResource XsltTemplate
         {
             get => _xsltTemplate;
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "scope", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:1476")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:1483")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportTemplateAccessOption? Scope
         {
             get => _scope;
@@ -138,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isEnabled", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:1476")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:1483")]
         public bool? IsEnabled
         {
             get => _isEnabled;
@@ -156,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isRealtimeReport", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:1476")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:1483")]
         public bool? IsRealtimeReport
         {
             get => _isRealtimeReport;
@@ -175,7 +175,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "filterNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:1476")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:1483")]
         [MinInclusive(1)]
         [MaxInclusive(999)]
         public int? FilterNumber
@@ -196,7 +196,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "filterValue", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:1476")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:1483")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportDataTemplateQueryFilterValueReplacementList FilterValue
         {
             get => _filterValue;

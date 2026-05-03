@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""435c279b3e6710f4ada60ed66a93d278:85""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""435c279b3e6710f4ada60ed66a93d278:89""}]")]
     public class GroupTrunkGroupSecurityClassificationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected BroadWorksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
 
         [XmlElement(ElementName = "trunkGroupKey", IsNullable = false, Namespace = "")]
-        [Group(@"435c279b3e6710f4ada60ed66a93d278:85")]
+        [Group(@"435c279b3e6710f4ada60ed66a93d278:89")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupKey TrunkGroupKey
         {
             get => _trunkGroupKey;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultSecurityClassification", IsNullable = true, Namespace = "")]
-        [Group(@"435c279b3e6710f4ada60ed66a93d278:85")]
+        [Group(@"435c279b3e6710f4ada60ed66a93d278:89")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DefaultSecurityClassification

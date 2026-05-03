@@ -8,21 +8,21 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get the list of events of a system schedule.
-    /// The response is either a SystemScheduleGetEventListResponse or an ErrorResponse.
-    /// <see cref="SystemScheduleGetEventListResponse"/>
+    /// The response is either a SystemScheduleGetResponse or an ErrorResponse.
+    /// <see cref="SystemScheduleGetResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:15922""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:16127""}]")]
     public class SystemScheduleGetEventListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemScheduleGetEventListResponse>
     {
 
         protected BroadWorksConnector.Ocip.Models.ScheduleKey _scheduleKey;
 
         [XmlElement(ElementName = "scheduleKey", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:15922")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:16127")]
         public BroadWorksConnector.Ocip.Models.ScheduleKey ScheduleKey
         {
             get => _scheduleKey;

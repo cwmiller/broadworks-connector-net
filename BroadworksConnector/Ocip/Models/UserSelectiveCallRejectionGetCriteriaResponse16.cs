@@ -10,12 +10,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to the UserSelectiveCallRejectionGetCriteriaRequest16.
     /// Replaced by: UserSelectiveCallRejectionGetCriteriaResponse16sp1
     /// <see cref="UserSelectiveCallRejectionGetCriteriaRequest16"/>
-    /// <see cref="UserSelectiveCallRejectionGetCriteriaResponse16sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:46828""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:51208""}]")]
     public class UserSelectiveCallRejectionGetCriteriaResponse16 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -23,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:46828")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:51208")]
         public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule
         {
             get => _timeSchedule;
@@ -40,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SelectiveCallRejectionCriteriaCallType _fromDnCriteria;
 
         [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:46828")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:51208")]
         public BroadWorksConnector.Ocip.Models.SelectiveCallRejectionCriteriaCallType FromDnCriteria
         {
             get => _fromDnCriteria;
@@ -57,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _blacklisted;
 
         [XmlElement(ElementName = "blacklisted", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:46828")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:51208")]
         public bool Blacklisted
         {
             get => _blacklisted;
@@ -75,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:46828")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:51208")]
         public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule
         {
             get => _holidaySchedule;

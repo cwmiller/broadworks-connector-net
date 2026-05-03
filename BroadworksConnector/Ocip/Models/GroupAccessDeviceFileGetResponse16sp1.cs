@@ -11,19 +11,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Replaced by: GroupAccessDeviceFileGetResponse20
     /// <see cref="GroupAccessDeviceFileGetRequest16sp1"/>
-    /// <see cref="GroupAccessDeviceFileGetResponse20"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:3041""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:3242""}]")]
     public class GroupAccessDeviceFileGetResponse16sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode _fileSource;
 
         [XmlElement(ElementName = "fileSource", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:3041")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:3242")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEnhancedConfigurationMode FileSource
         {
             get => _fileSource;
@@ -41,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "configurationFileName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:3041")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:3242")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ConfigurationFileName
@@ -60,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _accessUrl;
 
         [XmlElement(ElementName = "accessUrl", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:3041")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:3242")]
         [MinLength(1)]
         [MaxLength(256)]
         public string AccessUrl
@@ -80,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "repositoryUrl", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:3041")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:3242")]
         [MinLength(1)]
         [MaxLength(256)]
         public string RepositoryUrl
@@ -100,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "templateUrl", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:3041")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:3242")]
         [MinLength(1)]
         [MaxLength(256)]
         public string TemplateUrl

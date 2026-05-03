@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:2149""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:2079""}]")]
     public class UserVoiceMessagingUserModifyVoiceManagementRequest23 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2149")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2079")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2149")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2079")]
         public bool? IsActive
         {
             get => _isActive;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "processing", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2149")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2079")]
         public BroadWorksConnector.Ocip.Models.VoiceMessagingMessageProcessing? Processing
         {
             get => _processing;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "voiceMessageDeliveryEmailAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2149")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2079")]
         public BroadWorksConnector.Ocip.Models.EmailAddressList VoiceMessageDeliveryEmailAddress
         {
             get => _voiceMessageDeliveryEmailAddress;
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "usePhoneMessageWaitingIndicator", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2149")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2079")]
         public bool? UsePhoneMessageWaitingIndicator
         {
             get => _usePhoneMessageWaitingIndicator;
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sendVoiceMessageNotifyEmail", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2149")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2079")]
         public bool? SendVoiceMessageNotifyEmail
         {
             get => _sendVoiceMessageNotifyEmail;
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "voiceMessageNotifyEmailAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2149")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2079")]
         [MinLength(1)]
         [MaxLength(80)]
         public string VoiceMessageNotifyEmailAddress
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sendCarbonCopyVoiceMessage", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2149")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2079")]
         public bool? SendCarbonCopyVoiceMessage
         {
             get => _sendCarbonCopyVoiceMessage;
@@ -173,7 +173,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "voiceMessageCarbonCopyEmailAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2149")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2079")]
         [MinLength(1)]
         [MaxLength(80)]
         public string VoiceMessageCarbonCopyEmailAddress
@@ -193,7 +193,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "transferOnZeroToPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2149")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2079")]
         public bool? TransferOnZeroToPhoneNumber
         {
             get => _transferOnZeroToPhoneNumber;
@@ -212,7 +212,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "transferPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2149")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2079")]
         [MinLength(1)]
         [MaxLength(30)]
         public string TransferPhoneNumber
@@ -232,7 +232,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alwaysRedirectToVoiceMail", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2149")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2079")]
         public bool? AlwaysRedirectToVoiceMail
         {
             get => _alwaysRedirectToVoiceMail;
@@ -250,7 +250,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "busyRedirectToVoiceMail", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2149")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2079")]
         public bool? BusyRedirectToVoiceMail
         {
             get => _busyRedirectToVoiceMail;
@@ -268,7 +268,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "noAnswerRedirectToVoiceMail", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2149")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2079")]
         public bool? NoAnswerRedirectToVoiceMail
         {
             get => _noAnswerRedirectToVoiceMail;
@@ -286,7 +286,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "outOfPrimaryZoneRedirectToVoiceMail", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2149")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2079")]
         public bool? OutOfPrimaryZoneRedirectToVoiceMail
         {
             get => _outOfPrimaryZoneRedirectToVoiceMail;

@@ -14,12 +14,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced By : SystemPasswordRulesGetRequest16
     /// <see cref="SystemPasswordRulesGetResponse13mp2"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemPasswordRulesGetRequest16"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:28691""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:32333""}]")]
     public class SystemPasswordRulesGetRequest13mp2 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemPasswordRulesGetResponse13mp2>
     {
 

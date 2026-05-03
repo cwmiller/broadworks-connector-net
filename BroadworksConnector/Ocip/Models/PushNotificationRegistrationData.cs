@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:50227""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:54704""}]")]
     public class PushNotificationRegistrationData
     {
 
         protected string _registrationId;
 
         [XmlElement(ElementName = "registrationId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:50227")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:54704")]
         [MinLength(1)]
         [MaxLength(1024)]
         public string RegistrationId
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _applicationId;
 
         [XmlElement(ElementName = "applicationId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:50227")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:54704")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string ApplicationId
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _applicationVersion;
 
         [XmlElement(ElementName = "applicationVersion", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:50227")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:54704")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string ApplicationVersion
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _deviceOsType;
 
         [XmlElement(ElementName = "deviceOsType", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:50227")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:54704")]
         [MinLength(1)]
         [MaxLength(128)]
         public string DeviceOsType
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _deviceVersion;
 
         [XmlElement(ElementName = "deviceVersion", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:50227")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:54704")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string DeviceVersion
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _timestamp;
 
         [XmlElement(ElementName = "timestamp", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:50227")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:54704")]
         public string Timestamp
         {
             get => _timestamp;
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _pushNotificationClientVersion;
 
         [XmlElement(ElementName = "pushNotificationClientVersion", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:50227")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:54704")]
         [MinLength(1)]
         [MaxLength(10)]
         public string PushNotificationClientVersion
@@ -151,7 +151,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "pushNotificationTokenData", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:50227")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:54704")]
         public List<BroadWorksConnector.Ocip.Models.PushNotificationTokenData> PushNotificationTokenData
         {
             get => _pushNotificationTokenData;

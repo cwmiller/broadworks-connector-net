@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7406""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7379""}]")]
     public class CallCenterReportCurrentInterval
     {
 
         protected BroadWorksConnector.Ocip.Models.CallCenterReportIntervalTimeUnit _timeUnit;
 
         [XmlElement(ElementName = "timeUnit", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:7406")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7379")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportIntervalTimeUnit TimeUnit
         {
             get => _timeUnit;

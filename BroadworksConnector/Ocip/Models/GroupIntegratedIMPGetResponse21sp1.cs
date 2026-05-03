@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Replaced by GroupIntegratedIMPGetResponse22
     /// <see cref="GroupIntegratedIMPGetRequest21sp1"/>
-    /// <see cref="GroupIntegratedIMPGetResponse22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:11042""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:11924""}]")]
     public class GroupIntegratedIMPGetResponse21sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _useServiceProviderSetting;
 
         [XmlElement(ElementName = "useServiceProviderSetting", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:11042")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:11924")]
         public bool UseServiceProviderSetting
         {
             get => _useServiceProviderSetting;
@@ -42,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceDomain", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:11042")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:11924")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServiceDomain
@@ -62,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "effectiveServiceDomain", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:11042")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:11924")]
         [MinLength(1)]
         [MaxLength(80)]
         public string EffectiveServiceDomain
@@ -81,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _addServiceProviderInIMPUserId;
 
         [XmlElement(ElementName = "addServiceProviderInIMPUserId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:11042")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:11924")]
         public bool AddServiceProviderInIMPUserId
         {
             get => _addServiceProviderInIMPUserId;
@@ -98,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.IntegratedIMPUserIDType _defaultImpIdType;
 
         [XmlElement(ElementName = "defaultImpIdType", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:11042")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:11924")]
         public BroadWorksConnector.Ocip.Models.IntegratedIMPUserIDType DefaultImpIdType
         {
             get => _defaultImpIdType;

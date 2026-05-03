@@ -21,14 +21,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:35091""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:39046""}]")]
     public class SystemSIPDeviceTypeModifyRequest16sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceType
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isObsolete", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         public bool? IsObsolete
         {
             get => _isObsolete;
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "registrationCapable", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         public bool? RegistrationCapable
         {
             get => _registrationCapable;
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "RFC3264Hold", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         public bool? RFC3264Hold
         {
             get => _rFC3264Hold;
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isTrusted", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         public bool? IsTrusted
         {
             get => _isTrusted;
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "E164Capable", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         public bool? E164Capable
         {
             get => _e164Capable;
@@ -138,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "routeAdvance", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         public bool? RouteAdvance
         {
             get => _routeAdvance;
@@ -156,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forwardingOverride", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         public bool? ForwardingOverride
         {
             get => _forwardingOverride;
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "wirelessIntegration", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         public bool? WirelessIntegration
         {
             get => _wirelessIntegration;
@@ -193,7 +193,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "webBasedConfigURL", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         [MinLength(1)]
         [MaxLength(80)]
         public string WebBasedConfigURL
@@ -213,7 +213,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isVideoCapable", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         public bool? IsVideoCapable
         {
             get => _isVideoCapable;
@@ -231,7 +231,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "PBXIntegration", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         public bool? PBXIntegration
         {
             get => _pBXIntegration;
@@ -249,7 +249,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useBusinessTrunkingContact", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         public bool? UseBusinessTrunkingContact
         {
             get => _useBusinessTrunkingContact;
@@ -267,7 +267,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "staticRegistrationCapable", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         public bool? StaticRegistrationCapable
         {
             get => _staticRegistrationCapable;
@@ -285,7 +285,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "cpeDeviceOptions", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         public BroadWorksConnector.Ocip.Models.CPEDeviceModifyOptions16sp1 CpeDeviceOptions
         {
             get => _cpeDeviceOptions;
@@ -303,7 +303,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "earlyMediaSupport", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         public BroadWorksConnector.Ocip.Models.EarlyMediaSupportType? EarlyMediaSupport
         {
             get => _earlyMediaSupport;
@@ -321,7 +321,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "authenticateRefer", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         public bool? AuthenticateRefer
         {
             get => _authenticateRefer;
@@ -339,7 +339,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "autoConfigSoftClient", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         public bool? AutoConfigSoftClient
         {
             get => _autoConfigSoftClient;
@@ -357,7 +357,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "authenticationMode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         public BroadWorksConnector.Ocip.Models.AuthenticationMode? AuthenticationMode
         {
             get => _authenticationMode;
@@ -375,7 +375,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "requiresBroadWorksDigitCollection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         public bool? RequiresBroadWorksDigitCollection
         {
             get => _requiresBroadWorksDigitCollection;
@@ -393,7 +393,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "requiresBroadWorksCallWaitingTone", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         public bool? RequiresBroadWorksCallWaitingTone
         {
             get => _requiresBroadWorksCallWaitingTone;
@@ -411,7 +411,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "requiresMWISubscription", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         public bool? RequiresMWISubscription
         {
             get => _requiresMWISubscription;
@@ -429,7 +429,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useHistoryInfoHeaderOnAccessSide", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         public bool? UseHistoryInfoHeaderOnAccessSide
         {
             get => _useHistoryInfoHeaderOnAccessSide;
@@ -447,7 +447,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "adviceOfChargeCapable", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         public bool? AdviceOfChargeCapable
         {
             get => _adviceOfChargeCapable;
@@ -466,7 +466,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "resetEvent", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceResetEvent? ResetEvent
         {
             get => _resetEvent;
@@ -484,7 +484,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "supportCallCenterMIMEType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35091")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39046")]
         public bool? SupportCallCenterMIMEType
         {
             get => _supportCallCenterMIMEType;

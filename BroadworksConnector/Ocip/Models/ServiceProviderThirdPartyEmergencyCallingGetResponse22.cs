@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:7049""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:7124""}]")]
     public class ServiceProviderThirdPartyEmergencyCallingGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _allowActivation;
 
         [XmlElement(ElementName = "allowActivation", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:7049")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:7124")]
         public bool AllowActivation
         {
             get => _allowActivation;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "customerId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:7049")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:7124")]
         [MinLength(1)]
         [MaxLength(36)]
         public string CustomerId
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _hasGroupEnabled;
 
         [XmlElement(ElementName = "hasGroupEnabled", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:7049")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:7124")]
         public bool HasGroupEnabled
         {
             get => _hasGroupEnabled;
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "secretKey", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:7049")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:7124")]
         [MinLength(1)]
         [MaxLength(16)]
         public string SecretKey

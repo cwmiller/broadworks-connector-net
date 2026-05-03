@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""21e97b8199c6e7eff29a84874335b46e:86""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""21e97b8199c6e7eff29a84874335b46e:90""}]")]
     public class GroupThirdPartyVoiceMailSupportModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"21e97b8199c6e7eff29a84874335b46e:86")]
+        [Group(@"21e97b8199c6e7eff29a84874335b46e:90")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"21e97b8199c6e7eff29a84874335b46e:86")]
+        [Group(@"21e97b8199c6e7eff29a84874335b46e:90")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"21e97b8199c6e7eff29a84874335b46e:86")]
+        [Group(@"21e97b8199c6e7eff29a84874335b46e:90")]
         public bool? IsActive
         {
             get => _isActive;
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "groupServer", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"21e97b8199c6e7eff29a84874335b46e:86")]
+        [Group(@"21e97b8199c6e7eff29a84874335b46e:90")]
         [MinLength(1)]
         [MaxLength(161)]
         public string GroupServer

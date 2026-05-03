@@ -10,20 +10,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// Modify a Find-me/Follow-me alerting group criteria.
     /// For the callToNumbers in the callToNumberList, the extension and number elements are not used and the only types accepted for each number are Primary and Alternates. If other type is specified the command fails.
     /// The response is either a SuccessResponse or an ErrorResponse.
+    /// 
+    /// Replaced by: GroupFindMeFollowMeModifyAlertingGroupSelectiveCriteriaRequestRI
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""146ca46a7097f08aed7a73ab65f17df8:469""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:3181""}]")]
     public class GroupFindMeFollowMeModifyAlertingGroupSelectiveCriteriaRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"146ca46a7097f08aed7a73ab65f17df8:469")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:3181")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -42,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _alertingGroupName;
 
         [XmlElement(ElementName = "alertingGroupName", IsNullable = false, Namespace = "")]
-        [Group(@"146ca46a7097f08aed7a73ab65f17df8:469")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:3181")]
         [MinLength(1)]
         [MaxLength(40)]
         public string AlertingGroupName
@@ -61,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _criteriaName;
 
         [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
-        [Group(@"146ca46a7097f08aed7a73ab65f17df8:469")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:3181")]
         [MinLength(1)]
         [MaxLength(50)]
         public string CriteriaName
@@ -81,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newCriteriaName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"146ca46a7097f08aed7a73ab65f17df8:469")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:3181")]
         [MinLength(1)]
         [MaxLength(50)]
         public string NewCriteriaName
@@ -102,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "timeSchedule", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"146ca46a7097f08aed7a73ab65f17df8:469")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:3181")]
         public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule
         {
             get => _timeSchedule;
@@ -120,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"146ca46a7097f08aed7a73ab65f17df8:469")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:3181")]
         public BroadWorksConnector.Ocip.Models.CriteriaFromDnModify FromDnCriteria
         {
             get => _fromDnCriteria;
@@ -139,7 +141,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holidaySchedule", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"146ca46a7097f08aed7a73ab65f17df8:469")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:3181")]
         public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule
         {
             get => _holidaySchedule;
@@ -157,7 +159,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "blacklisted", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"146ca46a7097f08aed7a73ab65f17df8:469")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:3181")]
         public bool? Blacklisted
         {
             get => _blacklisted;
@@ -176,7 +178,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "callToNumberList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"146ca46a7097f08aed7a73ab65f17df8:469")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:3181")]
         public BroadWorksConnector.Ocip.Models.ReplacementCallToNumberList CallToNumberList
         {
             get => _callToNumberList;

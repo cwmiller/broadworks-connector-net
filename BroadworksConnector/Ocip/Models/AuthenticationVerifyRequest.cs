@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// <see cref="AuthenticationVerifyRequest"/>
     /// <see cref="AuthenticationVerifyResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="AuthenticationVerifyRequest14sp8"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:1027""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:1157""}]")]
     public class AuthenticationVerifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.AuthenticationVerifyResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:1027")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:1157")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -43,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _password;
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:1027")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:1157")]
         [MinLength(1)]
         [MaxLength(60)]
         public string Password

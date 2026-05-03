@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3116""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3377""}]")]
     public class EstimatedWaitMessageOptionsModify
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3116")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3377")]
         public bool? Enabled
         {
             get => _enabled;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "operatingMode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3116")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3377")]
         public BroadWorksConnector.Ocip.Models.EstimatedWaitMessageOperatingMode? OperatingMode
         {
             get => _operatingMode;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "playPositionHighVolume", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3116")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3377")]
         public bool? PlayPositionHighVolume
         {
             get => _playPositionHighVolume;
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "playTimeHighVolume", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3116")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3377")]
         public bool? PlayTimeHighVolume
         {
             get => _playTimeHighVolume;
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maximumPositions", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3116")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3377")]
         [MinInclusive(1)]
         [MaxInclusive(100)]
         public int? MaximumPositions
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maximumWaitingMinutes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3116")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3377")]
         [MinInclusive(1)]
         [MaxInclusive(100)]
         public int? MaximumWaitingMinutes
@@ -132,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultCallHandlingMinutes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3116")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3377")]
         [MinInclusive(1)]
         [MaxInclusive(100)]
         public int? DefaultCallHandlingMinutes
@@ -152,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "playUpdatedEWM", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3116")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3377")]
         public bool? PlayUpdatedEWM
         {
             get => _playUpdatedEWM;
@@ -171,7 +171,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "timeBetweenEWMUpdatesSeconds", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3116")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3377")]
         [MinInclusive(10)]
         [MaxInclusive(600)]
         public int? TimeBetweenEWMUpdatesSeconds

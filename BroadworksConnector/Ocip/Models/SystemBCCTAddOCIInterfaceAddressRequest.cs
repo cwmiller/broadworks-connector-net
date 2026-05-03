@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:20770""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:23310""}]")]
     public class SystemBCCTAddOCIInterfaceAddressRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _interfaceNetAddress;
 
         [XmlElement(ElementName = "interfaceNetAddress", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:20770")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:23310")]
         [MinLength(1)]
         [MaxLength(80)]
         public string InterfaceNetAddress

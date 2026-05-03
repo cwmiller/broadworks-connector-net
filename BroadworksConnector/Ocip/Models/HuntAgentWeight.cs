@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3422""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3696""}]")]
     public class HuntAgentWeight
     {
 
         protected string _agentUserId;
 
         [XmlElement(ElementName = "agentUserId", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3422")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3696")]
         [MinLength(1)]
         [MaxLength(161)]
         public string AgentUserId
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _weight;
 
         [XmlElement(ElementName = "weight", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3422")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3696")]
         [MinInclusive(0)]
         [MaxInclusive(100)]
         public int Weight

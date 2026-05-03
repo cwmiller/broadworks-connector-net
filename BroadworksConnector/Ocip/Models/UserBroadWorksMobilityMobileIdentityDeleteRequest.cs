@@ -14,20 +14,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// When a delete request is attempted on the primary mobile identity, the delete will fail unless it is the last mobile identity in the user's list.
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="ErrorResponse"/>
-    /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9ae9f7d53e566e21347e23e20e2a2a39:1742""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9ae9f7d53e566e21347e23e20e2a2a39:1751""}]")]
     public class UserBroadWorksMobilityMobileIdentityDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1742")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1751")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -46,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _mobileNumber;
 
         [XmlElement(ElementName = "mobileNumber", IsNullable = false, Namespace = "")]
-        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1742")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1751")]
         [MinLength(1)]
         [MaxLength(23)]
         public string MobileNumber

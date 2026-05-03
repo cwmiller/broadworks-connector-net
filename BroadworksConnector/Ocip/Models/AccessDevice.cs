@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:27""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:31""}]")]
     public class AccessDevice
     {
 
         protected BroadWorksConnector.Ocip.Models.AccessDeviceLevel _deviceLevel;
 
         [XmlElement(ElementName = "deviceLevel", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:27")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:31")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceLevel DeviceLevel
         {
             get => _deviceLevel;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:27")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:31")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName

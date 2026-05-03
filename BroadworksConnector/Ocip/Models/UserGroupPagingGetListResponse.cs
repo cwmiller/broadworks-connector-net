@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""8ede928f2a9c1318573ba9c7a105655c:595""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""8ede928f2a9c1318573ba9c7a105655c:600""}]")]
     public class UserGroupPagingGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _pagingGroupTable;
 
         [XmlElement(ElementName = "pagingGroupTable", IsNullable = false, Namespace = "")]
-        [Group(@"8ede928f2a9c1318573ba9c7a105655c:595")]
+        [Group(@"8ede928f2a9c1318573ba9c7a105655c:600")]
         public BroadWorksConnector.Ocip.Models.C.OCITable PagingGroupTable
         {
             get => _pagingGroupTable;

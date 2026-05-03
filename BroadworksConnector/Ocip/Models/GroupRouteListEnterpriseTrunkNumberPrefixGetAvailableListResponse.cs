@@ -9,20 +9,20 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Response to GroupRouteListEnterpriseTrunkNumberPrefixGetAvailableListRequest.
     /// Contains a list of number prefixess that are assigned to a group and still available for assignment to users within the group.
-    /// The column headings are "Number Prefix"","Is Active", “Extension Range Start” and “Extension Range End”.
+    /// The column headings are "Number Prefix"","Is Active", "Extension Range Start" and "Extension Range End".
     /// <see cref="GroupRouteListEnterpriseTrunkNumberPrefixGetAvailableListRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""500f9871ed90b8ab3fbd262883ab503b:252""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""500f9871ed90b8ab3fbd262883ab503b:255""}]")]
     public class GroupRouteListEnterpriseTrunkNumberPrefixGetAvailableListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _availableNumberPrefixTable;
 
         [XmlElement(ElementName = "availableNumberPrefixTable", IsNullable = false, Namespace = "")]
-        [Group(@"500f9871ed90b8ab3fbd262883ab503b:252")]
+        [Group(@"500f9871ed90b8ab3fbd262883ab503b:255")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AvailableNumberPrefixTable
         {
             get => _availableNumberPrefixTable;

@@ -9,20 +9,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get Group Stir Shaken service settings.
     /// The response is either GroupStirShakenGetResponse23 or ErrorResponse.
+    /// Replaced by GroupStirShakenGetRequest23V2.
     /// <see cref="GroupStirShakenGetResponse23"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="GroupStirShakenGetRequest23V2"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:8039""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:14753""}]")]
     public class GroupStirShakenGetRequest23 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupStirShakenGetResponse23>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:8039")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:14753")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:8039")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:14753")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:13911""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:14080""}]")]
     public class SystemOCIReportingGetACLListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _ociReportingACLTable;
 
         [XmlElement(ElementName = "ociReportingACLTable", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:13911")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14080")]
         public BroadWorksConnector.Ocip.Models.C.OCITable OciReportingACLTable
         {
             get => _ociReportingACLTable;

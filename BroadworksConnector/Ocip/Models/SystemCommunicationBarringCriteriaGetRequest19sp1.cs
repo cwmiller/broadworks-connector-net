@@ -8,21 +8,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get an existing Communication Barring Criteria.
-    /// The response is either a SystemCommunicationBarringCriteriaGetResponse19sp1 or an ErrorResponse.
+    /// The response is either a
+    /// SystemCommunicationBarringCriteriaGetResponse19sp1 or an ErrorResponse.
     /// <see cref="SystemCommunicationBarringCriteriaGetResponse19sp1"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:5872""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:5923""}]")]
     public class SystemCommunicationBarringCriteriaGetRequest19sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemCommunicationBarringCriteriaGetResponse19sp1>
     {
 
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:5872")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:5923")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name

@@ -8,12 +8,11 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to GroupFlexibleSeatingAccessDeviceGetListRequest
-    /// <see cref="GroupFlexibleSeatingAccessDeviceGetListRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1d4e390f8cd01ca6f92589024d74dac6:75""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1d4e390f8cd01ca6f92589024d74dac6:79""}]")]
     public class GroupFlexibleSeatingAccessDeviceGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "availableAccessDevice", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:75")]
+        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:79")]
         public List<BroadWorksConnector.Ocip.Models.GroupFlexibleSeatingAccessDeviceGetListResponseAvailableAccessDevice> AvailableAccessDevice
         {
             get => _availableAccessDevice;

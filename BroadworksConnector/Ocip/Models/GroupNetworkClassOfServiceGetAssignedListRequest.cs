@@ -9,21 +9,21 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get a list of Network Classes of Service assigned to a group.
     /// The response is either a GroupNetworkClassOfServiceGetAssignedListResponse
-    /// or an ErorResponse.
+    /// or an ErrorResponse.
     /// <see cref="GroupNetworkClassOfServiceGetAssignedListResponse"/>
-    /// <see cref="ErorResponse"/>
+    /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:6247""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:6326""}]")]
     public class GroupNetworkClassOfServiceGetAssignedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupNetworkClassOfServiceGetAssignedListResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:6247")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:6326")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:6247")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:6326")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId

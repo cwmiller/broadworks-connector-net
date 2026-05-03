@@ -8,19 +8,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to UserHotelingGuestGetRequest14sp4
-    /// <see cref="UserHotelingGuestGetRequest14sp4"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b3a47d1de480374e33d6efb9aa2bd2d0:98""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b3a47d1de480374e33d6efb9aa2bd2d0:101""}]")]
     public class UserHotelingGuestGetResponse14sp4 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:98")]
+        [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:101")]
         public bool IsActive
         {
             get => _isActive;
@@ -37,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableAssociationLimit;
 
         [XmlElement(ElementName = "enableAssociationLimit", IsNullable = false, Namespace = "")]
-        [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:98")]
+        [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:101")]
         public bool EnableAssociationLimit
         {
             get => _enableAssociationLimit;
@@ -54,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _associationLimitHours;
 
         [XmlElement(ElementName = "associationLimitHours", IsNullable = false, Namespace = "")]
-        [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:98")]
+        [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:101")]
         [MinInclusive(1)]
         [MaxInclusive(999)]
         public int AssociationLimitHours
@@ -74,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hostUserId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:98")]
+        [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:101")]
         [MinLength(1)]
         [MaxLength(161)]
         public string HostUserId
@@ -94,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hostLastName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:98")]
+        [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:101")]
         [MinLength(1)]
         [MaxLength(30)]
         public string HostLastName
@@ -114,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hostFirstName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:98")]
+        [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:101")]
         [MinLength(1)]
         [MaxLength(30)]
         public string HostFirstName
@@ -134,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hostAssociationDateTime", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:98")]
+        [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:101")]
         public string HostAssociationDateTime
         {
             get => _hostAssociationDateTime;
@@ -152,7 +151,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hostEnforcesAssociationLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:98")]
+        [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:101")]
         public bool? HostEnforcesAssociationLimit
         {
             get => _hostEnforcesAssociationLimit;
@@ -170,7 +169,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hostAssociationLimitHours", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:98")]
+        [Group(@"b3a47d1de480374e33d6efb9aa2bd2d0:101")]
         [MinInclusive(1)]
         [MaxInclusive(999)]
         public int? HostAssociationLimitHours

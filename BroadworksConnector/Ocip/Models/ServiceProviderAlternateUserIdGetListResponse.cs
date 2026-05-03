@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:1730""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:1775""}]")]
     public class ServiceProviderAlternateUserIdGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _alternateUserIdTable;
 
         [XmlElement(ElementName = "alternateUserIdTable", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:1730")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:1775")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AlternateUserIdTable
         {
             get => _alternateUserIdTable;

@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:7619""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:7671""}]")]
     public class SystemDeviceFamilyGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _deviceTypeTable;
 
         [XmlElement(ElementName = "deviceTypeTable", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:7619")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7671")]
         public BroadWorksConnector.Ocip.Models.C.OCITable DeviceTypeTable
         {
             get => _deviceTypeTable;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _tagSetTable;
 
         [XmlElement(ElementName = "tagSetTable", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:7619")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7671")]
         public BroadWorksConnector.Ocip.Models.C.OCITable TagSetTable
         {
             get => _tagSetTable;

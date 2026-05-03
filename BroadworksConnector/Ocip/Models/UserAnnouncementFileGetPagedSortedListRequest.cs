@@ -15,21 +15,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// If no sortOrder is provided, the response is sorted by Name ascending by default.
     /// Multiple search criteria are logically ANDed together unless the searchCriteriaModeOr option is included.
     /// Then the search criteria are logically ORed together.
-    /// The response is either a UserAnnouncementFileGetPagedSortedListResponse or an ErrorResponse.
+    /// The response is either a
+    /// UserAnnouncementFileGetPagedSortedListResponse or an
+    /// ErrorResponse.
     /// <see cref="UserAnnouncementFileGetPagedSortedListResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:651"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:654"",""optional"":true}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:661"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:664"",""optional"":true}]}]")]
     public class UserAnnouncementFileGetPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserAnnouncementFileGetPagedSortedListResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:651")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:661")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -49,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:651")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:661")]
         public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl
         {
             get => _responsePagingControl;
@@ -66,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SortByAnnouncementFileName _sortByAnnouncementFileName;
 
         [XmlElement(ElementName = "sortByAnnouncementFileName", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:654")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:664")]
         public BroadWorksConnector.Ocip.Models.SortByAnnouncementFileName SortByAnnouncementFileName
         {
             get => _sortByAnnouncementFileName;
@@ -83,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SortByAnnouncementFileSize _sortByAnnouncementFileSize;
 
         [XmlElement(ElementName = "sortByAnnouncementFileSize", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:654")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:664")]
         public BroadWorksConnector.Ocip.Models.SortByAnnouncementFileSize SortByAnnouncementFileSize
         {
             get => _sortByAnnouncementFileSize;
@@ -101,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaAnnouncementFileName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:651")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:661")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaAnnouncementFileName> SearchCriteriaAnnouncementFileName
         {
             get => _searchCriteriaAnnouncementFileName;
@@ -119,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaExactAnnouncementFileType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:651")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:661")]
         public BroadWorksConnector.Ocip.Models.SearchCriteriaExactAnnouncementFileType SearchCriteriaExactAnnouncementFileType
         {
             get => _searchCriteriaExactAnnouncementFileType;
@@ -137,7 +139,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaExactMediaFileType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:651")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:661")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactMediaFileType> SearchCriteriaExactMediaFileType
         {
             get => _searchCriteriaExactMediaFileType;
@@ -155,7 +157,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:651")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:661")]
         public bool? SearchCriteriaModeOr
         {
             get => _searchCriteriaModeOr;

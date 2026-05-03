@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:19894""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:20242""}]")]
     public class SystemXsiPolicyProfileModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected BroadWorksConnector.Ocip.Models.XsiPolicyProfileKey _xsiPolicyProfile;
 
         [XmlElement(ElementName = "xsiPolicyProfile", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:19894")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:20242")]
         public BroadWorksConnector.Ocip.Models.XsiPolicyProfileKey XsiPolicyProfile
         {
             get => _xsiPolicyProfile;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newXsiPolicyProfileName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:19894")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:20242")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NewXsiPolicyProfileName
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:19894")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:20242")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxTargetSubscription", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:19894")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:20242")]
         [MinInclusive(1)]
         [MaxInclusive(2147483647)]
         public int? MaxTargetSubscription

@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b2249333b9e085ee149c29960c00214e:114""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b2249333b9e085ee149c29960c00214e:117""}]")]
     public class UserFaxMessagingGetResponse17sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"b2249333b9e085ee149c29960c00214e:114")]
+        [Group(@"b2249333b9e085ee149c29960c00214e:117")]
         public bool IsActive
         {
             get => _isActive;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b2249333b9e085ee149c29960c00214e:114")]
+        [Group(@"b2249333b9e085ee149c29960c00214e:117")]
         [MinLength(1)]
         [MaxLength(23)]
         public string PhoneNumber
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "extension", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b2249333b9e085ee149c29960c00214e:114")]
+        [Group(@"b2249333b9e085ee149c29960c00214e:117")]
         [MinLength(2)]
         [MaxLength(20)]
         public string Extension
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alias", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b2249333b9e085ee149c29960c00214e:114")]
+        [Group(@"b2249333b9e085ee149c29960c00214e:117")]
         [MinLength(1)]
         [MaxLength(161)]
         public List<string> Alias

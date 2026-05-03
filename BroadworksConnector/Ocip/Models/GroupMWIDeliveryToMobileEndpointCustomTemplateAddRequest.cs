@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1ea80c1e18c25d0eed23dbc7bd18f1dc:55""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:12915""}]")]
     public class GroupMWIDeliveryToMobileEndpointCustomTemplateAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:55")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12915")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:55")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12915")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _language;
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
-        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:55")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12915")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Language
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateType _type;
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:55")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12915")]
         public BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateType Type
         {
             get => _type;
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isEnabled;
 
         [XmlElement(ElementName = "isEnabled", IsNullable = false, Namespace = "")]
-        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:55")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12915")]
         public bool IsEnabled
         {
             get => _isEnabled;
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateBody _templateBody;
 
         [XmlElement(ElementName = "templateBody", IsNullable = false, Namespace = "")]
-        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:55")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12915")]
         public BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateBody TemplateBody
         {
             get => _templateBody;

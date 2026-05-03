@@ -15,20 +15,20 @@ namespace BroadWorksConnector.Ocip.Models
     /// "Extension", "Department" and "Email Address" columns contains the corresponding attributes of the user possessing the number range.
     /// The "Enterprise Trunk" column contains the enterprise trunk the user possessing the number range belongs to.
     /// The "Is Active" column indicates if the number range has been activated.
-    /// The “Extension Length” column indicates the length of the extension for the enterpris trunk number range.
+    /// The "Extension Length" column indicates the length of the extension for the enterpris trunk number range.
     /// <see cref="GroupRouteListEnterpriseTrunkNumberRangeGetSummaryListRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""500f9871ed90b8ab3fbd262883ab503b:404""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""500f9871ed90b8ab3fbd262883ab503b:407""}]")]
     public class GroupRouteListEnterpriseTrunkNumberRangeGetSummaryListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _numberRangeSummaryTable;
 
         [XmlElement(ElementName = "numberRangeSummaryTable", IsNullable = false, Namespace = "")]
-        [Group(@"500f9871ed90b8ab3fbd262883ab503b:404")]
+        [Group(@"500f9871ed90b8ab3fbd262883ab503b:407")]
         public BroadWorksConnector.Ocip.Models.C.OCITable NumberRangeSummaryTable
         {
             get => _numberRangeSummaryTable;

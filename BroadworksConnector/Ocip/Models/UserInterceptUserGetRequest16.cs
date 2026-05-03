@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced By: UserInterceptUserGetRequest16sp1
     /// <see cref="UserInterceptUserGetResponse16"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="UserInterceptUserGetRequest16sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:45551""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:49720""}]")]
     public class UserInterceptUserGetRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserInterceptUserGetResponse16>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:45551")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:49720")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

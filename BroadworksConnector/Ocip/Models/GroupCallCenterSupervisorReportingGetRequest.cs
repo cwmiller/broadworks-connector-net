@@ -10,24 +10,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// Get a list of supervisors assigned to a call center.
     /// Only users in the same group or enterprise as this call center
     /// can successfully execute this request.
-    /// The response is either a GroupCallCenterSupervisorReportingGetResponse or an ErrorResponse.
+    /// The response is either a
+    /// GroupCallCenterSupervisorReportingGetResponse or an
+    /// ErrorResponse.
     /// 
     /// Replaced By: GroupCallCenterGetSupervisorListRequest16
     /// <see cref="GroupCallCenterSupervisorReportingGetResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="GroupCallCenterGetSupervisorListRequest16"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:7407""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:8140""}]")]
     public class GroupCallCenterSupervisorReportingGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupCallCenterSupervisorReportingGetResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:7407")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:8140")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId

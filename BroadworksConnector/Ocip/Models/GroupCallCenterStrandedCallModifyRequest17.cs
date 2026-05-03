@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:7308""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:8037""}]")]
     public class GroupCallCenterStrandedCallModifyRequest17 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:7308")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:8037")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:7308")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:8037")]
         public BroadWorksConnector.Ocip.Models.CallCenterStrandedCallProcessingAction? Action
         {
             get => _action;
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "transferPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:7308")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:8037")]
         [MinLength(1)]
         [MaxLength(161)]
         public string TransferPhoneNumber
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:7308")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:8037")]
         public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? AudioMessageSelection
         {
             get => _audioMessageSelection;
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioUrlList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:7308")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:8037")]
         public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementURLListModify AudioUrlList
         {
             get => _audioUrlList;
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFileList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:7308")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:8037")]
         public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementFileListModify AudioFileList
         {
             get => _audioFileList;
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:7308")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:8037")]
         public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? VideoMessageSelection
         {
             get => _videoMessageSelection;
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoUrlList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:7308")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:8037")]
         public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementURLListModify VideoUrlList
         {
             get => _videoUrlList;
@@ -172,7 +172,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoFileList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:7308")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:8037")]
         public BroadWorksConnector.Ocip.Models.CallCenterAnnouncementFileListModify VideoFileList
         {
             get => _videoFileList;

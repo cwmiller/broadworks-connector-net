@@ -14,19 +14,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Replaced by: SystemTrunkGroupGetResponse24
     /// <see cref="SystemTrunkGroupGetRequest23"/>
-    /// <see cref="SystemTrunkGroupGetResponse24"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:36685""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:40946""}]")]
     public class SystemTrunkGroupGetResponse23 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enforceCLIDServiceAssignmentForPilotUser;
 
         [XmlElement(ElementName = "enforceCLIDServiceAssignmentForPilotUser", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36685")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40946")]
         public bool EnforceCLIDServiceAssignmentForPilotUser
         {
             get => _enforceCLIDServiceAssignmentForPilotUser;
@@ -43,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _terminateUnreachableTriggerDetectionOnReceiptOf18x;
 
         [XmlElement(ElementName = "terminateUnreachableTriggerDetectionOnReceiptOf18x", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36685")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40946")]
         public bool TerminateUnreachableTriggerDetectionOnReceiptOf18x
         {
             get => _terminateUnreachableTriggerDetectionOnReceiptOf18x;
@@ -60,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.TrunkGroupPilotUserCallingLineAssertedIdentityUsagePolicy _pilotUserCallingLineAssertedIdentityPolicy;
 
         [XmlElement(ElementName = "pilotUserCallingLineAssertedIdentityPolicy", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36685")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40946")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupPilotUserCallingLineAssertedIdentityUsagePolicy PilotUserCallingLineAssertedIdentityPolicy
         {
             get => _pilotUserCallingLineAssertedIdentityPolicy;
@@ -77,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enforceOutOfDialogPBXRedirectionPolicies;
 
         [XmlElement(ElementName = "enforceOutOfDialogPBXRedirectionPolicies", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36685")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40946")]
         public bool EnforceOutOfDialogPBXRedirectionPolicies
         {
             get => _enforceOutOfDialogPBXRedirectionPolicies;
@@ -94,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.TrunkGroupUnscreenedRedirectionHandling _unscreenedRedirectionHandling;
 
         [XmlElement(ElementName = "unscreenedRedirectionHandling", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36685")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40946")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupUnscreenedRedirectionHandling UnscreenedRedirectionHandling
         {
             get => _unscreenedRedirectionHandling;
@@ -111,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableHoldoverOfHighwaterCallCounts;
 
         [XmlElement(ElementName = "enableHoldoverOfHighwaterCallCounts", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36685")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40946")]
         public bool EnableHoldoverOfHighwaterCallCounts
         {
             get => _enableHoldoverOfHighwaterCallCounts;
@@ -128,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.TrunkGroupHighwaterCallCountHoldoverPeriodMinutes _holdoverPeriod;
 
         [XmlElement(ElementName = "holdoverPeriod", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36685")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40946")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupHighwaterCallCountHoldoverPeriodMinutes HoldoverPeriod
         {
             get => _holdoverPeriod;
@@ -145,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.TrunkGroupTimeZoneOffsetMinutes _timeZoneOffsetMinutes;
 
         [XmlElement(ElementName = "timeZoneOffsetMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36685")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40946")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupTimeZoneOffsetMinutes TimeZoneOffsetMinutes
         {
             get => _timeZoneOffsetMinutes;
@@ -162,7 +161,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.TrunkGroupCLIDSourceForScreenedCallsPolicy _clidSourceForScreenedCallsPolicy;
 
         [XmlElement(ElementName = "clidSourceForScreenedCallsPolicy", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36685")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40946")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupCLIDSourceForScreenedCallsPolicy ClidSourceForScreenedCallsPolicy
         {
             get => _clidSourceForScreenedCallsPolicy;
@@ -179,7 +178,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.TrunkGroupUserLookupPolicy _userLookupPolicy;
 
         [XmlElement(ElementName = "userLookupPolicy", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36685")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40946")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupUserLookupPolicy UserLookupPolicy
         {
             get => _userLookupPolicy;
@@ -196,7 +195,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.TrunkGroupOutOfDialogPBXRedirectionCLIDMapping _outOfDialogPBXRedirectionCLIDMapping;
 
         [XmlElement(ElementName = "outOfDialogPBXRedirectionCLIDMapping", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36685")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40946")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupOutOfDialogPBXRedirectionCLIDMapping OutOfDialogPBXRedirectionCLIDMapping
         {
             get => _outOfDialogPBXRedirectionCLIDMapping;
@@ -213,7 +212,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enforceOutOfDialogPBXRedirectionTrunkGroupCapacity;
 
         [XmlElement(ElementName = "enforceOutOfDialogPBXRedirectionTrunkGroupCapacity", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36685")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40946")]
         public bool EnforceOutOfDialogPBXRedirectionTrunkGroupCapacity
         {
             get => _enforceOutOfDialogPBXRedirectionTrunkGroupCapacity;
@@ -230,7 +229,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.TrunkGroupImplicitRegistrationSetSupportPolicy _implicitRegistrationSetSupportPolicy;
 
         [XmlElement(ElementName = "implicitRegistrationSetSupportPolicy", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36685")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40946")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupImplicitRegistrationSetSupportPolicy ImplicitRegistrationSetSupportPolicy
         {
             get => _implicitRegistrationSetSupportPolicy;
@@ -247,7 +246,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.TrunkGroupSIPIdentityForPilotAndProxyTrunkModesPolicy _sipIdentityForPilotAndProxyTrunkModesPolicy;
 
         [XmlElement(ElementName = "sipIdentityForPilotAndProxyTrunkModesPolicy", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36685")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40946")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupSIPIdentityForPilotAndProxyTrunkModesPolicy SipIdentityForPilotAndProxyTrunkModesPolicy
         {
             get => _sipIdentityForPilotAndProxyTrunkModesPolicy;
@@ -264,7 +263,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.TrunkGroupSupportConnectedIdentityPolicy _supportConnectedIdentityPolicy;
 
         [XmlElement(ElementName = "supportConnectedIdentityPolicy", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36685")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40946")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupSupportConnectedIdentityPolicy SupportConnectedIdentityPolicy
         {
             get => _supportConnectedIdentityPolicy;
@@ -281,7 +280,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useUnmappedSessionsForTrunkUsers;
 
         [XmlElement(ElementName = "useUnmappedSessionsForTrunkUsers", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36685")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40946")]
         public bool UseUnmappedSessionsForTrunkUsers
         {
             get => _useUnmappedSessionsForTrunkUsers;
@@ -298,7 +297,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowPAILookupForOutOfDialogPBXRedirection;
 
         [XmlElement(ElementName = "allowPAILookupForOutOfDialogPBXRedirection", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36685")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40946")]
         public bool AllowPAILookupForOutOfDialogPBXRedirection
         {
             get => _allowPAILookupForOutOfDialogPBXRedirection;
@@ -315,7 +314,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.TrunkGroupOutOfDialogPBXRedirectionOriginatorLookupPolicy _outOfDialogPBXRedirectionOriginatorLookupPolicy;
 
         [XmlElement(ElementName = "outOfDialogPBXRedirectionOriginatorLookupPolicy", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36685")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40946")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupOutOfDialogPBXRedirectionOriginatorLookupPolicy OutOfDialogPBXRedirectionOriginatorLookupPolicy
         {
             get => _outOfDialogPBXRedirectionOriginatorLookupPolicy;
@@ -332,7 +331,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowTrunkIdentityForAllOriginations;
 
         [XmlElement(ElementName = "allowTrunkIdentityForAllOriginations", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36685")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40946")]
         public bool AllowTrunkIdentityForAllOriginations
         {
             get => _allowTrunkIdentityForAllOriginations;

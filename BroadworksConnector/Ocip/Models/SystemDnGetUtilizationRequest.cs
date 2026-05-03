@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced By: SystemDnGetUtilizationRequest14sp3
     /// <see cref="SystemDnGetUtilizationResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemDnGetUtilizationRequest14sp3"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:26771""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:30385""}]")]
     public class SystemDnGetUtilizationRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemDnGetUtilizationResponse>
     {
 
         protected string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:26771")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:30385")]
         [MinLength(1)]
         [MaxLength(23)]
         public string PhoneNumber

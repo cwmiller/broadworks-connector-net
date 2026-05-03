@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:25920""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:29491""}]")]
     public class SystemCPEConfigParametersGetResponse14sp6FileRebuildHourly
     {
 
         protected int _startMinute;
 
         [XmlElement(ElementName = "startMinute", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:25920")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29491")]
         [MinInclusive(0)]
         [MaxInclusive(59)]
         public int StartMinute

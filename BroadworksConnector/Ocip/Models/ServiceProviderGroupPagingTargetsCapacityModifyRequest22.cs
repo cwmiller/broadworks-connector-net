@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""8ede928f2a9c1318573ba9c7a105655c:561""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""8ede928f2a9c1318573ba9c7a105655c:566""}]")]
     public class ServiceProviderGroupPagingTargetsCapacityModifyRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"8ede928f2a9c1318573ba9c7a105655c:561")]
+        [Group(@"8ede928f2a9c1318573ba9c7a105655c:566")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maximumTargetUsers", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"8ede928f2a9c1318573ba9c7a105655c:561")]
+        [Group(@"8ede928f2a9c1318573ba9c7a105655c:566")]
         [MinInclusive(1)]
         [MaxInclusive(294)]
         public int? MaximumTargetUsers

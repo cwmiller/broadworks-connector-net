@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""21e97b8199c6e7eff29a84874335b46e:282""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""21e97b8199c6e7eff29a84874335b46e:286""}]")]
     public class UserThirdPartyVoiceMailSupportModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"21e97b8199c6e7eff29a84874335b46e:282")]
+        [Group(@"21e97b8199c6e7eff29a84874335b46e:286")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"21e97b8199c6e7eff29a84874335b46e:282")]
+        [Group(@"21e97b8199c6e7eff29a84874335b46e:286")]
         public bool? IsActive
         {
             get => _isActive;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "busyRedirectToVoiceMail", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"21e97b8199c6e7eff29a84874335b46e:282")]
+        [Group(@"21e97b8199c6e7eff29a84874335b46e:286")]
         public bool? BusyRedirectToVoiceMail
         {
             get => _busyRedirectToVoiceMail;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "noAnswerRedirectToVoiceMail", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"21e97b8199c6e7eff29a84874335b46e:282")]
+        [Group(@"21e97b8199c6e7eff29a84874335b46e:286")]
         public bool? NoAnswerRedirectToVoiceMail
         {
             get => _noAnswerRedirectToVoiceMail;
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serverSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"21e97b8199c6e7eff29a84874335b46e:282")]
+        [Group(@"21e97b8199c6e7eff29a84874335b46e:286")]
         public BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportServerSelection? ServerSelection
         {
             get => _serverSelection;
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "userServer", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"21e97b8199c6e7eff29a84874335b46e:282")]
+        [Group(@"21e97b8199c6e7eff29a84874335b46e:286")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserServer
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mailboxIdType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"21e97b8199c6e7eff29a84874335b46e:282")]
+        [Group(@"21e97b8199c6e7eff29a84874335b46e:286")]
         public BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportMailboxIdType? MailboxIdType
         {
             get => _mailboxIdType;
@@ -154,7 +154,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "mailboxURL", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"21e97b8199c6e7eff29a84874335b46e:282")]
+        [Group(@"21e97b8199c6e7eff29a84874335b46e:286")]
         [MinLength(1)]
         [MaxLength(161)]
         public string MailboxURL
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "noAnswerNumberOfRings", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"21e97b8199c6e7eff29a84874335b46e:282")]
+        [Group(@"21e97b8199c6e7eff29a84874335b46e:286")]
         public BroadWorksConnector.Ocip.Models.ThirdPartyVoiceMailSupportNumberOfRings? NoAnswerNumberOfRings
         {
             get => _noAnswerNumberOfRings;
@@ -192,7 +192,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alwaysRedirectToVoiceMail", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"21e97b8199c6e7eff29a84874335b46e:282")]
+        [Group(@"21e97b8199c6e7eff29a84874335b46e:286")]
         public bool? AlwaysRedirectToVoiceMail
         {
             get => _alwaysRedirectToVoiceMail;
@@ -210,7 +210,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "outOfPrimaryZoneRedirectToVoiceMail", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"21e97b8199c6e7eff29a84874335b46e:282")]
+        [Group(@"21e97b8199c6e7eff29a84874335b46e:286")]
         public bool? OutOfPrimaryZoneRedirectToVoiceMail
         {
             get => _outOfPrimaryZoneRedirectToVoiceMail;

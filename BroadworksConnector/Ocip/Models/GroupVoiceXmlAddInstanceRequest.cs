@@ -10,6 +10,10 @@ namespace BroadWorksConnector.Ocip.Models
     /// Add a VoiceXML instance to a group.
     /// The domain is required in the serviceUserId.  For a valid voiceXml instance to work properly,
     /// a device with Static Registration is expected with a valid contact.
+    /// If not set, The webexMeetingCallback element will be set to "false".
+    /// The following elements are only used in AS data mode and ignored in XS data mode:
+    /// webexMeetingCallback
+    /// 
     /// The response is either SuccessResponse or ErrorResponse.
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
@@ -17,14 +21,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3e2fc6b9722da3741a8ba4a2c4a2d05:48""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f3e2fc6b9722da3741a8ba4a2c4a2d05:55""}]")]
     public class GroupVoiceXmlAddInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f3e2fc6b9722da3741a8ba4a2c4a2d05:48")]
+        [Group(@"f3e2fc6b9722da3741a8ba4a2c4a2d05:55")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -43,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"f3e2fc6b9722da3741a8ba4a2c4a2d05:48")]
+        [Group(@"f3e2fc6b9722da3741a8ba4a2c4a2d05:55")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -62,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"f3e2fc6b9722da3741a8ba4a2c4a2d05:48")]
+        [Group(@"f3e2fc6b9722da3741a8ba4a2c4a2d05:55")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -81,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfile _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        [Group(@"f3e2fc6b9722da3741a8ba4a2c4a2d05:48")]
+        [Group(@"f3e2fc6b9722da3741a8ba4a2c4a2d05:55")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceAddProfile ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -99,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3e2fc6b9722da3741a8ba4a2c4a2d05:48")]
+        [Group(@"f3e2fc6b9722da3741a8ba4a2c4a2d05:55")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService
@@ -119,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f3e2fc6b9722da3741a8ba4a2c4a2d05:48")]
+        [Group(@"f3e2fc6b9722da3741a8ba4a2c4a2d05:55")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointAdd AccessDeviceEndpoint
         {
             get => _accessDeviceEndpoint;
@@ -132,6 +136,24 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool AccessDeviceEndpointSpecified { get; set; }
+
+        protected bool? _webexMeetingCallback;
+
+        [XmlElement(ElementName = "webexMeetingCallback", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"f3e2fc6b9722da3741a8ba4a2c4a2d05:55")]
+        public bool? WebexMeetingCallback
+        {
+            get => _webexMeetingCallback;
+            set
+            {
+                WebexMeetingCallbackSpecified = (value != null);
+                _webexMeetingCallback = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool WebexMeetingCallbackSpecified { get; set; }
 
     }
 }

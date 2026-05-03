@@ -7,22 +7,22 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// The response is either a SystemZoneCallingZonePhysicalLocationGetResponse or an ErrorResponse.
     /// Returns a zone calling physical location for a given zone.
+    /// Response is SystemZoneCallingZonePhysicalLocationGetResponse or an ErrorResponse.
     /// <see cref="SystemZoneCallingZonePhysicalLocationGetResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:19933""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:20281""}]")]
     public class SystemZoneCallingZonePhysicalLocationGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemZoneCallingZonePhysicalLocationGetResponse>
     {
 
         protected string _zoneName;
 
         [XmlElement(ElementName = "zoneName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:19933")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:20281")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ZoneName

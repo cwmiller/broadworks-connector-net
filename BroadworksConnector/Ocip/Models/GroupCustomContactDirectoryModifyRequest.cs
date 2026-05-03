@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replace by: GroupCustomContactDirectoryModifyRequest17
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="GroupCustomContactDirectoryModifyRequest17"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:9090""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:9870""}]")]
     public class GroupCustomContactDirectoryModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9090")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:9870")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -43,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9090")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:9870")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -62,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9090")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:9870")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name
@@ -82,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9090")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:9870")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NewName
@@ -103,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "userIdList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9090")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:9870")]
         public BroadWorksConnector.Ocip.Models.ReplacementUserIdList UserIdList
         {
             get => _userIdList;

@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""435c279b3e6710f4ada60ed66a93d278:329""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""435c279b3e6710f4ada60ed66a93d278:333""}]")]
     public class UserSecurityClassificationGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "securityClassification", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"435c279b3e6710f4ada60ed66a93d278:329")]
+        [Group(@"435c279b3e6710f4ada60ed66a93d278:333")]
         [MinLength(1)]
         [MaxLength(40)]
         public string SecurityClassification
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "customizedSecurityClassification", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"435c279b3e6710f4ada60ed66a93d278:329")]
+        [Group(@"435c279b3e6710f4ada60ed66a93d278:333")]
         [MinLength(1)]
         [MaxLength(40)]
         public string CustomizedSecurityClassification

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9975efc7f5883a0595f811ee72ba4df5:85""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9975efc7f5883a0595f811ee72ba4df5:88""}]")]
     public class GroupAdviceOfChargeModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"9975efc7f5883a0595f811ee72ba4df5:85")]
+        [Group(@"9975efc7f5883a0595f811ee72ba4df5:88")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"9975efc7f5883a0595f811ee72ba4df5:85")]
+        [Group(@"9975efc7f5883a0595f811ee72ba4df5:88")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useGroupLevelAoCSettings", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9975efc7f5883a0595f811ee72ba4df5:85")]
+        [Group(@"9975efc7f5883a0595f811ee72ba4df5:88")]
         public bool? UseGroupLevelAoCSettings
         {
             get => _useGroupLevelAoCSettings;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "delayBetweenNotificationSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9975efc7f5883a0595f811ee72ba4df5:85")]
+        [Group(@"9975efc7f5883a0595f811ee72ba4df5:88")]
         [MinInclusive(5)]
         [MaxInclusive(1800)]
         public int? DelayBetweenNotificationSeconds

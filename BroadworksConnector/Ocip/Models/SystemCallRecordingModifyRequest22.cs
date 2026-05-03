@@ -18,12 +18,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// useContinueCallAfterRecordingFailureForOnDemandUserInitiatedStartMode
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="maxResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0731150ec7515df8cd710f04d8f62f66:416""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0731150ec7515df8cd710f04d8f62f66:313""}]")]
     public class SystemCallRecordingModifyRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -31,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "continueCallAfterRecordingFailure", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0731150ec7515df8cd710f04d8f62f66:416")]
+        [Group(@"0731150ec7515df8cd710f04d8f62f66:313")]
         public bool? ContinueCallAfterRecordingFailure
         {
             get => _continueCallAfterRecordingFailure;
@@ -49,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxResponseWaitTimeMilliseconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0731150ec7515df8cd710f04d8f62f66:416")]
+        [Group(@"0731150ec7515df8cd710f04d8f62f66:313")]
         [MinInclusive(50)]
         [MaxInclusive(10000)]
         public int? MaxResponseWaitTimeMilliseconds
@@ -69,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "continueCallAfterVideoRecordingFailure", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0731150ec7515df8cd710f04d8f62f66:416")]
+        [Group(@"0731150ec7515df8cd710f04d8f62f66:313")]
         public bool? ContinueCallAfterVideoRecordingFailure
         {
             get => _continueCallAfterVideoRecordingFailure;
@@ -87,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useContinueCallAfterRecordingFailureForOnDemandMode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0731150ec7515df8cd710f04d8f62f66:416")]
+        [Group(@"0731150ec7515df8cd710f04d8f62f66:313")]
         public bool? UseContinueCallAfterRecordingFailureForOnDemandMode
         {
             get => _useContinueCallAfterRecordingFailureForOnDemandMode;
@@ -105,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useContinueCallAfterRecordingFailureForOnDemandUserInitiatedStartMode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0731150ec7515df8cd710f04d8f62f66:416")]
+        [Group(@"0731150ec7515df8cd710f04d8f62f66:313")]
         public bool? UseContinueCallAfterRecordingFailureForOnDemandUserInitiatedStartMode
         {
             get => _useContinueCallAfterRecordingFailureForOnDemandUserInitiatedStartMode;
@@ -123,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "restrictCallRecordingProvisioningAccess", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0731150ec7515df8cd710f04d8f62f66:416")]
+        [Group(@"0731150ec7515df8cd710f04d8f62f66:313")]
         public bool? RestrictCallRecordingProvisioningAccess
         {
             get => _restrictCallRecordingProvisioningAccess;

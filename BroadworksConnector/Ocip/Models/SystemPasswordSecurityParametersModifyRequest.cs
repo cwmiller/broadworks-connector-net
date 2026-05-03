@@ -9,13 +9,15 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Modify the password security settings for the system.
     /// The response is either a SuccessResponse or an ErrorResponse.
+    /// useExistingHashing is only used in AS mode - ignored in XS mode
+    /// enableCommunicationBarringHashing is only used in XS mode - ignored in AS mode
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:14441""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:14632""}]")]
     public class SystemPasswordSecurityParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useExistingHashing", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:14441")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14632")]
         public bool? UseExistingHashing
         {
             get => _useExistingHashing;
@@ -41,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enforcePasswordChangeOnExpiry", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:14441")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14632")]
         public bool? EnforcePasswordChangeOnExpiry
         {
             get => _enforcePasswordChangeOnExpiry;
@@ -54,6 +56,24 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool EnforcePasswordChangeOnExpirySpecified { get; set; }
+
+        protected bool? _enableCommunicationBarringHashing;
+
+        [XmlElement(ElementName = "enableCommunicationBarringHashing", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14632")]
+        public bool? EnableCommunicationBarringHashing
+        {
+            get => _enableCommunicationBarringHashing;
+            set
+            {
+                EnableCommunicationBarringHashingSpecified = (value != null);
+                _enableCommunicationBarringHashing = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool EnableCommunicationBarringHashingSpecified { get; set; }
 
     }
 }

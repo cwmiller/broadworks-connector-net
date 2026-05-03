@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b2249333b9e085ee149c29960c00214e:133""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b2249333b9e085ee149c29960c00214e:136""}]")]
     public class UserFaxMessagingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"b2249333b9e085ee149c29960c00214e:133")]
+        [Group(@"b2249333b9e085ee149c29960c00214e:136")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b2249333b9e085ee149c29960c00214e:133")]
+        [Group(@"b2249333b9e085ee149c29960c00214e:136")]
         public bool? IsActive
         {
             get => _isActive;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "phoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"b2249333b9e085ee149c29960c00214e:133")]
+        [Group(@"b2249333b9e085ee149c29960c00214e:136")]
         [MinLength(1)]
         [MaxLength(23)]
         public string PhoneNumber
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "extension", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"b2249333b9e085ee149c29960c00214e:133")]
+        [Group(@"b2249333b9e085ee149c29960c00214e:136")]
         [MinLength(2)]
         [MaxLength(20)]
         public string Extension
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "sipAliasList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"b2249333b9e085ee149c29960c00214e:133")]
+        [Group(@"b2249333b9e085ee149c29960c00214e:136")]
         public BroadWorksConnector.Ocip.Models.ReplacementSIPAliasList SipAliasList
         {
             get => _sipAliasList;

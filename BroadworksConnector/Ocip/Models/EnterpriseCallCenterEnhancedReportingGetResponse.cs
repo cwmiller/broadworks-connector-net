@@ -11,19 +11,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Replaced by EnterpriseCallCenterEnhancedReportingGetResponse19
     /// <see cref="EnterpriseCallCenterEnhancedReportingGetRequest"/>
-    /// <see cref="EnterpriseCallCenterEnhancedReportingGetResponse19"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:2213""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:2420""}]")]
     public class EnterpriseCallCenterEnhancedReportingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice _reportingServer;
 
         [XmlElement(ElementName = "reportingServer", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:2213")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:2420")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportServerChoice ReportingServer
         {
             get => _reportingServer;
@@ -40,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CallCenterReportWebStatisticsSource _webStatisticSource;
 
         [XmlElement(ElementName = "webStatisticSource", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:2213")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:2420")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportWebStatisticsSource WebStatisticSource
         {
             get => _webStatisticSource;

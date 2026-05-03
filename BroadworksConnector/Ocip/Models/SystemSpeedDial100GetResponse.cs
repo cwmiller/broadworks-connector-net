@@ -11,19 +11,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Replaced by: SystemSpeedDial100GetResponse17sp1
     /// <see cref="SystemSpeedDial100GetRequest"/>
-    /// <see cref="SystemSpeedDial100GetResponse17sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:35561""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:39516""}]")]
     public class SystemSpeedDial100GetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _prefix;
 
         [XmlElement(ElementName = "prefix", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:35561")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:39516")]
         [MinLength(1)]
         [MaxLength(2)]
         public string Prefix

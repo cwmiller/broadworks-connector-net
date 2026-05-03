@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: UserSelectiveCallRejectionGetCriteriaRequest16sp1
     /// <see cref="UserSelectiveCallRejectionGetCriteriaResponse16"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="UserSelectiveCallRejectionGetCriteriaRequest16sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:46795""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:51175""}]")]
     public class UserSelectiveCallRejectionGetCriteriaRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserSelectiveCallRejectionGetCriteriaResponse16>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:46795")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:51175")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -43,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _criteriaName;
 
         [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:46795")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:51175")]
         [MinLength(1)]
         [MaxLength(50)]
         public string CriteriaName

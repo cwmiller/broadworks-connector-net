@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""aa3a240fa755015613cfb9259eccafef:104""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""aa3a240fa755015613cfb9259eccafef:107""}]")]
     public class SystemSMDIMessageDeskDeleteServerRouteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _routeDestination;
 
         [XmlElement(ElementName = "routeDestination", IsNullable = false, Namespace = "")]
-        [Group(@"aa3a240fa755015613cfb9259eccafef:104")]
+        [Group(@"aa3a240fa755015613cfb9259eccafef:107")]
         [MinLength(1)]
         [MaxLength(10)]
         public string RouteDestination

@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:2866""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:2912""}]")]
     public class ServiceProviderCPEConfigSetConfigFileRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:2866")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:2912")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:2866")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:2912")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceType
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "configFile", IsNullable = true, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:2866")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:2912")]
         public BroadWorksConnector.Ocip.Models.FileResource ConfigFile
         {
             get => _configFile;

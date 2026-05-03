@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6bd221784ebf8af2fe1169d36a6ac2dd:287""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6bd221784ebf8af2fe1169d36a6ac2dd:290""}]")]
     public class UserPersonalAssistantExclusionNumberGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _exclusionNumberTable;
 
         [XmlElement(ElementName = "exclusionNumberTable", IsNullable = false, Namespace = "")]
-        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:287")]
+        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:290")]
         public BroadWorksConnector.Ocip.Models.C.OCITable ExclusionNumberTable
         {
             get => _exclusionNumberTable;

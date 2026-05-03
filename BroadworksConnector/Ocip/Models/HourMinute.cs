@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3410""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3684""}]")]
     public class HourMinute
     {
 
         protected int _hour;
 
         [XmlElement(ElementName = "hour", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3410")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3684")]
         [MinInclusive(0)]
         [MaxInclusive(23)]
         public int Hour
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _minute;
 
         [XmlElement(ElementName = "minute", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3410")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3684")]
         [MinInclusive(0)]
         [MaxInclusive(59)]
         public int Minute

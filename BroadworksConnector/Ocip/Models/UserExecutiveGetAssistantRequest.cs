@@ -8,21 +8,21 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get the assistant setting and the list of assistants assigned to an executive.
-    /// The response is either UserExecutiveGetAssistantResponse or ErrorResponse.
-    /// <see cref="UserExecutiveGetAssistantResponse"/>
+    /// The response is either UserExecutiveGetAssistantsResponse or ErrorResponse.
+    /// <see cref="UserExecutiveGetAssistantsResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3a54ac906cb7002cc1a30fbb0efadb0a:140""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3a54ac906cb7002cc1a30fbb0efadb0a:145""}]")]
     public class UserExecutiveGetAssistantRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserExecutiveGetAssistantResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:140")]
+        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:145")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

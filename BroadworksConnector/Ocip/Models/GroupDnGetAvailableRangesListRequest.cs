@@ -9,21 +9,21 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get a list of group DNs that are not assigned to user, service instances or IMRN pool.
     /// The Dns are returned in a list of DNs or DN ranges and formated in E164 format for display.
-    /// The response is either a GroupDnGetAvailableRangesListResponse or an ErrorResponse.
-    /// <see cref="GroupDnGetAvailableRangesListResponse"/>
+    /// The response is either a GroupDnGetAvailableRangeListResponse or an ErrorResponse.
+    /// <see cref="GroupDnGetAvailableRangeListResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:4940""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:5015""}]")]
     public class GroupDnGetAvailableRangesListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupDnGetAvailableRangesListResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:4940")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:5015")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:4940")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:5015")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId

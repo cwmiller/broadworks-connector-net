@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2a762bb9361e88044885b796c1d6b979:219""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2a762bb9361e88044885b796c1d6b979:222""}]")]
     public class SystemInterceptUserGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _emergencyAndRepairIntercept;
 
         [XmlElement(ElementName = "emergencyAndRepairIntercept", IsNullable = false, Namespace = "")]
-        [Group(@"2a762bb9361e88044885b796c1d6b979:219")]
+        [Group(@"2a762bb9361e88044885b796c1d6b979:222")]
         public bool EmergencyAndRepairIntercept
         {
             get => _emergencyAndRepairIntercept;

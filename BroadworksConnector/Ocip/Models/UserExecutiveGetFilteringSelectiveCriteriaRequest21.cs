@@ -9,21 +9,21 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get a filtering criteria for an executive user.
     /// Both executive and the executive assistant can run this command.
-    /// The response is either UserExecutiveGetFilteringSelectiveCriteriaResponse21 or ErrorResponse.
-    /// <see cref="UserExecutiveGetFilteringSelectiveCriteriaResponse21"/>
+    /// The response is either UserExecutiveGetSelectiveCriteriaResponse21 or ErrorResponse.
+    /// <see cref="UserExecutiveGetSelectiveCriteriaResponse21"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3a54ac906cb7002cc1a30fbb0efadb0a:273""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3a54ac906cb7002cc1a30fbb0efadb0a:278""}]")]
     public class UserExecutiveGetFilteringSelectiveCriteriaRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserExecutiveGetFilteringSelectiveCriteriaResponse21>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:273")]
+        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:278")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _criteriaName;
 
         [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
-        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:273")]
+        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:278")]
         [MinLength(1)]
         [MaxLength(50)]
         public string CriteriaName

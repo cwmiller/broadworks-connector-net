@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:6482""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:6451""}]")]
     public class SystemCallCenterEventRecordingFileParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected int _fileRetentionTimeDays;
 
         [XmlElement(ElementName = "fileRetentionTimeDays", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:6482")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6451")]
         [MinInclusive(0)]
         [MaxInclusive(120)]
         public int FileRetentionTimeDays
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CallCenterEventRecordingFileRotationPeriodMinutes _fileRotationPeriodMinutes;
 
         [XmlElement(ElementName = "fileRotationPeriodMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:6482")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6451")]
         public BroadWorksConnector.Ocip.Models.CallCenterEventRecordingFileRotationPeriodMinutes FileRotationPeriodMinutes
         {
             get => _fileRotationPeriodMinutes;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _fileRotationOffsetMinutes;
 
         [XmlElement(ElementName = "fileRotationOffsetMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:6482")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6451")]
         [MinInclusive(0)]
         [MaxInclusive(59)]
         public int FileRotationOffsetMinutes
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "remoteUrl", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:6482")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6451")]
         [MinLength(1)]
         [MaxLength(256)]
         public string RemoteUrl
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "remoteUserId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:6482")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6451")]
         [MinLength(1)]
         [MaxLength(20)]
         public string RemoteUserId

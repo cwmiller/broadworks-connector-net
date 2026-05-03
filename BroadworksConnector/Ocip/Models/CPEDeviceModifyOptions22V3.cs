@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:1932""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:2161""}]")]
     public class CPEDeviceModifyOptions22V3
     {
 
@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableMonitoring", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1932")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2161")]
         public bool? EnableMonitoring
         {
             get => _enableMonitoring;
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceManagementDeviceTypeOptions", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1932")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2161")]
         public BroadWorksConnector.Ocip.Models.DeviceManagementDeviceTypeModifyOptions22V3 DeviceManagementDeviceTypeOptions
         {
             get => _deviceManagementDeviceTypeOptions;

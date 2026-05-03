@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0d9b3d8688162f1e9a9cae6f58ab8f13:73""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0d9b3d8688162f1e9a9cae6f58ab8f13:76""}]")]
     public class UserBargeInExemptModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"0d9b3d8688162f1e9a9cae6f58ab8f13:73")]
+        [Group(@"0d9b3d8688162f1e9a9cae6f58ab8f13:76")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0d9b3d8688162f1e9a9cae6f58ab8f13:73")]
+        [Group(@"0d9b3d8688162f1e9a9cae6f58ab8f13:76")]
         public bool? IsActive
         {
             get => _isActive;

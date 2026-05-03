@@ -10,19 +10,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to SystemInCallServiceActivationGetRequest.
     /// Replaced by: SystemInCallServiceActivationGetResponse17
     /// <see cref="SystemInCallServiceActivationGetRequest"/>
-    /// <see cref="SystemInCallServiceActivationGetResponse17"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:27796""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:31438""}]")]
     public class SystemInCallServiceActivationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _defaultActivationDigits;
 
         [XmlElement(ElementName = "defaultActivationDigits", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:27796")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:31438")]
         [MinLength(1)]
         [MaxLength(8)]
         public string DefaultActivationDigits

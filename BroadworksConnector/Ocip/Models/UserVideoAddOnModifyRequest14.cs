@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b5d2e7958e32dd9b5dece82d23577a17:74""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b5d2e7958e32dd9b5dece82d23577a17:77""}]")]
     public class UserVideoAddOnModifyRequest14 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"b5d2e7958e32dd9b5dece82d23577a17:74")]
+        [Group(@"b5d2e7958e32dd9b5dece82d23577a17:77")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b5d2e7958e32dd9b5dece82d23577a17:74")]
+        [Group(@"b5d2e7958e32dd9b5dece82d23577a17:77")]
         public bool? IsActive
         {
             get => _isActive;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxOriginatingCallDelaySeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b5d2e7958e32dd9b5dece82d23577a17:74")]
+        [Group(@"b5d2e7958e32dd9b5dece82d23577a17:77")]
         public BroadWorksConnector.Ocip.Models.VideoAddOnMaxOriginatingCallDelaySeconds? MaxOriginatingCallDelaySeconds
         {
             get => _maxOriginatingCallDelaySeconds;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"b5d2e7958e32dd9b5dece82d23577a17:74")]
+        [Group(@"b5d2e7958e32dd9b5dece82d23577a17:77")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceEndpointModify AccessDeviceEndpoint
         {
             get => _accessDeviceEndpoint;

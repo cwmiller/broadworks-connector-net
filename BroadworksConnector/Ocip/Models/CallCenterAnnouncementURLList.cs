@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:1021""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:1213""}]")]
     public class CallCenterAnnouncementURLList
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "url1", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1021")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1213")]
         [MinLength(1)]
         [MaxLength(256)]
         public string Url1
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "url2", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1021")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1213")]
         [MinLength(1)]
         [MaxLength(256)]
         public string Url2
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "url3", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1021")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1213")]
         [MinLength(1)]
         [MaxLength(256)]
         public string Url3
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "url4", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1021")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1213")]
         [MinLength(1)]
         [MaxLength(256)]
         public string Url4

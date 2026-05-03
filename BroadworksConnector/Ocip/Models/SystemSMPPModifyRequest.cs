@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:18021""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:18246""}]")]
     public class SystemSMPPModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "primarySMPPServerNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18246")]
         [MinLength(1)]
         [MaxLength(80)]
         public string PrimarySMPPServerNetAddress
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "primarySMPPPort", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18246")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int? PrimarySMPPPort
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "secondarySMPPServerNetAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18246")]
         [MinLength(1)]
         [MaxLength(80)]
         public string SecondarySMPPServerNetAddress
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "secondarySMPPPort", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18246")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int? SecondarySMPPPort
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "systemId", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18246")]
         [MinLength(1)]
         [MaxLength(16)]
         public string SystemId
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "password", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18246")]
         [MinLength(1)]
         [MaxLength(8)]
         public string Password
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "version", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18246")]
         public BroadWorksConnector.Ocip.Models.SMPPVersion? Version
         {
             get => _version;
@@ -166,7 +166,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "systemType", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18246")]
         [MinLength(1)]
         [MaxLength(12)]
         public string SystemType
@@ -186,7 +186,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableMWICustomizedMessage", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18246")]
         public bool? EnableMWICustomizedMessage
         {
             get => _enableMWICustomizedMessage;
@@ -204,7 +204,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "supportMessagePayload", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18246")]
         public bool? SupportMessagePayload
         {
             get => _supportMessagePayload;
@@ -222,7 +222,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxShortMessageLength", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18246")]
         [MinInclusive(1)]
         [MaxInclusive(70)]
         public int? MaxShortMessageLength
@@ -242,7 +242,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useGsmMwiUcs2Encoding", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18246")]
         public bool? UseGsmMwiUcs2Encoding
         {
             get => _useGsmMwiUcs2Encoding;
@@ -260,7 +260,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "includeOnlyNewMessageCount", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:18021")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18246")]
         public bool? IncludeOnlyNewMessageCount
         {
             get => _includeOnlyNewMessageCount;

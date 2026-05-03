@@ -10,31 +10,31 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to UserDevicePoliciesGetRequest21. enableDeviceFeatureSynchronization and
     /// enableCallDecline are ignored by the application server in Multiple User Shared mode.
     /// The following element is only used in AS data mode:
-    /// lineMode, value “Single User Private and Shared” is returned in XS data mode
+    /// lineMode, value "Single User Private and Shared" is returned in XS data mode
     /// The following elements are only used in AS data mode:
-    /// enableDeviceFeatureSynchronization, value “false” is returned in XS data mode
-    /// enableDnd, value “false” is returned in XS data mode
-    /// enableCallForwardingAlways, value “false” is returned in XS data mode
-    /// enableCallForwardingBusy, value “false” is returned in XS data mode
-    /// enableCallForwardingNoAnswer, value “false” is returned in XS data mode
-    /// enableAcd, value “false” is returned in XS data mode
-    /// enableExecutive, value “false” is returned in XS data mode
-    /// enableExecutiveAssistant, value “false” is returned in XS data mode
-    /// enableSecurityClassification, value “false” is returned in XS data mode
-    /// enableCallRecording, value “false” is returned in XS data mode
+    /// enableDeviceFeatureSynchronization, value "false" is returned in XS data mode
+    /// enableDnd, value "false" is returned in XS data mode
+    /// enableCallForwardingAlways, value "false" is returned in XS data mode
+    /// enableCallForwardingBusy, value "false" is returned in XS data mode
+    /// enableCallForwardingNoAnswer, value "false" is returned in XS data mode
+    /// enableAcd, value "false" is returned in XS data mode
+    /// enableExecutive, value "false" is returned in XS data mode
+    /// enableExecutiveAssistant, value "false" is returned in XS data mode
+    /// enableSecurityClassification, value "false" is returned in XS data mode
+    /// enableCallRecording, value "false" is returned in XS data mode
     /// <see cref="UserDevicePoliciesGetRequest21"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:1613""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:1631""}]")]
     public class UserDevicePoliciesGetResponse21 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.UserDevicePolicyLineMode _lineMode;
 
         [XmlElement(ElementName = "lineMode", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1613")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1631")]
         public BroadWorksConnector.Ocip.Models.UserDevicePolicyLineMode LineMode
         {
             get => _lineMode;
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableDeviceFeatureSynchronization;
 
         [XmlElement(ElementName = "enableDeviceFeatureSynchronization", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1613")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1631")]
         public bool EnableDeviceFeatureSynchronization
         {
             get => _enableDeviceFeatureSynchronization;
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableDnd;
 
         [XmlElement(ElementName = "enableDnd", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1613")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1631")]
         public bool EnableDnd
         {
             get => _enableDnd;
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableCallForwardingAlways;
 
         [XmlElement(ElementName = "enableCallForwardingAlways", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1613")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1631")]
         public bool EnableCallForwardingAlways
         {
             get => _enableCallForwardingAlways;
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableCallForwardingBusy;
 
         [XmlElement(ElementName = "enableCallForwardingBusy", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1613")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1631")]
         public bool EnableCallForwardingBusy
         {
             get => _enableCallForwardingBusy;
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableCallForwardingNoAnswer;
 
         [XmlElement(ElementName = "enableCallForwardingNoAnswer", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1613")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1631")]
         public bool EnableCallForwardingNoAnswer
         {
             get => _enableCallForwardingNoAnswer;
@@ -136,7 +136,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableAcd;
 
         [XmlElement(ElementName = "enableAcd", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1613")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1631")]
         public bool EnableAcd
         {
             get => _enableAcd;
@@ -153,7 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableExecutive;
 
         [XmlElement(ElementName = "enableExecutive", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1613")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1631")]
         public bool EnableExecutive
         {
             get => _enableExecutive;
@@ -170,7 +170,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableExecutiveAssistant;
 
         [XmlElement(ElementName = "enableExecutiveAssistant", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1613")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1631")]
         public bool EnableExecutiveAssistant
         {
             get => _enableExecutiveAssistant;
@@ -187,7 +187,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableSecurityClassification;
 
         [XmlElement(ElementName = "enableSecurityClassification", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1613")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1631")]
         public bool EnableSecurityClassification
         {
             get => _enableSecurityClassification;
@@ -204,7 +204,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableCallRecording;
 
         [XmlElement(ElementName = "enableCallRecording", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1613")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1631")]
         public bool EnableCallRecording
         {
             get => _enableCallRecording;
@@ -221,7 +221,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableCallDecline;
 
         [XmlElement(ElementName = "enableCallDecline", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1613")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:1631")]
         public bool EnableCallDecline
         {
             get => _enableCallDecline;

@@ -16,19 +16,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: GroupTrunkGroupGetInstanceRequest21
     /// <see cref="GroupTrunkGroupGetInstanceResponse20sp1"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="GroupTrunkGroupGetInstanceRequest21"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:14756""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:16375""}]")]
     public class GroupTrunkGroupGetInstanceRequest20sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupTrunkGroupGetInstanceResponse20sp1>
     {
 
         protected BroadWorksConnector.Ocip.Models.TrunkGroupKey _trunkGroupKey;
 
         [XmlElement(ElementName = "trunkGroupKey", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:14756")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:16375")]
         public BroadWorksConnector.Ocip.Models.TrunkGroupKey TrunkGroupKey
         {
             get => _trunkGroupKey;

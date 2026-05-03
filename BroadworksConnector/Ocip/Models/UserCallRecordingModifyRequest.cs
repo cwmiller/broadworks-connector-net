@@ -23,22 +23,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// The enableVoiceMailRecording parameter is only applicable
     /// if the Voice Messaging User service is assigned to the user.
     /// This applies to both users and service instances.
-    /// The following elements are only used in AS data mode and ignored in XS data mode:
+    /// The following elements are ignored in both AS and XS data mode:
     /// mediaStream
+    /// 
+    /// Replaced by: UserCallRecordingModifyRequestRI.
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0731150ec7515df8cd710f04d8f62f66:514""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:19606""}]")]
     public class UserCallRecordingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"0731150ec7515df8cd710f04d8f62f66:514")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:19606")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -58,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "recordingOption", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0731150ec7515df8cd710f04d8f62f66:514")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:19606")]
         public BroadWorksConnector.Ocip.Models.RecordingOption20? RecordingOption
         {
             get => _recordingOption;
@@ -76,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "pauseResumeNotification", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0731150ec7515df8cd710f04d8f62f66:514")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:19606")]
         public BroadWorksConnector.Ocip.Models.RecordingPauseResumeNotificationType? PauseResumeNotification
         {
             get => _pauseResumeNotification;
@@ -94,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableCallRecordingAnnouncement", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0731150ec7515df8cd710f04d8f62f66:514")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:19606")]
         public bool? EnableCallRecordingAnnouncement
         {
             get => _enableCallRecordingAnnouncement;
@@ -112,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableRecordCallRepeatWarningTone", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0731150ec7515df8cd710f04d8f62f66:514")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:19606")]
         public bool? EnableRecordCallRepeatWarningTone
         {
             get => _enableRecordCallRepeatWarningTone;
@@ -130,7 +132,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "recordCallRepeatWarningToneTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0731150ec7515df8cd710f04d8f62f66:514")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:19606")]
         [MinInclusive(10)]
         [MaxInclusive(1800)]
         public int? RecordCallRepeatWarningToneTimerSeconds
@@ -150,7 +152,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableVoiceMailRecording", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0731150ec7515df8cd710f04d8f62f66:514")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:19606")]
         public bool? EnableVoiceMailRecording
         {
             get => _enableVoiceMailRecording;
@@ -168,7 +170,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mediaStream", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"0731150ec7515df8cd710f04d8f62f66:514")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:19606")]
         public BroadWorksConnector.Ocip.Models.MediaStream? MediaStream
         {
             get => _mediaStream;

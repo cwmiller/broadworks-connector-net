@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:893""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:897""}]")]
     public class GroupAccessDeviceGetLinkedLeafDeviceListResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _treeDeviceLinkId;
 
         [XmlElement(ElementName = "treeDeviceLinkId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:893")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:897")]
         public string TreeDeviceLinkId
         {
             get => _treeDeviceLinkId;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "leafDeviceKey", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:893")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:897")]
         public List<BroadWorksConnector.Ocip.Models.AccessDeviceKey> LeafDeviceKey
         {
             get => _leafDeviceKey;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "supportLinks", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:893")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:897")]
         public List<BroadWorksConnector.Ocip.Models.SupportLinks22V2> SupportLinks
         {
             get => _supportLinks;

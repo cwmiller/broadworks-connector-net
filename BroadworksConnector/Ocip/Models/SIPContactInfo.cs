@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:5109""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:5931""}]")]
     public class SIPContactInfo
     {
 
         protected string _sipContact;
 
         [XmlElement(ElementName = "sipContact", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5109")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5931")]
         [MinLength(1)]
         [MaxLength(1020)]
         public string SipContact
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "pathHeader", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5109")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5931")]
         [MinLength(1)]
         [MaxLength(1024)]
         public string PathHeader

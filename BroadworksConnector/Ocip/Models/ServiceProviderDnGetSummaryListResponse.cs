@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:3990""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:4040""}]")]
     public class ServiceProviderDnGetSummaryListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _dnSummaryTable;
 
         [XmlElement(ElementName = "dnSummaryTable", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:3990")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:4040")]
         public BroadWorksConnector.Ocip.Models.C.OCITable DnSummaryTable
         {
             get => _dnSummaryTable;

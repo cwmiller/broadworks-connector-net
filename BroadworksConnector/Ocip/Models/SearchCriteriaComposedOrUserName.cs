@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:400""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:404""}]")]
     public class SearchCriteriaComposedOrUserName : BroadWorksConnector.Ocip.Models.SearchCriteriaComposedOr
     {
 
         protected List<string> _value = new List<string>();
 
         [XmlElement(ElementName = "value", IsNullable = false, Namespace = "")]
-        [Group(@"972fbf832439609ec8f2765c5637c3f1:400")]
+        [Group(@"972fbf832439609ec8f2765c5637c3f1:404")]
         [MinLength(1)]
         [MaxLength(255)]
         public List<string> Value
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isCaseInsensitive;
 
         [XmlElement(ElementName = "isCaseInsensitive", IsNullable = false, Namespace = "")]
-        [Group(@"972fbf832439609ec8f2765c5637c3f1:400")]
+        [Group(@"972fbf832439609ec8f2765c5637c3f1:404")]
         public bool IsCaseInsensitive
         {
             get => _isCaseInsensitive;

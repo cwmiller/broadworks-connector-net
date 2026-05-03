@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""78a6b99d4a2498f0e1b41ca6979a5fd8:74""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""78a6b99d4a2498f0e1b41ca6979a5fd8:77""}]")]
     public class UserPrepaidModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"78a6b99d4a2498f0e1b41ca6979a5fd8:74")]
+        [Group(@"78a6b99d4a2498f0e1b41ca6979a5fd8:77")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"78a6b99d4a2498f0e1b41ca6979a5fd8:74")]
+        [Group(@"78a6b99d4a2498f0e1b41ca6979a5fd8:77")]
         public bool? IsActive
         {
             get => _isActive;

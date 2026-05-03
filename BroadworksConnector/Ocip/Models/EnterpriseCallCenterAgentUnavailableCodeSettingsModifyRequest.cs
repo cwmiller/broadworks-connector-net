@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:898""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:905""}]")]
     public class EnterpriseCallCenterAgentUnavailableCodeSettingsModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:898")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:905")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableAgentUnavailableCodes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:898")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:905")]
         public bool? EnableAgentUnavailableCodes
         {
             get => _enableAgentUnavailableCodes;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultAgentUnavailableCodeOnDND", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:898")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:905")]
         [MinLength(1)]
         [MaxLength(10)]
         public string DefaultAgentUnavailableCodeOnDND
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultAgentUnavailableCodeOnPersonalCalls", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:898")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:905")]
         [MinLength(1)]
         [MaxLength(10)]
         public string DefaultAgentUnavailableCodeOnPersonalCalls
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultAgentUnavailableCodeOnConsecutiveBounces", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:898")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:905")]
         [MinLength(1)]
         [MaxLength(10)]
         public string DefaultAgentUnavailableCodeOnConsecutiveBounces
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultAgentUnavailableCodeOnNotReachable", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:898")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:905")]
         [MinLength(1)]
         [MaxLength(10)]
         public string DefaultAgentUnavailableCodeOnNotReachable
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forceUseOfAgentUnavailableCodes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:898")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:905")]
         public bool? ForceUseOfAgentUnavailableCodes
         {
             get => _forceUseOfAgentUnavailableCodes;
@@ -163,7 +163,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultAgentUnavailableCode", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:898")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:905")]
         [MinLength(1)]
         [MaxLength(10)]
         public string DefaultAgentUnavailableCode
@@ -183,7 +183,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "codeStateList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:898")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:905")]
         public List<BroadWorksConnector.Ocip.Models.CallCenterAgentUnavailableCodeStateModify> CodeStateList
         {
             get => _codeStateList;

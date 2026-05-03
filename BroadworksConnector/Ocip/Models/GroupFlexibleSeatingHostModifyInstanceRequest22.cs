@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1d4e390f8cd01ca6f92589024d74dac6:294""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1d4e390f8cd01ca6f92589024d74dac6:297""}]")]
     public class GroupFlexibleSeatingHostModifyInstanceRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:294")]
+        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:297")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:294")]
+        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:297")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceModifyProfileFlexibleSeatingHost ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "accessDeviceEndpoint", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:294")]
+        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:297")]
         public BroadWorksConnector.Ocip.Models.AccessDeviceMultipleContactEndpointModify22 AccessDeviceEndpoint
         {
             get => _accessDeviceEndpoint;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:294")]
+        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:297")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService

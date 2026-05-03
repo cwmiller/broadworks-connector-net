@@ -7,25 +7,24 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// Request to get the user information.
-    /// The response is either a UserGetResponse21sp1 or ErrorResponse.
+    /// Request to get the user information.  The response is either
+    /// UserGetResponse21sp1 or ErrorResponse.
     /// 
     /// Replaced by UserGetRequest22
     /// <see cref="UserGetResponse21sp1"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="UserGetRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:44156""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:48325""}]")]
     public class UserGetRequest21sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserGetResponse21sp1>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:44156")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:48325")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

@@ -14,19 +14,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// servicePackName
     /// <see cref="ServiceProviderServiceGetAuthorizationResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:6026"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:6028""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:6089"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:6091""}]}]")]
     public class ServiceProviderServiceGetAuthorizationRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ServiceProviderServiceGetAuthorizationResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:6026")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:6089")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -45,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.UserService _userServiceName;
 
         [XmlElement(ElementName = "userServiceName", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:6028")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:6091")]
         public BroadWorksConnector.Ocip.Models.UserService UserServiceName
         {
             get => _userServiceName;
@@ -62,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.GroupService _groupServiceName;
 
         [XmlElement(ElementName = "groupServiceName", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:6028")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:6091")]
         public BroadWorksConnector.Ocip.Models.GroupService GroupServiceName
         {
             get => _groupServiceName;
@@ -79,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _servicePackName;
 
         [XmlElement(ElementName = "servicePackName", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:6028")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:6091")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServicePackName

@@ -18,12 +18,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced By: SystemSubscriberModifyCallProcessingParametersRequest14sp7
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemSubscriberModifyCallProcessingParametersRequest14sp7"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:36016""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:40277""}]")]
     public class SystemSubscriberModifyCallProcessingParametersRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -31,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "userCallingLineIdSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36016")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40277")]
         public BroadWorksConnector.Ocip.Models.SystemUserCallingLineIdSelection? UserCallingLineIdSelection
         {
             get => _userCallingLineIdSelection;
@@ -49,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isExtendedCallingLineIdActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36016")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40277")]
         public bool? IsExtendedCallingLineIdActive
         {
             get => _isExtendedCallingLineIdActive;
@@ -67,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isRingTimeOutActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36016")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40277")]
         public bool? IsRingTimeOutActive
         {
             get => _isRingTimeOutActive;
@@ -85,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "ringTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36016")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40277")]
         [MinInclusive(1)]
         [MaxInclusive(180)]
         public int? RingTimeoutSeconds
@@ -105,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowEmergencyRemoteOfficeOriginations", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36016")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40277")]
         public bool? AllowEmergencyRemoteOfficeOriginations
         {
             get => _allowEmergencyRemoteOfficeOriginations;
@@ -123,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxNoAnswerNumberOfRings", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36016")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40277")]
         [MinInclusive(6)]
         [MaxInclusive(20)]
         public int? MaxNoAnswerNumberOfRings

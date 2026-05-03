@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by ResellerStirShakenGetRequest23
     /// <see cref="ResellerStirShakenGetResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="ResellerStirShakenGetRequest23"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:17012""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:18876""}]")]
     public class ResellerStirShakenGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ResellerStirShakenGetResponse>
     {
 
         protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:17012")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18876")]
         [MinLength(1)]
         [MaxLength(36)]
         public string ResellerId

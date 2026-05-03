@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ec1be3ca6e990aac87b6fcf39d5e3445:130""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ec1be3ca6e990aac87b6fcf39d5e3445:133""}]")]
     public class SystemCallNotifyModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultFromAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ec1be3ca6e990aac87b6fcf39d5e3445:130")]
+        [Group(@"ec1be3ca6e990aac87b6fcf39d5e3445:133")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DefaultFromAddress
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useShortSubjectLine", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ec1be3ca6e990aac87b6fcf39d5e3445:130")]
+        [Group(@"ec1be3ca6e990aac87b6fcf39d5e3445:133")]
         public bool? UseShortSubjectLine
         {
             get => _useShortSubjectLine;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useDnInMailBody", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ec1be3ca6e990aac87b6fcf39d5e3445:130")]
+        [Group(@"ec1be3ca6e990aac87b6fcf39d5e3445:133")]
         public bool? UseDnInMailBody
         {
             get => _useDnInMailBody;

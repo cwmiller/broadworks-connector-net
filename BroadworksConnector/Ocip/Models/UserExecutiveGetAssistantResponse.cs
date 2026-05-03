@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3a54ac906cb7002cc1a30fbb0efadb0a:161""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3a54ac906cb7002cc1a30fbb0efadb0a:166""}]")]
     public class UserExecutiveGetAssistantResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _allowOptInOut;
 
         [XmlElement(ElementName = "allowOptInOut", IsNullable = false, Namespace = "")]
-        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:161")]
+        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:166")]
         public bool AllowOptInOut
         {
             get => _allowOptInOut;
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _assistantUserTable;
 
         [XmlElement(ElementName = "assistantUserTable", IsNullable = false, Namespace = "")]
-        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:161")]
+        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:166")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AssistantUserTable
         {
             get => _assistantUserTable;

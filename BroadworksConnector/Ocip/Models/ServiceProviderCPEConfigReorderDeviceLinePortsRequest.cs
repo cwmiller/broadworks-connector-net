@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:2810""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:2856""}]")]
     public class ServiceProviderCPEConfigReorderDeviceLinePortsRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:2810")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:2856")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:2810")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:2856")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected List<string> _orderedLinePortList = new List<string>();
 
         [XmlElement(ElementName = "orderedLinePortList", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:2810")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:2856")]
         [MinLength(1)]
         [MaxLength(161)]
         public List<string> OrderedLinePortList

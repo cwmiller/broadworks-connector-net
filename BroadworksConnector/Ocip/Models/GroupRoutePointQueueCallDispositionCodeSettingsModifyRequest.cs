@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e474d11df9a1d1d1041e589793e40de8:1196""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e474d11df9a1d1d1041e589793e40de8:1199""}]")]
     public class GroupRoutePointQueueCallDispositionCodeSettingsModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"e474d11df9a1d1d1041e589793e40de8:1196")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:1199")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableCallDispositionCodes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e474d11df9a1d1d1041e589793e40de8:1196")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:1199")]
         public bool? EnableCallDispositionCodes
         {
             get => _enableCallDispositionCodes;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "includeOrganizationCodes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e474d11df9a1d1d1041e589793e40de8:1196")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:1199")]
         public bool? IncludeOrganizationCodes
         {
             get => _includeOrganizationCodes;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forceUseOfCallDispositionCodes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e474d11df9a1d1d1041e589793e40de8:1196")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:1199")]
         public bool? ForceUseOfCallDispositionCodes
         {
             get => _forceUseOfCallDispositionCodes;
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultCallDispositionCode", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"e474d11df9a1d1d1041e589793e40de8:1196")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:1199")]
         public BroadWorksConnector.Ocip.Models.CallDispositionCodeWithLevel DefaultCallDispositionCode
         {
             get => _defaultCallDispositionCode;
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callDispositionCodeActivation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e474d11df9a1d1d1041e589793e40de8:1196")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:1199")]
         public List<BroadWorksConnector.Ocip.Models.CallDispositionCodeActivation> CallDispositionCodeActivation
         {
             get => _callDispositionCodeActivation;

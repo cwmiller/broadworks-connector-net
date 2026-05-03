@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de7795e1833d459a7eb89116d772fd78:189""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de7795e1833d459a7eb89116d772fd78:196""}]")]
     public class CommPilotExpressEmailNotifyModify
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sendEmail", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de7795e1833d459a7eb89116d772fd78:189")]
+        [Group(@"de7795e1833d459a7eb89116d772fd78:196")]
         public bool? SendEmail
         {
             get => _sendEmail;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "emailAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"de7795e1833d459a7eb89116d772fd78:189")]
+        [Group(@"de7795e1833d459a7eb89116d772fd78:196")]
         [MinLength(1)]
         [MaxLength(80)]
         public string EmailAddress

@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: GroupAdminGetPolicyRequest17
     /// <see cref="GroupAdminGetPolicyResponse16sp1"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="GroupAdminGetPolicyRequest17"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:3486""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:3686""}]")]
     public class GroupAdminGetPolicyRequest16sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupAdminGetPolicyResponse16sp1>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:3486")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:3686")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

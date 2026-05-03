@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:16794""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:16999""}]")]
     public class SystemSIPAuthenticationEndpointLockoutGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _lockoutTable;
 
         [XmlElement(ElementName = "lockoutTable", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:16794")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:16999")]
         public BroadWorksConnector.Ocip.Models.C.OCITable LockoutTable
         {
             get => _lockoutTable;

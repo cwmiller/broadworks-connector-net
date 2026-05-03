@@ -14,19 +14,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: SystemCallProcessingPolicyProfileRoutePointProfileGetRequest22
     /// <see cref="SystemCallProcessingPolicyProfileRoutePointProfileGetResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemCallProcessingPolicyProfileRoutePointProfileGetRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:24257""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:27240""}]")]
     public class SystemCallProcessingPolicyProfileRoutePointProfileGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemCallProcessingPolicyProfileRoutePointProfileGetResponse>
     {
 
         protected string _callProcessingPolicyProfileName;
 
         [XmlElement(ElementName = "callProcessingPolicyProfileName", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:24257")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:27240")]
         [MinLength(1)]
         [MaxLength(40)]
         public string CallProcessingPolicyProfileName

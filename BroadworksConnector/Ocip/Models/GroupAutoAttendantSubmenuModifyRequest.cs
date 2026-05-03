@@ -12,6 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     /// This request is only valid for Standard auto attendants.
     /// 
     /// Replaced by: GroupAutoAttendantSubmenuModifyRequest20 in AS data mode
+    /// Replaced by: GroupAutoAttendantSubmenuModifyRequestXS in XS data mode
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
     /// <see cref="GroupAutoAttendantSubmenuModifyRequest20"/>
@@ -19,14 +20,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:1928""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:4461""}]")]
     public class GroupAutoAttendantSubmenuModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:1928")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:4461")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -45,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _submenuId;
 
         [XmlElement(ElementName = "submenuId", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:1928")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:4461")]
         [MinLength(1)]
         [MaxLength(40)]
         public string SubmenuId
@@ -65,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newSubmenuId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:1928")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:4461")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NewSubmenuId
@@ -85,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "announcementSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:1928")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:4461")]
         public BroadWorksConnector.Ocip.Models.AnnouncementSelection? AnnouncementSelection
         {
             get => _announcementSelection;
@@ -103,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:1928")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:4461")]
         public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource AudioFile
         {
             get => _audioFile;
@@ -121,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:1928")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:4461")]
         public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource VideoFile
         {
             get => _videoFile;
@@ -139,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableLevelExtensionDialing", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:1928")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:4461")]
         public bool? EnableLevelExtensionDialing
         {
             get => _enableLevelExtensionDialing;
@@ -157,7 +158,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "keyConfiguration", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:1928")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:4461")]
         public List<BroadWorksConnector.Ocip.Models.AutoAttendantKeyModifyConfiguration> KeyConfiguration
         {
             get => _keyConfiguration;

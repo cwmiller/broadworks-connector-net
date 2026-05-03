@@ -1,0 +1,135 @@
+using System;
+using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
+using System.Collections.Generic;
+
+namespace BroadWorksConnector.Ocip.Models
+{
+    /// <summary>
+    /// Modify a MWI Delivery to Mobile Endpoint Custom Template.
+    /// The response is either a SuccessResponse or an ErrorResponse.
+    /// <see cref="SuccessResponse"/>
+    /// <see cref="ErrorResponse"/>
+    /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1ea80c1e18c25d0eed23dbc7bd18f1dc:291""}]")]
+    public class ServiceProviderMWIDeliveryToMobileEndpointCustomTemplateModifyRequest23 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
+    {
+
+        protected string _serviceProviderId;
+
+        [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
+        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:291")]
+        [MinLength(1)]
+        [MaxLength(30)]
+        public string ServiceProviderId
+        {
+            get => _serviceProviderId;
+            set
+            {
+                ServiceProviderIdSpecified = true;
+                _serviceProviderId = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool ServiceProviderIdSpecified { get; set; }
+
+        protected string _language;
+
+        [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
+        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:291")]
+        [MinLength(1)]
+        [MaxLength(40)]
+        public string Language
+        {
+            get => _language;
+            set
+            {
+                LanguageSpecified = true;
+                _language = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool LanguageSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateType23 _type;
+
+        [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
+        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:291")]
+        public BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateType23 Type
+        {
+            get => _type;
+            set
+            {
+                TypeSpecified = true;
+                _type = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool TypeSpecified { get; set; }
+
+        protected bool? _isEnabled;
+
+        [XmlElement(ElementName = "isEnabled", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:291")]
+        public bool? IsEnabled
+        {
+            get => _isEnabled;
+            set
+            {
+                IsEnabledSpecified = (value != null);
+                _isEnabled = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool IsEnabledSpecified { get; set; }
+
+        protected string _monthAbbreviations;
+
+        /// <remarks>Eraseable</remarks>
+        [XmlElement(ElementName = "monthAbbreviations", IsNullable = true, Namespace = "")]
+        [Optional]
+        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:291")]
+        [MinLength(1)]
+        [MaxLength(128)]
+        public string MonthAbbreviations
+        {
+            get => _monthAbbreviations;
+            set
+            {
+                MonthAbbreviationsSpecified = true;
+                _monthAbbreviations = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool MonthAbbreviationsSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateBody23 _templateBody;
+
+        [XmlElement(ElementName = "templateBody", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:291")]
+        public BroadWorksConnector.Ocip.Models.MWIDeliveryToMobileEndpointTemplateBody23 TemplateBody
+        {
+            get => _templateBody;
+            set
+            {
+                TemplateBodySpecified = (value != null);
+                _templateBody = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool TemplateBodySpecified { get; set; }
+
+    }
+}

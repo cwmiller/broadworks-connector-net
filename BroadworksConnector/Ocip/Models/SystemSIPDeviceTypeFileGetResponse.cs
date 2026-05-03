@@ -10,19 +10,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to SystemSIPDeviceTypeFileGetRequest.
     /// Replaced By: SystemSIPDeviceTypeFileGetResponse14sp8
     /// <see cref="SystemSIPDeviceTypeFileGetRequest"/>
-    /// <see cref="SystemSIPDeviceTypeFileGetResponse14sp8"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:32178""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:36133""}]")]
     public class SystemSIPDeviceTypeFileGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _fileFormat;
 
         [XmlElement(ElementName = "fileFormat", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:32178")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36133")]
         [MinLength(1)]
         [MaxLength(128)]
         public string FileFormat
@@ -41,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _remoteFileFormat;
 
         [XmlElement(ElementName = "remoteFileFormat", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:32178")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36133")]
         [MinLength(1)]
         [MaxLength(128)]
         public string RemoteFileFormat
@@ -60,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.DeviceManagementFileCategory _fileCategory;
 
         [XmlElement(ElementName = "fileCategory", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:32178")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36133")]
         public BroadWorksConnector.Ocip.Models.DeviceManagementFileCategory FileCategory
         {
             get => _fileCategory;
@@ -77,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowFileCustomization;
 
         [XmlElement(ElementName = "allowFileCustomization", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:32178")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36133")]
         public bool AllowFileCustomization
         {
             get => _allowFileCustomization;
@@ -94,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.DeviceTypeFileEnhancedConfigurationMode _fileSource;
 
         [XmlElement(ElementName = "fileSource", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:32178")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36133")]
         public BroadWorksConnector.Ocip.Models.DeviceTypeFileEnhancedConfigurationMode FileSource
         {
             get => _fileSource;
@@ -112,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "configurationFileName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:32178")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36133")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ConfigurationFileName
@@ -131,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useHttpDigestAuthentication;
 
         [XmlElement(ElementName = "useHttpDigestAuthentication", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:32178")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36133")]
         public bool UseHttpDigestAuthentication
         {
             get => _useHttpDigestAuthentication;
@@ -148,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _macBasedFileAuthentication;
 
         [XmlElement(ElementName = "macBasedFileAuthentication", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:32178")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36133")]
         public bool MacBasedFileAuthentication
         {
             get => _macBasedFileAuthentication;
@@ -165,7 +164,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _userNamePasswordFileAuthentication;
 
         [XmlElement(ElementName = "userNamePasswordFileAuthentication", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:32178")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36133")]
         public bool UserNamePasswordFileAuthentication
         {
             get => _userNamePasswordFileAuthentication;
@@ -182,7 +181,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _macInNonRequestURI;
 
         [XmlElement(ElementName = "macInNonRequestURI", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:32178")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36133")]
         public bool MacInNonRequestURI
         {
             get => _macInNonRequestURI;
@@ -200,7 +199,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "macFormatInNonRequestURI", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:32178")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36133")]
         [MinLength(1)]
         [MaxLength(256)]
         public string MacFormatInNonRequestURI

@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10970""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:11029""}]")]
     public class SystemGETSGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enabled;
 
         [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10970")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11029")]
         public bool Enabled
         {
             get => _enabled;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableRequireResourcePriority;
 
         [XmlElement(ElementName = "enableRequireResourcePriority", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10970")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11029")]
         public bool EnableRequireResourcePriority
         {
             get => _enableRequireResourcePriority;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _sendAccessResourcePriority;
 
         [XmlElement(ElementName = "sendAccessResourcePriority", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10970")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11029")]
         public bool SendAccessResourcePriority
         {
             get => _sendAccessResourcePriority;
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.GETSCallIdentifierMode _callIdentifierMode;
 
         [XmlElement(ElementName = "callIdentifierMode", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10970")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11029")]
         public BroadWorksConnector.Ocip.Models.GETSCallIdentifierMode CallIdentifierMode
         {
             get => _callIdentifierMode;
@@ -88,7 +88,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _defaultPriorityAVP;
 
         [XmlElement(ElementName = "defaultPriorityAVP", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10970")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11029")]
         [MinInclusive(0)]
         [MaxInclusive(4)]
         public int DefaultPriorityAVP
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _signalingDSCP;
 
         [XmlElement(ElementName = "signalingDSCP", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10970")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11029")]
         [MinInclusive(0)]
         [MaxInclusive(63)]
         public int SignalingDSCP
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _defaultRValue;
 
         [XmlElement(ElementName = "defaultRValue", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10970")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11029")]
         [MinLength(3)]
         [MaxLength(80)]
         public string DefaultRValue
@@ -145,7 +145,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _bypassRoRelease;
 
         [XmlElement(ElementName = "bypassRoRelease", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10970")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11029")]
         public bool BypassRoRelease
         {
             get => _bypassRoRelease;
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _ignoreResourcePrioritiesWhenGETSDisabled;
 
         [XmlElement(ElementName = "ignoreResourcePrioritiesWhenGETSDisabled", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10970")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11029")]
         public bool IgnoreResourcePrioritiesWhenGETSDisabled
         {
             get => _ignoreResourcePrioritiesWhenGETSDisabled;

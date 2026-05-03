@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:5259""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:5308""}]")]
     public class SystemCallTypeAddMappingRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _countryCode;
 
         [XmlElement(ElementName = "countryCode", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:5259")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:5308")]
         [MaxLength(3)]
         [RegularExpression(@"[0-9]|[1-9][0-9]{1,2}")]
         public string CountryCode
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _digitMap;
 
         [XmlElement(ElementName = "digitMap", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:5259")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:5308")]
         [MinLength(1)]
         [MaxLength(30)]
         public string DigitMap
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SystemCallType _callType;
 
         [XmlElement(ElementName = "callType", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:5259")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:5308")]
         public BroadWorksConnector.Ocip.Models.SystemCallType CallType
         {
             get => _callType;
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "ignoreASEmergencyRoute", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:5259")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:5308")]
         public bool? IgnoreASEmergencyRoute
         {
             get => _ignoreASEmergencyRoute;

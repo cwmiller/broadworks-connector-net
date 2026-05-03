@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:8739""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:8790""}]")]
     public class SystemDeviceProfileAuthenticationPasswordRulesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "disallowAuthenticationName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8739")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8790")]
         public bool? DisallowAuthenticationName
         {
             get => _disallowAuthenticationName;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "disallowOldPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8739")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8790")]
         public bool? DisallowOldPassword
         {
             get => _disallowOldPassword;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "disallowReversedOldPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8739")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8790")]
         public bool? DisallowReversedOldPassword
         {
             get => _disallowReversedOldPassword;
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "restrictMinDigits", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8739")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8790")]
         public bool? RestrictMinDigits
         {
             get => _restrictMinDigits;
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "minDigits", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8739")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8790")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int? MinDigits
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "restrictMinUpperCaseLetters", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8739")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8790")]
         public bool? RestrictMinUpperCaseLetters
         {
             get => _restrictMinUpperCaseLetters;
@@ -133,7 +133,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "minUpperCaseLetters", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8739")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8790")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int? MinUpperCaseLetters
@@ -153,7 +153,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "restrictMinLowerCaseLetters", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8739")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8790")]
         public bool? RestrictMinLowerCaseLetters
         {
             get => _restrictMinLowerCaseLetters;
@@ -171,7 +171,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "minLowerCaseLetters", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8739")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8790")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int? MinLowerCaseLetters
@@ -191,7 +191,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "restrictMinNonAlphanumericCharacters", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8739")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8790")]
         public bool? RestrictMinNonAlphanumericCharacters
         {
             get => _restrictMinNonAlphanumericCharacters;
@@ -209,7 +209,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "minNonAlphanumericCharacters", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8739")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8790")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int? MinNonAlphanumericCharacters
@@ -229,7 +229,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "minLength", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8739")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8790")]
         [MinInclusive(3)]
         [MaxInclusive(40)]
         public int? MinLength
@@ -249,7 +249,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sendPermanentLockoutNotification", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8739")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8790")]
         public bool? SendPermanentLockoutNotification
         {
             get => _sendPermanentLockoutNotification;
@@ -268,7 +268,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "permanentLockoutNotifyEmailAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8739")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8790")]
         [MinLength(1)]
         [MaxLength(80)]
         public string PermanentLockoutNotifyEmailAddress
@@ -288,7 +288,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceProfileAuthenticationLockoutType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8739")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8790")]
         public BroadWorksConnector.Ocip.Models.AuthenticationLockoutType? DeviceProfileAuthenticationLockoutType
         {
             get => _deviceProfileAuthenticationLockoutType;
@@ -306,7 +306,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceProfileTemporaryLockoutThreshold", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8739")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8790")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int? DeviceProfileTemporaryLockoutThreshold
@@ -326,7 +326,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceProfileWaitAlgorithm", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8739")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8790")]
         public BroadWorksConnector.Ocip.Models.AuthenticationLockoutWaitAlgorithmType? DeviceProfileWaitAlgorithm
         {
             get => _deviceProfileWaitAlgorithm;
@@ -344,7 +344,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceProfileLockoutFixedMinutes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8739")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8790")]
         public BroadWorksConnector.Ocip.Models.AuthenticationLockoutFixedWaitTimeMinutes? DeviceProfileLockoutFixedMinutes
         {
             get => _deviceProfileLockoutFixedMinutes;
@@ -362,7 +362,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceProfilePermanentLockoutThreshold", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8739")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8790")]
         [MinInclusive(2)]
         [MaxInclusive(10)]
         public int? DeviceProfilePermanentLockoutThreshold
@@ -377,6 +377,24 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool DeviceProfilePermanentLockoutThresholdSpecified { get; set; }
+
+        protected bool? _usePasswordValidationService;
+
+        [XmlElement(ElementName = "usePasswordValidationService", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8790")]
+        public bool? UsePasswordValidationService
+        {
+            get => _usePasswordValidationService;
+            set
+            {
+                UsePasswordValidationServiceSpecified = (value != null);
+                _usePasswordValidationService = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool UsePasswordValidationServiceSpecified { get; set; }
 
     }
 }

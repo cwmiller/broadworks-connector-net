@@ -11,12 +11,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Replaced by: ResellerGetResponse22V2
     /// <see cref="ResellerGetRequest22"/>
-    /// <see cref="ResellerGetResponse22V2"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:16995""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:18817""}]")]
     public class ResellerGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -24,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "resellerName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:16995")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18817")]
         [MinLength(1)]
         [MaxLength(320)]
         public string ResellerName

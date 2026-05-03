@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ec63a55bc41262b2dd33a1f4e8e84674:557""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ec63a55bc41262b2dd33a1f4e8e84674:560""}]")]
     public class GroupAutoAttendantSubmenuGetResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.AnnouncementSelection _announcementSelection;
 
         [XmlElement(ElementName = "announcementSelection", IsNullable = false, Namespace = "")]
-        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:557")]
+        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:560")]
         public BroadWorksConnector.Ocip.Models.AnnouncementSelection AnnouncementSelection
         {
             get => _announcementSelection;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:557")]
+        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:560")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey AudioFile
         {
             get => _audioFile;
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:557")]
+        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:560")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey VideoFile
         {
             get => _videoFile;
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableLevelExtensionDialing;
 
         [XmlElement(ElementName = "enableLevelExtensionDialing", IsNullable = false, Namespace = "")]
-        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:557")]
+        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:560")]
         public bool EnableLevelExtensionDialing
         {
             get => _enableLevelExtensionDialing;
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "keyConfiguration", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:557")]
+        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:560")]
         public List<BroadWorksConnector.Ocip.Models.AutoAttendantKeyReadConfiguration20> KeyConfiguration
         {
             get => _keyConfiguration;

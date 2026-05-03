@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7734""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7707""}]")]
     public class CallDispositionCodeWithLevel
     {
 
         protected string _code;
 
         [XmlElement(ElementName = "code", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:7734")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7707")]
         [MinLength(1)]
         [MaxLength(10)]
         public string Code
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CallDispositionCodeLevel _level;
 
         [XmlElement(ElementName = "level", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:7734")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7707")]
         public BroadWorksConnector.Ocip.Models.CallDispositionCodeLevel Level
         {
             get => _level;

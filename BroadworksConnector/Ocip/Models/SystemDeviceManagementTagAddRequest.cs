@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: SystemDeviceManagementTagAddRequest21sp2
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemDeviceManagementTagAddRequest21sp2"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:26143"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:26144""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:29712"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:29713""}]}]")]
     public class SystemDeviceManagementTagAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected bool _systemDefaultTagSet;
 
         [XmlElement(ElementName = "systemDefaultTagSet", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:26144")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29713")]
         public bool SystemDefaultTagSet
         {
             get => _systemDefaultTagSet;
@@ -41,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _tagSetName;
 
         [XmlElement(ElementName = "tagSetName", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:26144")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29713")]
         [MinLength(1)]
         [MaxLength(30)]
         public string TagSetName
@@ -60,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _tagName;
 
         [XmlElement(ElementName = "tagName", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:26143")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29712")]
         [MinLength(1)]
         [MaxLength(64)]
         public string TagName
@@ -80,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "tagValue", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:26143")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29712")]
         [MinLength(1)]
         [MaxLength(256)]
         public string TagValue

@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b879060a029bc884d4ec2c341a2783f:57""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b879060a029bc884d4ec2c341a2783f:61""}]")]
     public class SystemCustomerOriginatedTraceGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _screenMaliciousCallers;
 
         [XmlElement(ElementName = "screenMaliciousCallers", IsNullable = false, Namespace = "")]
-        [Group(@"4b879060a029bc884d4ec2c341a2783f:57")]
+        [Group(@"4b879060a029bc884d4ec2c341a2783f:61")]
         public bool ScreenMaliciousCallers
         {
             get => _screenMaliciousCallers;

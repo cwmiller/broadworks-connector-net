@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""adf25df72505d1c476ebb480b6cce18d:908"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""adf25df72505d1c476ebb480b6cce18d:913"",""optional"":true}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""adf25df72505d1c476ebb480b6cce18d:911"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""adf25df72505d1c476ebb480b6cce18d:916"",""optional"":true}]}]")]
     public class UserMeetMeConferencingModifyConferenceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:908")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:911")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceKey _conferenceKey;
 
         [XmlElement(ElementName = "conferenceKey", IsNullable = false, Namespace = "")]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:908")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:911")]
         public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceKey ConferenceKey
         {
             get => _conferenceKey;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "title", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:908")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:911")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Title
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "estimatedParticipants", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:908")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:911")]
         [MinInclusive(1)]
         [MaxInclusive(294)]
         public int? EstimatedParticipants
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _restrictParticipants;
 
         [XmlElement(ElementName = "restrictParticipants", IsNullable = false, Namespace = "")]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:913")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:916")]
         public bool RestrictParticipants
         {
             get => _restrictParticipants;
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxParticipants;
 
         [XmlElement(ElementName = "maxParticipants", IsNullable = false, Namespace = "")]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:913")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:916")]
         [MinInclusive(1)]
         [MaxInclusive(294)]
         public int MaxParticipants
@@ -139,7 +139,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "accountCode", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:908")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:911")]
         [MinLength(1)]
         [MaxLength(50)]
         public string AccountCode
@@ -159,7 +159,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "muteAllAttendeesOnEntry", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:908")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:911")]
         public bool? MuteAllAttendeesOnEntry
         {
             get => _muteAllAttendeesOnEntry;
@@ -177,7 +177,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "endConferenceOnModeratorExit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:908")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:911")]
         public bool? EndConferenceOnModeratorExit
         {
             get => _endConferenceOnModeratorExit;
@@ -195,7 +195,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "moderatorRequired", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:908")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:911")]
         public bool? ModeratorRequired
         {
             get => _moderatorRequired;
@@ -213,7 +213,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "requireSecurityPin", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:908")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:911")]
         public bool? RequireSecurityPin
         {
             get => _requireSecurityPin;
@@ -231,7 +231,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowUniqueIdentifier", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:908")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:911")]
         public bool? AllowUniqueIdentifier
         {
             get => _allowUniqueIdentifier;
@@ -249,7 +249,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "attendeeNotification", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:908")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:911")]
         public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceAttendeeNotification? AttendeeNotification
         {
             get => _attendeeNotification;
@@ -267,7 +267,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "conferenceSchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:908")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:911")]
         public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceSchedule ConferenceSchedule
         {
             get => _conferenceSchedule;
@@ -285,7 +285,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowParticipantUnmuteInAutoLectureMode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:908")]
+        [Group(@"adf25df72505d1c476ebb480b6cce18d:911")]
         public bool? AllowParticipantUnmuteInAutoLectureMode
         {
             get => _allowParticipantUnmuteInAutoLectureMode;

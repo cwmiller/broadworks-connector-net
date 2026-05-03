@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: GroupAdminGetRequest22V3
     /// <see cref="GroupAdminGetResponse22V2"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="GroupAdminGetRequest22V3"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:1508""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:1589""}]")]
     public class GroupAdminGetRequest22V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupAdminGetResponse22V2>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:1508")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:1589")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

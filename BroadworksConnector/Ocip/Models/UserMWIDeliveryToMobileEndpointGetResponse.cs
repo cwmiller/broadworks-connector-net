@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1ea80c1e18c25d0eed23dbc7bd18f1dc:367""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:21161""}]")]
     public class UserMWIDeliveryToMobileEndpointGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:367")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:21161")]
         public bool IsActive
         {
             get => _isActive;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mobilePhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:367")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:21161")]
         [MinLength(1)]
         [MaxLength(23)]
         public string MobilePhoneNumber

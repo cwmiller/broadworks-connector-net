@@ -13,19 +13,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: UserCollaborateBridgeGetRequest20sp1
     /// <see cref="UserCollaborateBridgeGetResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="UserCollaborateBridgeGetRequest20sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:42478""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:46521""}]")]
     public class UserCollaborateBridgeGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserCollaborateBridgeGetResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:42478")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:46521")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

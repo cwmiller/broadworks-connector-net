@@ -26,14 +26,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:1283""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:1290""}]")]
     public class EnterpriseCallCenterEnhancedReportingGetAvailableReportTemplateListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _reportTemplateTable;
 
         [XmlElement(ElementName = "reportTemplateTable", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:1283")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:1290")]
         public BroadWorksConnector.Ocip.Models.C.OCITable ReportTemplateTable
         {
             get => _reportTemplateTable;

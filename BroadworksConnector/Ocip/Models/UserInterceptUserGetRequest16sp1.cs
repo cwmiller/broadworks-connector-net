@@ -9,23 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get the user's intercept user service settings.
     /// The response is either a UserInterceptUserGetResponse16sp1 or an ErrorResponse.
-    /// 
-    /// Replaced by: UserInterceptUserGetRequest21sp1 in AS data mode
+    /// Replaced by: UserInterceptUserGetResponseRI in XS mode
+    /// Replaced by: UserInterceptUserGetResponse21sp1 in AS mode
     /// <see cref="UserInterceptUserGetResponse16sp1"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="UserInterceptUserGetRequest21sp1"/>
+    /// <see cref="UserInterceptUserGetResponse21sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:18285""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:49738""}]")]
     public class UserInterceptUserGetRequest16sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserInterceptUserGetResponse16sp1>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:18285")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:49738")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

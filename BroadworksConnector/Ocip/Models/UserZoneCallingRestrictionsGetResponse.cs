@@ -9,12 +9,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Gets the home zone for a user
     /// Response to a UserZoneCallingRestrictionsGetRequest
-    /// <see cref="UserZoneCallingRestrictionsGetRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1d57523802a1435faa76c4035da1e4dc:116""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1d57523802a1435faa76c4035da1e4dc:120""}]")]
     public class UserZoneCallingRestrictionsGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -22,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "homeZoneName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1d57523802a1435faa76c4035da1e4dc:116")]
+        [Group(@"1d57523802a1435faa76c4035da1e4dc:120")]
         [MinLength(1)]
         [MaxLength(80)]
         public string HomeZoneName

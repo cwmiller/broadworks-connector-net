@@ -11,20 +11,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// Contains the policy settings for the group.
     /// 
     /// Replaced by: GroupPolicyGetResponse20 in AS data mode
+    /// Replaced by: GroupPolicyGetResponse22 in XS data mode
     /// <see cref="GroupPolicyGetRequest17"/>
     /// <see cref="GroupPolicyGetResponse20"/>
+    /// <see cref="GroupPolicyGetResponse22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:4148""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:13505""}]")]
     public class GroupPolicyGetResponse17 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.GroupCallingPlanAccess _callingPlanAccess;
 
         [XmlElement(ElementName = "callingPlanAccess", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4148")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:13505")]
         public BroadWorksConnector.Ocip.Models.GroupCallingPlanAccess CallingPlanAccess
         {
             get => _callingPlanAccess;
@@ -41,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.GroupExtensionAccess _extensionAccess;
 
         [XmlElement(ElementName = "extensionAccess", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4148")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:13505")]
         public BroadWorksConnector.Ocip.Models.GroupExtensionAccess ExtensionAccess
         {
             get => _extensionAccess;
@@ -58,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.GroupLDAPIntegrationAccess _ldapIntegrationAccess;
 
         [XmlElement(ElementName = "ldapIntegrationAccess", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4148")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:13505")]
         public BroadWorksConnector.Ocip.Models.GroupLDAPIntegrationAccess LdapIntegrationAccess
         {
             get => _ldapIntegrationAccess;
@@ -75,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.GroupVoiceMessagingAccess _voiceMessagingAccess;
 
         [XmlElement(ElementName = "voiceMessagingAccess", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4148")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:13505")]
         public BroadWorksConnector.Ocip.Models.GroupVoiceMessagingAccess VoiceMessagingAccess
         {
             get => _voiceMessagingAccess;
@@ -92,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.GroupDepartmentAdminUserAccess _departmentAdminUserAccess;
 
         [XmlElement(ElementName = "departmentAdminUserAccess", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4148")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:13505")]
         public BroadWorksConnector.Ocip.Models.GroupDepartmentAdminUserAccess DepartmentAdminUserAccess
         {
             get => _departmentAdminUserAccess;
@@ -109,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.GroupDepartmentAdminTrunkGroupAccess _departmentAdminTrunkGroupAccess;
 
         [XmlElement(ElementName = "departmentAdminTrunkGroupAccess", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4148")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:13505")]
         public BroadWorksConnector.Ocip.Models.GroupDepartmentAdminTrunkGroupAccess DepartmentAdminTrunkGroupAccess
         {
             get => _departmentAdminTrunkGroupAccess;
@@ -126,7 +128,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.GroupDepartmentAdminPhoneNumberExtensionAccess _departmentAdminPhoneNumberExtensionAccess;
 
         [XmlElement(ElementName = "departmentAdminPhoneNumberExtensionAccess", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4148")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:13505")]
         public BroadWorksConnector.Ocip.Models.GroupDepartmentAdminPhoneNumberExtensionAccess DepartmentAdminPhoneNumberExtensionAccess
         {
             get => _departmentAdminPhoneNumberExtensionAccess;
@@ -143,7 +145,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.GroupDepartmentAdminCallingLineIdNumberAccess _departmentAdminCallingLineIdNumberAccess;
 
         [XmlElement(ElementName = "departmentAdminCallingLineIdNumberAccess", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4148")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:13505")]
         public BroadWorksConnector.Ocip.Models.GroupDepartmentAdminCallingLineIdNumberAccess DepartmentAdminCallingLineIdNumberAccess
         {
             get => _departmentAdminCallingLineIdNumberAccess;
@@ -160,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.GroupUserAuthenticationAccess _userAuthenticationAccess;
 
         [XmlElement(ElementName = "userAuthenticationAccess", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4148")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:13505")]
         public BroadWorksConnector.Ocip.Models.GroupUserAuthenticationAccess UserAuthenticationAccess
         {
             get => _userAuthenticationAccess;
@@ -177,7 +179,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.GroupUserGroupDirectoryAccess _userGroupDirectoryAccess;
 
         [XmlElement(ElementName = "userGroupDirectoryAccess", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4148")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:13505")]
         public BroadWorksConnector.Ocip.Models.GroupUserGroupDirectoryAccess UserGroupDirectoryAccess
         {
             get => _userGroupDirectoryAccess;
@@ -194,7 +196,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.GroupUserProfileAccess _userProfileAccess;
 
         [XmlElement(ElementName = "userProfileAccess", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4148")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:13505")]
         public BroadWorksConnector.Ocip.Models.GroupUserProfileAccess UserProfileAccess
         {
             get => _userProfileAccess;
@@ -211,7 +213,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.GroupUserCallLogAccess _userEnhancedCallLogAccess;
 
         [XmlElement(ElementName = "userEnhancedCallLogAccess", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4148")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:13505")]
         public BroadWorksConnector.Ocip.Models.GroupUserCallLogAccess UserEnhancedCallLogAccess
         {
             get => _userEnhancedCallLogAccess;

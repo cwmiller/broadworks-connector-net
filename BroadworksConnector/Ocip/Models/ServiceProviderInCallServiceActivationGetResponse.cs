@@ -11,19 +11,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Replaced by: ServiceProviderInCallServiceActivationGetResponse17
     /// <see cref="ServiceProviderInCallServiceActivationGetRequest"/>
-    /// <see cref="ServiceProviderInCallServiceActivationGetResponse17"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:19516""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:21662""}]")]
     public class ServiceProviderInCallServiceActivationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _activationDigits;
 
         [XmlElement(ElementName = "activationDigits", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:19516")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:21662")]
         [MinLength(1)]
         [MaxLength(8)]
         public string ActivationDigits

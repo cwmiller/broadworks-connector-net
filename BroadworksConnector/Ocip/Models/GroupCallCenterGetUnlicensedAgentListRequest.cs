@@ -8,21 +8,21 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get a list of unlicensed users who are preventing the Call Center from upgrading to another type.
-    /// The response is either GroupCallCenterGetUnlicensedAgentListResponse or ErrorResponse.
-    /// <see cref="GroupCallCenterGetUnlicensedAgentListResponse"/>
+    /// The response is either GroupCallCenterGetUnlicensedAgentListRequest or ErrorResponse.
+    /// <see cref="GroupCallCenterGetUnlicensedAgentListRequest"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:4868""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:4851""}]")]
     public class GroupCallCenterGetUnlicensedAgentListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupCallCenterGetUnlicensedAgentListResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:4868")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:4851")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CallCenterType _callCenterType;
 
         [XmlElement(ElementName = "callCenterType", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:4868")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:4851")]
         public BroadWorksConnector.Ocip.Models.CallCenterType CallCenterType
         {
             get => _callCenterType;

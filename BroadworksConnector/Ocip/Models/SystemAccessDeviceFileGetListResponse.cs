@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// The column headings are: "File Type", "File Format", "Is Authenticated".
     /// Replaced By: SystemAccessDeviceFileGetListResponse14sp8
     /// <see cref="SystemAccessDeviceFileGetListRequest"/>
-    /// <see cref="SystemAccessDeviceFileGetListResponse14sp8"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:20046""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:22586""}]")]
     public class SystemAccessDeviceFileGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _deviceFilesTable;
 
         [XmlElement(ElementName = "deviceFilesTable", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:20046")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:22586")]
         public BroadWorksConnector.Ocip.Models.C.OCITable DeviceFilesTable
         {
             get => _deviceFilesTable;

@@ -10,6 +10,9 @@ namespace BroadWorksConnector.Ocip.Models
     /// Activating: An activation code was requested for the device, but it has not been consumed yet. The device is therefore not fully onboarded and
     /// cannot make or receive calls.
     /// Activated: The device has been onboarded. It can make and receive calls.
+    /// Activating Unknown Model: An activation code was requested for an unknown device model.
+    /// The unknown device is therefore not fully onboarded and cannot make or receive calls.
+    /// This enum value is ONLY used in WxCAS.
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
@@ -21,5 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
         Activating,
         [XmlEnum(Name = "Activated")]
         Activated,
+        [XmlEnum(Name = "Activating Unknown Model")]
+        ActivatingUnknownModel,
     }
 }

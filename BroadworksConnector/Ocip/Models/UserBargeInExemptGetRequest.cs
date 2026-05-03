@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0d9b3d8688162f1e9a9cae6f58ab8f13:42""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""0d9b3d8688162f1e9a9cae6f58ab8f13:45""}]")]
     public class UserBargeInExemptGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserBargeInExemptGetResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"0d9b3d8688162f1e9a9cae6f58ab8f13:42")]
+        [Group(@"0d9b3d8688162f1e9a9cae6f58ab8f13:45")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

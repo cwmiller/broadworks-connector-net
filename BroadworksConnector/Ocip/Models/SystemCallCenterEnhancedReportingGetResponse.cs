@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:6058""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:6027""}]")]
     public class SystemCallCenterEnhancedReportingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _archiveReports;
 
         [XmlElement(ElementName = "archiveReports", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:6058")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6027")]
         public bool ArchiveReports
         {
             get => _archiveReports;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "reportApplicationURL", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:6058")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6027")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ReportApplicationURL
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "repositoryApplicationURL", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:6058")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6027")]
         [MinLength(1)]
         [MaxLength(256)]
         public string RepositoryApplicationURL

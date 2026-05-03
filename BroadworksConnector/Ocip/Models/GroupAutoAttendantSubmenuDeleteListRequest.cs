@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ec63a55bc41262b2dd33a1f4e8e84674:487""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ec63a55bc41262b2dd33a1f4e8e84674:490""}]")]
     public class GroupAutoAttendantSubmenuDeleteListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:487")]
+        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:490")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected List<string> _submenuId = new List<string>();
 
         [XmlElement(ElementName = "submenuId", IsNullable = false, Namespace = "")]
-        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:487")]
+        [Group(@"ec63a55bc41262b2dd33a1f4e8e84674:490")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> SubmenuId

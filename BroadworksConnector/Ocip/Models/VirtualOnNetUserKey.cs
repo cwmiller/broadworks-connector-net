@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:5796""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:6611""}]")]
     public class VirtualOnNetUserKey
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5796")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6611")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5796")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6611")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5796")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6611")]
         [MinLength(1)]
         [MaxLength(23)]
         public string PhoneNumber

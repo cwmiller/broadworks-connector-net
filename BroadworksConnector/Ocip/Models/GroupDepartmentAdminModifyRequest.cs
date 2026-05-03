@@ -20,14 +20,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:3594""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:3634""}]")]
     public class GroupDepartmentAdminModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:3594")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:3634")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -48,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "firstName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:3594")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:3634")]
         [MinLength(1)]
         [MaxLength(30)]
         public string FirstName
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "lastName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:3594")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:3634")]
         [MinLength(1)]
         [MaxLength(30)]
         public string LastName
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "password", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:3594")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:3634")]
         [MinLength(1)]
         [MaxLength(60)]
         public string Password
@@ -110,7 +110,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:3594")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:3634")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Language
@@ -130,7 +130,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accountDisabled", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:3594")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:3634")]
         public bool? AccountDisabled
         {
             get => _accountDisabled;

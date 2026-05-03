@@ -9,20 +9,21 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to get all the information of a flexible seating host instance.
     /// The response is either GroupFlexibleSeatingHostGetInstanceResponse22 or ErrorResponse.
+    /// Replaced by: GroupFlexibleSeatingHostGetInstanceRequest24
     /// <see cref="GroupFlexibleSeatingHostGetInstanceResponse22"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1d4e390f8cd01ca6f92589024d74dac6:182""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:10890""}]")]
     public class GroupFlexibleSeatingHostGetInstanceRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupFlexibleSeatingHostGetInstanceResponse22>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:182")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10890")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId

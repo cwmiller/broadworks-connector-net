@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4e9808afa6161bba01df39d17a849c79:112""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4e9808afa6161bba01df39d17a849c79:116""}]")]
     public class UserSharedCallAppearanceGetEndpointResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"4e9808afa6161bba01df39d17a849c79:112")]
+        [Group(@"4e9808afa6161bba01df39d17a849c79:116")]
         public bool IsActive
         {
             get => _isActive;
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowOrigination;
 
         [XmlElement(ElementName = "allowOrigination", IsNullable = false, Namespace = "")]
-        [Group(@"4e9808afa6161bba01df39d17a849c79:112")]
+        [Group(@"4e9808afa6161bba01df39d17a849c79:116")]
         public bool AllowOrigination
         {
             get => _allowOrigination;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowTermination;
 
         [XmlElement(ElementName = "allowTermination", IsNullable = false, Namespace = "")]
-        [Group(@"4e9808afa6161bba01df39d17a849c79:112")]
+        [Group(@"4e9808afa6161bba01df39d17a849c79:116")]
         public bool AllowTermination
         {
             get => _allowTermination;
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useHotline;
 
         [XmlElement(ElementName = "useHotline", IsNullable = false, Namespace = "")]
-        [Group(@"4e9808afa6161bba01df39d17a849c79:112")]
+        [Group(@"4e9808afa6161bba01df39d17a849c79:116")]
         public bool UseHotline
         {
             get => _useHotline;
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hotlineContact", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4e9808afa6161bba01df39d17a849c79:112")]
+        [Group(@"4e9808afa6161bba01df39d17a849c79:116")]
         [MinLength(1)]
         [MaxLength(161)]
         public string HotlineContact

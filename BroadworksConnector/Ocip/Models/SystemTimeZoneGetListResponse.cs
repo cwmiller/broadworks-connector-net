@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:15382""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:16595""}]")]
     public class SystemTimeZoneGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _timeZoneTable;
 
         [XmlElement(ElementName = "timeZoneTable", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:15382")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:16595")]
         public BroadWorksConnector.Ocip.Models.C.OCITable TimeZoneTable
         {
             get => _timeZoneTable;

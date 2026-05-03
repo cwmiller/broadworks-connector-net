@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:14472""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:14664""}]")]
     public class SystemPerformanceMeasurementReportingAddFileServerRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _repositoryUrl;
 
         [XmlElement(ElementName = "repositoryUrl", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:14472")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14664")]
         [MinLength(1)]
         [MaxLength(256)]
         public string RepositoryUrl
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _ftpUserId;
 
         [XmlElement(ElementName = "ftpUserId", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:14472")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14664")]
         [MinLength(1)]
         [MaxLength(30)]
         public string FtpUserId
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _ftpUserPassword;
 
         [XmlElement(ElementName = "ftpUserPassword", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:14472")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14664")]
         [MinLength(1)]
         [MaxLength(40)]
         public string FtpUserPassword
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "passiveFTP", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:14472")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:14664")]
         public bool? PassiveFTP
         {
             get => _passiveFTP;

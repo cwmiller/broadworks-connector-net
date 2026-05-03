@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b4095e83c8aa84e850615ffe7d48b0d6:57""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b4095e83c8aa84e850615ffe7d48b0d6:60""}]")]
     public class ServiceProviderBroadWorksCommunicatorGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "configurationServerURL", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b4095e83c8aa84e850615ffe7d48b0d6:57")]
+        [Group(@"b4095e83c8aa84e850615ffe7d48b0d6:60")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ConfigurationServerURL

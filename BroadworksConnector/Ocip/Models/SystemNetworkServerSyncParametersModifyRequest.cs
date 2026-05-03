@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:12993""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:13112""}]")]
     public class SystemNetworkServerSyncParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -26,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableSync", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:12993")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:13112")]
         public bool? EnableSync
         {
             get => _enableSync;
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "syncLinePorts", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:12993")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:13112")]
         public bool? SyncLinePorts
         {
             get => _syncLinePorts;
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "syncDeviceManagementInfo", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:12993")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:13112")]
         public bool? SyncDeviceManagementInfo
         {
             get => _syncDeviceManagementInfo;
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "syncTrunkGroups", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:12993")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:13112")]
         public bool? SyncTrunkGroups
         {
             get => _syncTrunkGroups;
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "syncConnectionTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:12993")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:13112")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
         public int? SyncConnectionTimeoutSeconds
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "syncEnterpriseNumbers", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:12993")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:13112")]
         public bool? SyncEnterpriseNumbers
         {
             get => _syncEnterpriseNumbers;

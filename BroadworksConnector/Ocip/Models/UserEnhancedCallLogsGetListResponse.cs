@@ -10,12 +10,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to UserEnhancedCallLogsGetListRequest.
     /// Replaced By: UserEnhancedCallLogsGetListResponse14sp4
     /// <see cref="UserEnhancedCallLogsGetListRequest"/>
-    /// <see cref="UserEnhancedCallLogsGetListResponse14sp4"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:43200""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:47242""}]")]
     public class UserEnhancedCallLogsGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -23,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "placed", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:43200")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:47242")]
         public List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> Placed
         {
             get => _placed;
@@ -41,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "received", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:43200")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:47242")]
         public List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> Received
         {
             get => _received;
@@ -59,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "missed", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:43200")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:47242")]
         public List<BroadWorksConnector.Ocip.Models.EnhancedCallLogsEntry> Missed
         {
             get => _missed;

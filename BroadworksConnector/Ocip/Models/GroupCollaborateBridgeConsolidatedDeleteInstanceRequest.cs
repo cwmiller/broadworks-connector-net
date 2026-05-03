@@ -17,19 +17,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either SuccessResponse or ErrorResponse.
     /// <see cref="ErrorResponse"/>
     /// <see cref="SuccessResponse"/>
-    /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bc805893b9cc7e3e01eec64e9ad62768:135""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bc805893b9cc7e3e01eec64e9ad62768:138""}]")]
     public class GroupCollaborateBridgeConsolidatedDeleteInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:135")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:138")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -49,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "unassignPhoneNumbers", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:135")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:138")]
         public BroadWorksConnector.Ocip.Models.UnassignPhoneNumbersLevel? UnassignPhoneNumbers
         {
             get => _unassignPhoneNumbers;

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:28797""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:32483""}]")]
     public class SystemPerformanceMeasurementReportingDeleteFileServerRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _ftpHostNetAddress;
 
         [XmlElement(ElementName = "ftpHostNetAddress", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:28797")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:32483")]
         [MinLength(1)]
         [MaxLength(80)]
         public string FtpHostNetAddress

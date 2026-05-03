@@ -22,14 +22,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:8420""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:8986""}]")]
     public class SystemBusyLampFieldGetResponse23 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _displayLocalUserIdentityLastNameFirst;
 
         [XmlElement(ElementName = "displayLocalUserIdentityLastNameFirst", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:8420")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:8986")]
         public bool DisplayLocalUserIdentityLastNameFirst
         {
             get => _displayLocalUserIdentityLastNameFirst;
@@ -46,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _forceUseOfTCP;
 
         [XmlElement(ElementName = "forceUseOfTCP", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:8420")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:8986")]
         public bool ForceUseOfTCP
         {
             get => _forceUseOfTCP;
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableRedundancy;
 
         [XmlElement(ElementName = "enableRedundancy", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:8420")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:8986")]
         public bool EnableRedundancy
         {
             get => _enableRedundancy;
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _redundancyTaskDelayMilliseconds;
 
         [XmlElement(ElementName = "redundancyTaskDelayMilliseconds", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:8420")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:8986")]
         [MinInclusive(10000)]
         [MaxInclusive(180000)]
         public int RedundancyTaskDelayMilliseconds
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _redundancyTaskIntervalMilliseconds;
 
         [XmlElement(ElementName = "redundancyTaskIntervalMilliseconds", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:8420")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:8986")]
         [MinInclusive(50)]
         [MaxInclusive(20000)]
         public int RedundancyTaskIntervalMilliseconds
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxNumberOfSubscriptionsPerRedundancyTaskInterval;
 
         [XmlElement(ElementName = "maxNumberOfSubscriptionsPerRedundancyTaskInterval", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:8420")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:8986")]
         [MinInclusive(1)]
         [MaxInclusive(50000)]
         public int MaxNumberOfSubscriptionsPerRedundancyTaskInterval

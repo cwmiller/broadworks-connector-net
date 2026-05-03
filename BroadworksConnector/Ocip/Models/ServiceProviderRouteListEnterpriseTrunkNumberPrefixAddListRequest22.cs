@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""500f9871ed90b8ab3fbd262883ab503b:457""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""500f9871ed90b8ab3fbd262883ab503b:460""}]")]
     public class ServiceProviderRouteListEnterpriseTrunkNumberPrefixAddListRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"500f9871ed90b8ab3fbd262883ab503b:457")]
+        [Group(@"500f9871ed90b8ab3fbd262883ab503b:460")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected List<BroadWorksConnector.Ocip.Models.EnterpriseTrunkNumberPrefix22> _prefix = new List<BroadWorksConnector.Ocip.Models.EnterpriseTrunkNumberPrefix22>();
 
         [XmlElement(ElementName = "prefix", IsNullable = false, Namespace = "")]
-        [Group(@"500f9871ed90b8ab3fbd262883ab503b:457")]
+        [Group(@"500f9871ed90b8ab3fbd262883ab503b:460")]
         public List<BroadWorksConnector.Ocip.Models.EnterpriseTrunkNumberPrefix22> Prefix
         {
             get => _prefix;

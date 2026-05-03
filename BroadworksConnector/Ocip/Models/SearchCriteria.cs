@@ -91,6 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserGroup))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserInTrunkGroup))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserNetworkClassOfService))]
+    [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserPersonId))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserRouteListAssigned))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserRouteListAssignment))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaExactUserType))]
@@ -154,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaZoneIPAddress))]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SearchCriteriaExactEndpointType))]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:50""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:54""}]")]
     public abstract class SearchCriteria
     {
 

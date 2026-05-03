@@ -1,0 +1,115 @@
+using System;
+using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
+using System.Collections.Generic;
+
+namespace BroadWorksConnector.Ocip.Models
+{
+    /// <summary>
+    /// The configuration of the automated receptionist
+    /// greeting
+    /// prompt and dialing menu to be used during
+    /// business
+    /// hours.
+    /// It is used when modifying an Auto Attendant group.
+    /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:1026""}]")]
+    public class AutoAttendantModifyMenuXS
+    {
+
+        protected BroadWorksConnector.Ocip.Models.AnnouncementSelection? _announcementSelection;
+
+        [XmlElement(ElementName = "announcementSelection", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1026")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementSelection? AnnouncementSelection
+        {
+            get => _announcementSelection;
+            set
+            {
+                AnnouncementSelectionSpecified = (value != null);
+                _announcementSelection = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool AnnouncementSelectionSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.LabeledMediaFileResourceRI _audioFile;
+
+        [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1026")]
+        public BroadWorksConnector.Ocip.Models.LabeledMediaFileResourceRI AudioFile
+        {
+            get => _audioFile;
+            set
+            {
+                AudioFileSpecified = (value != null);
+                _audioFile = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool AudioFileSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.LabeledMediaFileResource _videoFile;
+
+        [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1026")]
+        public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource VideoFile
+        {
+            get => _videoFile;
+            set
+            {
+                VideoFileSpecified = (value != null);
+                _videoFile = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool VideoFileSpecified { get; set; }
+
+        protected bool? _enableFirstMenuLevelExtensionDialing;
+
+        [XmlElement(ElementName = "enableFirstMenuLevelExtensionDialing", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1026")]
+        public bool? EnableFirstMenuLevelExtensionDialing
+        {
+            get => _enableFirstMenuLevelExtensionDialing;
+            set
+            {
+                EnableFirstMenuLevelExtensionDialingSpecified = (value != null);
+                _enableFirstMenuLevelExtensionDialing = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool EnableFirstMenuLevelExtensionDialingSpecified { get; set; }
+
+        protected List<BroadWorksConnector.Ocip.Models.AutoAttendantKeyModifyConfigurationXS> _keyConfiguration = new List<BroadWorksConnector.Ocip.Models.AutoAttendantKeyModifyConfigurationXS>();
+
+        [XmlElement(ElementName = "keyConfiguration", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1026")]
+        public List<BroadWorksConnector.Ocip.Models.AutoAttendantKeyModifyConfigurationXS> KeyConfiguration
+        {
+            get => _keyConfiguration;
+            set
+            {
+                KeyConfigurationSpecified = (value != null);
+                _keyConfiguration = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool KeyConfigurationSpecified { get; set; }
+
+    }
+}

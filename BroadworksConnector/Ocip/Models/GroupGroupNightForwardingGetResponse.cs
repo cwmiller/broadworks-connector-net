@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""65f35694d7d3354987bf6387ab55bfc6:63""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""65f35694d7d3354987bf6387ab55bfc6:67""}]")]
     public class GroupGroupNightForwardingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.GroupNightForwardingGroupServiceActivationMode _nightForwarding;
 
         [XmlElement(ElementName = "nightForwarding", IsNullable = false, Namespace = "")]
-        [Group(@"65f35694d7d3354987bf6387ab55bfc6:63")]
+        [Group(@"65f35694d7d3354987bf6387ab55bfc6:67")]
         public BroadWorksConnector.Ocip.Models.GroupNightForwardingGroupServiceActivationMode NightForwarding
         {
             get => _nightForwarding;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "businessHours", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"65f35694d7d3354987bf6387ab55bfc6:63")]
+        [Group(@"65f35694d7d3354987bf6387ab55bfc6:67")]
         public BroadWorksConnector.Ocip.Models.TimeSchedule BusinessHours
         {
             get => _businessHours;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"65f35694d7d3354987bf6387ab55bfc6:63")]
+        [Group(@"65f35694d7d3354987bf6387ab55bfc6:67")]
         public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule
         {
             get => _holidaySchedule;
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "forwardToPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"65f35694d7d3354987bf6387ab55bfc6:63")]
+        [Group(@"65f35694d7d3354987bf6387ab55bfc6:67")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ForwardToPhoneNumber

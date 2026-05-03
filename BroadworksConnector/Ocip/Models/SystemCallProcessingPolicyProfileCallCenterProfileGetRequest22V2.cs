@@ -8,21 +8,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Request to get the configuration for a call processing policy profile Call Center subscriber type profile.
-    /// The response is either a SystemCallProcessingPolicyProfileCallCenterProfileGetResponse22V2 or an ErrorResponse.
-    /// <see cref="SystemCallProcessingPolicyProfileCallCenterProfileGetResponse22V2"/>
+    /// The response is either a SystemCallProcessingPolicyProfileCallCenterProfileGetRequestResponse22V2 or an
+    /// ErrorResponse.
+    /// <see cref="SystemCallProcessingPolicyProfileCallCenterProfileGetRequestResponse22V2"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:3470""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:3525""}]")]
     public class SystemCallProcessingPolicyProfileCallCenterProfileGetRequest22V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemCallProcessingPolicyProfileCallCenterProfileGetResponse22V2>
     {
 
         protected string _callProcessingPolicyProfileName;
 
         [XmlElement(ElementName = "callProcessingPolicyProfileName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:3470")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:3525")]
         [MinLength(1)]
         [MaxLength(40)]
         public string CallProcessingPolicyProfileName

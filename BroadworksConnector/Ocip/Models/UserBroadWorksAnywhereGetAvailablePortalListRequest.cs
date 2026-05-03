@@ -8,23 +8,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get a list of all the available BroadWorks Anywhere portal instances for a specific user
-    /// The response is either UserBroadWorksAnywhereGetAvailablePortalListResponse or ErrorResponse.
+    /// The response is either UserBroadWorksAnywhereGetAvailableListResponse or ErrorResponse.
     /// Replaced by UserBroadWorksAnywhereGetAvailablePortalListRequest21sp1
-    /// <see cref="UserBroadWorksAnywhereGetAvailablePortalListResponse"/>
+    /// <see cref="UserBroadWorksAnywhereGetAvailableListResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="UserBroadWorksAnywhereGetAvailablePortalListRequest21sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:16695""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:18411""}]")]
     public class UserBroadWorksAnywhereGetAvailablePortalListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserBroadWorksAnywhereGetAvailablePortalListResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:16695")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:18411")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

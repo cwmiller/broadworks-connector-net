@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:2008""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:2053""}]")]
     public class SystemAccountingInhibitedAttributeValuePairCodeDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected int _attributeValuePairCode;
 
         [XmlElement(ElementName = "attributeValuePairCode", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:2008")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2053")]
         public int AttributeValuePairCode
         {
             get => _attributeValuePairCode;
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _vendorId;
 
         [XmlElement(ElementName = "vendorId", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:2008")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2053")]
         public int VendorId
         {
             get => _vendorId;

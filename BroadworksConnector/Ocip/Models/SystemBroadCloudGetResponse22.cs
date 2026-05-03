@@ -14,7 +14,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:2628""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:2673""}]")]
     public class SystemBroadCloudGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -22,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "provisioningUrl", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:2628")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2673")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ProvisioningUrl
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "provisioningUserId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:2628")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2673")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ProvisioningUserId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableSynchronization;
 
         [XmlElement(ElementName = "enableSynchronization", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:2628")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2673")]
         public bool EnableSynchronization
         {
             get => _enableSynchronization;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "proxyHost", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:2628")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2673")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ProxyHost
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _proxyPort;
 
         [XmlElement(ElementName = "proxyPort", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:2628")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2673")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int ProxyPort

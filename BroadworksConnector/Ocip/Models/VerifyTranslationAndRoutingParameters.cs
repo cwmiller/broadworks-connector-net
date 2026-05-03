@@ -23,14 +23,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:5778""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:6593""}]")]
     public class VerifyTranslationAndRoutingParameters
     {
 
         protected BroadWorksConnector.Ocip.Models.VerifyTranslationAndRoutingOrigination _origination;
 
         [XmlElement(ElementName = "origination", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5778")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6593")]
         public BroadWorksConnector.Ocip.Models.VerifyTranslationAndRoutingOrigination Origination
         {
             get => _origination;
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _destination;
 
         [XmlElement(ElementName = "destination", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5778")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6593")]
         [MinLength(1)]
         [MaxLength(500)]
         public string Destination
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5778")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6593")]
         [MinLength(1)]
         [MaxLength(256)]
         public string Contact
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "diversion", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5778")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6593")]
         [MinLength(1)]
         [MaxLength(256)]
         public string Diversion
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "imsCallType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5778")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6593")]
         public BroadWorksConnector.Ocip.Models.IMSCallType? ImsCallType
         {
             get => _imsCallType;
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sipInstance", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5778")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6593")]
         [MinLength(1)]
         [MaxLength(161)]
         public string SipInstance
@@ -145,7 +145,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "viaAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5778")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6593")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ViaAddress

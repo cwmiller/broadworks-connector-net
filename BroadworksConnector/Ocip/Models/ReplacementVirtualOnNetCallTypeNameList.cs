@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4542""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:5316""}]")]
     public class ReplacementVirtualOnNetCallTypeNameList
     {
 
         protected List<string> _virtualOnNetCallTypeName = new List<string>();
 
         [XmlElement(ElementName = "virtualOnNetCallTypeName", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4542")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5316")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> VirtualOnNetCallTypeName

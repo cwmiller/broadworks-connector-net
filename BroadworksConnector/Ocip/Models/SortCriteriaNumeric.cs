@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [XmlRoot(Namespace = "")]
     [XmlInclude(typeof(BroadWorksConnector.Ocip.Models.SortByAnnouncementFileSize))]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""846fcf536fcb4b0f0d32e089e99e4bfc:751""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""846fcf536fcb4b0f0d32e089e99e4bfc:755""}]")]
     public abstract class SortCriteriaNumeric
     {
 
         protected bool _isAscending;
 
         [XmlElement(ElementName = "isAscending", IsNullable = false, Namespace = "")]
-        [Group(@"846fcf536fcb4b0f0d32e089e99e4bfc:751")]
+        [Group(@"846fcf536fcb4b0f0d32e089e99e4bfc:755")]
         public bool IsAscending
         {
             get => _isAscending;

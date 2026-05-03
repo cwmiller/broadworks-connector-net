@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models.C
         protected List<T> _command = new List<T>();
 
         [XmlElement(ElementName = "command", IsNullable = false, Namespace = "")]
-        [Group(@"77f32f6c8e214eb5c1a80dedfce1cb56:37")]
+        [Group(@"5a0dbb6ff453924acebff71a89ec0dc8:37")]
         public List<T> Command
         {
             get => _command;

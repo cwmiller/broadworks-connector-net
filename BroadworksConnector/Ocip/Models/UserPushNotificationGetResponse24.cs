@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:3435""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:3580""}]")]
     public class UserPushNotificationGetResponse24 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _sendPushNotificationForClickToDial;
 
         [XmlElement(ElementName = "sendPushNotificationForClickToDial", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3435")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3580")]
         public bool SendPushNotificationForClickToDial
         {
             get => _sendPushNotificationForClickToDial;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _sendPushNotificationForGroupPaging;
 
         [XmlElement(ElementName = "sendPushNotificationForGroupPaging", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3435")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:3580")]
         public bool SendPushNotificationForGroupPaging
         {
             get => _sendPushNotificationForGroupPaging;

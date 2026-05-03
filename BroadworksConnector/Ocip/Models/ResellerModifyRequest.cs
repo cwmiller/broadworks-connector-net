@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d45e381d6dbac771631649063122a42e:671"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""d45e381d6dbac771631649063122a42e:672""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d45e381d6dbac771631649063122a42e:675"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""d45e381d6dbac771631649063122a42e:676""}]}]")]
     public class ResellerModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        [Group(@"d45e381d6dbac771631649063122a42e:672")]
+        [Group(@"d45e381d6dbac771631649063122a42e:676")]
         [MinLength(1)]
         [MaxLength(36)]
         public string ResellerId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _resellerExternalId;
 
         [XmlElement(ElementName = "resellerExternalId", IsNullable = false, Namespace = "")]
-        [Group(@"d45e381d6dbac771631649063122a42e:672")]
+        [Group(@"d45e381d6dbac771631649063122a42e:676")]
         [MaxLength(36)]
         public string ResellerExternalId
         {
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "resellerName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d45e381d6dbac771631649063122a42e:671")]
+        [Group(@"d45e381d6dbac771631649063122a42e:675")]
         [MinLength(1)]
         [MaxLength(320)]
         public string ResellerName

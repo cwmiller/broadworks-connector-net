@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3154""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3415""}]")]
     public class ExchangeUserNamePassword
     {
 
         protected string _userName;
 
         [XmlElement(ElementName = "userName", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3154")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3415")]
         [MinLength(1)]
         [MaxLength(64)]
         public string UserName
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _password;
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3154")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3415")]
         [MinLength(1)]
         [MaxLength(104)]
         public string Password

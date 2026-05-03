@@ -16,13 +16,13 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// The following elements are only used in AS data mode:
     /// accessSendWarningHeader, value "false" is returned in XS data mode
-    /// networkSendWarningHeader, value “false” is returned in XS data mode
+    /// networkSendWarningHeader, value "false" is returned in XS data mode
     /// <see cref="SystemConfigurableTreatmentGetRequest24"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:6884""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:6936""}]")]
     public class SystemConfigurableTreatmentGetResponse24 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -30,7 +30,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:6884")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6936")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -49,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ChargeIndicator _chargeIndicator;
 
         [XmlElement(ElementName = "chargeIndicator", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:6884")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6936")]
         public BroadWorksConnector.Ocip.Models.ChargeIndicator ChargeIndicator
         {
             get => _chargeIndicator;
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessSIPStatusCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:6884")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6936")]
         [MinInclusive(400)]
         [MaxInclusive(699)]
         public int? AccessSIPStatusCode
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessSIPStatusMessage", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:6884")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6936")]
         [MinLength(1)]
         [MaxLength(50)]
         public string AccessSIPStatusMessage
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkSIPStatusCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:6884")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6936")]
         [MinInclusive(400)]
         [MaxInclusive(699)]
         public int? NetworkSIPStatusCode
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkSIPStatusMessage", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:6884")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6936")]
         [MinLength(1)]
         [MaxLength(50)]
         public string NetworkSIPStatusMessage
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "q850CauseValue", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:6884")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6936")]
         [MinInclusive(1)]
         [MaxInclusive(256)]
         public int? Q850CauseValue
@@ -167,7 +167,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "q850Text", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:6884")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6936")]
         [MinLength(1)]
         [MaxLength(50)]
         public string Q850Text
@@ -187,7 +187,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessTreatmentAudioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:6884")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6936")]
         [MinLength(1)]
         [MaxLength(256)]
         public string AccessTreatmentAudioFile
@@ -207,7 +207,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessTreatmentVideoFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:6884")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6936")]
         [MinLength(1)]
         [MaxLength(256)]
         public string AccessTreatmentVideoFile
@@ -227,7 +227,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkTreatmentAudioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:6884")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6936")]
         [MinLength(1)]
         [MaxLength(256)]
         public string NetworkTreatmentAudioFile
@@ -247,7 +247,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkTreatmentVideoFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:6884")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6936")]
         [MinLength(1)]
         [MaxLength(256)]
         public string NetworkTreatmentVideoFile
@@ -267,7 +267,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "cdrTerminationCause", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:6884")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6936")]
         [MinLength(1)]
         [MaxLength(3)]
         public string CdrTerminationCause
@@ -286,7 +286,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _routeAdvance;
 
         [XmlElement(ElementName = "routeAdvance", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:6884")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6936")]
         public bool RouteAdvance
         {
             get => _routeAdvance;
@@ -304,7 +304,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "internalReleaseCause", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:6884")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6936")]
         public BroadWorksConnector.Ocip.Models.InternalReleaseCause16? InternalReleaseCause
         {
             get => _internalReleaseCause;
@@ -321,7 +321,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _accessSendReasonHeader;
 
         [XmlElement(ElementName = "accessSendReasonHeader", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:6884")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6936")]
         public bool AccessSendReasonHeader
         {
             get => _accessSendReasonHeader;
@@ -338,7 +338,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _networkSendReasonHeader;
 
         [XmlElement(ElementName = "networkSendReasonHeader", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:6884")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6936")]
         public bool NetworkSendReasonHeader
         {
             get => _networkSendReasonHeader;
@@ -356,7 +356,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "warnCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:6884")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6936")]
         [MinInclusive(300)]
         [MaxInclusive(399)]
         public int? WarnCode
@@ -376,7 +376,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "warnText", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:6884")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6936")]
         [MinLength(1)]
         [MaxLength(50)]
         public string WarnText
@@ -395,7 +395,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _accessSendWarningHeader;
 
         [XmlElement(ElementName = "accessSendWarningHeader", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:6884")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6936")]
         public bool AccessSendWarningHeader
         {
             get => _accessSendWarningHeader;
@@ -412,7 +412,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _networkSendWarningHeader;
 
         [XmlElement(ElementName = "networkSendWarningHeader", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:6884")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:6936")]
         public bool NetworkSendWarningHeader
         {
             get => _networkSendWarningHeader;

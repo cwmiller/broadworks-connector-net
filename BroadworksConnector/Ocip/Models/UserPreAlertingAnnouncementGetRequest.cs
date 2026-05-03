@@ -11,6 +11,7 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either a UserPreAlertingAnnouncementGetResponse or an ErrorResponse.
     /// 
     /// Replaced by: UserPreAlertingAnnouncementGetRequest20 in AS data mode
+    /// Replaced by: UserPreAlertingAnnouncementGetRequestXS in XS data mode
     /// <see cref="UserPreAlertingAnnouncementGetResponse"/>
     /// <see cref="ErrorResponse"/>
     /// <see cref="UserPreAlertingAnnouncementGetRequest20"/>
@@ -18,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:18573""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:50605""}]")]
     public class UserPreAlertingAnnouncementGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserPreAlertingAnnouncementGetResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:18573")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:50605")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

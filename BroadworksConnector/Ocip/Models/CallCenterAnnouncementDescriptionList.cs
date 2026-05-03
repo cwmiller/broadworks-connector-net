@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:951""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:1115""}]")]
     public class CallCenterAnnouncementDescriptionList
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "fileDescription1", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:951")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1115")]
         [MinLength(1)]
         [MaxLength(256)]
         public string FileDescription1
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "fileDescription2", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:951")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1115")]
         [MinLength(1)]
         [MaxLength(256)]
         public string FileDescription2
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "fileDescription3", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:951")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1115")]
         [MinLength(1)]
         [MaxLength(256)]
         public string FileDescription3
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "fileDescription4", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:951")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1115")]
         [MinLength(1)]
         [MaxLength(256)]
         public string FileDescription4

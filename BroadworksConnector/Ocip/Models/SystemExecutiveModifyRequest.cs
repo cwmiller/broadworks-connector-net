@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3a54ac906cb7002cc1a30fbb0efadb0a:82""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3a54ac906cb7002cc1a30fbb0efadb0a:86""}]")]
     public class SystemExecutiveModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "treatVirtualOnNetCallsAsInternal", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:82")]
+        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:86")]
         public bool? TreatVirtualOnNetCallsAsInternal
         {
             get => _treatVirtualOnNetCallsAsInternal;
@@ -36,6 +36,24 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool TreatVirtualOnNetCallsAsInternalSpecified { get; set; }
+
+        protected bool? _considerExecutiveOnHookForAssistantCalls;
+
+        [XmlElement(ElementName = "considerExecutiveOnHookForAssistantCalls", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:86")]
+        public bool? ConsiderExecutiveOnHookForAssistantCalls
+        {
+            get => _considerExecutiveOnHookForAssistantCalls;
+            set
+            {
+                ConsiderExecutiveOnHookForAssistantCallsSpecified = (value != null);
+                _considerExecutiveOnHookForAssistantCalls = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool ConsiderExecutiveOnHookForAssistantCallsSpecified { get; set; }
 
     }
 }

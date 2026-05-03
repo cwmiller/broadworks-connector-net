@@ -9,25 +9,25 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to get a sip device type.
     /// See Also: SystemDeviceTypeGetRequest
-    /// The response is either SystemSIPDeviceTypeGetResponse18sp1V2 or ErrorResponse.
+    /// The response is either SystemSIPDeviceTypeGetResponse19 or ErrorResponse.
     /// 
     /// Replaced by: SystemSIPDeviceTypeGetRequest19.
     /// <see cref="SystemDeviceTypeGetRequest"/>
-    /// <see cref="SystemSIPDeviceTypeGetResponse18sp1V2"/>
+    /// <see cref="SystemSIPDeviceTypeGetResponse19"/>
     /// <see cref="ErrorResponse"/>
     /// <see cref="SystemSIPDeviceTypeGetRequest19"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:32645""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:36600""}]")]
     public class SystemSIPDeviceTypeGetRequest18sp1V2 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemSIPDeviceTypeGetResponse18sp1V2>
     {
 
         protected string _deviceType;
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:32645")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:36600")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceType

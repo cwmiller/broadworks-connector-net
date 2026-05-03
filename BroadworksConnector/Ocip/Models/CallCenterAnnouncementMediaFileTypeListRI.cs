@@ -1,0 +1,92 @@
+using System;
+using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
+using System.Collections.Generic;
+
+namespace BroadWorksConnector.Ocip.Models
+{
+    /// <summary>
+    /// Contains list of file media types for audio files
+    /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:1199""}]")]
+    public class CallCenterAnnouncementMediaFileTypeListRI
+    {
+
+        protected BroadWorksConnector.Ocip.Models.AudioMediaFileType? _mediaType1;
+
+        [XmlElement(ElementName = "mediaType1", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1199")]
+        public BroadWorksConnector.Ocip.Models.AudioMediaFileType? MediaType1
+        {
+            get => _mediaType1;
+            set
+            {
+                MediaType1Specified = (value != null);
+                _mediaType1 = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool MediaType1Specified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.AudioMediaFileType? _mediaType2;
+
+        [XmlElement(ElementName = "mediaType2", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1199")]
+        public BroadWorksConnector.Ocip.Models.AudioMediaFileType? MediaType2
+        {
+            get => _mediaType2;
+            set
+            {
+                MediaType2Specified = (value != null);
+                _mediaType2 = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool MediaType2Specified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.AudioMediaFileType? _mediaType3;
+
+        [XmlElement(ElementName = "mediaType3", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1199")]
+        public BroadWorksConnector.Ocip.Models.AudioMediaFileType? MediaType3
+        {
+            get => _mediaType3;
+            set
+            {
+                MediaType3Specified = (value != null);
+                _mediaType3 = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool MediaType3Specified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.AudioMediaFileType? _mediaType4;
+
+        [XmlElement(ElementName = "mediaType4", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1199")]
+        public BroadWorksConnector.Ocip.Models.AudioMediaFileType? MediaType4
+        {
+            get => _mediaType4;
+            set
+            {
+                MediaType4Specified = (value != null);
+                _mediaType4 = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool MediaType4Specified { get; set; }
+
+    }
+}

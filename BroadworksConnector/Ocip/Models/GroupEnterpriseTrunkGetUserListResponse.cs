@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""090e91b2d78e873f5d76a2f16af08d3a:897""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""090e91b2d78e873f5d76a2f16af08d3a:890""}]")]
     public class GroupEnterpriseTrunkGetUserListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _enterpriseTrunkUserTable;
 
         [XmlElement(ElementName = "enterpriseTrunkUserTable", IsNullable = false, Namespace = "")]
-        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:897")]
+        [Group(@"090e91b2d78e873f5d76a2f16af08d3a:890")]
         public BroadWorksConnector.Ocip.Models.C.OCITable EnterpriseTrunkUserTable
         {
             get => _enterpriseTrunkUserTable;

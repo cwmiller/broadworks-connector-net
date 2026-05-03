@@ -10,19 +10,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to UserVoiceMessagingUserGetVoicePortalPasswordInfoRequest.
     /// Replaced By: UserPortalPasscodeGetInfoResponse
     /// <see cref="UserVoiceMessagingUserGetVoicePortalPasswordInfoRequest"/>
-    /// <see cref="UserPortalPasscodeGetInfoResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:48033"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:48035""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:52472"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:52474""}]}]")]
     public class UserVoiceMessagingUserGetVoicePortalPasswordInfoResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isLoginDisabled;
 
         [XmlElement(ElementName = "isLoginDisabled", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:48033")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:52472")]
         public bool IsLoginDisabled
         {
             get => _isLoginDisabled;
@@ -39,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _expirationDays;
 
         [XmlElement(ElementName = "expirationDays", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:48035")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:52474")]
         public int ExpirationDays
         {
             get => _expirationDays;
@@ -56,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _doesNotExpire;
 
         [XmlElement(ElementName = "doesNotExpire", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:48035")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:52474")]
         public bool DoesNotExpire
         {
             get => _doesNotExpire;
@@ -73,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _password;
 
         [XmlElement(ElementName = "password", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:48033")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:52472")]
         [MinLength(1)]
         [MaxLength(60)]
         public string Password

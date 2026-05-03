@@ -1,0 +1,129 @@
+using System;
+using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
+using System.Collections.Generic;
+
+namespace BroadWorksConnector.Ocip.Models
+{
+    /// <summary>
+    /// The from dn criteria added with the option for selecting internal and external callers, used within a modify request.
+    /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:2424""}]")]
+    public class CriteriaFromDnModify23
+    {
+
+        protected BroadWorksConnector.Ocip.Models.CriteriaDnSelection? _fromDnCriteriaSelection;
+
+        [XmlElement(ElementName = "fromDnCriteriaSelection", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2424")]
+        public BroadWorksConnector.Ocip.Models.CriteriaDnSelection? FromDnCriteriaSelection
+        {
+            get => _fromDnCriteriaSelection;
+            set
+            {
+                FromDnCriteriaSelectionSpecified = (value != null);
+                _fromDnCriteriaSelection = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool FromDnCriteriaSelectionSpecified { get; set; }
+
+        protected bool? _includeAnonymousCallers;
+
+        [XmlElement(ElementName = "includeAnonymousCallers", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2424")]
+        public bool? IncludeAnonymousCallers
+        {
+            get => _includeAnonymousCallers;
+            set
+            {
+                IncludeAnonymousCallersSpecified = (value != null);
+                _includeAnonymousCallers = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool IncludeAnonymousCallersSpecified { get; set; }
+
+        protected bool? _includeUnavailableCallers;
+
+        [XmlElement(ElementName = "includeUnavailableCallers", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2424")]
+        public bool? IncludeUnavailableCallers
+        {
+            get => _includeUnavailableCallers;
+            set
+            {
+                IncludeUnavailableCallersSpecified = (value != null);
+                _includeUnavailableCallers = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool IncludeUnavailableCallersSpecified { get; set; }
+
+        protected bool? _includeInternalCallers;
+
+        [XmlElement(ElementName = "includeInternalCallers", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2424")]
+        public bool? IncludeInternalCallers
+        {
+            get => _includeInternalCallers;
+            set
+            {
+                IncludeInternalCallersSpecified = (value != null);
+                _includeInternalCallers = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool IncludeInternalCallersSpecified { get; set; }
+
+        protected bool? _includeExternalCallers;
+
+        [XmlElement(ElementName = "includeExternalCallers", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2424")]
+        public bool? IncludeExternalCallers
+        {
+            get => _includeExternalCallers;
+            set
+            {
+                IncludeExternalCallersSpecified = (value != null);
+                _includeExternalCallers = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool IncludeExternalCallersSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.CriteriaReplacementDNList _phoneNumberList;
+
+        /// <remarks>Eraseable</remarks>
+        [XmlElement(ElementName = "phoneNumberList", IsNullable = true, Namespace = "")]
+        [Optional]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2424")]
+        public BroadWorksConnector.Ocip.Models.CriteriaReplacementDNList PhoneNumberList
+        {
+            get => _phoneNumberList;
+            set
+            {
+                PhoneNumberListSpecified = true;
+                _phoneNumberList = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool PhoneNumberListSpecified { get; set; }
+
+    }
+}

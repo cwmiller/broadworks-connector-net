@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10475""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10534""}]")]
     public class SystemFileRepositoryDeviceModifyRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10475")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10534")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "rootDirectory", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10475")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10534")]
         [MinLength(1)]
         [MaxLength(256)]
         public string RootDirectory
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "secure", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10475")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10534")]
         public bool? Secure
         {
             get => _secure;
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10475")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10534")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NetAddress
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "ftpPassive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10475")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10534")]
         public bool? FtpPassive
         {
             get => _ftpPassive;
@@ -119,7 +119,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "protocol", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10475")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10534")]
         public BroadWorksConnector.Ocip.Models.FileRepositoryProtocol22? Protocol
         {
             get => _protocol;
@@ -138,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "port", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10475")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10534")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int? Port
@@ -158,7 +158,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "ftpRemoteVerification", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10475")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10534")]
         public bool? FtpRemoteVerification
         {
             get => _ftpRemoteVerification;

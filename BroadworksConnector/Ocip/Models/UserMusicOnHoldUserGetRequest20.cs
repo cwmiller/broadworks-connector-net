@@ -9,20 +9,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request the user level data associated with Music On Hold User.
     /// The response is either a UserMusicOnHoldUserGetResponse20 or an ErrorResponse.
+    /// 
+    /// Replaced by: UserMusicOnHoldUserGetRequestRI in AS data mode
     /// <see cref="UserMusicOnHoldUserGetResponse20"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3a0309eb8d406fefc891f554ef114669:294""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:21087""}]")]
     public class UserMusicOnHoldUserGetRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserMusicOnHoldUserGetResponse20>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"3a0309eb8d406fefc891f554ef114669:294")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:21087")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

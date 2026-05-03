@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3092""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3353""}]")]
     public class EnterpriseTrunkNumberRange
     {
 
         protected BroadWorksConnector.Ocip.Models.DNRange _dnRange;
 
         [XmlElement(ElementName = "dnRange", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3092")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3353")]
         public BroadWorksConnector.Ocip.Models.DNRange DnRange
         {
             get => _dnRange;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "extensionLength", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3092")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3353")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
         public int? ExtensionLength

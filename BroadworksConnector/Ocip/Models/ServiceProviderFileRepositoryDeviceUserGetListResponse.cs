@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:4387""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:4437""}]")]
     public class ServiceProviderFileRepositoryDeviceUserGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _fileRepositoryUserTable;
 
         [XmlElement(ElementName = "fileRepositoryUserTable", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:4387")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:4437")]
         public BroadWorksConnector.Ocip.Models.C.OCITable FileRepositoryUserTable
         {
             get => _fileRepositoryUserTable;

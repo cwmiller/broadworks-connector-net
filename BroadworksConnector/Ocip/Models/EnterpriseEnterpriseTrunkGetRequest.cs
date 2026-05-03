@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: EnterpriseEnterpriseTrunkGetRequest21
     /// <see cref="EnterpriseEnterpriseTrunkGetResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="EnterpriseEnterpriseTrunkGetRequest21"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:2367""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:2572""}]")]
     public class EnterpriseEnterpriseTrunkGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.EnterpriseEnterpriseTrunkGetResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:2367")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:2572")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -43,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _enterpriseTrunkName;
 
         [XmlElement(ElementName = "enterpriseTrunkName", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:2367")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:2572")]
         [MinLength(1)]
         [MaxLength(30)]
         public string EnterpriseTrunkName

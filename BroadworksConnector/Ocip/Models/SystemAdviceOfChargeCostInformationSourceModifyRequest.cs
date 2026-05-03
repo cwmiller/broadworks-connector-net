@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9975efc7f5883a0595f811ee72ba4df5:217""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9975efc7f5883a0595f811ee72ba4df5:220""}]")]
     public class SystemAdviceOfChargeCostInformationSourceModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _peerIdentity;
 
         [XmlElement(ElementName = "peerIdentity", IsNullable = false, Namespace = "")]
-        [Group(@"9975efc7f5883a0595f811ee72ba4df5:217")]
+        [Group(@"9975efc7f5883a0595f811ee72ba4df5:220")]
         [MinLength(1)]
         [MaxLength(80)]
         public string PeerIdentity
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _priority;
 
         [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
-        [Group(@"9975efc7f5883a0595f811ee72ba4df5:217")]
+        [Group(@"9975efc7f5883a0595f811ee72ba4df5:220")]
         [MinInclusive(0)]
         [MaxInclusive(9)]
         public int Priority

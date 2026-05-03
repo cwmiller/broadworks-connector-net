@@ -14,19 +14,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: SystemCallProcessingPolicyProfileHuntGroupProfileGetRequest22
     /// <see cref="SystemCallProcessingPolicyProfileHuntGroupProfileGetResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemCallProcessingPolicyProfileHuntGroupProfileGetRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:23872""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:26718""}]")]
     public class SystemCallProcessingPolicyProfileHuntGroupProfileGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemCallProcessingPolicyProfileHuntGroupProfileGetResponse>
     {
 
         protected string _callProcessingPolicyProfileName;
 
         [XmlElement(ElementName = "callProcessingPolicyProfileName", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:23872")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:26718")]
         [MinLength(1)]
         [MaxLength(40)]
         public string CallProcessingPolicyProfileName

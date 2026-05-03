@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3104""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3365""}]")]
     public class EnterpriseTrunkNumberRangeModify
     {
 
         protected string _dnRangeStart;
 
         [XmlElement(ElementName = "dnRangeStart", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3104")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3365")]
         [MinLength(1)]
         [MaxLength(23)]
         public string DnRangeStart
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "extensionLength", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3104")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3365")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
         public int? ExtensionLength

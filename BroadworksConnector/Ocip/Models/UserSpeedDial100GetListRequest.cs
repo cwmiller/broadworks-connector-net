@@ -13,19 +13,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: UserSpeedDial100GetListRequest17Sp1
     /// <see cref="UserSpeedDial100GetListResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="UserSpeedDial100GetListRequest17Sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:47508""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:51888""}]")]
     public class UserSpeedDial100GetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserSpeedDial100GetListResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:47508")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:51888")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

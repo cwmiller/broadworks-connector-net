@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ff29a940e42c5c9737f7438c4e6eea9d:167""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ff29a940e42c5c9737f7438c4e6eea9d:171""}]")]
     public class UserPolycomPhoneServicesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:167")]
+        [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:171")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.AccessDevice _accessDevice;
 
         [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
-        [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:167")]
+        [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:171")]
         public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice
         {
             get => _accessDevice;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "integratePhoneDirectoryWithBroadWorks", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:167")]
+        [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:171")]
         public bool? IntegratePhoneDirectoryWithBroadWorks
         {
             get => _integratePhoneDirectoryWithBroadWorks;
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "includeUserPersonalPhoneListInDirectory", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:167")]
+        [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:171")]
         public bool? IncludeUserPersonalPhoneListInDirectory
         {
             get => _includeUserPersonalPhoneListInDirectory;
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "includeGroupCustomContactDirectoryInDirectory", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:167")]
+        [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:171")]
         public bool? IncludeGroupCustomContactDirectoryInDirectory
         {
             get => _includeGroupCustomContactDirectoryInDirectory;
@@ -114,7 +114,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "groupCustomContactDirectory", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:167")]
+        [Group(@"ff29a940e42c5c9737f7438c4e6eea9d:171")]
         [MinLength(1)]
         [MaxLength(40)]
         public string GroupCustomContactDirectory

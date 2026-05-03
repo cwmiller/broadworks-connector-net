@@ -21,14 +21,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6bd221784ebf8af2fe1169d36a6ac2dd:140""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6bd221784ebf8af2fe1169d36a6ac2dd:143""}]")]
     public class UserPersonalAssistantAddCriteriaRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:140")]
+        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:143")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _criteriaName;
 
         [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
-        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:140")]
+        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:143")]
         [MinLength(1)]
         [MaxLength(50)]
         public string CriteriaName
@@ -67,7 +67,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:140")]
+        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:143")]
         public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule
         {
             get => _timeSchedule;
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:140")]
+        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:143")]
         public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule
         {
             get => _holidaySchedule;
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "presence", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:140")]
+        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:143")]
         public BroadWorksConnector.Ocip.Models.PersonalAssistantPresence? Presence
         {
             get => _presence;
@@ -121,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableTransferToAttendant", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:140")]
+        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:143")]
         public bool? EnableTransferToAttendant
         {
             get => _enableTransferToAttendant;
@@ -139,7 +139,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "attendantNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:140")]
+        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:143")]
         [MinLength(1)]
         [MaxLength(161)]
         public string AttendantNumber
@@ -159,7 +159,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableRingSplash", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:140")]
+        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:143")]
         public bool? EnableRingSplash
         {
             get => _enableRingSplash;
@@ -177,7 +177,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alertMeFirst", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:140")]
+        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:143")]
         public bool? AlertMeFirst
         {
             get => _alertMeFirst;
@@ -195,7 +195,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alertMeFirstNumberOfRings", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:140")]
+        [Group(@"6bd221784ebf8af2fe1169d36a6ac2dd:143")]
         public BroadWorksConnector.Ocip.Models.PersonalAssistantAlertMeFirstNumberOfRings? AlertMeFirstNumberOfRings
         {
             get => _alertMeFirstNumberOfRings;

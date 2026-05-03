@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9975efc7f5883a0595f811ee72ba4df5:201""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9975efc7f5883a0595f811ee72ba4df5:204""}]")]
     public class SystemAdviceOfChargeCostInformationSourceGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _costInformationSourceTable;
 
         [XmlElement(ElementName = "costInformationSourceTable", IsNullable = false, Namespace = "")]
-        [Group(@"9975efc7f5883a0595f811ee72ba4df5:201")]
+        [Group(@"9975efc7f5883a0595f811ee72ba4df5:204")]
         public BroadWorksConnector.Ocip.Models.C.OCITable CostInformationSourceTable
         {
             get => _costInformationSourceTable;

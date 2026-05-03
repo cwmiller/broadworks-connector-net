@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""37cec25308bcc82fe5a80bf541c42c89:317""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""37cec25308bcc82fe5a80bf541c42c89:320""}]")]
     public class SystemIntegratedIMPModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -29,7 +29,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "serviceDomain", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:317")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:320")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServiceDomain
@@ -50,7 +50,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "servicePort", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:317")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:320")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int? ServicePort
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "addServiceProviderInIMPUserId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:317")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:320")]
         public bool? AddServiceProviderInIMPUserId
         {
             get => _addServiceProviderInIMPUserId;
@@ -89,7 +89,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "boshURL", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:317")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:320")]
         [MinLength(1)]
         [MaxLength(256)]
         public string BoshURL
@@ -109,7 +109,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowImpPasswordRetrieval", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:317")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:320")]
         public bool? AllowImpPasswordRetrieval
         {
             get => _allowImpPasswordRetrieval;
@@ -127,7 +127,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "propagateImpErrorDetails", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:317")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:320")]
         public bool? PropagateImpErrorDetails
         {
             get => _propagateImpErrorDetails;

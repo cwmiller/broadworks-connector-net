@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3434""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3708""}]")]
     public class IPAddressRange
     {
 
         protected string _minIpAddress;
 
         [XmlElement(ElementName = "minIpAddress", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3434")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3708")]
         [MinLength(1)]
         [MaxLength(39)]
         public string MinIpAddress
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _maxIpAddress;
 
         [XmlElement(ElementName = "maxIpAddress", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3434")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3708")]
         [MinLength(1)]
         [MaxLength(39)]
         public string MaxIpAddress

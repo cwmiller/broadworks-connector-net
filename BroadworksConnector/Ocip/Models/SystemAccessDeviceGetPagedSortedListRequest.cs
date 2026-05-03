@@ -26,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:1329"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:1331"",""optional"":true}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:1341"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:1343"",""optional"":true}]}]")]
     public class SystemAccessDeviceGetPagedSortedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemAccessDeviceGetPagedSortedListResponse>
     {
 
@@ -34,7 +34,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responsePagingControl", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:1329")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1341")]
         public BroadWorksConnector.Ocip.Models.ResponsePagingControl ResponsePagingControl
         {
             get => _responsePagingControl;
@@ -51,7 +51,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SortByDeviceName _sortByDeviceName;
 
         [XmlElement(ElementName = "sortByDeviceName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:1331")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1343")]
         public BroadWorksConnector.Ocip.Models.SortByDeviceName SortByDeviceName
         {
             get => _sortByDeviceName;
@@ -68,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SortByDeviceType _sortByDeviceType;
 
         [XmlElement(ElementName = "sortByDeviceType", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:1331")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1343")]
         public BroadWorksConnector.Ocip.Models.SortByDeviceType SortByDeviceType
         {
             get => _sortByDeviceType;
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SortByDeviceNetAddress _sortByDeviceNetAddress;
 
         [XmlElement(ElementName = "sortByDeviceNetAddress", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:1331")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1343")]
         public BroadWorksConnector.Ocip.Models.SortByDeviceNetAddress SortByDeviceNetAddress
         {
             get => _sortByDeviceNetAddress;
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SortByDeviceMACAddress _sortByDeviceMACAddress;
 
         [XmlElement(ElementName = "sortByDeviceMACAddress", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:1331")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1343")]
         public BroadWorksConnector.Ocip.Models.SortByDeviceMACAddress SortByDeviceMACAddress
         {
             get => _sortByDeviceMACAddress;
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaDeviceName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:1329")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1341")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceName> SearchCriteriaDeviceName
         {
             get => _searchCriteriaDeviceName;
@@ -138,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaDeviceMACAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:1329")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1341")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceMACAddress> SearchCriteriaDeviceMACAddress
         {
             get => _searchCriteriaDeviceMACAddress;
@@ -156,7 +156,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaDeviceNetAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:1329")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1341")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaDeviceNetAddress> SearchCriteriaDeviceNetAddress
         {
             get => _searchCriteriaDeviceNetAddress;
@@ -174,7 +174,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaExactDeviceType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:1329")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1341")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaExactDeviceType> SearchCriteriaExactDeviceType
         {
             get => _searchCriteriaExactDeviceType;
@@ -192,7 +192,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaAccessDeviceVersion", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:1329")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1341")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaAccessDeviceVersion> SearchCriteriaAccessDeviceVersion
         {
             get => _searchCriteriaAccessDeviceVersion;
@@ -210,7 +210,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:1329")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1341")]
         public bool? SearchCriteriaModeOr
         {
             get => _searchCriteriaModeOr;
@@ -228,7 +228,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "getVisualDeviceManagementAPIDevicesOnly", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:1329")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:1341")]
         public bool? GetVisualDeviceManagementAPIDevicesOnly
         {
             get => _getVisualDeviceManagementAPIDevicesOnly;

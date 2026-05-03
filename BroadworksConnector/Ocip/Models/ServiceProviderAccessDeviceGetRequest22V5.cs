@@ -17,19 +17,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced By: ServiceProviderAccessDeviceGetRequest24V3
     /// <see cref="ServiceProviderAccessDeviceGetResponse22V5"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="ServiceProviderAccessDeviceGetRequest24V3"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:5366"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:5367""}]}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:5816"",""children"":[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:5817""}]}]")]
     public class ServiceProviderAccessDeviceGetRequest22V5 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ServiceProviderAccessDeviceGetResponse22V5>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:5367")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5817")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -48,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _deviceName;
 
         [XmlElement(ElementName = "deviceName", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:5367")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5817")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DeviceName
@@ -67,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _deviceExternalId;
 
         [XmlElement(ElementName = "deviceExternalId", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:5366")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5816")]
         [MaxLength(36)]
         public string DeviceExternalId
         {

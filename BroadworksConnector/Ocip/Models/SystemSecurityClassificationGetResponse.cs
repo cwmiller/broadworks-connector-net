@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:29579""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:33481""}]")]
     public class SystemSecurityClassificationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected int _meetMeAnncThreshold;
 
         [XmlElement(ElementName = "meetMeAnncThreshold", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:29579")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:33481")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
         public int MeetMeAnncThreshold
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _securityClassificationTable;
 
         [XmlElement(ElementName = "SecurityClassificationTable", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:29579")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:33481")]
         public BroadWorksConnector.Ocip.Models.C.OCITable SecurityClassificationTable
         {
             get => _securityClassificationTable;

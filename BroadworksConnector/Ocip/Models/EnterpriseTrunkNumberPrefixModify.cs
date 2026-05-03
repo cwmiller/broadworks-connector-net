@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3080""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3341""}]")]
     public class EnterpriseTrunkNumberPrefixModify
     {
 
         protected string _numberPrefix;
 
         [XmlElement(ElementName = "numberPrefix", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3080")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3341")]
         [MinLength(1)]
         [MaxLength(23)]
         public string NumberPrefix
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "extensionRange", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3080")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3341")]
         public BroadWorksConnector.Ocip.Models.ExtensionRange17 ExtensionRange
         {
             get => _extensionRange;

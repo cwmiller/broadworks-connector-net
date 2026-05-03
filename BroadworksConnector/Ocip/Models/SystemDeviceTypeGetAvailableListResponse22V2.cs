@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:8848""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:8900""}]")]
     public class SystemDeviceTypeGetAvailableListResponse22V2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8848")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8900")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> DeviceType
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "typeInfo", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8848")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8900")]
         public List<BroadWorksConnector.Ocip.Models.SystemDeviceTypeGetAvailableListResponse22V2TypeInfo> TypeInfo
         {
             get => _typeInfo;

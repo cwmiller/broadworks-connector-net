@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:5695""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:5744""}]")]
     public class SystemCommunicationBarringCallTypeAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _callType;
 
         [XmlElement(ElementName = "callType", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:5695")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:5744")]
         [MinLength(1)]
         [MaxLength(40)]
         public string CallType
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _networkServerCallType;
 
         [XmlElement(ElementName = "networkServerCallType", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:5695")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:5744")]
         [MinLength(1)]
         [MaxLength(4)]
         public string NetworkServerCallType

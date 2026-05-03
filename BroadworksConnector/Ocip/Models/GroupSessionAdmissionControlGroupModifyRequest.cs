@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:7952""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:8052""}]")]
     public class GroupSessionAdmissionControlGroupModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:7952")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:8052")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:7952")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:8052")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:7952")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:8052")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:7952")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:8052")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NewName
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxSession", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:7952")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:8052")]
         [MinInclusive(0)]
         public int? MaxSession
         {
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "maxUserOriginatingSessions", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:7952")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:8052")]
         [MinInclusive(0)]
         public int? MaxUserOriginatingSessions
         {
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "maxUserTerminatingSessions", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:7952")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:8052")]
         [MinInclusive(0)]
         public int? MaxUserTerminatingSessions
         {
@@ -161,7 +161,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "reservedSession", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:7952")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:8052")]
         [MinInclusive(0)]
         public int? ReservedSession
         {
@@ -181,7 +181,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "reservedUserOriginatingSessions", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:7952")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:8052")]
         [MinInclusive(0)]
         public int? ReservedUserOriginatingSessions
         {
@@ -201,7 +201,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "reservedUserTerminatingSessions", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:7952")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:8052")]
         [MinInclusive(0)]
         public int? ReservedUserTerminatingSessions
         {
@@ -220,7 +220,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "becomeDefaultGroup", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:7952")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:8052")]
         public bool? BecomeDefaultGroup
         {
             get => _becomeDefaultGroup;
@@ -238,7 +238,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "countIntraSACGroupSessions", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:7952")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:8052")]
         public bool? CountIntraSACGroupSessions
         {
             get => _countIntraSACGroupSessions;
@@ -257,7 +257,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "deviceList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:7952")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:8052")]
         public BroadWorksConnector.Ocip.Models.ReplacementDeviceList DeviceList
         {
             get => _deviceList;
@@ -275,7 +275,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "blockEmergencyAndRepairCallsDueToSACLimits", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:7952")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:8052")]
         public bool? BlockEmergencyAndRepairCallsDueToSACLimits
         {
             get => _blockEmergencyAndRepairCallsDueToSACLimits;
@@ -294,7 +294,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "mediaGroupName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:7952")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:8052")]
         [MinLength(1)]
         [MaxLength(80)]
         public string MediaGroupName
@@ -315,7 +315,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "accessInfoPattern", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:7952")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:8052")]
         [MinLength(1)]
         [MaxLength(1024)]
         public string AccessInfoPattern

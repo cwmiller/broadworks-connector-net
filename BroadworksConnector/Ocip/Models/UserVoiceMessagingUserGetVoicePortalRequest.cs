@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced By: UserVoiceMessagingUserGetVoicePortalRequest16
     /// <see cref="UserVoiceMessagingUserGetVoicePortalResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="UserVoiceMessagingUserGetVoicePortalRequest16"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:48055""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:52494""}]")]
     public class UserVoiceMessagingUserGetVoicePortalRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserVoiceMessagingUserGetVoicePortalResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:48055")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:52494")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

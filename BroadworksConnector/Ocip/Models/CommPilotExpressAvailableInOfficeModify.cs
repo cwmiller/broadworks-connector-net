@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de7795e1833d459a7eb89116d772fd78:116""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""de7795e1833d459a7eb89116d772fd78:123""}]")]
     public class CommPilotExpressAvailableInOfficeModify
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "additionalPhoneNumberToRing", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"de7795e1833d459a7eb89116d772fd78:116")]
+        [Group(@"de7795e1833d459a7eb89116d772fd78:123")]
         [MinLength(1)]
         [MaxLength(161)]
         public string AdditionalPhoneNumberToRing
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "busySetting", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de7795e1833d459a7eb89116d772fd78:116")]
+        [Group(@"de7795e1833d459a7eb89116d772fd78:123")]
         public BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionModify BusySetting
         {
             get => _busySetting;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "noAnswerSetting", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"de7795e1833d459a7eb89116d772fd78:116")]
+        [Group(@"de7795e1833d459a7eb89116d772fd78:123")]
         public BroadWorksConnector.Ocip.Models.CommPilotExpressRedirectionModify NoAnswerSetting
         {
             get => _noAnswerSetting;

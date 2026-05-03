@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:1085""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:1313""}]")]
     public class CallCenterReportTemplateKey
     {
 
         protected BroadWorksConnector.Ocip.Models.CallCenterReportTemplateLevel _templateLevel;
 
         [XmlElement(ElementName = "templateLevel", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1085")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1313")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportTemplateLevel TemplateLevel
         {
             get => _templateLevel;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _templateName;
 
         [XmlElement(ElementName = "templateName", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1085")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1313")]
         [MinLength(1)]
         [MaxLength(80)]
         public string TemplateName

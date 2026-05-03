@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""65f35694d7d3354987bf6387ab55bfc6:82""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""65f35694d7d3354987bf6387ab55bfc6:86""}]")]
     public class GroupGroupNightForwardingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"65f35694d7d3354987bf6387ab55bfc6:82")]
+        [Group(@"65f35694d7d3354987bf6387ab55bfc6:86")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"65f35694d7d3354987bf6387ab55bfc6:82")]
+        [Group(@"65f35694d7d3354987bf6387ab55bfc6:86")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "nightForwarding", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"65f35694d7d3354987bf6387ab55bfc6:82")]
+        [Group(@"65f35694d7d3354987bf6387ab55bfc6:86")]
         public BroadWorksConnector.Ocip.Models.GroupNightForwardingGroupServiceActivationMode? NightForwarding
         {
             get => _nightForwarding;
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "businessHours", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"65f35694d7d3354987bf6387ab55bfc6:82")]
+        [Group(@"65f35694d7d3354987bf6387ab55bfc6:86")]
         public BroadWorksConnector.Ocip.Models.TimeSchedule BusinessHours
         {
             get => _businessHours;
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "holidaySchedule", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"65f35694d7d3354987bf6387ab55bfc6:82")]
+        [Group(@"65f35694d7d3354987bf6387ab55bfc6:86")]
         public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule
         {
             get => _holidaySchedule;
@@ -118,7 +118,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "forwardToPhoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"65f35694d7d3354987bf6387ab55bfc6:82")]
+        [Group(@"65f35694d7d3354987bf6387ab55bfc6:86")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ForwardToPhoneNumber

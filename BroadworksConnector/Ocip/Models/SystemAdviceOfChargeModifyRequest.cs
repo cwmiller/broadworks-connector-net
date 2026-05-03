@@ -13,12 +13,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: SystemAdviceOfChargeModifyRequest19sp1
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemAdviceOfChargeModifyRequest19sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:20506""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:23046""}]")]
     public class SystemAdviceOfChargeModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -26,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "delayBetweenNotificationSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:20506")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:23046")]
         [MinInclusive(5)]
         [MaxInclusive(1800)]
         public int? DelayBetweenNotificationSeconds
@@ -46,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "incomingAocHandling", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:20506")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:23046")]
         public BroadWorksConnector.Ocip.Models.AdviceOfChargeIncomingAocHandling? IncomingAocHandling
         {
             get => _incomingAocHandling;
@@ -65,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "costInformationSource", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:20506")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:23046")]
         [MinLength(1)]
         [MaxLength(80)]
         public string CostInformationSource

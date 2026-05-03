@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4146""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4921""}]")]
     public class RecurrenceRecurYearlyByDay
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "recurInterval", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4146")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4921")]
         [MinInclusive(1)]
         [MaxInclusive(99)]
         public int? RecurInterval
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _dayOfMonth;
 
         [XmlElement(ElementName = "dayOfMonth", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4146")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4921")]
         [MinInclusive(1)]
         [MaxInclusive(31)]
         public int DayOfMonth
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.Month _month;
 
         [XmlElement(ElementName = "month", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4146")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4921")]
         public BroadWorksConnector.Ocip.Models.Month Month
         {
             get => _month;

@@ -9,22 +9,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request the collaborate room settings for an instant room.
     /// The request fails when requesting collaborate room settings for My Room or project rooms.
-    /// The response is either UserCollaborateInstantRoomGetResponse or
+    /// The response is either UserCollaboratInstantRoomGetResponse or
     /// ErrorResponse.
-    /// <see cref="UserCollaborateInstantRoomGetResponse"/>
+    /// <see cref="UserCollaboratInstantRoomGetResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bc805893b9cc7e3e01eec64e9ad62768:668""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bc805893b9cc7e3e01eec64e9ad62768:671""}]")]
     public class UserCollaborateInstantRoomGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserCollaborateInstantRoomGetResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:668")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:671")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _roomId;
 
         [XmlElement(ElementName = "roomId", IsNullable = false, Namespace = "")]
-        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:668")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:671")]
         [MinLength(4)]
         [MaxLength(15)]
         public string RoomId

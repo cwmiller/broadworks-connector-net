@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:12645""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:12764""}]")]
     public class SystemNetworkClassOfServiceGetCommunicationBarringProfileUsageListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _networkClassOfServiceTable;
 
         [XmlElement(ElementName = "networkClassOfServiceTable", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:12645")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:12764")]
         public BroadWorksConnector.Ocip.Models.C.OCITable NetworkClassOfServiceTable
         {
             get => _networkClassOfServiceTable;

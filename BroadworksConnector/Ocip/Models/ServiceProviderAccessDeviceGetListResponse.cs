@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:858""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:862""}]")]
     public class ServiceProviderAccessDeviceGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _accessDeviceTable;
 
         [XmlElement(ElementName = "accessDeviceTable", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:858")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:862")]
         public BroadWorksConnector.Ocip.Models.C.OCITable AccessDeviceTable
         {
             get => _accessDeviceTable;

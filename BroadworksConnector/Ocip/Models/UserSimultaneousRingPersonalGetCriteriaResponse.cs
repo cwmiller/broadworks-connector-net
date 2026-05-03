@@ -8,12 +8,14 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to the UserSimultaneousRingPersonalGetCriteriaRequest.
+    /// 
+    /// Replaced by: UserSimultaneousRingPersonalGetCriteriaResponseRI in AS data mode
     /// <see cref="UserSimultaneousRingPersonalGetCriteriaRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d6190622c16e29d798f0976799563da5:101""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:22021""}]")]
     public class UserSimultaneousRingPersonalGetCriteriaResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d6190622c16e29d798f0976799563da5:101")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:22021")]
         public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule
         {
             get => _timeSchedule;
@@ -39,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d6190622c16e29d798f0976799563da5:101")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:22021")]
         public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule
         {
             get => _holidaySchedule;
@@ -56,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _blacklisted;
 
         [XmlElement(ElementName = "blacklisted", IsNullable = false, Namespace = "")]
-        [Group(@"d6190622c16e29d798f0976799563da5:101")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:22021")]
         public bool Blacklisted
         {
             get => _blacklisted;
@@ -73,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CriteriaFromDn _fromDnCriteria;
 
         [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
-        [Group(@"d6190622c16e29d798f0976799563da5:101")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:22021")]
         public BroadWorksConnector.Ocip.Models.CriteriaFromDn FromDnCriteria
         {
             get => _fromDnCriteria;

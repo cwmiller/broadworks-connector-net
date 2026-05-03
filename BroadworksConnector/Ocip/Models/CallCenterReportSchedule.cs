@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7503""}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7476""}]")]
     public class CallCenterReportSchedule
     {
 
         protected BroadWorksConnector.Ocip.Models.CallCenterReportScheduleTime _scheduleTime;
 
         [XmlElement(ElementName = "scheduleTime", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:7503")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7476")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportScheduleTime ScheduleTime
         {
             get => _scheduleTime;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CallCenterReportScheduleRecurrence _recurrence;
 
         [XmlElement(ElementName = "recurrence", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:7503")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7476")]
         public BroadWorksConnector.Ocip.Models.CallCenterReportScheduleRecurrence Recurrence
         {
             get => _recurrence;

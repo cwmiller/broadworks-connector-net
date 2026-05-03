@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:13267""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:14718""}]")]
     public class GroupSpeedDial100GetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _prefix;
 
         [XmlElement(ElementName = "prefix", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:13267")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:14718")]
         [MinLength(1)]
         [MaxLength(2)]
         public string Prefix

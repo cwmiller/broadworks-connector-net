@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4489f4baeefa41b8df0a86def4c05cd8:103""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4489f4baeefa41b8df0a86def4c05cd8:107""}]")]
     public class SystemMccMncHomeNetworkAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _homeNetworkMccMnc;
 
         [XmlElement(ElementName = "homeNetworkMccMnc", IsNullable = false, Namespace = "")]
-        [Group(@"4489f4baeefa41b8df0a86def4c05cd8:103")]
+        [Group(@"4489f4baeefa41b8df0a86def4c05cd8:107")]
         [MinLength(5)]
         [MaxLength(6)]
         public string HomeNetworkMccMnc

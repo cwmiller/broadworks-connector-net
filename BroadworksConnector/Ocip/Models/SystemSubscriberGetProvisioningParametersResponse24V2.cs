@@ -8,19 +8,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to the SystemSubscriberGetProvisioningParametersRequest24V2.
+    /// 
+    /// Replaced by: SystemSubscriberGetProvisioningParametersResponse24V3.
     /// <see cref="SystemSubscriberGetProvisioningParametersRequest24V2"/>
+    /// <see cref="SystemSubscriberGetProvisioningParametersResponse24V3"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:18285""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:40252""}]")]
     public class SystemSubscriberGetProvisioningParametersResponse24V2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _configurableCLIDNormalization;
 
         [XmlElement(ElementName = "configurableCLIDNormalization", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:18285")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40252")]
         public bool ConfigurableCLIDNormalization
         {
             get => _configurableCLIDNormalization;
@@ -37,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _includeDefaultDomain;
 
         [XmlElement(ElementName = "includeDefaultDomain", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:18285")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40252")]
         public bool IncludeDefaultDomain
         {
             get => _includeDefaultDomain;
@@ -54,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.AuthorizationLevelToProvisionAlternateUserID _minAuthLevelToProvisionAltUserID;
 
         [XmlElement(ElementName = "minAuthLevelToProvisionAltUserID", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:18285")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40252")]
         public BroadWorksConnector.Ocip.Models.AuthorizationLevelToProvisionAlternateUserID MinAuthLevelToProvisionAltUserID
         {
             get => _minAuthLevelToProvisionAltUserID;

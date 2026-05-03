@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d531efc7ebfdf83cc344962728505dd5:104""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d531efc7ebfdf83cc344962728505dd5:111""}]")]
     public class ExecutiveAssistantOptInStatus
     {
 
         protected string _executiveUserId;
 
         [XmlElement(ElementName = "executiveUserId", IsNullable = false, Namespace = "")]
-        [Group(@"d531efc7ebfdf83cc344962728505dd5:104")]
+        [Group(@"d531efc7ebfdf83cc344962728505dd5:111")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ExecutiveUserId
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _optIn;
 
         [XmlElement(ElementName = "optIn", IsNullable = false, Namespace = "")]
-        [Group(@"d531efc7ebfdf83cc344962728505dd5:104")]
+        [Group(@"d531efc7ebfdf83cc344962728505dd5:111")]
         public bool OptIn
         {
             get => _optIn;

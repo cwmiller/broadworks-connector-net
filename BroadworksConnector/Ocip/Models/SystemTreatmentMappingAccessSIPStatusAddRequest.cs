@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:18849""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:19197""}]")]
     public class SystemTreatmentMappingAccessSIPStatusAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected int _sipStatusCode;
 
         [XmlElement(ElementName = "sipStatusCode", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:18849")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:19197")]
         [MinInclusive(400)]
         [MaxInclusive(699)]
         public int SipStatusCode
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _treatmentId;
 
         [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:18849")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:19197")]
         [MinLength(1)]
         [MaxLength(40)]
         public string TreatmentId

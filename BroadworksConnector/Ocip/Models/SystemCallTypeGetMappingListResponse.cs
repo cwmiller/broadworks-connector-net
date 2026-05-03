@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:5342""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:5391""}]")]
     public class SystemCallTypeGetMappingListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _callTypeMapping;
 
         [XmlElement(ElementName = "callTypeMapping", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:5342")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:5391")]
         public BroadWorksConnector.Ocip.Models.C.OCITable CallTypeMapping
         {
             get => _callTypeMapping;

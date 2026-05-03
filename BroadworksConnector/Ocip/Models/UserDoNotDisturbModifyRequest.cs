@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f424ffe4eea042849235863d758363ec:76""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f424ffe4eea042849235863d758363ec:79""}]")]
     public class UserDoNotDisturbModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"f424ffe4eea042849235863d758363ec:76")]
+        [Group(@"f424ffe4eea042849235863d758363ec:79")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f424ffe4eea042849235863d758363ec:76")]
+        [Group(@"f424ffe4eea042849235863d758363ec:79")]
         public bool? IsActive
         {
             get => _isActive;
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "ringSplash", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f424ffe4eea042849235863d758363ec:76")]
+        [Group(@"f424ffe4eea042849235863d758363ec:79")]
         public bool? RingSplash
         {
             get => _ringSplash;
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isDoNotDisturbSync", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f424ffe4eea042849235863d758363ec:76")]
+        [Group(@"f424ffe4eea042849235863d758363ec:79")]
         public bool? IsDoNotDisturbSync
         {
             get => _isDoNotDisturbSync;

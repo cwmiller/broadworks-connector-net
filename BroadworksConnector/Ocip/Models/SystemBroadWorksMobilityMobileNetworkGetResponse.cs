@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9ae9f7d53e566e21347e23e20e2a2a39:1154""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9ae9f7d53e566e21347e23e20e2a2a39:1160""}]")]
     public class SystemBroadWorksMobilityMobileNetworkGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "scfSignalingNetAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1154")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1160")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ScfSignalingNetAddress
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "scfSignalingPort", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1154")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1160")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int? ScfSignalingPort
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _refreshPeriodSeconds;
 
         [XmlElement(ElementName = "refreshPeriodSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1154")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1160")]
         [MinInclusive(10)]
         [MaxInclusive(1800)]
         public int RefreshPeriodSeconds
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxConsecutiveFailures;
 
         [XmlElement(ElementName = "maxConsecutiveFailures", IsNullable = false, Namespace = "")]
-        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1154")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1160")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int MaxConsecutiveFailures
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxResponseWaitTimeMilliseconds;
 
         [XmlElement(ElementName = "maxResponseWaitTimeMilliseconds", IsNullable = false, Namespace = "")]
-        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1154")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1160")]
         [MinInclusive(100)]
         [MaxInclusive(10000)]
         public int MaxResponseWaitTimeMilliseconds
@@ -117,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableAnnouncementSuppression;
 
         [XmlElement(ElementName = "enableAnnouncementSuppression", IsNullable = false, Namespace = "")]
-        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1154")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1160")]
         public bool EnableAnnouncementSuppression
         {
             get => _enableAnnouncementSuppression;
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceAccessCodeListName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1154")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:1160")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServiceAccessCodeListName

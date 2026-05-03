@@ -10,19 +10,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to GroupDialPlanPolicyGetRequest
     /// Replaced by: GroupDialPlanPolicyGetResponse17
     /// <see cref="GroupDialPlanPolicyGetRequest"/>
-    /// <see cref="GroupDialPlanPolicyGetResponse17"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:9485""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:10336""}]")]
     public class GroupDialPlanPolicyGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.GroupDialPlanPolicySettingLevel _useSetting;
 
         [XmlElement(ElementName = "useSetting", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9485")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10336")]
         public BroadWorksConnector.Ocip.Models.GroupDialPlanPolicySettingLevel UseSetting
         {
             get => _useSetting;
@@ -39,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _requiresAccessCodeForPublicCalls;
 
         [XmlElement(ElementName = "requiresAccessCodeForPublicCalls", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9485")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10336")]
         public bool RequiresAccessCodeForPublicCalls
         {
             get => _requiresAccessCodeForPublicCalls;
@@ -56,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowE164PublicCalls;
 
         [XmlElement(ElementName = "allowE164PublicCalls", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9485")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10336")]
         public bool AllowE164PublicCalls
         {
             get => _allowE164PublicCalls;
@@ -74,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "publicDigitMap", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9485")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10336")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string PublicDigitMap
@@ -94,7 +93,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "privateDigitMap", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9485")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10336")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string PrivateDigitMap

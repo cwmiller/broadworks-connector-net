@@ -9,20 +9,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get a criteria for the user's simultaneous ring family service.
     /// The response is either a UserSimultaneousRingFamilyGetCriteriaResponse or an ErrorResponse.
+    /// 
+    /// Replaced by: UserSimultaneousRingFamilyGetCriteriaRequestRI in AS data mode
     /// <see cref="UserSimultaneousRingFamilyGetCriteriaResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""7829cd70c5c6e02768e0a59a5de29efe:85""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:21917""}]")]
     public class UserSimultaneousRingFamilyGetCriteriaRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserSimultaneousRingFamilyGetCriteriaResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"7829cd70c5c6e02768e0a59a5de29efe:85")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:21917")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -41,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _criteriaName;
 
         [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
-        [Group(@"7829cd70c5c6e02768e0a59a5de29efe:85")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:21917")]
         [MinLength(1)]
         [MaxLength(50)]
         public string CriteriaName

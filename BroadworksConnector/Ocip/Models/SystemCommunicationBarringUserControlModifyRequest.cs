@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6844af6fc359ada5d958622d62cbd13f:77""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6844af6fc359ada5d958622d62cbd13f:81""}]")]
     public class SystemCommunicationBarringUserControlModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableLockout", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6844af6fc359ada5d958622d62cbd13f:77")]
+        [Group(@"6844af6fc359ada5d958622d62cbd13f:81")]
         public bool? EnableLockout
         {
             get => _enableLockout;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxNumberOfFailedAttempts", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6844af6fc359ada5d958622d62cbd13f:77")]
+        [Group(@"6844af6fc359ada5d958622d62cbd13f:81")]
         [MinInclusive(1)]
         [MaxInclusive(10)]
         public int? MaxNumberOfFailedAttempts
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "lockoutMinutes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6844af6fc359ada5d958622d62cbd13f:77")]
+        [Group(@"6844af6fc359ada5d958622d62cbd13f:81")]
         [MinInclusive(1)]
         [MaxInclusive(600)]
         public int? LockoutMinutes

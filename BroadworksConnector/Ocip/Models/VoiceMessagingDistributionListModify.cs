@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:3201""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:3134""}]")]
     public class VoiceMessagingDistributionListModify
     {
 
         protected int _listId;
 
         [XmlElement(ElementName = "listId", IsNullable = false, Namespace = "")]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:3201")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:3134")]
         [MinInclusive(0)]
         [MaxInclusive(14)]
         public int ListId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:3201")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:3134")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "phoneNumberList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:3201")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:3134")]
         public BroadWorksConnector.Ocip.Models.ReplacementOutgoingDNorSIPURIList PhoneNumberList
         {
             get => _phoneNumberList;

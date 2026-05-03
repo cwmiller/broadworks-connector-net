@@ -20,19 +20,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Replaced by: UserPushNotificationRegistrationGetListResponse21sp1
     /// <see cref="UserPushNotificationRegistrationGetListRequest"/>
-    /// <see cref="UserPushNotificationRegistrationGetListResponse21sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:46490""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:50870""}]")]
     public class UserPushNotificationRegistrationGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _registrationsTable;
 
         [XmlElement(ElementName = "registrationsTable", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:46490")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:50870")]
         public BroadWorksConnector.Ocip.Models.C.OCITable RegistrationsTable
         {
             get => _registrationsTable;

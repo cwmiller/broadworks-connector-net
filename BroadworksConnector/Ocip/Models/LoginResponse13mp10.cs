@@ -8,19 +8,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// LoginRequest13mp10/Response13mp10 is 2nd stage of the 2 stage OCI login process.
-    /// <see cref="LoginRequest13mp10"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:16868""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:18690""}]")]
     public class LoginResponse13mp10 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.LoginType _loginType;
 
         [XmlElement(ElementName = "loginType", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:16868")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18690")]
         public BroadWorksConnector.Ocip.Models.LoginType LoginType
         {
             get => _loginType;
@@ -37,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _locale;
 
         [XmlElement(ElementName = "locale", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:16868")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18690")]
         [MaxLength(5)]
         public string Locale
         {
@@ -55,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _encoding;
 
         [XmlElement(ElementName = "encoding", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:16868")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:18690")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Encoding

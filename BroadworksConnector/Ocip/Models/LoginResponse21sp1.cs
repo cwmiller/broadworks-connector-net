@@ -14,20 +14,19 @@ namespace BroadWorksConnector.Ocip.Models
     /// level token revocation time and user level token revocation time.
     /// 
     /// Replaced by LoginResponse22V3 in AS data mode.
-    /// <see cref="LoginRequest21sp1"/>
     /// <see cref="LoginResponse22V3"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:4869""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:5361""}]")]
     public class LoginResponse21sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.LoginType _loginType;
 
         [XmlElement(ElementName = "loginType", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4869")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5361")]
         public BroadWorksConnector.Ocip.Models.LoginType LoginType
         {
             get => _loginType;
@@ -44,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _locale;
 
         [XmlElement(ElementName = "locale", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4869")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5361")]
         [MaxLength(5)]
         public string Locale
         {
@@ -62,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _encoding;
 
         [XmlElement(ElementName = "encoding", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4869")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5361")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Encoding
@@ -82,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4869")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5361")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -102,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4869")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5361")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -121,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _isEnterprise;
 
         [XmlElement(ElementName = "isEnterprise", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4869")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5361")]
         public bool IsEnterprise
         {
             get => _isEnterprise;
@@ -139,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "passwordExpiresDays", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4869")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5361")]
         public int? PasswordExpiresDays
         {
             get => _passwordExpiresDays;
@@ -156,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _userDomain;
 
         [XmlElement(ElementName = "userDomain", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4869")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5361")]
         [MinLength(1)]
         [MaxLength(80)]
         public string UserDomain
@@ -176,7 +175,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "tokenRevocationTime", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:4869")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:5361")]
         public string TokenRevocationTime
         {
             get => _tokenRevocationTime;

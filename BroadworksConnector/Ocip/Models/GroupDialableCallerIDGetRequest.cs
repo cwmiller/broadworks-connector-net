@@ -8,21 +8,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get the Group's Dialable Caller ID settings and criteria list.
-    /// The response is either a GroupDialableCallerIDGetResponse or an ErrorResponse.
+    /// The response is either a
+    /// GroupDialableCallerIDGetResponse or an ErrorResponse.
     /// <see cref="GroupDialableCallerIDGetResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:4354""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:4396""}]")]
     public class GroupDialableCallerIDGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupDialableCallerIDGetResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:4354")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:4396")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:4354")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:4396")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId

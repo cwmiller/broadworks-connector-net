@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:19080""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:19428""}]")]
     public class SystemTreatmentMappingInternalReleaseCauseModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected BroadWorksConnector.Ocip.Models.InternalReleaseCause16 _internalReleaseCause;
 
         [XmlElement(ElementName = "internalReleaseCause", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:19080")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:19428")]
         public BroadWorksConnector.Ocip.Models.InternalReleaseCause16 InternalReleaseCause
         {
             get => _internalReleaseCause;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:19080")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:19428")]
         [MinLength(1)]
         [MaxLength(40)]
         public string TreatmentId

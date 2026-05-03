@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:11239""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:11298""}]")]
     public class SystemGETSResourcePriorityModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _priorityValue;
 
         [XmlElement(ElementName = "priorityValue", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:11239")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11298")]
         [MinLength(3)]
         [MaxLength(80)]
         public string PriorityValue
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newPriorityValue", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:11239")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11298")]
         [MinLength(3)]
         [MaxLength(80)]
         public string NewPriorityValue
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "priorityLevel", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:11239")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11298")]
         [MinInclusive(1)]
         [MaxInclusive(5)]
         public int? PriorityLevel
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "priorityClass", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:11239")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11298")]
         public BroadWorksConnector.Ocip.Models.GETSPriorityClass? PriorityClass
         {
             get => _priorityClass;

@@ -12,7 +12,6 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced By: SystemGETSGetRequest22
     /// <see cref="SystemGETSGetResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemGETSGetRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]

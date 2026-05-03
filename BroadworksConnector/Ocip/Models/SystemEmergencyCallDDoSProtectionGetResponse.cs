@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:9775""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:9830""}]")]
     public class SystemEmergencyCallDDoSProtectionGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enabled;
 
         [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:9775")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9830")]
         public bool Enabled
         {
             get => _enabled;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _sampleIntervalSeconds;
 
         [XmlElement(ElementName = "sampleIntervalSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:9775")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9830")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
         public int SampleIntervalSeconds
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "protectionRate", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:9775")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9830")]
         [MinInclusive(1)]
         [MaxInclusive(10000)]
         public int? ProtectionRate
@@ -76,7 +76,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ProtectionAction _protectionAction;
 
         [XmlElement(ElementName = "protectionAction", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:9775")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9830")]
         public BroadWorksConnector.Ocip.Models.ProtectionAction ProtectionAction
         {
             get => _protectionAction;

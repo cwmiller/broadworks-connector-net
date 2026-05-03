@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d45e381d6dbac771631649063122a42e:463""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d45e381d6dbac771631649063122a42e:466""}]")]
     public class ResellerDeviceActivationPolicyGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _useResellerSettings;
 
         [XmlElement(ElementName = "useResellerSettings", IsNullable = false, Namespace = "")]
-        [Group(@"d45e381d6dbac771631649063122a42e:463")]
+        [Group(@"d45e381d6dbac771631649063122a42e:466")]
         public bool UseResellerSettings
         {
             get => _useResellerSettings;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowActivationCodeRequestByUser;
 
         [XmlElement(ElementName = "allowActivationCodeRequestByUser", IsNullable = false, Namespace = "")]
-        [Group(@"d45e381d6dbac771631649063122a42e:463")]
+        [Group(@"d45e381d6dbac771631649063122a42e:466")]
         public bool AllowActivationCodeRequestByUser
         {
             get => _allowActivationCodeRequestByUser;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _sendActivationCodeInEmail;
 
         [XmlElement(ElementName = "sendActivationCodeInEmail", IsNullable = false, Namespace = "")]
-        [Group(@"d45e381d6dbac771631649063122a42e:463")]
+        [Group(@"d45e381d6dbac771631649063122a42e:466")]
         public bool SendActivationCodeInEmail
         {
             get => _sendActivationCodeInEmail;

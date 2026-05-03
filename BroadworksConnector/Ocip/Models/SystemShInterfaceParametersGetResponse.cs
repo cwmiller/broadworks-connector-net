@@ -11,12 +11,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Replaced by: SystemShInterfaceParametersGetResponse17
     /// <see cref="SystemShInterfaceParametersGetRequest"/>
-    /// <see cref="SystemShInterfaceParametersGetResponse17"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:29965""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:33867""}]")]
     public class SystemShInterfaceParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -24,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "hssRealm", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:29965")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:33867")]
         [MinLength(1)]
         [MaxLength(80)]
         public string HssRealm
@@ -43,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _requestTimeoutSeconds;
 
         [XmlElement(ElementName = "requestTimeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:29965")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:33867")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
         public int RequestTimeoutSeconds
@@ -62,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _publicIdentityRefreshDelaySeconds;
 
         [XmlElement(ElementName = "publicIdentityRefreshDelaySeconds", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:29965")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:33867")]
         [MinInclusive(0)]
         [MaxInclusive(30)]
         public int PublicIdentityRefreshDelaySeconds

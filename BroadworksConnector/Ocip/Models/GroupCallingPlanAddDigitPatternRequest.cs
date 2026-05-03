@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4e20c63d19559e7dea5e6306aa6fbd0a:43""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4e20c63d19559e7dea5e6306aa6fbd0a:46""}]")]
     public class GroupCallingPlanAddDigitPatternRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"4e20c63d19559e7dea5e6306aa6fbd0a:43")]
+        [Group(@"4e20c63d19559e7dea5e6306aa6fbd0a:46")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"4e20c63d19559e7dea5e6306aa6fbd0a:43")]
+        [Group(@"4e20c63d19559e7dea5e6306aa6fbd0a:46")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"4e20c63d19559e7dea5e6306aa6fbd0a:43")]
+        [Group(@"4e20c63d19559e7dea5e6306aa6fbd0a:46")]
         [MinLength(1)]
         [MaxLength(30)]
         public string Name
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _digitPattern;
 
         [XmlElement(ElementName = "digitPattern", IsNullable = false, Namespace = "")]
-        [Group(@"4e20c63d19559e7dea5e6306aa6fbd0a:43")]
+        [Group(@"4e20c63d19559e7dea5e6306aa6fbd0a:46")]
         [MinLength(1)]
         [MaxLength(160)]
         public string DigitPattern

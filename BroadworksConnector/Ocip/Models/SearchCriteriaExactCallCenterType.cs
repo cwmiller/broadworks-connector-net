@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:823""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:826""}]")]
     public class SearchCriteriaExactCallCenterType : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         protected BroadWorksConnector.Ocip.Models.CallCenterType _callCenterType;
 
         [XmlElement(ElementName = "callCenterType", IsNullable = false, Namespace = "")]
-        [Group(@"972fbf832439609ec8f2765c5637c3f1:823")]
+        [Group(@"972fbf832439609ec8f2765c5637c3f1:826")]
         public BroadWorksConnector.Ocip.Models.CallCenterType CallCenterType
         {
             get => _callCenterType;

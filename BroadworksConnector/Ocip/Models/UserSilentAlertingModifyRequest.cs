@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6a0b48bb5563c1c69d62271066fdc8cb:73""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6a0b48bb5563c1c69d62271066fdc8cb:76""}]")]
     public class UserSilentAlertingModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"6a0b48bb5563c1c69d62271066fdc8cb:73")]
+        [Group(@"6a0b48bb5563c1c69d62271066fdc8cb:76")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6a0b48bb5563c1c69d62271066fdc8cb:73")]
+        [Group(@"6a0b48bb5563c1c69d62271066fdc8cb:76")]
         public bool? IsActive
         {
             get => _isActive;

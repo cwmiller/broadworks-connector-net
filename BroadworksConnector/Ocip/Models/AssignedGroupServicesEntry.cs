@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:629""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:633""}]")]
     public class AssignedGroupServicesEntry
     {
 
         protected BroadWorksConnector.Ocip.Models.GroupService _serviceName;
 
         [XmlElement(ElementName = "serviceName", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:629")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:633")]
         public BroadWorksConnector.Ocip.Models.GroupService ServiceName
         {
             get => _serviceName;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:629")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:633")]
         public bool? IsActive
         {
             get => _isActive;

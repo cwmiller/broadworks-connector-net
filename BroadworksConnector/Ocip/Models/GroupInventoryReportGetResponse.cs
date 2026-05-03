@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d9fdc459bf0815ec7de2752c27ed25dd:64""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d9fdc459bf0815ec7de2752c27ed25dd:67""}]")]
     public class GroupInventoryReportGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _inventoryReportTable;
 
         [XmlElement(ElementName = "inventoryReportTable", IsNullable = false, Namespace = "")]
-        [Group(@"d9fdc459bf0815ec7de2752c27ed25dd:64")]
+        [Group(@"d9fdc459bf0815ec7de2752c27ed25dd:67")]
         public BroadWorksConnector.Ocip.Models.C.OCITable InventoryReportTable
         {
             get => _inventoryReportTable;

@@ -9,20 +9,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to get all the information of a Call Center instance.
     /// The response is either GroupCallCenterGetInstanceResponse22 or ErrorResponse.
+    /// 
+    /// Replaced by: GroupCallCenterGetInstanceRequestRI.
     /// <see cref="GroupCallCenterGetInstanceResponse22"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:4608""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:2028""}]")]
     public class GroupCallCenterGetInstanceRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupCallCenterGetInstanceResponse22>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:4608")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:2028")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId

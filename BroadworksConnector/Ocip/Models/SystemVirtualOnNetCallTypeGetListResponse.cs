@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ef8bc875d664cdc920228d455073e594:293""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ef8bc875d664cdc920228d455073e594:301""}]")]
     public class SystemVirtualOnNetCallTypeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _virtualOnNetCallTypeTable;
 
         [XmlElement(ElementName = "virtualOnNetCallTypeTable", IsNullable = false, Namespace = "")]
-        [Group(@"ef8bc875d664cdc920228d455073e594:293")]
+        [Group(@"ef8bc875d664cdc920228d455073e594:301")]
         public BroadWorksConnector.Ocip.Models.C.OCITable VirtualOnNetCallTypeTable
         {
             get => _virtualOnNetCallTypeTable;

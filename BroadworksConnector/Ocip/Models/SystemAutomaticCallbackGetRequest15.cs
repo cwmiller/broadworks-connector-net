@@ -12,12 +12,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced By: SystemAutomaticCallbackGetRequest15sp2
     /// <see cref="SystemAutomaticCallbackGetResponse15"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemAutomaticCallbackGetRequest15sp2"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:20626""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:23166""}]")]
     public class SystemAutomaticCallbackGetRequest15 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemAutomaticCallbackGetResponse15>
     {
 

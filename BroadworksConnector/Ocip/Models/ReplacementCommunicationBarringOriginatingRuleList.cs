@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:20208""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:20560""}]")]
     public class ReplacementCommunicationBarringOriginatingRuleList
     {
 
         protected List<BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingRule> _rule = new List<BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingRule>();
 
         [XmlElement(ElementName = "rule", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:20208")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:20560")]
         public List<BroadWorksConnector.Ocip.Models.CommunicationBarringOriginatingRule> Rule
         {
             get => _rule;

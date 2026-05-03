@@ -18,7 +18,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b1745b5f688013b73224574a66f4f4b2:192""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b1745b5f688013b73224574a66f4f4b2:194""}]")]
     public class UserBusyLampFieldGetResponse16sp2 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -26,7 +26,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "listURI", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b1745b5f688013b73224574a66f4f4b2:192")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:194")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ListURI
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableCallParkNotification;
 
         [XmlElement(ElementName = "enableCallParkNotification", IsNullable = false, Namespace = "")]
-        [Group(@"b1745b5f688013b73224574a66f4f4b2:192")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:194")]
         public bool EnableCallParkNotification
         {
             get => _enableCallParkNotification;
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _monitoredUserTable;
 
         [XmlElement(ElementName = "monitoredUserTable", IsNullable = false, Namespace = "")]
-        [Group(@"b1745b5f688013b73224574a66f4f4b2:192")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:194")]
         public BroadWorksConnector.Ocip.Models.C.OCITable MonitoredUserTable
         {
             get => _monitoredUserTable;

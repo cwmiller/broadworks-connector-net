@@ -9,20 +9,21 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to get all the information of a collaborate bridge.
     /// The response is either GroupCollaborateBridgeGetInstanceResponse20sp1 or ErrorResponse.
+    /// Replaced by: GroupCollaborateBridgeGetInstanceRequest24
     /// <see cref="GroupCollaborateBridgeGetInstanceResponse20sp1"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bc805893b9cc7e3e01eec64e9ad62768:393""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:9670""}]")]
     public class GroupCollaborateBridgeGetInstanceRequest20sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupCollaborateBridgeGetInstanceResponse20sp1>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:393")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:9670")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId

@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1b5ee40628a3f2b1bcab94a53dec91e7:268""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1b5ee40628a3f2b1bcab94a53dec91e7:271""}]")]
     public class SystemEnhancedCallLogsModifyRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxNonPagedResponseSize", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:268")]
+        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:271")]
         [MinInclusive(100)]
         [MaxInclusive(1000)]
         public int? MaxNonPagedResponseSize
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "eclQueryApplicationURL", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:268")]
+        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:271")]
         [MinLength(1)]
         [MaxLength(256)]
         public string EclQueryApplicationURL
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "eclQueryDataRepositoryURL", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:268")]
+        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:271")]
         [MinLength(1)]
         [MaxLength(256)]
         public string EclQueryDataRepositoryURL
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultSchema", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:268")]
+        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:271")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DefaultSchema

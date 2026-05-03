@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7636"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7638""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7609"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7611""}]}]")]
     public class CallCenterScheduledReportDNISSelection
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:7636")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7609")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allDNIS;
 
         [XmlElement(ElementName = "allDNIS", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:7638")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7611")]
         public bool AllDNIS
         {
             get => _allDNIS;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected List<string> _name = new List<string>();
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:7638")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7611")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> Name

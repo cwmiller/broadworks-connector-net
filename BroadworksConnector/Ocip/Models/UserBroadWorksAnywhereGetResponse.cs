@@ -11,19 +11,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// The phoneNumberTable contains columns: "Phone Number", "Description"
     /// Replaced by: UserBroadWorksAnywhereGetResponse16sp2
     /// <see cref="UserBroadWorksAnywhereGetRequest"/>
-    /// <see cref="UserBroadWorksAnywhereGetResponse16sp2"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:40356""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:44399""}]")]
     public class UserBroadWorksAnywhereGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _alertAllLocationsForClickToDialCalls;
 
         [XmlElement(ElementName = "alertAllLocationsForClickToDialCalls", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:40356")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:44399")]
         public bool AlertAllLocationsForClickToDialCalls
         {
             get => _alertAllLocationsForClickToDialCalls;
@@ -40,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _phoneNumberTable;
 
         [XmlElement(ElementName = "phoneNumberTable", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:40356")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:44399")]
         public BroadWorksConnector.Ocip.Models.C.OCITable PhoneNumberTable
         {
             get => _phoneNumberTable;

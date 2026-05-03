@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bd23272215266344f26a1702c47ce590:138""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bd23272215266344f26a1702c47ce590:141""}]")]
     public class SystemClassmarkGetUtilizationListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _classmarkUserTable;
 
         [XmlElement(ElementName = "classmarkUserTable", IsNullable = false, Namespace = "")]
-        [Group(@"bd23272215266344f26a1702c47ce590:138")]
+        [Group(@"bd23272215266344f26a1702c47ce590:141")]
         public BroadWorksConnector.Ocip.Models.C.OCITable ClassmarkUserTable
         {
             get => _classmarkUserTable;

@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced By: ServiceProviderAnswerConfirmationModifyRequest16
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="ServiceProviderAnswerConfirmationModifyRequest16"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:17797""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:19892""}]")]
     public class ServiceProviderAnswerConfirmationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:17797")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:19892")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -44,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "announcementMessageSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:17797")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:19892")]
         public BroadWorksConnector.Ocip.Models.AnswerConfirmationAnnouncementSelection? AnnouncementMessageSelection
         {
             get => _announcementMessageSelection;
@@ -62,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "confirmationMessageAudioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:17797")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:19892")]
         public BroadWorksConnector.Ocip.Models.LabeledFileResource ConfirmationMessageAudioFile
         {
             get => _confirmationMessageAudioFile;
@@ -80,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "confirmationTimoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:17797")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:19892")]
         [MinInclusive(2)]
         [MaxInclusive(30)]
         public int? ConfirmationTimoutSeconds

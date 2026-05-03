@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:4235""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:4285""}]")]
     public class ServiceProviderExtensionLengthGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultExtensionLength", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:4235")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:4285")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
         public int? DefaultExtensionLength
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "locationRoutingPrefixDigit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:4235")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:4285")]
         [MinInclusive(0)]
         [MaxInclusive(9)]
         public int? LocationRoutingPrefixDigit
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "locationCodeLength", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:4235")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:4285")]
         [MinInclusive(1)]
         [MaxInclusive(15)]
         public int? LocationCodeLength

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:19033""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:19381""}]")]
     public class SystemTreatmentMappingInternalReleaseCauseDeleteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected BroadWorksConnector.Ocip.Models.InternalReleaseCause16 _internalReleaseCause;
 
         [XmlElement(ElementName = "internalReleaseCause", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:19033")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:19381")]
         public BroadWorksConnector.Ocip.Models.InternalReleaseCause16 InternalReleaseCause
         {
             get => _internalReleaseCause;

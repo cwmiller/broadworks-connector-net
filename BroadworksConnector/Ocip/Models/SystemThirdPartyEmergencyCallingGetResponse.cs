@@ -12,12 +12,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Replaced by: SystemThirdPartyEmergencyCallingGetResponse24
     /// <see cref="SystemThirdPartyEmergencyCallingGetRequest"/>
-    /// <see cref="SystemThirdPartyEmergencyCallingGetResponse24"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:36189""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:40450""}]")]
     public class SystemThirdPartyEmergencyCallingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -25,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "primaryHELDServerURL", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36189")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40450")]
         [MinLength(1)]
         [MaxLength(256)]
         public string PrimaryHELDServerURL
@@ -45,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "secondaryHELDServerURL", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36189")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40450")]
         [MinLength(1)]
         [MaxLength(256)]
         public string SecondaryHELDServerURL
@@ -65,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "emergencyRouteNetAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36189")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40450")]
         [MinLength(1)]
         [MaxLength(80)]
         public string EmergencyRouteNetAddress
@@ -85,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "emergencyRoutePort", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36189")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40450")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int? EmergencyRoutePort
@@ -105,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "emergencyRouteTransport", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:36189")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:40450")]
         public BroadWorksConnector.Ocip.Models.TransportProtocol? EmergencyRouteTransport
         {
             get => _emergencyRouteTransport;

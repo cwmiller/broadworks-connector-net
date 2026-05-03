@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:2570""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:2616""}]")]
     public class SystemAutoDisableAccountsGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected int _accountInactivityTimeoutDays;
 
         [XmlElement(ElementName = "accountInactivityTimeoutDays", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:2570")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2616")]
         [MinInclusive(30)]
         [MaxInclusive(365)]
         public int AccountInactivityTimeoutDays
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableAutoDisableAccounts;
 
         [XmlElement(ElementName = "enableAutoDisableAccounts", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:2570")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2616")]
         public bool EnableAutoDisableAccounts
         {
             get => _enableAutoDisableAccounts;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableAutoDisableAccountsSystemAdminLevel;
 
         [XmlElement(ElementName = "enableAutoDisableAccountsSystemAdminLevel", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:2570")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2616")]
         public bool EnableAutoDisableAccountsSystemAdminLevel
         {
             get => _enableAutoDisableAccountsSystemAdminLevel;
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableAutoDisableAccountsProvisioningAdminLevel;
 
         [XmlElement(ElementName = "enableAutoDisableAccountsProvisioningAdminLevel", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:2570")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2616")]
         public bool EnableAutoDisableAccountsProvisioningAdminLevel
         {
             get => _enableAutoDisableAccountsProvisioningAdminLevel;
@@ -90,7 +90,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableAutoDisableAccountsResellerAdminLevel;
 
         [XmlElement(ElementName = "enableAutoDisableAccountsResellerAdminLevel", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:2570")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2616")]
         public bool EnableAutoDisableAccountsResellerAdminLevel
         {
             get => _enableAutoDisableAccountsResellerAdminLevel;
@@ -107,7 +107,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableAutoDisableAccountsSvcProviderAdminLevel;
 
         [XmlElement(ElementName = "enableAutoDisableAccountsSvcProviderAdminLevel", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:2570")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2616")]
         public bool EnableAutoDisableAccountsSvcProviderAdminLevel
         {
             get => _enableAutoDisableAccountsSvcProviderAdminLevel;
@@ -124,7 +124,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableAutoDisableAccountsGroupAdminLevel;
 
         [XmlElement(ElementName = "enableAutoDisableAccountsGroupAdminLevel", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:2570")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2616")]
         public bool EnableAutoDisableAccountsGroupAdminLevel
         {
             get => _enableAutoDisableAccountsGroupAdminLevel;
@@ -141,7 +141,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableAutoDisableAccountsDepartmentAdminLevel;
 
         [XmlElement(ElementName = "enableAutoDisableAccountsDepartmentAdminLevel", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:2570")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2616")]
         public bool EnableAutoDisableAccountsDepartmentAdminLevel
         {
             get => _enableAutoDisableAccountsDepartmentAdminLevel;

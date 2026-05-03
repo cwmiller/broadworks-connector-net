@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3940""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4720""}]")]
     public class NameDialingName
     {
 
         protected string _nameDialingLastName;
 
         [XmlElement(ElementName = "nameDialingLastName", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3940")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4720")]
         [MinLength(1)]
         [MaxLength(30)]
         public string NameDialingLastName
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _nameDialingFirstName;
 
         [XmlElement(ElementName = "nameDialingFirstName", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3940")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4720")]
         [MinLength(1)]
         [MaxLength(30)]
         public string NameDialingFirstName

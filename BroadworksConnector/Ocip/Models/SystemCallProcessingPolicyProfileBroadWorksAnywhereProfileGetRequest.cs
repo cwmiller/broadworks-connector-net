@@ -8,25 +8,24 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Request to get the configuration for a call processing policy profile BroadWorks Anywhere subscriber type profile.
-    /// The response is either a SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetResponse or an
+    /// The response is either a SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetRequestResponse or an
     /// ErrorResponse.
     /// 
     /// Replaced by: SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetRequest22
-    /// <see cref="SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetResponse"/>
+    /// <see cref="SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetRequestResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:23065""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:25649""}]")]
     public class SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemCallProcessingPolicyProfileBroadWorksAnywhereProfileGetResponse>
     {
 
         protected string _callProcessingPolicyProfileName;
 
         [XmlElement(ElementName = "callProcessingPolicyProfileName", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:23065")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:25649")]
         [MinLength(1)]
         [MaxLength(40)]
         public string CallProcessingPolicyProfileName

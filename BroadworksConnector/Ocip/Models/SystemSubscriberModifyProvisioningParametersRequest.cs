@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:18358""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:18660""}]")]
     public class SystemSubscriberModifyProvisioningParametersRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "configurableCLIDNormalization", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:18358")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18660")]
         public bool? ConfigurableCLIDNormalization
         {
             get => _configurableCLIDNormalization;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "includeDefaultDomain", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:18358")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18660")]
         public bool? IncludeDefaultDomain
         {
             get => _includeDefaultDomain;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "minAuthLevelToProvisionAltUserID", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:18358")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18660")]
         public BroadWorksConnector.Ocip.Models.AuthorizationLevelToProvisionAlternateUserID? MinAuthLevelToProvisionAltUserID
         {
             get => _minAuthLevelToProvisionAltUserID;
@@ -72,6 +72,24 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlIgnore]
         protected bool MinAuthLevelToProvisionAltUserIDSpecified { get; set; }
+
+        protected bool? _blockUnauthorizationWhenVSubInstanceExists;
+
+        [XmlElement(ElementName = "blockUnauthorizationWhenVSubInstanceExists", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"da582a1f8028404e70d260cf1f891033:18660")]
+        public bool? BlockUnauthorizationWhenVSubInstanceExists
+        {
+            get => _blockUnauthorizationWhenVSubInstanceExists;
+            set
+            {
+                BlockUnauthorizationWhenVSubInstanceExistsSpecified = (value != null);
+                _blockUnauthorizationWhenVSubInstanceExists = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool BlockUnauthorizationWhenVSubInstanceExistsSpecified { get; set; }
 
     }
 }

@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1d4e390f8cd01ca6f92589024d74dac6:258""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1d4e390f8cd01ca6f92589024d74dac6:261""}]")]
     public class GroupFlexibleSeatingHostGuestAssociationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:258")]
+        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:261")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enforceAssociationLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:258")]
+        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:261")]
         public bool? EnforceAssociationLimit
         {
             get => _enforceAssociationLimit;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "associationLimitHours", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:258")]
+        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:261")]
         [MinInclusive(1)]
         [MaxInclusive(999)]
         public int? AssociationLimitHours
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessLevel", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:258")]
+        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:261")]
         public BroadWorksConnector.Ocip.Models.FlexibleSeatingHostAccessLevel? AccessLevel
         {
             get => _accessLevel;
@@ -99,7 +99,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "removeGuestAssociation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:258")]
+        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:261")]
         public bool? RemoveGuestAssociation
         {
             get => _removeGuestAssociation;

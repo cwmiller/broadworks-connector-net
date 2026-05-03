@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:6448""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:6417""}]")]
     public class SystemCallCenterEnhancedReportingScheduledTaskParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "scheduledReportSearchIntervalMinutes", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:6448")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6417")]
         [MinInclusive(1)]
         [MaxInclusive(1440)]
         public int? ScheduledReportSearchIntervalMinutes
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maximumScheduledReportsPerInterval", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:6448")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6417")]
         [MinInclusive(1)]
         [MaxInclusive(100000)]
         public int? MaximumScheduledReportsPerInterval
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deleteScheduledReportDaysAfterCompletion", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:6448")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6417")]
         [MinInclusive(1)]
         [MaxInclusive(366)]
         public int? DeleteScheduledReportDaysAfterCompletion
@@ -83,7 +83,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callCenterEventMode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:6448")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6417")]
         public BroadWorksConnector.Ocip.Models.CallCenterEventRecordingCallCenterEventMode? CallCenterEventMode
         {
             get => _callCenterEventMode;
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useDialedAddressForRemoteNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:6448")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:6417")]
         public bool? UseDialedAddressForRemoteNumber
         {
             get => _useDialedAddressForRemoteNumber;

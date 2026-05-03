@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:8605""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:8655""}]")]
     public class SystemDeviceManagementTagSetRegionTagModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _tagSetName;
 
         [XmlElement(ElementName = "tagSetName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8605")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8655")]
         [MinLength(1)]
         [MaxLength(30)]
         public string TagSetName
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _regionName;
 
         [XmlElement(ElementName = "regionName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8605")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8655")]
         [MinLength(1)]
         [MaxLength(64)]
         public string RegionName
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _tagName;
 
         [XmlElement(ElementName = "tagName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8605")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8655")]
         [MinLength(1)]
         [MaxLength(64)]
         public string TagName
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "tagValue", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:8605")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8655")]
         [MinLength(1)]
         [MaxLength(256)]
         public string TagValue

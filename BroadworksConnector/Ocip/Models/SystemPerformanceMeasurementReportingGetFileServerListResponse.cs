@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:28827""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:32513""}]")]
     public class SystemPerformanceMeasurementReportingGetFileServerListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _fileServerTable;
 
         [XmlElement(ElementName = "fileServerTable", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:28827")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:32513")]
         public BroadWorksConnector.Ocip.Models.C.OCITable FileServerTable
         {
             get => _fileServerTable;

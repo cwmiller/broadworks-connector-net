@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:15292""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:15497""}]")]
     public class SystemRoutePointExternalSystemApplicationControllerGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemRoutePointExternalSystemApplicationControllerGetResponse>
     {
 
         protected string _externalSystem;
 
         [XmlElement(ElementName = "externalSystem", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:15292")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:15497")]
         [MinLength(1)]
         [MaxLength(40)]
         public string ExternalSystem

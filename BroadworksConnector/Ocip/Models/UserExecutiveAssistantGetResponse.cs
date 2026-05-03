@@ -18,14 +18,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d531efc7ebfdf83cc344962728505dd5:62""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d531efc7ebfdf83cc344962728505dd5:65""}]")]
     public class UserExecutiveAssistantGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enableDivert;
 
         [XmlElement(ElementName = "enableDivert", IsNullable = false, Namespace = "")]
-        [Group(@"d531efc7ebfdf83cc344962728505dd5:62")]
+        [Group(@"d531efc7ebfdf83cc344962728505dd5:65")]
         public bool EnableDivert
         {
             get => _enableDivert;
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "divertToPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d531efc7ebfdf83cc344962728505dd5:62")]
+        [Group(@"d531efc7ebfdf83cc344962728505dd5:65")]
         [MinLength(1)]
         [MaxLength(161)]
         public string DivertToPhoneNumber
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _executiveTable;
 
         [XmlElement(ElementName = "executiveTable", IsNullable = false, Namespace = "")]
-        [Group(@"d531efc7ebfdf83cc344962728505dd5:62")]
+        [Group(@"d531efc7ebfdf83cc344962728505dd5:65")]
         public BroadWorksConnector.Ocip.Models.C.OCITable ExecutiveTable
         {
             get => _executiveTable;

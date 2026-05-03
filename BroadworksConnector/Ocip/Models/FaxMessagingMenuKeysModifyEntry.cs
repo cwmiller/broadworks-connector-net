@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:2560""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:2493""}]")]
     public class FaxMessagingMenuKeysModifyEntry
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "saveFaxMessageAndSkipToNext", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2560")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2493")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SaveFaxMessageAndSkipToNext
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "previousFaxMessage", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2560")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2493")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string PreviousFaxMessage
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "playEnvelope", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2560")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2493")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string PlayEnvelope
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "nextFaxMessage", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2560")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2493")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string NextFaxMessage
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "deleteFaxMessage", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2560")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2493")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string DeleteFaxMessage
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "printFaxMessage", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2560")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2493")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string PrintFaxMessage
@@ -147,7 +147,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "returnToPreviousMenu", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2560")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2493")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ReturnToPreviousMenu

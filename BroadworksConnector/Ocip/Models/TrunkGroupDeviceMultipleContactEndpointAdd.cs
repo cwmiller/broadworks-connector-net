@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:5475""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:6292""}]")]
     public class TrunkGroupDeviceMultipleContactEndpointAdd
     {
 
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5475")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6292")]
         [MinLength(1)]
         [MaxLength(30)]
         public string Name
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5475")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6292")]
         [MinLength(1)]
         [MaxLength(161)]
         public string LinePort
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5475")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6292")]
         [MinLength(1)]
         [MaxLength(1020)]
         public List<string> Contact

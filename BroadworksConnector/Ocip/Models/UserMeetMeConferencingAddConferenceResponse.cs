@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:45703""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:49952""}]")]
     public class UserMeetMeConferencingAddConferenceResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _conferenceId;
 
         [XmlElement(ElementName = "conferenceId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:45703")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:49952")]
         [MinLength(6)]
         [MaxLength(12)]
         public string ConferenceId
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _moderatorPin;
 
         [XmlElement(ElementName = "moderatorPin", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:45703")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:49952")]
         [MinLength(6)]
         [MaxLength(12)]
         public string ModeratorPin

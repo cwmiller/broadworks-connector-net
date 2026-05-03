@@ -14,19 +14,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: UserPushNotificationRegistrationGetListRequest21sp1
     /// <see cref="UserPushNotificationRegistrationGetListResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="UserPushNotificationRegistrationGetListRequest21sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:46417"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:46418""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:50797"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:50798""}]}]")]
     public class UserPushNotificationRegistrationGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserPushNotificationRegistrationGetListResponse>
     {
 
         protected string _registrationId;
 
         [XmlElement(ElementName = "registrationId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:46418")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:50798")]
         [MinLength(1)]
         [MaxLength(1024)]
         public string RegistrationId
@@ -45,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:46418")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:50798")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a63afa661ee5c74f4700e562e88c66d0:1834""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a63afa661ee5c74f4700e562e88c66d0:1842""}]")]
     public class OutgoingCallingPlanDepartmentTransferNumbers
     {
 
         protected BroadWorksConnector.Ocip.Models.DepartmentKey _departmentKey;
 
         [XmlElement(ElementName = "departmentKey", IsNullable = false, Namespace = "")]
-        [Group(@"a63afa661ee5c74f4700e562e88c66d0:1834")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:1842")]
         public BroadWorksConnector.Ocip.Models.DepartmentKey DepartmentKey
         {
             get => _departmentKey;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _departmentName;
 
         [XmlElement(ElementName = "departmentName", IsNullable = false, Namespace = "")]
-        [Group(@"a63afa661ee5c74f4700e562e88c66d0:1834")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:1842")]
         [MinLength(1)]
         public string DepartmentName
         {
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbers _transferNumbers;
 
         [XmlElement(ElementName = "transferNumbers", IsNullable = false, Namespace = "")]
-        [Group(@"a63afa661ee5c74f4700e562e88c66d0:1834")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:1842")]
         public BroadWorksConnector.Ocip.Models.OutgoingCallingPlanTransferNumbers TransferNumbers
         {
             get => _transferNumbers;

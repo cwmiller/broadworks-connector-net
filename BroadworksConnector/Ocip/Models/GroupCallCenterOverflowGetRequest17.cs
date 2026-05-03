@@ -9,20 +9,24 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get a call center's overflow settings.
     /// The response is either a GroupCallCenterOverflowGetResponse17 or an ErrorResponse.
+    /// Replaced by:
+    /// GroupCallCenterOverflowGetRequest20 in AS mode
+    /// GroupCallCenterOverflowGetRequestXS in XS mode.
     /// <see cref="GroupCallCenterOverflowGetResponse17"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="GroupCallCenterOverflowGetRequest20"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:2209""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:7804""}]")]
     public class GroupCallCenterOverflowGetRequest17 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupCallCenterOverflowGetResponse17>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:2209")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:7804")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:19611""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:19959""}]")]
     public class SystemWebexMeetingsCallTypeModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:19611")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:19959")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkServerCallType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:19611")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:19959")]
         [MinLength(1)]
         [MaxLength(4)]
         public string NetworkServerCallType
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enforceNSChargeField", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:19611")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:19959")]
         public bool? EnforceNSChargeField
         {
             get => _enforceNSChargeField;
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "processAsInternalForSACSubscriber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:19611")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:19959")]
         public bool? ProcessAsInternalForSACSubscriber
         {
             get => _processAsInternalForSACSubscriber;

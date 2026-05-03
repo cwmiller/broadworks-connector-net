@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3135""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3396""}]")]
     public class EstimatedWaitMessageOptionsRead17sp4
     {
 
         protected bool _enabled;
 
         [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3135")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3396")]
         public bool Enabled
         {
             get => _enabled;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.EstimatedWaitMessageOperatingMode _operatingMode;
 
         [XmlElement(ElementName = "operatingMode", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3135")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3396")]
         public BroadWorksConnector.Ocip.Models.EstimatedWaitMessageOperatingMode OperatingMode
         {
             get => _operatingMode;
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _playPositionHighVolume;
 
         [XmlElement(ElementName = "playPositionHighVolume", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3135")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3396")]
         public bool PlayPositionHighVolume
         {
             get => _playPositionHighVolume;
@@ -70,7 +70,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _playTimeHighVolume;
 
         [XmlElement(ElementName = "playTimeHighVolume", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3135")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3396")]
         public bool PlayTimeHighVolume
         {
             get => _playTimeHighVolume;
@@ -87,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maximumPositions;
 
         [XmlElement(ElementName = "maximumPositions", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3135")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3396")]
         [MinInclusive(1)]
         [MaxInclusive(100)]
         public int MaximumPositions
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maximumWaitingMinutes;
 
         [XmlElement(ElementName = "maximumWaitingMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3135")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3396")]
         [MinInclusive(1)]
         [MaxInclusive(100)]
         public int MaximumWaitingMinutes
@@ -125,7 +125,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _defaultCallHandlingMinutes;
 
         [XmlElement(ElementName = "defaultCallHandlingMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3135")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3396")]
         [MinInclusive(1)]
         [MaxInclusive(100)]
         public int DefaultCallHandlingMinutes
@@ -144,7 +144,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _playUpdatedEWM;
 
         [XmlElement(ElementName = "playUpdatedEWM", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3135")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3396")]
         public bool PlayUpdatedEWM
         {
             get => _playUpdatedEWM;
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeBetweenEWMUpdatesSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3135")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3396")]
         [MinInclusive(10)]
         [MaxInclusive(600)]
         public int? TimeBetweenEWMUpdatesSeconds

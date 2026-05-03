@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""146ca46a7097f08aed7a73ab65f17df8:361""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""146ca46a7097f08aed7a73ab65f17df8:364""}]")]
     public class GroupFindMeFollowMeGetInstanceListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _findMeFollowMeTable;
 
         [XmlElement(ElementName = "findMeFollowMeTable", IsNullable = false, Namespace = "")]
-        [Group(@"146ca46a7097f08aed7a73ab65f17df8:361")]
+        [Group(@"146ca46a7097f08aed7a73ab65f17df8:364")]
         public BroadWorksConnector.Ocip.Models.C.OCITable FindMeFollowMeTable
         {
             get => _findMeFollowMeTable;

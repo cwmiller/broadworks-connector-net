@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""8250786d50d10f8fe081d126ecca3847:57""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""8250786d50d10f8fe081d126ecca3847:60""}]")]
     public class SystemPhysicalLocationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _alwaysAllowEmergencyCalls;
 
         [XmlElement(ElementName = "alwaysAllowEmergencyCalls", IsNullable = false, Namespace = "")]
-        [Group(@"8250786d50d10f8fe081d126ecca3847:57")]
+        [Group(@"8250786d50d10f8fe081d126ecca3847:60")]
         public bool AlwaysAllowEmergencyCalls
         {
             get => _alwaysAllowEmergencyCalls;

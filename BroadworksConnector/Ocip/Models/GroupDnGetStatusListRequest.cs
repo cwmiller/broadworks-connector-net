@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:5049""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:5124""}]")]
     public class GroupDnGetStatusListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupDnGetStatusListResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:5049")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:5124")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:5049")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:5124")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected List<string> _dn = new List<string>();
 
         [XmlElement(ElementName = "dn", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:5049")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:5124")]
         [MinLength(1)]
         [MaxLength(23)]
         public List<string> Dn

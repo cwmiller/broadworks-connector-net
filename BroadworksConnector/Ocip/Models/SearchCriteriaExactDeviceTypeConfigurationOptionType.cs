@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:973""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:976""}]")]
     public class SearchCriteriaExactDeviceTypeConfigurationOptionType : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         protected BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType _deviceConfigOptions;
 
         [XmlElement(ElementName = "deviceConfigOptions", IsNullable = false, Namespace = "")]
-        [Group(@"972fbf832439609ec8f2765c5637c3f1:973")]
+        [Group(@"972fbf832439609ec8f2765c5637c3f1:976")]
         public BroadWorksConnector.Ocip.Models.DeviceTypeConfigurationOptionType DeviceConfigOptions
         {
             get => _deviceConfigOptions;

@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""aa3a240fa755015613cfb9259eccafef:200""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""aa3a240fa755015613cfb9259eccafef:203""}]")]
     public class SystemSMDIMessageDeskModifyServerRouteRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _routeDestination;
 
         [XmlElement(ElementName = "routeDestination", IsNullable = false, Namespace = "")]
-        [Group(@"aa3a240fa755015613cfb9259eccafef:200")]
+        [Group(@"aa3a240fa755015613cfb9259eccafef:203")]
         [MinLength(1)]
         [MaxLength(10)]
         public string RouteDestination
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceNameList", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"aa3a240fa755015613cfb9259eccafef:200")]
+        [Group(@"aa3a240fa755015613cfb9259eccafef:203")]
         public BroadWorksConnector.Ocip.Models.SystemSMDIMessageDeskModifyServerRouteRequestDeviceNameList DeviceNameList
         {
             get => _deviceNameList;

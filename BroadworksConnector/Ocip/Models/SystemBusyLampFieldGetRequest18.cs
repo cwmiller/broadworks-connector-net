@@ -8,8 +8,8 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Request the system level data associated with the Busy Lamp
-    /// Field service.
-    /// The response is either a SystemBusyLampFieldGetResponse18 or an ErrorResponse.
+    /// Field service. The response is either a
+    /// SystemBusyLampFieldGetResponse18 or an ErrorResponse.
     /// 
     /// Replaced by: SystemBusyLampFieldGetRequest23 in AS data mode.
     /// <see cref="SystemBusyLampFieldGetResponse18"/>
@@ -19,7 +19,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:8328""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:8892""}]")]
     public class SystemBusyLampFieldGetRequest18 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemBusyLampFieldGetResponse18>
     {
 

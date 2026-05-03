@@ -8,20 +8,20 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to the SystemBroadWorksMobilityGeographicalPoolGetListRequest.
-    /// Contains a table with column headings: “Pool”, "Country Code", "Is Default", “Description”.
+    /// Contains a table with column headings: "Pool", "Country Code", "Is Default", "Description".
     /// <see cref="SystemBroadWorksMobilityGeographicalPoolGetListRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9ae9f7d53e566e21347e23e20e2a2a39:794""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9ae9f7d53e566e21347e23e20e2a2a39:797""}]")]
     public class SystemBroadWorksMobilityGeographicalPoolGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _geographicalPoolTable;
 
         [XmlElement(ElementName = "geographicalPoolTable", IsNullable = false, Namespace = "")]
-        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:794")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:797")]
         public BroadWorksConnector.Ocip.Models.C.OCITable GeographicalPoolTable
         {
             get => _geographicalPoolTable;

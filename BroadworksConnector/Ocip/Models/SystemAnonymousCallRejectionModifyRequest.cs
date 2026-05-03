@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""17d2110a0df023b843fdbd156e17bec8:77""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""17d2110a0df023b843fdbd156e17bec8:81""}]")]
     public class SystemAnonymousCallRejectionModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "paiRequired", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"17d2110a0df023b843fdbd156e17bec8:77")]
+        [Group(@"17d2110a0df023b843fdbd156e17bec8:81")]
         public bool? PaiRequired
         {
             get => _paiRequired;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "screenOnlyLocalCalls", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"17d2110a0df023b843fdbd156e17bec8:77")]
+        [Group(@"17d2110a0df023b843fdbd156e17bec8:81")]
         public bool? ScreenOnlyLocalCalls
         {
             get => _screenOnlyLocalCalls;

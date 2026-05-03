@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:8794""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:8915""}]")]
     public class ReplacementCustomContactDirectoryEntryList
     {
 
         protected List<BroadWorksConnector.Ocip.Models.CustomContactDirectoryEntry> _entry = new List<BroadWorksConnector.Ocip.Models.CustomContactDirectoryEntry>();
 
         [XmlElement(ElementName = "entry", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:8794")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:8915")]
         public List<BroadWorksConnector.Ocip.Models.CustomContactDirectoryEntry> Entry
         {
             get => _entry;

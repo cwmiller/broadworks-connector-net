@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:523"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:525""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:532"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:534""}]}]")]
     public class UserAnnouncementFileDeleteListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:523")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:532")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected List<BroadWorksConnector.Ocip.Models.AnnouncementFileKey> _announcementFileKey = new List<BroadWorksConnector.Ocip.Models.AnnouncementFileKey>();
 
         [XmlElement(ElementName = "announcementFileKey", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:525")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:534")]
         public List<BroadWorksConnector.Ocip.Models.AnnouncementFileKey> AnnouncementFileKey
         {
             get => _announcementFileKey;
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected List<string> _announcementFileExternalId = new List<string>();
 
         [XmlElement(ElementName = "announcementFileExternalId", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:525")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:534")]
         [MaxLength(36)]
         public List<string> AnnouncementFileExternalId
         {

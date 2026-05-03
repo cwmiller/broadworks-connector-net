@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:353""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:357""}]")]
     public class AccessDeviceMultipleIdentityAndContactEndpointModify
     {
 
@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accessDevice", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:353")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:357")]
         public BroadWorksConnector.Ocip.Models.AccessDevice AccessDevice
         {
             get => _accessDevice;
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:353")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:357")]
         [MinLength(1)]
         [MaxLength(161)]
         public string LinePort
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "privateIdentity", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:353")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:357")]
         [MinLength(1)]
         [MaxLength(161)]
         public string PrivateIdentity
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "contactList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:353")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:357")]
         public BroadWorksConnector.Ocip.Models.ReplacementContactList ContactList
         {
             get => _contactList;
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "portNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:353")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:357")]
         [MinInclusive(1)]
         [MaxInclusive(1024)]
         public int? PortNumber

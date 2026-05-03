@@ -26,14 +26,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""37cec25308bcc82fe5a80bf541c42c89:402""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""37cec25308bcc82fe5a80bf541c42c89:405""}]")]
     public class UserIntegratedIMPModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:402")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:405")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -53,7 +53,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:402")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:405")]
         public bool? IsActive
         {
             get => _isActive;
@@ -71,7 +71,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "impId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:402")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:405")]
         [MinLength(1)]
         [MaxLength(196)]
         public string ImpId
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isAlternateImpId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:402")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:405")]
         public bool? IsAlternateImpId
         {
             get => _isAlternateImpId;

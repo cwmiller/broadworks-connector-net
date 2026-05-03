@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6a0b48bb5563c1c69d62271066fdc8cb:57""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6a0b48bb5563c1c69d62271066fdc8cb:60""}]")]
     public class UserSilentAlertingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"6a0b48bb5563c1c69d62271066fdc8cb:57")]
+        [Group(@"6a0b48bb5563c1c69d62271066fdc8cb:60")]
         public bool IsActive
         {
             get => _isActive;

@@ -28,14 +28,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3a54ac906cb7002cc1a30fbb0efadb0a:253""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""3a54ac906cb7002cc1a30fbb0efadb0a:258""}]")]
     public class UserExecutiveGetFilteringResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enableFiltering;
 
         [XmlElement(ElementName = "enableFiltering", IsNullable = false, Namespace = "")]
-        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:253")]
+        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:258")]
         public bool EnableFiltering
         {
             get => _enableFiltering;
@@ -52,7 +52,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringMode _filteringMode;
 
         [XmlElement(ElementName = "filteringMode", IsNullable = false, Namespace = "")]
-        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:253")]
+        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:258")]
         public BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringMode FilteringMode
         {
             get => _filteringMode;
@@ -69,7 +69,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringSimpleFilterType _simpleFilterType;
 
         [XmlElement(ElementName = "simpleFilterType", IsNullable = false, Namespace = "")]
-        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:253")]
+        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:258")]
         public BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringSimpleFilterType SimpleFilterType
         {
             get => _simpleFilterType;
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _criteriaTable;
 
         [XmlElement(ElementName = "criteriaTable", IsNullable = false, Namespace = "")]
-        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:253")]
+        [Group(@"3a54ac906cb7002cc1a30fbb0efadb0a:258")]
         public BroadWorksConnector.Ocip.Models.C.OCITable CriteriaTable
         {
             get => _criteriaTable;

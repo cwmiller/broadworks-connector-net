@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:50268""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:54745""}]")]
     public class PushNotificationTokenData
     {
 
         protected string _pushNotificationToken;
 
         [XmlElement(ElementName = "pushNotificationToken", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:50268")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:54745")]
         [MinLength(1)]
         [MaxLength(2048)]
         public string PushNotificationToken
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _pushNotificationType;
 
         [XmlElement(ElementName = "pushNotificationType", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:50268")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:54745")]
         [MinLength(1)]
         [MaxLength(80)]
         public string PushNotificationType
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "pushNotificationEventData", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:50268")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:54745")]
         public List<BroadWorksConnector.Ocip.Models.PushNotificationEventData> PushNotificationEventData
         {
             get => _pushNotificationEventData;

@@ -8,19 +8,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// AuthenticationRequest/Response is 1st stage of the 2 stage OCI login process.
-    /// <see cref="AuthenticationRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:417""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:1139""}]")]
     public class AuthenticationResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:417")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:1139")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -39,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _nonce;
 
         [XmlElement(ElementName = "nonce", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:417")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:1139")]
         public string Nonce
         {
             get => _nonce;
@@ -56,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.DigitalSignatureAlgorithm _passwordAlgorithm;
 
         [XmlElement(ElementName = "passwordAlgorithm", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:417")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:1139")]
         public BroadWorksConnector.Ocip.Models.DigitalSignatureAlgorithm PasswordAlgorithm
         {
             get => _passwordAlgorithm;

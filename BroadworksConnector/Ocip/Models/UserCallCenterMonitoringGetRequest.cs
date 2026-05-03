@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by UserCallCenterMonitoringGetRequest23
     /// <see cref="UserCallCenterMonitoringGetResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="UserCallCenterMonitoringGetRequest23"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:41339""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:45382""}]")]
     public class UserCallCenterMonitoringGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserCallCenterMonitoringGetResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:41339")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:45382")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

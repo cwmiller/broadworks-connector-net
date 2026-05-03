@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:549""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:552""}]")]
     public class SystemVoiceMessageSummaryUpdateGetResponse25 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _sendSavedAndUrgentMWIOnNotification;
 
         [XmlElement(ElementName = "sendSavedAndUrgentMWIOnNotification", IsNullable = false, Namespace = "")]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:549")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:552")]
         public bool SendSavedAndUrgentMWIOnNotification
         {
             get => _sendSavedAndUrgentMWIOnNotification;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _sendMessageSummaryUpdateOnRegister;
 
         [XmlElement(ElementName = "sendMessageSummaryUpdateOnRegister", IsNullable = false, Namespace = "")]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:549")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:552")]
         public bool SendMessageSummaryUpdateOnRegister
         {
             get => _sendMessageSummaryUpdateOnRegister;
@@ -54,7 +54,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _minTimeBetweenMWIOnRegister;
 
         [XmlElement(ElementName = "minTimeBetweenMWIOnRegister", IsNullable = false, Namespace = "")]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:549")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:552")]
         [MinInclusive(0)]
         [MaxInclusive(86400)]
         public int MinTimeBetweenMWIOnRegister
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowMultipleUsersPerAccount;
 
         [XmlElement(ElementName = "allowMultipleUsersPerAccount", IsNullable = false, Namespace = "")]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:549")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:552")]
         public bool AllowMultipleUsersPerAccount
         {
             get => _allowMultipleUsersPerAccount;

@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3493""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3784""}]")]
     public class MeetMeConferencingConferenceKey
     {
 
         protected string _bridgeId;
 
         [XmlElement(ElementName = "bridgeId", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3493")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3784")]
         [MinLength(1)]
         [MaxLength(161)]
         public string BridgeId
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _conferenceId;
 
         [XmlElement(ElementName = "conferenceId", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3493")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3784")]
         [MinLength(6)]
         [MaxLength(12)]
         public string ConferenceId

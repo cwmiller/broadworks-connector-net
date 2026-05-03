@@ -10,19 +10,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to UserVoiceMessagingUserGetVoicePortalRequest.
     /// Replaced By: UserVoiceMessagingUserGetVoicePortalResponse16
     /// <see cref="UserVoiceMessagingUserGetVoicePortalRequest"/>
-    /// <see cref="UserVoiceMessagingUserGetVoicePortalResponse16"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:48071""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:52510""}]")]
     public class UserVoiceMessagingUserGetVoicePortalResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _usePersonalizedName;
 
         [XmlElement(ElementName = "usePersonalizedName", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:48071")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:52510")]
         public bool UsePersonalizedName
         {
             get => _usePersonalizedName;
@@ -39,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _voicePortalAutoLogin;
 
         [XmlElement(ElementName = "voicePortalAutoLogin", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:48071")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:52510")]
         public bool VoicePortalAutoLogin
         {
             get => _voicePortalAutoLogin;
@@ -57,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "personalizedNameAudioFileDescription", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:48071")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:52510")]
         [MinLength(1)]
         [MaxLength(256)]
         public string PersonalizedNameAudioFileDescription

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bc805893b9cc7e3e01eec64e9ad62768:736""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bc805893b9cc7e3e01eec64e9ad62768:739""}]")]
     public class UserCollaborateInstantRoomParametersModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:736")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:739")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "attendeeNotification", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:736")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:739")]
         public BroadWorksConnector.Ocip.Models.CollaborateRoomAttendeeNotification? AttendeeNotification
         {
             get => _attendeeNotification;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "endCollaborateRoomSessionOnOwnerExit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:736")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:739")]
         public bool? EndCollaborateRoomSessionOnOwnerExit
         {
             get => _endCollaborateRoomSessionOnOwnerExit;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "ownerRequired", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:736")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:739")]
         public bool? OwnerRequired
         {
             get => _ownerRequired;

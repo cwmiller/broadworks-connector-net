@@ -21,14 +21,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:7035""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:7087""}]")]
     public class SystemCountryCodeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _defaultCountryCode;
 
         [XmlElement(ElementName = "defaultCountryCode", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:7035")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7087")]
         [MaxLength(3)]
         [RegularExpression(@"[0-9]|[1-9][0-9]{1,2}")]
         public string DefaultCountryCode
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _countryCodeTable;
 
         [XmlElement(ElementName = "countryCodeTable", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:7035")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7087")]
         public BroadWorksConnector.Ocip.Models.C.OCITable CountryCodeTable
         {
             get => _countryCodeTable;

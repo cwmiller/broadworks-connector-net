@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: ServiceProviderBroadWorksMobilityGetRequest19sp1
     /// <see cref="ServiceProviderBroadWorksMobilityGetResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="ServiceProviderBroadWorksMobilityGetRequest19sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:17817""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:19912""}]")]
     public class ServiceProviderBroadWorksMobilityGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ServiceProviderBroadWorksMobilityGetResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:17817")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:19912")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:17720""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:17945""}]")]
     public class SystemSIPDiversionReasonGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _diversionReasonTable;
 
         [XmlElement(ElementName = "diversionReasonTable", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:17720")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:17945")]
         public BroadWorksConnector.Ocip.Models.C.OCITable DiversionReasonTable
         {
             get => _diversionReasonTable;

@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:526""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:530""}]")]
     public class AccessDeviceReorderEndpointIdentity
     {
 
         protected string _linePort;
 
         [XmlElement(ElementName = "linePort", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:526")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:530")]
         [MinLength(1)]
         [MaxLength(161)]
         public string LinePort
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "privateIdentity", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:526")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:530")]
         [MinLength(1)]
         [MaxLength(161)]
         public string PrivateIdentity

@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:3729""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:3769""}]")]
     public class GroupDepartmentGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "parentDepartmentKey", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:3729")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:3769")]
         public BroadWorksConnector.Ocip.Models.DepartmentKey ParentDepartmentKey
         {
             get => _parentDepartmentKey;
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callingLineIdName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:3729")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:3769")]
         [MinLength(1)]
         [MaxLength(80)]
         public string CallingLineIdName
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callingLineIdPhoneNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:3729")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:3769")]
         [MinLength(1)]
         [MaxLength(23)]
         public string CallingLineIdPhoneNumber

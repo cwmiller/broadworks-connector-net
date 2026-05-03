@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:12867""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:12986""}]")]
     public class SystemNetworkRoutingServerAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _netAddress;
 
         [XmlElement(ElementName = "netAddress", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:12867")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:12986")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NetAddress
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "port", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:12867")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:12986")]
         [MinInclusive(1025)]
         [MaxInclusive(65535)]
         public int? Port
@@ -58,11 +58,11 @@ namespace BroadWorksConnector.Ocip.Models
         [XmlIgnore]
         protected bool PortSpecified { get; set; }
 
-        protected BroadWorksConnector.Ocip.Models.TransportProtocol _transportProtocol;
+        protected BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol _transportProtocol;
 
         [XmlElement(ElementName = "transportProtocol", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:12867")]
-        public BroadWorksConnector.Ocip.Models.TransportProtocol TransportProtocol
+        [Group(@"da582a1f8028404e70d260cf1f891033:12986")]
+        public BroadWorksConnector.Ocip.Models.ExtendedTransportProtocol TransportProtocol
         {
             get => _transportProtocol;
             set
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _poll;
 
         [XmlElement(ElementName = "poll", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:12867")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:12986")]
         public bool Poll
         {
             get => _poll;
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:12867")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:12986")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

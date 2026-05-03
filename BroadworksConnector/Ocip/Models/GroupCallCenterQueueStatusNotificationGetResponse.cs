@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:5677""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:5646""}]")]
     public class GroupCallCenterQueueStatusNotificationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enableQueueStatusNotification;
 
         [XmlElement(ElementName = "enableQueueStatusNotification", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:5677")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5646")]
         public bool EnableQueueStatusNotification
         {
             get => _enableQueueStatusNotification;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableQueueDepthThreshold;
 
         [XmlElement(ElementName = "enableQueueDepthThreshold", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:5677")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5646")]
         public bool EnableQueueDepthThreshold
         {
             get => _enableQueueDepthThreshold;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableWaitingTimeThreshold;
 
         [XmlElement(ElementName = "enableWaitingTimeThreshold", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:5677")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5646")]
         public bool EnableWaitingTimeThreshold
         {
             get => _enableWaitingTimeThreshold;
@@ -72,7 +72,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _numberOfCallsThreshold;
 
         [XmlElement(ElementName = "numberOfCallsThreshold", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:5677")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5646")]
         [MinInclusive(1)]
         [MaxInclusive(525)]
         public int NumberOfCallsThreshold
@@ -91,7 +91,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _waitingTimeOfCallsThreshold;
 
         [XmlElement(ElementName = "waitingTimeOfCallsThreshold", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:5677")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:5646")]
         [MinInclusive(1)]
         [MaxInclusive(7200)]
         public int WaitingTimeOfCallsThreshold

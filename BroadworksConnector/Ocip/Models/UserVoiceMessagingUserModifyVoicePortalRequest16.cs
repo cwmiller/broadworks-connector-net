@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9bff48d8661ff401ea11b6e32b924f02:560""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9bff48d8661ff401ea11b6e32b924f02:565""}]")]
     public class UserVoiceMessagingUserModifyVoicePortalRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"9bff48d8661ff401ea11b6e32b924f02:560")]
+        [Group(@"9bff48d8661ff401ea11b6e32b924f02:565")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "usePersonalizedName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9bff48d8661ff401ea11b6e32b924f02:560")]
+        [Group(@"9bff48d8661ff401ea11b6e32b924f02:565")]
         public bool? UsePersonalizedName
         {
             get => _usePersonalizedName;
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "voicePortalAutoLogin", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9bff48d8661ff401ea11b6e32b924f02:560")]
+        [Group(@"9bff48d8661ff401ea11b6e32b924f02:565")]
         public bool? VoicePortalAutoLogin
         {
             get => _voicePortalAutoLogin;
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "personalizedNameAudioFile", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9bff48d8661ff401ea11b6e32b924f02:560")]
+        [Group(@"9bff48d8661ff401ea11b6e32b924f02:565")]
         public BroadWorksConnector.Ocip.Models.LabeledMediaFileResource PersonalizedNameAudioFile
         {
             get => _personalizedNameAudioFile;

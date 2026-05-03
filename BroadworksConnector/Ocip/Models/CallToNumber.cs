@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:1140""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:1368""}]")]
     public class CallToNumber
     {
 
         protected BroadWorksConnector.Ocip.Models.CallToNumberType _type;
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1140")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1368")]
         public BroadWorksConnector.Ocip.Models.CallToNumberType Type
         {
             get => _type;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "number", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1140")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1368")]
         [MinLength(1)]
         [MaxLength(23)]
         public string Number
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "extension", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1140")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1368")]
         [MinLength(2)]
         [MaxLength(20)]
         public string Extension

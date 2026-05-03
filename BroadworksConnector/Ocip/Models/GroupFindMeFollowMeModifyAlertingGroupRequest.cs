@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""146ca46a7097f08aed7a73ab65f17df8:444""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""146ca46a7097f08aed7a73ab65f17df8:447""}]")]
     public class GroupFindMeFollowMeModifyAlertingGroupRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"146ca46a7097f08aed7a73ab65f17df8:444")]
+        [Group(@"146ca46a7097f08aed7a73ab65f17df8:447")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _alertingGroupName;
 
         [XmlElement(ElementName = "alertingGroupName", IsNullable = false, Namespace = "")]
-        [Group(@"146ca46a7097f08aed7a73ab65f17df8:444")]
+        [Group(@"146ca46a7097f08aed7a73ab65f17df8:447")]
         [MinLength(1)]
         [MaxLength(40)]
         public string AlertingGroupName
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newAlertingGroupName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"146ca46a7097f08aed7a73ab65f17df8:444")]
+        [Group(@"146ca46a7097f08aed7a73ab65f17df8:447")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NewAlertingGroupName
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "alertingGroupDescription", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"146ca46a7097f08aed7a73ab65f17df8:444")]
+        [Group(@"146ca46a7097f08aed7a73ab65f17df8:447")]
         [MinLength(1)]
         [MaxLength(80)]
         public string AlertingGroupDescription
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useDiversionInhibitor", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"146ca46a7097f08aed7a73ab65f17df8:444")]
+        [Group(@"146ca46a7097f08aed7a73ab65f17df8:447")]
         public bool? UseDiversionInhibitor
         {
             get => _useDiversionInhibitor;
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "answerConfirmationRequired", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"146ca46a7097f08aed7a73ab65f17df8:444")]
+        [Group(@"146ca46a7097f08aed7a73ab65f17df8:447")]
         public bool? AnswerConfirmationRequired
         {
             get => _answerConfirmationRequired;
@@ -138,7 +138,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "numberOfRings", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"146ca46a7097f08aed7a73ab65f17df8:444")]
+        [Group(@"146ca46a7097f08aed7a73ab65f17df8:447")]
         [MinInclusive(2)]
         [MaxInclusive(20)]
         public int? NumberOfRings
@@ -159,7 +159,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "phoneNumberOrUserList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"146ca46a7097f08aed7a73ab65f17df8:444")]
+        [Group(@"146ca46a7097f08aed7a73ab65f17df8:447")]
         public BroadWorksConnector.Ocip.Models.FindMeFollowMeAlertingGroupReplacementOutgoingDNSIPURIorUserIdList PhoneNumberOrUserList
         {
             get => _phoneNumberOrUserList;
@@ -177,7 +177,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "criteriaActivation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"146ca46a7097f08aed7a73ab65f17df8:444")]
+        [Group(@"146ca46a7097f08aed7a73ab65f17df8:447")]
         public List<BroadWorksConnector.Ocip.Models.CriteriaActivation> CriteriaActivation
         {
             get => _criteriaActivation;

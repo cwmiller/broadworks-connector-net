@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:13179""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:13348""}]")]
     public class SystemNumberFormattingParametersGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _applyFormattingToE164Numbers;
 
         [XmlElement(ElementName = "applyFormattingToE164Numbers", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:13179")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:13348")]
         public bool ApplyFormattingToE164Numbers
         {
             get => _applyFormattingToE164Numbers;

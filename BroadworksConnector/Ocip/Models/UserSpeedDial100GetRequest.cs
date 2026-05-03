@@ -8,21 +8,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get speed dial 100 settings for a speed code.
-    /// The response is either a SuccessResponse or an ErrorResponse.
-    /// <see cref="SuccessResponse"/>
-    /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e084de202cf726c3202fca43390f9ec5:209""}]")]
-    public class UserSpeedDial100GetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e084de202cf726c3202fca43390f9ec5:211""}]")]
+    public class UserSpeedDial100GetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserSpeedDial100GetResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"e084de202cf726c3202fca43390f9ec5:209")]
+        [Group(@"e084de202cf726c3202fca43390f9ec5:211")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -41,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _speedCode;
 
         [XmlElement(ElementName = "speedCode", IsNullable = false, Namespace = "")]
-        [Group(@"e084de202cf726c3202fca43390f9ec5:209")]
+        [Group(@"e084de202cf726c3202fca43390f9ec5:211")]
         [MinInclusive(0)]
         [MaxInclusive(99)]
         public int SpeedCode

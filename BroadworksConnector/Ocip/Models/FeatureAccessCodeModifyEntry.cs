@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3255""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3529""}]")]
     public class FeatureAccessCodeModifyEntry
     {
 
         protected string _featureAccessCodeName;
 
         [XmlElement(ElementName = "featureAccessCodeName", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3255")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3529")]
         [MinLength(1)]
         public string FeatureAccessCodeName
         {
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mainCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3255")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3529")]
         [MinLength(1)]
         [MaxLength(5)]
         public string MainCode
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "alternateCode", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3255")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3529")]
         [MinLength(1)]
         [MaxLength(5)]
         public string AlternateCode
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableFAC", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3255")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3529")]
         public bool? EnableFAC
         {
             get => _enableFAC;

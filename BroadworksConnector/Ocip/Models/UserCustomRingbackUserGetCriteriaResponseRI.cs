@@ -1,0 +1,330 @@
+using System;
+using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
+using BroadWorksConnector.Ocip.Validation;
+using System.Collections.Generic;
+
+namespace BroadWorksConnector.Ocip.Models
+{
+    /// <summary>
+    /// Response to the UserCustomRingbackUserGetCriteriaRequestRI.
+    /// </summary>
+    [Serializable]
+    [XmlRoot(Namespace = "")]
+
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2e482dcb2fc2f9ef31621d21b9816a42:221""}]")]
+    public class UserCustomRingbackUserGetCriteriaResponseRI : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
+    {
+
+        protected BroadWorksConnector.Ocip.Models.TimeSchedule _timeSchedule;
+
+        [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"2e482dcb2fc2f9ef31621d21b9816a42:221")]
+        public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule
+        {
+            get => _timeSchedule;
+            set
+            {
+                TimeScheduleSpecified = (value != null);
+                _timeSchedule = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool TimeScheduleSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.HolidaySchedule _holidaySchedule;
+
+        [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"2e482dcb2fc2f9ef31621d21b9816a42:221")]
+        public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule
+        {
+            get => _holidaySchedule;
+            set
+            {
+                HolidayScheduleSpecified = (value != null);
+                _holidaySchedule = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool HolidayScheduleSpecified { get; set; }
+
+        protected bool _blacklisted;
+
+        [XmlElement(ElementName = "blacklisted", IsNullable = false, Namespace = "")]
+        [Group(@"2e482dcb2fc2f9ef31621d21b9816a42:221")]
+        public bool Blacklisted
+        {
+            get => _blacklisted;
+            set
+            {
+                BlacklistedSpecified = true;
+                _blacklisted = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool BlacklistedSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.CriteriaFromDn23 _fromDnCriteria;
+
+        [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
+        [Group(@"2e482dcb2fc2f9ef31621d21b9816a42:221")]
+        public BroadWorksConnector.Ocip.Models.CriteriaFromDn23 FromDnCriteria
+        {
+            get => _fromDnCriteria;
+            set
+            {
+                FromDnCriteriaSpecified = true;
+                _fromDnCriteria = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool FromDnCriteriaSpecified { get; set; }
+
+        protected List<BroadWorksConnector.Ocip.Models.CallToNumber> _callToNumber = new List<BroadWorksConnector.Ocip.Models.CallToNumber>();
+
+        [XmlElement(ElementName = "callToNumber", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"2e482dcb2fc2f9ef31621d21b9816a42:221")]
+        public List<BroadWorksConnector.Ocip.Models.CallToNumber> CallToNumber
+        {
+            get => _callToNumber;
+            set
+            {
+                CallToNumberSpecified = (value != null);
+                _callToNumber = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool CallToNumberSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _audioSelection;
+
+        [XmlElement(ElementName = "audioSelection", IsNullable = false, Namespace = "")]
+        [Group(@"2e482dcb2fc2f9ef31621d21b9816a42:221")]
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection AudioSelection
+        {
+            get => _audioSelection;
+            set
+            {
+                AudioSelectionSpecified = true;
+                _audioSelection = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool AudioSelectionSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _audioFile;
+
+        [XmlElement(ElementName = "audioFile", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"2e482dcb2fc2f9ef31621d21b9816a42:221")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey AudioFile
+        {
+            get => _audioFile;
+            set
+            {
+                AudioFileSpecified = (value != null);
+                _audioFile = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool AudioFileSpecified { get; set; }
+
+        protected string _audioFileUrl;
+
+        [XmlElement(ElementName = "audioFileUrl", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"2e482dcb2fc2f9ef31621d21b9816a42:221")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string AudioFileUrl
+        {
+            get => _audioFileUrl;
+            set
+            {
+                AudioFileUrlSpecified = (value != null);
+                _audioFileUrl = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool AudioFileUrlSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection _videoSelection;
+
+        [XmlElement(ElementName = "videoSelection", IsNullable = false, Namespace = "")]
+        [Group(@"2e482dcb2fc2f9ef31621d21b9816a42:221")]
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection VideoSelection
+        {
+            get => _videoSelection;
+            set
+            {
+                VideoSelectionSpecified = true;
+                _videoSelection = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool VideoSelectionSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _videoFile;
+
+        [XmlElement(ElementName = "videoFile", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"2e482dcb2fc2f9ef31621d21b9816a42:221")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey VideoFile
+        {
+            get => _videoFile;
+            set
+            {
+                VideoFileSpecified = (value != null);
+                _videoFile = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool VideoFileSpecified { get; set; }
+
+        protected string _videoFileUrl;
+
+        [XmlElement(ElementName = "videoFileUrl", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"2e482dcb2fc2f9ef31621d21b9816a42:221")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string VideoFileUrl
+        {
+            get => _videoFileUrl;
+            set
+            {
+                VideoFileUrlSpecified = (value != null);
+                _videoFileUrl = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool VideoFileUrlSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? _callWaitingAudioSelection;
+
+        [XmlElement(ElementName = "callWaitingAudioSelection", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"2e482dcb2fc2f9ef31621d21b9816a42:221")]
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? CallWaitingAudioSelection
+        {
+            get => _callWaitingAudioSelection;
+            set
+            {
+                CallWaitingAudioSelectionSpecified = (value != null);
+                _callWaitingAudioSelection = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool CallWaitingAudioSelectionSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _callWaitingAudioFile;
+
+        [XmlElement(ElementName = "callWaitingAudioFile", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"2e482dcb2fc2f9ef31621d21b9816a42:221")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey CallWaitingAudioFile
+        {
+            get => _callWaitingAudioFile;
+            set
+            {
+                CallWaitingAudioFileSpecified = (value != null);
+                _callWaitingAudioFile = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool CallWaitingAudioFileSpecified { get; set; }
+
+        protected string _callWaitingAudioFileUrl;
+
+        [XmlElement(ElementName = "callWaitingAudioFileUrl", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"2e482dcb2fc2f9ef31621d21b9816a42:221")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string CallWaitingAudioFileUrl
+        {
+            get => _callWaitingAudioFileUrl;
+            set
+            {
+                CallWaitingAudioFileUrlSpecified = (value != null);
+                _callWaitingAudioFileUrl = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool CallWaitingAudioFileUrlSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? _callWaitingVideoSelection;
+
+        [XmlElement(ElementName = "callWaitingVideoSelection", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"2e482dcb2fc2f9ef31621d21b9816a42:221")]
+        public BroadWorksConnector.Ocip.Models.ExtendedFileResourceSelection? CallWaitingVideoSelection
+        {
+            get => _callWaitingVideoSelection;
+            set
+            {
+                CallWaitingVideoSelectionSpecified = (value != null);
+                _callWaitingVideoSelection = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool CallWaitingVideoSelectionSpecified { get; set; }
+
+        protected BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey _callWaitingVideoFile;
+
+        [XmlElement(ElementName = "callWaitingVideoFile", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"2e482dcb2fc2f9ef31621d21b9816a42:221")]
+        public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey CallWaitingVideoFile
+        {
+            get => _callWaitingVideoFile;
+            set
+            {
+                CallWaitingVideoFileSpecified = (value != null);
+                _callWaitingVideoFile = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool CallWaitingVideoFileSpecified { get; set; }
+
+        protected string _callWaitingVideoFileUrl;
+
+        [XmlElement(ElementName = "callWaitingVideoFileUrl", IsNullable = false, Namespace = "")]
+        [Optional]
+        [Group(@"2e482dcb2fc2f9ef31621d21b9816a42:221")]
+        [MinLength(1)]
+        [MaxLength(256)]
+        public string CallWaitingVideoFileUrl
+        {
+            get => _callWaitingVideoFileUrl;
+            set
+            {
+                CallWaitingVideoFileUrlSpecified = (value != null);
+                _callWaitingVideoFileUrl = value;
+            }
+        }
+
+        [XmlIgnore]
+        protected bool CallWaitingVideoFileUrlSpecified { get; set; }
+
+    }
+}

@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced By: ServiceProviderPortalPasscodeRulesGetRequest
     /// <see cref="ServiceProviderVoiceMessagingGroupGetPasscodeRulesResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="ServiceProviderPortalPasscodeRulesGetRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:19895""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:22435""}]")]
     public class ServiceProviderVoiceMessagingGroupGetPasscodeRulesRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ServiceProviderVoiceMessagingGroupGetPasscodeRulesResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:19895")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:22435")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId

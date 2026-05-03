@@ -14,19 +14,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: UserCallProcessingGetPolicyRequest19sp1
     /// <see cref="UserCallProcessingGetPolicyResponse18"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="UserCallProcessingGetPolicyRequest19sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:41758""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:45801""}]")]
     public class UserCallProcessingGetPolicyRequest18 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserCallProcessingGetPolicyResponse18>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:41758")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:45801")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

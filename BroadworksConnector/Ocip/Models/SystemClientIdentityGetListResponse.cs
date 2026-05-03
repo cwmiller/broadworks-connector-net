@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:5489""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:5538""}]")]
     public class SystemClientIdentityGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _clientIdentityTable;
 
         [XmlElement(ElementName = "clientIdentityTable", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:5489")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:5538")]
         public BroadWorksConnector.Ocip.Models.C.OCITable ClientIdentityTable
         {
             get => _clientIdentityTable;

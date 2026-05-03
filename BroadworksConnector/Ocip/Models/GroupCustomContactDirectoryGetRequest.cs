@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replace by: GroupCustomContactDirectoryGetRequest17
     /// <see cref="GroupCustomContactDirectoryGetResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="GroupCustomContactDirectoryGetRequest17"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:9053""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:9833""}]")]
     public class GroupCustomContactDirectoryGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupCustomContactDirectoryGetResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9053")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:9833")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -43,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9053")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:9833")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -62,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9053")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:9833")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name

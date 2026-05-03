@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7e3b48428e45d35b1edd744adc90f9b:246""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7e3b48428e45d35b1edd744adc90f9b:250""}]")]
     public class GroupCallCapacityManagementModifyInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:246")]
+        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:250")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:246")]
+        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:250")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:246")]
+        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:250")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name
@@ -80,7 +80,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "newName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:246")]
+        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:250")]
         [MinLength(1)]
         [MaxLength(80)]
         public string NewName
@@ -100,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "maxActiveCallsAllowed", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:246")]
+        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:250")]
         [MinInclusive(0)]
         [MaxInclusive(99999)]
         public int? MaxActiveCallsAllowed
@@ -121,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "maxIncomingActiveCallsAllowed", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:246")]
+        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:250")]
         [MinInclusive(0)]
         [MaxInclusive(99999)]
         public int? MaxIncomingActiveCallsAllowed
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "maxOutgoingActiveCallsAllowed", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:246")]
+        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:250")]
         [MinInclusive(0)]
         [MaxInclusive(99999)]
         public int? MaxOutgoingActiveCallsAllowed
@@ -162,7 +162,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "becomeDefaultGroupForNewUsers", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:246")]
+        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:250")]
         public bool? BecomeDefaultGroupForNewUsers
         {
             get => _becomeDefaultGroupForNewUsers;
@@ -181,7 +181,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "userIdList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:246")]
+        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:250")]
         public BroadWorksConnector.Ocip.Models.ReplacementUserIdList UserIdList
         {
             get => _userIdList;

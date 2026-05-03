@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""993492ea5726d0f3ec8743f5cef40e23:190""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""993492ea5726d0f3ec8743f5cef40e23:191""}]")]
     public class GroupEmergencyZonesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"993492ea5726d0f3ec8743f5cef40e23:190")]
+        [Group(@"993492ea5726d0f3ec8743f5cef40e23:191")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"993492ea5726d0f3ec8743f5cef40e23:190")]
+        [Group(@"993492ea5726d0f3ec8743f5cef40e23:191")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"993492ea5726d0f3ec8743f5cef40e23:190")]
+        [Group(@"993492ea5726d0f3ec8743f5cef40e23:191")]
         public bool? IsActive
         {
             get => _isActive;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "emergencyZonesProhibition", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"993492ea5726d0f3ec8743f5cef40e23:190")]
+        [Group(@"993492ea5726d0f3ec8743f5cef40e23:191")]
         public BroadWorksConnector.Ocip.Models.EmergencyZonesProhibition? EmergencyZonesProhibition
         {
             get => _emergencyZonesProhibition;
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sendEmergencyCallNotifyEmail", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"993492ea5726d0f3ec8743f5cef40e23:190")]
+        [Group(@"993492ea5726d0f3ec8743f5cef40e23:191")]
         public bool? SendEmergencyCallNotifyEmail
         {
             get => _sendEmergencyCallNotifyEmail;
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "emergencyCallNotifyEmailAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"993492ea5726d0f3ec8743f5cef40e23:190")]
+        [Group(@"993492ea5726d0f3ec8743f5cef40e23:191")]
         [MinLength(1)]
         [MaxLength(80)]
         public string EmergencyCallNotifyEmailAddress

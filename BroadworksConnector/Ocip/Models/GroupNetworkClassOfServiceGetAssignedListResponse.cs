@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:6265""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:6344""}]")]
     public class GroupNetworkClassOfServiceGetAssignedListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _networkClassOfServiceTable;
 
         [XmlElement(ElementName = "networkClassOfServiceTable", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:6265")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:6344")]
         public BroadWorksConnector.Ocip.Models.C.OCITable NetworkClassOfServiceTable
         {
             get => _networkClassOfServiceTable;

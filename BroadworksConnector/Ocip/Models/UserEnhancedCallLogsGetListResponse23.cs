@@ -16,19 +16,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// A list of ExtendedMixedCallLogsEntry22 will be returned if the call logs are stored on DBS or Couchbase
     /// The logs are sorted by date/time of the call.
     /// <see cref="UserEnhancedCallLogsGetListRequest23"/>
-    /// <see cref="UserEnhancedCallLogsGetListRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1b5ee40628a3f2b1bcab94a53dec91e7:360"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""1b5ee40628a3f2b1bcab94a53dec91e7:362""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1b5ee40628a3f2b1bcab94a53dec91e7:363"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""1b5ee40628a3f2b1bcab94a53dec91e7:365""}]}]")]
     public class UserEnhancedCallLogsGetListResponse23 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected int _totalNumberOfRows;
 
         [XmlElement(ElementName = "totalNumberOfRows", IsNullable = false, Namespace = "")]
-        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:360")]
+        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:363")]
         public int TotalNumberOfRows
         {
             get => _totalNumberOfRows;
@@ -45,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse23LegacyEntry _legacyEntry;
 
         [XmlElement(ElementName = "legacyEntry", IsNullable = false, Namespace = "")]
-        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:362")]
+        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:365")]
         public BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse23LegacyEntry LegacyEntry
         {
             get => _legacyEntry;
@@ -62,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse23ExtendedEntry _extendedEntry;
 
         [XmlElement(ElementName = "extendedEntry", IsNullable = false, Namespace = "")]
-        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:362")]
+        [Group(@"1b5ee40628a3f2b1bcab94a53dec91e7:365")]
         public BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse23ExtendedEntry ExtendedEntry
         {
             get => _extendedEntry;

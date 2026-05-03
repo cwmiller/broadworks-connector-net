@@ -13,12 +13,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: SystemLocationBasedCallingRestrictionsGetRequest17sp3
     /// <see cref="SystemLocationBasedCallingRestrictionsGetResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemLocationBasedCallingRestrictionsGetRequest17sp3"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:27985""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:31627""}]")]
     public class SystemLocationBasedCallingRestrictionsGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemLocationBasedCallingRestrictionsGetResponse>
     {
 

@@ -8,22 +8,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Request collaborate room settings for MyRoom.
-    /// The response is either UserCollaborateMyRoomGetResponse or
+    /// The response is either UserCollaboratMyRoomGetResponse or
     /// ErrorResponse.
-    /// <see cref="UserCollaborateMyRoomGetResponse"/>
+    /// <see cref="UserCollaboratMyRoomGetResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bc805893b9cc7e3e01eec64e9ad62768:756""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""bc805893b9cc7e3e01eec64e9ad62768:759""}]")]
     public class UserCollaborateMyRoomGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserCollaborateMyRoomGetResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:756")]
+        [Group(@"bc805893b9cc7e3e01eec64e9ad62768:759")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

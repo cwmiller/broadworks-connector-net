@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10655""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10714""}]")]
     public class SystemGeographicRedundancyPeerSipConnectionMonitoringModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10655")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10714")]
         public bool? Enabled
         {
             get => _enabled;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "heartbeatInterval", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10655")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10714")]
         [MinInclusive(10)]
         [MaxInclusive(3600000)]
         public int? HeartbeatInterval
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "heartbeatTimeout", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10655")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10714")]
         [MinInclusive(10)]
         [MaxInclusive(18000000)]
         public int? HeartbeatTimeout

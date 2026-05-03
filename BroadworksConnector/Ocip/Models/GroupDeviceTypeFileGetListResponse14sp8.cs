@@ -13,19 +13,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Replaced by: GroupDeviceTypeFileGetListResponse21
     /// <see cref="GroupDeviceTypeFileGetListRequest14sp8"/>
-    /// <see cref="GroupDeviceTypeFileGetListResponse21"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:9354""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:10205""}]")]
     public class GroupDeviceTypeFileGetListResponse14sp8 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _groupDeviceTypeFilesTable;
 
         [XmlElement(ElementName = "groupDeviceTypeFilesTable", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9354")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10205")]
         public BroadWorksConnector.Ocip.Models.C.OCITable GroupDeviceTypeFilesTable
         {
             get => _groupDeviceTypeFilesTable;

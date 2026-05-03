@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d45e381d6dbac771631649063122a42e:292""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d45e381d6dbac771631649063122a42e:295""}]")]
     public class ResellerAdminModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"d45e381d6dbac771631649063122a42e:292")]
+        [Group(@"d45e381d6dbac771631649063122a42e:295")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "firstName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d45e381d6dbac771631649063122a42e:292")]
+        [Group(@"d45e381d6dbac771631649063122a42e:295")]
         [MinLength(1)]
         [MaxLength(30)]
         public string FirstName
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "lastName", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d45e381d6dbac771631649063122a42e:292")]
+        [Group(@"d45e381d6dbac771631649063122a42e:295")]
         [MinLength(1)]
         [MaxLength(30)]
         public string LastName
@@ -86,7 +86,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "password", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"d45e381d6dbac771631649063122a42e:292")]
+        [Group(@"d45e381d6dbac771631649063122a42e:295")]
         [MinLength(1)]
         [MaxLength(60)]
         public string Password
@@ -106,7 +106,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d45e381d6dbac771631649063122a42e:292")]
+        [Group(@"d45e381d6dbac771631649063122a42e:295")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Language
@@ -126,7 +126,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "accountDisabled", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d45e381d6dbac771631649063122a42e:292")]
+        [Group(@"d45e381d6dbac771631649063122a42e:295")]
         public bool? AccountDisabled
         {
             get => _accountDisabled;

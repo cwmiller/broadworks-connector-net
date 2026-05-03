@@ -12,12 +12,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: SystemExpensiveCallTypeGetListRequest16sp1
     /// <see cref="SystemExpensiveCallTypeGetListResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemExpensiveCallTypeGetListRequest16sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:27089""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:30731""}]")]
     public class SystemExpensiveCallTypeGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemExpensiveCallTypeGetListResponse>
     {
 

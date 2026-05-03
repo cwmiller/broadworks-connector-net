@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:5201""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:5251""}]")]
     public class ServiceProviderNumberPortabilityQueryGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enableNumberPortabilityQueryForOutgoingCalls;
 
         [XmlElement(ElementName = "enableNumberPortabilityQueryForOutgoingCalls", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:5201")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:5251")]
         public bool EnableNumberPortabilityQueryForOutgoingCalls
         {
             get => _enableNumberPortabilityQueryForOutgoingCalls;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableNumberPortabilityQueryForIncomingCalls;
 
         [XmlElement(ElementName = "enableNumberPortabilityQueryForIncomingCalls", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:5201")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:5251")]
         public bool EnableNumberPortabilityQueryForIncomingCalls
         {
             get => _enableNumberPortabilityQueryForIncomingCalls;
@@ -55,7 +55,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableNumberPortabilityQueryForNetworkCallsOnly;
 
         [XmlElement(ElementName = "enableNumberPortabilityQueryForNetworkCallsOnly", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:5201")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:5251")]
         public bool EnableNumberPortabilityQueryForNetworkCallsOnly
         {
             get => _enableNumberPortabilityQueryForNetworkCallsOnly;
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "digitPattern", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:5201")]
+        [Group(@"e19a9072c2dad499e9f28837da5768db:5251")]
         [MinLength(1)]
         [MaxLength(160)]
         public List<string> DigitPattern

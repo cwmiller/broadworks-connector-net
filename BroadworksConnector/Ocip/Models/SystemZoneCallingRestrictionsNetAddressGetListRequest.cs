@@ -8,23 +8,21 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Gets a list of IP Addresses and/or Ranges assigned to a zone
-    /// The response is either a SystemZoneCallingRestrictionsNetAddressGetListResponse or ErrorResponse
+    /// Response is SystemZoneCallingRestrictionsNetAddressGetListResponse.
     /// Replaced by: SystemZoneNetAddressGetListRequest
     /// <see cref="SystemZoneCallingRestrictionsNetAddressGetListResponse"/>
-    /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemZoneNetAddressGetListRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:39923""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:43966""}]")]
     public class SystemZoneCallingRestrictionsNetAddressGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemZoneCallingRestrictionsNetAddressGetListResponse>
     {
 
         protected string _zoneName;
 
         [XmlElement(ElementName = "zoneName", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:39923")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43966")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ZoneName
@@ -44,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:39923")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43966")]
         [MinInclusive(1)]
         public int? ResponseSizeLimit
         {
@@ -63,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaZoneIPAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:39923")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:43966")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaZoneIPAddress> SearchCriteriaZoneIPAddress
         {
             get => _searchCriteriaZoneIPAddress;

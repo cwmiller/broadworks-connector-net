@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4493""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:5267""}]")]
     public class ReplacementSIPAliasList
     {
 
         protected List<string> _sipAlias = new List<string>();
 
         [XmlElement(ElementName = "sipAlias", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4493")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5267")]
         [MinLength(1)]
         [MaxLength(161)]
         public List<string> SipAlias

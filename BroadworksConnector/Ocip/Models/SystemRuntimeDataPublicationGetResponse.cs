@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:15806""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:16011""}]")]
     public class SystemRuntimeDataPublicationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enableRuntimeDataSync;
 
         [XmlElement(ElementName = "enableRuntimeDataSync", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:15806")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:16011")]
         public bool EnableRuntimeDataSync
         {
             get => _enableRuntimeDataSync;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _runtimeDataSyncIntervalInMilliSeconds;
 
         [XmlElement(ElementName = "runtimeDataSyncIntervalInMilliSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:15806")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:16011")]
         [MinInclusive(500)]
         [MaxInclusive(360000)]
         public int RuntimeDataSyncIntervalInMilliSeconds

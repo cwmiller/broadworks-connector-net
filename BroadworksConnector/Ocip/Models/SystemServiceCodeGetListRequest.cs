@@ -17,7 +17,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:16323""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:16528""}]")]
     public class SystemServiceCodeGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemServiceCodeGetListResponse>
     {
 
@@ -25,7 +25,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:16323")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:16528")]
         [MinInclusive(1)]
         public int? ResponseSizeLimit
         {
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaServiceCode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:16323")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:16528")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCode> SearchCriteriaServiceCode
         {
             get => _searchCriteriaServiceCode;
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaServiceCodeDescription", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:16323")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:16528")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaServiceCodeDescription> SearchCriteriaServiceCodeDescription
         {
             get => _searchCriteriaServiceCodeDescription;

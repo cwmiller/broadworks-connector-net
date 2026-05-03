@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:15537""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:15742""}]")]
     public class SystemRoutingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isRouteRoundRobin;
 
         [XmlElement(ElementName = "isRouteRoundRobin", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:15537")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:15742")]
         public bool IsRouteRoundRobin
         {
             get => _isRouteRoundRobin;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _routeTimerSeconds;
 
         [XmlElement(ElementName = "routeTimerSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:15537")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:15742")]
         [MinInclusive(1)]
         [MaxInclusive(25)]
         public int RouteTimerSeconds
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.RoutingDNSResolvedAddressSelectionPolicy _dnsResolvedAddressSelectionPolicy;
 
         [XmlElement(ElementName = "dnsResolvedAddressSelectionPolicy", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:15537")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:15742")]
         public BroadWorksConnector.Ocip.Models.RoutingDNSResolvedAddressSelectionPolicy DnsResolvedAddressSelectionPolicy
         {
             get => _dnsResolvedAddressSelectionPolicy;
@@ -73,7 +73,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _statefulExpirationMinutes;
 
         [XmlElement(ElementName = "statefulExpirationMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:15537")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:15742")]
         [MinInclusive(0)]
         [MaxInclusive(1440)]
         public int StatefulExpirationMinutes
@@ -92,7 +92,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxAddressesPerHostname;
 
         [XmlElement(ElementName = "maxAddressesPerHostname", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:15537")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:15742")]
         [MinInclusive(1)]
         [MaxInclusive(50)]
         public int MaxAddressesPerHostname
@@ -111,7 +111,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxAddressesDuringSetup;
 
         [XmlElement(ElementName = "maxAddressesDuringSetup", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:15537")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:15742")]
         [MinInclusive(1)]
         [MaxInclusive(50)]
         public int MaxAddressesDuringSetup

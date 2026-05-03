@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b5e86c5d60603bdb61de308d278500d9:181""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b5e86c5d60603bdb61de308d278500d9:185""}]")]
     public class UserCallCenterMonitoringModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"b5e86c5d60603bdb61de308d278500d9:181")]
+        [Group(@"b5e86c5d60603bdb61de308d278500d9:185")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "playToneToAgentForSilentMonitoring", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b5e86c5d60603bdb61de308d278500d9:181")]
+        [Group(@"b5e86c5d60603bdb61de308d278500d9:185")]
         public bool? PlayToneToAgentForSilentMonitoring
         {
             get => _playToneToAgentForSilentMonitoring;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "playToneToAgentForSupervisorCoaching", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b5e86c5d60603bdb61de308d278500d9:181")]
+        [Group(@"b5e86c5d60603bdb61de308d278500d9:185")]
         public bool? PlayToneToAgentForSupervisorCoaching
         {
             get => _playToneToAgentForSupervisorCoaching;

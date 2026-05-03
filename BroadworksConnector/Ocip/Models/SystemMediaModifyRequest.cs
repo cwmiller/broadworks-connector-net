@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:12028""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:12087""}]")]
     public class SystemMediaModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _mediaName;
 
         [XmlElement(ElementName = "mediaName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:12028")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:12087")]
         [MinLength(1)]
         [MaxLength(80)]
         public string MediaName
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "codecName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:12028")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:12087")]
         [MinLength(1)]
         [MaxLength(80)]
         public string CodecName
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "bandwidthEnforcementType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:12028")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:12087")]
         public BroadWorksConnector.Ocip.Models.MediaBandwidthEnforcementType? BandwidthEnforcementType
         {
             get => _bandwidthEnforcementType;
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "mediaBandwidth", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:12028")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:12087")]
         [MinInclusive(1)]
         [MaxInclusive(100000000)]
         public int? MediaBandwidth

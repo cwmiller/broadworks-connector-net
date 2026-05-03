@@ -8,24 +8,23 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get the Integrated IMP specific service attribute for the user.
-    /// The response is either UserIntegratedIMPGetResponse or ErrorResponse.
+    /// The response is either UserIMPGetResponse or ErrorResponse.
     /// 
     /// Replaced by: UserIntegratedIMPGetRequest21sp1
-    /// <see cref="UserIntegratedIMPGetResponse"/>
+    /// <see cref="UserIMPGetResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="UserIntegratedIMPGetRequest21sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:18249""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:20979""}]")]
     public class UserIntegratedIMPGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserIntegratedIMPGetResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:18249")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:20979")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

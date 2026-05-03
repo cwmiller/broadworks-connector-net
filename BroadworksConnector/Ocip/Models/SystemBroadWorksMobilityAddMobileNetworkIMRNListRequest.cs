@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9ae9f7d53e566e21347e23e20e2a2a39:692""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9ae9f7d53e566e21347e23e20e2a2a39:695""}]")]
     public class SystemBroadWorksMobilityAddMobileNetworkIMRNListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _mobileNetworkName;
 
         [XmlElement(ElementName = "mobileNetworkName", IsNullable = false, Namespace = "")]
-        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:692")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:695")]
         [MinLength(1)]
         [MaxLength(80)]
         public string MobileNetworkName
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "imrnNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:692")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:695")]
         [MinLength(1)]
         [MaxLength(23)]
         public List<string> ImrnNumber
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "numberRange", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:692")]
+        [Group(@"9ae9f7d53e566e21347e23e20e2a2a39:695")]
         public List<BroadWorksConnector.Ocip.Models.DNRange> NumberRange
         {
             get => _numberRange;

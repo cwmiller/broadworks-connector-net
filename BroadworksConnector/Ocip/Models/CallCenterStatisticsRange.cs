@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7710""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:7683""}]")]
     public class CallCenterStatisticsRange
     {
 
         protected string _start;
 
         [XmlElement(ElementName = "start", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:7710")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7683")]
         public string Start
         {
             get => _start;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "end", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:7710")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:7683")]
         public string End
         {
             get => _end;

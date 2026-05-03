@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10352""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10411""}]")]
     public class SystemFileGetContentResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _fileContent;
 
         [XmlElement(ElementName = "fileContent", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10352")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:10411")]
         public string FileContent
         {
             get => _fileContent;

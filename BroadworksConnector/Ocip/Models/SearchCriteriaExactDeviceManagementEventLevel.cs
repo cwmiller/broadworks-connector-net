@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:883""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:886""}]")]
     public class SearchCriteriaExactDeviceManagementEventLevel : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         protected BroadWorksConnector.Ocip.Models.DeviceManagementEventLevel _dmEventLevel;
 
         [XmlElement(ElementName = "dmEventLevel", IsNullable = false, Namespace = "")]
-        [Group(@"972fbf832439609ec8f2765c5637c3f1:883")]
+        [Group(@"972fbf832439609ec8f2765c5637c3f1:886")]
         public BroadWorksConnector.Ocip.Models.DeviceManagementEventLevel DmEventLevel
         {
             get => _dmEventLevel;

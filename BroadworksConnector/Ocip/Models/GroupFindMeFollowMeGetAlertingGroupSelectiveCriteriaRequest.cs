@@ -8,23 +8,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Request to get all the information of a specific Find-me/Follow-me alerting group selective criteria.
-    /// The response is either GroupFindMeFollowMeGetAlertingGroupSelectiveCriteriaResponse or ErrorResponse.
+    /// The response is either GroupFindMeFollowMeGetAlertingGroupResponse or ErrorResponse.
     /// Replaced by: GroupFindMeFollowMeGetAlertingGroupSelectiveCriteriaRequest21
-    /// <see cref="GroupFindMeFollowMeGetAlertingGroupSelectiveCriteriaResponse"/>
+    /// <see cref="GroupFindMeFollowMeGetAlertingGroupResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="GroupFindMeFollowMeGetAlertingGroupSelectiveCriteriaRequest21"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:9929""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:10774""}]")]
     public class GroupFindMeFollowMeGetAlertingGroupSelectiveCriteriaRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupFindMeFollowMeGetAlertingGroupSelectiveCriteriaResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9929")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10774")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -43,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _alertingGroupName;
 
         [XmlElement(ElementName = "alertingGroupName", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9929")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10774")]
         [MinLength(1)]
         [MaxLength(40)]
         public string AlertingGroupName
@@ -62,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _criteriaName;
 
         [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9929")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10774")]
         [MinLength(1)]
         [MaxLength(50)]
         public string CriteriaName

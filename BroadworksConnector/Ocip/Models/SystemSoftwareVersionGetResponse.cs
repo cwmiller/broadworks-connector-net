@@ -8,19 +8,21 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to the SystemSoftwareVersionGetRequest.
+    /// 
+    /// Replaced by: SystemSoftwareVersionGetResponseRI in AS data mode
     /// <see cref="SystemSoftwareVersionGetRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:18062""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:16560""}]")]
     public class SystemSoftwareVersionGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _version;
 
         [XmlElement(ElementName = "version", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:18062")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:16560")]
         public string Version
         {
             get => _version;

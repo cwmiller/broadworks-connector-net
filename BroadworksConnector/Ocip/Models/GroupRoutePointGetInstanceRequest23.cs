@@ -12,20 +12,21 @@ namespace BroadWorksConnector.Ocip.Models
     /// The Following elements are only used in AS data mode and ignored in XS data mode:
     /// - sendCallAdmissionNotification, use value ‘false’ in XS data mode.
     /// - callAdmissionTimerSeconds, use value ‘3’ in XS data mode.
+    /// Replaced by: GroupRoutePointGetInstanceRequest24
     /// <see cref="GroupRoutePointGetInstanceResponse23"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e474d11df9a1d1d1041e589793e40de8:605""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:4698""}]")]
     public class GroupRoutePointGetInstanceRequest23 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupRoutePointGetInstanceResponse23>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"e474d11df9a1d1d1041e589793e40de8:605")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:4698")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId

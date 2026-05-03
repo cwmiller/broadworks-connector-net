@@ -8,22 +8,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get a list of Xsi policy profile assigned.
-    /// The response is either a ResellerXsiPolicyProfileGetAssignedListResponse
+    /// The response is either a XsiPolicyProfileGetAssignedListResponse
     /// or an ErrorResponse.
-    /// <see cref="ResellerXsiPolicyProfileGetAssignedListResponse"/>
+    /// <see cref="XsiPolicyProfileGetAssignedListResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d45e381d6dbac771631649063122a42e:982""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d45e381d6dbac771631649063122a42e:997""}]")]
     public class ResellerXsiPolicyProfileGetAssignedListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ResellerXsiPolicyProfileGetAssignedListResponse>
     {
 
         protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        [Group(@"d45e381d6dbac771631649063122a42e:982")]
+        [Group(@"d45e381d6dbac771631649063122a42e:997")]
         [MinLength(1)]
         [MaxLength(36)]
         public string ResellerId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "level", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d45e381d6dbac771631649063122a42e:982")]
+        [Group(@"d45e381d6dbac771631649063122a42e:997")]
         public BroadWorksConnector.Ocip.Models.XsiPolicyProfileLevel? Level
         {
             get => _level;

@@ -8,19 +8,18 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Response to the GroupCallCenterAgentUnavailableCodeGetRequest
-    /// <see cref="GroupCallCenterAgentUnavailableCodeGetRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:2614""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4d65d3449061c568639c8cc1e2492285:2608""}]")]
     public class GroupCallCenterAgentUnavailableCodeGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:2614")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2608")]
         public bool IsActive
         {
             get => _isActive;
@@ -38,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4d65d3449061c568639c8cc1e2492285:2614")]
+        [Group(@"4d65d3449061c568639c8cc1e2492285:2608")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Description

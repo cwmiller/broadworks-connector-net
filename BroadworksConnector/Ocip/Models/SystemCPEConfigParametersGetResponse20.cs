@@ -11,19 +11,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Contains a list of system CPE Config parameters.
     /// Replaced by: SystemCPEConfigParametersGetResponse21
     /// <see cref="SystemCPEConfigParametersGetListRequest20"/>
-    /// <see cref="SystemCPEConfigParametersGetResponse21"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:25941""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:29512""}]")]
     public class SystemCPEConfigParametersGetResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enableIPDeviceManagement;
 
         [XmlElement(ElementName = "enableIPDeviceManagement", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:25941")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29512")]
         public bool EnableIPDeviceManagement
         {
             get => _enableIPDeviceManagement;
@@ -40,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _ftpConnectTimeoutSeconds;
 
         [XmlElement(ElementName = "ftpConnectTimeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:25941")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29512")]
         [MinInclusive(1)]
         [MaxInclusive(600)]
         public int FtpConnectTimeoutSeconds
@@ -59,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _ftpFileTransferTimeoutSeconds;
 
         [XmlElement(ElementName = "ftpFileTransferTimeoutSeconds", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:25941")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29512")]
         [MinInclusive(1)]
         [MaxInclusive(600)]
         public int FtpFileTransferTimeoutSeconds
@@ -78,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _pauseBetweenFileRebuildMilliseconds;
 
         [XmlElement(ElementName = "pauseBetweenFileRebuildMilliseconds", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:25941")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29512")]
         [MinInclusive(0)]
         [MaxInclusive(10000)]
         public int PauseBetweenFileRebuildMilliseconds
@@ -97,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxBusyTimeMinutes;
 
         [XmlElement(ElementName = "maxBusyTimeMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:25941")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29512")]
         [MinInclusive(1)]
         [MaxInclusive(1440)]
         public int MaxBusyTimeMinutes
@@ -117,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deviceAccessAppServerClusterName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:25941")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29512")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DeviceAccessAppServerClusterName

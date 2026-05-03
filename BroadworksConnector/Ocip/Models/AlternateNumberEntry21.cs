@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:575""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:579""}]")]
     public class AlternateNumberEntry21
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "phoneNumber", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:575")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:579")]
         [MinLength(1)]
         [MaxLength(23)]
         public string PhoneNumber
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "extension", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:575")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:579")]
         [MinLength(2)]
         [MaxLength(20)]
         public string Extension
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "ringPattern", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:575")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:579")]
         public BroadWorksConnector.Ocip.Models.RingPattern? RingPattern
         {
             get => _ringPattern;
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:575")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:579")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Description

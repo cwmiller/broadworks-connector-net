@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4180""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4954""}]")]
     public class ReplacementAgentWeightList
     {
 
         protected List<BroadWorksConnector.Ocip.Models.HuntAgentWeight> _agentWeight = new List<BroadWorksConnector.Ocip.Models.HuntAgentWeight>();
 
         [XmlElement(ElementName = "agentWeight", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4180")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4954")]
         public List<BroadWorksConnector.Ocip.Models.HuntAgentWeight> AgentWeight
         {
             get => _agentWeight;

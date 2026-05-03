@@ -8,23 +8,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get a group department administrators profile.
-    /// The response is either a GroupDepartmentAdminGetResponse22 or an ErrorResponse.
+    /// The response is either a GroupDepartmentAdminGetResponse or an ErrorResponse.
     /// Replaced by: GroupDepartmentAdminGetRequest22V2
-    /// <see cref="GroupDepartmentAdminGetResponse22"/>
+    /// <see cref="GroupDepartmentAdminGetResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="GroupDepartmentAdminGetRequest22V2"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:2753""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:2906""}]")]
     public class GroupDepartmentAdminGetRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupDepartmentAdminGetResponse22>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:2753")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:2906")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

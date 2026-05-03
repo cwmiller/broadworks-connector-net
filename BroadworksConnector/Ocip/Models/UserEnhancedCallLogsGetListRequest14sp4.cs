@@ -15,19 +15,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// UserEnhancedCallLogsGetListRequest16
     /// <see cref="UserEnhancedCallLogsGetListResponse14sp4"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="UserEnhancedCallLogsGetListRequest16"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:42987""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:47029""}]")]
     public class UserEnhancedCallLogsGetListRequest14sp4 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserEnhancedCallLogsGetListResponse14sp4>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:42987")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:47029")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -47,7 +46,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callLogType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:42987")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:47029")]
         public BroadWorksConnector.Ocip.Models.CallLogsType? CallLogType
         {
             get => _callLogType;
@@ -64,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _startingOffset;
 
         [XmlElement(ElementName = "startingOffset", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:42987")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:47029")]
         [MinInclusive(0)]
         [MaxInclusive(9999)]
         public int StartingOffset
@@ -83,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _numCalls;
 
         [XmlElement(ElementName = "numCalls", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:42987")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:47029")]
         [MinInclusive(1)]
         [MaxInclusive(10000)]
         public int NumCalls

@@ -10,12 +10,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to SystemExpensiveCallTypeGetListRequest.
     /// Replaced by: SystemExpensiveCallTypeGetListResponse16sp1
     /// <see cref="SystemExpensiveCallTypeGetListRequest"/>
-    /// <see cref="SystemExpensiveCallTypeGetListResponse16sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:27103""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:30745""}]")]
     public class SystemExpensiveCallTypeGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -23,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alternateCallIndicator", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:27103")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:30745")]
         [MinLength(1)]
         [MaxLength(64)]
         public List<string> AlternateCallIndicator

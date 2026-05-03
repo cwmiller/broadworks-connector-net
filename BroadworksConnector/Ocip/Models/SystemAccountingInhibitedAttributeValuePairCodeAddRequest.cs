@@ -8,22 +8,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Add an Attribute Value Pair (AVP) combination to disable. The AVP
-    /// combination includes a diameter AVP and a vendor ID.
-    /// The response is either a SuccessResponse or an ErrorResponse.
+    /// combination includes a diameter AVP and a vendor ID. The response is either
+    /// a SuccessResponse or an ErrorResponse.
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:1991""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:2036""}]")]
     public class SystemAccountingInhibitedAttributeValuePairCodeAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected int _attributeValuePairCode;
 
         [XmlElement(ElementName = "attributeValuePairCode", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:1991")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2036")]
         public int AttributeValuePairCode
         {
             get => _attributeValuePairCode;
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _vendorId;
 
         [XmlElement(ElementName = "vendorId", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:1991")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2036")]
         public int VendorId
         {
             get => _vendorId;

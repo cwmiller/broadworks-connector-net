@@ -8,21 +8,21 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get the user's selective call acceptance criteria listing.
-    /// The response is either a UserSelectiveCallAcceptanceGetCriteriaListResponse or an ErrorResponse.
-    /// <see cref="UserSelectiveCallAcceptanceGetCriteriaListResponse"/>
+    /// The response is either a UserSelectiveCallAcceptanceGetResponse or an ErrorResponse.
+    /// <see cref="UserSelectiveCallAcceptanceGetResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e6d1568083c7f74ac1e8949c7acb10cf:90""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e6d1568083c7f74ac1e8949c7acb10cf:94""}]")]
     public class UserSelectiveCallAcceptanceGetCriteriaListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserSelectiveCallAcceptanceGetCriteriaListResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"e6d1568083c7f74ac1e8949c7acb10cf:90")]
+        [Group(@"e6d1568083c7f74ac1e8949c7acb10cf:94")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

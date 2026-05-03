@@ -16,7 +16,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""435c279b3e6710f4ada60ed66a93d278:294""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""435c279b3e6710f4ada60ed66a93d278:298""}]")]
     public class SystemSecurityClassificationModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -24,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "meetMeAnncThreshold", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"435c279b3e6710f4ada60ed66a93d278:294")]
+        [Group(@"435c279b3e6710f4ada60ed66a93d278:298")]
         [MinInclusive(1)]
         [MaxInclusive(30)]
         public int? MeetMeAnncThreshold
@@ -44,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "playTrunkUserSecurityClassificationAnnouncement", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"435c279b3e6710f4ada60ed66a93d278:294")]
+        [Group(@"435c279b3e6710f4ada60ed66a93d278:298")]
         public bool? PlayTrunkUserSecurityClassificationAnnouncement
         {
             get => _playTrunkUserSecurityClassificationAnnouncement;
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "securityClassificationName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"435c279b3e6710f4ada60ed66a93d278:294")]
+        [Group(@"435c279b3e6710f4ada60ed66a93d278:298")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> SecurityClassificationName

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9975efc7f5883a0595f811ee72ba4df5:137""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""9975efc7f5883a0595f811ee72ba4df5:140""}]")]
     public class ServiceProviderAdviceOfChargeModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"9975efc7f5883a0595f811ee72ba4df5:137")]
+        [Group(@"9975efc7f5883a0595f811ee72ba4df5:140")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useSPLevelAoCSettings", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9975efc7f5883a0595f811ee72ba4df5:137")]
+        [Group(@"9975efc7f5883a0595f811ee72ba4df5:140")]
         public bool? UseSPLevelAoCSettings
         {
             get => _useSPLevelAoCSettings;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "delayBetweenNotificationSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"9975efc7f5883a0595f811ee72ba4df5:137")]
+        [Group(@"9975efc7f5883a0595f811ee72ba4df5:140")]
         [MinInclusive(5)]
         [MaxInclusive(1800)]
         public int? DelayBetweenNotificationSeconds

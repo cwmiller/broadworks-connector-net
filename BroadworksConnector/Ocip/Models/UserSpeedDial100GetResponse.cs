@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e084de202cf726c3202fca43390f9ec5:225""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e084de202cf726c3202fca43390f9ec5:227""}]")]
     public class UserSpeedDial100GetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"e084de202cf726c3202fca43390f9ec5:225")]
+        [Group(@"e084de202cf726c3202fca43390f9ec5:227")]
         [MinLength(1)]
         [MaxLength(161)]
         public string PhoneNumber
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e084de202cf726c3202fca43390f9ec5:225")]
+        [Group(@"e084de202cf726c3202fca43390f9ec5:227")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

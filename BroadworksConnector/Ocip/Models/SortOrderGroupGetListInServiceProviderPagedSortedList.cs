@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:8851""}]")]
+    [Groups(@"[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:8972""}]")]
     public class SortOrderGroupGetListInServiceProviderPagedSortedList
     {
 
         protected BroadWorksConnector.Ocip.Models.SortByGroupId _sortByGroupId;
 
         [XmlElement(ElementName = "sortByGroupId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:8851")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:8972")]
         public BroadWorksConnector.Ocip.Models.SortByGroupId SortByGroupId
         {
             get => _sortByGroupId;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.SortByGroupName _sortByGroupName;
 
         [XmlElement(ElementName = "sortByGroupName", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:8851")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:8972")]
         public BroadWorksConnector.Ocip.Models.SortByGroupName SortByGroupName
         {
             get => _sortByGroupName;

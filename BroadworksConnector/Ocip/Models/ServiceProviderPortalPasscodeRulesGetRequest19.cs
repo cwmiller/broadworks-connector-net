@@ -11,6 +11,7 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response is either ServiceProviderPortalPasscodeRulesGetResponse19 or ErrorResponse.
     /// 
     /// Replaced by: ServiceProviderPortalPasscodeRulesGetRequest22 in AS data mode.
+    /// Replaced by: ServiceProviderPortalPasscodeRulesGetRequestRI in XS data mode.
     /// <see cref="ServiceProviderPortalPasscodeRulesGetResponse19"/>
     /// <see cref="ErrorResponse"/>
     /// <see cref="ServiceProviderPortalPasscodeRulesGetRequest22"/>
@@ -18,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:7137""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:21915""}]")]
     public class ServiceProviderPortalPasscodeRulesGetRequest19 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ServiceProviderPortalPasscodeRulesGetResponse19>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:7137")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:21915")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId

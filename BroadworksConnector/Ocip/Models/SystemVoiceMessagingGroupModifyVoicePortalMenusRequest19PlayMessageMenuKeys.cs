@@ -12,7 +12,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:1455""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:1401""}]")]
     public class SystemVoiceMessagingGroupModifyVoicePortalMenusRequest19PlayMessageMenuKeys
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "skipBackward", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1455")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1401")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SkipBackward
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "pauseOrResume", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1455")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1401")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string PauseOrResume
@@ -63,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "skipForward", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1455")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1401")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string SkipForward
@@ -84,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "jumpToBegin", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1455")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1401")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string JumpToBegin
@@ -105,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "jumpToEnd", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1455")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1401")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string JumpToEnd

@@ -9,13 +9,15 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Requests the system's default policy settings.
     /// The response is either SystemPolicyGetDefaultResponse22 or ErrorResponse.
+    /// 
+    /// Replaced by: SystemPolicyGetDefaultRequestRI in AS mode
     /// <see cref="SystemPolicyGetDefaultResponse22"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:14656""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:12016""}]")]
     public class SystemPolicyGetDefaultRequest22 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemPolicyGetDefaultResponse22>
     {
 

@@ -18,19 +18,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Replaced by: UserPushNotificationRegistrationGetListResponse22
     /// <see cref="UserPushNotificationRegistrationGetListRequest21sp1"/>
-    /// <see cref="UserPushNotificationRegistrationGetListResponse22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:46514""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:50894""}]")]
     public class UserPushNotificationRegistrationGetListResponse21sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:46514")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:50894")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -50,7 +49,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "pushNotificationRegistrationData", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:46514")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:50894")]
         public List<BroadWorksConnector.Ocip.Models.PushNotificationRegistrationData> PushNotificationRegistrationData
         {
             get => _pushNotificationRegistrationData;

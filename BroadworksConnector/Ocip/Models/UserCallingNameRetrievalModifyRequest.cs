@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ba51f415ebda0240287c719bc767eadf:165""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""ba51f415ebda0240287c719bc767eadf:169""}]")]
     public class UserCallingNameRetrievalModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"ba51f415ebda0240287c719bc767eadf:165")]
+        [Group(@"ba51f415ebda0240287c719bc767eadf:169")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ba51f415ebda0240287c719bc767eadf:165")]
+        [Group(@"ba51f415ebda0240287c719bc767eadf:169")]
         public bool? IsActive
         {
             get => _isActive;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "bypassFiltering", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"ba51f415ebda0240287c719bc767eadf:165")]
+        [Group(@"ba51f415ebda0240287c719bc767eadf:169")]
         public bool? BypassFiltering
         {
             get => _bypassFiltering;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "dnWhiteList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"ba51f415ebda0240287c719bc767eadf:165")]
+        [Group(@"ba51f415ebda0240287c719bc767eadf:169")]
         public BroadWorksConnector.Ocip.Models.CallingNameRetrievalWhiteListReplacementList DnWhiteList
         {
             get => _dnWhiteList;

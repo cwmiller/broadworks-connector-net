@@ -20,14 +20,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:2026""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:1956""}]")]
     public class UserVoiceMessagingUserModifyGreetingRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2026")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1956")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "busyAnnouncementSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2026")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1956")]
         public BroadWorksConnector.Ocip.Models.AnnouncementSelection? BusyAnnouncementSelection
         {
             get => _busyAnnouncementSelection;
@@ -66,7 +66,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "busyPersonalAudioFile", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2026")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1956")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey BusyPersonalAudioFile
         {
             get => _busyPersonalAudioFile;
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "busyPersonalVideoFile", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2026")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1956")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey BusyPersonalVideoFile
         {
             get => _busyPersonalVideoFile;
@@ -103,7 +103,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "noAnswerAnnouncementSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2026")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1956")]
         public BroadWorksConnector.Ocip.Models.VoiceMessagingNoAnswerGreetingSelection? NoAnswerAnnouncementSelection
         {
             get => _noAnswerAnnouncementSelection;
@@ -122,7 +122,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "noAnswerPersonalAudioFile", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2026")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1956")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey NoAnswerPersonalAudioFile
         {
             get => _noAnswerPersonalAudioFile;
@@ -141,7 +141,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "noAnswerPersonalVideoFile", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2026")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1956")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey NoAnswerPersonalVideoFile
         {
             get => _noAnswerPersonalVideoFile;
@@ -159,7 +159,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "noAnswerAlternateGreeting01", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2026")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1956")]
         public BroadWorksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingModify20 NoAnswerAlternateGreeting01
         {
             get => _noAnswerAlternateGreeting01;
@@ -177,7 +177,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "noAnswerAlternateGreeting02", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2026")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1956")]
         public BroadWorksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingModify20 NoAnswerAlternateGreeting02
         {
             get => _noAnswerAlternateGreeting02;
@@ -195,7 +195,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "noAnswerAlternateGreeting03", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2026")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1956")]
         public BroadWorksConnector.Ocip.Models.VoiceMessagingAlternateNoAnswerGreetingModify20 NoAnswerAlternateGreeting03
         {
             get => _noAnswerAlternateGreeting03;
@@ -213,7 +213,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "extendedAwayEnabled", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2026")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1956")]
         public bool? ExtendedAwayEnabled
         {
             get => _extendedAwayEnabled;
@@ -231,7 +231,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "extendedAwayDisableMessageDeposit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2026")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1956")]
         public bool? ExtendedAwayDisableMessageDeposit
         {
             get => _extendedAwayDisableMessageDeposit;
@@ -250,7 +250,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "extendedAwayAudioFile", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2026")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1956")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey ExtendedAwayAudioFile
         {
             get => _extendedAwayAudioFile;
@@ -269,7 +269,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "extendedAwayVideoFile", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2026")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1956")]
         public BroadWorksConnector.Ocip.Models.AnnouncementFileLevelKey ExtendedAwayVideoFile
         {
             get => _extendedAwayVideoFile;
@@ -287,7 +287,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "noAnswerNumberOfRings", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2026")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1956")]
         public BroadWorksConnector.Ocip.Models.VoiceMessagingNumberOfRings? NoAnswerNumberOfRings
         {
             get => _noAnswerNumberOfRings;
@@ -305,7 +305,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "disableMessageDeposit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2026")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1956")]
         public bool? DisableMessageDeposit
         {
             get => _disableMessageDeposit;
@@ -323,7 +323,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "disableMessageDepositAction", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2026")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1956")]
         public BroadWorksConnector.Ocip.Models.VoiceMessagingDisableMessageDepositSelection? DisableMessageDepositAction
         {
             get => _disableMessageDepositAction;
@@ -342,7 +342,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "greetingOnlyForwardDestination", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:2026")]
+        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1956")]
         [MinLength(1)]
         [MaxLength(161)]
         public string GreetingOnlyForwardDestination

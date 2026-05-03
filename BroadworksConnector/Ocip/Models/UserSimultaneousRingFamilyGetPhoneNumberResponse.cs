@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:47173""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:51553""}]")]
     public class UserSimultaneousRingFamilyGetPhoneNumberResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _answerConfirmationRequired;
 
         [XmlElement(ElementName = "answerConfirmationRequired", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:47173")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:51553")]
         public bool AnswerConfirmationRequired
         {
             get => _answerConfirmationRequired;

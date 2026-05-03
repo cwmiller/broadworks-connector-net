@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: GroupRoutePointGetAnnouncementRequest22
     /// <see cref="GroupRoutePointGetAnnouncementResponse20"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="GroupRoutePointGetAnnouncementRequest22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:12401""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:13852""}]")]
     public class GroupRoutePointGetAnnouncementRequest20 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupRoutePointGetAnnouncementResponse20>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:12401")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:13852")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId

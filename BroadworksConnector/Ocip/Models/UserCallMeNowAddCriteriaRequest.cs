@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""adf9583170c1dc9ec6c152ba1238437a:94""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""adf9583170c1dc9ec6c152ba1238437a:97""}]")]
     public class UserCallMeNowAddCriteriaRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"adf9583170c1dc9ec6c152ba1238437a:94")]
+        [Group(@"adf9583170c1dc9ec6c152ba1238437a:97")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _criteriaName;
 
         [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
-        [Group(@"adf9583170c1dc9ec6c152ba1238437a:94")]
+        [Group(@"adf9583170c1dc9ec6c152ba1238437a:97")]
         [MinLength(1)]
         [MaxLength(50)]
         public string CriteriaName
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"adf9583170c1dc9ec6c152ba1238437a:94")]
+        [Group(@"adf9583170c1dc9ec6c152ba1238437a:97")]
         public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule
         {
             get => _timeSchedule;
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"adf9583170c1dc9ec6c152ba1238437a:94")]
+        [Group(@"adf9583170c1dc9ec6c152ba1238437a:97")]
         public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule
         {
             get => _holidaySchedule;
@@ -96,7 +96,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _rejectCall;
 
         [XmlElement(ElementName = "rejectCall", IsNullable = false, Namespace = "")]
-        [Group(@"adf9583170c1dc9ec6c152ba1238437a:94")]
+        [Group(@"adf9583170c1dc9ec6c152ba1238437a:97")]
         public bool RejectCall
         {
             get => _rejectCall;
@@ -113,7 +113,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CallMeNowToDnCriteria _toDnCriteria;
 
         [XmlElement(ElementName = "toDnCriteria", IsNullable = false, Namespace = "")]
-        [Group(@"adf9583170c1dc9ec6c152ba1238437a:94")]
+        [Group(@"adf9583170c1dc9ec6c152ba1238437a:97")]
         public BroadWorksConnector.Ocip.Models.CallMeNowToDnCriteria ToDnCriteria
         {
             get => _toDnCriteria;

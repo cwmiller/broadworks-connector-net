@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:5393""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:5468""}]")]
     public class GroupExchangeIntegrationGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _enableExchangeIntegration;
 
         [XmlElement(ElementName = "enableExchangeIntegration", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:5393")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:5468")]
         public bool EnableExchangeIntegration
         {
             get => _enableExchangeIntegration;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "exchangeURL", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:5393")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:5468")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ExchangeURL
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "exchangeUserName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:5393")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:5468")]
         [MinLength(1)]
         [MaxLength(64)]
         public string ExchangeUserName

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0850ccc76fd27f9c07cb7218b2c1f84:79""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f0850ccc76fd27f9c07cb7218b2c1f84:82""}]")]
     public class GroupServiceInstancePrivacyModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"f0850ccc76fd27f9c07cb7218b2c1f84:79")]
+        [Group(@"f0850ccc76fd27f9c07cb7218b2c1f84:82")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableDirectoryPrivacy", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f0850ccc76fd27f9c07cb7218b2c1f84:79")]
+        [Group(@"f0850ccc76fd27f9c07cb7218b2c1f84:82")]
         public bool? EnableDirectoryPrivacy
         {
             get => _enableDirectoryPrivacy;
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableAutoAttendantExtensionDialingPrivacy", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f0850ccc76fd27f9c07cb7218b2c1f84:79")]
+        [Group(@"f0850ccc76fd27f9c07cb7218b2c1f84:82")]
         public bool? EnableAutoAttendantExtensionDialingPrivacy
         {
             get => _enableAutoAttendantExtensionDialingPrivacy;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableAutoAttendantNameDialingPrivacy", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"f0850ccc76fd27f9c07cb7218b2c1f84:79")]
+        [Group(@"f0850ccc76fd27f9c07cb7218b2c1f84:82")]
         public bool? EnableAutoAttendantNameDialingPrivacy
         {
             get => _enableAutoAttendantNameDialingPrivacy;

@@ -14,15 +14,12 @@ namespace BroadWorksConnector.Ocip.Models
     /// introduced by BW-2301.
     /// The commands are EnterpriseUserCallWaitingSettingsGetListRequest, GroupUserCallWaitingSettingsGetListRequest,
     /// EnterpriseUserHotelingGuestSettingsGetListRequest, and GroupUserHotelingGuestSettingsGetListRequest.
-    /// <see cref="EnterpriseUserCallWaitingSettingsGetListRequest"/>
-    /// <see cref="GroupUserCallWaitingSettingsGetListRequest"/>
-    /// <see cref="EnterpriseUserHotelingGuestSettingsGetListRequest"/>
     /// <see cref="GroupUserHotelingGuestSettingsGetListRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""846fcf536fcb4b0f0d32e089e99e4bfc:610""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""846fcf536fcb4b0f0d32e089e99e4bfc:614""}]")]
     public class SortByServiceStatus : BroadWorksConnector.Ocip.Models.SortCriteria
     {
 

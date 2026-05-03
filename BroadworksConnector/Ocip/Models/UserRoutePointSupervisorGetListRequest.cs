@@ -8,21 +8,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get a list of Route Point supervisors assigned to a user.
-    /// The response is either a UserRoutePointSupervisorGetListResponse or an ErrorResponse.
+    /// The response is either a
+    /// UserRoutePointSupervisorGetListResponse or an ErrorResponse.
     /// <see cref="UserRoutePointSupervisorGetListResponse"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e474d11df9a1d1d1041e589793e40de8:1253""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e474d11df9a1d1d1041e589793e40de8:1257""}]")]
     public class UserRoutePointSupervisorGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserRoutePointSupervisorGetListResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"e474d11df9a1d1d1041e589793e40de8:1253")]
+        [Group(@"e474d11df9a1d1d1041e589793e40de8:1257")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

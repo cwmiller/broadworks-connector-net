@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: GroupFindMeFollowMeGetInstanceRequest19sp1
     /// <see cref="GroupFindMeFollowMeGetInstanceResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="GroupFindMeFollowMeGetInstanceRequest19sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:9968""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:10813""}]")]
     public class GroupFindMeFollowMeGetInstanceRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupFindMeFollowMeGetInstanceResponse>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9968")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:10813")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId

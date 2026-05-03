@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4021""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4801""}]")]
     public class PushNotificationEventData23
     {
 
         protected string _eventName;
 
         [XmlElement(ElementName = "eventName", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4021")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4801")]
         [MinLength(1)]
         [MaxLength(128)]
         public string EventName
@@ -39,7 +39,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _silent;
 
         [XmlElement(ElementName = "silent", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4021")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4801")]
         public bool Silent
         {
             get => _silent;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _mutableContent;
 
         [XmlElement(ElementName = "mutableContent", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4021")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4801")]
         public bool MutableContent
         {
             get => _mutableContent;
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "pushNotificationEventParameters", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4021")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4801")]
         [MinLength(1)]
         [MaxLength(5899)]
         public string PushNotificationEventParameters
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mobileNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4021")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4801")]
         [MinLength(1)]
         [MaxLength(23)]
         public string MobileNumber

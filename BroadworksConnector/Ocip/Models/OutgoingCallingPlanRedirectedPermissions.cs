@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a63afa661ee5c74f4700e562e88c66d0:2112""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""a63afa661ee5c74f4700e562e88c66d0:2120""}]")]
     public class OutgoingCallingPlanRedirectedPermissions
     {
 
         protected bool _outsideGroup;
 
         [XmlElement(ElementName = "outsideGroup", IsNullable = false, Namespace = "")]
-        [Group(@"a63afa661ee5c74f4700e562e88c66d0:2112")]
+        [Group(@"a63afa661ee5c74f4700e562e88c66d0:2120")]
         public bool OutsideGroup
         {
             get => _outsideGroup;

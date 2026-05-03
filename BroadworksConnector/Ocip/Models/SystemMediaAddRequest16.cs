@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:11762""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:11821""}]")]
     public class SystemMediaAddRequest16 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _mediaName;
 
         [XmlElement(ElementName = "mediaName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:11762")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11821")]
         [MinLength(1)]
         [MaxLength(80)]
         public string MediaName
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _codecName;
 
         [XmlElement(ElementName = "codecName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:11762")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11821")]
         [MinLength(1)]
         [MaxLength(80)]
         public string CodecName
@@ -60,7 +60,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _mediaType;
 
         [XmlElement(ElementName = "mediaType", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:11762")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11821")]
         [MinLength(1)]
         [MaxLength(127)]
         public string MediaType
@@ -79,7 +79,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.MediaBandwidthEnforcementType _bandwidthEnforcementType;
 
         [XmlElement(ElementName = "bandwidthEnforcementType", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:11762")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11821")]
         public BroadWorksConnector.Ocip.Models.MediaBandwidthEnforcementType BandwidthEnforcementType
         {
             get => _bandwidthEnforcementType;
@@ -97,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "mediaBandwidth", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:11762")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11821")]
         [MinInclusive(1)]
         [MaxInclusive(100000000)]
         public int? MediaBandwidth

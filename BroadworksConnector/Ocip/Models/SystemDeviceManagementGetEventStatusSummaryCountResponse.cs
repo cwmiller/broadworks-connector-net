@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:7965""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:8017""}]")]
     public class SystemDeviceManagementGetEventStatusSummaryCountResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _statusCountTable;
 
         [XmlElement(ElementName = "statusCountTable", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:7965")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:8017")]
         public BroadWorksConnector.Ocip.Models.C.OCITable StatusCountTable
         {
             get => _statusCountTable;

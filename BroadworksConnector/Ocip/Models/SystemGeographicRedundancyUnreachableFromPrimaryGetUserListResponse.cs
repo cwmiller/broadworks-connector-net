@@ -17,14 +17,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:27426""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:31068""}]")]
     public class SystemGeographicRedundancyUnreachableFromPrimaryGetUserListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _unreachableFromPrimaryUserTable;
 
         [XmlElement(ElementName = "unreachableFromPrimaryUserTable", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:27426")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:31068")]
         public BroadWorksConnector.Ocip.Models.C.OCITable UnreachableFromPrimaryUserTable
         {
             get => _unreachableFromPrimaryUserTable;

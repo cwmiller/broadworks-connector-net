@@ -8,21 +8,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get an existing Dialable Caller ID Criteria.
-    /// The response is either a GroupDialableCallerIDCriteriaGetResponse or an ErrorResponse.
-    /// <see cref="GroupDialableCallerIDCriteriaGetResponse"/>
+    /// The response is either a
+    /// GroupDialableCallerIDCriteriaGetRequest or an ErrorResponse.
+    /// <see cref="GroupDialableCallerIDCriteriaGetRequest"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:4278""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:4319""}]")]
     public class GroupDialableCallerIDCriteriaGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupDialableCallerIDCriteriaGetResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:4278")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:4319")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:4278")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:4319")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -60,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:4278")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:4319")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name

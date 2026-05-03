@@ -8,21 +8,22 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get the utilization of a single DN.
-    /// The response is either SystemDnGetUtilizationResponse14sp3 or ErrorResponse.
+    /// The response is either
+    /// SystemDnGetUtilizationResponse14sp3 or ErrorResponse.
     /// <see cref="SystemDnGetUtilizationResponse14sp3"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:9495""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:9550""}]")]
     public class SystemDnGetUtilizationRequest14sp3 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemDnGetUtilizationResponse14sp3>
     {
 
         protected string _phoneNumber;
 
         [XmlElement(ElementName = "phoneNumber", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:9495")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:9550")]
         [MinLength(1)]
         [MaxLength(23)]
         public string PhoneNumber

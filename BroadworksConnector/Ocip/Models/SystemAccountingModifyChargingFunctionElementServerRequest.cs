@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:2057""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:2103""}]")]
     public class SystemAccountingModifyChargingFunctionElementServerRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _address;
 
         [XmlElement(ElementName = "address", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:2057")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2103")]
         [MinLength(1)]
         [MaxLength(256)]
         public string Address
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:2057")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2103")]
         public BroadWorksConnector.Ocip.Models.ChargingFunctionElementServerType? Type
         {
             get => _type;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "description", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:2057")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:2103")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

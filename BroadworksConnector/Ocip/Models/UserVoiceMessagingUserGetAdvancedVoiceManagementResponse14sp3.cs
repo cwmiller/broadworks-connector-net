@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:1714"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""1fea1222b6a78aa7b98fd5c41bdae113:1718""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:22079"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:22083""}]}]")]
     public class UserVoiceMessagingUserGetAdvancedVoiceManagementResponse14sp3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.VoiceMessagingUserMailServerSelection _mailServerSelection;
 
         [XmlElement(ElementName = "mailServerSelection", IsNullable = false, Namespace = "")]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1714")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:22079")]
         public BroadWorksConnector.Ocip.Models.VoiceMessagingUserMailServerSelection MailServerSelection
         {
             get => _mailServerSelection;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "groupMailServerEmailAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1714")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:22079")]
         [MinLength(1)]
         [MaxLength(80)]
         public string GroupMailServerEmailAddress
@@ -58,7 +58,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "groupMailServerUserId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1714")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:22079")]
         [MinLength(1)]
         [MaxLength(80)]
         public string GroupMailServerUserId
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _useGroupDefaultMailServerFullMailboxLimit;
 
         [XmlElement(ElementName = "useGroupDefaultMailServerFullMailboxLimit", IsNullable = false, Namespace = "")]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1718")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:22083")]
         public bool UseGroupDefaultMailServerFullMailboxLimit
         {
             get => _useGroupDefaultMailServerFullMailboxLimit;
@@ -94,7 +94,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.VoiceMessagingMailboxLengthMinutes _groupMailServerFullMailboxLimit;
 
         [XmlElement(ElementName = "groupMailServerFullMailboxLimit", IsNullable = false, Namespace = "")]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1718")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:22083")]
         public BroadWorksConnector.Ocip.Models.VoiceMessagingMailboxLengthMinutes GroupMailServerFullMailboxLimit
         {
             get => _groupMailServerFullMailboxLimit;
@@ -112,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "personalMailServerNetAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1714")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:22079")]
         [MinLength(1)]
         [MaxLength(80)]
         public string PersonalMailServerNetAddress
@@ -131,7 +131,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.VoiceMessagingMailServerProtocol _personalMailServerProtocol;
 
         [XmlElement(ElementName = "personalMailServerProtocol", IsNullable = false, Namespace = "")]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1714")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:22079")]
         public BroadWorksConnector.Ocip.Models.VoiceMessagingMailServerProtocol PersonalMailServerProtocol
         {
             get => _personalMailServerProtocol;
@@ -148,7 +148,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _personalMailServerRealDeleteForImap;
 
         [XmlElement(ElementName = "personalMailServerRealDeleteForImap", IsNullable = false, Namespace = "")]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1714")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:22079")]
         public bool PersonalMailServerRealDeleteForImap
         {
             get => _personalMailServerRealDeleteForImap;
@@ -166,7 +166,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "personalMailServerEmailAddress", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1714")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:22079")]
         [MinLength(1)]
         [MaxLength(80)]
         public string PersonalMailServerEmailAddress
@@ -186,7 +186,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "personalMailServerUserId", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"1fea1222b6a78aa7b98fd5c41bdae113:1714")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:22079")]
         [MinLength(1)]
         [MaxLength(80)]
         public string PersonalMailServerUserId

@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""405ec18fe08719ecf74e749d7e18c88f:293""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""405ec18fe08719ecf74e749d7e18c88f:297""}]")]
     public class EnterpriseDepartmentAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _enterpriseId;
 
         [XmlElement(ElementName = "enterpriseId", IsNullable = false, Namespace = "")]
-        [Group(@"405ec18fe08719ecf74e749d7e18c88f:293")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:297")]
         [MinLength(1)]
         [MaxLength(30)]
         public string EnterpriseId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _departmentName;
 
         [XmlElement(ElementName = "departmentName", IsNullable = false, Namespace = "")]
-        [Group(@"405ec18fe08719ecf74e749d7e18c88f:293")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:297")]
         [MinLength(1)]
         [MaxLength(50)]
         public string DepartmentName
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "parentDepartmentKey", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"405ec18fe08719ecf74e749d7e18c88f:293")]
+        [Group(@"405ec18fe08719ecf74e749d7e18c88f:297")]
         public BroadWorksConnector.Ocip.Models.EnterpriseDepartmentKey ParentDepartmentKey
         {
             get => _parentDepartmentKey;

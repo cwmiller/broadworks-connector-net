@@ -10,26 +10,26 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to GroupRouteListEnterpriseTrunkNumberRangeGetSummaryListRequest.
     /// The response contains a table with columns: "Number Prefix", "User Id",
     /// "Last Name", "First Name", "Hiragana Last Name", "Hiragana First Name", "Phone Number", "Extension",
-    /// "Department", "Email Address", "Enterprise Trunk"","Is Active", “Extension Range Start” and “Extension Range End”.
+    /// "Department", "Email Address", "Enterprise Trunk"","Is Active", "Extension Range Start" and "Extension Range End".
     /// The "User Id", "Last Name", "First Name", "Hiragana Last Name", "Hiragana First Name", "Phone Number",
     /// "Extension", "Department" and "Email Address" columns contains the corresponding attributes of the user possessing the number range.
     /// The "Enterprise Trunk" column contains the enterprise trunk the user possessing the number range belongs to.
     /// The "Is Active" column indicates if the number prefix has been activated.
-    /// The “Extension Range Start” column indicates the start for an extension range.
-    /// The “Extension Range End” column indicates the end for an extension range.
+    /// The "Extension Range Start" column indicates the start for an extension range.
+    /// The "Extension Range End" column indicates the end for an extension range.
     /// <see cref="GroupRouteListEnterpriseTrunkNumberRangeGetSummaryListRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""500f9871ed90b8ab3fbd262883ab503b:293""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""500f9871ed90b8ab3fbd262883ab503b:296""}]")]
     public class GroupRouteListEnterpriseTrunkNumberPrefixGetSummaryListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _numberPrefixSummaryTable;
 
         [XmlElement(ElementName = "numberPrefixSummaryTable", IsNullable = false, Namespace = "")]
-        [Group(@"500f9871ed90b8ab3fbd262883ab503b:293")]
+        [Group(@"500f9871ed90b8ab3fbd262883ab503b:296")]
         public BroadWorksConnector.Ocip.Models.C.OCITable NumberPrefixSummaryTable
         {
             get => _numberPrefixSummaryTable;

@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""00df0beea0b5305e1c9d56717c27f995:76""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""00df0beea0b5305e1c9d56717c27f995:79""}]")]
     public class SystemCallReturnModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "twoLevelActivation", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"00df0beea0b5305e1c9d56717c27f995:76")]
+        [Group(@"00df0beea0b5305e1c9d56717c27f995:79")]
         public bool? TwoLevelActivation
         {
             get => _twoLevelActivation;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "provideDate", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"00df0beea0b5305e1c9d56717c27f995:76")]
+        [Group(@"00df0beea0b5305e1c9d56717c27f995:79")]
         public bool? ProvideDate
         {
             get => _provideDate;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "lastUnansweredCallOnly", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"00df0beea0b5305e1c9d56717c27f995:76")]
+        [Group(@"00df0beea0b5305e1c9d56717c27f995:79")]
         public bool? LastUnansweredCallOnly
         {
             get => _lastUnansweredCallOnly;
@@ -78,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "confirmationKey", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"00df0beea0b5305e1c9d56717c27f995:76")]
+        [Group(@"00df0beea0b5305e1c9d56717c27f995:79")]
         [Length(1)]
         [RegularExpression(@"[0-9]|\*|#")]
         public string ConfirmationKey
@@ -98,7 +98,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "allowRestrictedNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"00df0beea0b5305e1c9d56717c27f995:76")]
+        [Group(@"00df0beea0b5305e1c9d56717c27f995:79")]
         public bool? AllowRestrictedNumber
         {
             get => _allowRestrictedNumber;
@@ -116,7 +116,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "deleteNumberAfterAnsweredCallReturn", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"00df0beea0b5305e1c9d56717c27f995:76")]
+        [Group(@"00df0beea0b5305e1c9d56717c27f995:79")]
         public bool? DeleteNumberAfterAnsweredCallReturn
         {
             get => _deleteNumberAfterAnsweredCallReturn;

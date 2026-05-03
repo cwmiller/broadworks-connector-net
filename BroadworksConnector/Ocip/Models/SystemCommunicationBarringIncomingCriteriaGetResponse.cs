@@ -12,12 +12,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Replaced by: SystemCommunicationBarringIncomingCriteriaGetResponse22
     /// <see cref="SystemCommunicationBarringIncomingCriteriaGetRequest"/>
-    /// <see cref="SystemCommunicationBarringIncomingCriteriaGetResponse22"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:9446""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:10223""}]")]
     public class SystemCommunicationBarringIncomingCriteriaGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -25,7 +24,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:9446")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10223")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description
@@ -45,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:9446")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10223")]
         [MinLength(1)]
         [MaxLength(40)]
         public string TimeSchedule
@@ -65,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:9446")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10223")]
         [MinLength(1)]
         [MaxLength(40)]
         public string HolidaySchedule
@@ -85,7 +84,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "matchNumberPortabilityStatus", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:9446")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:10223")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> MatchNumberPortabilityStatus

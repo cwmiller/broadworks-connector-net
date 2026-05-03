@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:1303""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""972fbf832439609ec8f2765c5637c3f1:1306""}]")]
     public class SearchCriteriaExactSubscriberType : BroadWorksConnector.Ocip.Models.SearchCriteria
     {
 
         protected BroadWorksConnector.Ocip.Models.SubscriberType _subscriberType;
 
         [XmlElement(ElementName = "subscriberType", IsNullable = false, Namespace = "")]
-        [Group(@"972fbf832439609ec8f2765c5637c3f1:1303")]
+        [Group(@"972fbf832439609ec8f2765c5637c3f1:1306")]
         public BroadWorksConnector.Ocip.Models.SubscriberType SubscriberType
         {
             get => _subscriberType;

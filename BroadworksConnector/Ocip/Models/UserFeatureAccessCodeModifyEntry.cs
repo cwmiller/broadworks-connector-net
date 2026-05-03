@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:5722""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:6537""}]")]
     public class UserFeatureAccessCodeModifyEntry
     {
 
         protected string _featureAccessCodeName;
 
         [XmlElement(ElementName = "featureAccessCodeName", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5722")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6537")]
         [MinLength(1)]
         public string FeatureAccessCodeName
         {
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableFAC", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5722")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:6537")]
         public bool? EnableFAC
         {
             get => _enableFAC;

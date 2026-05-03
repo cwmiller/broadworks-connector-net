@@ -16,14 +16,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:7476""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:7528""}]")]
     public class SystemDeviceFamilyAssignDeviceTypeListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _deviceFamilyName;
 
         [XmlElement(ElementName = "deviceFamilyName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:7476")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7528")]
         [MinLength(1)]
         [MaxLength(30)]
         public string DeviceFamilyName
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected List<string> _deviceTypeName = new List<string>();
 
         [XmlElement(ElementName = "deviceTypeName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:7476")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:7528")]
         [MinLength(1)]
         [MaxLength(40)]
         public List<string> DeviceTypeName

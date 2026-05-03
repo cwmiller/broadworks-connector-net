@@ -18,20 +18,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// ErrorResponse is returned.
     /// <see cref="GroupCommonPhoneListGetListResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="ErrorResponse"/>
-    /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:2561""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:2603""}]")]
     public class GroupCommonPhoneListGetListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupCommonPhoneListGetListResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:2561")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:2603")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -50,7 +48,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:2561")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:2603")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -70,7 +68,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "responseSizeLimit", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:2561")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:2603")]
         [MinInclusive(1)]
         public int? ResponseSizeLimit
         {
@@ -89,7 +87,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaModeOr", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:2561")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:2603")]
         public bool? SearchCriteriaModeOr
         {
             get => _searchCriteriaModeOr;
@@ -107,7 +105,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaGroupCommonPhoneListName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:2561")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:2603")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListName> SearchCriteriaGroupCommonPhoneListName
         {
             get => _searchCriteriaGroupCommonPhoneListName;
@@ -125,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "searchCriteriaGroupCommonPhoneListNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:2561")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:2603")]
         public List<BroadWorksConnector.Ocip.Models.SearchCriteriaGroupCommonPhoneListNumber> SearchCriteriaGroupCommonPhoneListNumber
         {
             get => _searchCriteriaGroupCommonPhoneListNumber;

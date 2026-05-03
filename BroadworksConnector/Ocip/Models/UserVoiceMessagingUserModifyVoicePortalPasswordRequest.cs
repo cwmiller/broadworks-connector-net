@@ -13,19 +13,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced By: UserPortalPasscodeModifyRequest
     /// <see cref="SuccessResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="UserPortalPasscodeModifyRequest"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:48191""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:52630""}]")]
     public class UserVoiceMessagingUserModifyVoicePortalPasswordRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:48191")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:52630")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -45,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "oldPassword", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:48191")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:52630")]
         [MinLength(1)]
         [MaxLength(60)]
         public string OldPassword
@@ -64,7 +63,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _newPassword;
 
         [XmlElement(ElementName = "newPassword", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:48191")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:52630")]
         [MinLength(1)]
         [MaxLength(60)]
         public string NewPassword

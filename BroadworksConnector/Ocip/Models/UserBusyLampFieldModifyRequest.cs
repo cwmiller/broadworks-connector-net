@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b1745b5f688013b73224574a66f4f4b2:210""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b1745b5f688013b73224574a66f4f4b2:212""}]")]
     public class UserBusyLampFieldModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"b1745b5f688013b73224574a66f4f4b2:210")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:212")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "listURI", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"b1745b5f688013b73224574a66f4f4b2:210")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:212")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ListURI
@@ -64,7 +64,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "monitoredUserIdList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"b1745b5f688013b73224574a66f4f4b2:210")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:212")]
         public BroadWorksConnector.Ocip.Models.ReplacementUserIdList MonitoredUserIdList
         {
             get => _monitoredUserIdList;
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableCallParkNotification", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b1745b5f688013b73224574a66f4f4b2:210")]
+        [Group(@"b1745b5f688013b73224574a66f4f4b2:212")]
         public bool? EnableCallParkNotification
         {
             get => _enableCallParkNotification;

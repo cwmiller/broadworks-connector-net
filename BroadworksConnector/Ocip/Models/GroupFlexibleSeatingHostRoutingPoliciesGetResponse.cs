@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1d4e390f8cd01ca6f92589024d74dac6:328""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1d4e390f8cd01ca6f92589024d74dac6:331""}]")]
     public class GroupFlexibleSeatingHostRoutingPoliciesGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _allowEmergencyCalls;
 
         [XmlElement(ElementName = "allowEmergencyCalls", IsNullable = false, Namespace = "")]
-        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:328")]
+        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:331")]
         public bool AllowEmergencyCalls
         {
             get => _allowEmergencyCalls;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowCallsToVoicePortal;
 
         [XmlElement(ElementName = "allowCallsToVoicePortal", IsNullable = false, Namespace = "")]
-        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:328")]
+        [Group(@"1d4e390f8cd01ca6f92589024d74dac6:331")]
         public bool AllowCallsToVoicePortal
         {
             get => _allowCallsToVoicePortal;

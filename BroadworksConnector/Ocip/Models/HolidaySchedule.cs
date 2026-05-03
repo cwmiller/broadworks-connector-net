@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3398""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3672""}]")]
     public class HolidaySchedule
     {
 
         protected BroadWorksConnector.Ocip.Models.ScheduleLevel _type;
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3398")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3672")]
         public BroadWorksConnector.Ocip.Models.ScheduleLevel Type
         {
             get => _type;
@@ -36,7 +36,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _name;
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3398")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3672")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Name

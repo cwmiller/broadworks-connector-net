@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fcf43b3a58ff66521262b4426bab8748:141""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fcf43b3a58ff66521262b4426bab8748:145""}]")]
     public class GroupAccountAuthorizationCodesGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "codeEntry", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fcf43b3a58ff66521262b4426bab8748:141")]
+        [Group(@"fcf43b3a58ff66521262b4426bab8748:145")]
         public List<BroadWorksConnector.Ocip.Models.AccountAuthorizationCodeEntry> CodeEntry
         {
             get => _codeEntry;

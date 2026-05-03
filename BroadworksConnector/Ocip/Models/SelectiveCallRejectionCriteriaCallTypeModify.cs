@@ -7,12 +7,12 @@ using System.Collections.Generic;
 namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
-    /// The call type criteria used within a modify request.
+    /// The call type criteria added with the option for selecting internal and external callers, used within a modify request.
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b3553d7704f59ff8de2f730be450316f:224""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b3553d7704f59ff8de2f730be450316f:232""}]")]
     public class SelectiveCallRejectionCriteriaCallTypeModify
     {
 
@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "fromDnCriteriaSelection", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b3553d7704f59ff8de2f730be450316f:224")]
+        [Group(@"b3553d7704f59ff8de2f730be450316f:232")]
         public BroadWorksConnector.Ocip.Models.SelectiveCallRejectionCriteriaCallTypeSelection? FromDnCriteriaSelection
         {
             get => _fromDnCriteriaSelection;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "includeAnonymousCallers", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b3553d7704f59ff8de2f730be450316f:224")]
+        [Group(@"b3553d7704f59ff8de2f730be450316f:232")]
         public bool? IncludeAnonymousCallers
         {
             get => _includeAnonymousCallers;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "includeUnavailableCallers", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b3553d7704f59ff8de2f730be450316f:224")]
+        [Group(@"b3553d7704f59ff8de2f730be450316f:232")]
         public bool? IncludeUnavailableCallers
         {
             get => _includeUnavailableCallers;
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "phoneNumberList", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"b3553d7704f59ff8de2f730be450316f:224")]
+        [Group(@"b3553d7704f59ff8de2f730be450316f:232")]
         public BroadWorksConnector.Ocip.Models.CriteriaReplacementDNList PhoneNumberList
         {
             get => _phoneNumberList;

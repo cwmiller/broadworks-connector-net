@@ -11,19 +11,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Contains a table of all the zones in the system. The column headings are "Zone Name" , "Physical Location".
     /// Replaced by: SystemZoneGetListResponse
     /// <see cref="SystemZoneCallingRestrictionsZoneGetListRequest"/>
-    /// <see cref="SystemZoneGetListResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:40009""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:44052""}]")]
     public class SystemZoneCallingRestrictionsZoneGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _zoneTable;
 
         [XmlElement(ElementName = "zoneTable", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:40009")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:44052")]
         public BroadWorksConnector.Ocip.Models.C.OCITable ZoneTable
         {
             get => _zoneTable;

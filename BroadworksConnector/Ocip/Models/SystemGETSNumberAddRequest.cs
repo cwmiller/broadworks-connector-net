@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:11018""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:11077""}]")]
     public class SystemGETSNumberAddRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _number;
 
         [XmlElement(ElementName = "number", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:11018")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11077")]
         [MinLength(4)]
         [MaxLength(10)]
         public string Number
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.GETSNumberType _type;
 
         [XmlElement(ElementName = "type", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:11018")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11077")]
         public BroadWorksConnector.Ocip.Models.GETSNumberType Type
         {
             get => _type;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "description", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:11018")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11077")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Description

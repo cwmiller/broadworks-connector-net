@@ -13,7 +13,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:2640""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""fb73488c2ef4ac4400ab213b637d79a9:2727""}]")]
     public class UserNetworkConferencingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -21,7 +21,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "conferenceURI", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2640")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2727")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ConferenceURI
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _maxConferenceParties;
 
         [XmlElement(ElementName = "maxConferenceParties", IsNullable = false, Namespace = "")]
-        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2640")]
+        [Group(@"fb73488c2ef4ac4400ab213b637d79a9:2727")]
         [MinInclusive(4)]
         [MaxInclusive(15)]
         public int MaxConferenceParties

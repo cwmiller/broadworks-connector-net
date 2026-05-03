@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4954"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4955""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:5776"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:5777""}]}]")]
     public class ServiceProviderCommunicationBarringHierarchicalRedirectingRule
     {
 
         protected string _criteria;
 
         [XmlElement(ElementName = "criteria", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4955")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5777")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Criteria
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _digitPatternCriteria;
 
         [XmlElement(ElementName = "digitPatternCriteria", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4955")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5777")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DigitPatternCriteria
@@ -57,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingAction _action;
 
         [XmlElement(ElementName = "action", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4954")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5776")]
         public BroadWorksConnector.Ocip.Models.CommunicationBarringRedirectingAction Action
         {
             get => _action;
@@ -75,7 +75,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callTimeoutSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4954")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5776")]
         [MinInclusive(60)]
         [MaxInclusive(86400)]
         public int? CallTimeoutSeconds
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4954")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5776")]
         [MinLength(1)]
         [MaxLength(40)]
         public string TimeSchedule
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4954")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5776")]
         [MinLength(1)]
         [MaxLength(40)]
         public string HolidaySchedule
@@ -134,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected decimal _priority;
 
         [XmlElement(ElementName = "priority", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4954")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5776")]
         [MinInclusive(0)]
         [MaxInclusive(1000000)]
         public decimal Priority

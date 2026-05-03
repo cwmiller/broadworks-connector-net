@@ -9,20 +9,21 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request to get all the information of a Meet-Me Conferencing bridge.
     /// The response is either GroupMeetMeConferencingGetInstanceResponse19sp1 or ErrorResponse.
+    /// Replaced by: GroupMeetMeConferencingGetInstanceRequest24
     /// <see cref="GroupMeetMeConferencingGetInstanceResponse19sp1"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""adf25df72505d1c476ebb480b6cce18d:194""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:12306""}]")]
     public class GroupMeetMeConferencingGetInstanceRequest19sp1 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.GroupMeetMeConferencingGetInstanceResponse19sp1>
     {
 
         protected string _serviceUserId;
 
         [XmlElement(ElementName = "serviceUserId", IsNullable = false, Namespace = "")]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:194")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12306")]
         [MinLength(1)]
         [MaxLength(161)]
         public string ServiceUserId

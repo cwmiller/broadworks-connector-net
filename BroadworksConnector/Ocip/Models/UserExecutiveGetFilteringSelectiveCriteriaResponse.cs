@@ -10,12 +10,11 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to the UserExecutiveGetFilteringSelectiveCriteriaRequest.
     /// Replaced by: UserExecutiveGetFilteringSelectiveCriteriaResponse21
     /// <see cref="UserExecutiveGetFilteringSelectiveCriteriaRequest"/>
-    /// <see cref="UserExecutiveGetFilteringSelectiveCriteriaResponse21"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:43481""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:47513""}]")]
     public class UserExecutiveGetFilteringSelectiveCriteriaResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -23,7 +22,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "timeSchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:43481")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:47513")]
         public BroadWorksConnector.Ocip.Models.TimeSchedule TimeSchedule
         {
             get => _timeSchedule;
@@ -41,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:43481")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:47513")]
         public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule
         {
             get => _holidaySchedule;
@@ -58,7 +57,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _filter;
 
         [XmlElement(ElementName = "filter", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:43481")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:47513")]
         public bool Filter
         {
             get => _filter;
@@ -75,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringCriteriaFromDn _fromDnCriteria;
 
         [XmlElement(ElementName = "fromDnCriteria", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:43481")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:47513")]
         public BroadWorksConnector.Ocip.Models.ExecutiveCallFilteringCriteriaFromDn FromDnCriteria
         {
             get => _fromDnCriteria;

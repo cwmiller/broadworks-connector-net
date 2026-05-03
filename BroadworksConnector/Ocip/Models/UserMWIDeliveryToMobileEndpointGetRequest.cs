@@ -9,20 +9,23 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Request the user level data associated with MWI Delivery to Mobile Endpoint service.
     /// The response is either a UserMWIDeliveryToMobileEndpointGetResponse or an ErrorResponse.
+    /// 
+    /// Replaced by: UserMWIDeliveryToMobileEndpointGetRequest23 in AS data mode.
     /// <see cref="UserMWIDeliveryToMobileEndpointGetResponse"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="UserMWIDeliveryToMobileEndpointGetRequest23"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""1ea80c1e18c25d0eed23dbc7bd18f1dc:352""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:21146""}]")]
     public class UserMWIDeliveryToMobileEndpointGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserMWIDeliveryToMobileEndpointGetResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"1ea80c1e18c25d0eed23dbc7bd18f1dc:352")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:21146")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

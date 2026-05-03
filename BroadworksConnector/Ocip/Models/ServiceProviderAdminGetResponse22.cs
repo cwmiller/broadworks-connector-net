@@ -11,19 +11,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// The response contains the service provider administrators profile information.
     /// Replaced by: ServiceProviderAdminGetResponse22V2
     /// <see cref="ServiceProviderAdminGetRequest22"/>
-    /// <see cref="ServiceProviderAdminGetResponse22V2"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:6119""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:6626""}]")]
     public class ServiceProviderAdminGetResponse22 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:6119")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6626")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -43,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:6119")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6626")]
         [MinLength(1)]
         [MaxLength(30)]
         public string FirstName
@@ -63,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:6119")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6626")]
         [MinLength(1)]
         [MaxLength(30)]
         public string LastName
@@ -82,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _language;
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:6119")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6626")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Language
@@ -101,7 +100,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ServiceProviderAdminType _administratorType;
 
         [XmlElement(ElementName = "administratorType", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:6119")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6626")]
         public BroadWorksConnector.Ocip.Models.ServiceProviderAdminType AdministratorType
         {
             get => _administratorType;
@@ -118,7 +117,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _locale;
 
         [XmlElement(ElementName = "locale", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:6119")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6626")]
         [MaxLength(20)]
         public string Locale
         {
@@ -136,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _encoding;
 
         [XmlElement(ElementName = "encoding", IsNullable = false, Namespace = "")]
-        [Group(@"240b50f54d060859e5e275082fdf49f9:6119")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6626")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Encoding

@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// "Hiragana Last Name", "Hiragana First Name".
     /// Replace by: GroupCustomContactDirectoryGetAvailableUserListResponse17
     /// <see cref="GroupCustomContactDirectoryGetAvailableUserListRequest"/>
-    /// <see cref="GroupCustomContactDirectoryGetAvailableUserListResponse17"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:9036""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:9816""}]")]
     public class GroupCustomContactDirectoryGetAvailableUserListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:9036")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:9816")]
         public BroadWorksConnector.Ocip.Models.C.OCITable UserTable
         {
             get => _userTable;

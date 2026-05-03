@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""65f35694d7d3354987bf6387ab55bfc6:164""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""65f35694d7d3354987bf6387ab55bfc6:168""}]")]
     public class UserGroupNightForwardingGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.GroupNightForwardingUserServiceActivationMode _nightForwarding;
 
         [XmlElement(ElementName = "nightForwarding", IsNullable = false, Namespace = "")]
-        [Group(@"65f35694d7d3354987bf6387ab55bfc6:164")]
+        [Group(@"65f35694d7d3354987bf6387ab55bfc6:168")]
         public BroadWorksConnector.Ocip.Models.GroupNightForwardingUserServiceActivationMode NightForwarding
         {
             get => _nightForwarding;
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.GroupNightForwardingGroupServiceActivationMode _groupNightForwarding;
 
         [XmlElement(ElementName = "groupNightForwarding", IsNullable = false, Namespace = "")]
-        [Group(@"65f35694d7d3354987bf6387ab55bfc6:164")]
+        [Group(@"65f35694d7d3354987bf6387ab55bfc6:168")]
         public BroadWorksConnector.Ocip.Models.GroupNightForwardingGroupServiceActivationMode GroupNightForwarding
         {
             get => _groupNightForwarding;
@@ -56,7 +56,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "businessHours", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"65f35694d7d3354987bf6387ab55bfc6:164")]
+        [Group(@"65f35694d7d3354987bf6387ab55bfc6:168")]
         public BroadWorksConnector.Ocip.Models.TimeSchedule BusinessHours
         {
             get => _businessHours;
@@ -74,7 +74,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "holidaySchedule", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"65f35694d7d3354987bf6387ab55bfc6:164")]
+        [Group(@"65f35694d7d3354987bf6387ab55bfc6:168")]
         public BroadWorksConnector.Ocip.Models.HolidaySchedule HolidaySchedule
         {
             get => _holidaySchedule;

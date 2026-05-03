@@ -21,14 +21,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:7503""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:7598""}]")]
     public class GroupServiceGetAuthorizationListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _servicePacksAuthorizationTable;
 
         [XmlElement(ElementName = "servicePacksAuthorizationTable", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:7503")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:7598")]
         public BroadWorksConnector.Ocip.Models.C.OCITable ServicePacksAuthorizationTable
         {
             get => _servicePacksAuthorizationTable;
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _groupServicesAuthorizationTable;
 
         [XmlElement(ElementName = "groupServicesAuthorizationTable", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:7503")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:7598")]
         public BroadWorksConnector.Ocip.Models.C.OCITable GroupServicesAuthorizationTable
         {
             get => _groupServicesAuthorizationTable;
@@ -62,7 +62,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _userServicesAuthorizationTable;
 
         [XmlElement(ElementName = "userServicesAuthorizationTable", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:7503")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:7598")]
         public BroadWorksConnector.Ocip.Models.C.OCITable UserServicesAuthorizationTable
         {
             get => _userServicesAuthorizationTable;

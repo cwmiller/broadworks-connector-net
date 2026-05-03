@@ -12,14 +12,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:2863""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3124""}]")]
     public class DeviceManagementTagSetRename
     {
 
         protected string _originalTagSetName;
 
         [XmlElement(ElementName = "originalTagSetName", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2863")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3124")]
         [MinLength(1)]
         [MaxLength(30)]
         public string OriginalTagSetName
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _newTagSetName;
 
         [XmlElement(ElementName = "newTagSetName", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:2863")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3124")]
         [MinLength(1)]
         [MaxLength(30)]
         public string NewTagSetName

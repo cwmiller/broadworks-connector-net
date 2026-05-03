@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""37cec25308bcc82fe5a80bf541c42c89:163""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""37cec25308bcc82fe5a80bf541c42c89:166""}]")]
     public class ResellerIntegratedIMPModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:163")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:166")]
         [MinLength(1)]
         [MaxLength(36)]
         public string ResellerId
@@ -42,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useSystemServiceDomain", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:163")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:166")]
         public bool? UseSystemServiceDomain
         {
             get => _useSystemServiceDomain;
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "serviceDomain", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:163")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:166")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ServiceDomain
@@ -82,7 +82,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "servicePort", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:163")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:166")]
         [MinInclusive(1)]
         [MaxInclusive(65535)]
         public int? ServicePort
@@ -102,7 +102,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "useSystemMessagingServer", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:163")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:166")]
         public bool? UseSystemMessagingServer
         {
             get => _useSystemMessagingServer;
@@ -121,7 +121,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "provisioningUrl", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:163")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:166")]
         [MinLength(1)]
         [MaxLength(256)]
         public string ProvisioningUrl
@@ -142,7 +142,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "provisioningUserId", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:163")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:166")]
         [MinLength(1)]
         [MaxLength(80)]
         public string ProvisioningUserId
@@ -163,7 +163,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "provisioningPassword", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:163")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:166")]
         [MinLength(1)]
         [MaxLength(20)]
         public string ProvisioningPassword
@@ -184,7 +184,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "boshURL", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:163")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:166")]
         [MinLength(1)]
         [MaxLength(256)]
         public string BoshURL
@@ -204,7 +204,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultImpIdType", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"37cec25308bcc82fe5a80bf541c42c89:163")]
+        [Group(@"37cec25308bcc82fe5a80bf541c42c89:166")]
         public BroadWorksConnector.Ocip.Models.IntegratedIMPUserIDType? DefaultImpIdType
         {
             get => _defaultImpIdType;

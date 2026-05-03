@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced By: SystemConfigurableTreatmentGetRequest16
     /// <see cref="SystemConfigurableTreatmentGetResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="SystemConfigurableTreatmentGetRequest16"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:25706""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:29279""}]")]
     public class SystemConfigurableTreatmentGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemConfigurableTreatmentGetResponse>
     {
 
         protected string _treatmentId;
 
         [XmlElement(ElementName = "treatmentId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:25706")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:29279")]
         [MinLength(1)]
         [MaxLength(40)]
         public string TreatmentId

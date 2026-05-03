@@ -11,19 +11,20 @@ namespace BroadWorksConnector.Ocip.Models
     /// Contains the service profile information and a table of assigned hosts.
     /// The table has column headings: "User Id", "Last Name", "First Name", "Hiragana Last Name",
     /// "Hiragana First Name", Phone Number", "Extension", "Department", "Email Address".
+    /// Replaced by: GroupMeetMeConferencingGetInstanceResponse24
     /// <see cref="GroupMeetMeConferencingGetInstanceRequest19sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""adf25df72505d1c476ebb480b6cce18d:212""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:12449""}]")]
     public class GroupMeetMeConferencingGetInstanceResponse19sp1 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 _serviceInstanceProfile;
 
         [XmlElement(ElementName = "serviceInstanceProfile", IsNullable = false, Namespace = "")]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:212")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12449")]
         public BroadWorksConnector.Ocip.Models.ServiceInstanceReadProfile19sp1 ServiceInstanceProfile
         {
             get => _serviceInstanceProfile;
@@ -40,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts _allocatedPorts;
 
         [XmlElement(ElementName = "allocatedPorts", IsNullable = false, Namespace = "")]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:212")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12449")]
         public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferencePorts AllocatedPorts
         {
             get => _allocatedPorts;
@@ -58,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkClassOfService", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:212")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12449")]
         [MinLength(1)]
         [MaxLength(40)]
         public string NetworkClassOfService
@@ -77,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _securityPinLength;
 
         [XmlElement(ElementName = "securityPinLength", IsNullable = false, Namespace = "")]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:212")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12449")]
         [MinInclusive(4)]
         [MaxInclusive(12)]
         public int SecurityPinLength
@@ -96,7 +97,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowIndividualOutDial;
 
         [XmlElement(ElementName = "allowIndividualOutDial", IsNullable = false, Namespace = "")]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:212")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12449")]
         public bool AllowIndividualOutDial
         {
             get => _allowIndividualOutDial;
@@ -114,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "operatorNumber", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:212")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12449")]
         [MinLength(1)]
         [MaxLength(161)]
         public string OperatorNumber
@@ -133,7 +134,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _conferenceHostUserTable;
 
         [XmlElement(ElementName = "conferenceHostUserTable", IsNullable = false, Namespace = "")]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:212")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12449")]
         public BroadWorksConnector.Ocip.Models.C.OCITable ConferenceHostUserTable
         {
             get => _conferenceHostUserTable;
@@ -150,7 +151,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _playWarningPrompt;
 
         [XmlElement(ElementName = "playWarningPrompt", IsNullable = false, Namespace = "")]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:212")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12449")]
         public bool PlayWarningPrompt
         {
             get => _playWarningPrompt;
@@ -167,7 +168,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected int _conferenceEndWarningPromptMinutes;
 
         [XmlElement(ElementName = "conferenceEndWarningPromptMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:212")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12449")]
         [MinInclusive(1)]
         [MaxInclusive(15)]
         public int ConferenceEndWarningPromptMinutes
@@ -186,7 +187,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _enableMaxConferenceDuration;
 
         [XmlElement(ElementName = "enableMaxConferenceDuration", IsNullable = false, Namespace = "")]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:212")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12449")]
         public bool EnableMaxConferenceDuration
         {
             get => _enableMaxConferenceDuration;
@@ -203,7 +204,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceDuration _maxConferenceDurationMinutes;
 
         [XmlElement(ElementName = "maxConferenceDurationMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:212")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12449")]
         public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceDuration MaxConferenceDurationMinutes
         {
             get => _maxConferenceDurationMinutes;
@@ -220,7 +221,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceDuration _maxScheduledConferenceDurationMinutes;
 
         [XmlElement(ElementName = "maxScheduledConferenceDurationMinutes", IsNullable = false, Namespace = "")]
-        [Group(@"adf25df72505d1c476ebb480b6cce18d:212")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:12449")]
         public BroadWorksConnector.Ocip.Models.MeetMeConferencingConferenceDuration MaxScheduledConferenceDurationMinutes
         {
             get => _maxScheduledConferenceDurationMinutes;

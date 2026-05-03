@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:11579""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:11638""}]")]
     public class SystemLanguageGetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _defaultLanguage;
 
         [XmlElement(ElementName = "defaultLanguage", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:11579")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11638")]
         [MinLength(1)]
         [MaxLength(40)]
         public string DefaultLanguage
@@ -40,7 +40,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _languageTable;
 
         [XmlElement(ElementName = "languageTable", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:11579")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11638")]
         public BroadWorksConnector.Ocip.Models.C.OCITable LanguageTable
         {
             get => _languageTable;

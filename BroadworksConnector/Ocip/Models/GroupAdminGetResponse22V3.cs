@@ -19,14 +19,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:1702""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""4b0e7857796c636464362260a2f8e5ee:1743""}]")]
     public class GroupAdminGetResponse22V3 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1702")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1743")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -45,7 +45,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1702")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1743")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -65,7 +65,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "firstName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1702")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1743")]
         [MinLength(1)]
         [MaxLength(30)]
         public string FirstName
@@ -85,7 +85,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "lastName", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1702")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1743")]
         [MinLength(1)]
         [MaxLength(30)]
         public string LastName
@@ -104,7 +104,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _language;
 
         [XmlElement(ElementName = "language", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1702")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1743")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Language
@@ -123,7 +123,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _locale;
 
         [XmlElement(ElementName = "locale", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1702")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1743")]
         [MaxLength(20)]
         public string Locale
         {
@@ -141,7 +141,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _encoding;
 
         [XmlElement(ElementName = "encoding", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1702")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1743")]
         [MinLength(1)]
         [MaxLength(40)]
         public string Encoding
@@ -160,7 +160,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _accountDisabled;
 
         [XmlElement(ElementName = "accountDisabled", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1702")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1743")]
         public bool AccountDisabled
         {
             get => _accountDisabled;
@@ -177,7 +177,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _lastAuthenticatedDate;
 
         [XmlElement(ElementName = "lastAuthenticatedDate", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1702")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1743")]
         public string LastAuthenticatedDate
         {
             get => _lastAuthenticatedDate;
@@ -194,7 +194,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _hasPassword;
 
         [XmlElement(ElementName = "hasPassword", IsNullable = false, Namespace = "")]
-        [Group(@"4b0e7857796c636464362260a2f8e5ee:1702")]
+        [Group(@"4b0e7857796c636464362260a2f8e5ee:1743")]
         public bool HasPassword
         {
             get => _hasPassword;

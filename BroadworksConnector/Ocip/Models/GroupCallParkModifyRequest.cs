@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b6fd73d148b9b309dce1d2f04516ddfa:519""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b6fd73d148b9b309dce1d2f04516ddfa:522""}]")]
     public class GroupCallParkModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:519")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:522")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _groupId;
 
         [XmlElement(ElementName = "groupId", IsNullable = false, Namespace = "")]
-        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:519")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:522")]
         [MinLength(1)]
         [MaxLength(30)]
         public string GroupId
@@ -61,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "recallTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:519")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:522")]
         [MinInclusive(30)]
         [MaxInclusive(600)]
         public int? RecallTimerSeconds
@@ -81,7 +81,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "displayTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:519")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:522")]
         [MinInclusive(2)]
         [MaxInclusive(15)]
         public int? DisplayTimerSeconds
@@ -101,7 +101,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableDestinationAnnouncement", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:519")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:522")]
         public bool? EnableDestinationAnnouncement
         {
             get => _enableDestinationAnnouncement;
@@ -120,7 +120,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "recallAlternateUserId", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:519")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:522")]
         [MinLength(1)]
         [MaxLength(161)]
         public string RecallAlternateUserId
@@ -140,7 +140,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "recallRingPattern", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:519")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:522")]
         public BroadWorksConnector.Ocip.Models.RingPattern? RecallRingPattern
         {
             get => _recallRingPattern;
@@ -158,7 +158,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "recallTo", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:519")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:522")]
         public BroadWorksConnector.Ocip.Models.CallParkRecallTo? RecallTo
         {
             get => _recallTo;
@@ -176,7 +176,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "alternateUserRecallTimerSeconds", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:519")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:522")]
         [MinInclusive(30)]
         [MaxInclusive(600)]
         public int? AlternateUserRecallTimerSeconds

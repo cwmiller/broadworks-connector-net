@@ -9,20 +9,22 @@ namespace BroadWorksConnector.Ocip.Models
     /// <summary>
     /// Get a criteria for the user's pre-alerting service.
     /// The response is either a UserPreAlertingAnnouncementGetCriteriaResponse21 or an ErrorResponse.
+    /// 
+    /// Replaced by: UserPreAlertingAnnouncementGetCriteriaRequestRI in AS data mode
     /// <see cref="UserPreAlertingAnnouncementGetCriteriaResponse21"/>
     /// <see cref="ErrorResponse"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""89722c6a28e608e15bce28b0cd73fa11:219""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:21263""}]")]
     public class UserPreAlertingAnnouncementGetCriteriaRequest21 : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserPreAlertingAnnouncementGetCriteriaResponse21>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"89722c6a28e608e15bce28b0cd73fa11:219")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:21263")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId
@@ -41,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _criteriaName;
 
         [XmlElement(ElementName = "criteriaName", IsNullable = false, Namespace = "")]
-        [Group(@"89722c6a28e608e15bce28b0cd73fa11:219")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:21263")]
         [MinLength(1)]
         [MaxLength(50)]
         public string CriteriaName

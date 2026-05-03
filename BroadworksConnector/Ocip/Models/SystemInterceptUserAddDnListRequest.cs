@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2a762bb9361e88044885b796c1d6b979:143""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""2a762bb9361e88044885b796c1d6b979:146""}]")]
     public class SystemInterceptUserAddDnListRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected List<BroadWorksConnector.Ocip.Models.InterceptDNListEntry> _interceptDNList = new List<BroadWorksConnector.Ocip.Models.InterceptDNListEntry>();
 
         [XmlElement(ElementName = "interceptDNList", IsNullable = false, Namespace = "")]
-        [Group(@"2a762bb9361e88044885b796c1d6b979:143")]
+        [Group(@"2a762bb9361e88044885b796c1d6b979:146")]
         public List<BroadWorksConnector.Ocip.Models.InterceptDNListEntry> InterceptDNList
         {
             get => _interceptDNList;

@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""103e8fba76512e5a1abfb373758f36e2:146""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""103e8fba76512e5a1abfb373758f36e2:149""}]")]
     public class UserTwoStageDialingGetResponse13Mp20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _isActive;
 
         [XmlElement(ElementName = "isActive", IsNullable = false, Namespace = "")]
-        [Group(@"103e8fba76512e5a1abfb373758f36e2:146")]
+        [Group(@"103e8fba76512e5a1abfb373758f36e2:149")]
         public bool IsActive
         {
             get => _isActive;
@@ -37,7 +37,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected bool _allowActivationWithUserAddresses;
 
         [XmlElement(ElementName = "allowActivationWithUserAddresses", IsNullable = false, Namespace = "")]
-        [Group(@"103e8fba76512e5a1abfb373758f36e2:146")]
+        [Group(@"103e8fba76512e5a1abfb373758f36e2:149")]
         public bool AllowActivationWithUserAddresses
         {
             get => _allowActivationWithUserAddresses;

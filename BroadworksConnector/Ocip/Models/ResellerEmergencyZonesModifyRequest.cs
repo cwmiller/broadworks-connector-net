@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""993492ea5726d0f3ec8743f5cef40e23:243""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""993492ea5726d0f3ec8743f5cef40e23:244""}]")]
     public class ResellerEmergencyZonesModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _resellerId;
 
         [XmlElement(ElementName = "resellerId", IsNullable = false, Namespace = "")]
-        [Group(@"993492ea5726d0f3ec8743f5cef40e23:243")]
+        [Group(@"993492ea5726d0f3ec8743f5cef40e23:244")]
         [MinLength(1)]
         [MaxLength(36)]
         public string ResellerId
@@ -43,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         /// <remarks>Eraseable</remarks>
         [XmlElement(ElementName = "defaultFromAddress", IsNullable = true, Namespace = "")]
         [Optional]
-        [Group(@"993492ea5726d0f3ec8743f5cef40e23:243")]
+        [Group(@"993492ea5726d0f3ec8743f5cef40e23:244")]
         [MinLength(1)]
         [MaxLength(80)]
         public string DefaultFromAddress

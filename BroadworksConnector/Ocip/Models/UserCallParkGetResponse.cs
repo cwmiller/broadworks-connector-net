@@ -20,7 +20,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b6fd73d148b9b309dce1d2f04516ddfa:565""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""b6fd73d148b9b309dce1d2f04516ddfa:568""}]")]
     public class UserCallParkGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
@@ -28,7 +28,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "name", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:565")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:568")]
         [MinLength(1)]
         [MaxLength(80)]
         public string Name
@@ -47,7 +47,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.C.OCITable _userTable;
 
         [XmlElement(ElementName = "userTable", IsNullable = false, Namespace = "")]
-        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:565")]
+        [Group(@"b6fd73d148b9b309dce1d2f04516ddfa:568")]
         public BroadWorksConnector.Ocip.Models.C.OCITable UserTable
         {
             get => _userTable;

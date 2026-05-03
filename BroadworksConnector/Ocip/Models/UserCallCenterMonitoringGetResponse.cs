@@ -10,19 +10,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Response to UserCallCenterMonitoringGetRequest.
     /// Replaced by UserCallCenterMonitoringGetResponse23
     /// <see cref="UserCallCenterMonitoringGetRequest"/>
-    /// <see cref="UserCallCenterMonitoringGetResponse23"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:41355""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:45398""}]")]
     public class UserCallCenterMonitoringGetResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected bool _playToneToAgentForSilentMonitoring;
 
         [XmlElement(ElementName = "playToneToAgentForSilentMonitoring", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:41355")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:45398")]
         public bool PlayToneToAgentForSilentMonitoring
         {
             get => _playToneToAgentForSilentMonitoring;

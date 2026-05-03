@@ -13,19 +13,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced By: ServiceProviderServicePackMigrationTaskGetRequest14sp4
     /// <see cref="ServiceProviderServicePackMigrationTaskGetResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="ServiceProviderServicePackMigrationTaskGetRequest14sp4"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:19687""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:22006""}]")]
     public class ServiceProviderServicePackMigrationTaskGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.ServiceProviderServicePackMigrationTaskGetResponse>
     {
 
         protected string _serviceProviderId;
 
         [XmlElement(ElementName = "serviceProviderId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:19687")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:22006")]
         [MinLength(1)]
         [MaxLength(30)]
         public string ServiceProviderId
@@ -44,7 +43,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _taskName;
 
         [XmlElement(ElementName = "taskName", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:19687")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:22006")]
         [MinLength(1)]
         [MaxLength(80)]
         public string TaskName

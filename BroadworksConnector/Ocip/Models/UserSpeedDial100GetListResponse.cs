@@ -11,19 +11,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// 
     /// Replaced by: UserSpeedDial100GetListResponse17Sp1
     /// <see cref="UserSpeedDial100GetListRequest"/>
-    /// <see cref="UserSpeedDial100GetListResponse17Sp1"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:47525""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:51905""}]")]
     public class UserSpeedDial100GetListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected string _prefix;
 
         [XmlElement(ElementName = "prefix", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:47525")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:51905")]
         [MinLength(1)]
         [MaxLength(2)]
         public string Prefix
@@ -43,7 +42,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "speedDialEntry", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"d8f04177e438f303b41c211e518706bf:47525")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:51905")]
         public List<BroadWorksConnector.Ocip.Models.SpeedDial100Entry> SpeedDialEntry
         {
             get => _speedDialEntry;

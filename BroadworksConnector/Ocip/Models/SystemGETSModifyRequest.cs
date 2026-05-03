@@ -15,7 +15,7 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:10994""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:11053""}]")]
     public class SystemGETSModifyRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
@@ -23,7 +23,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enabled", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10994")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11053")]
         public bool? Enabled
         {
             get => _enabled;
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "enableRequireResourcePriority", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10994")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11053")]
         public bool? EnableRequireResourcePriority
         {
             get => _enableRequireResourcePriority;
@@ -59,7 +59,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "sendAccessResourcePriority", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10994")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11053")]
         public bool? SendAccessResourcePriority
         {
             get => _sendAccessResourcePriority;
@@ -77,7 +77,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "callIdentifierMode", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10994")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11053")]
         public BroadWorksConnector.Ocip.Models.GETSCallIdentifierMode? CallIdentifierMode
         {
             get => _callIdentifierMode;
@@ -95,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultPriorityAVP", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10994")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11053")]
         [MinInclusive(0)]
         [MaxInclusive(4)]
         public int? DefaultPriorityAVP
@@ -115,7 +115,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "signalingDSCP", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10994")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11053")]
         [MinInclusive(0)]
         [MaxInclusive(63)]
         public int? SignalingDSCP
@@ -135,7 +135,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "defaultRValue", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10994")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11053")]
         [MinLength(3)]
         [MaxLength(80)]
         public string DefaultRValue
@@ -155,7 +155,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "bypassRoRelease", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10994")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11053")]
         public bool? BypassRoRelease
         {
             get => _bypassRoRelease;
@@ -173,7 +173,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "ignoreResourcePrioritiesWhenGETSDisabled", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"da582a1f8028404e70d260cf1f891033:10994")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:11053")]
         public bool? IgnoreResourcePrioritiesWhenGETSDisabled
         {
             get => _ignoreResourcePrioritiesWhenGETSDisabled;

@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:940""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:1104""}]")]
     public class BroadWorksMobilityAlertingMobileNumberReplacementList
     {
 
         protected List<string> _mobileNumber = new List<string>();
 
         [XmlElement(ElementName = "mobileNumber", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:940")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:1104")]
         [MinLength(1)]
         [MaxLength(23)]
         public List<string> MobileNumber

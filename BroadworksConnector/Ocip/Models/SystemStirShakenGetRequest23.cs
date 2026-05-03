@@ -8,9 +8,11 @@ namespace BroadWorksConnector.Ocip.Models
 {
     /// <summary>
     /// Get system Stir Shaken service settings.
-    /// The response is either SystemStirShakenGetResponse23 or ErrorResponse.
-    /// <see cref="SystemStirShakenGetResponse23"/>
+    /// The response is either SystemStirShakenGetResponse or ErrorResponse.
+    /// Replaced by SystemStirShakenGetRequest23V2.
+    /// <see cref="SystemStirShakenGetResponse"/>
     /// <see cref="ErrorResponse"/>
+    /// <see cref="SystemStirShakenGetRequest23V2"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]

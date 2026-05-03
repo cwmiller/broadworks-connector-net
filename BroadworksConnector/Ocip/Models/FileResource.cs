@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3307"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3308""}]}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3581"",""children"":[{""__type"":""Choice:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:3582""}]}]")]
     public class FileResource
     {
 
         protected string _sourceFileName;
 
         [XmlElement(ElementName = "sourceFileName", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3308")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3582")]
         [MinLength(1)]
         public string SourceFileName
         {
@@ -38,7 +38,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _fileContent;
 
         [XmlElement(ElementName = "fileContent", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3308")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:3582")]
         public string FileContent
         {
             get => _fileContent;

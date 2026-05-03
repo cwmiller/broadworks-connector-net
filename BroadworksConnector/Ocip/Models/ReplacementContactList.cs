@@ -13,14 +13,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:4396""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""6337d0cfba4de1c83587203c5b0bae54:5170""}]")]
     public class ReplacementContactList
     {
 
         protected List<string> _contact = new List<string>();
 
         [XmlElement(ElementName = "contact", IsNullable = false, Namespace = "")]
-        [Group(@"6337d0cfba4de1c83587203c5b0bae54:4396")]
+        [Group(@"6337d0cfba4de1c83587203c5b0bae54:5170")]
         [MinLength(1)]
         [MaxLength(1020)]
         public List<string> Contact

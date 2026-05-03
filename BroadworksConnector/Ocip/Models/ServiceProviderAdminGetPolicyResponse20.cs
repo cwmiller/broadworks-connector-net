@@ -13,19 +13,21 @@ namespace BroadWorksConnector.Ocip.Models
     /// The following elements are only used in AS data mode:
     /// dialableCallerIDAccess
     /// verifyTranslationAndRoutingAccess
+    /// 
+    /// Replaced by: ServiceProviderAdminGetPolicyResponseRI in AS data mode
     /// <see cref="ServiceProviderAdminGetPolicyRequest20"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""e19a9072c2dad499e9f28837da5768db:1508""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""240b50f54d060859e5e275082fdf49f9:6480""}]")]
     public class ServiceProviderAdminGetPolicyResponse20 : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.ServiceProviderAdminProfileAccess _profileAccess;
 
         [XmlElement(ElementName = "profileAccess", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:1508")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6480")]
         public BroadWorksConnector.Ocip.Models.ServiceProviderAdminProfileAccess ProfileAccess
         {
             get => _profileAccess;
@@ -42,7 +44,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ServiceProviderAdminGroupAccess _groupAccess;
 
         [XmlElement(ElementName = "groupAccess", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:1508")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6480")]
         public BroadWorksConnector.Ocip.Models.ServiceProviderAdminGroupAccess GroupAccess
         {
             get => _groupAccess;
@@ -59,7 +61,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ServiceProviderAdminUserAccess _userAccess;
 
         [XmlElement(ElementName = "userAccess", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:1508")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6480")]
         public BroadWorksConnector.Ocip.Models.ServiceProviderAdminUserAccess UserAccess
         {
             get => _userAccess;
@@ -76,7 +78,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ServiceProviderAdminAdminAccess _adminAccess;
 
         [XmlElement(ElementName = "adminAccess", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:1508")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6480")]
         public BroadWorksConnector.Ocip.Models.ServiceProviderAdminAdminAccess AdminAccess
         {
             get => _adminAccess;
@@ -93,7 +95,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ServiceProviderAdminDepartmentAccess _departmentAccess;
 
         [XmlElement(ElementName = "departmentAccess", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:1508")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6480")]
         public BroadWorksConnector.Ocip.Models.ServiceProviderAdminDepartmentAccess DepartmentAccess
         {
             get => _departmentAccess;
@@ -110,7 +112,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ServiceProviderAdminAccessDeviceAccess _accessDeviceAccess;
 
         [XmlElement(ElementName = "accessDeviceAccess", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:1508")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6480")]
         public BroadWorksConnector.Ocip.Models.ServiceProviderAdminAccessDeviceAccess AccessDeviceAccess
         {
             get => _accessDeviceAccess;
@@ -127,7 +129,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ServiceProviderAdminPhoneNumberExtensionAccess _phoneNumberExtensionAccess;
 
         [XmlElement(ElementName = "phoneNumberExtensionAccess", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:1508")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6480")]
         public BroadWorksConnector.Ocip.Models.ServiceProviderAdminPhoneNumberExtensionAccess PhoneNumberExtensionAccess
         {
             get => _phoneNumberExtensionAccess;
@@ -144,7 +146,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ServiceProviderAdminCallingLineIdNumberAccess _callingLineIdNumberAccess;
 
         [XmlElement(ElementName = "callingLineIdNumberAccess", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:1508")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6480")]
         public BroadWorksConnector.Ocip.Models.ServiceProviderAdminCallingLineIdNumberAccess CallingLineIdNumberAccess
         {
             get => _callingLineIdNumberAccess;
@@ -161,7 +163,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ServiceProviderAdminServiceAccess _serviceAccess;
 
         [XmlElement(ElementName = "serviceAccess", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:1508")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6480")]
         public BroadWorksConnector.Ocip.Models.ServiceProviderAdminServiceAccess ServiceAccess
         {
             get => _serviceAccess;
@@ -178,7 +180,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ServiceProviderAdminServicePackAccess _servicePackAccess;
 
         [XmlElement(ElementName = "servicePackAccess", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:1508")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6480")]
         public BroadWorksConnector.Ocip.Models.ServiceProviderAdminServicePackAccess ServicePackAccess
         {
             get => _servicePackAccess;
@@ -195,7 +197,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ServiceProviderAdminSessionAdmissionControlAccess _sessionAdmissionControlAccess;
 
         [XmlElement(ElementName = "sessionAdmissionControlAccess", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:1508")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6480")]
         public BroadWorksConnector.Ocip.Models.ServiceProviderAdminSessionAdmissionControlAccess SessionAdmissionControlAccess
         {
             get => _sessionAdmissionControlAccess;
@@ -212,7 +214,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ServiceProviderAdminWebBrandingAccess _webBrandingAccess;
 
         [XmlElement(ElementName = "webBrandingAccess", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:1508")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6480")]
         public BroadWorksConnector.Ocip.Models.ServiceProviderAdminWebBrandingAccess WebBrandingAccess
         {
             get => _webBrandingAccess;
@@ -229,7 +231,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ServiceProviderAdminOfficeZoneAccess _officeZoneAccess;
 
         [XmlElement(ElementName = "officeZoneAccess", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:1508")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6480")]
         public BroadWorksConnector.Ocip.Models.ServiceProviderAdminOfficeZoneAccess OfficeZoneAccess
         {
             get => _officeZoneAccess;
@@ -246,7 +248,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ServiceProviderAdminCommunicationBarringAccess _communicationBarringAccess;
 
         [XmlElement(ElementName = "communicationBarringAccess", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:1508")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6480")]
         public BroadWorksConnector.Ocip.Models.ServiceProviderAdminCommunicationBarringAccess CommunicationBarringAccess
         {
             get => _communicationBarringAccess;
@@ -264,7 +266,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "networkPolicyAccess", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:1508")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6480")]
         public BroadWorksConnector.Ocip.Models.EnterpriseAdminNetworkPolicyAccess? NetworkPolicyAccess
         {
             get => _networkPolicyAccess;
@@ -282,7 +284,7 @@ namespace BroadWorksConnector.Ocip.Models
 
         [XmlElement(ElementName = "numberActivationAccess", IsNullable = false, Namespace = "")]
         [Optional]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:1508")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6480")]
         public BroadWorksConnector.Ocip.Models.EnterpriseAdminNumberActivationAccess? NumberActivationAccess
         {
             get => _numberActivationAccess;
@@ -299,7 +301,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ServiceProviderAdminDialableCallerIDAccess _dialableCallerIDAccess;
 
         [XmlElement(ElementName = "dialableCallerIDAccess", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:1508")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6480")]
         public BroadWorksConnector.Ocip.Models.ServiceProviderAdminDialableCallerIDAccess DialableCallerIDAccess
         {
             get => _dialableCallerIDAccess;
@@ -316,7 +318,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected BroadWorksConnector.Ocip.Models.ServiceProviderAdminVerifyTranslationAndRoutingAccess _verifyTranslationAndRoutingAccess;
 
         [XmlElement(ElementName = "verifyTranslationAndRoutingAccess", IsNullable = false, Namespace = "")]
-        [Group(@"e19a9072c2dad499e9f28837da5768db:1508")]
+        [Group(@"240b50f54d060859e5e275082fdf49f9:6480")]
         public BroadWorksConnector.Ocip.Models.ServiceProviderAdminVerifyTranslationAndRoutingAccess VerifyTranslationAndRoutingAccess
         {
             get => _verifyTranslationAndRoutingAccess;

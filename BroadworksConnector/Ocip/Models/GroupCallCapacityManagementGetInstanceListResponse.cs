@@ -14,14 +14,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7e3b48428e45d35b1edd744adc90f9b:190""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""f7e3b48428e45d35b1edd744adc90f9b:194""}]")]
     public class GroupCallCapacityManagementGetInstanceListResponse : BroadWorksConnector.Ocip.Models.C.OCIDataResponse
     {
 
         protected BroadWorksConnector.Ocip.Models.C.OCITable _callCapacityGroupTable;
 
         [XmlElement(ElementName = "callCapacityGroupTable", IsNullable = false, Namespace = "")]
-        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:190")]
+        [Group(@"f7e3b48428e45d35b1edd744adc90f9b:194")]
         public BroadWorksConnector.Ocip.Models.C.OCITable CallCapacityGroupTable
         {
             get => _callCapacityGroupTable;

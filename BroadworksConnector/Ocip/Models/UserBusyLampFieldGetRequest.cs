@@ -12,19 +12,18 @@ namespace BroadWorksConnector.Ocip.Models
     /// Replaced by: UserBusyLampFieldGetRequest16sp2
     /// <see cref="UserBusyLampFieldGetResponse"/>
     /// <see cref="ErrorResponse"/>
-    /// <see cref="UserBusyLampFieldGetRequest16sp2"/>
     /// </summary>
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:40992""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""d8f04177e438f303b41c211e518706bf:45035""}]")]
     public class UserBusyLampFieldGetRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.UserBusyLampFieldGetResponse>
     {
 
         protected string _userId;
 
         [XmlElement(ElementName = "userId", IsNullable = false, Namespace = "")]
-        [Group(@"d8f04177e438f303b41c211e518706bf:40992")]
+        [Group(@"d8f04177e438f303b41c211e518706bf:45035")]
         [MinLength(1)]
         [MaxLength(161)]
         public string UserId

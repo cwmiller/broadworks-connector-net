@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:15457""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""da582a1f8028404e70d260cf1f891033:15662""}]")]
     public class SystemRoutingAddTranslationRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.C.SuccessResponse>
     {
 
         protected string _digits;
 
         [XmlElement(ElementName = "digits", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:15457")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:15662")]
         [MinLength(1)]
         [MaxLength(6)]
         public string Digits
@@ -41,7 +41,7 @@ namespace BroadWorksConnector.Ocip.Models
         protected string _routeName;
 
         [XmlElement(ElementName = "routeName", IsNullable = false, Namespace = "")]
-        [Group(@"da582a1f8028404e70d260cf1f891033:15457")]
+        [Group(@"da582a1f8028404e70d260cf1f891033:15662")]
         [MinLength(1)]
         [MaxLength(32)]
         public string RouteName

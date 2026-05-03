@@ -15,14 +15,14 @@ namespace BroadWorksConnector.Ocip.Models
     [Serializable]
     [XmlRoot(Namespace = "")]
 
-    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""435c279b3e6710f4ada60ed66a93d278:135""}]")]
+    [Groups(@"[{""__type"":""Sequence:#BroadWorksConnector.Ocip.Validation"",""id"":""435c279b3e6710f4ada60ed66a93d278:139""}]")]
     public class SystemSecurityClassificationGetClassificationRequest : BroadWorksConnector.Ocip.Models.C.OCIRequest<BroadWorksConnector.Ocip.Models.SystemSecurityClassificationGetClassificationResponse>
     {
 
         protected string _securityClassificationName;
 
         [XmlElement(ElementName = "securityClassificationName", IsNullable = false, Namespace = "")]
-        [Group(@"435c279b3e6710f4ada60ed66a93d278:135")]
+        [Group(@"435c279b3e6710f4ada60ed66a93d278:139")]
         [MinLength(1)]
         [MaxLength(40)]
         public string SecurityClassificationName
