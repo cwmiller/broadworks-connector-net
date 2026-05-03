@@ -1,5 +1,16 @@
 # Changelog
 
+## [5.0.0] - 2026-05-03
+### Changed
+- Updated all models using `Rel_2025_03_260` schema files.
+- Setting a non-eraseable property to null will now cause it to be ignored when being serialized instead of being serialized as nil.
+
+### Added
+- Add "Eraseable" remark to all properties that are eraseable.
+
+### Fixed
+- Fix exception when BroadWorks sends a response with an unset optional enum.
+
 ## [4.2.0] - 2025-02-17
 ### Added
 - Added `IgnoreSslCertificateErrors` option to `OcipClientOptions` to ignore all errors when validating the server's SSL certificate. [@simonunivonix](https://github.com/simonunivonix)
@@ -139,6 +150,7 @@
 ### Fixed
 - `OcipClient` now properly calls `Validator` on execution.
 
+[5.0.0]: https://github.com/cwmiller/broadworks-connector-net/compare/4.2.0...5.0.0
 [4.2.0]: https://github.com/cwmiller/broadworks-connector-net/compare/4.1.0...4.2.0
 [4.1.0]: https://github.com/cwmiller/broadworks-connector-net/compare/4.0.0...4.1.0
 [4.0.0]: https://github.com/cwmiller/broadworks-connector-net/compare/3.0.0...4.0.0
