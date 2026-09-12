@@ -2,8 +2,6 @@
 using BroadWorksConnector.Ocip.Models;
 using BroadWorksConnector.Ocip.Models.C;
 using Org.XmlUnit.Builder;
-using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -312,8 +310,28 @@ namespace BroadWorksConnector.Tests
             var document = _serializer.Deserialize<GroupAdminGetPolicyResponse20>(xml);
 
             Assert.Null(document.Command.First().CommunicationBarringUserProfileAccess);
+        }
 
-            Console.WriteLine(document);
+        [Fact]
+        public void TestDeserializeNullableEnumSet()
+        {
+            var xmlData = File.ReadAllBytes(@"test-data/SystemDeviceTypeGetResponse22V2.xml");
+            var xml = Encoding.UTF8.GetString(xmlData);
+
+            var document = _serializer.Deserialize<SystemDeviceTypeGetResponse22V2>(xml);
+
+            Assert.Equal(DeviceTypeConfigurationOptionType.DeviceManagement, document.Command.First().DeviceTypeConfigurationOption);
+        }
+
+        [Fact]
+        public void TestDeserializeNullableEnumNotSet()
+        {
+            var xmlData = File.ReadAllBytes(@"test-data/SystemDeviceTypeGetResponse22V2-nulloption.xml");
+            var xml = Encoding.UTF8.GetString(xmlData);
+
+            var document = _serializer.Deserialize<SystemDeviceTypeGetResponse22V2>(xml);
+
+            Assert.Null(document.Command.First().DeviceTypeConfigurationOption);
         }
 
         [Fact]

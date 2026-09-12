@@ -432,9 +432,18 @@ namespace BroadWorksConnector.Ocip
                 return decimal.Parse(value);
             }
 
+            // Cheeck if Enum type
             if (targetType.IsEnum)
             {
                 return DeserializeEnum(value, targetType);
+            }
+
+            // Enum could also be wrapped in Nullable<> which requires another check
+            var underlyingType = Nullable.GetUnderlyingType(targetType);
+            
+            if (underlyingType != null && underlyingType.IsEnum)
+            {
+                return DeserializeEnum(value, underlyingType);
             }
 
             return value;
@@ -447,7 +456,7 @@ namespace BroadWorksConnector.Ocip
         /// <returns></returns>
         private bool IsValueType(Type targetType)
         {
-            return targetType.Equals(typeof(bool))
+            if (targetType.Equals(typeof(bool))
                 || targetType.Equals(typeof(bool?))
                 || targetType.Equals(typeof(int))
                 || targetType.Equals(typeof(int?))
@@ -455,8 +464,15 @@ namespace BroadWorksConnector.Ocip
                 || targetType.Equals(typeof(decimal?))
                 || targetType.Equals(typeof(float))
                 || targetType.Equals(typeof(float?))
-                || targetType.Equals(typeof(string))
-                || targetType.IsEnum;
+                || targetType.Equals(typeof(string)))
+            {
+                return true;
+            }
+
+            // Check if Enum. A nullable enum cannot be found with type.IsEnum, the underlying type must be checked
+            var underlyingType = Nullable.GetUnderlyingType(targetType);
+
+            return targetType.IsEnum || (underlyingType != null && underlyingType.IsEnum);
         }
 
         /// <summary>

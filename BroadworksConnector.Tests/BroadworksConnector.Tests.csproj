@@ -16,6 +16,8 @@
     <Copyright>2019</Copyright>
 
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <OutputType>Exe</OutputType>
+  <GenerateProgramFile>false</GenerateProgramFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -64,6 +66,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="test-data\UserServiceAssignListRequest.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="test-data\SystemDeviceTypeGetResponse22V2.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="test-data\SystemDeviceTypeGetResponse22V2-nulloption.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
