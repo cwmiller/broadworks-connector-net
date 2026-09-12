@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.0.1] - 2026-09-12
+### Fixed
+- Fix optional enum properties not being set on responses.
+
 ## [5.0.0] - 2026-05-03
 ### Changed
 - Updated all models using `Rel_2025_03_260` schema files.
@@ -150,6 +154,7 @@
 ### Fixed
 - `OcipClient` now properly calls `Validator` on execution.
 
+[5.0.1]: https://github.com/cwmiller/broadworks-connector-net/compare/5.0.0...5.0.1
 [5.0.0]: https://github.com/cwmiller/broadworks-connector-net/compare/4.2.0...5.0.0
 [4.2.0]: https://github.com/cwmiller/broadworks-connector-net/compare/4.1.0...4.2.0
 [4.1.0]: https://github.com/cwmiller/broadworks-connector-net/compare/4.0.0...4.1.0
